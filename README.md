@@ -1,4 +1,5 @@
-# ar-for-eu-book-test
-Test for AR-FOR-EU Book
+# ar-for-eu-book
+
+Environment for AR-FOR-EU Book
 
 Please perform easy tests for creating markdown
