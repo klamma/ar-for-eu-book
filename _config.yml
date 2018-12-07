@@ -1,9 +1,9 @@
 # Site settings
-title: The Open Augmented Reality Teaching Book
-email: klamma@dbis.rwth-aachen.de
-description: The Open Augmented Reality Teaching Book
+title: "The Open Augmented Reality Teaching Book"
+email: "klamma@dbis.rwth-aachen.de"
+description: "The Open Augmented Reality Teaching Book"
 baseurl: "/" # the subpath of your site, e.g. /blog
-twitter_username: AR_FOR_EU
+twitter_username: "AR_FOR_EU"
 
 github: [metadata]
  encoding: UTF-8
