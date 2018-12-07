@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Inhaltsverzeichnis
+title: Table of Contents
 permalink: /toc/
 ---
 
