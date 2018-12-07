@@ -1,24 +1,8 @@
-# Site settings
 title: "The Open Augmented Reality Teaching Book"
-email: "klamma@dbis.rwth-aachen.de"
-description: "The Open Augmented Reality Teaching Book"
-baseurl: "/" # the subpath of your site, e.g. /blog
-twitter_username: "AR_FOR_EU"
-
-github: [metadata]
- encoding: UTF-8
- kramdown:
-   input: GFM
-   hard_wrap: false
- future: true
- jailed: false
-theme: jekyll-theme-leap-day
- gfm_quirks: paragraph_end
-
 
 # Build settings
 markdown: kramdown
 exclude: ["README.md"]
 include:
-  - _pages/chapters
-  - _pages
+- _pages/chapters
+- _pages
