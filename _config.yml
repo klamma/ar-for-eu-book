@@ -1,4 +1,6 @@
 title: "The Open Augmented Reality Teaching Book"
+baseurl: "/ar-book" 
+url: "http://localhost:4000"
 
 # Build settings
 markdown: kramdown
