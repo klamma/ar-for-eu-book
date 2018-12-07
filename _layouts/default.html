@@ -1,1 +1,27 @@
-jekyll-theme-leap-day
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <!-- load visualizations (at the end so that the div elements are known here) -->
+    {% for js in page.visualizations %}
+        <script type="text/javascript">
+        {% include {{ js }} %}
+        </script>
+    {% endfor %}
+  </body>
+
+</html>
