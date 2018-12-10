@@ -25,3 +25,9 @@ _site
 codekit-config.json
 npm-debug.log*
 Gemfile.lock
+_site
+.sass-cache
+.jekyll-metadata
+public/
+*.DS_Store
+*.lock

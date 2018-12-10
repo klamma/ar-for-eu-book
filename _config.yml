@@ -1,10 +1,14 @@
-title: "The Open Augmented Reality Teaching Book"
-baseurl: "/ar-book" 
+# Site settings
+title: The Open Augmented Reality Teaching Book
+email: klamma@dbis.rwth-aachen.de
+description: An Online Book
+baseurl: "/ar-for-eu-book" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000"
+twitter_username: AR_FOR_EU
 
 # Build settings
 markdown: kramdown
 exclude: ["README.md"]
 include:
-- _pages/chapters
-- _pages
+  - _pages/chapters
+  - _pages
