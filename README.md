@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 # ar-for-eu-book
 
 Environment for AR-FOR-EU Book
 
 Please perform easy tests for creating markdown
-=======
-Online Buch ODC Algorithmen
 
-[![build status](https://git.dbis.rwth-aachen.de/ocd/Online-Buch/badges/master/build.svg)](https://git.dbis.rwth-aachen.de/ocd/Online-Buch/commits/master)
-
-Output Site: http://ocd.git.dbis.rwth-aachen.de/Online-Buch/
 
 # HowTo Run Locally
 
@@ -37,4 +31,3 @@ Now build the page locally with
     jekyll serve
 
  Navigate your browser to `http://localhost:4000/Online-Buch/` to check results while you develop.
->>>>>>> first commit
