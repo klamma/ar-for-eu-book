@@ -4,4 +4,4 @@ permalink: /references/
 title: "Bibliography"
 ---
 
-//{% bibliography %}
+<!-- {% bibliography %} -->
