@@ -31,3 +31,6 @@ _site
 public/
 *.DS_Store
 *.lock
+
+# to prevent accidents
+_config.yml
