@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Privacy, Ownership and Intellectual Property
+Privacy, Ownership and Intellectual Property
