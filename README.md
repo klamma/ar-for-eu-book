@@ -86,7 +86,7 @@ The book offers a comprehensive and introductory perspective on the topic Augmen
 * Tracking
 * Depth Sensing
 
-* Artificial Intelligence
+### Artificial Intelligence
 
 * Data Mining
 * Machine Learning, Deep Learning
