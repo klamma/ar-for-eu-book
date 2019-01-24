@@ -38,6 +38,8 @@ Unity's WYSIWYG editor allows developers to graphically set up the 3D scene and 
 
 ### User Interface
 
+
+
 ### Importing and Placing 3D Models
 
 In order to import a 3D model, its file needs to be placed in Unity's Assets folder.
@@ -64,11 +66,14 @@ The creators have to make sure that the two versions match.
 
 ### Programming in Unity
 
-The same folder also stores the application logic which is defined by C# scripts.
-These scripts can change properties on 3D models in a scene like their position, rotation, scale or material.
+The Assets folder also stores the application logic which is defined by C# scripts.
+These scripts can react to events like the user input and can change properties on objects in a scene.
+It is possible to change most values from the inspector panel like the position, rotation, scale or material.
 In order to execute a script’s functionality, it needs to be added to a 3D object as a component.
-This can also be done in an inspector panel in the scene editor.
-Scripts can only be added to objects in a scene if they inherit from the MonoBehavior class.
+First, the target object has to be selected.
+After that, the component can be added in the inspector panel.
+One can either drag the script from the Assets-browser onto the inspector panel or click on "Add Component" and search for the script's name.
+Scripts can only be added in such a way to objects of a scene if they inherit from the MonoBehavior class.
 Once a script is attached to an object, Unity calls special functions in the script if certain events happened.
 For instance, developers can implement an Update() function which is called once for every frame which is rendered.
 Similarly, different callback-methods can be implemented which are raised at different points in the application’s or object’s lifecycle, e.g. `Awake()`, `Start()` and `OnDestroy()`.
@@ -76,5 +81,20 @@ Details on available callback methods and the data structures which can manipula
 
 ### Supporting Material
 
+For exploring Unity and its functionality, one can take a look at its user manual {% cite UnityUserManual %}.
+It also contains explanations and examples for the implementation of application logic using Unity's API.
 Unity also provides an Asset Store {% cite UnityAssetStore %} which contains scripts, 3D models and usage examples which have been created by other developers.
 It contains a mixture of free and paid content which can be downloaded for the own project to save development time.
+
+### Exercise: Importing a 3D Model in Unity and Making it Move by Script
+
+The goal of this exercise is to get used to Unity's user interface, scripting in Unity and the general project workflow.
+We will import a 3D model into Unity and we will write a script which will control the 3D models position.
+
+1. Start Unity.
+   You will be greeted by a window showing previously opened projects.
+   Click on "New" in the top right of the window.
+2. Enter a project name and set its location.
+   Make sure that a 3D template is used and that Unity Analytics is turned off.
+   When logged in with an account, Unity Analytics gives developers a real-time insight into data about how users interact with their application.
+   It is not required in this example.
