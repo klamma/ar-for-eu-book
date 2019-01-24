@@ -7,7 +7,7 @@ visualizations:
 ---
 
 Developers of AR applications do not have to start from scratch and (re-)implement the complete graphics pipeline and physics simulations.
-Instead, 3D engines like Unity {% cite Unity %]} or the Unreal Engine {% cite UnrealEngine %} already offer this functionality as a foundation for the development of real-time graphics applications.
+Instead, 3D engines like Unity {% cite Unity %w} or the Unreal Engine {% cite UnrealEngine %} already offer this functionality as a foundation for the development of real-time graphics applications.
 
 ## Unity
 
@@ -48,6 +48,19 @@ Both application-independent and application-specific formats enable different w
 The application-specific format require less work when the 3D model is modified regularly.
 Any saved changes made in the 3D modelling application are immediately propagated to Unity.
 This enables 3D artists to view the 3D model in parallel in the modelling application and a preview in the developed application.
+However, Unity is only able to import such save-files if the corresponding application is actually installed.
+When working in a team with assigned roles, this can complicate the development setup because not only the team members working on the 3D models have to install the 3D application but also all other team members, e.g. developers who are focusing on implementing the code and do not modify the 3D files.
+This is especially problematic when working with a 3D modelling program which requires paid licenses for each device.
+Another drawback concerns the flexibility of the 3D model creation.
+The save file may only contain the final 3D model.
+Any further auxiliary 3D models or copies may not be included in the same file.
+In contrast to this, when exporting a file to a generic 3D format, it is possible to choose which 3D objects will be included in the export.
+This allows for a finer control and separation between editing and import.
+The exported 3D formats are also directly supported by Unity.
+Therefore, the project can be opened without installing additional software.
+The disadvantage of the exported 3D formats is that every time a change is applied to the 3D model in the modelling application, the model needs to be exported again by hand.
+This means that there are two versions of each 3D model where one is contained in the modelling application and one is used by Unity.
+The creators have to make sure that the two versions match.
 
 ### Programming in Unity
 
