@@ -5,4 +5,4 @@ title: "Bibliography"
 ---
 
 # Bibliography
-<!-- {% bibliography %} -->
+{% bibliography %}

@@ -38,7 +38,21 @@ Unity's WYSIWYG editor allows developers to graphically set up the 3D scene and 
 
 ### User Interface
 
+*The following description of the panel positions refers to Unity's default layout.
+The layout can be changed under Window > Layouts > Default.*
 
+The user interface of Unity's editor consists of different panels.
+The most important panel is the 3D view.
+The view direction can be changed by right-clicking and dragging at the same time.
+Similar to games, the viewport can be moved by the WASD keys.
+Additionally, certain preset perspectives like a view from the left side or top side can be selected in a widget in right top corner.
+When clicking on the small cube in the middle of the widget, once can toggle between perspective and orthographic viewports.
+
+The 3D view displays the content of one or more scenes.
+A scene consists of objects which can be ordered in a hierarchical manner.
+This scene hierarchy is displayed in a separate panel.
+Here, each entry corresponds to one object.
+To select a object, one can left click on the entry in the hierarchy or click on its geometry in the 3D view.
 
 ### Importing and Placing 3D Models
 
