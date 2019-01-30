@@ -7,7 +7,7 @@ visualizations:
 ---
 
 Developers of AR applications do not have to start from scratch and (re-)implement the complete graphics pipeline and physics simulations.
-Instead, 3D engines like Unity {% cite Unity %w} or the Unreal Engine {% cite UnrealEngine %} already offer this functionality as a foundation for the development of real-time graphics applications.
+Instead, 3D engines like Unity {% cite Unity %} or the Unreal Engine {% cite UnrealEngine %} already offer this functionality as a foundation for the development of real-time graphics applications.
 
 ## Unity
 
@@ -100,10 +100,10 @@ It also contains explanations and examples for the implementation of application
 Unity also provides an Asset Store {% cite UnityAssetStore %} which contains scripts, 3D models and usage examples which have been created by other developers.
 It contains a mixture of free and paid content which can be downloaded for the own project to save development time.
 
-### Exercise: Importing a 3D Model in Unity and Making it Move by Script
+### Exercise: Importing a 3D Model in Unity and Moving It by Script
 
 The goal of this exercise is to get used to Unity's user interface, scripting in Unity and the general project workflow.
-We will import a 3D model into Unity and we will write a script which will control the 3D models position.
+We will import a 3D model into Unity and write a script which will control the 3D models position.
 
 1. Start Unity.
    You will be greeted by a window showing previously opened projects.
@@ -112,3 +112,107 @@ We will import a 3D model into Unity and we will write a script which will contr
    Make sure that a 3D template is used and that Unity Analytics is turned off.
    When logged in with an account, Unity Analytics gives developers a real-time insight into data about how users interact with their application.
    It is not required in this example.
+3. Once the project has been created, the 3D model can be imported.
+   To do so, open a file browser and navigate to the project's folder.
+   Here, create a folder called "3D Models" and copy the 3D model there.
+   You can use any compatible 3D model format.
+   In the example we use the Stanford bunny in the obj file format ([https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj](https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj)).
+4. Return to Unity's editor.
+   In the assets browser you will now find the "3D Models" folder and inside of it the 3D model.
+   You can create an instance of the 3D models in the scene by dragging and dropping the 3D model file from the assets browser onto the 3D view or the scene hierarchy.
+   In order to quickly move the viewport to the 3D model, double click the object's entry in the hierarchy view.
+5. In the inspector panel, the attributes of the 3D model can be changed.
+   Under "Transform", the position, rotation and size of the 3D model can be adapted to fit the scene.
+   Set the position to (0, 0, 0) so that the object is situated in the origin of the coordinate system.
+   For the bunny model, the size was increased to (10, 10, 10) so that the actual mesh it its roughly one Unity unit large.
+6. It is also possible to add a material to the bunny which can be used to add color to the object's surface.
+   In order to do this, create a new folder called "Materials" in the root directory of the assets browser.
+   Then right click on the assets browser and choose "Create > Material".
+   Given the material a descriptive name.
+7. We will now change the materials color.
+   Select the material in the assets browser.
+   Its properties can now be edited in the inspector panel.
+   By default, the material is setup as a PBR material, so its surface color can be changed in the albedo option.
+   Click once on the white box next to "Albedo" to open a color picker dialog.
+   Select a color and simply close the color dialog again to apply the selected color to the material.
+8. In the inspector view, the color on the sphere in the material preview window has been changed accordingly.
+   However, the color does not appear on the 3D model yet.
+   In order to view the material on the model, the material must be applied to the model.
+   The simplest way to do this is to drag and drop the material file from the assets browser onto the object in the 3D view.
+9. Make sure that the object is also visible in the game view since it provides a preview of the final application.
+   If the object is not visible, go back to the 3D view and select the camera.
+   Move and rotate the camera so that the object is visible from its perspective.
+   This can also be done by the widgets or by entering values in the transform component in the inspector.
+   When the camera is selected, a small preview window will appear in the 3D view which shows what the camera sees.
+   In the example scene, we used the positional values (0, 2,3 ) and rotation angles of (20, 180, 0).
+10. We can now ready create the script which will handle the movement of the 3D object.
+   Similar to the creation of the other files, first create a folder called "Scripts" and then create a C# script called "ObjectMover" by right-clicking and selecting "Create > C# Script".
+   The created script is automatically set up as a C# class which is also called `ObjectMover`.
+   The script is also set up so that it inherits from `MonoBehavior` which means that the script can be attached to game objects and that it can implement special callback functions.
+   Double click on the file in the assets browser in order to edit it in a development environment, e.g. Visual Studio.
+11. With `Start` and `Update` two of these callback methods have already been defined in the class.
+   We will first modify the update-function to implement the actual movement:
+   ```[C#]
+    // Update is called once per frame
+    void Update()
+    {
+        float xAxisMovement = Mathf.Sin(Time.time);
+        gameObject.transform.position = new Vector3(xAxisMovement, 0, 0);
+    }
+   ```
+   The given code segment makes the object go back and forth between the -1 and 1 coordinates on the X axis.
+   We can move an object in such a periodical manner by using the time as an input for the sine function.
+   This is done in the first line in the `Update` function.
+   The sine function is implemented in the Mathf function.
+   Next, we only require a way to access the time.
+   If we look at Unity's documentation, we can see that `Time.time` is exactly what we are looking for since it provides the time in seconds since application-startup.
+   The second line handles the actual movement of the object.
+   The local variable `gameobject` is defined in the MonoBehavior parent class and it refers to the object instance to which the script is attached.
+   By accessing its `transform` variable, one can edit its position.
+   If we assign values to the position, it will apply the values to the exact same Transform component that we previously changed manually in the inspector view to set its position.
+   Since the `Update` function is called once per frame, the object's position will be updated in every frame step.
+   Thus, the changes will appear as one continuous movement.
+12. If you start Unity's play mode now, the object will still not move since the script is not yet attached to the object.
+   In order to fix this, navigate to the script in the assets browser.
+   Then select the object in the 3D view or scene hierarchy.
+   Drag and drop the script file onto some free space on the inspector panel.
+   This will create a new component with the name "ObjectMover" - the name which we defined for our script.
+13. Now, we can enter play mode by hitting the play button.
+   The editor will automatically change to game view and you should now see the object moving back and forth.
+14. Finally, we can also adapt the movement speed.
+   Go back to the script and create a public float variable speed and assign it the value 1.
+   Any public variables of a MonoBehavior are exposed in the inspector panel as configurable values.
+   In the case of our float variable speed, this means, that Unity will automatically create a numeric text field on the MoveObject component where we can enter values.
+   Multiply the speed variable with the time.
+
+```[C#]
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ObjectMover : MonoBehaviour
+{
+    public float speed = 1f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float xAxisMovement = Mathf.Sin(speed * Time.time);
+        gameObject.transform.position = new Vector3(xAxisMovement, 0, 0);
+    }
+}
+```
+
+15. In the editor, it is now possible to edit the speed.
+   This also works while in play mode so that changes to such properties can be previewed in real-time.
+   However, any changes while in play mode will be reset once play mode is exited again.
+   This way, developers can experiment with various configurations in play mode and go back to the state which was active when entering play mode.
+   For instance, you can now enter the play mode by click the play button.
+   Select the object and change the speed value on the ObjectMover component.
+   The speed of the object in the preview will also adapt.
