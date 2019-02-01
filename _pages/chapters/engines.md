@@ -9,7 +9,7 @@ visualizations:
 Developers of AR applications do not have to start from scratch and (re-)implement the complete graphics pipeline and physics simulations.
 Instead, 3D engines like Unity {% cite Unity %} or the Unreal Engine {% cite UnrealEngine %} already offer this functionality as a foundation for the development of real-time graphics applications.
 
-## Unity
+# Unity
 
 Unity is a real-time graphics engine by Unity Technologies which developers can utilize to create 2D and 3D applications {% cite Unity %}.
 This means that Unity’s graphics can be adapted to different graphic qualities, performances and visual styles.
@@ -18,7 +18,7 @@ Unity is available in different pricing levels ranging from a free personal edit
 The required license level depends on the annual revenue.
 Many of the presented AR SDKs can be added to Unity projects so that their functionality is available directly in the 3D engine.
 
-### Project Structure and Project Setup
+## Project Structure and Project Setup
 
 Once a new Unity project has been created, the project's folder contains a subfolder called "Assets".
 Here, all resources for the project, e.g. 3D model files,textures, scripts, etc. can be placed.
@@ -36,7 +36,7 @@ Each scene is a virtual space which can be populated with 3D objects and user in
 In the application, scenes can be loaded and unloaded individually or they can replace a opened scene.
 Unity's WYSIWYG editor allows developers to graphically set up the 3D scene and arrange the 3D models accordingly.
 
-### User Interface
+## User Interface
 
 *The following description of the panel positions refers to Unity's default layout.
 The layout can be changed under Window > Layouts > Default.*
@@ -54,7 +54,7 @@ This scene hierarchy is displayed in a separate panel.
 Here, each entry corresponds to one object.
 To select a object, one can left click on the entry in the hierarchy or click on its geometry in the 3D view.
 
-### Importing and Placing 3D Models
+## Importing and Placing 3D Models
 
 In order to import a 3D model, its file needs to be placed in Unity's Assets folder.
 After this, it can be created in the 3D scene by dragging and dropping it into the 3D view of the editor.
@@ -78,7 +78,17 @@ The disadvantage of the exported 3D formats is that every time a change is appli
 This means that there are two versions of each 3D model where one is contained in the modelling application and one is used by Unity.
 The creators have to make sure that the two versions match.
 
-### Programming in Unity
+## Components
+
+Objects in a scene in Unity can be extended or modified by components.
+In the inspector panel, one can select such components and attach them to an object.
+Objects always contain a Transform component.
+In the inspector, developers can use this component to specify the position, rotation in Euler angles and scale of the object.
+Additionally, developers can add further components, e.g. to enable the physics simulation on a object or add a scripted behavior to the object.
+
+## Physics Simulation
+
+## Programming in Unity
 
 The Assets folder also stores the application logic which is defined by C# scripts.
 These scripts can react to events like the user input and can change properties on objects in a scene.
@@ -93,14 +103,40 @@ For instance, developers can implement an Update() function which is called once
 Similarly, different callback-methods can be implemented which are raised at different points in the application’s or object’s lifecycle, e.g. `Awake()`, `Start()` and `OnDestroy()`.
 Details on available callback methods and the data structures which can manipulate an object’s properties can be found in Unity’s documentation {% cite UnityUserManual %}.
 
-### Supporting Material
+If the script contains public variables, the values of the variables will be displayed in the editor.
+They are shown on the component's panel in the inspector and can also be edited.
+This way, developers can configure initial values directly in Unity's editor on a UI without touching the script again.
+For instance, public variables can be used to fine-tune the scripted behavior.
+If an object should move along one axis over time, one can expose a public variable which determines the speed of the object.
+In this case, the public variable is never assigned to in the script and the script only reads their value, e.g. to calculate the next position from the given speed.
+Since the speed value is shown in the editor on the component, developers can now tweak it so that it fits their expectations.
+Such input fields on the components are created for primitive variable types but also all GameObjects, Transforms and MonoBehavior scripts.
+For the latter, one can directly drag an object from the scene into the given box for the variable.
+The box will automatically be filled with the fitting type which is found on the object.
+
+## Prefabs
+
+Once an object is fully set up in Unity's editor, e.g. by importing the 3D model, setting its material and attaching components to it, it can be saved as a prefab.
+The prefab saved the object's instance on the hard drive and it stores the configuration of the object.
+This way, the object becomes reusable so that developers can quickly place the same object with the same configurations in other scenes.
+Additionally, it is possible to instaniate prefabs by scripts.
+To do so, the object can be set up in the scene and is saved as a prefab.
+Then, the object is deleted from the scene since it should only appear at some special moment.
+A reference to the prefab is handed to the script which determines when to create the object in the scene.
+The reference can be set by dragging the prefab file from the Assets browser onto the corresponding field of the component.
+
+## Play Mode & Debugging
+
+
+
+## Supporting Material
 
 For exploring Unity and its functionality, one can take a look at its user manual {% cite UnityUserManual %}.
 It also contains explanations and examples for the implementation of application logic using Unity's API.
 Unity also provides an Asset Store {% cite UnityAssetStore %} which contains scripts, 3D models and usage examples which have been created by other developers.
 It contains a mixture of free and paid content which can be downloaded for the own project to save development time.
 
-### Exercise: Importing a 3D Model in Unity and Moving It by Script
+## Exercise: Importing a 3D Model in Unity and Moving It by Script
 
 The goal of this exercise is to get used to Unity's user interface, scripting in Unity and the general project workflow.
 We will import a 3D model into Unity and write a script which will control the 3D models position.
@@ -208,7 +244,6 @@ public class ObjectMover : MonoBehaviour
     }
 }
 ```
-
 15. In the editor, it is now possible to edit the speed.
    This also works while in play mode so that changes to such properties can be previewed in real-time.
    However, any changes while in play mode will be reset once play mode is exited again.
@@ -216,3 +251,6 @@ public class ObjectMover : MonoBehaviour
    For instance, you can now enter the play mode by click the play button.
    Select the object and change the speed value on the ObjectMover component.
    The speed of the object in the preview will also adapt.
+
+
+# Unreal Engine
