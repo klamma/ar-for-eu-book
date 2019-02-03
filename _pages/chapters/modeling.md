@@ -35,7 +35,7 @@ It is also possible to use structure from motion photogrammetry to create 3D mod
 Photogrammetry is also a 3D scanning technique but it only requires a standard camera.
 With this camera, a series of photos are taken from various different angles and positions.
 Alternatively, it is also common to use an array of cameras which are all triggered at the same time to take a photo.
-The photos are later processed in a photogrammetry software in order to generate the 3D model.
+The photos are later processed in photogrammetry software in order to generate the 3D model.
 The software looks for common feature points in the images and tries to match them.
 Because of the fact that the images have been taken at different positions, the feature point is shifted in the other image and so the software can detemerine the depth of the feature point.
 This is similar to the way how humans can perceive depth from parallax motion, e.g. when looking out of the window of a moving train.
@@ -46,8 +46,8 @@ Among other areas of application it is used in areal photography and archaeology
 
 The presented modelling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
 The problem with this mesh is that it is irregular and often bears unnecessary complexity.
-For instance, a 3D scanned table consists of many small triangles but its table top could be simiplified to one planar shape which only consists of two triangles.
-Additionally, it is not possible to animate the high-complexity 3D meshes since any movement results in streched surfaces.
+For instance, a 3D scanned table consists of many small triangles but its table top could be simplified to one planar shape which only consists of two triangles.
+Additionally, it is not possible to animate the high-complexity 3D meshes since any movement results in stretched surfaces.
 Due to this, it is possible to retopologize the mesh {% cite PDZR18 %}.
 In this technique, the high-density mesh of the sculpt or 3D scan is used as a base mesh.
 Then, a 3D artist creates a new mesh on top of this base mesh.
