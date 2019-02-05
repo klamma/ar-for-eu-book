@@ -20,7 +20,8 @@ Please perform easy tests for creating markdown
 4. Use bundler to pull Jekyll
 
     bundle install
-		bundle update
+    
+    bundle update
 
 ## Build & Serve Locally
 
