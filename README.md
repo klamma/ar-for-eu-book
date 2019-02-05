@@ -29,9 +29,9 @@ First, please change the _config.yml "url" parameter to "http://localhost:4000".
 Please do not commit this change!
 Now build the page locally with
 
-    jekyll serve
+    bundle exec jekyll serve
 
- Navigate your browser to `http://localhost:4000/Online-Buch/` to check results while you develop.
+ Navigate your browser to `http://localhost:4000/ar-for-eu-book/` to check results while you develop.
 
 # Description
 
@@ -113,6 +113,13 @@ The book offers a comprehensive and introductory perspective on the topic Augmen
 
 # Contribution Model and Technical Infrastructure
 
-The book project follows an agile approach differing from the classic development process typical for printed content. Contributors can play several different roles in the production process. We are looking for authors, reviewers, agile editors, designers, software developers, visual artists, and testers. Agile teams are responsible for the generation of chapters and act as product owners. Reviewers will review chapters and communicate with the author teams. Team champions drive forward the agile development of chapters. Designers lay-out the online book and printed versions. Software developers are responsible for interactive Web graphics, application examples, and other dynamic code. Visual artists are responsible for appealing visualizations. Testers will thoroughly try out the final versions of the book.
+The book project follows an agile approach differing from the classic development process typical for printed content. Contributors can play several different roles in the production process. We are looking for authors, reviewers, agile editors, designers, software developers, visual artists, and testers. Agile teams are responsible for the generation of chapters and act as product owners. 
+
+* Reviewers will review chapters and communicate with the author teams. 
+* Team champions drive forward the agile development of chapters. 
+* Designers lay-out the online book and printed versions. 
+* Software developers are responsible for interactive Web graphics, application examples, exercises and other dynamic code. 
+* Visual artists are responsible for appealing visualizations. 
+* Testers will thoroughly try out the final versions of the book.
 
 The book uses Git for version management and a GitHub organization for the creation, hosting, and delivery of the book contents to guarantee agile development. We use the GitHub-based issue tracking system for the communication between the community members, such as the the authors and the reviewers. Based on this content sharing and version management platform we use the static site generator Jekyll for rendering the content of the Git repository into a Web site. With every commit, a new version of the Web site is created automatically. Formatting of the content is done using a simple markdown language. Programming and lay-out uses JavaScript and CSS.
