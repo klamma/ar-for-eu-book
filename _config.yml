@@ -12,5 +12,6 @@ exclude: ["README.md"]
 include:
   - _pages/chapters
   - _pages
-
-theme: jekyll-theme-slate
+sass:
+    sass_dir: _sass
+    style: compressed

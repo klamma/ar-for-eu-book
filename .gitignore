@@ -32,6 +32,7 @@ _site
 public/
 *.DS_Store
 *.lock
+.idea
 
 # to prevent accidents
 _config.yml
