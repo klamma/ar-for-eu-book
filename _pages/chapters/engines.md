@@ -6,6 +6,8 @@ categories: chapter
 visualizations:
 ---
 
+{% include autoRelativePath.html %}
+
 Developers of AR applications do not have to start from scratch and (re-)implement the complete graphics pipeline and physics simulations.
 Instead, 3D engines like Unity {% cite Unity %} or the Unreal Engine {% cite UnrealEngine %} already offer this functionality as a foundation for the development of real-time graphics applications.
 
@@ -41,8 +43,10 @@ Unity's WYSIWYG editor allows developers to graphically set up the 3D scene and 
 *The following description of the panel positions refers to Unity's default layout.
 The layout can be changed under Window > Layouts > Default.*
 
+![Unity UI]({{pathToRoot}}/assets/figures/engines/UnityUIOverview.png)
+
 The user interface of Unity's editor consists of different panels.
-The most important panel is the 3D view.
+The most important panel is the 3D view (B).
 The view direction can be changed by right-clicking and dragging at the same time.
 Similar to games, the viewport can be moved by the WASD keys.
 Additionally, certain preset perspectives like a view from the left side or top side can be selected in a widget in right top corner.
