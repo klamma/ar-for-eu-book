@@ -58,6 +58,10 @@ This scene hierarchy is displayed in a separate panel.
 Here, each entry corresponds to one object.
 To select an object, one can left click on the entry in the hierarchy or click on its geometry in the 3D view.
 
+## Play Mode & Debugging
+
+
+
 ## Importing and Placing 3D Models
 
 In order to import a 3D model, its file needs to be placed in Unity's Assets folder.
@@ -91,6 +95,19 @@ In the inspector, developers can use this component to specify the position, rot
 Additionally, developers can add further components, e.g. to enable the physics simulation on a object or add a scripted behavior to the object.
 
 ## Physics Simulation
+
+The physics simulation is handled by a *Rigidbody* component.
+When it is added to a 3D object, the object will be considered in the physics simulation.
+Once the play mode is entered, it will be affected by gravity and starts falling down.
+Another part of the physics simulation is the collision detection.
+An object should have a collider or else it will pass through other objects like the floor and fall down infinitely.
+By default, Unity's primitive objects like the cube or sphere are already equipped with a collider by default.
+For imported 3D models, the colliders need to be set up manually.
+This can be achieved by adding one or more collider components to the object.
+The available colliders also have primitive shapes like cuboids, spheres or capsules.
+There is also a *Mesh Collider* component which directly uses the object's geometry as a collider.
+It is recommended to avoid using a Mesh Collider and instead approximate the object by a composition of primitive collider shapes.
+This improves performance since the collision detection for primitives can be calculated quicker than for any arbitrary shaped geometry.
 
 ## Programming in Unity
 
@@ -130,10 +147,6 @@ Then, the object can be deleted from the scene since it should only appear at a 
 A reference to the prefab is handed to the script which determines when to create the object in the scene.
 The reference can be set by dragging the prefab file from the Assets browser onto the corresponding field of the component.
 The script creates a GameObject from this reference by calling `GameObject.Instantiate()`.
-
-## Play Mode & Debugging
-
-
 
 ## Supporting Material
 
