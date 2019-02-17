@@ -20,7 +20,8 @@ Please perform easy tests for creating markdown
 4. Use bundler to pull Jekyll
 
     bundle install
-		bundle update
+    
+    bundle update
 
 ## Build & Serve Locally
 
@@ -40,7 +41,8 @@ Teaching how to create and code Augmented Reality (AR) is an emerging topic in H
 The book will be available as Open Educational Resource (OER) under the Creative-Commons-License CC-BY-SA. This allows using figures and texts for own presentations as Attribution-ShareAlike 4.0 International. The book is planned as a living resource, where chapters can be reworked or added as needed.
 
 The book production is supported by the ERASMUS+ Strategic Alliances Project for Higher Education called “Augmented Reality in Formal European University Education (AR-FOR-EU). The project AR-FOR-EU establishes and deepens a strategic partnership for teaching Augmented Reality in Higher Education at scale on undergraduate and graduate levels.
-Scope
+
+# Scope
 
 The book will cover the necessary prerequisites to understand and follow the core concepts of teaching Augmented Reality. It will have a section for advanced topics that can be covered in curricula. A section of the book will also be dedicated to a collection of good practices in teaching AR coding.
 
