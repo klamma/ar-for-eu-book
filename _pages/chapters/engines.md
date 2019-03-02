@@ -8,6 +8,35 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    // script for exchanging version-specific content.
+    $(document).ready(function () {
+        $('.unityVersionSpecific').hide();
+        $('.unity2017-4').show();
+        $('#versionSelectorUnity').change(function () {
+            $('.unityVersionSpecific').hide();
+            $('.'+$(this).val()).show();
+    })
+});
+</script>
+
+> Please select your Unity version:
+
+> <select id="versionSelectorUnity">
+>   <option value="unity2017-4">Unity 2017.4</option>
+>   <option value="unity2018-3">Unity 2018.3</option>
+> </select>
+
+> {: .unityVersionSpecific .unity2017-4}
+You have selected Version 2017.4.
+This is the long term support version.
+
+> {: .unityVersionSpecific .unity2018-3}
+You have selected Version 2018.3
+This is the most current version.
+
+
 Developers of AR applications do not have to start from scratch and (re-)implement the complete graphics pipeline and physics simulations.
 Instead, 3D engines like Unity {% cite Unity %} or the Unreal Engine {% cite UnrealEngine %} already offer this functionality as a foundation for the development of real-time graphics applications.
 
