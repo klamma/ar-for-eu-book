@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Internet of Things, Robots and Wearables
+# Internet of Things, Robots and Wearables

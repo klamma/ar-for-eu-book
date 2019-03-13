@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Hardware and Optical Design
+# Hardware and Optical Design

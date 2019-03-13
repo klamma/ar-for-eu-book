@@ -6,4 +6,13 @@ categories: chapter
 visualizations:
 ---
 
-!AR for the Web
+# AR for the Web
+
+## Enabling Technologies
+
+* WebRTC
+* WebAssembly
+* Web Workers
+* WebGL
+
+[//]: # (QRD*19)

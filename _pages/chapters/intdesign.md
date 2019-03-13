@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Interactive Graphics and Sound Design
+# Interactive Graphics and Sound Design

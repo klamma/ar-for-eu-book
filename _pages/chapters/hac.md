@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Hardware Accelerated Computing
+# Hardware Accelerated Computing

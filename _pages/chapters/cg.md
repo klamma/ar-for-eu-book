@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Computer Graphics
+# Computer Graphics

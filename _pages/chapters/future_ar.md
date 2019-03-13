@@ -6,4 +6,6 @@ categories: chapter
 visualizations:
 ---
 
-!Future of AR
+# Future of AR
+
+Here should be expected developments in Hardware, Software and projects.

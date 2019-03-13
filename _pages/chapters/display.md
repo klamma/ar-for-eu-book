@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Display Technologies
+# Display Technologies

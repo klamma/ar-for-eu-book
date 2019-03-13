@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!2D/3D Printing
+# 2D/3D Printing
