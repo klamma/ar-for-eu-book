@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Perceptual Foundations of AR
+# Perceptual Foundations of AR

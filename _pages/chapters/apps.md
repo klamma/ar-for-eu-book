@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!AR Applications
+# AR Applications

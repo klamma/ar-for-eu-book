@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Maker Communities
+# Maker Communities

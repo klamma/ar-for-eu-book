@@ -6,4 +6,10 @@ categories: chapter
 visualizations:
 ---
 
-!Programming
+# Programming
+
+Programming techniques
+
+* JavaScript
+* C#
+* C++

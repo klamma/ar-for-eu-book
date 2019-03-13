@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Applications, Employments and Careers in AR
+# Applications, Employments and Careers in AR

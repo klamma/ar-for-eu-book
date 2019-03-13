@@ -6,4 +6,4 @@ categories: chapter
 visualizations:
 ---
 
-!Linear and Geometric Algebra
+# Linear and Geometric Algebra
