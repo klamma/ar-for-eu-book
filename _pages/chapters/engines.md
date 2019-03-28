@@ -200,7 +200,8 @@ We will import a 3D model into Unity and write a script which will control the 3
    To do so, open a file browser and navigate to the project's folder.
    Here, create a folder called "3D Models" and copy the 3D model there.
    You can use any compatible 3D model format.
-   In the example we use the Stanford bunny in the .obj file format. It can be downloaded here: [https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj](https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj).
+   In the example we use the Stanford bunny in the .obj file format.
+   It can be downloaded in the [supplementary material]({{pathToRoot}}/assets/supplementary_material/Unity/Bunny.obj)).
 4. Return to Unity's editor.
    In the Assets browser you will now find the "3D Models" folder and inside of it the 3D model.
    You can create an instance of the 3D model in the scene by dragging and dropping the 3D model file from the assets browser onto the 3D view or the scene hierarchy.
@@ -256,6 +257,7 @@ We will import a 3D model into Unity and write a script which will control the 3
    If we assign values to the position, it will apply the values to the exact same Transform component that we previously changed manually in the inspector view to set its position.
    Since the `Update` function is called once per frame, the object's position will be updated in every frame step.
    Thus, the changes will appear as one continuous movement.
+
 12. If you start Unity's play mode now, the object will still not move since the script is not yet attached to the object.
    In order to fix this, navigate to the script in the assets browser.
    Then select the object in the 3D view or scene hierarchy.
