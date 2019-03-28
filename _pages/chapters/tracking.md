@@ -6,8 +6,6 @@ categories: chapter
 visualizations:
 ---
 
-# Tracking Technologies
-
 Tracking technologies are required in order to provide the position and rotation of a real object to the computer system.
 With AR systems, tracking technolgogies are commonly used in two settings:
 If the system consists of a head-mounted display, e.g. the Microsoft HoloLens, tracking is required in order to capture the user's head movements.
@@ -79,7 +77,9 @@ This way, color information can be captured and applied to a scanned model as a 
 
 ### RGB Cameras
 
-### Time of Flight Sensors
+### Time-of-Flight Sensors
+
+
 
 ## Mechanical
 
