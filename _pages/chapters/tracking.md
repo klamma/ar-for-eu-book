@@ -79,7 +79,12 @@ This way, color information can be captured and applied to a scanned model as a 
 
 ### Time-of-Flight Sensors
 
-
+Time-of-Flight Sensors use the speed of light to determine how far an object is away from the sensor.
+Unlike laser scanning sensors which can only scan single points at once, Time-of-Flight sensors are able to provide a depth map for a (low-resolution) image.
+The sensor consists of a light source which emits a pulse of light, e.g. infrared light.
+The light is reflected in the environment and captured by an image sensor.
+From the difference in time between the emission and the received reflection, the distance to the reflecting surface can be computed.
+Due to the high speed of light, the measurement logic needs to be very quick, i.e. in the range of picoseconds.
 
 ## Mechanical
 
@@ -96,6 +101,8 @@ Haptic feedback is achieved by moving the robotic arm.
 This provides forces on the pen which hinder movements in certain directions.
 
 ## Electromagnetic
+
+
 
 ## Ultra Sound
 
