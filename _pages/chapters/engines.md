@@ -196,6 +196,9 @@ We will import a 3D model into Unity and write a script which will control the 3
    Make sure that a 3D template is used and that Unity Analytics is turned off.
    When logged in with an account, Unity Analytics gives developers a real-time insight into data about how users interact with their application.
    It is not required in this example.
+
+![Project Creation]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/CreateProject.png)
+
 3. Once the project has been created, the 3D model can be imported.
    To do so, open a file browser and navigate to the project's folder.
    Here, create a folder called "3D Models" and copy the 3D model there.
