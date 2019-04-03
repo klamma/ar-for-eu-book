@@ -342,10 +342,80 @@ We will start with the result of the last exercise but the shown procedure also 
     ![Import Package]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ImportPackage.png)
 
 3. The imported package will create a new folder in your assets, called HoloToolkit, and copy the content there.
-   Additionally, a new menu entry "MixedRealityToolkit" can be found in the top menu bar.
+   Additionally, a new menu entry "Mixed Reality Toolkit" can be found in the top menu bar.
    It contains quick ways to set the project up for Mixed Reality.
    Click on the MixedRealityToolkit entry in the menu and choose "Configure > Apply Mixed Reality Project Settings".
    
-    ![Apply Project Settings]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/MenuApplyMixedRealityProjectSettings.png)
+    ![Apply Project Settings Menu]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/MenuApplyMixedRealityProjectSettings.png)
+
+4. The following dialog gives detailed options about specific project settings.
+   Among others, the checked points set up the Unity project for UWP development which is required for the HoloLens.
+   Additionally, XR support is activated which tells Unity that the build application should run on a head-mounted display.
+   For a collaborative experience which uses the networking system which is provided by the MixedRealityToolkit, one can enable the sharing settings.
+   However, for this demo this won't be necessary.
+   Hit "*Apply*" to finish the process.
+   
+    ![Apply Project Settings]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ApplyMixedRealityProjectSettings.png)
+
+5. Next up, we need to prepare the scene for Mixed Reality.
+   This can be achieved with the next menu entry.
+   As before, go to the top menu bar entry "Mixed Reality Toolkit" and choose "Configure > Apply Mixed Reality Scene Settings".
+   A similar dialog will open up where you can specify how the scene should be altered.
+   For instance, the camera will be exchanged for a prepared version which can react to the user's head movements.
+   It is also a good idea to make the script reset the camera's position to the origin.
+   This way, when the application starts or the scene is loaded again, the view always starts there and the developer can account for this in the scene design.
+   The script will also import some prefabs from the Mixed Reality Toolkit which are able to detect input gestures.
+   The gaze cursor which is a small ring in the centre of the user's vision, helps the user in focusing objects for interaction.
+   In order to use this cursor in own appilcations, the prefab needs to be placed in the scene.
+   If you want to access the 3D scan of the environment, which is continuously created by the HoloLens, please check *Add the Spatial Mapping Prefab*.
+   It places an empty GameObject in the scene with a Spatial Mapping Manager attached to it.
+   During runtime, this manager will create and update the mesh of the 3D scanned environment in this scene.
+   Hit "*Apply*" in the dialog box to adapt the currently open scene for Mixed Reality.
+
+    ![Apply Scene Settings]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ApplyMixedRealitySceneSettings.png)
+
+6. Again, click on the "Mixed Reality Toolkit" menu entry and this time select "Apply UWP Capability Settings".
+   It opens another dialog window with checkboxes for common permissions.
+   Some functionality of the Mixed Reality Toolkit, but also from own scripts, e.g. accessing the microphone, the internet or the spatial mapping, require explicit permission by the user.
+   In this dialog, developers can state that they require this permission.
+   If users open the app for the first time, they will be asked to agree to these permissions.
+   If you checked the *Spatial Mapping* option in the previous step, you need to check *Spatial Mapping* here, too.
+
+7. In the top menu, go to "File > Build Settings".
+   In the opened dialog window, make sure that on the left, the platform is set to Universal Windows Platform.
+   This should already be the case because this is one of the settings which was automatically changed in step 4.
+   The active platform is indicated by the Unity logo next to it.
+   
+8. To include the currently opened scene in the build, click on the "Add Open Scenes" button.
+   After that, the scene should appear in the list above the button.
+
+   ![Build Settings]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/BuildSettings.png)
+
+9. You can also check the "Unity C# Projects" option.
+   This is not really required but it is helpful:
+   The build will generate a Visual Studio solution and if this option is checked, the C# scripts are available in the solution.
+   In the solution, the C# scripts can be changed without going back to Unity and re-building the project.
+   A re-build is only necessary in Unity if a project setting or anything in the scene was altered.
+
+10. Click on "Build" to generate the Visual Studio solution.
+   It will ask for a folder where the solution should be saved.
+   In order to keep the project tidy, create a folder "App" and select it.
+   The build will be generated in this folder.
+
+11. Once the build is finished, navigate into the folder that you just created and which now contains the build.
+    You will find a Visual studio solution (with the ending .sln) and the same name as the project.
+    Please, open it.
+
+12. In the Visual Studio solution, change the configuration to "Release" and the target architecture to "x86".
+    Select the HoloLens as the deploy target by changing the entry next to the green play button to "Device".
+    The entry can be changed by clicking on the small black triangle next to the text on the button.
+
+    ![Visual Studio Solution]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/VisualStudio.png)
+
+13. Make sure that the HoloLens is connected to the development PC by USB.
+    Click the green play button in Visual Studio to start the installation of the app on the HoloLens.
+
+14. If this is the first time that you are building an app for the HoloLens, it will probably ask you for a PIN.
+    You can find this dynamically generated code in the developer settings on the HoloLens.
 
 # Unreal Engine
