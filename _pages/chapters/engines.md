@@ -186,6 +186,8 @@ It contains a mixture of free and paid content which can be downloaded for the o
 
 ## Exercise: Importing a 3D Model in Unity and Moving It by Script
 
+> If you follow this exercise in order to deploy the project to the Microsoft HoloLens in the next exercise, please use Unity 2017.4.
+
 The goal of this exercise is to get used to Unity's user interface, scripting in Unity and the general project workflow.
 We will import a 3D model into Unity and write a script which will control the 3D model's position.
 
@@ -216,7 +218,7 @@ We will import a 3D model into Unity and write a script which will control the 3
    Under "Transform", its position, rotation and size can be adapted to fit the scene.
    Set the position to (0, 0, 0) so that the object is situated in the origin of the coordinate system.
 
-    ![Drag And Drop Model]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/AdjustTransform.png)
+    ![Adjust Transform]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/AdjustTransform.png)
 
 6. It is also possible to add a material to the bunny which can be used to add color to the object's surface.
    In order to do this, create a new folder called "Materials" in the root directory of the assets browser.
@@ -229,14 +231,14 @@ We will import a 3D model into Unity and write a script which will control the 3
    Click once on the white box next to "*Albedo*" to open a color picker dialog.
    Select a color and simply close the color dialog again to apply the selected color to the material.
 
-    ![Drag And Drop Model]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/MaterialSetup.png)
+    ![Material Setup]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/MaterialSetup.png)
 
 8. In the inspector view, the color on the sphere in the material preview window has been changed accordingly.
    However, the color does not appear on the 3D model yet.
    In order to view the material on the model, the material must be applied to it.
    The simplest way to do this is to drag and drop the material file from the assets browser onto the object in the 3D view.
 
-    ![Drag And Drop Model]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/DragAndDropMaterial.png)
+    ![Drag And Drop Material]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/DragAndDropMaterial.png)
 
 9. Make sure that the object is also visible in the game view since it provides a preview of the final application.
    If the object is not visible, go back to the 3D view and select the camera.
@@ -247,6 +249,7 @@ We will import a 3D model into Unity and write a script which will control the 3
 10. We are now ready to create the script which will handle the movement of the 3D object.
    Similar to the creation of the other files, first create a folder called "Scripts" and then create a C# script called "ObjectMover" by right-clicking and selecting "Create > C# Script".
    The created script is automatically set up as a C# class which is also called `ObjectMover`.
+   It is important that the name of the file always matches up with the name of the class.
    The script is also set up so that it inherits from `MonoBehavior` which means that the script can be attached to game objects and that it can implement special callback functions.
    Double click on the file in the assets browser in order to edit it in a development environment, e.g. Visual Studio.
 11. With `Start` and `Update` two of these callback methods have already been defined in the class.
@@ -316,5 +319,33 @@ We will import a 3D model into Unity and write a script which will control the 3
    Select the object and change the speed value on the ObjectMover component.
    The speed of the object in the preview will also adapt.
 
+
+# Exercise: Developing a Unity Project For the Microsoft HoloLens
+
+> At the moment, Unity 2017.4 should be used since this version which is currently supported by the stable release of the MixedRealityToolkit.
+
+The goal of this exercise is to develop an AR project with Unity so that it can run on the Microsoft HoloLens.
+We will start with the result of the last exercise but the shown procedure also applies to any project which is created from scratch.
+
+1. We will use the MixedRealityToolkit as a supporting library in Unity.
+   It provides access to some HoloLens-specific functionality, e.g. to the spatial mapping mesh.
+   The MixedRealityToolkit is open-source and it can be found on [GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity).
+   Under [releases](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases) it can be downloaded.
+   Please make sure to choose the version which is labelled with *Latest release* (not the versions which are tagged as *Pre-release*).
+   Usually, the release notes also mention the targeted Unity version, so you can check if you chose a compatible release.
+   The release provides some packaged assets.
+   Download the file with the ending *.unitypackage* without *Examples* or *Preview* in the name.
+   You can save this Unitypackage anywhere on your computer, just remember the file path.
+2. In Unity, perform a right-click on a free space in the assets-browser panel and choose "Import Package > Custom Package...".
+   In the opened dialog, navigate to the path where the downloaded unitypackage was stored and import it.
+   
+    ![Import Package]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ImportPackage.png)
+
+3. The imported package will create a new folder in your assets, called HoloToolkit, and copy the content there.
+   Additionally, a new menu entry "MixedRealityToolkit" can be found in the top menu bar.
+   It contains quick ways to set the project up for Mixed Reality.
+   Click on the MixedRealityToolkit entry in the menu and choose "Configure > Apply Mixed Reality Project Settings".
+   
+    ![Apply Project Settings]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/MenuApplyMixedRealityProjectSettings.png)
 
 # Unreal Engine
