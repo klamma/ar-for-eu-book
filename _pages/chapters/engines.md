@@ -418,4 +418,16 @@ We will start with the result of the last exercise but the shown procedure also 
 14. If this is the first time that you are building an app for the HoloLens, it will probably ask you for a PIN.
     You can find this dynamically generated code in the developer settings on the HoloLens.
 
+    ![PinRequest]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/PinRequest.png)
+
+    ![Pairing Step 1]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/Pair1.jpg)
+
+    ![Pairing Step 2]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/Pair2.jpg)
+
+    ![Pairing Step 3]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/Pair3.jpg)
+
+15. To stop the application again, you can click on the red box which has appeared rougly at the same place where the green play button was.
+    This only stops the execution.
+    The application is still installed on the HoloLens and can now be started directly through the start menu on the HoloLens.
+
 # Unreal Engine
