@@ -186,6 +186,8 @@ It contains a mixture of free and paid content which can be downloaded for the o
 
 ## Exercise: Importing a 3D Model in Unity and Moving It by Script
 
+> If you follow this exercise in order to deploy the project to the Microsoft HoloLens in the next exercise, please use Unity 2017.4.
+
 The goal of this exercise is to get used to Unity's user interface, scripting in Unity and the general project workflow.
 We will import a 3D model into Unity and write a script which will control the 3D model's position.
 
@@ -196,19 +198,28 @@ We will import a 3D model into Unity and write a script which will control the 3
    Make sure that a 3D template is used and that Unity Analytics is turned off.
    When logged in with an account, Unity Analytics gives developers a real-time insight into data about how users interact with their application.
    It is not required in this example.
+
+    ![Project Creation]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/CreateProject.png)
+
 3. Once the project has been created, the 3D model can be imported.
    To do so, open a file browser and navigate to the project's folder.
    Here, create a folder called "3D Models" and copy the 3D model there.
    You can use any compatible 3D model format.
-   In the example we use the Stanford bunny in the .obj file format. It can be downloaded here: [https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj](https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj).
+   In the example we use the Stanford bunny in the .obj file format.
+   It can be downloaded in the [supplementary material]({{pathToRoot}}/assets/supplementary_material/Unity/Bunny.obj)).
 4. Return to Unity's editor.
    In the Assets browser you will now find the "3D Models" folder and inside of it the 3D model.
    You can create an instance of the 3D model in the scene by dragging and dropping the 3D model file from the assets browser onto the 3D view or the scene hierarchy.
    In order to quickly move the viewport to the 3D model, double click the object's entry in the hierarchy view.
-5. In the inspector panel, the attributes of the 3D model can be changed.
+
+    ![Drag And Drop Model]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/DragAndDropModel.png)
+
+5. With the 3D object selected in the scene, in the inspector panel, the attributes of the 3D model can be changed.
    Under "Transform", its position, rotation and size can be adapted to fit the scene.
    Set the position to (0, 0, 0) so that the object is situated in the origin of the coordinate system.
-   For the bunny model, the size was increased to (10, 10, 10).
+
+    ![Adjust Transform]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/AdjustTransform.png)
+
 6. It is also possible to add a material to the bunny which can be used to add color to the object's surface.
    In order to do this, create a new folder called "Materials" in the root directory of the assets browser.
    Then right click on the assets browser and choose "Create > Material".
@@ -219,43 +230,51 @@ We will import a 3D model into Unity and write a script which will control the 3
    By default, the material is setup as a Physically Based Rendering (PBR) material, so its surface color can be changed in the "*Albedo*" option.
    Click once on the white box next to "*Albedo*" to open a color picker dialog.
    Select a color and simply close the color dialog again to apply the selected color to the material.
+
+    ![Material Setup]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/MaterialSetup.png)
+
 8. In the inspector view, the color on the sphere in the material preview window has been changed accordingly.
    However, the color does not appear on the 3D model yet.
    In order to view the material on the model, the material must be applied to it.
    The simplest way to do this is to drag and drop the material file from the assets browser onto the object in the 3D view.
+
+    ![Drag And Drop Material]({{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/DragAndDropMaterial.png)
+
 9. Make sure that the object is also visible in the game view since it provides a preview of the final application.
    If the object is not visible, go back to the 3D view and select the camera.
    Move and rotate the camera so that the object is visible from its perspective.
    This can also be done by the widgets or by entering values in the transform component in the inspector.
-   When the camera is selected, a small preview window will appear in the 3D view which shows what the camera sees.
-   In the example scene, we used the positional values (0, 2, 3) and rotation angles of (20, 180, 0).
+   When the camera is selected, a small preview window will appear in the right bottom of the 3D view which shows what the camera sees.
+   In the example scene, we used the positional values (0, 1, 3) and rotation angles of (20, 180, 0).
 10. We are now ready to create the script which will handle the movement of the 3D object.
    Similar to the creation of the other files, first create a folder called "Scripts" and then create a C# script called "ObjectMover" by right-clicking and selecting "Create > C# Script".
    The created script is automatically set up as a C# class which is also called `ObjectMover`.
+   It is important that the name of the file always matches up with the name of the class.
    The script is also set up so that it inherits from `MonoBehavior` which means that the script can be attached to game objects and that it can implement special callback functions.
    Double click on the file in the assets browser in order to edit it in a development environment, e.g. Visual Studio.
 11. With `Start` and `Update` two of these callback methods have already been defined in the class.
    We will first modify the update-function to implement the actual movement:
-   ```[C#]
+    ```[C#]
     // Update is called once per frame
     void Update()
     {
         float xAxisMovement = Mathf.Sin(Time.time);
         gameObject.transform.position = new Vector3(xAxisMovement, 0, 0);
     }
-   ```
-   The given code segment makes the object go back and forth between the -1 and 1 coordinates on the X axis.
-   We can move an object in such a periodical manner by using the time as an input for the sine function.
-   This is done in the first line in the `Update` method.
-   The sine function is implemented in the `Mathf` namespace.
-   Next, we only require a way to access the time.
-   If we look at Unity's documentation, we can see that `Time.time` is exactly what we are looking for since it provides the time in seconds since application-startup.
-   The second line handles the actual movement of the object.
-   The local variable `gameobject` is defined in the MonoBehavior parent class and it refers to the object instance to which the script is attached.
-   By accessing its `transform` variable, one can edit its position.
-   If we assign values to the position, it will apply the values to the exact same Transform component that we previously changed manually in the inspector view to set its position.
-   Since the `Update` function is called once per frame, the object's position will be updated in every frame step.
-   Thus, the changes will appear as one continuous movement.
+    ```
+    The given code segment makes the object go back and forth between the -1 and 1 coordinates on the X axis.
+    We can move an object in such a periodical manner by using the time as an input for the sine function.
+    This is done in the first line in the `Update` method.
+    The sine function is implemented in the `Mathf` namespace.
+    Next, we only require a way to access the time.
+    If we look at Unity's documentation, we can see that `Time.time` is exactly what we are looking for since it provides the time in seconds since application-startup.
+    The second line handles the actual movement of the object.
+    The local variable `gameobject` is defined in the MonoBehavior parent class and it refers to the object instance to which the script is attached.
+    By accessing its `transform` variable, one can edit its position.
+    If we assign values to the position, it will apply the values to the exact same Transform component that we previously changed manually in the inspector view to set its position.
+    Since the `Update` function is called once per frame, the object's position will be updated in every frame step.
+    Thus, the changes will appear as one continuous movement.
+
 12. If you start Unity's play mode now, the object will still not move since the script is not yet attached to the object.
    In order to fix this, navigate to the script in the assets browser.
    Then select the object in the 3D view or scene hierarchy.
@@ -269,29 +288,29 @@ We will import a 3D model into Unity and write a script which will control the 3
    In the case of our float variable `speed`, this means, that Unity will automatically create a numeric text field on the MoveObject component where we can enter values.
    Multiply the `speed` variable with the time.
 
-```[C#]
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ObjectMover : MonoBehaviour
-{
-    public float speed = 1f;
-
-    // Start is called before the first frame update
-    void Start()
+    ```[C#]
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    
+    public class ObjectMover : MonoBehaviour
     {
-        
+        public float speed = 1f;
+    
+        // Start is called before the first frame update
+        void Start()
+        {
+            
+        }
+    
+        // Update is called once per frame
+        void Update()
+        {
+            float xAxisMovement = Mathf.Sin(speed * Time.time);
+            gameObject.transform.position = new Vector3(xAxisMovement, 0, 0);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        float xAxisMovement = Mathf.Sin(speed * Time.time);
-        gameObject.transform.position = new Vector3(xAxisMovement, 0, 0);
-    }
-}
-```
+    ```
 15. In the editor, it is now possible to edit the speed.
    This also works while in play mode so that changes to such properties can be previewed in real-time.
    However, any changes while in play mode will be reset once play mode is exited again.
@@ -300,5 +319,115 @@ public class ObjectMover : MonoBehaviour
    Select the object and change the speed value on the ObjectMover component.
    The speed of the object in the preview will also adapt.
 
+
+# Exercise: Developing a Unity Project For the Microsoft HoloLens
+
+> At the moment, Unity 2017.4 should be used since this version which is currently supported by the stable release of the MixedRealityToolkit.
+
+The goal of this exercise is to develop an AR project with Unity so that it can run on the Microsoft HoloLens.
+We will start with the result of the last exercise but the shown procedure also applies to any project which is created from scratch.
+
+1. We will use the MixedRealityToolkit as a supporting library in Unity.
+   It provides access to some HoloLens-specific functionality, e.g. to the spatial mapping mesh.
+   The MixedRealityToolkit is open-source and it can be found on [GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity).
+   Under [releases](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases) it can be downloaded.
+   Please make sure to choose the version which is labelled with *Latest release* (not the versions which are tagged as *Pre-release*).
+   Usually, the release notes also mention the targeted Unity version, so you can check if you chose a compatible release.
+   The release provides some packaged assets.
+   Download the file with the ending *.unitypackage* without *Examples* or *Preview* in the name.
+   You can save this Unitypackage anywhere on your computer, just remember the file path.
+2. In Unity, perform a right-click on a free space in the assets-browser panel and choose "Import Package > Custom Package...".
+   In the opened dialog, navigate to the path where the downloaded unitypackage was stored and import it.
+   
+    ![Import Package]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ImportPackage.png)
+
+3. The imported package will create a new folder in your assets, called HoloToolkit, and copy the content there.
+   Additionally, a new menu entry "Mixed Reality Toolkit" can be found in the top menu bar.
+   It contains quick ways to set the project up for Mixed Reality.
+   Click on the MixedRealityToolkit entry in the menu and choose "Configure > Apply Mixed Reality Project Settings".
+   
+    ![Apply Project Settings Menu]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/MenuApplyMixedRealityProjectSettings.png)
+
+4. The following dialog gives detailed options about specific project settings.
+   Among others, the checked points set up the Unity project for UWP development which is required for the HoloLens.
+   Additionally, XR support is activated which tells Unity that the build application should run on a head-mounted display.
+   For a collaborative experience which uses the networking system which is provided by the MixedRealityToolkit, one can enable the sharing settings.
+   However, for this demo this won't be necessary.
+   Hit "*Apply*" to finish the process.
+   
+    ![Apply Project Settings]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ApplyMixedRealityProjectSettings.png)
+
+5. Next up, we need to prepare the scene for Mixed Reality.
+   This can be achieved with the next menu entry.
+   As before, go to the top menu bar entry "Mixed Reality Toolkit" and choose "Configure > Apply Mixed Reality Scene Settings".
+   A similar dialog will open up where you can specify how the scene should be altered.
+   For instance, the camera will be exchanged for a prepared version which can react to the user's head movements.
+   It is also a good idea to make the script reset the camera's position to the origin.
+   This way, when the application starts or the scene is loaded again, the view always starts there and the developer can account for this in the scene design.
+   The script will also import some prefabs from the Mixed Reality Toolkit which are able to detect input gestures.
+   The gaze cursor which is a small ring in the centre of the user's vision, helps the user in focusing objects for interaction.
+   In order to use this cursor in own appilcations, the prefab needs to be placed in the scene.
+   If you want to access the 3D scan of the environment, which is continuously created by the HoloLens, please check *Add the Spatial Mapping Prefab*.
+   It places an empty GameObject in the scene with a Spatial Mapping Manager attached to it.
+   During runtime, this manager will create and update the mesh of the 3D scanned environment in this scene.
+   Hit "*Apply*" in the dialog box to adapt the currently open scene for Mixed Reality.
+
+    ![Apply Scene Settings]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ApplyMixedRealitySceneSettings.png)
+
+6. Again, click on the "Mixed Reality Toolkit" menu entry and this time select "Apply UWP Capability Settings".
+   It opens another dialog window with checkboxes for common permissions.
+   Some functionality of the Mixed Reality Toolkit, but also from own scripts, e.g. accessing the microphone, the internet or the spatial mapping, require explicit permission by the user.
+   In this dialog, developers can state that they require this permission.
+   If users open the app for the first time, they will be asked to agree to these permissions.
+   If you checked the *Spatial Mapping* option in the previous step, you need to check *Spatial Mapping* here, too.
+
+7. In the top menu, go to "File > Build Settings".
+   In the opened dialog window, make sure that on the left, the platform is set to Universal Windows Platform.
+   This should already be the case because this is one of the settings which was automatically changed in step 4.
+   The active platform is indicated by the Unity logo next to it.
+   
+8. To include the currently opened scene in the build, click on the "Add Open Scenes" button.
+   After that, the scene should appear in the list above the button.
+
+   ![Build Settings]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/BuildSettings.png)
+
+9. You can also check the "Unity C# Projects" option.
+   This is not really required but it is helpful:
+   The build will generate a Visual Studio solution and if this option is checked, the C# scripts are available in the solution.
+   In the solution, the C# scripts can be changed without going back to Unity and re-building the project.
+   A re-build is only necessary in Unity if a project setting or anything in the scene was altered.
+
+10. Click on "Build" to generate the Visual Studio solution.
+   It will ask for a folder where the solution should be saved.
+   In order to keep the project tidy, create a folder "App" and select it.
+   The build will be generated in this folder.
+
+11. Once the build is finished, navigate into the folder that you just created and which now contains the build.
+    You will find a Visual studio solution (with the ending .sln) and the same name as the project.
+    Please, open it.
+
+12. In the Visual Studio solution, change the configuration to "Release" and the target architecture to "x86".
+    Select the HoloLens as the deploy target by changing the entry next to the green play button to "Device".
+    The entry can be changed by clicking on the small black triangle next to the text on the button.
+
+    ![Visual Studio Solution]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/VisualStudio.png)
+
+13. Make sure that the HoloLens is connected to the development PC by USB.
+    Click the green play button in Visual Studio to start the installation of the app on the HoloLens.
+
+14. If this is the first time that you are building an app for the HoloLens, it will probably ask you for a PIN.
+    You can find this dynamically generated code in the developer settings on the HoloLens.
+
+    ![PinRequest]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/PinRequest.png)
+
+    ![Pairing Step 1]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/Pair1.jpg)
+
+    ![Pairing Step 2]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/Pair2.jpg)
+
+    ![Pairing Step 3]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/Pair3.jpg)
+
+15. To stop the application again, you can click on the red box which has appeared rougly at the same place where the green play button was.
+    This only stops the execution.
+    The application is still installed on the HoloLens and can now be started directly through the start menu on the HoloLens.
 
 # Unreal Engine
