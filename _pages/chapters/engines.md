@@ -55,7 +55,7 @@ Once a new Unity project has been created, the project's folder contains a subfo
 Here, all resources for the project, e.g. 3D model files, textures, scripts, etc. can be placed.
 Everything in this Assets folder and its subfolders is automatically imported into the project and can be integrated into the application.
 It makes sense to keep the Assets folder organized so that all developers know where resources are stored.
-One recommended way of setting up an Assets folder is to create individual folders for each type of ressource, e.g. "Animations", "Models", "Textures", "Scripts", etc.
+One recommended way of setting up an Assets folder is to create individual folders for each type of resource, e.g. "Animations", "Models", "Textures", "Scripts", etc.
 
 Some folder names are special since they are treated in a particular way by Unity {% cite UnitySpecialFolders %}.
 For instance, a folder called "Plugins" will be searched for C/C++ DLLs which are integrated into Unity.
@@ -121,7 +121,7 @@ Objects in a scene in Unity can be extended or modified by components.
 In the inspector panel, one can select such components and attach them to an object.
 Objects always contain a Transform component.
 In the inspector, developers can use this component to specify the position, rotation in Euler angles and scale of the object.
-Additionally, developers can add further components, e.g. to enable the physics simulation on a object or add a scripted behavior to the object.
+Additionally, developers can add further components, e.g. to enable the physics simulation on an object or add a scripted behavior to the object.
 
 ## Physics Simulation
 
@@ -365,8 +365,8 @@ We will start with the result of the last exercise but the shown procedure also 
    It is also a good idea to make the script reset the camera's position to the origin.
    This way, when the application starts or the scene is loaded again, the view always starts there and the developer can account for this in the scene design.
    The script will also import some prefabs from the Mixed Reality Toolkit which are able to detect input gestures.
-   The gaze cursor which is a small ring in the centre of the user's vision, helps the user in focusing objects for interaction.
-   In order to use this cursor in own appilcations, the prefab needs to be placed in the scene.
+   The gaze cursor which is a small ring in the centre of the user's vision helps the user in focusing objects for interaction.
+   In order to use this cursor in own applications, the prefab needs to be placed in the scene.
    If you want to access the 3D scan of the environment, which is continuously created by the HoloLens, please check *Add the Spatial Mapping Prefab*.
    It places an empty GameObject in the scene with a Spatial Mapping Manager attached to it.
    During runtime, this manager will create and update the mesh of the 3D scanned environment in this scene.
@@ -383,7 +383,7 @@ We will start with the result of the last exercise but the shown procedure also 
 
 7. In the top menu, go to "File > Build Settings".
    In the opened dialog window, make sure that on the left, the platform is set to Universal Windows Platform.
-   This should already be the case because this is one of the settings which was automatically changed in step 4.
+   This should already be the case because this is one of the settings which were automatically changed in step 4.
    The active platform is indicated by the Unity logo next to it.
    
 8. To include the currently opened scene in the build, click on the "Add Open Scenes" button.
@@ -426,7 +426,7 @@ We will start with the result of the last exercise but the shown procedure also 
 
     ![Pairing Step 3]({{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/Pair3.jpg)
 
-15. To stop the application again, you can click on the red box which has appeared rougly at the same place where the green play button was.
+15. To stop the application again, you can click on the red box which has appeared roughly at the same place where the green play button was.
     This only stops the execution.
     The application is still installed on the HoloLens and can now be started directly through the start menu on the HoloLens.
 

@@ -7,7 +7,7 @@ visualizations:
 ---
 
 Tracking technologies are required in order to provide the position and rotation of a real object to the computer system.
-With AR systems, tracking technolgogies are commonly used in two settings:
+With AR systems, tracking technologies are commonly used in two settings:
 If the system consists of a head-mounted display, e.g. the Microsoft HoloLens, tracking is required in order to capture the user's head movements.
 Advanced systems can also track other body parts like the hands.
 In the second use-case, virtual objects should be attached to a real object.
@@ -16,7 +16,7 @@ An example for this is the marker tracking feature of smartphone-based AR, e.g. 
 Marker-based tracking can usually be done with one camera.
 The described techniques usually apply for more complex object tracking, e.g. of an HMD.
 
-Different techniques and technologies are avaialble for tracking.
+Different techniques and technologies are available for tracking.
 Each of them have particular requirements, use-cases as well as advantages and disadvantages.
 
 ## Light
@@ -33,16 +33,16 @@ This is done by an algorithm which shoots virtual rays into the scene.
 The rays start at the position of the camera and pass through the detected 2D point in the image.
 Ideally, the intersection point of the rays from all cameras determines the 3D position of the marker.
 However, due to setup or tracking inaccuracies, the rays will not exact exactly but pass each other with a small gap in-between.
-In practise, the midpoint of this gap is calculated and the final position of the marker is determined to be the average of the midpoints between all rays.
+In practice, the midpoint of this gap is calculated and the final position of the marker is determined to be the average of the midpoints between all rays.
 
-Opto-eletronical tracking can be found in an active and a passive setup.
+Opto-electronical tracking can be found in an active and a passive setup.
 Their main difference is the origin of the light which is detected by the camera.
 Passive opto-electronical tracking uses markers with a special surface which is highly reflective for infrared light.
-Infrared lamps, placed in the surrounding point towards the target and illuminate the markers.
+Infrared lamps placed in the surrounding point towards the target and illuminate the markers.
 The reflection of the IR light will reach the cameras and this way, the markers become visible to the cameras.
 In contrast to this, the markers in active opto-electronical tracking emit light, e.g. by using small infrared LEDs.
 This means that no external light source is necessary.
-The advantage of active opto-eletronical tracking is that individual trackers can be turned on or off separately.
+The advantage of active opto-electronical tracking is that individual trackers can be turned on or off separately.
 Leveraging this additional control, an initialization procedure can be developed where the system cannot just detect but also identify the markers.
 For instance, with a full-body tracking, markers on the different on the hands can be distinguished.
 A disadvantage of active opto-electronical tracking is that the markers require an energy source.
@@ -64,10 +64,10 @@ Actors are equipped with markers and perform movements on a stage which is surro
 The technique of structured light tracking is used by the Microsoft Kinect and the Microsoft HoloLens.
 This technique requires a light source and a camera.
 Both are typically operating in the infrared-range of light.
-The light is occluded in parts so that it emits a charactersitic pattern, e.g. stripes or a random point pattern.
+The light is occluded in parts so that it emits a characteristic pattern, e.g. stripes or a random point pattern.
 In a calibration step, the camera views this pattern on a flat surface and it is stored in the application.
 If the tracker now looks at arbitrarily shaped surfaces, the pattern is warped according to the shape.
-From this distrubance, depth information can be calculated and so 3D coordinates can be determined for all points in the camera image.
+From this disturbance, depth information can be calculated and so 3D coordinates can be determined for all points in the camera image.
 In combination with shape recognition software, persons can be tracked.
 The information can be used to overlay a virtual skeleton over a pose.
 Thus, the technique can be used for motion capture.
@@ -89,12 +89,12 @@ Due to the high speed of light, the measurement logic needs to be very quick, i.
 ## Mechanical
 
 With mechanical tracking setups, movements can be tracked by their effect on a mechanical system.
-it was used on the Ultimate Display where the head-mounted display was connected to a series of metal bars.
+It was used on the Ultimate Display where the head-mounted display was connected to a series of metal bars.
 By moving the head, the bars would be pushed out of the way or pulled along and could rotate in a mechanical construction.
-This rotation was registered by the system and from the amount of rotation, the head movement could be reconstructed.
+This rotation was registered by the system and from the amount of rotation the head movement could be reconstructed.
 In modern systems, mechanical tracking can be found in combination with haptic feedback devices.
 One example is the PHANToM haptic device.
-It povides a pen-like handle to the user which is attached to a robotic arm.
+It provides a pen-like handle to the user which is attached to a robotic arm.
 The user can grab this pen and move it around.
 The robotic arm can register the movements and passes the movement data on the application.
 Haptic feedback is achieved by moving the robotic arm.
