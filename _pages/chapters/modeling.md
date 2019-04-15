@@ -6,6 +6,8 @@ categories: chapter
 visualizations:
 ---
 
+{% include autoRelativePath.html %}
+
 # 3D Modeling
 
 There are several techniques of creating a virtual representation of 3D models.
@@ -28,10 +30,17 @@ Volumetric representations are often used in medicine in order to get a meaningf
 A mesh is an undirected graph which approximates the surface of an object.
 It consists of individual vertices which are situated at defined points in 3D.
 The vertices can be connected with an edge between them.
+Vertices and edges form faces which are visible as a surface in a rendered image.
+
+![Mesh]({{pathToRoot}}/assets/figures/modeling/Mesh.png)
 
 ### Modeling Techniques
 
-It is also possible to use structure from motion photogrammetry to create 3D models {% cite WBGH12 %}.
+
+
+#### Photogrammetry
+
+It is also possible to use structure-from-motion photogrammetry to create 3D models {% cite WBGH12 %}.
 Photogrammetry is also a 3D scanning technique but it only requires a standard camera.
 With this camera, a series of photos are taken from various different angles and positions.
 Alternatively, it is also common to use an array of cameras which are all triggered at the same time to take a photo.
@@ -44,16 +53,23 @@ Object which are close to the viewer like signal installations at the rails will
 Photogrammetry is capable of producing realistic results since it does not only provide geometry information but can also project the original images onto the 3D model in order to create a texture.
 Among other areas of application it is used in aerial photography and archaeology.
 
+3D models from photogrammetry can be created with the commercial software products [Agisoft Metashape](https://www.agisoft.com/), [RealityCapture](https://www.capturingreality.com/) and the open-source tool [Meshroom](https://alicevision.github.io/#meshroom).
+
+
+#### Retopology
+
 The presented modelling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
 The problem with this mesh is that it is irregular and often bears unnecessary complexity.
 For instance, a 3D scanned table consists of many small triangles but its table top could be simplified to one planar shape which only consists of two triangles.
-Additionally, it is not possible to animate the high-complexity 3D meshes since any movement results in stretched surfaces.
-Due to this, it is possible to retopologize the mesh {% cite PDZR18 %}.
+Additionally, it is not possible to animate the high-complexity 3D meshes since any movement results in condensed geometry and stretched surfaces.
+In real-time rendering, the amount of polygons also has an impact on the runtime of the rendering pipeline.
+This means that high-density meshes will take longer to render and therefore the framerate will be lower.
+Due to this, complex meshes should be retopologized {% cite PDZR18 %}.
 In this technique, the high-density mesh resulting from the sculpting process or 3D scan is used as a base mesh.
-Then, a 3D artist creates a new mesh on top of this base mesh.
+Then, a 3D artist or an algorithm creates a new mesh on top of this base mesh.
 The new mesh is typically created using quads and it considers the shape of the object and how it might be animated.
 As a main idea, the quads form strips which should follow the object's main curves and which should align to any hard edges.
-Since the manual creation of such a retopology mesh is tedious, there are algorithms which automate this process {% cite PDZR18 %}.
+Since the manual creation of such a retopology mesh is tedious and time consuming, there are algorithms which automate this process {% cite PDZR18 %}.
 
 - Composing basic shapes
 - digital sculpting
