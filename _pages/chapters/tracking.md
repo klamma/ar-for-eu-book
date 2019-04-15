@@ -77,6 +77,14 @@ This way, color information can be captured and applied to a scanned model as a 
 
 ### RGB Cameras
 
+Video tracking uses a standard RGB camera feed as the information source for tracking.
+There are two alternative setups possible.
+The camera can be used to track another object or person in the video feed or the changes between frames can be used to determine the position and rotation of the camera in the environment.
+
+Camera-based tracking is used for photogrammetry and marker-based AR.
+In both cases, the tracking application looks for distinct feature points in the image and tries to locate them in each frame.
+If the camera is moved, the depth of these feature points can be determined from the parallax effect between the two frames.
+
 ### Time-of-Flight Sensors
 
 Time-of-Flight Sensors use the speed of light to determine how far an object is away from the sensor.
@@ -86,10 +94,13 @@ The light is reflected in the environment and captured by an image sensor.
 From the difference in time between the emission and the received reflection, the distance to the reflecting surface can be computed.
 Due to the high speed of light, the measurement logic needs to be very quick, i.e. in the range of picoseconds.
 
+## Ultra Sound
+
 ## Mechanical
 
 With mechanical tracking setups, movements can be tracked by their effect on a mechanical system.
-It was used on the Ultimate Display where the head-mounted display was connected to a series of metal bars.
+Examples for mechanical tracking systems include exoskeletons.
+This tracking technique was also used on the Ultimate Display where the head-mounted display was connected to a series of metal bars.
 By moving the head, the bars would be pushed out of the way or pulled along and could rotate in a mechanical construction.
 This rotation was registered by the system and from the amount of rotation the head movement could be reconstructed.
 In modern systems, mechanical tracking can be found in combination with haptic feedback devices.
@@ -102,9 +113,16 @@ This provides forces on the pen which hinder movements in certain directions.
 
 ## Electromagnetic
 
+Another way of tracking uses electromagnetism.
+Here, the senors on the tracked object are situated in an alternating electromagnetic field.
+A sensor consists of different coils, each of them is wound around one of the three axes.
+If the sensor is moved in the field, a current is induced on each of the coils.
+By measuring the strength of the current, the rotation and position of the sensor can be derived.
 
-
-## Ultra Sound
+Unlike light-based tracking, electromagnetic tracking is immune to target occlusion, i.e. the tracker does not need to be in the line of sight of some external sensor.
+However, the large sensors of 1-2cm are a disadvantage of this technique.
+Additionally, the trackers require cabling.
+One also needs to be careful with ferromagnetic elements which can influence the magnetic field and can therefore invalidate the tracking results.
 
 ## Inertial
 
@@ -113,3 +131,7 @@ This provides forces on the pen which hinder movements in certain directions.
 Tracking systems can be set up in two ways.
 On the one hand, the sensors can be placed in the environment and they track markers on a moving object.
 On the other hand, the sensors can be mounted to the moving target while the recognizable features are situated in the environment.
+
+## Outside-In Tracking
+
+## Inside-Out Tracking

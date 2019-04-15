@@ -327,6 +327,17 @@ We will import a 3D model into Unity and write a script which will control the 3
 The goal of this exercise is to develop an AR project with Unity so that it can run on the Microsoft HoloLens.
 We will start with the result of the last exercise but the shown procedure also applies to any project which is created from scratch.
 
+Some minor adjustments are required to prepare the result from the last exercise for AR:
+
+- The project will be set up in a way that the user starts at the position (0, 0, 0).
+  Currently, the bunny object is also at the origin of the coordinate system so that the user will inside of the bunny and will not be able to see it.
+  To fix this, move the bunny to the position (0, 0, 2).
+  Unity units correspond to meters and so, the bunny will be displayed 2 meters in front of the user if the application is started.
+- Also adjust the scale of the bunny so a smaller size (at the moment it is roughly one meter long).
+  You can use the grid in the 3D view as a reference for the real-world scale since one cell has a length of one meter big.
+  A suitable size should be (0.3, 0.3, 0.3).
+
+
 1. We will use the MixedRealityToolkit as a supporting library in Unity.
    It provides access to some HoloLens-specific functionality, e.g. to the spatial mapping mesh.
    The MixedRealityToolkit is open-source and it can be found on [GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity).
@@ -429,5 +440,9 @@ We will start with the result of the last exercise but the shown procedure also 
 15. To stop the application again, you can click on the red box which has appeared roughly at the same place where the green play button was.
     This only stops the execution.
     The application is still installed on the HoloLens and can now be started directly through the start menu on the HoloLens.
+
+## Adding Interaction to a HoloLens Application
+
+
 
 # Unreal Engine
