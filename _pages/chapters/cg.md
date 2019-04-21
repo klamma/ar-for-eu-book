@@ -6,4 +6,12 @@ categories: chapter
 visualizations:
 ---
 
-# Computer Graphics
+# Rendering
+
+## Rendering Pipeline
+
+## Shader Programming
+
+## Physically Based Rendering (PBR)
+
+## Volumetric Rendering
