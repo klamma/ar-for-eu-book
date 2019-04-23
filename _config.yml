@@ -13,4 +13,4 @@ include:
   - _pages/chapters
   - _pages
 
-theme: jekyll-theme-slate
+#theme: jekyll-theme-slate
