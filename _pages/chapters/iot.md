@@ -7,3 +7,12 @@ visualizations:
 ---
 
 # Internet of Things, Robots and Wearables
+
+
+## Internet of Things
+
+## Human-Machine Collaboration
+
+## Wearables
+
+S
