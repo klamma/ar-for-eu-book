@@ -84,6 +84,27 @@ With `RequireGaze` set to false, the interaction on a button which is pressed an
 Usually, the `CompoundButton` script is used in combination with one of the other CompoundButton components.
 When adding one of them to the button, the `CompoundButton` will automatically be added, too.
 
+**Compound Button Mesh**
+
+The `CompoundButtonMesh` class can be used to change the basic properties of a GameObject with a mesh.
+The properties which can be changed include its position, scale and colour.
+The `CompoundButtonMesh` script must be added to the GameObject of the button as a component.
+This is done in the usual way by selecting the GameObject, clicking "Add Component" in the inspector and selecting the `CompoundButtonMesh`.
+This action adds a `CompoundButtonMesh` component and the `CompoundButton`component.
+In the `CompoundButtonMesh`, a target transform and a renderer need to be set.
+Next to these properties, a dropdown menu can be found which says "(None)" at the moment.
+By clicking on it, a selection of the transform and renderers on the GameObject or on any of its children is presented and can be selected.
+This means taht the visibile mesh can be separate from the object which slides the button back and forth.
+For instance, a cube can be used as a background and text can be placed on the surface of the cube to label the button.
+In order to move the cube and the text, they are organized as children of an empty GameObject.
+If this empty object is moved back and forth to simulate a button press, the cube and the text will move by the same amount, too.
+
+Underneath the fields for the target transform and the renderer, a button profile can be set up.
+This profile is a saveable configuration which can be reused for different buttons.
+The section with the stored values can be expanded by clicking on the "PROFILE" container.
+There is a button labelled "Create Profile" which creates a new profile in the root assets folder of the project.
+Next, the profile needs to be references in this section.
+
 </div>
 
 #### Bounding Box
