@@ -103,7 +103,22 @@ Underneath the fields for the target transform and the renderer, a button profil
 This profile is a saveable configuration which can be reused for different buttons.
 The section with the stored values can be expanded by clicking on the "PROFILE" container.
 There is a button labelled "Create Profile" which creates a new profile in the root assets folder of the project.
-Next, the profile needs to be references in this section.
+Next, the profile needs to be referenced in this section.
+
+**Compound Button Text**
+
+The ```CompoundButtonText``` component can be used to equip a button with text.
+The component makes the text settings accessible in one place.
+First, the corresponding text mesh needs to be referenced in the component.
+This is done in the inspector either by drag-and-drop or by choosing it from the dropdown menu next to the property ```TextMesh```.
+In a big text field, the text which should be displayed can be entered.
+If the reference to the text mesh is correct, typing text in the component's text field will update the display on the button accordingly.
+The ```CompoundButtonText``` can also be used to unify the text appearance on a set of buttons.
+In the inspector, a profile can be selected in the part of the inspector which has a purple background.
+The profile specifies the font style and size, as well as its color.
+By reusing the profile on all buttons in the application, they will all be set up with the same text style.
+However, one can also overwrite single properties of the profile with button-specifc values.
+To do so, the checkmarks next to "Overwrite Font Style", "Overwrite Anchor", Overwrite Size" can be set.
 
 </div>
 
