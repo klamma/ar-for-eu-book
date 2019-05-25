@@ -120,6 +120,16 @@ By reusing the profile on all buttons in the application, they will all be set u
 However, one can also overwrite single properties of the profile with button-specifc values.
 To do so, the checkmarks next to "Overwrite Font Style", "Overwrite Anchor", Overwrite Size" can be set.
 
+**Compound Button Sounds**
+
+```CompoundButtonSounds``` can add sound effects to a button.
+The sounds can be configured in a profile and are played if the button enters the according state, e.g. if it is pressed or if it is targeted by the user.
+A slide next to the sound configuration can be used to define the sound volume for each of the states separately.
+In the component, one can optionally reference a sound source which plays the sounds.
+This way, the sound source does not need to be on the button but the audio can also originate from anywhere in the environment.
+However, the component also works if no audio source is referenced.
+In this case, the object will create a GameObject called "one shot audio" which has an attached sound source.
+It will play the correct audio clip once and after that, the auxiliary GameObject is destroyed again.
 </div>
 
 #### Bounding Box
