@@ -259,7 +259,7 @@ We will import a 3D model into Unity and write a script which will control the 3
     void Update()
     {
         float xAxisMovement = Mathf.Sin(Time.time);
-        gameObject.transform.position = new Vector3(xAxisMovement, 0, 0);
+        gameObject.transform.position = new Vector3(xAxisMovement, transform.position.y, transform.position.z);
     }
     ```
     The given code segment makes the object go back and forth between the -1 and 1 coordinates on the X axis.
@@ -307,7 +307,7 @@ We will import a 3D model into Unity and write a script which will control the 3
         void Update()
         {
             float xAxisMovement = Mathf.Sin(speed * Time.time);
-            gameObject.transform.position = new Vector3(xAxisMovement, 0, 0);
+            gameObject.transform.position = new Vector3(xAxisMovement, transform.position.y, transform.position.z);
         }
     }
     ```
@@ -441,8 +441,167 @@ Some minor adjustments are required to prepare the result from the last exercise
     This only stops the execution.
     The application is still installed on the HoloLens and can now be started directly through the start menu on the HoloLens.
 
-## Adding Interaction to a HoloLens Application
+## Exercise: Adding Interaction to a HoloLens Application
 
+> This exercise uses the MixedRealityToolkit 2017.4 release.
+> With the release of the MixedRealityToolkit vNext in the near future, the described interfaces and techniques could change and become obsolete.
+
+> The exercise will use the results of the previous exercise.
+
+In the next part of this exercise, we will add interaction to the app.
+We will write scripts which listen for user input in order to change properties of objects in the scene.
+
+In order to handle (HoloLens-specific) input in a script, it needs to implement the corresponding interface which is provided by the MixedRealityToolkit.
+If the user interacts with an object, the input manager of the MixedRealityToolkit will look for scripts with this interface on the object.
+
+One can for instance implement the following interfaces:
+- **IFocusable**: Provides methods which are called if the user starts or stops looking at the object
+- **IInputHandler**: Similarly to mouse clicks, the interface provides methods which are called if the user starts or stops a tap gesture
+- **IInputClickHandler**: Provides the method which is called if the user performs a tap gesture
+- **IHoldHandler**: Provides methods for reacting to long-lasting tap gestures where the user holds down the tap gesture for an extended amount of time
+- **INavigationHandler**: Provides methods for reacting to drag gestures for navigating through content, e.g. scrolling
+- **IManipulationHandler**: Provides methods for reacting to drag gestures for manipulating objects
+
+### Preparing an Object for User Interaction
+
+A gameobject must have a collider so that the input manager can recognize the object as a possible target.
+We can use any convex 3D collider type which is provided by Unity and it is also possible to set up combinations of colliders.
+In this example, we use a box collider.
+
+1. Add a box collider to the bunny.
+    To do so, select the bunny gameobject and click "Add Component" in the inspector.
+    In the search field, start typing "BoxCollider" and select the entry "Box Collider".
+    It adds a box collider-component to the gameobject.
+
+    ![Add Box Collider]({{pathToRoot}}/assets/figures/engines/Exercise_HoloLensInteraction/AddCollider.png)
+
+2. The box collider is also visible in the 3D view as a green box.
+    At the moment, it does not fit the bunny.
+    To fix this, the box collider component provides the input fields center and size in the inspector.
+    They can be used for exact positioning of the box around the mesh.
+    However, a tight fit on a complex mesh is quite difficult to achieve by entering numbers alone.
+    Therefore, you can also click the "Edit Collider" button.
+    The green cube in the 3D view now has small handles on its sides which can be dragged.
+    Hint: If you set the view to orthographic and go to pre-defined top- or side-views you can determine exactly how far the collider needs to go.
+    You can do this by clicking on the widget in the top right of the 3D view (click the cube in the middle of the widget to switch between orthographic and perspective view).
+
+    ![Adjust Box Collider]({{pathToRoot}}/assets/figures/engines/Exercise_HoloLensInteraction/AdaptCollider.png)
+
+
+### Focus Behaviour
+
+We will now implement a short script which illustrates how to react to the case if the user focuses an object.
+
+1. In the Assets view, navigate to the Scripts folder, right click and add a new C# script. Call it ColorChanger.
+2. Double-click and open the script.
+3. Interfaces for input handling are bundled in the HoloToolkit.Unity.InputModule namespace.
+    We need to declare that this script uses content from this namespace.
+    In the using directives, add the following line:
+
+    ```using HoloToolkit.Unity.InputModule;```
+
+4. We now want to implement the `IFocusable` interface.
+    To do so, add it in the class declaration:
+
+    ```
+    public class ColorChanger : MonoBehaviour, IFocusable
+    {
+        ...
+    }
+    ```
+5. Most likely, your Visual Studio will now complain that the methods of the interface are not implemented.
+    The fastest way to fix this it to perform a right-click on the interface name with the error underlining and select "Quick Actions and Refactorings... > Implement interface".
+
+    ![Implement Interface]({{pathToRoot}}/assets/figures/engines/Exercise_HoloLensInteraction/ImplementInterface.png)
+
+6. The command will add the methods which are defined in the interface to the class.
+    In the case of `IFocusable` these are `OnFocusEnter` and `OnFocusExit`.
+
+7. Add the following code to the script:
+
+    ```
+    public class ColorChanger : MonoBehaviour, IFocusable
+    {
+        public Color focusHighlight = Color.blue;
+
+        Renderer rend;
+        private Color origColor;
+
+        private void Awake()
+        {
+            rend = GetComponentInChildren<Renderer>();
+            origColor = rend.material.color;
+        }
+
+        public void OnFocusEnter()
+        {
+            rend.material.color = focusHighlight;
+        }
+
+        public void OnFocusExit()
+        {
+            rend.material.color = origColor;
+        }
+    }
+    ```
+
+    Every time the user focuses the object, it will be highlighted in a colour.
+
+8. In Unity, add the script to the bunny as a component.
+    If you want, you can also change the focusHighlight colour to something different in the inspector.
+9. If you now execute the application, the bunny will turn to your defined colour evey time that the cursor targets it.
+
+### Input Click Handling
+
+We will now see how to react to tap gestures.
+
+1. Navigate to the Scripts folder in the Assets panel and add a new C# script.
+    Call it "ObjectStartStopper".
+2. Add the using directive `using HoloToolkit.Unity.InputModule` to the script.
+3. Implement the interface `IInputClickHandler` altering the class declaration to
+
+    ```public class ObjectStartStopper : MonoBehaviour, IInputClickHandler
+    {
+        ...
+    }
+    ```
+4. Implement the methods of the interface.
+    It will add one method `OnInputClicked`.
+5. Complete the script to this code:
+
+    ```
+    public class ObjectStartStopper : MonoBehaviour, IInputClickHandler
+    {
+        private ObjectMover mover;
+
+        private void Awake()
+        {
+            mover = GetComponent<ObjectMover>();
+        }
+
+        public void OnInputClicked(InputClickedEventData eventData)
+        {
+            if (mover == null)
+            {
+                Debug.LogError("No ObjectMover found on the object");
+                return;
+            }
+            mover.enabled = !mover.enabled;
+        }
+    }
+    ```
+
+    We want to start or stop the movement of the bunny if the user taps on it.
+    First, we need to get a reference to the `ObjectMover` script that we implemented earlier and which is attached to the bunny as a component.
+    If the user taps on the bunny, `OnInputClicked` is called.
+    We make sure that we acutally got the reference to the object mover and then we toggle its enabled-state.
+    If a component is disabled, methods like Start and Update are not called anymore.
+    In our case, this stops updating the position of the bunny.
+
+6. In Unity, add the component `ObjectStartStopper` to the bunny gameobject.
+7. If you now press play, you can emulate a tap gesture by pressing Shift + Left Click.
+    If we focus the bunny with the cursor (this is now easy to see since the bunny will change its colour when focused) and perform a tap gesture, the bunny should stop moving.
+    If we tap on it again, movement will start again.
 
 
 # Unreal Engine
