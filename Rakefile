@@ -6,7 +6,7 @@ require "jekyll"
 
 
 # Change your GitHub reponame
-GITHUB_REPONAME = "ixti/jekyll-assets"
+GITHUB_REPONAME = "klamma/ar-for-eu-book"
 
 
 namespace :site do
