@@ -120,6 +120,25 @@ By reusing the profile on all buttons in the application, they will all be set u
 However, one can also overwrite single properties of the profile with button-specifc values.
 To do so, the checkmarks next to "Overwrite Font Style", "Overwrite Anchor", Overwrite Size" can be set.
 
+**Compound Button Icon**
+
+If a button should be equipped with an icon, one can use the ```CompoundButtonIcon``` component.
+The component requires a reference to a mesh renderer which can either be set by selecting it from the dropdown menu or by dragging the GameObject from the hierarchy into the reference field.
+Often times, quadratic flat geometry is used to display the icon.
+In Unity, such a square can be created in the top menu under "GameObject > 3D Object > Quad".
+The component requires an icon profile.
+This profile contains a collection of textures.
+By default, the profile is set up with slots for special purpose textures, e.g. for navigation or actions.
+Further down, one can also define custom icons.
+Apart from the textures, the profile also provides furhter settings in the "DEFAULTS" section.
+Here, one can define a standard icon which is used if the selected icon cannot be found.
+In this section, the icon's material can be selected.
+The script will apply it to the referenced mesh renderer.
+At the bottom of the component, outside of the purple profile area, there is a dropdown menu where one can choose one of the icons by its name.
+
+The material's shader can be set to the standard shader of the MixedRealityToolkit which is not to be confused with Unity's default standard shader.
+In order to support icons with transparency, the material's rendering mode should be set to "TransparentCoutout".
+
 **Compound Button Sounds**
 
 ```CompoundButtonSounds``` can add sound effects to a button.
@@ -130,6 +149,7 @@ This way, the sound source does not need to be on the button but the audio can a
 However, the component also works if no audio source is referenced.
 In this case, the object will create a GameObject called "one shot audio" which has an attached sound source.
 It will play the correct audio clip once and after that, the auxiliary GameObject is destroyed again.
+
 </div>
 
 #### Bounding Box
