@@ -604,4 +604,50 @@ We will now see how to react to tap gestures.
     If we tap on it again, movement will start again.
 
 
+## Unit Testing in Unity
+
+Unity uses an NUnit adaptation.
+
+### Using Unity Test Runner
+
+Unity provides the "Test Runner" window where tests can be created and are executed.
+To show this view, go to "Window > General > Test Runner".
+The test runner consists of two sections which can be switched by the buttons "PlayMode" and "EditMode" at the top of the window.
+PlayMode tests are similar to the runtime environment when clicking play to start the application.
+This means that MonoBehaviours will go through their lifecycle, i.e. ```Awake``` and ```Start``` methods will be called.
+These kinds of tests also allow the developer to specify at which point a frame should be rendered.
+Therefore, one can precisely define when the ```Update``` methods on MonoBehaviours will be called.
+EditMode tests can check application code which does not require these MonoBehvaiour callbacks.
+It does not do the usual scene setup work that the PlayMode test does.
+Possible test scenarios include checking the configuration before the application would start.
+
+Inside of a test script, two types of tests can be defined by an attribute in front of the method declaration: [Test] and [UnityTest]
+Tests marked with [Test] behave like usual methods which are executed line by line.
+[UnityTest] methods behave like coroutines and should have the return type ```IEnumerator```.
+This way, these tests can contain ```yield``` statements which can delay the execution of subsequent commands.
+For instance, ```yield return null``` causes the next frame to render.
+In PlayMode tests this calls the ```Update``` function of any active MonoBehaviours.
+After that, the execution is resumed.
+
+### Creating an EditMode Test
+
+When clicking on the "EditMode" button at the top, the test section for this kind of test is shown.
+Tests need to be placed in a folder with an assembly definition.
+This definition file influences the compilation of the project and tells Unity under which circumstances, e.g. for which platforms, the content should be included in the built project.
+In the test runner window, Unity will show a button "Create EditMode Test Assembly Folder".
+Clicking this button will automatically set up a folder called "Tests" and the assembly definition in the folder which is currently opened in the assets view.
+EditMode tests are part of the runtime environment of Unity's editor as opposed to PlayMode tests which work in the actual application runtime environment.
+Therefore, inside of the "Tests" folder, one needs to create a folder which is called "Editor".
+The precise naming is important because folders named "Editor" tell Unity that their content should be executed in the editor.
+Inside of the "Editor" folder, one can create a test script by right-clicking and selecting "Create > Testing > C# Test Script".
+
+Tests are public methods in this script.
+
+
+### Designing a Software Architecture with Tests in Mind
+
+### Using NSubstitute
+
+
+
 # Unreal Engine
