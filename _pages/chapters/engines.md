@@ -89,6 +89,25 @@ To select an object, one can left click on the entry in the hierarchy or click o
 
 ## Play Mode & Debugging
 
+Once a scene has been set up, one can test it using the built-in play mode.
+It can be activated by clicking on the play button at the top.
+In this mode, the behaviour of the final application is simulated.
+Unity will switch into a game view where the viewpoint of the camera can be seen.
+If this panel is focused, the application reacts to input.
+During play mode, one can also go back to the scene view.
+This is beneficial in order to examine actions which happen outside of the camera's view.
+Additionally, everything which was possible when setting up the scene, e.g. moving objects around or changing values on components, it still possible.
+These changes are immediately picked up and affect the behaviour of the application.
+Therefore, developers can experiment with settings while the application is running and they can immediately see the results of their configurations.
+However, it is important to know that any changes which were made during play mode are reset when exiting play mode.
+The benefit of this is that one can perform destructive tests which completely alter the scene's structure and still it is possible to go back to a valid state of the scene.
+
+The execution can be interrupted at every point with the pause button next to the play button.
+This way, a specific runtime state of the scene can be examined.
+Next to the pause button, there is also a button which continues the application's execution for one frame.
+This can be used in order to closely examine code which alters properties every frame.
+
+In addition to Unity's visual debugging tools, one can also perform traditional code-debugging using Visual Studio.
 
 
 ## Importing and Placing 3D Models
