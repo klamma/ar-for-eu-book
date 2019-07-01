@@ -153,3 +153,31 @@ It will play the correct audio clip once and after that, the auxiliary GameObjec
 </div>
 
 #### Bounding Box
+
+<div class="mrtkVersionSpecific mrtk2017" markdown="1">
+
+The MixedRealityToolkit also contains a bounding box which can be added to GameObjects.
+One first needs to select the GameObject.
+In the inspector, a *Bounding Box Rig* script can be added to the object.
+The added component requires a reference to a bounding box prefab.
+There is already a prefab included in the MixedRealityToolkit which can be used here.
+It can be found in the assets browser under "HoloToolkit > UX > Prefabs > BoundingBoxes" and is called "BoundingBoxBasic.prefab".
+With the GameObject selected, one can drag and drop the prefab into the field "Bounding Box Prefab" of the component.
+
+The *Bounding Box Rig* component has further options, e.g. one can choose to flatten the boudning box in one direction.
+If the flattened axis is set to something else than "Do Not Flatten", the bounding box will be two-dimensional.
+This can be helpful when creating flat menus.
+Underneath this option, three customization settings can be applied.
+They all concern the materials which are applied to the handles of the bounding box.
+
+In the section below this, the behaviour of the bounding box can be altered.
+The scale rate describes how drastic the box's size is changed if the user pulls on the scaling handle.
+In other words, if the user moves the scaling gizmo by a fixed distance, high scale rates will change the scale the object more than low rates.
+One can also specify a max scale for the object.
+
+The component also holds a reference to an "app bar".
+It is a small menu which is shown at the bottom of the object and which can be used to toggle the bounding box.
+When the *Bounding Box Rig* component is added, the reference to the app bar is already set up with a default app bar.
+However, developers can add their own app bars or extend the exiting one by inserting the reference to the altered prefab of the app bar.
+
+</div>
