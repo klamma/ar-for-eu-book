@@ -36,6 +36,70 @@ Vertices and edges form faces which are visible as a surface in a rendered image
 
 ### Modeling Techniques
 
+Mesh-based 3D models can be created using a number of techniques.
+It is also possible to combine these techniques in one workflow.
+
+#### Compositing Primitives
+
+A beginner-friendly way of manual modeling is to approximate objects by a composition of primitive shapes like cubes or spheres.
+Such basic shapes are usually included in 3D programs by default and can directly be added to a scene.
+The primitives are moved, rotated, scaled and stretched in order so that they fit the target object as good as possible.
+For instance, a table can be approximated by creating five cubes.
+One of them is compressed along the vertical axis and represents the tabletop.
+The other four cubes are streched into thin and long cuboids and are aligned with the corners of the tabletop.
+They act as the legs of the table.
+
+The technique only requires transformations, rotations and scaling operations and therefore, objects can be created without much effort.
+Thus, results can be achieved quickly.
+However, the basic shapes can only approximate the object.
+Intricate shapes and especially organic forms cannot be modeled with this technique.
+Primitives are best used to prototype a scene {% cite Simonds2013Blender %}, e.g. to block out the general shapes of an object and to establish its proportions.
+Alternatively, primitives can also be used as a starting point, e.g. for subsequent manual modeling or sculpting processes.
+
+#### Manual Modeling
+
+A flexible but also quite advanced technique for creating 3D objects is modeling them by hand.
+This means that the 3D artist adds and manipulates individual vertices in order to build the final mesh.
+One can either start from scratch or adapt existing primitive shapes.
+An example would be the (artistic) modeling process of a car.
+(In the production process, cars are usually modeled with CAD shapes since they can define exact and smooth curvatures.
+However, for real-time applications like games, cars are modeled as mesh-based objects).
+In this example, a 3D artist could start with reference images of the real car which are placed on the top view, front view and side view.
+After that, vertices are placed one by one in such a way that they align with all three background images.
+When placing the vertices, they are connected to edges and also form faces.
+Here, the 3D artist needs to make sure that the edges and face strips follow the major forms of the car's body.
+Additionally, the topology of the mesh needs to be managed, e.g. to avoid a mesh that is too dense.
+3D programs offer different features to support the modeling process.
+Especially a series of generative modifiers like live-mirroring for symmetric shapes or automatically subdividing edges to add more vertices accelerate the process and improve the result {% cite Simonds2013Blender %}.
+Creating realistic 3D object using this technique requires training and in-depth knowledge of the supporting features.
+A wide range of tutorials exist online which teach how to create different objects and explain different tricks which can be used to maximize the effectiveness of the modeling program's features.
+
+An advantage of manual modeling is the fact a trained 3D artist can create realisic 3D objects only based on a couple of images of the original object.
+Additionally, objects which do not exist in the real world can still be modeled.
+Another advantage is that the creator has full control of the mesh's complexity and can optimize it, e.g. for the usage in real-time rendering.
+Manual modeling can also be performed without additional hardware.
+It only requires a computer and a 3D modeling program.
+The main disadvantage of this technique is that it is a tedious and slow process.
+Similar to drawing, the quality of the result depends on the artistic skills of the creator.
+The technique works well for man-made objects since they consist of clear shapes and hard edges which are good reference points in the modeling process.
+Creating organic objects by hand this way is tricky and is better done by digital sculpting.
+
+#### Digital Sculpting
+
+Digital sculpting is inspired by real clay sculpting.
+Similar to real sculpting, the 3D artist starts with a base shape and can pull and dent the virtal material to create bumps and creases.
+These operations are performed in a 3D sculpting program using a mouse or a tracked stylus {% cite Simonds2013Blender %}.
+A difference to real sculpting is that is is possible to dynamically add or remove material at any point which enables the sculptor to extend the object in any way.
+During the process, the sculpted mass is automatically defined by a mesh which is managed and optimized by the sculpting program.
+
+With digital scupting the 3D artist can focus on forming the shape of the object without worrying about the underlying mesh geometry.
+Like manual modeling, it is possible to create real and imaginative objects.
+However, just like real sculpting, training is required in order to achieve results with high quality.
+Digital scuplting is well suited for creating organic shapes, e.g. for designing characters.
+Sometimes, it is also used in a creative way to prototype the shapes of an object with hard edges.
+
+#### 3D Scanning
+
 
 
 #### Photogrammetry
@@ -59,8 +123,8 @@ Among other areas of application it is used in aerial photography and archaeolog
 #### Retopology
 
 The presented modelling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
-The problem with this mesh is that it is irregular and often bears unnecessary complexity.
-For instance, a 3D scanned table consists of many small triangles but its table top could be simplified to one planar shape which only consists of two triangles.
+The problem with this mesh is that it is irregular and often bears unnecessary complexity {% cite Simonds2013Blender %}.
+For instance, a 3D scanned table consists of many small triangles but its table top could be simplified to one cuboid shape which only consists of two triangles per side.
 Additionally, it is not possible to animate the high-complexity 3D meshes since any movement results in condensed geometry and stretched surfaces.
 In real-time rendering, the amount of polygons also has an impact on the runtime of the rendering pipeline.
 This means that high-density meshes will take longer to render and therefore the framerate will be lower.
@@ -68,14 +132,8 @@ Due to this, complex meshes should be retopologized {% cite PDZR18 %}.
 In this technique, the high-density mesh resulting from the sculpting process or 3D scan is used as a base mesh.
 Then, a 3D artist or an algorithm creates a new mesh on top of this base mesh.
 The new mesh is typically created using quads and it considers the shape of the object and how it might be animated.
-As a main idea, the quads form strips which should follow the object's main curves and which should align to any hard edges.
+As a main idea, the quads form strips which should follow the object's main curves and which should align to any hard edges {% cite Simonds2013Blender %}.
 Since the manual creation of such a retopology mesh is tedious and time consuming, there are algorithms which automate this process {% cite PDZR18 %}.
-
-- Composing basic shapes
-- digital sculpting
-- 3D scanning
-- photogrammetry
-- retopology
 
 ### Textures
 
