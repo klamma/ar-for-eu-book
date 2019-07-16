@@ -49,12 +49,14 @@ One of them is compressed along the vertical axis and represents the tabletop.
 The other four cubes are streched into thin and long cuboids and are aligned with the corners of the tabletop.
 They act as the legs of the table.
 
+![Example workflow for compositing primitives]({{pathToRoot}}/assets/figures/modeling/ModelingTechnique_CompositingPrimitiveShapes.png)
+
 The technique only requires transformations, rotations and scaling operations and therefore, objects can be created without much effort.
 Thus, results can be achieved quickly.
 However, the basic shapes can only approximate the object.
 Intricate shapes and especially organic forms cannot be modeled with this technique.
-Primitives are best used to prototype a scene {% cite Simonds2013Blender %}, e.g. to block out the general shapes of an object and to establish its proportions.
-Alternatively, primitives can also be used as a starting point, e.g. for subsequent manual modeling or sculpting processes.
+Primitives are best used to prototype a scene {% cite Simonds2013Blender %}, e.g. to block out the general shapes of objects and to establish its proportions.
+Additionally, primitives can also be used as a starting point, e.g. for subsequent manual modeling or sculpting processes.
 
 #### Manual Modeling
 
@@ -130,7 +132,7 @@ In real-time rendering, the amount of polygons also has an impact on the runtime
 This means that high-density meshes will take longer to render and therefore the framerate will be lower.
 Due to this, complex meshes should be retopologized {% cite PDZR18 %}.
 In this technique, the high-density mesh resulting from the sculpting process or 3D scan is used as a base mesh.
-Then, a 3D artist or an algorithm creates a new mesh on top of this base mesh.
+After that, a 3D artist or an algorithm creates a new mesh on top of this base mesh.
 The new mesh is typically created using quads and it considers the shape of the object and how it might be animated.
 As a main idea, the quads form strips which should follow the object's main curves and which should align to any hard edges {% cite Simonds2013Blender %}.
 Since the manual creation of such a retopology mesh is tedious and time consuming, there are algorithms which automate this process {% cite PDZR18 %}.
