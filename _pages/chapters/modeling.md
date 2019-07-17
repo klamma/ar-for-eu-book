@@ -58,33 +58,9 @@ Intricate shapes and especially organic forms cannot be modeled with this techni
 Primitives are best used to prototype a scene {% cite Simonds2013Blender %}, e.g. to block out the general shapes of objects and to establish its proportions.
 Additionally, primitives can also be used as a starting point, e.g. for subsequent manual modeling or sculpting processes.
 
-#### Manual Modeling
+#### Boolean Operations
 
-A flexible but also quite advanced technique for creating 3D objects is modeling them by hand.
-This means that the 3D artist adds and manipulates individual vertices in order to build the final mesh.
-One can either start from scratch or adapt existing primitive shapes.
-An example would be the (artistic) modeling process of a car.
-(In the production process, cars are usually modeled with CAD shapes since they can define exact and smooth curvatures.
-However, for real-time applications like games, cars are modeled as mesh-based objects).
-In this example, a 3D artist could start with reference images of the real car which are placed on the top view, front view and side view.
-After that, vertices are placed one by one in such a way that they align with all three background images.
-When placing the vertices, they are connected to edges and also form faces.
-Here, the 3D artist needs to make sure that the edges and face strips follow the major forms of the car's body.
-Additionally, the topology of the mesh needs to be managed, e.g. to avoid a mesh that is too dense.
-3D programs offer different features to support the modeling process.
-Especially a series of generative modifiers like live-mirroring for symmetric shapes or automatically subdividing edges to add more vertices accelerate the process and improve the result {% cite Simonds2013Blender %}.
-Creating realistic 3D object using this technique requires training and in-depth knowledge of the supporting features.
-A wide range of tutorials exist online which teach how to create different objects and explain different tricks which can be used to maximize the effectiveness of the modeling program's features.
 
-An advantage of manual modeling is the fact a trained 3D artist can create realisic 3D objects only based on a couple of images of the original object.
-Additionally, objects which do not exist in the real world can still be modeled.
-Another advantage is that the creator has full control of the mesh's complexity and can optimize it, e.g. for the usage in real-time rendering.
-Manual modeling can also be performed without additional hardware.
-It only requires a computer and a 3D modeling program.
-The main disadvantage of this technique is that it is a tedious and slow process.
-Similar to drawing, the quality of the result depends on the artistic skills of the creator.
-The technique works well for man-made objects since they consist of clear shapes and hard edges which are good reference points in the modeling process.
-Creating organic objects by hand this way is tricky and is better done by digital sculpting.
 
 #### Digital Sculpting
 
@@ -100,8 +76,10 @@ However, just like real sculpting, training is required in order to achieve resu
 Digital scuplting is well suited for creating organic shapes, e.g. for designing characters.
 Sometimes, it is also used in a creative way to prototype the shapes of an object with hard edges.
 
-#### 3D Scanning
+#### Sketch-Based Modeling
 
+
+#### 3D Scanning
 
 
 #### Photogrammetry
@@ -122,6 +100,39 @@ Among other areas of application it is used in aerial photography and archaeolog
 3D models from photogrammetry can be created with the commercial software products [Agisoft Metashape](https://www.agisoft.com/), [RealityCapture](https://www.capturingreality.com/) and the open-source tool [Meshroom](https://alicevision.github.io/#meshroom).
 
 
+#### Manual Mesh Creation
+
+The previous methods all work on an object-level where the modeler is only concerned with the shape of the object while the computer constructs the according mesh data.
+However, it is also possible to manually construct the mesh.
+This means that the 3D artist adds and manipulates individual vertices and defines edges and faces in order to build the final mesh.
+One can either start from scratch or adapt existing primitive shapes.
+An example would be the (artistic) modeling process of a car.
+(In the production process, cars are usually modeled with CAD shapes since they can define exact and smooth curvatures.
+However, for real-time applications like games, cars are modeled as mesh-based objects).
+In this example, a 3D artist could start with reference images of the real car which are placed on the top view, front view and side view.
+After that, vertices are placed one by one in such a way that they align with all three background images.
+When placing the vertices, they are connected to edges and also form faces.
+Here, the 3D artist needs to make sure that the edges and face strips follow the major forms of the car's body.
+Additionally, the topology of the mesh needs to be managed, e.g. to avoid a mesh that is too dense.
+3D programs offer different features to support the modeling process.
+Especially a series of generative modifiers like live-mirroring for symmetric shapes or automatically subdividing edges to add more vertices accelerate the process and improve the result {% cite Simonds2013Blender %}.
+Creating realistic 3D object using this technique requires training and in-depth knowledge of the supporting features.
+A wide range of tutorials exist online which teach how to create different objects and explain different tricks which can be used to maximize the effectiveness of the modeling program's features.
+
+With mesh creation, the creator has full control over the mesh's complexity and topology.
+This is helpful for optimizations, e.g. if the model should be used in real-time rendering.
+Additionally, a clean topology helps in managing the amount of detail which is portrayed in the mesh.
+It it also helpful for animatable objects since the topology can be laid out in a way that it supports the movements.
+The main disadvantage of this technique is that it is a tedious and slow process.
+Similar to drawing, the quality of the result depends on the artistic skills of the creator.
+Apart from defining the shape of the object, the modeler also has to think about a suitable topology to repesent the shape as a mesh.
+The technique works well for man-made objects since they consist of clear shapes and hard edges which are good reference points in the modeling process.
+Creating organic objects by hand this way is tricky.
+
+#### Box Modeling
+
+
+
 #### Retopology
 
 The presented modelling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
@@ -132,10 +143,18 @@ In real-time rendering, the amount of polygons also has an impact on the runtime
 This means that high-density meshes will take longer to render and therefore the framerate will be lower.
 Due to this, complex meshes should be retopologized {% cite PDZR18 %}.
 In this technique, the high-density mesh resulting from the sculpting process or 3D scan is used as a base mesh.
-After that, a 3D artist or an algorithm creates a new mesh on top of this base mesh.
+After that, a new mesh is created on top of this base mesh.
+This can be done manually or by an algorithm.
 The new mesh is typically created using quads and it considers the shape of the object and how it might be animated.
 As a main idea, the quads form strips which should follow the object's main curves and which should align to any hard edges {% cite Simonds2013Blender %}.
 Since the manual creation of such a retopology mesh is tedious and time consuming, there are algorithms which automate this process {% cite PDZR18 %}.
+The result of the retopology is a mesh which looks almost like the original high-density mesh but is more lightweight and optimized.
+However, the retopology process may loose some details of the original mesh.
+To solve this, the difference between the two meshes can be "baked" into a displacement or normal texture.
+This way, small details can be captured in the texture and are shown by the shader.
+Details on this displacement and normal maps are described in the "Textures" section.
+
+#### Subdivision Surface Modeling
 
 ### Textures
 
