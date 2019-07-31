@@ -32,7 +32,7 @@ It consists of individual vertices which are situated at defined points in 3D.
 The vertices can be connected with an edge between them.
 Vertices and edges form faces which are visible as a surface in a rendered image.
 
-![Mesh]({{pathToRoot}}/assets/figures/modeling/Mesh.png)
+{% include image.html url="/assets/figures/modeling/Mesh.png" base=pathToRoot description="Structure of a Mesh" %}
 
 ### Modeling Techniques
 
@@ -49,7 +49,7 @@ One of them is compressed along the vertical axis and represents the tabletop.
 The other four cubes are streched into thin and long cuboids and are aligned with the corners of the tabletop.
 They act as the legs of the table.
 
-![Example workflow for compositing primitives]({{pathToRoot}}/assets/figures/modeling/ModelingTechnique_CompositingPrimitiveShapes.png)
+{% include image.html url="/assets/figures/modeling/ModelingTechnique_CompositingPrimitiveShapes.png" base=pathToRoot description="Example Workflow for Compositing Primitives" %}
 
 The technique only requires transformations, rotations and scaling operations and therefore, objects can be created without much effort.
 Thus, results can be achieved quickly.

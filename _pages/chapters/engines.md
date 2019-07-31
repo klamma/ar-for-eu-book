@@ -72,7 +72,7 @@ Unity's WYSIWYG editor allows developers to graphically set up the 3D scene and 
 *The following description of the panel positions refers to Unity's default layout.
 The layout can be changed under Window > Layouts > Default.*
 
-![Unity UI]({{pathToRoot}}/assets/figures/engines/UnityUIOverview.png)
+{% include image.html url="/assets/figures/engines/UnityUIOverview.png" base=pathToRoot description="Overview of Unity's UI" %}
 
 The user interface of Unity's editor consists of different panels.
 The most important panel is the 3D view (B).
