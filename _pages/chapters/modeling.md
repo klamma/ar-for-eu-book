@@ -60,7 +60,7 @@ Additionally, primitives can also be used as a starting point, e.g. for subseque
 
 #### Boolean Operations
 
-
+{% include image.html url="/assets/figures/modeling/BooleanOperations.png" base=pathToRoot description="Overview of the Boolean operations in 2D" %}
 
 #### Digital Sculpting
 
