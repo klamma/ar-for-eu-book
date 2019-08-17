@@ -135,7 +135,7 @@ Creating organic objects by hand this way is tricky.
 
 #### Retopology
 
-The presented modelling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
+The presented modeling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
 The problem with this mesh is that it is irregular and often bears unnecessary complexity {% cite Simonds2013Blender %}.
 For instance, a 3D scanned table consists of many small triangles but its table top could be simplified to one cuboid shape which only consists of two triangles per side.
 Additionally, it is not possible to animate the high-complexity 3D meshes since any movement results in condensed geometry and stretched surfaces.
@@ -153,6 +153,8 @@ However, the retopology process may loose some details of the original mesh.
 To solve this, the difference between the two meshes can be "baked" into a displacement or normal texture.
 This way, small details can be captured in the texture and are shown by the shader.
 Details on this displacement and normal maps are described in the "Textures" section.
+
+{% include image.html url="/assets/figures/modeling/MeshTopologyExample.png" base=pathToRoot description="a: Mesh as a result of a sculpting or 3D scanning process.<br/>b: Cutout of (a) showing the geometry.<br/>c: Manually retopologized mesh using quads.<br/>d: Cutout of (c) showing the geometry. A selection of important face loops is highlighted in green." %}
 
 #### Subdivision Surface Modeling
 
