@@ -60,14 +60,35 @@ Additionally, primitives can also be used as a starting point, e.g. for subseque
 
 #### Boolean Operations
 
+One can also use Boolean operations in order to create complex 3D shapes from multiple base meshes.
+Boolean operations are heavily used in CAD where they are defined on volumes.
+The volumes are combined using operations known from Boolean algebra, e.g. OR, AND or XOR.
+
+Intuitively, the for every point in space and every base volume, a truth value is determined.
+It states if the point is part of the volume.
+By combining the truth values for this point using a Boolean operator, one can determine if the point is part of the resulting volume.
+For instance, the union operation combines the points of the base volumes using the OR-operator.
+Therefore, a point is part of the resulting volume if it is part of any of the starting volumes.
+For the AND-operator, a point is only part of the resulting volume if it is part of all base volumes.
+This corresponds to the intersection of the objects.
+The substraction operation can be achieved by the NOT operator.
+Here, the result volume consists of all points which are part of the first volume but are not inside the other volumes.
+The substraction is not symmetric, i.e. it yields different results with different volume orders.
+
 {% include image.html url="/assets/figures/modeling/BooleanOperations.png" base=pathToRoot description="Overview of the Boolean operations in 2D" %}
+
+Boolean operations also work on meshes.
+Here, the volume is regarded which are encapsulated by a mesh.
+The expected result is a mesh which encapsulates the resulting volume.
+To achieve this, special algorithms are used to clip the individual meshes, e.g. the Greiner-Hormann clipping algorithm {% cite GreinerHormannClipping98 %} or the Vatti clipping algorithm {% cite VattiClipping92 %}.
+The trimmed meshes are combined into one resulting mesh.
 
 #### Digital Sculpting
 
 Digital sculpting is inspired by real clay sculpting.
 Similar to real sculpting, the 3D artist starts with a base shape and can pull and dent the virtal material to create bumps and creases.
 These operations are performed in a 3D sculpting program using a mouse or a tracked stylus {% cite Simonds2013Blender %}.
-A difference to real sculpting is that is is possible to dynamically add or remove material at any point which enables the sculptor to extend the object in any way.
+A difference to real sculpting is that is is possible to dynamically add or remove volume at any point which enables the sculptor to extend the object in any way.
 During the process, the sculpted mass is automatically defined by a mesh which is managed and optimized by the sculpting program.
 
 With digital scupting the 3D artist can focus on forming the shape of the object without worrying about the underlying mesh geometry.
