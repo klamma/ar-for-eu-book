@@ -4,8 +4,6 @@ Environment for AR-FOR-EU Book
 
 Please perform easy tests for creating markdown
 
-### heading level 3 markdown - trying to push
-
 # HowTo Run Locally
 
 ## Prepare Development Environment
