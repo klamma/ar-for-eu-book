@@ -51,7 +51,7 @@ They act as the legs of the table.
 
 {% include image.html url="/assets/figures/modeling/ModelingTechnique_CompositingPrimitiveShapes.png" base=pathToRoot description="Example Workflow for Compositing Primitives" %}
 
-The technique only requires transformations, rotations and scaling operations and therefore, objects can be created without much effort.
+This technique only requires transformations, rotations and scaling operations and therefore, objects can be created without much effort.
 Thus, results can be achieved quickly.
 However, the basic shapes can only approximate the object.
 Intricate shapes and especially organic forms cannot be modeled with this technique.
@@ -152,7 +152,10 @@ Creating organic objects by hand this way is tricky.
 
 #### Box Modeling
 
-
+Box modelling describes a method in which faces of a polygon cube are extruded and manipulated to create a complex model. 
+The process generally utilises a simple iterative method where extruded faces are moved, scaled and rotated to represent an object.
+The name box modelling refers to the use of a cube as a starting point and often has a very angular result.
+Final stages of the project may work with smoothing functions to provide a more organic look, however during development it is optimal to retain a low polygon count.
 
 #### Retopology
 
