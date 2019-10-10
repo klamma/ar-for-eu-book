@@ -2,8 +2,6 @@
 
 Environment for AR-FOR-EU Book
 
-here here 
-Please perform easy tests for creating markdown
 
 # HowTo Run Locally
 
