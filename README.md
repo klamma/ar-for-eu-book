@@ -11,13 +11,19 @@ Please perform easy tests for creating markdown
 
 1. Install [Ruby](https://www.ruby-lang.org) on your machine
 
-2. Clone this repository and open a terminal / command line in your main project folder
+2. Clone this repository and open a terminal / command line
 
-3. Install bundler
+   Check that Ruby is successfully installed and can be accessed from the terminal / command line.
+   To do this, run the command "ruby -v".
+   It should return the installed version of Ruby.
+
+3. In the terminal/command line, navigate to your main project folder
+
+4. Install bundler
 
     gem install bundler
 
-4. Use bundler to pull Jekyll
+5. Use bundler to pull Jekyll
 
     bundle install
     
