@@ -101,4 +101,4 @@ Once the Unity Project is built, the appx bundle can be built, which then can be
 
 ![Running App]({{pathToRoot}}/assets/figures/holotoolkit/app - scanning.jpg)
 
-![Running App]({{pathToRoot}}/assets/figures/holotoolkit/app - brain.jpg)
+![Running App]({{pathToRoot}}/assets/figures/holotoolkit/app - brains.jpg)
