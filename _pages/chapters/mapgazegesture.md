@@ -198,7 +198,21 @@ The Mesh Colliders will automatically be fitted to the shape of the brain segmen
 Since the button is on the prefab, we need to add an event listener for the ‘on click’ event, oth-erwise nothing will happen upon air tapping the button. We therefore modify the InstallObjects() method of the Object Collection game object. We find the button object via its name, and then add the according event listener (linking against the new PopulateSpace.ExploreBrain() method shown below).
 
 ```c#
-InstallObjects
+public void InstallObjects() {
+
+GameObject.Find("SpatialMappingCtrlMenu").SetActive(false); // hide Space Scan Ctrl Menu
+SpatialMappingManager.Instance.DrawVisualMeshes = false; // hide Spatial Map Mesh
+
+currObj = Instantiate(Obj);
+currObj.transform.localScale *= 0.5f;
+currObj.GetComponent<Placeable>().OnSelect(); // activate placement mode
+
+Button b = GameObject.Find("ExploreBrainButton").GetComponent<Button>();
+b.onClick.AddListener(ExploreBrain); // register onClick event with the Button
+
+log.text += "Placing object " + Obj.name + "...\n";
+
+} // InstallObjects()
 ```
 
 This ExploreBrain() method first removes the ‘Explore brain’ button – it is not needed anymore once activated. Then it removes the Placeable script, which otherwise would capture all air tapping events (and keep moving the brain around). 
@@ -206,19 +220,79 @@ This ExploreBrain() method first removes the ‘Explore brain’ button – it i
 Most importantly, the method also removes the Box Collider around the brain, so that the gaze cursor can now penetrate through and rest on the brain segments.
 
 ```c#
-ExploreBrain
+public void ExploreBrain()
+{
+// remove the button
+GameObject.Find("ExploreBrainButton").SetActive(false);
+
+// remove drag & drop placeable script, as otherwise
+// it will interfere with the interaction with the brain segments
+Destroy(currObj.GetComponent<Placeable>());
+
+// remove Box collider, so that gaze cursor passes to child segments
+Destroy(currObj.GetComponent<BoxCollider>());
+
+// attach the interaction script to the brain prefab, so that segments can be clicked
+currObj.AddComponent<SegmentHighlights>();
+
+}
 ```
 
 Finally, a script to highlight the segments (SegmentHighlights) is added by code. Let us look into this highlighter script. First, the script installs a listener for the gesture recogniser and regis-ters a callback for whenever the air tap gesture has been detected (linking to method ‘on-Tapped’).
 
 ```c#
-Start
+void Start() {
+
+recogniser = new GestureRecognizer();
+recogniser.SetRecognizableGestures(GestureSettings.Tap);
+recogniser.Tapped += onTapped;
+recogniser.StartCapturingGestures();
+
+}
 ```
 
 The onTapped method then uses the standard method to find out what actually has been tapped: cast a ray from the camera position of the head worn camera and then investigate whether this ray actually hit anything (and whether that anything is a game object).
 
 ```c#
-OnTapped
+
+public void onTapped(TappedEventArgs args)
+{
+
+var headPosition = args.headPose.position;
+var gazeDirection = args.headPose.forward;
+
+RaycastHit hitInfo;
+if (Physics.Raycast(headPosition, gazeDirection, out hitInfo, 10.0f, Physics.DefaultRaycastLayers)) 
+{
+// If the raycast hit a hologram, use that as the focused object.
+FocusedObject = hitInfo.collider.gameObject;
+
+string[] segs = { "Brain_Part_02", "Brain_Part_04", "Brain_Part_05", "Brain_Part_06" };
+if (segs.Any(FocusedObject.name.Equals))
+{
+if (FocusedObject.name == "Brain_Part_04")
+{
+FocusedObject.transform.Translate(Vector3.forward * 0.1f, Space.World);
+} else if (FocusedObject.name == "Brain_Part_06")
+{
+FocusedObject.transform.Translate(Vector3.back * 0.1f, Space.World);
+} else if (FocusedObject.name == "Brain_Part_02")
+{
+FocusedObject.transform.Translate(Vector3.up * 0.5f, Space.World);
+} else if (FocusedObject.name == "Brain_Part_05")
+{
+FocusedObject.transform.Translate(Vector3.up * 0.2f, Space.World);
+}
+}
+
+}
+else
+{
+// If the raycast did not hit a hologram, clear the focused object.
+FocusedObject = null;
+}
+
+}
 ```
 
 If it has hit a game object, we can check whether the name is any of the names of the brain segments, and react accordingly by moving the segment into a predefined direction (left half goes back, right half goes forward, stem up, etc.
@@ -226,13 +300,59 @@ If it has hit a game object, we can check whether the name is any of the names o
 Moreover, we can add a method for handling the highlighting to the Update routine of the class.
 
 ```c#
-Update+HoverHandler
+void Update() {
+HoverHandler();
+}
+
+void HoverHandler ()
+{
+
+GameObject oldFocusObject = FocusedObject;
+
+var headPosition = Camera.main.transform.position;
+var gazeDirection = Camera.main.transform.forward;
+RaycastHit hitInfo;
+if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+{
+// If the raycast hit a hologram, use that as the focused object.
+FocusedObject = hitInfo.collider.gameObject;
+}
+else
+{
+// If the raycast did not hit a hologram, clear the focused object.
+FocusedObject = null;
+}
+
+// If the focused object changed this frame, add/remove highlight colour
+if (FocusedObject != oldFocusObject)
+{
+string[] segs = { "Brain_Part_02", "Brain_Part_04", "Brain_Part_05", "Brain_Part_06" };
+if (oldFocusObject != null && segs.Any(oldFocusObject.name.Equals))
+{
+RemoveHighlightFromSegment(oldFocusObject);
+}
+if (FocusedObject != null && segs.Any(FocusedObject.name.Equals))
+{
+HighlightSegment(FocusedObject);
+}
+}
+}
 ```
 
 Again, the HoverHandler uses a ray cast to find out whether something (and what) has been hit by the ray cast from the position and orientation of the head-worn camera. If it is a brain seg-ment, and if this has not already been hit previously (in previous frames of the update loop), then the highlight and remove highlight routines will be called. 
 
 ```c#
-HighlightSegment
+
+public void HighlightSegment(GameObject Segment)
+{
+OldColour = Segment.GetComponent<Renderer>().material.color;
+Segment.GetComponent<Renderer>().material.color = Color.yellow;
+}
+
+public void RemoveHighlightFromSegment(GameObject Segment)
+{
+Segment.GetComponent<Renderer>().material.color = OldColour;
+}
 ```
 
 Those routines simply remember the colour in use of the brain segment (they all have the same colour, so no need to memorise more than one), and it replaces it with yellow for the highlight.
