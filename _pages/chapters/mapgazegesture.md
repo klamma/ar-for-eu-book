@@ -1,4 +1,12 @@
-# Spatial Mapping, Gaze, and Gestures
+---
+layout: page
+title: Spatial Mapping, Gaze, and Gestures
+permalink: /chapter/spatialMapping/
+categories: chapter
+visualizations:
+---
+
+{% include autoRelativePath.html %}
 
 ### by Dr Fridolin Wild, Performance Augmentation Lab, Oxford Brookes University
 
@@ -22,7 +30,7 @@ Now create an empty game object (Create > Create empty) in the game object Hiera
 
 Now search in the Project explorer for Spatial Mapping, then InputManager, also InteractiveMeshCursor, and SpatialUnderstanding. Add all four to the project Hierarchy. Your Hierarchy looks now like the one depicted to the left.
 
-![1 - htk import and hierarchy setup](../../assets/figures/mapgazegesture/1 - htk import and hierarchy setup.png)
+![1 - htk import and hierarchy setup]({{pathToRoot}}/assets/figures/mapgazegesture/1 - htk import and hierarchy setup.png)
 
 Let's go through them. We have replaced the standard camera with the HololensCamera - as every Unity project uses a camera to define how to render the scene.
 
@@ -32,21 +40,21 @@ We select the SpatialMapping game object and look at the Inspector to set the nu
 
 Short cut: If you just want the SpatialMapping to anchor your game objects, you can leave the "Auto Start Observer" and "Auto Begin Scanning" on and ignore the next section on how to build a UI for scanning rooms.
 
-![2 - spatialmapping](../../assets/figures/mapgazegesture/2 - spatialmapping.png)
+![2 - spatialmapping]({{pathToRoot}}/assets/figures/mapgazegesture/2 - spatialmapping.png)
 
 For the InputManager, there is not much we need to configure. Just make sure to drag and drop the InteractiveMeshCursor from the Hierarchy onto the slot "Cursor".
 
-![3 - inputmanager](../../assets/figures/mapgazegesture/3 - inputmanager.png)
+![3 - inputmanager]({{pathToRoot}}/assets/figures/mapgazegesture/3 - inputmanager.png)
 
 ### Spatial Mapping - UI for room scans
 
 Next, we start building up our own user interface. Unity uses a Canvas game object to hold the elements of the user interface together. So the first thing we do is to create game object UI > Canvas and rename it to "SpatialMappingCtrlMenu".
 
-![4 - ctrl menu - create-canvas](../../assets/figures/mapgazegesture/4 - ctrl menu - create-canvas.png)
+![4 - ctrl menu - create-canvas]({{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - create-canvas.png)
 
 The scale of 1 is rather big for the small display of the Hololens, so we set x/y/z scale to 0.3. 
 
-![Control menu](../../assets/figures/mapgazegesture/4 - ctrl menu - 1 - canvas worldspace.png)
+![Control menu]({{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - 1 - canvas worldspace.png)
 
 There are different ways of rendering the UI, but for here, we need to set the Canvas to render to World Space (this will also trigger automatically to pick a different Camera in the sub settings for rendering it).
 
@@ -54,25 +62,25 @@ Next, we create three UI > Text game objects and three UI > Button objects. We r
 
 The buttons are renamed to StartScanningButton, StopScanningButton, StartAppButton.
 
-![Control menu](../../assets/figures/mapgazegesture/4 - ctrl menu - hierarchy.png)
+![Control menu]({{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - hierarchy.png)
 
 We rearrange the elements in the scene preview by switching to 2D in the Scene and double clicking the SpatialMappingCtrlMenu canvas in the Hierarchy. Arrange them to something like this:
 
-![Control menu: scene](../../assets/figures/mapgazegesture/4 - ctrl menu - preview.png)
+![Control menu: scene]({{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - preview.png)
 
 The menu canvas needs to face always to the user ('billboard') and follow the user around ('tag-along', so we search for the HoloToolkit Tagalong and Billboard scripts and attach them to the canvas.
 
-![Control menu: scene](../../assets/figures/mapgazegesture/4 - ctrl menu - canvas - tagalong billboard.png)
+![Control menu: scene]({{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - canvas - tagalong billboard.png)
 
 We now import the tutorial unity package (“itss tutorial 1.unitypackage”). Once imported, we add the SpaceScannerManager script (folder "_scripts") and attach it to the menu canvas. 
 
-![Space Scanner](../../assets/figures/mapgazegesture/4 - ctrl menu - canvas - spacescanner.png)
+![Space Scanner]({{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - canvas - spacescanner.png)
 
 The SpaceScannerManager has several configuration settings. We add two mesh map materi-als (search for “WireframeBlue” and “Occlusion” and add them accordingly). Moreover, we drag and drop the Text game object log onto the Log slot. This allows the SpaceScannerManager script to output log messages onto the area we have foreseen for debug output on the menu canvas. 
 
 To fully function, we have to add two more HoloToolkit scripts, “SurfaceMeshesToPlanes” and “RemoveSurfaceVertices”. We attach them to the menu canvas as well.
 
-![SurfacePlaneToMeshes and RemoveSurfaceVertices](../../assets/figures/mapgazegesture/4 - ctrl menu - canvas - spatial scripts.png)
+![SurfacePlaneToMeshes and RemoveSurfaceVertices]({{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - canvas - spatial scripts.png)
 
 We select for Draw Planes and Destroy Planes the option 'Nothing' each. The SurfaceMesh-esToPlanes script is resonsible for identifying plane surfaces from the raw mesh, detecting floor, walls, tables, and the like. It is possible to replace the raw mesh with these identified sur-faces, but we don't want that, as it makes the preview flicker during the scanning. The Re-moveSurfaceVertices is resonsible for thinning out the mesh, where possible. 
 
@@ -135,7 +143,7 @@ Finally, StartApp() calls the PopulateSpace singleton’s InstallObjects() metho
 
 These three key methods need to be registered with the on Click events of the corresponding UI button. For this, we add (+) an On Click() event to the button and drag and drop the menu canvas game object onto the game object slot. Then we can select SpaceScannerManager > StartScanning as the method to call when the button is clicked.
 
-![StartScanning button behaviour](../../assets/figures/mapgazegesture/4 - ctrl menu - 9 button 1 click.png)
+![StartScanning button behaviour]({{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - 9 button 1 click.png)
 
 We apply the according method calls for StopScanning and StartApp analogously to the other two buttons.
 
@@ -147,11 +155,11 @@ We first create a new empty game object and rename it to ObjectCollection. Moreo
 
 We attach two scripts PopulateSpace and GazeGestureManager (from "_scripts") to the empty game object ObjectCollection. For PopulateSpace we drag and drop the log Text game object from the UIcanvas onto the Log slot in the Inspector. 
 
-![ObjectCollection](../../assets/figures/mapgazegesture/5 - objectcollection.png)
+![ObjectCollection]({{pathToRoot}}/assets/figures/mapgazegesture/5 - objectcollection.png)
 
 We have prepared a 3D model prefab, "brain", which has the Placeable script already attached. The Placeable script contains the code needed for conveniently displaying through the use of coloured bounding boxes and shadows, where the user can actually place an object. Once a suitable location is found, the user simply airtaps to drop the object.
 
-![Brain](../../assets/figures/mapgazegesture/6 - brain.png)
+![Brain]({{pathToRoot}}/assets/figures/mapgazegesture/6 - brain.png)
 
 To connect the brain model prefab with the ObjectCollection, the other configuration slot, "Obj", gets filled with the brain prefab (folder "_prefabs"). 
 
@@ -175,17 +183,17 @@ The Placeable behaviour allows to repeatedly pick up the object with an air tap 
 
 To be able to stop the Placeable component script, we therefore first add a ‘EXPLORE BRAIN’ button to the brain prefab, wrapped into a canvas with World Space rendering. (We drag and drop the prefab from the Project file explorer into the scene, modify it, and then drag it back to the Project file explorer to replace the prefab with the modified one).
 
-!['Explore Brain' button](../../assets/figures/mapgazegesture/14 - brain - button.png)
+!['Explore Brain' button]({{pathToRoot}}/assets/figures/mapgazegesture/14 - brain - button.png)
 
 Our prefab in the Project explorer now shows that it also has a Canvas (which contains the Button). The canvas needs to be resized and properly positioned so that the button floats slightly over the brain model (see picture).
 
-!['Explore Brain' button](../../assets/figures/mapgazegesture/14 - brain - canvas.png)
+!['Explore Brain' button]({{pathToRoot}}/assets/figures/mapgazegesture/14 - brain - canvas.png)
 
 While we are at it, we also add Mesh Colliders (click ‘Add Component’ and search for it) to each of the brain segments. We will need those later so that they can be hit targets in the inter-action.
 
 The Mesh Colliders will automatically be fitted to the shape of the brain segment.
 
-![Mesh colliders](../../assets/figures/mapgazegesture/14 - brain - meshcolliders.png)
+![Mesh colliders]({{pathToRoot}}/assets/figures/mapgazegesture/14 - brain - meshcolliders.png)
 
 Since the button is on the prefab, we need to add an event listener for the ‘on click’ event, oth-erwise nothing will happen upon air tapping the button. We therefore modify the InstallObjects() method of the Object Collection game object. We find the button object via its name, and then add the according event listener (linking against the new PopulateSpace.ExploreBrain() method shown below).
 
@@ -229,8 +237,8 @@ HighlightSegment
 
 Those routines simply remember the colour in use of the brain segment (they all have the same colour, so no need to memorise more than one), and it replaces it with yellow for the highlight.
 
-![Highlight hover](../../assets/figures/mapgazegesture/14 - highlight hover.jpg)
+![Highlight hover]({{pathToRoot}}/assets/figures/mapgazegesture/14 - highlight hover.jpg)
 
-![OnTapped](../../assets/figures/mapgazegesture/14 - highlight on tapped.jpg)
+![OnTapped]({{pathToRoot}}/assets/figures/mapgazegesture/14 - highlight on tapped.jpg)
 
 NOTE: The 3D brain model is from https://free3d.com/3d-model/brain-18357.html and free for personal use. The Placeable and GazeGestureManager behaviour scripts are from the Mi-crosoft Holoacademy Spatial Mapping tutorial.
