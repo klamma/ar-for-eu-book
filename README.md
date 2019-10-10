@@ -7,7 +7,7 @@ Environment for AR-FOR-EU Book
 
 ## Prepare Development Environment
 
-1. Install [Ruby](https://www.ruby-lang.org) on your machine
+1. Install [Ruby](https://www.ruby-lang.org) on your machine ([Detailed instructions](https://jekyllrb.com/docs/installation/))
 
 2. Clone this repository and open a terminal / command line
 
