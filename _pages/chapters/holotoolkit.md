@@ -77,9 +77,9 @@ Set up your Unity panels so that they look like this: Scene / Game top left, con
 
 The simplest way to test the app is to use holographic remoting. For this, the Holographic Re-moting Player has to be installed on the Hololens from the Windows Store. Once started, the app will display the IP address of the Hololens. If your development machine is on the same network (and the network is reasonably open - like your home network), then Unity can directly connect to this IP address.
 
-![Holographic Remoting Demo]({{pathToRoot}}/assets/figures/holotoolkit/holographic-remoting.jpg)
+![Holographic remoting demo]({{pathToRoot}}/assets/figures/holotoolkit/holographic-remoting.jpg)
 
-![Holographic Remoting settings]({{pathToRoot}}/assets/figures/holotoolkit/holographc-remoting.png)
+![Holographic remoting settings]({{pathToRoot}}/assets/figures/holotoolkit/holographic-remoting.png)
 
 Pressing the big play button, will now launch the app directly on the Hololens, also providing a preview in the Game panel.
 
