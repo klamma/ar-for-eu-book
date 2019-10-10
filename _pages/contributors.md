@@ -8,3 +8,4 @@ permalink: /contrib/
 
 * Benedikt Hensen
 * Ralf Klamma
+* Fridolin Wild
