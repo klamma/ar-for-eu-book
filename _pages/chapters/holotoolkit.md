@@ -79,7 +79,7 @@ The simplest way to test the app is to use holographic remoting. For this, the H
 
 ![Holographic remoting demo]({{pathToRoot}}/assets/figures/holotoolkit/holographic-remoting.jpg)
 
-![Holographic remoting settings]({{pathToRoot}}/assets/figures/holotoolkit/holographic-remoting.png)
+![Holographic remoting settings]({{pathToRoot}}/assets/figures/holotoolkit/holographic remoting.png)
 
 Pressing the big play button, will now launch the app directly on the Hololens, also providing a preview in the Game panel.
 
