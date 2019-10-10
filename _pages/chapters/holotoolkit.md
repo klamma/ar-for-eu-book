@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Developing with HoloToolKit for the Hololens
+title: Configuring Windows for Development with Hololens
 permalink: /chapter/holotoolkit/
 categories: chapter
 visualizations:
