@@ -32,7 +32,7 @@ visualizations:
 You have selected Version 2017.4.
 This is the long term support version.
 
-> {: .unityVersionSpecific .unity2018-3}
+> {: .unityVersionSpecific .unity2019-2}
 You have selected Version 2019.2
 This is the most current version.
 
@@ -79,6 +79,21 @@ Once a project has been upgraded to a newer version, it is not possible to open 
 Thus, any Unity updates should be well-planned.
 When working in a team, all team members must agree on one Unity version.
 The used version must match exactly, including the minor release number, e.g. 2019.2.9 and 2019.2.10 are regarded as different versions.
+
+## Collaborative Work and Version Control
+
+When working in a team or alone, it is generally recommended to use a version control software to create backups of the work.
+There are multiple alternatives available and one commonly used version control software is [Git](https://git-scm.com/).
+It also works with Unity projects.
+When setting up a project, a gitignore file should be added at the root level of the Git project.
+A completely set up template for the gitignore file can be found on [GitHub](https://github.com/github/gitignore/blob/master/Unity.gitignore).
+It contains a description of all redundant files which Unity can regenerate, e.g. caches, build objects and meta files.
+
+A problem which can occur in collaborative work is the merging of scenes.
+An entire scene in Unity is stored in one YAML file which means that a conflict arises if multiple team members worked on the same scene.
+It can become difficult to merge the save files since its contents are mapped to IDs with associated settings.
+For this case, Unity provides a tool called [Smart Merge](https://docs.unity3d.com/Manual/SmartMerge.html).
+Once it is installed, it can be integrated with Git and tries to perform an automatic merge of the two versions of the scene.
 
 ## Project Structure and Project Setup
 
@@ -652,7 +667,6 @@ We will now see how to react to tap gestures.
 7. If you now press play, you can emulate a tap gesture by pressing Shift + Left Click.
     If we focus the bunny with the cursor (this is now easy to see since the bunny will change its colour when focused) and perform a tap gesture, the bunny should stop moving.
     If we tap on it again, movement will start again.
-
 
 ## Unit Testing in Unity
 
