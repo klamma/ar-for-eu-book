@@ -25,7 +25,7 @@ visualizations:
 
 > <select id="versionSelectorUnity">
 >   <option value="unity2017-4">Unity 2017.4</option>
->   <option value="unity2018-3">Unity 2018.3</option>
+>   <option value="unity2019-2">Unity 2019.2</option>
 > </select>
 
 > {: .unityVersionSpecific .unity2017-4}
@@ -33,7 +33,7 @@ You have selected Version 2017.4.
 This is the long term support version.
 
 > {: .unityVersionSpecific .unity2018-3}
-You have selected Version 2018.3
+You have selected Version 2019.2
 This is the most current version.
 
 
@@ -48,6 +48,37 @@ Applications can be deployed on more than 25 platforms, including Android, iOS, 
 Unity is available in different pricing levels ranging from a free personal edition to a Pro version with additional support for larger companies.
 The required license level depends on the annual revenue.
 Many of the presented AR SDKs can be added to Unity projects so that their functionality is available directly in the 3D engine.
+
+## Installation
+
+There are two ways to install Unity.
+One can use an installer for a specific Unity version or the intermediate launcher Unity Hub.
+
+The installer for a Unity version can be downloaded directly from its [archive](https://unity3d.com/get-unity/download/archive).
+In the installation process, components for different target platforms such as Windows UWP, Linux, Android or iOS can be added.
+All intended target platforms for applications should be selected now.
+It is also possible to add platform build support components at a later stage but then installers for each of the platforms need to be downloaded and executed separately.
+If multiple Unity versions are used in parallel, the install location needs to be adapted manually.
+Installing multiple versions to the same folder, e.g. the default install location, will overwrite the previously installed version.
+
+A more comfortable way of handling multiple versions and the build support components is the [Unity Hub](https://unity3d.com/get-unity/download).
+It is a launcher which administers the versions of Unity.
+It offers a list of all Unity versions and they can be installed or removed at the press of a button.
+Similarly, the installation can be expanded by additional build support components at any time.
+
+## Unity Versions
+
+Unity's versions are labeled by a year, a major version number and a minor version number which are separated by dots, e.g. 2019.2.10.
+For each year, Unity provides a long term support (LTS) version which is recommended for longer lasting projects.
+Updates to the long term support version focus on stability and are released regularly.
+
+Unity projects keep track of the editor version which most recently edited the project.
+Opening a Unity project with a newer editor version causes a re-import of all project assets.
+It can take a while to process the changes and additionally, content may be change automatically, e.g. if deprecated API usages are detected.
+Once a project has been upgraded to a newer version, it is not possible to open it with older versions again due to changed APIs and data structures.
+Thus, any Unity updates should be well-planned.
+When working in a team, all team members must agree on one Unity version.
+The used version must match exactly, including the minor release number, e.g. 2019.2.9 and 2019.2.10 are regarded as different versions.
 
 ## Project Structure and Project Setup
 
