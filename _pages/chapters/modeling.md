@@ -220,7 +220,48 @@ For this reason, seams are often placed in areas which are less visible to the v
 {% include image.html url="/assets/figures/modeling/UVSeam1.png" base=pathToRoot description="Example showing texture discontinuities at a seam." %}
 {% include image.html url="/assets/figures/modeling/UVSeam2.png" base=pathToRoot description="The discontinuities caused by the seam can be fixed by manually aligning the adjacent faces in the UV layout or by placing seams on less visible edges." %}
 
+### Texture Resources
+
+There are various online repositories which offer photo textures for varying purposes and with different qualities, prices and licenses.
+A large amount of these online resources offers PBR-compatible textures which means that it does not only provide image textures but also other data like normal maps, metallic maps, roughness/smoothness maps and ambient occlusion maps.
+
+Here is a list of such texture repositories:
+
+| Name | Web address | Price | License | PBR | Number of textures |
+| --- | --- | --- | --- | --- |
+| CC0 Textures | [https://cc0textures.com/](https://cc0textures.com/) | Free | CC0 | yes | > 700 |
+| Poliigon | [https://www.poliigon.com/](https://www.poliigon.com/search?type=texture) | Annual or monthly subscription ($12 - 47$ per month) | Based on the subscription plan | yes | > 3100 |
+| Texture Haven | [https://texturehaven.com/textures/](https://texturehaven.com/textures/) | Free | CC0 | yes | > 140 |
+| textures.com | [https://www.textures.com/](https://www.textures.com/) | Per texture (low resolutions are free; requires registration) | Per texture | mostly | > 7500 |
+
+Apart from downloading online resources, it is also possible to create textures from photos, procedural logic, photoscans and by hand-painting them.
+
 ### Texture Painting
+
+Textures can be created in photo editing and drawing applications such as Adobe Photoshop or GIMP.
+However, it is difficult to paint details on the texture which should appear at a certain position on the model because the UV-layout needs to be considered.
+Therefore, 3D programs provide a texture painting mode which allows the user to directly paint on the 3D model.
+Pen strokes are transferred onto the underlying image texture with respect to the UV-layout.
+Apart from manually painting the colour, one can also use a clone tool to blend different photorealistic textures into each other.
+This way, small details can be set up quickly and obvious tiling patterns can be hidden.
+For instance, a mud material can be set up separately of a water material.
+After that, the two materials can be blended together by hand-painting a mask which defines puddles on a muddy ground.
+
+Another technique is projection painting.
+A 2D texture is shown as a semi-transparent overlay on the screen.
+Behind the texture, the 3D object can be seen.
+When painting, the texture is projected onto the 3D object based on the current viewpoint.
+
+The following table contains a list of tools which can be used for texture painting:
+
+| Name | Web address | Price |
+| --- | --- | --- |
+| 3D Coat | [https://3dcoat.com/](https://3dcoat.com/) | $99 - $568 |
+| Armorpaint | [https://armorpaint.org/](https://armorpaint.org/) | 16€, optional subscription to support developers (Open-Source) |
+| Blender | [https://www.blender.org/](https://www.blender.org/) | Free (Open-Source) |
+| Substance Painter | [https://www.substance3d.com/products/substance-painter/](https://www.substance3d.com/products/substance-painter/) | Monthly Subscription ($19.90 - $99.90) |
+
+#### Exercise: Texture Painting in Blender
 
 ### Texture Baking
 
