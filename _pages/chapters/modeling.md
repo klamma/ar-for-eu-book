@@ -13,7 +13,7 @@ visualizations:
 There are several techniques of creating a virtual representation of 3D models.
 The surface of an object can be approximated by a graph structure which is called mesh.
 An advantage of meshes is that the creator can decide how complex the geometry of an object may become.
-Based on this, the performance of the final application can be optimized by reducing the mesh complexity on unimportant objects.
+Based on this, the performance of the final application can be optimised by reducing the mesh complexity on unimportant objects.
 However, a disadvantage is that it is not possible to create perfectly rounded surfaces.
 The smoother a curvature should be, the more refined the mesh needs to be.
 This will affect the application's performance.
@@ -90,7 +90,7 @@ Similar to real sculpting, the 3D artist starts with a base shape and can pull a
 Usually, the large shapes are defined first and then progress is made on smaller details.
 These operations are performed in a 3D sculpting program using a mouse or a tracked stylus {% cite Simonds2013Blender %}.
 A difference to real sculpting is that is is possible to dynamically add or remove volume at any point which enables the sculptor to extend the object in any way.
-During the process, the sculpted mass is automatically defined by a mesh which is managed and optimized by the sculpting program.
+During the process, the sculpted mass is automatically defined by a mesh which is managed and optimised by the sculpting program.
 
 With digital scupting the 3D artist can focus on forming the shape of the object without worrying about the underlying mesh geometry.
 Like manual modeling, it is possible to create real and imaginative objects.
@@ -166,20 +166,20 @@ For instance, a 3D scanned table consists of many small triangles but its table 
 Additionally, it is not possible to animate the high-complexity 3D meshes since any movement results in condensed geometry and stretched surfaces.
 In real-time rendering, the amount of polygons also has an impact on the runtime of the rendering pipeline.
 This means that high-density meshes will take longer to render and therefore the framerate will be lower.
-Due to this, complex meshes should be retopologized {% cite PDZR18 %}.
+Due to this, complex meshes should be retopologised {% cite PDZR18 %}.
 In this technique, the high-density mesh resulting from the sculpting process or 3D scan is used as a base mesh.
 After that, a new mesh is created on top of this base mesh.
 This can be done manually or by an algorithm.
 The new mesh is typically created using quads and it considers the shape of the object and how it might be animated.
 As a main idea, the quads form strips which should follow the object's main curves and which should align to any hard edges {% cite Simonds2013Blender %}.
 Since the manual creation of such a retopology mesh is tedious and time consuming, there are algorithms which automate this process {% cite PDZR18 %}.
-The result of the retopology is a mesh which looks almost like the original high-density mesh but is more lightweight and optimized.
-However, the retopology process may loose some details of the original mesh.
+The result of the retopology is a mesh which looks almost like the original high-density mesh but is more lightweight and optimised.
+However, the retopology process may lose some details of the original mesh.
 To solve this, the difference between the two meshes can be "baked" into a displacement or normal texture.
 This way, small details can be captured in the texture and are shown by the shader.
 Details on this displacement and normal maps are described in the "Textures" section.
 
-{% include image.html url="/assets/figures/modeling/MeshTopologyExample.png" base=pathToRoot description="a: Mesh as a result of a sculpting or 3D scanning process.<br/>b: Cutout of (a) showing the geometry.<br/>c: Manually retopologized mesh using quads.<br/>d: Cutout of (c) showing the geometry. A selection of important face loops is highlighted in green." %}
+{% include image.html url="/assets/figures/modeling/MeshTopologyExample.png" base=pathToRoot description="a: Mesh as a result of a sculpting or 3D scanning process.<br/>b: Cutout of (a) showing the geometry.<br/>c: Manually retopologised mesh using quads.<br/>d: Cutout of (c) showing the geometry. A selection of important face loops is highlighted in green." %}
 
 ### Subdivision Surface Modeling
 
@@ -230,7 +230,7 @@ Here is a list of such texture repositories:
 | Name | Web address | Price | License | PBR | Number of textures |
 | --- | --- | --- | --- | --- |
 | CC0 Textures | [https://cc0textures.com/](https://cc0textures.com/) | Free | CC0 | yes | > 700 |
-| Poliigon | [https://www.poliigon.com/](https://www.poliigon.com/search?type=texture) | Annual or monthly subscription ($12 - 47$ per month) | Based on the subscription plan | yes | > 3100 |
+| Poliigon | [https://www.poliigon.com/](https://www.poliigon.com/search?type=texture) | Annual or monthly subscription ($12 - $47 per month) | Based on the subscription plan | yes | > 3100 |
 | Texture Haven | [https://texturehaven.com/textures/](https://texturehaven.com/textures/) | Free | CC0 | yes | > 140 |
 | textures.com | [https://www.textures.com/](https://www.textures.com/) | Per texture (low resolutions are free; requires registration) | Per texture | mostly | > 7500 |
 
@@ -257,7 +257,7 @@ The following table contains a list of tools which can be used for texture paint
 | Name | Web address | Price |
 | --- | --- | --- |
 | 3D Coat | [https://3dcoat.com/](https://3dcoat.com/) | $99 - $568 |
-| Armorpaint | [https://armorpaint.org/](https://armorpaint.org/) | 16€, optional subscription to support developers (Open-Source) |
+| Armorpaint | [https://armorpaint.org/](https://armorpaint.org/) | 16 Euro, optional subscription to support developers (Open-Source) |
 | Blender | [https://www.blender.org/](https://www.blender.org/) | Free (Open-Source) |
 | Substance Painter | [https://www.substance3d.com/products/substance-painter/](https://www.substance3d.com/products/substance-painter/) | Monthly Subscription ($19.90 - $99.90) |
 
