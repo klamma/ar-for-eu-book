@@ -34,12 +34,12 @@ Vertices and edges form faces which are visible as a surface in a rendered image
 
 {% include image.html url="/assets/figures/modeling/Mesh.png" base=pathToRoot description="Structure of a Mesh" %}
 
-### Modeling Techniques
+## Modeling Techniques
 
 Mesh-based 3D models can be created using a number of techniques.
 It is also possible to combine these techniques in one workflow.
 
-#### Compositing Primitives
+### Compositing Primitives
 
 A beginner-friendly way of manual modeling is to approximate objects by a composition of primitive shapes like cubes or spheres.
 Such basic shapes are usually included in 3D programs by default and can directly be added to a scene.
@@ -58,7 +58,7 @@ Intricate shapes and especially organic forms cannot be modeled with this techni
 Primitives are best used to prototype a scene {% cite Simonds2013Blender %}, e.g. to block out the general shapes of objects and to establish its proportions.
 Additionally, primitives can also be used as a starting point, e.g. for subsequent manual modeling or sculpting processes.
 
-#### Boolean Operations
+### Boolean Operations
 
 One can also use Boolean operations in order to create complex 3D shapes from multiple base meshes.
 Boolean operations are heavily used in CAD where they are defined on volumes.
@@ -83,10 +83,11 @@ The expected result is a mesh which encapsulates the resulting volume.
 To achieve this, special algorithms are used to clip the individual meshes, e.g. the Greiner-Hormann clipping algorithm {% cite GreinerHormannClipping98 %} or the Vatti clipping algorithm {% cite VattiClipping92 %}.
 The trimmed meshes are combined into one resulting mesh.
 
-#### Digital Sculpting
+### Digital Sculpting
 
 Digital sculpting is inspired by real clay sculpting.
 Similar to real sculpting, the 3D artist starts with a base shape and can pull and dent the virtal material to create bumps and creases.
+Usually, the large shapes are defined first and then progress is made on smaller details.
 These operations are performed in a 3D sculpting program using a mouse or a tracked stylus {% cite Simonds2013Blender %}.
 A difference to real sculpting is that is is possible to dynamically add or remove volume at any point which enables the sculptor to extend the object in any way.
 During the process, the sculpted mass is automatically defined by a mesh which is managed and optimized by the sculpting program.
@@ -97,31 +98,31 @@ However, just like real sculpting, training is required in order to achieve resu
 Digital scuplting is well suited for creating organic shapes, e.g. for designing characters.
 Sometimes, it is also used in a creative way to prototype the shapes of an object with hard edges.
 
-#### Sketch-Based Modeling
+### Sketch-Based Modeling
 
 
-#### 3D Scanning
+### 3D Scanning
 
 
-#### Photogrammetry
+### Photogrammetry
 
 It is also possible to use structure-from-motion photogrammetry to create 3D models {% cite WBGH12 %}.
 Photogrammetry is also a 3D scanning technique but it only requires a standard camera.
-With this camera, a series of photos are taken from various different angles and positions.
+With this camera, a series of photos is taken from various different angles and positions.
 Alternatively, it is also common to use an array of cameras which are all triggered at the same time to take a photo.
 The photos are later processed in photogrammetry software in order to generate the 3D model.
 The software looks for common feature points in the images and tries to match them.
 Because of the fact that the images have been taken at different positions, the feature point is shifted in the other image and so the software can determine the depth of the feature point.
 This is similar to the way how humans can perceive depth from parallax motion, e.g. when looking out of the window of a moving train.
-Object which are close to the viewer like signal installations at the rails will quickly move through the field of view while distant trees seem to travel through the field of view at a slower speed.
+Objects which are close to the viewer like signal installations at the rails will quickly move through the field of view while distant trees seem to travel through the field of view at a slower speed.
 
 Photogrammetry is capable of producing realistic results since it does not only provide geometry information but can also project the original images onto the 3D model in order to create a texture.
 Among other areas of application it is used in aerial photography and archaeology.
 
-3D models from photogrammetry can be created with the commercial software products [Agisoft Metashape](https://www.agisoft.com/), [RealityCapture](https://www.capturingreality.com/) and the open-source tool [Meshroom](https://alicevision.github.io/#meshroom).
+3D models from photogrammetry can be created with the commercial software products [Agisoft Metashape](https://www.agisoft.com/), [RealityCapture](https://www.capturingreality.com/), [Autodesk ReCap](https://www.autodesk.com/solutions/photogrammetry-software) and the open-source tool [Meshroom](https://alicevision.github.io/#meshroom).
 
 
-#### Manual Mesh Creation
+### Manual Mesh Creation
 
 The previous methods all work on an object-level where the modeler is only concerned with the shape of the object while the computer constructs the according mesh data.
 However, it is also possible to manually construct the mesh.
@@ -150,14 +151,14 @@ Apart from defining the shape of the object, the modeler also has to think about
 The technique works well for man-made objects since they consist of clear shapes and hard edges which are good reference points in the modeling process.
 Creating organic objects by hand this way is tricky.
 
-#### Box Modeling
+### Box Modeling
 
 Box modelling describes a method in which faces of a polygon cube are extruded and manipulated to create a complex model. 
 The process generally utilises a simple iterative method where extruded faces are moved, scaled and rotated to represent an object.
 The name box modelling refers to the use of a cube as a starting point and often has a very angular result.
 Final stages of the project may work with smoothing functions to provide a more organic look, however during development it is optimal to retain a low polygon count.
 
-#### Retopology
+### Retopology
 
 The presented modeling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
 The problem with this mesh is that it is irregular and often bears unnecessary complexity {% cite Simonds2013Blender %}.
@@ -180,11 +181,48 @@ Details on this displacement and normal maps are described in the "Textures" sec
 
 {% include image.html url="/assets/figures/modeling/MeshTopologyExample.png" base=pathToRoot description="a: Mesh as a result of a sculpting or 3D scanning process.<br/>b: Cutout of (a) showing the geometry.<br/>c: Manually retopologized mesh using quads.<br/>d: Cutout of (c) showing the geometry. A selection of important face loops is highlighted in green." %}
 
-#### Subdivision Surface Modeling
+### Subdivision Surface Modeling
 
-### Textures
+## Textures
 
-- UV unwrapping
+Textures are images which are applied to the 3D object's faces, e.g. to give colour to the surface.
+More details about textures are described in the chapter about [Computer Graphics]({{pathToRoot}}/chapter/cg).
+
+### UV-Unwrapping
+
+Since image textures are two-dimensional data, a mapping is needed from the 3D room with the object to the 2D space with the texture.
+It defines which texture pixel, also called "texel", is displayed on the mesh's face.
+The process of creating this mapping is called UV-unwrapping.
+Intuitively, the mesh is cut open at some edges so that its 3D shape can be unfolded into a flat form.
+The image texture is applied to this flat representation.
+
+More technical, each vertex of the mesh is mapped to a 2D vertex in the space of the texture and with new connectivity data.
+The 2D texture space is also called UV-space, the two axes are labelled with U and V instead of X and Y.
+This distinguishes the UV-coordinates which are associated with a texture with points in the 3D room.
+UV-coordinates range from 0 to 1 with the point (0,0) at the left bottom of the image and (1,1) at the top right.
+This also means that UV-points are independent of the texture resolution and are scaled with the image.
+When UV-unwrapping an object, its faces are laid out on the texture.
+Good UV-unwrappings minimise the amount of stretching.
+Stretching occurs if the shape of a face is distorted in the UV-space.
+Especially curved surfaces like a sphere are difficult to UV-unwrapping without stretched textures.
+
+{% include image.html url="/assets/figures/modeling/UVCubeMap1.png" base=pathToRoot description="A UV map which projects a cube to a texture." %}
+{% include image.html url="/assets/figures/modeling/UVCubeMap2.png" base=pathToRoot description="Another UV map which also projects the cube to a texture. In the UV map, the faces do not have the same shape as in 3D. This leads to a stretched texture on the cube." %}
+
+To minimize the stretched textures, edges of the mesh can be marked as seams.
+This means that the faces which are not connected in the texture space.
+Subsequently, a vertex in the 3D space can be mapped to multiple vertices in the UV-space if the adjacent edges are seams.
+The problem of seams is that they create discontinuities in the texture on the faces.
+For instance, if a brick wall texture is applied to a cube, it can happen that the "lines" of brickwork do not match up at the seams.
+Hence, a 3D artist has to do manual corrections by moving the unwrapped face on the texture until the seams match.
+For this reason, seams are often placed in areas which are less visible to the virtual camera.
+
+{% include image.html url="/assets/figures/modeling/UVSeam1.png" base=pathToRoot description="Example showing texture discontinuities at a seam." %}
+{% include image.html url="/assets/figures/modeling/UVSeam2.png" base=pathToRoot description="The discontinuities caused by the seam can be fixed by manually aligning the adjacent faces in the UV layout or by placing seams on less visible edges." %}
+
+### Texture Painting
+
+### Texture Baking
 
 ## Computer-Aided Design (CAD)
 
