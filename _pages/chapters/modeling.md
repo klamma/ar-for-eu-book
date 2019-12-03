@@ -173,8 +173,8 @@ This can be done manually or by an algorithm.
 The new mesh is typically created using quads and it considers the shape of the object and how it might be animated.
 As a main idea, the quads form strips which should follow the object's main curves and which should align to any hard edges {% cite Simonds2013Blender %}.
 Since the manual creation of such a retopology mesh is tedious and time consuming, there are algorithms which automate this process {% cite PDZR18 %}.
-The result of the retopology is a mesh which looks almost like the original high-density mesh but is more lightweight and optimised.
-However, the retopology process may lose some details of the original mesh.
+The result of the retopology is a mesh which describes almost the same shape as the original high-density mesh but it is more lightweight and optimised.
+However, the retopology process may lose some details which were captured by the high vertex-density of the original mesh.
 To solve this, the difference between the two meshes can be "baked" into a displacement or normal texture.
 This way, small details can be captured in the texture and are shown by the shader.
 Details on this displacement and normal maps are described in the "Textures" section.
@@ -182,6 +182,15 @@ Details on this displacement and normal maps are described in the "Textures" sec
 {% include image.html url="/assets/figures/modeling/MeshTopologyExample.png" base=pathToRoot description="a: Mesh as a result of a sculpting or 3D scanning process.<br/>b: Cutout of (a) showing the geometry.<br/>c: Manually retopologised mesh using quads.<br/>d: Cutout of (c) showing the geometry. A selection of important face loops is highlighted in green." %}
 
 ### Subdivision Surface Modeling
+
+A technique which is used for creating smooth, organic surfaces is called Subdivision Surface Modeling {% cite DKTr98 %}.
+The modeler constructs a guide mesh.
+After that, an algorithm constructs a smooth version of the modeled shape.
+It achieves this by subdividing the faces of the guide mesh and by calculating the vertex positions of the resulting mesh with regard to the vertex positions of the guide mesh.
+There are different algorithms which differ concerning the position calculation rules.
+Once the algorithm has been applied, the resulting mesh can act as a new guide mesh for the next iteration of the algorithm.
+Thus, the geometry can be smoothed further by applying the subdivision surface algorithm recursively.
+However, this also yields a mesh with more vertices {% cite CaCl78 %}.
 
 ## Textures
 
@@ -270,20 +279,3 @@ The following table contains a list of tools which can be used for texture paint
 ### CAD Modeling Tools
 
 ## Volumetric Representation
-
-# 3D Programs
-
-Several alternatives of programs exist for creating 3D models and rendering them.
-All of the programs have an integrated 3D rendering engine and provide further features like animations.
-Blender, Maya and 3Ds Max also provide physics simulations.
-
-Blender {% cite Blender %} is a free open-source application.
-It is available for Windows, macOS and Linux.
-
-
-- Blender
-- Maya
-- 3Ds Max
-- SketchUp
-- ZBrush
-- Cinema 4D
