@@ -192,6 +192,8 @@ Once the algorithm has been applied, the resulting mesh can act as a new guide m
 Thus, the geometry can be smoothed further by applying the subdivision surface algorithm recursively.
 However, this also yields a mesh with more vertices {% cite CaCl78 %}.
 
+{% include image.html url="/assets/figures/modeling/Subsurf.png" base=pathToRoot description="Different iteration amounts of the subdivision surface algorithm as it is implemented in Blender" %}
+
 ## Textures
 
 Textures are images which are applied to the 3D object's faces, e.g. to give colour to the surface.
