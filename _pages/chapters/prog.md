@@ -163,3 +163,12 @@ public class DeductionsForWrongAnswer : IPointCalculator
 ```
 
 In general, the open-closed principle can be realized by using inheritance, abstract classes, interfaces and delegate methods.
+
+### L: Liskov Substitution Principle
+
+The Liskov substitution principle describes that if a class A has a property P then anay child class B of A must also have the property P {% cite Mart03 %}.
+An implication of this is that any class that references an object of type A can also work with instances of type B without knowing about the specific type.
+
+### I: Interface Segregation Principle
+
+### D: Dependency Inversion Principle
