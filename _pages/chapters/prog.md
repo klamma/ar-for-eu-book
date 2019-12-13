@@ -169,6 +169,44 @@ In general, the open-closed principle can be realized by using inheritance, abst
 The Liskov substitution principle describes that if a class A has a property P then anay child class B of A must also have the property P {% cite Mart03 %}.
 An implication of this is that any class that references an object of type A can also work with instances of type B without knowing about the specific type.
 
+The Liskov substitution principle can be used to verify that an inheritance between two classes is actually well modelled.
+When designing a programme architecture, developers usually try to find "is a"-relationships which are then modelled using inheritance.
+For instance, assume that we would like to model an application, which simulates the behaviour of cats.
+The application should support and distinguish different breeds of cats, e.g. the Persian cat.
+Since a Persian cat is a cat, one can model this with a superclass ```Cat``` and a child class ```PersianCat```.
+The superclass holds all properties and logic, which are common with cats, e.g. their age, height, fur or eye colour.
+In addition to this, the application also contains an object ```Brush``` with a function ```Groom```.
+We want to groom all implemented breeds of cats and so the function takes an object of type ```Cat``` as input and returns a cat with groomed fur.
+Once this implementation is finished, we add new breeds to the application, e.g. European shorthairs and Sphynx cats.
+With the European shorthairs, everything still works fine but with the Sphynx cats, there is an error.
+Sphynx cats are hairless cats which means that the ```Groom``` function does not make sense for these cats.
+However, the ```Groom``` function takes a generic ```Cat``` as input which means that Sphynx cats are allowed as input.
+The bad way to fix this is to create a case distinction in the ```Groom``` function:
+```
+public Cat Groom(Cat inputCat)
+{
+	if (inputCat instance of Sphynx)
+	{
+		// do not groom hairless cats
+		return inputCat;
+	}
+	else
+	{
+		// perform grooming procedure
+		...
+	}
+}
+```
+This solution violates the Liskov substitution principle because now the ```Groom``` function cannot just work with any cat type but needs to know which specific subtype the cat object has.
+The violation is caused by incorrect assumptions about cats, e.g. that all of them have fur.
+If further hairless cats like the Ukrainian Levkoy are added to the application, they also require separate case distinctions.
+Instead, a better solution is to refactor the inheritance hierarchy.
+In this case, a ```Cat``` superclass can be created with the child classes ```HairlessCat``` and ```CatWithHair```.
+The cat breeds are children of one of these two classes.
+This way, the ```Groom``` function can now expect a ```CatWithHair``` object as input.
+
 ### I: Interface Segregation Principle
+
+
 
 ### D: Dependency Inversion Principle
