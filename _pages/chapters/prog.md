@@ -207,6 +207,19 @@ This way, the ```Groom``` function can now expect a ```CatWithHair``` object as 
 
 ### I: Interface Segregation Principle
 
+The interface segregation principle states that interfaces should be granular.
+Hence, a class that implements the interface never has to include additional methods, which are defined in the interface but which are not used {% cite Mart03 %}.
+This means that large interfaces, which are used for different purposes of clients, should be split into smaller interfaces.
+These smaller interfaces should group the methods, which are relevant in a specific context.
 
+An example for a violation of the interface segregation principle is an ```IButton``` interface.
+Classes which implement this interface must contain all methods that make it an interactive button, e.g. ```OnFocusEnter()```, ```OnFocusExit()```, ```OnClick()```.
+The problem of this interface is that it combines the two concepts of reacting to user focus, i.e. pointing at the button with an input device, and the interaction with the button in the form of a click.
+If an interactive element should be created which should rotate on focus but has no other interactive features, the ```IButton``` interface is not suitable.
+It can be implemented by a class that models the behaviour of such an element but this means that the ```OnClick()``` method will be left empty.
+Instead, a better solution is to separate the different properties, which are described by the interface.
+There can be an interface ```IFocusable```.
+Elements that should react to user focus can implement this interface.
+Additionally, an interface ```IInputHandler``` can be defined for elements that should also react to input events.
 
 ### D: Dependency Inversion Principle
