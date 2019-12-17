@@ -6,8 +6,6 @@ categories: chapter
 visualizations:
 ---
 
-# Programming
-
 Programming techniques
 
 * JavaScript
@@ -223,3 +221,29 @@ Elements that should react to user focus can implement this interface.
 Additionally, an interface ```IInputHandler``` can be defined for elements that should also react to input events.
 
 ### D: Dependency Inversion Principle
+
+A common practise is to layer classes and modules in a way that higher-level classes access functionality from lower-level classes.
+An example for this can be seen in the following simplified architecture for I/O operations in a programme, which violates the dependency inversion principle.
+On the lowest level, there is an ```IOOperations``` class which takes byte data and writes them to a file.
+In this process, it handles the operations on the file system such as creating the file, locking it, writing data and unlocking it.
+One level higher, an ```Encoding``` class handles the conversion of the in-memory data to the byte save data.
+It takes some input text, converts it to byte data and adds the corresponding byte headers.
+To write the byte data to the disk, it calls the write function which is implemented in ```IOOperations``` one level lower.
+On the highest level, a ```Save``` module fetches the application's data which need to be saved.
+If it needs to save text, e.g. which has been entered by the user, it passes the text to the ```Encoding``` class which will turn it into bytes.
+In turn, the ```Encoding``` class will pass the byte data to the ```IOOperations``` class.
+
+This architecture violates the dependency inversion principle because it states that higher modules should not depend on lower modules {% cite Mart03 %}.
+In this case, the ```Save``` module depends on the ```Enconding``` class by calling its methods and ```Enconding``` depends on ```IOOperations```.
+If the architecture is changed, e.g. it is decided to re-name the write-function in the ```IOOperations``` class, this means that the ```Encoding``` class must also be altered.
+
+A solution is that the high-level class defines an interface.
+The high-level class only works with this abstract description.
+The low-level class now needs to implement this interface.
+Hence, the dependency is inverted.
+The low-level class now depends on the interface definitions, which are defined by the high-level class.
+In the example, the two interfaces ```IFileWriter``` and ```IEnconder``` are added.
+```IFileWriter``` is used by the ```Enconding``` class to write content to the disk.
+```IOOperations``` now needs to be an implementation of ```IFileWriter```.
+Similarly, the interface ```IEncoder``` is used by the ```Save``` module to encode the content.
+The specific implementation of the interface is provided by the ```Encoding``` class.

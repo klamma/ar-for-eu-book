@@ -21,8 +21,6 @@ visualizations:
 });
 </script>
 
-# AR SDKs
-
 ## Mixed Reality Toolkit
 
 > Please select your MixedRealityToolkit version:
