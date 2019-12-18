@@ -23,7 +23,7 @@ visualizations:
 
 ## Mixed Reality Toolkit
 
-> Please select your MixedRealityToolkit version:
+> Please select your Mixed Reality Toolkit version:
 
 > <select id="versionSelectorMRTK">
 >   <option value="mrtk2017">MRTK (Unity 2017.4)</option>
@@ -31,27 +31,79 @@ visualizations:
 > </select>
 
 > {: .mrtkVersionSpecific .mrtk2017}
-You have selected the MixedRealityToolkit 2017.
+You have selected the Mixed Reality Toolkit 2017.
 This version targets Unity 2017.4 and works with the HoloLens 1.
 
 > {: .mrtkVersionSpecific .mrtkvNext}
-You have selected the MixedRealityToolkit vNext.
+You have selected the Mixed Reality Toolkit vNext.
 This is the most current version.
 It targets the Unity versions 2018 and 2019.
 It works on the HoloLens 1 and 2, Immersive Windows Mixed Reality Headsets and OpenVR devices.
 
+### Introduction
+
+The Mixed Reality Toolkit is an open-source project by Microsoft.
+It acts as a starting point for creating applications which target the Microsoft HoloLens and Immersive Windows Mixed Reality Headsets.
+<span class="mrtkVersionSpecific mrtkvNext" markdown="1">The Mixed Reality Toolkit vNext also supports further platforms, e.g. smartphones and OpenVR headsets like the HTC Vive.</span>
+There is a [general version](https://github.com/microsoft/MixedRealityToolkit) of the Mixed Reality Toolkit and a [version for Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity).
+
+### Setup in Unity
+
+The team that develops the Mixed Reality Toolkit regularly publishes releases which can be found on the [GitHub releases page](https://github.com/microsoft/MixedRealityToolkit-Unity/releases).
+For Unity, the project is bundled into unitypackage-files.
+
+<span class="mrtkVersionSpecific mrtk2017" markdown="1">
+The Mixed Reality Toolkit 2017 release contains of the package "HoloToolkit-Unity-2017.4.3.0-Refresh".
+This package is sufficient to create mixed reality applications in Unity.
+Further packages are optional and should only be added when needed.
+
+There are two more packages in the release which contain "Examples" and "Preview" in their package name.
+The examples package contains a series of folders, scenes and prefabs which demonstrate the different features of the Mixed Reality Toolkit.
+Experimental features such as the sharing functionality are delivered in the preview-package.
+When importing the examples package, it might also be necessary to import the preview-package so that error about missing namespaces are fixed.
+</span>
+<span class="mrtkVersionSpecific mrtkvNext" markdown="1">
+The core functionality is contained in the foundation package ("Microsoft.MixedReality.Toolkit.Unity.Foundation.x.x.x.unitypackage").
+This package is sufficient to create mixed reality applications in Unity.
+Further packages are optional and should only be added when needed.
+A series of further packages is available.
+For instance, there is a package with the word "Examples" in its name.
+It contains a series of folders, scenes and prefabs which demonstrate the different features of the Mixed Reality Toolkit.
+</span>
+
+Once the packages have been saved on disk, they can be imported into Unity with the following steps.
+1. Open the Unity project and right-click on the area of the assets browser.
+2. Select "Import Package > Custom Package...".
+3. In the following file browser, navigate to the location to which the package was downloaded.
+Select the .unitypackage-file und click "Open".
+4. An import window will open which shows the elements which are bundled in the package.
+Select all of them and click on the "Import" button.
+
+### Updating an Existing Mixed Reality Toolkit Setup in a Unity Project
+
+Before updating to a new version, the release notes should be checked to see if any changes could break the project.
+Additionally, a backup of the Unity project should be created.
+Depending on the release notes of the new Mixed Reality Toolkit version, it might be necessary to delete the existing Mixed Reality Toolkit folders.
+In this case, delete the folders and import the new Mixed Reality Toolkit packages.
+If the release does not state such steps, it is sufficient to import the package.
+Unity will compare the new package with the unpacked folders and recognize updated files.
+The menu which controls the import of the packages will only select these changed files and files which are new
+The import process will only overwrite the selected elements.
+
 ### UI
+
+The Mixed Reality Toolkit contains pre-made UI elements which can be configured and customized.
 
 #### Creating Buttons
 
 <div class="mrtkVersionSpecific mrtk2017" markdown="1">
 
-The MixedRealityToolkit provides the means to turn any mesh object with a collider into a button.
+The Mixed Reality Toolkit provides the means to turn any mesh object with a collider into a button.
 There are different ways to create such buttons.
 One option is to implement the functionality directly in a script, using the interaction interfaces like `IFocusHandler` and `IInputClickHander`.
 This alternative is suitable for a complex button logic which depends on the user interaction.
 
-However, another option are the pre-made `CompoundButton` scripts in the MixedRealityToolkit.
+However, another option are the pre-made `CompoundButton` scripts in the Mixed Reality Toolkit.
 These compound scripts which all start with the prefix "CompoundButton" are structured in a modular way:
 Each possible feature, e.g. moving when pressing the button, displaying text or reacting to spoken commands, is realized in a separate script.
 Developers can add any combination of these scripts to a GameObject.
@@ -65,8 +117,8 @@ The list of search results shows the available ButtonCompound scripts.
 Any one of them can be added to the GameObject by clicking on their entry.
 
 **Compound Button**
-The `CompoundButton` is the core class which provides the necessary event handlers for reacting to input.
-Other scripts can subscribe to this events by getting a reference to the component and registering for the event.
+The `CompoundButton` is the core class which provides the necessary events for reacting to input.
+Other scripts can subscribe to these events by getting a reference to the component and registering for the event.
 
 The following events are available:
 - `StateChange`: Event raised if the state of the button is changed.
@@ -76,8 +128,8 @@ The following events are available:
 - `OnButtonHeld`: Event raised if a button is pressed and held down for a longer period of time.
 - `OnButtonCanceled`: Event raised if the interaction with the button was cancelled, e.g. if the button was pressed down and then the hand is not in the tracking area anymore.
 
-The Boolean property `RequireGaze` can be used in order to specify if the interaction with the button should end if it is not in focus anymore.
-With `RequireGaze` set to false, the interaction on a button which is pressed and held down will be canceled.
+Classes can also set the Boolean property `RequireGaze` in order to specify if the interaction with the button should end if it is not in focus anymore.
+With `RequireGaze` set to false, the interaction on a button which is pressed and held down will be canceled if the user does not look at the button anymore.
 
 Usually, the `CompoundButton` script is used in combination with one of the other CompoundButton components.
 When adding one of them to the button, the `CompoundButton` will automatically be added, too.
@@ -92,7 +144,7 @@ This action adds a `CompoundButtonMesh` component and the `CompoundButton`compon
 In the `CompoundButtonMesh`, a target transform and a renderer need to be set.
 Next to these properties, a dropdown menu can be found which says "(None)" at the moment.
 By clicking on it, a selection of the transform and renderers on the GameObject or on any of its children is presented and can be selected.
-This means taht the visibile mesh can be separate from the object which slides the button back and forth.
+This means that the visibile mesh can be separate from the object which slides the button back and forth.
 For instance, a cube can be used as a background and text can be placed on the surface of the cube to label the button.
 In order to move the cube and the text, they are organized as children of an empty GameObject.
 If this empty object is moved back and forth to simulate a button press, the cube and the text will move by the same amount, too.
@@ -134,7 +186,7 @@ In this section, the icon's material can be selected.
 The script will apply it to the referenced mesh renderer.
 At the bottom of the component, outside of the purple profile area, there is a dropdown menu where one can choose one of the icons by its name.
 
-The material's shader can be set to the standard shader of the MixedRealityToolkit which is not to be confused with Unity's default standard shader.
+The material's shader can be set to the standard shader of the Mixed Reality Toolkit which is not to be confused with Unity's default standard shader.
 In order to support icons with transparency, the material's rendering mode should be set to "TransparentCoutout".
 
 **Compound Button Sounds**
@@ -154,11 +206,11 @@ It will play the correct audio clip once and after that, the auxiliary GameObjec
 
 <div class="mrtkVersionSpecific mrtk2017" markdown="1">
 
-The MixedRealityToolkit also contains a bounding box which can be added to GameObjects.
+The Mixed Reality Toolkit also contains a bounding box which can be added to GameObjects.
 One first needs to select the GameObject.
 In the inspector, a *Bounding Box Rig* script can be added to the object.
 The added component requires a reference to a bounding box prefab.
-There is already a prefab included in the MixedRealityToolkit which can be used here.
+There is already a prefab included in the Mixed Reality Toolkit which can be used here.
 It can be found in the assets browser under "HoloToolkit > UX > Prefabs > BoundingBoxes" and is called "BoundingBoxBasic.prefab".
 With the GameObject selected, one can drag and drop the prefab into the field "Bounding Box Prefab" of the component.
 
