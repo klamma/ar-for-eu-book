@@ -2,6 +2,7 @@
 
 Environment for AR-FOR-EU Book
 
+The latest version should be available at [http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/](http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/)
 
 # HowTo Run Locally
 
