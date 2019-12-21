@@ -128,3 +128,19 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
  
  This is your first user story: "*As a developer, I want to settle the Definition of Done to achieve a better overall quality of our software.*"
  
+ #DevOps
+ 
+ We have a look at the emerging industry DevOps approach.
+ 
+ Main question is how to design and develop innovative software artifacts in a large-scale project?
+ Observation from industry: A culture of communication between developers and operations
+ 
+ | Developers         | Operations                   |
+ | ------------------ | ---------------------------- |
+ | New features       | Stability                    |
+ | Specific tools     | Managing systems             |
+ | Needs to work fast | Need to keep systems running |
+ 
+
+ Integration, automation, and monitoring scales.
+ Rapidly producing software artifacts in an agile way.
