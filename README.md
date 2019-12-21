@@ -62,25 +62,27 @@ The book offers a comprehensive and introductory perspective on the topic Augmen
 * Perceptual Foundations of AR
 * Sensors and Signal Processing
 * Computer Graphics
-* Programming
+* Programming (in progress)
 * Algorithms and Data Structures
 * Linear and Geometric Algebra
 
 ## Core Chapters
 
 ### Core Technologies
-* Display Technologies
-* Tracking Technologies
+* Display Technologies (in progress)
+* Tracking Technologies (in progress)
 * Interaction Technologies
 * Hardware Abstraction Layer
 
 ### AR Development Skills
 
 * AR SDKs
-* Unity / Unreal Engines
-* 3D Modeling & Rendering
+* Configuring Windows for Development with Hololens (in progress)
+* Unity / Unreal Engines (in progress)
+* 3D Modeling & Rendering (in progress)
 * Spatial Audio
 * Interactive Graphics and Sound Design
+* Spatial Mapping, Gaze, and Gestures (in progress)
 * Gesture and Speech Recognition and Interaction
 * Human Computer Interaction and User Centered Design
 
@@ -90,7 +92,7 @@ The book offers a comprehensive and introductory perspective on the topic Augmen
 * Image Processing
 * Object Detection and Recognition
 * 3D Sensing
-* Tracking
+* Tracking 
 * Depth Sensing
 
 ### Artificial Intelligence
@@ -101,7 +103,7 @@ The book offers a comprehensive and introductory perspective on the topic Augmen
 
 ## Advanced Topics
 
-* AR Agile Project Management
+* AR Agile Project Management (in progress)
 * AR Game Development, Gamification and Serious Games
 * AR Applications
 * AR for the Web
