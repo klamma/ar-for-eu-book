@@ -37,7 +37,7 @@ Also empirically proven, recent report say that of over 94% of companies today d
 - Small design steps by frequent interactions with customers
 - Delivers working software frequently
 - Motivated people produce better results
-- Projects with agile methods have higher proability ot end successfully 
+- Projects with agile methods have higher probability ot end successfully 
 
 ## Scrum 
 
@@ -147,7 +147,7 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
 - Goal: team members understand each other's code
 - Individual improvements
 
-### Source Conrol
+### Source Control
 
 - Central code hosting and revision control system 
   - What file changed?
@@ -157,6 +157,34 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
   - Why were they changed?
 - Keeps history graph, allow to revert modifications
 - Allows branching and merging
+  - Branching: Duplication of code so that modifications can happen in parallel
+  - Merging: When bringing together two branches
+  
+### Continuous Integration
+
+- How to deliver working software at any time?
+- Running automatic nightly builds
+- Automated test runs
+- Prevents **Integration Hell**
+
+- Continuous Integration Software
+  - Jenkins: Open source self-hosted
+  - Travis CI: Hosted solution
+  
+Integration Hell: Integration problems because of missing early testing.
+There is even more than that. If you ever wondered why you have Facebook app updates multiple times a day, here is the answer.
+
+### Continuous Delivery and Continuous Deployment
+
+Continuous Delivery is about removing stress at the *last mile*.
+
+- Continuous Integration is just the first steps
+- Continuous Delivery
+  - Software always production ready
+  - Releasing automatically at the end of development and test pipeline
+- Continuous Deployment
+  - Deploying released software automatically
+  - Post deploy tests to ensure integrity with service landscape
   
 ## Scrum in a Nutshell
  
@@ -180,7 +208,7 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
  
 We have a look at the emerging industry DevOps approach.
  
-Main question is how to design and develop innovative software artifacts in a large-scale project?
+Main question is how to design and develop innovative software artefacts in a large-scale project?
 Observation from industry: A culture of communication between developers and operations
  
 | Developers         | Operations                   |
@@ -192,3 +220,20 @@ Observation from industry: A culture of communication between developers and ope
 
 Integration, automation, and monitoring scales.
 Rapidly producing software artifacts in an agile way.
+
+### DevOpsUse
+
+- Scalable and sustainable methodology for integration
+  - Software development
+  - Operations
+  - End-user participation
+- Strong commitment to participatory design and evaluation activities carried out in communities of practice
+
+# Wrap-Up
+
+- You heard about the Agile Manifesto
+- You know that Scrum follows agile principles
+- You know what Taskboards are
+- You will look into a Code Style Guidelines
+- You already knew about source control systems
+- And finally you probably know what Continuous Integration is good for
