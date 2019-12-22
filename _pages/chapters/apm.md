@@ -81,7 +81,7 @@ Also empirically proven, recent report say that of over 94% of companies today d
   - Self-reflection within team
   - Moderated and organized by Scrum master
   
-# Sprint Artifacts
+## Sprint Artifacts
 
 - Product Backlog
   - List of *User Stories*
@@ -126,21 +126,69 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
   - Test Coverage
   - Documentation
  
- This is your first user story: "*As a developer, I want to settle the Definition of Done to achieve a better overall quality of our software.*"
+ This is your first user story: *"As a developer, I want to settle the Definition of Done to achieve a better overall quality of our software."*
  
- #DevOps
+ Text 
  
- We have a look at the emerging industry DevOps approach.
+### Code Style Guides
  
- Main question is how to design and develop innovative software artifacts in a large-scale project?
- Observation from industry: A culture of communication between developers and operations
+ - Coding standards define ...
+   - Naming conventions
+   - Indentation
+   - Documentation
+   - Encoding
+ - Helpful for *Collective Code Ownership* within small teams, indispensable for open source
+ - E.g. Google's Java style guide
+   - [https://google-styleguide.googlecode.com/svn/trunk/javaguide.html]
+   
+### Corde Review
+
+- Improve communication in teams
+- Goal: team members understand each other's code
+- Individual improvements
+
+### Source Conrol
+
+- Central code hosting and revision control system 
+  - What file changed?
+  - Who made changes?
+  - When were the changes done?
+  - How do the changed files differ?
+  - Why were they changed?
+- Keeps history graph, allow to revert modifications
+- Allows branching and merging
+  
+## Scrum in a Nutshell
  
- | Developers         | Operations                   |
- | ------------------ | ---------------------------- |
- | New features       | Stability                    |
- | Specific tools     | Managing systems             |
- | Needs to work fast | Need to keep systems running |
+### At the Beginning
+ 
+- Chose the *Scrum Master* of your team
+- Clarify the role of the *Product Owner* with your customer: **Make them aware of their role!**
+- Talk with your customer and write down *User Stories*
+ 
+### Per Sprint
+ 
+- Break up some of the user stories from the *Product Backlog* to realistic tasks for the *Sprint Backlog*
+- Define/Refine your *Definition of Done*
+- Develop!
+- Finish with the *Sprint Review*
+  - Talk with the customer
+  - Refine the *Product Backlog* for the next Sprint
+ 
+ 
+## DevOps
+ 
+We have a look at the emerging industry DevOps approach.
+ 
+Main question is how to design and develop innovative software artifacts in a large-scale project?
+Observation from industry: A culture of communication between developers and operations
+ 
+| Developers         | Operations                   |
+| ------------------ | ---------------------------- |
+| New features       | Stability                    |
+| Specific tools     | Managing systems             |
+| Needs to work fast | Need to keep systems running |
  
 
- Integration, automation, and monitoring scales.
- Rapidly producing software artifacts in an agile way.
+Integration, automation, and monitoring scales.
+Rapidly producing software artifacts in an agile way.
