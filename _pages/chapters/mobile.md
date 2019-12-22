@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Mobile AR
+title: Mobile AR  (started)
 permalink: /chapter/mobile/
 categories: chapter
 visualizations:
 ---
 
-# Mobile AR (started)
+# Mobile AR
 
 ## Techniques
 

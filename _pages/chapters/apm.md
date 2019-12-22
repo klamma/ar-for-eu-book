@@ -42,6 +42,8 @@ Also empirically proven, recent report say that of over 94% of companies today d
 
 ## Scrum 
 
+Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
+
 - Scrum accepts that the development process cannot be forseen
 - Scrum does not reduce complexity but structures it into chunks
 - No formal contract specification
@@ -238,3 +240,71 @@ Rapidly producing software artifacts in an agile way.
 - You will look into a Code Style Guidelines
 - You already knew about source control systems
 - And finally you probably know what Continuous Integration is good for
+
+# Templates and Examples for your own Mixed Reality Classes
+
+## Review Specifications 
+
+The following specs are for a 12-week course on Mixed Reality with teams of 4-6 people working on a prototype.
+
+### Review 1
+
+- **Prioritized Product Backlog**: Compile the initial version of your Product Backlog by ordering the user stories based on their priority (most important on top)
+- **Definition of Done**: List the initial quality criteria for your code and explain shortly
+- **Market Analysis**: Provide a concise analysis of the market for your product; use a suitable subset of elements that were presented during the tutorial days
+- **Technology Survey**: List and briefly describe existing technologies, tools and techniques that are relevant for your project
+- **Reflection**: Provide a short written reflection of your teamwork process and progress as a community of practice 
+- **Running Skeleton**: A basic development project that should be buildable and reflect your current development state 
+- **Presentation Slides**: Prepare a 10 min presentation for the first review and for a discussion afterwards. As a guideline, the presentation slides should contain key information contained in the above documents:
+  - Agenda/overview
+  - Project info and objectives
+  - Market analysis
+  - Technology survey
+  - Scrum: Your roles, compressed info on the last sprint, like Product/Sprint Backlog
+  - Reflection on team process
+  - Conclusion and next steps
+
+### Review 2
+
+- **Prioritized Project Backlog**: Compile a new version of your Project Backlog for the second release.
+- **Definition of Done**: Update the quality criteria for your code and explain.
+- **Running mock-up** of the interface and/or a set of tested (automatically) classes/functions with the core system functionality of your prototype.
+- **Documentation**: Build instructions to run your mock-up and/or tests. Also provide sufficient API/code documentation and an end-user guide.​
+- A reflection of your group process as community of practice.
+- Presentation Slides. Please prepare a 10 min presentation and prepare for discussion afterwards. As a guideline, the following bits of info are expected in your presentation:
+  - Agenda
+  - Project Backlog and Definition of Done
+  - Running mock-up and/or system functionality/tests
+  - Reflection
+  - Conclusion and further Steps
+-You may adjust the order and focus depending on your project, of course.
+
+### Review 3
+
+- **Run​​ning system demo** (e.g. link, video). Please note, that your system already needs to include all must-haves, so that you can use the remaining weeks to polish it and fix the last bugs.
+- Running automatic test cases (e.g. link).
+​- **Detailed documentation** of your system for further development. Also provide sufficient API/code documentation and an end-user guide.
+- Reflection of your agile development and group process as community of practice.
+- Presentation Slides. Please prepare for a 10 minutes presentation, including demo(!), plus discussion. As a guideline, the following bits of info are expected in your presentation:
+  - Agenda
+  - Product description
+  - System demo
+  - CI/CD
+  - Reflection (agile and group process)
+  - Conclusion and further steps
+- You may adjust the order and focus depending on your project, of course.
+
+### Review 4
+
+- **Running system demo** (e.g. link, video).
+- Running automatic test cases (e.g. link, screenshots).
+- **Detailed documentation** of your system for further development. Also provide comprehensive API/code documentation and an end-user guide.
+- A reflection of your group process as community of practice (1 page)
+- Presentation slides. Please prepare a 5 min. business oriented presentation of your project plus a 5 min demo of your 
+system and prepare for a short discussion afterwards. The following five slides are expected to be shown by you
+  - What is the PROBLEM solved by the product or service you plan to provide? 
+  - What is the quantifiable economic benefit of solving that problem?
+  - Who, specifically, is your customer? Do they have money? How do they pay you?
+  - What is your, your teams, or your company's distinct competitive advantage in providing this product or service to the customer?
+  - What is the PRODUCT or service you plan to provide?
+- Please act as a company or a start-up presenting to possible customers. Do not present a technology but a product. If you have questions concerning the documents and/or the presentation please contact us.
