@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3D Modeling & Rendering
+title: 3D Modeling & Rendering (in progress)
 permalink: /chapter/modeling/
 categories: chapter
 visualizations:

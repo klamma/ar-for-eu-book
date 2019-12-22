@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Display Technologies
+title: Display Technologies (started)
 permalink: /chapter/displaytech/
 categories: chapter
 visualizations:
@@ -8,8 +8,7 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-# Display Technologies
-
+# Display Technologies 
 Displays can be classified according to their technology used. In the sense of AR, display systems can be divided into immersive systems, where the user is placed in the middle of the scene, and non-immersive devices, which place the user outside the visual scene. Video displays can be 2D, such as a computer screen, or stereoscopic, such as 3D. {% cite Stankovi_c_2015 %}
 
 ## Imaging technologies

@@ -10,9 +10,10 @@ visualizations:
 
 
 ## Privacy
+
 What are typical privacy problems with AR?
-* Google Glass project
-* Surveillance
+- Google Glass project
+- Surveillance
 
 ## Ownership
 

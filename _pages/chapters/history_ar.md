@@ -1,6 +1,6 @@
 ---
 layout: page
-title: History of Augmented Reality
+title: History of Augmented Reality (started)
 permalink: /chapter/historyar/
 categories: chapter
 visualizations:

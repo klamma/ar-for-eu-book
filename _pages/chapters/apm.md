@@ -1,10 +1,11 @@
 ---
 layout: page
-title: AR Agile Project Management (started)
+title: AR Agile Project Management (in progress)
 permalink: /chapter/apm/
 categories: chapter
 visualizations:
 ---
+{% include autoRelativePath.html %}
 
 # AR Agile Project Management
 

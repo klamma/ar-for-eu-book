@@ -6,7 +6,7 @@ categories: chapter
 visualizations:
 ---
 
-# Mobile AR
+# Mobile AR (started)
 
 ## Techniques
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Spatial Mapping, Gaze, and Gestures
+title: Spatial Mapping, Gaze, and Gestures (complete)
 permalink: /chapter/spatialMapping/
 categories: chapter
 visualizations:

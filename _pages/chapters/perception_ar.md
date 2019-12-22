@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Perceptual Foundations of Augmented Reality
+title: Perceptual Foundations of Augmented Reality  (started)
 permalink: /chapter/perceptionar/
 categories: chapter
 visualizations:

@@ -10,9 +10,9 @@ visualizations:
 
 ## Enabling Technologies
 
-* WebRTC
-* WebAssembly
-* Web Workers
-* WebGL
+- WebRTC
+- WebAssembly
+- Web Workers
+- WebGL
 
 [//]: # (QRD*19)
