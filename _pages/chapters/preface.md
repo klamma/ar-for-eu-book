@@ -9,7 +9,7 @@ visualizations:
 # Preface of the book
 
 The AR-FOR-EU book is the compiled documentation of several courses the AR-FOR-EU consortium put together and gave at
-several occasions. The purpose of the book is to give course organizers the necessary materials to compile their own courses
+several occasions. The purpose of the book is to give course organizers the necessary materials to compile and conduct their own courses
 for mixed reality education at higher education institutions aka universities.
 
 We like to thank the many contributors of this open educational book about augmented reality.

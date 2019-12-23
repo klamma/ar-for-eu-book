@@ -19,7 +19,6 @@ The waterfall model does not cater for possibility of changing requirements.
 The waterfall model was modified after a number of issues identified in practice, but in the end, the agile approach became the dominant one.
 Kent Beck wrote in the agile manifesto
 
-Go to [Engines](/ar-for-eu-book/chapter/engines/)
 
  **Individuals and interactions** over processes and tools
 
@@ -207,8 +206,64 @@ Continuous Delivery is about removing stress at the *last mile*.
   - Talk with the customer
   - Refine the *Product Backlog* for the next Sprint
  
- 
-## DevOps
+# Market Analysis
+
+**Market analysis** is the process of analyzing data to help you understand which products and services are in demand, 
+and  how to be competitive.
+
+**Market segmentation** is the strategy of dividing broad market into subsets of consumers who have common needs 
+and characteristics.
+Types of market segmentation are:
+- Behavioural 
+  - Knowledge of the product 
+  - Attitude
+  - Benefits
+- Psychographic
+  -Studying : activities, interests and opinions (luxury car)
+- Demographic
+  - Age, gender, occupation, education level, etc.
+- Geographic
+  - Country, cities, postal codes (swimming suits)
+- Occasional
+  -Independent of the customer (Coca Cola campaign – being thirsty)
+- Cultural
+
+How to best segment a market?
+
+- Choose a segment that is accessible to you
+  - University, friends, colleagues
+  - Short selling cycle
+  - In B2B – contact direct decision makers 
+  - Segments with less competitors
+
+Understanding a user helps you to decide what product features to build next.
+Talk to potential users and find out about their needs.
+A persona is a representation of a user, typically based off user research and incorporating user goals, needs, and interests. 
+See more on [http://www.uxbooth.com/articles/creating-personas/](http://www.uxbooth.com/articles/creating-personas/)
+
+Analyse your competitors. Ask your (potential) users
+- Do they have any concerns about the idea?
+- Why they use your services?
+- Key points to focus on:
+  - Quality
+  - Price
+  - Advantages & disadvantages 
+
+Analyse your competitive advantages and disadvantages.
+Five P‘s of marketing
+
+| Product | Price | Promotion | Place | People |
+| :-----: | :---: | :-------: | :---: | :----: |
+| Do you have features others do not have | Same value but lower price | Unique channels | Unique place to sell the product | Strength of the team |
+
+
+Without customers, your business does not exist!
+- Who are the users?
+- How much they will pay?
+- Are there any competitors?
+- Why your service is better?
+
+# DevOps
  
 We have a look at the emerging industry DevOps approach.
  
@@ -225,7 +280,18 @@ Observation from industry: A culture of communication between developers and ope
 Integration, automation, and monitoring scales.
 Rapidly producing software artifacts in an agile way.
 
-### DevOpsUse
+## Requirements Engineering
+
+What is a requirement? 
+
+What is requirements engineering?
+
+The [Requirements Bazaar](https://requirements-bazaar.org/) is a Web-based open continuous innovation platform.
+It is easy to use for end users. 
+Social features like *likes* and *comments* enable the communication between end users and developers.
+Open APIs to embed it into apps. 
+
+## DevOpsUse
 
 - Scalable and sustainable methodology for integration
   - Software development
@@ -247,6 +313,11 @@ Rapidly producing software artifacts in an agile way.
 ## Review Specifications 
 
 The following specs are for a 12-week course on Mixed Reality with teams of 4-6 people working on a prototype.
+Four reviews are planned for the course, so that every three weeks there can be a review. 
+The first review is for exercising the agile software development process, for technology and market research as well as for first DevOps activities.
+The second review should report on the first one or two sprints of the team and how they have started the development process.
+The third review should cover more DevOps activities like testing and documenting the prototype.
+The last review is planned as business pitch with a strong focus on selling a product.
 
 ### Review 1
 
@@ -282,11 +353,14 @@ The following specs are for a 12-week course on Mixed Reality with teams of 4-6 
 
 ### Review 3
 
-- **Run​​ning system demo** (e.g. link, video). Please note, that your system already needs to include all must-haves, so that you can use the remaining weeks to polish it and fix the last bugs.
+- **Run​​ning system demo** (e.g. link, video). Please note, that your system already needs to include all must-haves, 
+so that you can use the remaining weeks to polish it and fix the last bugs.
 - Running automatic test cases (e.g. link).
-​- **Detailed documentation** of your system for further development. Also provide sufficient API/code documentation and an end-user guide.
+- **Detailed documentation** of your system for further development. 
+Also provide sufficient API/code documentation and an end-user guide.
 - Reflection of your agile development and group process as community of practice.
-- Presentation Slides. Please prepare for a 10 minutes presentation, including demo(!), plus discussion. As a guideline, the following bits of info are expected in your presentation:
+- Presentation Slides. Please prepare for a 10 minutes presentation, including demo(!), 
+plus discussion. As a guideline, the following bits of info are expected in your presentation:
   - Agenda
   - Product description
   - System demo
