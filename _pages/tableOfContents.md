@@ -8,10 +8,10 @@ permalink: /toc/
 
 ## Foundational Chapters
 
-- [History of AR](/ar-for-eu-book/chapter/history_ar/)
-- [Future of AR](/ar-for-eu-book/chapter/future/)
-- [Perceptual Foundations of AR](/ar-for-eu-book/chapter/perception/)
-- [Sensors and Signal Processing](/ar-for-eu-book/chapter/prog/)
+- [History of AR](/ar-for-eu-book/chapter/historyar/)
+- [Future of AR](/ar-for-eu-book/chapter/futurear/)
+- [Perceptual Foundations of AR](/ar-for-eu-book/chapter/perceptionar/)
+- [Sensors and Signal Processing](/ar-for-eu-book/chapter/sensors/)
 - [Computer Graphics](/ar-for-eu-book/chapter/cg/)
 - [Programming (in progress)](/ar-for-eu-book/chapter/prog/)
 - [Algorithms and Data Structures](/ar-for-eu-book/chapter/ads/)
@@ -20,7 +20,7 @@ permalink: /toc/
 ## Core Chapters
 
 ### Core Technologies
-- [Display Technologies (in progress)](/ar-for-eu-book/chapter/display/)
+- [Display Technologies (in progress)](/ar-for-eu-book/chapter/displaytech/)
 - [Tracking Technologies (in progress)](/ar-for-eu-book/chapter/tracking/)
 - [Interaction Technologies](/ar-for-eu-book/chapter/interaction/)
 - [Hardware Abstraction Layer](/ar-for-eu-book/chapter/hal/)
@@ -31,9 +31,9 @@ permalink: /toc/
 - [Configuring Windows for Development with Hololens (in progress)](/ar-for-eu-book/chapter/holotoolkit/)
 - [Unity / Unreal Engines (in progress)](/ar-for-eu-book/chapter/engines/)
 - [3D Modeling & Rendering (in progress)](/ar-for-eu-book/chapter/modeling/)
-- [Spatial Audio](/ar-for-eu-book/chapter/audio/)
+- [Spatial Audio](/ar-for-eu-book/chapter/spatialaudio/)
 - [Interactive Graphics and Sound Design](/ar-for-eu-book/chapter/intdesign/)
-- [Spatial Mapping, Gaze, and Gestures (in progress)](/ar-for-eu-book/chapter/mapgazegesture/)
+- [Spatial Mapping, Gaze, and Gestures (in progress)](/ar-for-eu-book/chapter/spatialMapping/)
 - [Gesture and Speech Recognition and Interaction](/ar-for-eu-book/chapter/gesturespeech/)
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/)
 
