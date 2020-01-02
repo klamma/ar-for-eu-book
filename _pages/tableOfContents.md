@@ -6,7 +6,7 @@ permalink: /toc/
 
 {% include autoRelativePath.html %}
 
-- [Preface](/ar-for-eu-book/chapter/preface/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Preface](/ar-for-eu-book/chapter/preface/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ## Foundational Chapters
 
@@ -51,7 +51,7 @@ permalink: /toc/
 ### Artificial Intelligence
 
 - [Data Mining](/ar-for-eu-book/chapter/dm/) {% include badge.html base=pathToRoot badgeName="todo" %}
-- [Machine Learning, Deep Learning](/ar-for-eu-book/chapter/ml/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Machine Learning, Deep Learning](/ar-for-eu-book/chapter/ml/) {% include badge.html base=pathToRoot badgeName="outline" %}
 - [Sensor Fusion](/ar-for-eu-book/chapter/sf/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
 ## Advanced Topics
