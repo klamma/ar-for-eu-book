@@ -9,7 +9,15 @@ visualizations:
 
 # AR Agile Project Management
 
-This chapter gives an overview on agile project management, in particular the agile management of software development for mixed reality environments. 
+This chapter gives an overview on agile project management, in particular the agile management of software development for mixed reality environments.
+All needed concepts are introduced. To support agile project management in mixed reality, we have set up an experimental mixed
+reality environment called [VIAProMa](https://github.com/rwth-acis/VIAProMa) (Virtual Immersive Analytics for Project Management).
+
+  ![VIAProMa]({{pathToRoot}}/assets/figures/apm/ViaProMa_logo.png)
+
+VIAProMa is a Collaborative Mixed Reality Visualization Framework for Immersive Analytics. In the course of the section, 
+we will use examples and screenshots from the VIAProMa environment.
+
 In the traditional waterfall model of software engineering, the different phases of the software engineering process are followed in a sequential manner, 
 usually without returning to a phase already finished. The output of the early phases are usually documents while software is only produced in later phases.
 With the model design errors can be captured before the implementation phase. 
@@ -169,7 +177,6 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
 - Running automatic nightly builds
 - Automated test runs
 - Prevents **Integration Hell**
-
 - Continuous Integration Software
   - Jenkins: Open source self-hosted
   - Travis CI: Hosted solution
