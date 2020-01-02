@@ -70,7 +70,7 @@ permalink: /toc/
 
 - [Maker Communities](/ar-for-eu-book/chapter/maker/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Workflows and Company Practices](/ar-for-eu-book/chapter/workflows/) {% include badge.html base=pathToRoot badgeName="outline" %}
-- [Privacy, Ownership and Intellectual Property](/ar-for-eu-book/chapter/privacy/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Privacy, Ownership and Intellectual Property](/ar-for-eu-book/chapter/privacy/) {% include badge.html base=pathToRoot badgeName="outline" %}
 - [Applications, Employments and Careers in AR](/ar-for-eu-book/chapter/careers/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
 
