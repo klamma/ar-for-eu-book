@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1280 204" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.06809,0,0,1,-68.7966,-243.978)">
+        <path d="M1262.81,294.98C1262.81,266.831 1241.41,243.978 1215.06,243.978L112.161,243.978C85.807,243.978 64.411,266.831 64.411,294.98L64.411,396.985C64.411,425.134 85.807,447.987 112.161,447.987L1215.06,447.987C1241.41,447.987 1262.81,425.134 1262.81,396.985L1262.81,294.98Z" style="fill:rgb(28,179,28);"/>
+        <clipPath id="_clip1">
+            <path d="M1262.81,294.98C1262.81,266.831 1241.41,243.978 1215.06,243.978L112.161,243.978C85.807,243.978 64.411,266.831 64.411,294.98L64.411,396.985C64.411,425.134 85.807,447.987 112.161,447.987L1215.06,447.987C1241.41,447.987 1262.81,425.134 1262.81,396.985L1262.81,294.98Z"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(-0.800585,0,0,1,1079.42,243.978)">
+                <g transform="matrix(-1.16945,0,0,1,1267.84,-0)">
+                    <use xlink:href="#_Image2" x="541.379" y="0" width="103.133px" height="204px" transform="matrix(0.991665,0,0,1,0,0)"/>
+                </g>
+            </g>
+            <g transform="matrix(0.936247,0,0,1,567.051,0)">
+                <text x="138.254px" y="387.17px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:115px;fill:white;">complete</text>
+            </g>
+            <g transform="matrix(0.785375,0,0,1,64.4106,0)">
+                <rect x="0" y="243.978" width="640" height="204.01" style="fill:rgb(115,115,115);"/>
+                <g transform="matrix(1.1921,0,0,1,-5.45987e-15,0)">
+                    <text x="108.355px" y="388.961px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:120px;fill:rgb(235,235,235);">status</text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image2" width="104px" height="204px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAADMCAYAAACfkeZZAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFZ0lEQVR4nO2cyXITMRgGG995Ad6/eDOWECBhSUKSkcSBMRhnbM+i5Zf09cn2SVVdn8see/rVm7dvwu717hXCJLvh3VD6DOIMO//T47/7UPogYpodgFZklx2Av/P4b1qRRXb7B1qRTf4K8vced+u0ImPsDp+MK5IkQ/wnKDwE3I0rdRYxwe74heG9VmSJF4LCQ8B91Yqs8EIQjCsKWpEFJgWFX1qRFSYFgVZkhZOCwmPAfdGKSnNSEGhFFjgrKDwF3GetqCRnBQEMH7SiklwUFJ4C7lorKsVFQTCuyGtFJZglKDwHhmv9HFGCWYIA3AenFRVgtqAwBIZPWlFuZgsCcB8dOK0oJ4sEaUX5WSQI/qwouKAVZWKxoODCn7c6kYXFggCGTwNh0IpysEoQDq0oE+sEoRXlYrUg/PjlVSRlvSBguB4Iz1pRSjYJwo8XUkUytgkC3LUjPGlFqdgsiKAVpWS7IMB91opSEUUQ4e9fhkVk4ggC3BdHeNSKYhNNkFaUhniCAPfVEX5pRTGJKkgrik9cQYwretCKYhFdEGhFMUkiyN1oRbFIIgh0W38skglytw5/rzjGVpIJAq0oBkkF+W8ef6cVbSGpINCKtpJckP/u8T+1orUkFwRa0RayCPI/PP6HVrSGLIJAK1pLNkFKb64jmyDQitaQVZDSm8vJKgi0oqVkF+TvPf5WK5pLdkEAz++fQdHAWRQRFO6V3pxLEUGg9OZciglSenMexQSBcmdzKCpI6c3LFBUEWtEligtSevM8xQWBVnQOE4KU3jyNCUGg9OYpzAhSenMaM4JA6c0pTAlSevMlpgSB0pvHmBOkaOD/mBMESm8eYlKQVvQPk4JAK9pjVlBwgeFKKzIrCGC4UjTQtCAcuKu+ry7YFoRWZF4Qvu+ArX1BjAHbTtObVQjCw/Cxz090dQii3/RmNYJ6XVE9guhzRVUJ6jFgW5cgxoBtR+nN6gT1tqL6BDEGbDtJb1YpqKcV1SmIflZUrSDoI71ZtaAeArZVC4L2V1S9IHfTdnqzekHQdhyjCUEtpzebEATtrqgZQa2mN5sRBG2uqClBLaY3mxIE7a2oOUGtpTebEwRtrahJQS2lN5sUBO2sqFlBraQ3mxUEbaQ3mxbUQnqzaUFQf3qzeUG1pzebFwR15866EFRzerMLQVDviroRVGt6sxtBUOeKuhJUY3qzK0FQX3qzO0G1pTe7EwR1pTe7FFRTerNLQVBPerNbQbVEA7sVBHVEA7sWVMOKuhYE9lfUvSDr6c3uBYHtaKAEgen0pgSNWF2RBO0xmt6UoAMspjcl6BCD0UAJOsJaNFCCjjG2IgmawNKKJGgKQ7kzCTqBlfSmBJ3CyIok6AwWooESdA4DK5KgC5RekQTNoGQ0UIJmUDK9KUEzKbUiCZpJqfSmBC2gRBxDghZQIr0pQQvJvSIJWkju9KYErSDniiRoBTnTmxK0klwrkqCV5EpvStAGcqxIgjaQI70pQRtJfY1Ogjbi79KmNyUoAinTmxIUgZTpTQmKRKr0pgRFIlV6U4IikiJ3JkERSZHelKDIxF6RBEUmdnpTghIQMxooQQkIj/HSmxKUiFgrkqBExEpvSlBCYqQ3JSghMdKbEpSYrelNCUrM1migBGVgSzRQgjKwZUUSlIm1K5KgTKxNb0pQRtZEAyUoJyvSmxKUmaUrkqDcLExvSlABlqQ3JagEC6KBElSIudFACSrFzBVJUEHmrEiCSjIjdyZBhbmU3pSg0lxYkQQZ4Fw0UIIscGZFEmSEUyuSIENM3ZAsQYaYSm9KkDGOVyRBxjhOb0qQQQ4TMxJkkMP0pgQZZb8iCTLKPr0pQYYZ3g38BndPItrg8mF8AAAAAElFTkSuQmCC"/>
+    </defs>
+</svg>
