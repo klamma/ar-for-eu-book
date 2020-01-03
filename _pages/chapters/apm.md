@@ -74,7 +74,7 @@ Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
   - Responsible for successful Scrum
   - Moderation of meetings
   - Makes sure developers are fine
-- In agile development, (good or bad) results are attributed to the team, not indiviudals.
+- In agile development, (good or bad) results are attributed to the team, not individuals.
 - Collective Code Ownership
   - Everybody is responsible for all code
   - Everyone may change all parts of the code  
@@ -114,7 +114,17 @@ Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
 
 A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
 
-## Taskboards
+## Task Boards
+
+Task boards are common in agile software development to organize work in sprints. 
+They give an easy overview on the progress reached in the sprint. 
+Task boards can be physical boards in an office,
+when all developers are in the same place or a virtual board, which is typical for distributed development like in open source software
+development. 
+Some developer team do both physical and virtual boards, e.g. physical ones for local sprints and virtual ones for 
+the global process. In any case, task boards consists out of columns where tasks are usually shift from left to right
+to visualize the grade of completion from ToDo to Done. 
+Typical columns for a sprint are: 
 
 - Product Backlog
   The User Stories
@@ -127,6 +137,9 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
 - Done
   All finished and reviewed tasks
   
+In the figure you can see a visualization of a task board in our VIAProMa environment. It has three columns: *Open*, *In Progress*, 
+and *Closed*. The three columns have different colours, which can be chosen from the menu. 
+  ![VIAProMa Board]({{pathToRoot}}/assets/figures/apm/viaproma_kanban.png)
 ## Definition of Done
 
 - All the quality criteria
