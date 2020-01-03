@@ -1,8 +1,8 @@
 # ar-for-eu-book
 
-Welcom to the editing environment for the AR-FOR-EU Book.
+Welcome to the editing environment for the AR-FOR-EU Book.
 
-The latest version should be available at [http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/](http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/)
+The latest version should be available at [http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/](http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/).
 
 # HowTo Run Locally
 
