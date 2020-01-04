@@ -8,12 +8,18 @@ visualizations:
 
 # AR for the Web (in progress)
 
+Augmented Reality for the Web demands compability with the major browsers. To reach this goal, developers needs access to the native device drivers and APIs of the different vendors in JavaScript.
+
 ## Enabling Technologies
 
 - WebRTC
 - WebAssembly
 - Web Workers
-- WebGL
+- [WebGL 2.0](https://www.khronos.org/registry/webgl/specs/latest/2.0/)
+
+# WebVR
+
+[WebVR](https://immersive-web.github.io/webvr/) provided a developer API to different virtual reality devices on the Web and is now superseded by WebXR.
 
 # WebXR
 
