@@ -25,7 +25,9 @@ The technical documentation is part of the plan and because of the structured ap
 Customers however find it difficult to state their requirements in an abstract way. 
 The waterfall model does not cater for possibility of changing requirements.
 The waterfall model was modified after a number of issues identified in practice, but in the end, the agile approach became the dominant one.
-Kent Beck wrote in the agile manifesto
+Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
+
+## Agile Development Features
 
 
  **Individuals and interactions** over processes and tools
@@ -40,13 +42,16 @@ Meanwhile to [agile manifesto](https://agilemanifesto.org/) was signed by thousa
 
 ## Agile Development Features
 
-Also empirically proven, recent report say that of over 94% of companies today develop software with agile methods.
+Agile development emphasises incremental updates. 
+Therefore, the process is divided into small design steps with frequent customer interactions.
+The focus is on delivering working software frequently.
+Because of the small, incremental process steps and the agilily of the process, developers are better motivated and in consequence produce better software. Projects with agile methods have a higher probability of success. Also empirically proven, recent report say that of over 94% of companies today develop software with agile methods.
 
 - Emphasizes incremental updates
 - Small design steps by frequent interactions with customers
 - Delivers working software frequently
 - Motivated people produce better results
-- Projects with agile methods have higher probability ot end successfully 
+- Projects with agile methods have higher probability to end successfully 
 
 ## Scrum 
 
