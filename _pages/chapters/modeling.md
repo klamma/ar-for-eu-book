@@ -278,121 +278,131 @@ The goal of this exercise is to create a dice.
 To achieve this, you will texture paint the sides of a cube so that they show the according number of eyes.
 
 1. Blender's startup scene already contains a cube which will act as the mesh for the dice.
-If you already deleted the cube or changed the startup file, you can create a new cube by pressing `Shift + A` and selecting *Mesh > Cube*.
-In Blender 2.8, the primitive mesh types are already UV-unwrapped.
-Hence, we do not need to worry about UV-unwrapping.
+  If you already deleted the cube or changed the startup file, you can create a new cube by pressing `Shift + A` and selecting *Mesh > Cube*.
+  In Blender 2.8, the primitive mesh types are already UV-unwrapped.
+  Hence, we do not need to worry about UV-unwrapping.
 
 2. At the top of the window, a series of tabs can be found.
-They act as pre-defined workspace configurations for common tasks in the 3D modeling programme.
-Select the tab which says "*Texture Paint*".
-The tab shows a two-split view.
-On the left side, an image editor can be found.
-On the right side, the 3D view is situated.
-Switching the tab did not only alter the alignment of the panels in Blender.
-It also switched from *Object Mode*, where users can examine 3D models without editing them, to *Paint Mode*.
-In paint mode, we can draw on the 3D model.
-However, at the moment this is not possible.
-You might have noticed that the cube turned purple.
-A solid purple colour is an indication for a shader error.
-In this case, we are missing a texture.
-Since we can only paint on textures, we need to add one to the cube.
+  They act as pre-defined workspace configurations for common tasks in the 3D modeling programme.
+  Select the tab which says "*Texture Paint*".
+  In the figure it is highlighted by `a`.
+  The workspace changes to a two-split view.
+  On the left side, an image editor can be found.
+  On the right side, the 3D view is situated.
+  Switching the tab did not only alter the alignment of the panels in Blender.
+  It also switched from *Object Mode*, where users can examine 3D models without editing them, to *Paint Mode*.
+  This can be seen in highlight `b` of the figure.
+  In paint mode, we can draw on the 3D model.
+  However, at the moment this is not possible.
+  You might have noticed that the cube turned purple.
+  A solid purple colour is an indication for a shader error.
+  In this case, we are missing a texture.
+  Since we can only paint on textures, we need to add one to the cube.
+  ![Workspace Configuration]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/1Workspace.png)
 
 3. We will now add a texture to the cube.
   - The controls for this operation are situated on the right in the inspector.
     Make sure that the sub-tab with the screwdriver and wrench icon is selected.
+	It is highlighted as item `a` in the following figure.
     This panel shows options for the current tool and workspace settings.
     In this case, it provides options for texture painting since this mode is active.
     In the section texture slots, click on the small plus next to no textures.
+	The button is labelled as `b` in the figure.
   - This will open a menu where you can decide which texture slot should be populated with a texture.
     Each texture slot has a different purpose.
     More information on different texture types can be found in the chapter [Computer Graphics]({{pathToRoot}}/chapter/cg).
     For now, we want to create a texture that determines the visible surface colour of the object.
     Hence, select the option *Base Color*.
+	It is marked with `c` in the figure.
+  ![Add Texture]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/2AddTexture.png)
 
 4. Another menu will open up where you can specify a name, width, height and colour.
-According to these properties the texture will be created.
-For the name, it is a good idea to assign a meaningful name and also indicate that this is a texture for the colour.
-You can for instance name the texture *dice_colour*.
-Textures should usually be quadratic and have a width and height which is a power of two, e.g. 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 or 2048 pixels.
-The bigger the texture, the sharper the texture will look.
-However, larger textures also use more memory.
-1024 pixels are a good standard value.
-The texture will be initialized with the given colour.
-You can leave it at the default 80% white.
-One can also state whether or not the texture should have an alpha cannel.
-In this example, we do not need it since the dice does not have transparent parts.
-The *Generated Type* dropdown box should be set to *Blank*.
-This will create a texture with a uniform colour.
-The other options of this dropdown-menu create pre-defined textures for testing purposes which show different kinds of grids.
-Leave the *32-bit Float* checkbox deselected.
-If it is checked, the texture has a higher bit depth and therefore higher accuracy for the values.
-But this is not needed here.
-Finally, hit *OK*.
+  According to these properties the texture will be created.
+  For the name, it is a good idea to assign a meaningful name and also indicate that this is a texture for the colour.
+  You can for instance name the texture *dice_colour*.
+  Textures should usually be quadratic and have a width and height which is a power of two, e.g. 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 or 2048 pixels.
+  The bigger the texture, the sharper the texture will look.
+  However, larger textures also use more memory.
+  1024 pixels are a good standard value.
+  The texture will be initialized with the given colour.
+  You can leave it at the default 80% white.
+  One can also state whether or not the texture should have an alpha cannel.
+  In this example, we do not need it since the dice does not have transparent parts.
+  The *Generated Type* dropdown box should be set to *Blank*.
+  This will create a texture with a uniform colour.
+  The other options of this dropdown-menu create pre-defined textures for testing purposes which show different kinds of grids.
+  Leave the *32-bit Float* checkbox deselected.
+  If it is checked, the texture has a higher bit depth and therefore higher accuracy for the values.
+  But this is not needed here.
+  Finally, hit *OK*.
+  ![Texture Menu]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/3TextureMenu.png)
 
-5. The cube should now have the white colour which was set in the texture generation menu.
-If you hover your mouse over the 3D view, a white circle surrounds the mouse cursor.
-This circle indicates the size of the brush.
-If you click and drag on the surface of the cube, you can draw white strokes.
-Create a one or two test strokes to get a feeling for the mechanic.
-Note that the brush stroke is projected from the current viewing position.
-Therefore, painting a surface at a very steep viewing angle will distort the stroke.
+5. The cube should now have the white/gray colour which was set in the texture generation menu.
+  If you hover your mouse over the 3D view, a white circle surrounds the mouse cursor.
+  This circle indicates the size of the brush.
+  If you click and drag on the surface of the cube, you can draw white strokes.
+  Create a one or two test strokes to get a feeling for the mechanic.
+  ![Draw]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/4Draw.png)
+  Note that the brush stroke is projected from the current viewing position.
+  Therefore, painting a surface at a very steep viewing angle will distort the stroke.
+  ![Draw Perspective]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/4bDrawPerspective.png)
 
 6. Undo any test strokes you just did with `Ctrl + Z`.
-We would like to add black eyes to the dice.
-Thus, we need to change the colour of the brush.
-This setting can be altered in the inspector on the right side.
-There is a colour wheel in the brush section.
-Hue and saturation can be defined in the wheel itself.
-The value of the colour can be set with the slider next to the colour wheel.
-Pull the slider down to the black end of the slider.
-You can now paint black brush strokes.
+  We would like to add black eyes to the dice.
+  Thus, we need to change the colour of the brush.
+  This setting can be altered in the inspector on the right side.
+  There is a colour wheel in the brush section.
+  Hue and saturation can be defined in the wheel itself.
+  The value of the colour can be set with the slider next to the colour wheel.
+  Pull the slider down to the black end of the slider.
+  You can now paint black brush strokes.
 
 7. Align your camera with the front of the dice.
-You can do this by hovering over the 3D view with the mouse and pressing `NumPad 1`.
-The brush circle gives a preview of the position and size of an dice eye.
-You can change the brush size by shortly pressing `F` and moving the mouse.
-To confirm the new brush size, left click.
+  You can do this by hovering over the 3D view with the mouse and pressing `NumPad 1`.
+  The brush circle gives a preview of the position and size of an dice eye.
+  You can change the brush size by shortly pressing `F` and moving the mouse.
+  To confirm the new brush size, left click.
 
 8. Draw one test eye by positioning the cursor over the cube's surface and left click once.
-This creates a filled black circle.
-However, we now see that the drawn circle does not yet look like the eye of a dice.
-It has a smooth falloff which means that the corners of the circle are blurred and fuzzy.
-To change this, expand the *Falloff* section in the inspector.
-It contains a graph with a smooth curve.
-The curve defines the drawing intensity of the brush stroke at different positions on the brush.
-The left side of the graph defines the strength near the middle of the brush's circle.
-On the right side of the graph, the strength at the rim of the brush circle is controlled.
-Underneath the graph, there is a series of preset buttons showing some curve shapes.
-You can experiment with some of them and see how the drawing pattern changes accordingly.
-It is also possible to manipulate the curve in the graph directly by its handling points.
-Since we want a circle with a well-defined rim, we can either take preset with the constant value (the last one on the right) or the circular shape (second one on the left).
-The constant value gives a sharper rim but it also shows stepping artifacts since no blending is performed.
-The circular shape produces a relatively sharp rim but also blends the pixels at the borders to avoid stepping artifacts.
+  This creates a filled black circle.
+  However, we now see that the drawn circle does not yet look like the eye of a dice.
+  It has a smooth falloff which means that the corners of the circle are blurred and fuzzy.
+  To change this, expand the *Falloff* section in the inspector.
+  It contains a graph with a smooth curve.
+  The curve defines the drawing intensity of the brush stroke at different positions on the brush.
+  The left side of the graph defines the strength near the middle of the brush's circle.
+  On the right side of the graph, the strength at the rim of the brush circle is controlled.
+  Underneath the graph, there is a series of preset buttons showing some curve shapes.
+  You can experiment with some of them and see how the drawing pattern changes accordingly.
+  It is also possible to manipulate the curve in the graph directly by its handling points.
+  Since we want a circle with a well-defined rim, we can either take preset with the constant value (the last one on the right) or the circular shape (second one on the left).
+  The constant value gives a sharper rim but it also shows stepping artifacts since no blending is performed.
+  The circular shape produces a relatively sharp rim but also blends the pixels at the borders to avoid stepping artifacts.
 
 9. Now that the brush is correctly set up, you can paint the eyes of the dice.
-You can change between different axis-aligned views with the numpad keys:
-  - `Numpad 1`: Front View
-  - `Numpad 3`: Right Side View
-  - `Numpad 7`: Top View
-  - `Ctrl + 1, 3 or 7` gives the opposing side, i.e. Back View, Left Side View and Bottom View
-It is best to now zoom in or out while painting and to now alter the brush's scale so that all eyes have the same size.
-An alternative way of painting is presented in the section "*Further things to try out".
+  You can change between different axis-aligned views with the numpad keys:
+    - `Numpad 1`: Front View
+    - `Numpad 3`: Right Side View
+    - `Numpad 7`: Top View
+    - `Ctrl + 1, 3 or 7` gives the opposing side, i.e. Back View, Left Side View and Bottom View
+  It is best to now zoom in or out while painting and to now alter the brush's scale so that all eyes have the same size.
+  An alternative way of painting is presented in the section "*Further things to try out".
 
 10. It is important to know that the painted texture is not yet saved.
-By default, it is not included in the .blend-file and so saving the project will now save the texture.
-Instead, textures need to be saved separately as an image file to persist.
-This can be done in the Image Editor panel on the left side of the two-split view.
-First, we need to load the texture that was just created.
-At the top, there are two buttons *New* and *Open*.
-Click on the small dropdown field next to the *New* button which shows a triangle, a rectangle and a small circle.
-This dropdown menu shows all textures which are referenced in the .blend-file.
-Select the *dice_colour* texture that you created.
-The editor will now show the image and an overlay of the UV-unwrapped cube.
-Next, go to the top menu of the Image Editor and select *Image > Save as...*.
-Save the image somewhere on your harddrive, ideally in the same folder as the .blend-file.
+  By default, it is not included in the .blend-file and so saving the project will now save the texture.
+  Instead, textures need to be saved separately as an image file to persist.
+  This can be done in the Image Editor panel on the left side of the two-split view.
+  First, we need to load the texture that was just created.
+  At the top, there are two buttons *New* and *Open*.
+  Click on the small dropdown field next to the *New* button which shows a triangle, a rectangle and a small circle.
+  This dropdown menu shows all textures which are referenced in the .blend-file.
+  Select the *dice_colour* texture that you created.
+  The editor will now show the image and an overlay of the UV-unwrapped cube.
+  Next, go to the top menu of the Image Editor and select *Image > Save as...*.
+  Save the image somewhere on your harddrive, ideally in the same folder as the .blend-file.
 
 11. Any changes to the texture need to be saved manually.
-If you alter the texture, go to *Image > Save* or hover the mouse over the Image Editor and hit `Alt + S` to save the currently displayed texture.
+  If you alter the texture, go to *Image > Save* or hover the mouse over the Image Editor and hit `Alt + S` to save the currently displayed texture.
 
 **Futher things to try out**
 
