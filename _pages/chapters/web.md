@@ -6,18 +6,18 @@ categories: chapter
 visualizations:
 ---
 
-Augmented Reality for the Web demands compability with the major browsers. To reach this goal, developers needs access to the native device drivers and APIs of the different vendors in JavaScript.
+Augmented Reality for the Web demands compatibility with the major browsers. To reach this goal, developers needs access to the native device drivers and APIs of the different vendors in JavaScript.
 
 ## Enabling Technologies
 
 In recent years, the Web has made a major leap in application maturity. Almost all desktop applications like office packages, image and video editing have Web versions. This is due to the availability of HTML5 and its many APIs exposing native device APIs to developers by JavaScript.
-Moreover, Web browsers can communicate directly with each other without the need of a server, reducing the latency of many network depending applications like collaborative editing, video and voice chats, and computer games.s
+Moreover, Web browsers can communicate directly with each other without the need of a server, reducing the latency of many network depending applications like collaborative editing, video and voice chats, and computer games.
 
-- WebRTC
-- WebAssembly
-- Web Workers
+- [WebRTC](https://webrtc.org/)
+- [Web Assembly](https://webassembly.org/)
+- [Web Workers](https://www.w3.org/TR/workers/)
 - [WebGL 2.0](https://www.khronos.org/registry/webgl/specs/latest/2.0/)
-- Progressive Web Apps
+- [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
 
 # WebVR
 
@@ -32,7 +32,7 @@ The new API has two goals.
 First, it enhances the possibilities for new input devices like for gesture and speech recognition.
 This gives to user new options to navigate and interact in the virtual environment.
 Second, it gives a technical platform to create augmented reality content.
-Moreover, it tackles incompabilities of the predecessor with different browsers like Safari and Chrome. 
+Moreover, it tackles incompatibilities of the predecessor with different browsers like Safari and Chrome. 
 The amount of code needed to create virtual experiences on different devices should be reduced,
 A number of browsers is already supporting WebXR.
 
