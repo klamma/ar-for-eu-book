@@ -351,11 +351,13 @@ To achieve this, you will texture paint the sides of a cube so that they show th
   We would like to add black eyes to the dice.
   Thus, we need to change the colour of the brush.
   This setting can be altered in the inspector on the right side.
-  There is a colour wheel in the brush section.
-  Hue and saturation can be defined in the wheel itself.
+  There is a colour wheel in the brush section under *Color Picker*.
+  Hue and saturation can be defined on the wheel itself as seen in the figure.
   The value of the colour can be set with the slider next to the colour wheel.
   Pull the slider down to the black end of the slider.
   You can now paint black brush strokes.
+  <br/>
+  ![Colour Wheel]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/5ColourWheel.png)
 
 7. Align your camera with the front of the dice.
   You can do this by hovering over the 3D view with the mouse and pressing `NumPad 1`.
@@ -414,6 +416,8 @@ If you paint either in the texture view or on the 3D model, the other view will 
 - On the left side, there is a menu which shows different brushes.
 If the menu is not visible, press `T` to toggle its visibility.
 The menu contains some brushes known from image editing software, e.g. a smear tool, a clone brush and a fill bucket.
+- You can re-use the colour map as a depth map to carve the eyes out.
+  Alternatively, you can create a second map for the depth and draw surface dents there.
 
 ### Texture Baking
 

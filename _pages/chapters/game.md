@@ -12,4 +12,8 @@ visualizations:
 
 ## Gamification
 
+### Elements
+
+### Open Badges
+
 ## Serious Games
