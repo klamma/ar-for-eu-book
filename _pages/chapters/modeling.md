@@ -380,6 +380,8 @@ To achieve this, you will texture paint the sides of a cube so that they show th
   Since we want a circle with a well-defined rim, we can either take preset with the constant value (the last one on the right) or the circular shape (second one on the left).
   The constant value gives a sharper rim but it also shows stepping artifacts since no blending is performed.
   The circular shape produces a relatively sharp rim but also blends the pixels at the borders to avoid stepping artifacts.
+  <br/>
+  ![Falloff Menu]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/6Falloff.png)
 
 9. Now that the brush is correctly set up, you can paint the eyes of the dice.
   You can change between different axis-aligned views with the numpad keys:
