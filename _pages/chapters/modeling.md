@@ -389,8 +389,9 @@ To achieve this, you will texture paint the sides of a cube so that they show th
     - `Numpad 3`: Right Side View
     - `Numpad 7`: Top View
     - `Ctrl + 1, 3 or 7` gives the opposing side, i.e. Back View, Left Side View and Bottom View
-  It is best to now zoom in or out while painting and to now alter the brush's scale so that all eyes have the same size.
+  It is best to avoid zooming in or out while painting and to avoid altering the brush's scale so that all eyes have the same size.
   An alternative way of painting is presented in the section "*Further things to try out".
+  ![Result]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/7Result.png)
 
 10. It is important to know that the painted texture is not yet saved.
   By default, it is not included in the .blend-file and so saving the project will now save the texture.
@@ -404,6 +405,7 @@ To achieve this, you will texture paint the sides of a cube so that they show th
   The editor will now show the image and an overlay of the UV-unwrapped cube.
   Next, go to the top menu of the Image Editor and select *Image > Save as...*.
   Save the image somewhere on your harddrive, ideally in the same folder as the .blend-file.
+  ![Save Image]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/8SaveImage.png)
 
 11. Any changes to the texture need to be saved manually.
   If you alter the texture, go to *Image > Save* or hover the mouse over the Image Editor and hit `Alt + S` to save the currently displayed texture.
