@@ -413,13 +413,15 @@ To achieve this, you will texture paint the sides of a cube so that they show th
 **Futher things to try out**
 
 - You can also paint the eyes in the Image Editor.
-In the top-left corner of the Image Editor, change the dropdown menu which says *View* to *Paint*.
-You now have the same drawing abilities in the 2D texture view.
-If you paint either in the texture view or on the 3D model, the other view will update in realtime.
-- In the inspector, there is a symmetry section which allows you to automatically mirror brush strokes when painting them.
+  In the top-left corner of the Image Editor, change the dropdown menu which says *View* to *Paint*.
+  You now have the same drawing abilities in the 2D texture view.
+  If you paint either in the texture view or on the 3D model, the other view will update in realtime.
+  ![Change View to Paint]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/A1Paint.png)
 - On the left side, there is a menu which shows different brushes.
-If the menu is not visible, press `T` to toggle its visibility.
-The menu contains some brushes known from image editing software, e.g. a smear tool, a clone brush and a fill bucket.
+  If the menu is not visible, press `T` to toggle its visibility.
+  The menu contains some brushes known from image editing software, e.g. a smear tool, a clone brush and a fill bucket.
+  ![Brushes]({{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/A2Brushes.png)
+- In the inspector, there is a symmetry section which allows you to automatically mirror brush strokes when painting them.
 - You can re-use the colour map as a depth map to carve the eyes out.
   Alternatively, you can create a second map for the depth and draw surface dents there.
 
