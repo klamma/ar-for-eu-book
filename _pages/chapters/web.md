@@ -19,6 +19,7 @@ Moreover, Web browsers can communicate directly with each other without the need
 - [WebGL 2.0](https://www.khronos.org/registry/webgl/specs/latest/2.0/)
 - [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
 
+
 # WebVR
 
 [WebVR](https://immersive-web.github.io/webvr/) provided a developer API to different virtual reality devices on the Web and is now superseded by WebXR.
@@ -37,3 +38,17 @@ The amount of code needed to create virtual experiences on different devices sho
 A number of browsers is already supporting WebXR.
 
 [//]: # (QRD*19)
+
+
+# 3D Graphics Frameworks on the Web
+
+A series of graphics frameworks exist which allow the display of 3D models on Web pages.
+The presented frameworks introduce increasing levels of abstraction.
+Whereas WebGL works with polygon primitives and shaders, three.js abstracts to scenes, objects and materials.
+In turn, A-Frame uses three.js to provide an HTML-based description language for 3D scenes which can be executed as a WebXR experience.
+
+## WebGL
+
+## three.js
+
+## A-Frame

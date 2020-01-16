@@ -59,7 +59,7 @@ permalink: /toc/
 - [AR Agile Project Management](/ar-for-eu-book/chapter/apm/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [AR Game Development, Gamification and Serious Games](/ar-for-eu-book/chapter/game/) {% include badge.html base=pathToRoot badgeName="outline" %}
 - [AR Applications](/ar-for-eu-book/chapter/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
-- [AR for the Web](/ar-for-eu-book/chapter/web/) {% include badge.html base=pathToRoot badgeName="outline" %}
+- [AR for the Web](/ar-for-eu-book/chapter/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Mobile AR](/ar-for-eu-book/chapter/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Hardware Accelerated Computing](/ar-for-eu-book/chapter/hac/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Internet of Things, Robots and Wearables](/ar-for-eu-book/chapter/iot/) {% include badge.html base=pathToRoot badgeName="todo" %}
