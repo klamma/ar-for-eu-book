@@ -6,14 +6,32 @@ categories: chapter
 visualizations:
 ---
 
-# AR Game Development, Gamification and Serious Games
-
-## Pokemon Go
+## Game Design
 
 ## Gamification
 
 ### Elements
 
+#### Achievements
+
+#### Badges
+
+#### Points & Levels
+
+#### Progress Bars
+
+#### Highscores & Leaderboards
+
+#### Stories
+
 ### Open Badges
 
 ## Serious Games
+
+## Gamification Service
+
+## Examples
+
+### Pokemon Go
+
+### GaMR
