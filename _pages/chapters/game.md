@@ -10,6 +10,8 @@ visualizations:
 
 ## Gamification
 
+Gamification describes the concept of using elements from game design in other applications to motivate the user {%cite DDKN11 %}.
+
 ### Elements
 
 #### Achievements
@@ -24,10 +26,6 @@ visualizations:
 
 #### Stories
 
-### Open Badges
-
-## Serious Games
-
 ## Gamification Service
 
 ## Examples
@@ -35,3 +33,12 @@ visualizations:
 ### Pokemon Go
 
 ### GaMR
+
+### Open Badges
+
+## Serious Games
+
+In constrast to gamification, serious games do not only use single game elements but are complete games.
+These games have been designed with a serious goal in mind, e.g. to convey information during the gameplay.
+
+### Examples

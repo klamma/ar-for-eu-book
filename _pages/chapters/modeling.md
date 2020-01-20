@@ -80,7 +80,7 @@ The substraction is not symmetric, i.e. it yields different results with differe
 Boolean operations also work on meshes.
 Here, the volume is regarded which are encapsulated by a mesh.
 The expected result is a mesh which encapsulates the resulting volume.
-To achieve this, special algorithms are used to clip the individual meshes, e.g. the Greiner-Hormann clipping algorithm {% cite GreinerHormannClipping98 %} or the Vatti clipping algorithm {% cite VattiClipping92 %}.
+To achieve this, special algorithms are used to clip the individual meshes, e.g. the Greiner-Hormann clipping algorithm {% cite GrHo98 %} or the Vatti clipping algorithm {% cite Vatt92 %}.
 The trimmed meshes are combined into one resulting mesh.
 
 ### Digital Sculpting
@@ -88,7 +88,7 @@ The trimmed meshes are combined into one resulting mesh.
 Digital sculpting is inspired by real clay sculpting.
 Similar to real sculpting, the 3D artist starts with a base shape and can pull and dent the virtal material to create bumps and creases.
 Usually, the large shapes are defined first and then progress is made on smaller details.
-These operations are performed in a 3D sculpting program using a mouse or a tracked stylus {% cite Simonds2013Blender %}.
+These operations are performed in a 3D sculpting program using a mouse or a tracked stylus {% cite Simo13 %}.
 A difference to real sculpting is that is is possible to dynamically add or remove volume at any point which enables the sculptor to extend the object in any way.
 During the process, the sculpted mass is automatically defined by a mesh which is managed and optimised by the sculpting program.
 
