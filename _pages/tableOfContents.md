@@ -30,7 +30,7 @@ permalink: /toc/
 ### AR Development Skills
 
 - [AR SDKs](/ar-for-eu-book/chapter/arsdk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-- [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/holotoolkit/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/holotoolkit/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Unity / Unreal Engines](/ar-for-eu-book/chapter/engines/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [3D Modeling & Rendering](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Spatial Audio](/ar-for-eu-book/chapter/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %}
@@ -57,7 +57,7 @@ permalink: /toc/
 ## Advanced Topics
 
 - [AR Agile Project Management](/ar-for-eu-book/chapter/apm/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-- [AR Game Development, Gamification and Serious Games](/ar-for-eu-book/chapter/game/) {% include badge.html base=pathToRoot badgeName="outline" %}
+- [AR Game Development, Gamification and Serious Games](/ar-for-eu-book/chapter/game/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [AR Applications](/ar-for-eu-book/chapter/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [AR for the Web](/ar-for-eu-book/chapter/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Mobile AR](/ar-for-eu-book/chapter/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}

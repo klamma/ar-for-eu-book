@@ -16,6 +16,11 @@ Gamification describes the concept of using elements from game design in other a
 
 #### Achievements
 
+Achievements are virtual trophies.
+They are used in games to credit players with completing special tasks in the game.
+Achievements can be issued for finishing parts of the game or for succeeding in optional quests.
+In addition to this, achievements are commonly used to reward players for finding easter eggs, like hidden secrets and jokes in the video game.
+
 #### Badges
 
 #### Points & Levels
