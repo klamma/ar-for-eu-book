@@ -36,7 +36,7 @@ permalink: /toc/
 - [Spatial Audio](/ar-for-eu-book/chapter/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Interactive Graphics and Sound Design](/ar-for-eu-book/chapter/intdesign/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/spatialMapping/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- [Gesture and Speech Recognition and Interaction](/ar-for-eu-book/chapter/gesturespeech/) {% include badge.html base=pathToRoot badgeName="outline" %}
+- [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="outline" %}
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
 ### Computer Vision
