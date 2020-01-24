@@ -93,7 +93,7 @@ The book offers a comprehensive and introductory perspective on the topic Augmen
 * Spatial Audio
 * Interactive Graphics and Sound Design
 * Spatial Mapping, Gaze, and Gestures (in progress)
-* Gesture and Speech Recognition and Interaction
+* Speech Interaction (in progress)
 * Human Computer Interaction and User Centered Design
 
 ### Computer Vision
