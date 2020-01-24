@@ -49,6 +49,12 @@ In turn, A-Frame uses three.js to provide an HTML-based description language for
 
 ## WebGL
 
+[WebGL] (https://get.webgl.org/) is a cross-platform, royalty-free API used to create 3D graphics in a Web browser.
+
 ## three.js
 
+[three.js] (https://threejs.org/) is a popular JavaScript framework for displaying 3D content on the web.
+
 ## A-Frame
+
+[A-Frame] (https://aframe.io/) is a web framework for building virtual reality experiences.
