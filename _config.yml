@@ -3,7 +3,7 @@ title: The Open Augmented Reality Teaching Book
 email: klamma@dbis.rwth-aachen.de
 description: The Open Augmented Reality Teaching Book
 baseurl: "/ar-for-eu-book" # the subpath of your site, e.g. /blog
-url: "http://dbis.rwth-aachen.de:4000"
+url: "https://codereality.net"
 twitter_username: AR_FOR_EU
 
 # Build settings
