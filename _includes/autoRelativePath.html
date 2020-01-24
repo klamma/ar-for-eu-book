@@ -1,6 +1,6 @@
 {% assign pathToRoot = '' %}
-{% assign depth = page.url | split: '/' | size %}
-{% if    depth <= 1 %}{% assign pathToRoot = '.' %}
-{% elsif depth == 2 %}{% assign pathToRoot = '..' %}
-{% elsif depth == 3 %}{% assign pathToRoot = '../..' %}
-{% elsif depth == 4 %}{% assign pathToRoot = '../../..' %}{% endif %}
+{% assign depth = page.url | append: "nonempty" | split: '/' | size %}
+{% if    depth <= 2 %}{% assign pathToRoot = '.' %}
+{% elsif depth == 3 %}{% assign pathToRoot = '..' %}
+{% elsif depth == 4 %}{% assign pathToRoot = '../..' %}
+{% elsif depth == 5 %}{% assign pathToRoot = '../../..' %}{% endif %}
