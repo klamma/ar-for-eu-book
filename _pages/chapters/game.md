@@ -66,7 +66,7 @@ Gamification describes the concept of using elements from game design in other a
 
 ### Examples
 
-#### Pokémon Go
+#### Pokemon Go
 
 #### GaMR
 
