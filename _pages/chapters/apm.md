@@ -42,7 +42,7 @@ Meanwhile to [agile manifesto](https://agilemanifesto.org/) was signed by thousa
 
 ## Agile Development Features
 
-Agile development emphasises incremental updates. 
+Agile development emphasizes incremental updates. 
 Therefore, the process is divided into small design steps with frequent customer interactions.
 The focus is on delivering working software frequently.
 Because of the small, incremental process steps and the agilily of the process, developers are better motivated and in consequence produce better software. Projects with agile methods have a higher probability of success. Also empirically proven, recent report say that of over 94% of companies today develop software with agile methods.
@@ -324,6 +324,10 @@ Open APIs to embed it into apps.
   - End-user participation
 - Strong commitment to participatory design and evaluation activities carried out in communities of practice
 
+# Minimal Viable Product
+
+A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}. 
+ 
 # Wrap-Up
 
 - You heard about the Agile Manifesto
