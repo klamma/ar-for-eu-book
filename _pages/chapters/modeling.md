@@ -106,7 +106,7 @@ Sometimes, it is also used in a creative way to prototype the shapes of an objec
 
 ### Photogrammetry
 
-It is also possible to use structure-from-motion photogrammetry to create 3D models {% cite WBGH12 %}.
+It is also possible to use structure-from-motion photogrammetry to create 3D models {% cite WBG*12 %}.
 Photogrammetry is also a 3D scanning technique but it only requires a standard camera.
 With this camera, a series of photos is taken from various different angles and positions.
 Alternatively, it is also common to use an array of cameras which are all triggered at the same time to take a photo.

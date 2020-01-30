@@ -9,7 +9,7 @@ visualizations:
 {% include autoRelativePath.html %}
 
 # Display Technologies 
-Displays can be classified according to their technology used. In the sense of AR, display systems can be divided into immersive systems, where the user is placed in the middle of the scene, and non-immersive devices, which place the user outside the visual scene. Video displays can be 2D, such as a computer screen, or stereoscopic, such as 3D. {% cite Stankovi_c_2015 %}
+Displays can be classified according to their technology used. In the sense of AR, display systems can be divided into immersive systems, where the user is placed in the middle of the scene, and non-immersive devices, which place the user outside the visual scene. Video displays can be 2D, such as a computer screen, or stereoscopic, such as 3D. {% cite Stan15 %}
 
 ## Imaging technologies
 
@@ -29,13 +29,13 @@ Plasma Display Panels (PDP) were first used in laptops as monochrome flat screen
 
 ### LCD
 
-A liquid crystal display (LCD) is composed of several layers, including polarization filters. By applying a voltage to the liquid crystals, the polarization direction is influenced by light and partially blocked by the filters. {% cite Stankovi_c_2015 %} LC displays require backlighting whose light is absorbed to varying degrees by the individually controlled liquid crystal cells, creating the impression of a self-luminous image. In the past, cold cathode fluorescent tubes were used for backlighting. Today, much more efficient light-emitting diodes (LEDs) are used here. Due to the fact that the display is constantly and completely backlit, LC displays have a lower contrast than plasma screens, for example. When using LEDs evenly distributed over the entire surface, each of the LEDs can also be controlled separately and their luminosity controlled or even switched off (local dimming), so a much higher contrast ratio can be achieved.
+A liquid crystal display (LCD) is composed of several layers, including polarization filters. By applying a voltage to the liquid crystals, the polarization direction is influenced by light and partially blocked by the filters. {% cite Stan15 %} LC displays require backlighting whose light is absorbed to varying degrees by the individually controlled liquid crystal cells, creating the impression of a self-luminous image. In the past, cold cathode fluorescent tubes were used for backlighting. Today, much more efficient light-emitting diodes (LEDs) are used here. Due to the fact that the display is constantly and completely backlit, LC displays have a lower contrast than plasma screens, for example. When using LEDs evenly distributed over the entire surface, each of the LEDs can also be controlled separately and their luminosity controlled or even switched off (local dimming), so a much higher contrast ratio can be achieved.
 
 LCD is one of the most widely used display technologies and is used for screens of various shapes and sizes, ranging from computer monitors and televisions to mobile devices such as smartphones and tablets. Most projectors in use use an LC display to generate an image.
 
 ### DLP Microdisplays
 
-DLP (Digital Light Processing) was developed by Texas Instruments. It is a chip consisting of  millions of individually controlled micro mirrors, each capable of representing a single pixel. The principle is based on the fact that the retina of the eye itself is the display surface of such displays. Light is reflected by the mirrors, which are constantly realigned, and hits the retina. Due to their small size and the resulting very high resolution (approx. 2cm diagonal at a resolution of 1920x1080), they are ideal as head-mounted displays. {% cite Hornbeck2005 %}  {% cite BZL*06 %} Texas Instruments has even produced a chip that can produce a Full HD resolution on only about 6mm diagonal {% cite texasinstru %}.
+DLP (Digital Light Processing) was developed by Texas Instruments. It is a chip consisting of  millions of individually controlled micro mirrors, each capable of representing a single pixel. The principle is based on the fact that the retina of the eye itself is the display surface of such displays. Light is reflected by the mirrors, which are constantly realigned, and hits the retina. Due to their small size and the resulting very high resolution (approx. 2cm diagonal at a resolution of 1920x1080), they are ideal as head-mounted displays. {% cite Horn97 %}  {% cite BZL*06 %} Texas Instruments has even produced a chip that can produce a Full HD resolution on only about 6mm diagonal {% cite texasinstru %}.
 
 DLPs have long been used in projectors. Compared to LCD projectors they offer a higher contrast and therefore a better black level, because here no panel is illuminated by the light, but DLP has the disadvantage that when you blink your eyes or wander quickly over the projected image, unpleasant rainbow artifacts hit your eyes.
 
@@ -55,7 +55,7 @@ The display technologies presented in the upper section can be used in different
 
 ### 3D
 
-3D displays, also called stereoscopic video displays, create the illusion of depth perception by displaying slightly different images on both eyes. The most common screens are those that require special glasses. These can be divided into active systems using shutter glasses and passive systems based on polarization or color filters in the glasses. {% cite Stankovi_c_2015 %}
+3D displays, also called stereoscopic video displays, create the illusion of depth perception by displaying slightly different images on both eyes. The most common screens are those that require special glasses. These can be divided into active systems using shutter glasses and passive systems based on polarization or color filters in the glasses. {% cite Stan15 %}
 
 ### Immersive
 
@@ -63,11 +63,11 @@ Immersion describes the effect caused by an artificial environment, which descri
  
 #### CAVE 
   
-Fully immersive virtual reality experiences can be realistically realized using a CAVE environment (Cave Automatic Virtual Environment). Projectors or multiple LCD screens (CAVE2) form a virtual space by surrounding the walls around the user. Users can also wear 3D glasses to facilitate immersion. With a CAVE environment, multiple users can interact simultaneously in the same virtual space and share the same experiences. {% cite manjrekar2014cave %}
+Fully immersive virtual reality experiences can be realistically realized using a CAVE environment (Cave Automatic Virtual Environment). Projectors or multiple LCD screens (CAVE2) form a virtual space by surrounding the walls around the user. Users can also wear 3D glasses to facilitate immersion. With a CAVE environment, multiple users can interact simultaneously in the same virtual space and share the same experiences. {% cite MSB*14 %}
   
 #### Head Mounted Displays (HMD)
 
-To achieve a Virtual World experience, Head Mounted Displays using two CRT's (one for each eye) were developed {% cite sutherland68 %}. This displays are designed to be worn on the head. With HMD, objects can be displayed next to or behind the user when he turns around. HMDs support a high physical immersion because they hide reality and ensure that the user only perceives the virtual world. In recent years, head-mounted display technology has been major improved. So-called VR headsets as Oculus Rift, HTC Vive, Samsung Gear VR, etc. make virtual reality available to the public {% cite spitzer17 %}. Head Mounted Displays are divided into optical see-through and video see-through. Optical see-through HMDs can extend the environment with augmented reality with the help of optically transparent displays by making these models visible in the user's field of vision. Video see-through HMDs, on the other hand, are not transparent. A camera records videos and plays them back on the display, overlaid with virtual elements. 
+To achieve a Virtual World experience, Head Mounted Displays using two CRT's (one for each eye) were developed {% cite Suth68 %}. This displays are designed to be worn on the head. With HMD, objects can be displayed next to or behind the user when he turns around. HMDs support a high physical immersion because they hide reality and ensure that the user only perceives the virtual world. In recent years, head-mounted display technology has been major improved. So-called VR headsets as Oculus Rift, HTC Vive, Samsung Gear VR, etc. make virtual reality available to the public {% cite SSEb17 %}. Head Mounted Displays are divided into optical see-through and video see-through. Optical see-through HMDs can extend the environment with augmented reality with the help of optically transparent displays by making these models visible in the user's field of vision. Video see-through HMDs, on the other hand, are not transparent. A camera records videos and plays them back on the display, overlaid with virtual elements. 
 
 ### Handheld Display (HHD)
 
