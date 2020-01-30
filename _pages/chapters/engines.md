@@ -557,7 +557,8 @@ In this example, we use a box collider.
 
 We will now implement a short script which illustrates how to react to the case if the user focuses an object.
 
-1. In the Assets view, navigate to the Scripts folder, right click and add a new C# script. Call it ColorChanger.
+1. In the Assets view, navigate to the Scripts folder, right click and add a new C# script.
+   Call it ColorChanger.
 2. Double-click and open the script.
 3. Interfaces for input handling are bundled in the HoloToolkit.Unity.InputModule namespace.
     We need to declare that this script uses content from this namespace.
