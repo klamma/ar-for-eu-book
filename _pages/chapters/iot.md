@@ -15,4 +15,3 @@ visualizations:
 
 ## Wearables
 
-S
