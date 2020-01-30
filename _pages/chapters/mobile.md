@@ -23,7 +23,7 @@ These kinds of effects are especially taylored towards "selfies" since they rely
 Facial landmarks like the eyes our mouth are detected in real-time in the camera feed.
 With this information, the position and orientation of the face can be determined.
 Digital content can be placed in relation to the face and it is added to the camera preview for the user.
-A range of applied effects can be implemented. 
+A range of applied effects can be implemented.
 They inclue animated screen-space 2D overlays, like snow on the screen.
 Furthermore, 3D models can be attached to the user's head, e.g. cat ears, jewellery or sunglasses.
 Another class of effects are  distortions of the original camera image.

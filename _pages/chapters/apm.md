@@ -10,19 +10,21 @@ visualizations:
 # AR Agile Project Management
 
 This chapter gives an overview on agile project management, in particular the agile management of software development for mixed reality environments.
-All needed concepts are introduced. To support agile project management in mixed reality, we have set up an experimental mixed
+All needed concepts are introduced.
+To support agile project management in mixed reality, we have set up an experimental mixed
 reality environment called [VIAProMa](https://github.com/rwth-acis/VIAProMa) (Virtual Immersive Analytics for Project Management).
 
   ![VIAProMa]({{pathToRoot}}/assets/figures/apm/ViaProMa_logo.png)
 
-VIAProMa is a Collaborative Mixed Reality Visualization Framework for Immersive Analytics. In the course of the section, 
-we will use examples and screenshots from the VIAProMa environment.
+VIAProMa is a Collaborative Mixed Reality Visualization Framework for Immersive Analytics.
+In the course of the section, we will use examples and screenshots from the VIAProMa environment.
 
 In the traditional waterfall model of software engineering, the different phases of the software engineering process are followed in a sequential manner, 
-usually without returning to a phase already finished. The output of the early phases are usually documents while software is only produced in later phases.
-With the model design errors can be captured before the implementation phase. 
+usually without returning to a phase already finished.
+The output of the early phases are usually documents while software is only produced in later phases.
+With the model design errors can be captured before the implementation phase.
 The technical documentation is part of the plan and because of the structured approach, costs can be estimated quite well.
-Customers however find it difficult to state their requirements in an abstract way. 
+Customers however find it difficult to state their requirements in an abstract way.
 The waterfall model does not cater for possibility of changing requirements.
 The waterfall model was modified after a number of issues identified in practice, but in the end, the agile approach became the dominant one.
 Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
@@ -42,10 +44,12 @@ Meanwhile to [agile manifesto](https://agilemanifesto.org/) was signed by thousa
 
 ## Agile Development Features
 
-Agile development emphasizes incremental updates. 
+Agile development emphasizes incremental updates.
 Therefore, the process is divided into small design steps with frequent customer interactions.
 The focus is on delivering working software frequently.
-Because of the small, incremental process steps and the agilily of the process, developers are better motivated and in consequence produce better software. Projects with agile methods have a higher probability of success. Also empirically proven, recent report say that of over 94% of companies today develop software with agile methods.
+Because of the small, incremental process steps and the agilily of the process, developers are better motivated and in consequence produce better software.
+Projects with agile methods have a higher probability of success.
+Also empirically proven, recent report say that of over 94% of companies today develop software with agile methods.
 
 - Emphasizes incremental updates
 - Small design steps by frequent interactions with customers
@@ -121,14 +125,15 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
 
 ## Task Boards
 
-Task boards are common in agile software development to organize work in sprints. 
-They give an easy overview on the progress reached in the sprint. 
+Task boards are common in agile software development to organize work in sprints.
+They give an easy overview on the progress reached in the sprint.
 Task boards can be physical boards in an office,
 when all developers are in the same place or a virtual board, which is typical for distributed development like in open source software
-development. 
+development.
 Some developer team do both physical and virtual boards, e.g. physical ones for local sprints and virtual ones for 
-the global process. In any case, task boards consists out of columns where tasks are usually shift from left to right
-to visualize the grade of completion from ToDo to Done. 
+the global process.
+In any case, task boards consists out of columns where tasks are usually shift from left to right
+to visualize the grade of completion from ToDo to Done.
 Typical columns for a sprint are: 
 
 - Product Backlog
@@ -142,8 +147,10 @@ Typical columns for a sprint are:
 - Done
   All finished and reviewed tasks
   
-In the figure you can see a visualization of a task board in our VIAProMa environment. It has three columns: *Open*, *In Progress*, 
-and *Closed*. The three columns have different colours, which can be chosen from the menu. 
+In the figure you can see a visualization of a task board in our VIAProMa environment.
+It has three columns: *Open*, *In Progress*, 
+and *Closed*.
+The three columns have different colours, which can be chosen from the menu.
   ![VIAProMa Board]({{pathToRoot}}/assets/figures/apm/viaproma_kanban.png)
 ## Definition of Done
 
@@ -200,7 +207,8 @@ and *Closed*. The three columns have different colours, which can be chosen from
   - Travis CI: Hosted solution
   
 Integration Hell: Integration problems because of missing early testing.
-There is even more than that. If you ever wondered why you have Facebook app updates multiple times a day, here is the answer.
+There is even more than that.
+If you ever wondered why you have Facebook app updates multiple times a day, here is the answer.
 
 ### Continuous Delivery and Continuous Deployment
 
@@ -263,10 +271,11 @@ How to best segment a market?
 
 Understanding a user helps you to decide what product features to build next.
 Talk to potential users and find out about their needs.
-A persona is a representation of a user, typically based off user research and incorporating user goals, needs, and interests. 
+A persona is a representation of a user, typically based off user research and incorporating user goals, needs, and interests.
 See more on [http://www.uxbooth.com/articles/creating-personas/](http://www.uxbooth.com/articles/creating-personas/)
 
-Analyse your competitors. Ask your (potential) users
+Analyse your competitors.
+Ask your (potential) users
 - Do they have any concerns about the idea?
 - Why they use your services?
 - Key points to focus on:
@@ -312,9 +321,9 @@ What is a requirement?
 What is requirements engineering?
 
 The [Requirements Bazaar](https://requirements-bazaar.org/) is a Web-based open continuous innovation platform.
-It is easy to use for end users. 
+It is easy to use for end users
 Social features like *likes* and *comments* enable the communication between end users and developers.
-Open APIs to embed it into apps. 
+Open APIs to embed it into apps.
 
 ## DevOpsUse
 
@@ -326,7 +335,7 @@ Open APIs to embed it into apps.
 
 # Minimal Viable Product
 
-A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}. 
+A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}.
  
 # Wrap-Up
 
@@ -342,7 +351,7 @@ A minimal viable product (MVP) is an early prototype of a system for getting fee
 ## Review Specifications 
 
 The following specs are for a 12-week course on Mixed Reality with teams of 4-6 people working on a prototype.
-Four reviews are planned for the course, so that every three weeks there can be a review. 
+Four reviews are planned for the course, so that every three weeks there can be a review.
 The first review is for exercising the agile software development process, for technology and market research as well as for first DevOps activities.
 The second review should report on the first one or two sprints of the team and how they have started the development process.
 The third review should cover more DevOps activities like testing and documenting the prototype.
@@ -356,7 +365,8 @@ The last review is planned as business pitch with a strong focus on selling a pr
 - **Technology Survey**: List and briefly describe existing technologies, tools and techniques that are relevant for your project
 - **Reflection**: Provide a short written reflection of your teamwork process and progress as a community of practice 
 - **Running Skeleton**: A basic development project that should be buildable and reflect your current development state 
-- **Presentation Slides**: Prepare a 10 min presentation for the first review and for a discussion afterwards. As a guideline, the presentation slides should contain key information contained in the above documents:
+- **Presentation Slides**: Prepare a 10 min presentation for the first review and for a discussion afterwards.
+    As a guideline, the presentation slides should contain key information contained in the above documents:
   - Agenda/overview
   - Project info and objectives
   - Market analysis
@@ -370,9 +380,12 @@ The last review is planned as business pitch with a strong focus on selling a pr
 - **Prioritized Project Backlog**: Compile a new version of your Project Backlog for the second release.
 - **Definition of Done**: Update the quality criteria for your code and explain.
 - **Running mock-up** of the interface and/or a set of tested (automatically) classes/functions with the core system functionality of your prototype.
-- **Documentation**: Build instructions to run your mock-up and/or tests. Also provide sufficient API/code documentation and an end-user guide.​
+- **Documentation**: Build instructions to run your mock-up and/or tests.
+    Also provide sufficient API/code documentation and an end-user guide.​
 - A reflection of your group process as community of practice.
-- Presentation Slides. Please prepare a 10 min presentation and prepare for discussion afterwards. As a guideline, the following bits of info are expected in your presentation:
+- Presentation Slides.
+  Please prepare a 10 min presentation and prepare for discussion afterwards.
+  As a guideline, the following bits of info are expected in your presentation:
   - Agenda
   - Project Backlog and Definition of Done
   - Running mock-up and/or system functionality/tests
@@ -382,14 +395,16 @@ The last review is planned as business pitch with a strong focus on selling a pr
 
 ### Review 3
 
-- **Run​​ning system demo** (e.g. link, video). Please note, that your system already needs to include all must-haves, 
+- **Run​​ning system demo** (e.g. link, video).
+  Please note, that your system already needs to include all must-haves, 
 so that you can use the remaining weeks to polish it and fix the last bugs.
 - Running automatic test cases (e.g. link).
-- **Detailed documentation** of your system for further development. 
+- **Detailed documentation** of your system for further development.
 Also provide sufficient API/code documentation and an end-user guide.
 - Reflection of your agile development and group process as community of practice.
-- Presentation Slides. Please prepare for a 10 minutes presentation, including demo(!), 
-plus discussion. As a guideline, the following bits of info are expected in your presentation:
+- Presentation Slides.
+  Please prepare for a 10 minutes presentation, including demo(!), plus discussion.
+  As a guideline, the following bits of info are expected in your presentation:
   - Agenda
   - Product description
   - System demo
@@ -402,13 +417,17 @@ plus discussion. As a guideline, the following bits of info are expected in your
 
 - **Running system demo** (e.g. link, video).
 - Running automatic test cases (e.g. link, screenshots).
-- **Detailed documentation** of your system for further development. Also provide comprehensive API/code documentation and an end-user guide.
+- **Detailed documentation** of your system for further development.
+  Also provide comprehensive API/code documentation and an end-user guide.
 - A reflection of your group process as community of practice (1 page)
-- Presentation slides. Please prepare a 5 min. business oriented presentation of your project plus a 5 min demo of your 
-system and prepare for a short discussion afterwards. The following five slides are expected to be shown by you
+- Presentation slides.
+  Please prepare a 5 min. business oriented presentation of your project plus a 5 min demo of your system and prepare for a short discussion afterwards.
+  The following five slides are expected to be shown by you
   - What is the PROBLEM solved by the product or service you plan to provide? 
   - What is the quantifiable economic benefit of solving that problem?
   - Who, specifically, is your customer? Do they have money? How do they pay you?
   - What is your, your teams, or your company's distinct competitive advantage in providing this product or service to the customer?
   - What is the PRODUCT or service you plan to provide?
-- Please act as a company or a start-up presenting to possible customers. Do not present a technology but a product. If you have questions concerning the documents and/or the presentation please contact us.
+- Please act as a company or a start-up presenting to possible customers.
+  Do not present a technology but a product.
+  If you have questions concerning the documents and/or the presentation please contact us.

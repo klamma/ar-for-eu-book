@@ -153,7 +153,7 @@ Creating organic objects by hand this way is tricky.
 
 ### Box Modeling
 
-Box modelling describes a method in which faces of a polygon cube are extruded and manipulated to create a complex model. 
+Box modelling describes a method in which faces of a polygon cube are extruded and manipulated to create a complex model.
 The process generally utilises a simple iterative method where extruded faces are moved, scaled and rotated to represent an object.
 The name box modelling refers to the use of a cube as a starting point and often has a very angular result.
 Final stages of the project may work with smoothing functions to provide a more organic look, however during development it is optimal to retain a low polygon count.
@@ -218,7 +218,9 @@ Stretching occurs if the shape of a face is distorted in the UV-space.
 Especially curved surfaces like a sphere are difficult to UV-unwrapping without stretched textures.
 
 {% include image.html url="/assets/figures/modeling/UVCubeMap1.png" base=pathToRoot description="A UV map which projects a cube to a texture." %}
-{% include image.html url="/assets/figures/modeling/UVCubeMap2.png" base=pathToRoot description="Another UV map which also projects the cube to a texture. In the UV map, the faces do not have the same shape as in 3D. This leads to a stretched texture on the cube." %}
+{% include image.html url="/assets/figures/modeling/UVCubeMap2.png" base=pathToRoot description="Another UV map which also projects the cube to a texture.
+In the UV map, the faces do not have the same shape as in 3D.
+This leads to a stretched texture on the cube." %}
 
 To minimize the stretched textures, edges of the mesh can be marked as seams.
 This means that the faces which are not connected in the texture space.
