@@ -30,7 +30,7 @@ CRTs can work either in random scan mode (vector displays) or in raster scan mod
 
 Cathode ray tubes have been used in televisions, computer monitors, arcade machines and radar equipment.
 The latter are so called Vector Displays, which are based on Random Scan System.
-In contrast to the Raster Scan System, which is the basis for televisions and computer screens and uses pixels along scan lines to draw an image, Random Scan Systems, such as Vector Displays, are designed for line drawing applications and use various mathematical functions for drawing {% cite rasterscan %}.
+In contrast to the Raster Scan System, which is the basis for televisions and computer screens and uses pixels along scan lines to draw an image, Random Scan Systems, such as Vector Displays, are designed for line drawing applications and use various mathematical functions for drawing {% cite Java20 %}.
 
 A few years ago even projectors were realized with the help of CRTs to expose large canvases.
 On the other hand there were also tiny Cathode ray tubes, which were used as viewfinders for camcorders.
@@ -67,7 +67,7 @@ It is a chip consisting of  millions of individually controlled micro mirrors, e
 The principle is based on the fact that the retina of the eye itself is the display surface of such displays.
 Light is reflected by the mirrors, which are constantly realigned, and hits the retina.
 Due to their small size and the resulting very high resolution (approx. 2cm diagonal at a resolution of 1920x1080), they are ideal as head-mounted displays {% cite Horn97 %}  {% cite BZL*06 %}.
-Texas Instruments has even produced a chip that can produce a Full HD resolution on only about 6mm diagonal {% cite texasinstru %}.
+Texas Instruments has even produced a chip that can produce a Full HD resolution on only about 6mm diagonal {% cite TIDLP230NP %}.
 
 DLPs have long been used in projectors.
 Compared to LCD projectors they offer a higher contrast and therefore a better black level, because here no panel is illuminated by the light, but DLP has the disadvantage that when you blink your eyes or wander quickly over the projected image, unpleasant rainbow artifacts hit your eyes.

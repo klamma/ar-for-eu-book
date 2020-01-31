@@ -38,11 +38,11 @@ This is the most current version.
 
 
 Developers of AR applications do not have to start from scratch and (re-)implement the complete graphics pipeline and physics simulations.
-Instead, 3D engines like Unity {% cite Unity %} or the Unreal Engine {% cite UnrealEngine %} already offer this functionality as a foundation for the development of real-time graphics applications.
+Instead, 3D engines like Unity {% cite UnityHome %} or the Unreal Engine {% cite EpicUnreal %} already offer this functionality as a foundation for the development of real-time graphics applications.
 
 # Unity
 
-Unity is a real-time graphics engine by Unity Technologies which developers can utilize to create 2D and 3D applications {% cite Unity %}.
+Unity is a real-time graphics engine by Unity Technologies which developers can utilize to create 2D and 3D applications {% cite UnityHome %}.
 This means that Unity’s graphics can be adapted to different graphic qualities, performances and visual styles.
 Applications can be deployed on more than 25 platforms, including Android, iOS, Windows Standalone and Universal Windows Platform.
 Unity is available in different pricing levels ranging from a free personal edition to a Pro version with additional support for larger companies.
@@ -216,7 +216,7 @@ Scripts can only be added in such a way to objects of a scene if they inherit fr
 Once a script is attached to an object, Unity calls special functions in the script if certain events happened.
 For instance, developers can implement an Update() function which is called once for every frame which is rendered.
 Similarly, different callback-methods can be implemented which are raised at different points in the application’s or object’s lifecycle, e.g. `Awake()`, `Start()` and `OnDestroy()`.
-Details on available callback methods and the data structures which can manipulate an object’s properties can be found in Unity’s documentation {% cite UnityUserManual %}.
+Details on available callback methods and the data structures which can manipulate an object’s properties can be found in Unity’s [documentation](https://docs.unity3d.com/Manual/index.html).
 
 If the script contains public variables, the values of the variables will be displayed in the editor.
 They are shown on the component's panel in the inspector and can also be edited.
@@ -244,9 +244,9 @@ The script creates a GameObject from this reference by calling `GameObject.Insta
 
 ## Supporting Material
 
-For exploring Unity and its functionality, one can take a look at its user manual {% cite UnityUserManual %}.
+For exploring Unity and its functionality, one can take a look at its [User Manual](https://docs.unity3d.com/Manual/index.html).
 It also contains explanations and examples for the implementation of application logic using Unity's API.
-Unity also provides an Asset Store {% cite UnityAssetStore %} which contains scripts, 3D models and usage examples which have been created by other developers.
+Unity also provides an [Asset Store](https://assetstore.unity.com/) which contains scripts, 3D models and usage examples which have been created by other developers.
 It contains a mixture of free and paid content which can be downloaded for the own project to save development time.
 
 ## Exercise: Importing a 3D Model in Unity and Moving It by Script
@@ -716,3 +716,5 @@ Tests are public methods in this script.
 
 
 # Unreal Engine
+
+# Godot
