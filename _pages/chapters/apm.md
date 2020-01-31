@@ -337,6 +337,14 @@ Open APIs to embed it into apps.
 
 A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}.
  
+An MVP must have four key elements for achieving product quality
+- Functionality 
+- Design
+- Reliability
+- Usability
+
+It has enough of the four key elements that people are willing to use or to buy it. It should show enough potential for retaining first customers and it should initialize a development cycle with feedback from the customers.
+
 # Wrap-Up
 
 - You heard about the Agile Manifesto
@@ -427,7 +435,7 @@ Also provide sufficient API/code documentation and an end-user guide.
   - What is the quantifiable economic benefit of solving that problem?
   - Who, specifically, is your customer? Do they have money? How do they pay you?
   - What is your, your teams, or your company's distinct competitive advantage in providing this product or service to the customer?
-  - What is the PRODUCT or service you plan to provide?
+  - What is the **product** or service you plan to provide?
 - Please act as a company or a start-up presenting to possible customers.
   Do not present a technology but a product.
   If you have questions concerning the documents and/or the presentation please contact us.
