@@ -47,7 +47,7 @@ Meanwhile to [agile manifesto](https://agilemanifesto.org/) was signed by thousa
 Agile development emphasizes incremental updates.
 Therefore, the process is divided into small design steps with frequent customer interactions.
 The focus is on delivering working software frequently.
-Because of the small, incremental process steps and the agilily of the process, developers are better motivated and in consequence produce better software.
+Because of the small, incremental process steps and the agility of the process, developers are better motivated and in consequence produce better software.
 Projects with agile methods have a higher probability of success.
 Also empirically proven, recent report say that of over 94% of companies today develop software with agile methods.
 
@@ -61,7 +61,7 @@ Also empirically proven, recent report say that of over 94% of companies today d
 
 Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
 
-- Scrum accepts that the development process cannot be forseen
+- Scrum accepts that the development process cannot be foreseen
 - Scrum does not reduce complexity but structures it into chunks
 - No formal contract specification
 - Scrum team members have fixed *roles*
@@ -100,7 +100,10 @@ Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
 - Sprint retrospective
   - Self-reflection within team
   - Moderated and organized by Scrum master
-  
+Sprint activities are designed for full time development teams in companies.
+How much of the sprint activities can be done in the context of a lab or a course depends very much on the schedules of the students. 
+If there is no opportunity to do a 15 minutes meeting in the morning, it may be replaced by an online meeting, for example.
+ 
 ## Sprint Artifacts
 
 - Product Backlog
@@ -243,6 +246,16 @@ Continuous Delivery is about removing stress at the *last mile*.
 
 **Market analysis** is the process of analyzing data to help you understand which products and services are in demand, 
 and  how to be competitive.
+Markets are places where customers who are willing to buy a product or a service can meet the sellers of those products and services. 
+From the view of the sellers, markets are people who are willing to pay. 
+For market analysis, it is important to come up with numbers.
+- How much can I charge for a product?
+- How many potential buyers are there?
+- How many potential customers will be interested in my product?
+A market analysis can also include an analysis of the competitors. 
+- Who are the companies offering a similiar product or a service? 
+- What do they charge for their product?
+- What are their product features?
 
 **Market segmentation** is the strategy of dividing broad market into subsets of consumers who have common needs 
 and characteristics.
