@@ -56,6 +56,12 @@ Similar to achievements, games can also issue badges to the player.
 
 #### Progress Bars
 
+Progress bars indicate the general progression of a task or a set of tasks.
+Whereas general applications use progress bars to indicate how far a computer has come in a computation or loading process, games apply progress bars to show the player's progression.
+The progress bar is influenced and filled by actions which are performed by the user.
+This way, it acts as a tool to provide feedback and motivation to the user.
+It focuses the user's attention on a goal which can be reached after completing all necessary tasks.
+
 #### Stories
 
 ## Gamification
@@ -64,13 +70,26 @@ Gamification describes the concept of using elements from game design in other a
 
 ### Gamification Service
 
+### Open Badges
+
+The Open Badges project is a gamified certification system by the Mozilla Foundation.
+It allows website developers to issue badges to its visitors for performing certain tasks.
+The system is designed in a way that the badges are standardized so that they can be collected on different sites and from different institutions.
+Badges are e.g. used by schools, universities or in online MOOCS to certify the attendance to courses or the acquisition of a certain skill.
+The badges are added to the user's inventory and can be displayed to others, e.g. in a CV.
+Users who view the badge can verify that it is valid due to a certification and credential system.
+The badges consist of an image which is stored as a PNG-file.
+In addition to this, meta data can be added to ship more information with the badge.
+
 ### Examples
+
+#### Duolingo
+
+### AR Examples
 
 #### Pokemon Go
 
 #### GaMR
-
-#### Open Badges
 
 ## Serious Games
 
