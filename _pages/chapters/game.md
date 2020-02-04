@@ -10,8 +10,6 @@ visualizations:
 
 ### Elements
 
-#### Quests
-
 #### Points
 
 Points are a basic element to reward a player's performance in games.
@@ -39,7 +37,17 @@ Apart from this, levels can also act as a form of motivation.
 
 #### Highscores & Leaderboards
 
-
+Highscores and leaderboards are used in games to create social competition.
+Players become aware of each other and can compare their own performance to others.
+The highscore describes the best result any player has every achieved.
+More player results are available on highscore tables which show the top results of the best **n** players.
+In contrast to this, leaderboards are similar to a league system.
+There can be multilple tiers in which participants can challenge each other to matches.
+If the lower-ranked person wins, the two opponents switch places in the ranking.
+Otherwise, the ranking stays as it is and the lower-ranked person may not challenge the same opponent again for some time.
+Highscore tables enable passive competition whereas leaderboards create active competition.
+With highscores, people play on their own and try to beat the current highscore.
+To progress on leaderboards, the participants are acutally playing against one another.
 
 #### Achievements
 
@@ -62,7 +70,7 @@ The progress bar is influenced and filled by actions which are performed by the 
 This way, it acts as a tool to provide feedback and motivation to the user.
 It focuses the user's attention on a goal which can be reached after completing all necessary tasks.
 
-#### Stories
+#### Quests
 
 ## Gamification
 
