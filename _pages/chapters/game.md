@@ -47,7 +47,7 @@ If the lower-ranked person wins, the two opponents switch places in the ranking.
 Otherwise, the ranking stays as it is and the lower-ranked person may not challenge the same opponent again for some time.
 Highscore tables enable passive competition whereas leaderboards create active competition.
 With highscores, people play on their own and try to beat the current highscore.
-To progress on leaderboards, the participants are acutally playing against one another.
+To progress on leaderboards, the participants are acutally playing against one another in challenges or matches.
 
 #### Achievements
 
@@ -61,6 +61,12 @@ These platforms provide developers with APIs which can be used to integrate thes
 #### Badges
 
 Similar to achievements, games can also issue badges to the player.
+They are digital property which means that these digital objects are associated with an owner.
+Badges certify a success to its owner.
+They can be seen as a materialized version of an abstract goal, e.g. to learn a new skill.
+
+There is also a social component to badges since they can be exhibited and are associtated to their owner.
+A collection of badges can show others the skill set and achieved goals.
 
 #### Progress Bars
 
