@@ -11,26 +11,24 @@ visualizations:
 
 This chapter gives an overview on agile project management, in particular the agile management of software development for mixed reality environments.
 All needed concepts are introduced.
-To support agile project management in mixed reality, we have set up an experimental mixed
-reality environment called [VIAProMa](https://github.com/rwth-acis/VIAProMa) (Virtual Immersive Analytics for Project Management).
+To support agile project management in mixed reality, we have set up an experimental mixed reality environment called [VIAProMa](https://github.com/rwth-acis/VIAProMa) (Virtual Immersive Analytics for Project Management).
 
   ![VIAProMa]({{pathToRoot}}/assets/figures/apm/ViaProMa_logo.png)
 
 VIAProMa is a Collaborative Mixed Reality Visualization Framework for Immersive Analytics.
 In the course of the section, we will use examples and screenshots from the VIAProMa environment.
 
-In the traditional waterfall model of software engineering, the different phases of the software engineering process are followed in a sequential manner, 
-usually without returning to a phase already finished.
+In the traditional waterfall model of software engineering, the different phases of the software engineering process are followed in a sequential manner, usually without returning to a phase already finished.
 The output of the early phases are usually documents while software is only produced in later phases.
 With the model design errors can be captured before the implementation phase.
 The technical documentation is part of the plan and because of the structured approach, costs can be estimated quite well.
 Customers however find it difficult to state their requirements in an abstract way.
 The waterfall model does not cater for possibility of changing requirements.
 The waterfall model was modified after a number of issues identified in practice, but in the end, the agile approach became the dominant one.
-Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
 
 ## Agile Development Features
 
+Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
 
  **Individuals and interactions** over processes and tools
 
@@ -310,10 +308,14 @@ Without customers, your business does not exist!
 - Are there any competitors?
 - Why your service is better?
 
+We advise to start every project with both a market study and a technical feasibility study. 
+Students will learn to focus on products not technologies but learn to assess technical risks of the development process.
+
 # DevOps
  
-We have a look at the emerging industry DevOps approach.
- 
+We have a look at the emerging industry DevOps approach. 
+{% cite BWZh15 %} define DevOps as "a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality."
+
 Main question is how to design and develop innovative software artefacts in a large-scale project?
 Observation from industry: A culture of communication between developers and operations
  
@@ -323,9 +325,12 @@ Observation from industry: A culture of communication between developers and ope
 | Specific tools     | Managing systems             |
 | Needs to work fast | Need to keep systems running |
  
+## DevOps Toolchain
+
+A toolchain is a set of tools used for covering all DevOps categories.
 
 Integration, automation, and monitoring scales.
-Rapidly producing software artifacts in an agile way.
+Agile and DevOps serve complementary roles: rapidly producing software artifacts in an agile way (DevOpsUse).
 
 ## Requirements Engineering
 
@@ -339,6 +344,8 @@ Social features like *likes* and *comments* enable the communication between end
 Open APIs to embed it into apps.
 
 ## DevOpsUse
+
+![DevOpsUse]({{pathToRoot}}/assets/figures/apm/DevOpsUse.png)
 
 - Scalable and sustainable methodology for integration
   - Software development
