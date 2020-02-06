@@ -64,7 +64,7 @@ One can also use Boolean operations in order to create complex 3D shapes from mu
 Boolean operations are heavily used in CAD where they are defined on volumes.
 The volumes are combined using operations known from Boolean algebra, e.g. OR, AND or XOR.
 
-Intuitively, the for every point in space and every base volume, a truth value is determined.
+Intuitively, the for every point in space and every base volume, a truth value is determined {% cite Fole10 %}.
 It states if the point is part of the volume.
 By combining the truth values for this point using a Boolean operator, one can determine if the point is part of the resulting volume.
 For instance, the union operation combines the points of the base volumes using the OR-operator.
