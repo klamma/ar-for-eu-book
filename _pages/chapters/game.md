@@ -6,9 +6,17 @@ categories: chapter
 visualizations:
 ---
 
-## Game Design
+## Gamification
+
+Gamification describes the concept of using elements from game design in other applications to motivate the user {%cite DDKN11 %}.
+Its objective is to increase the intristic motivation of a user.
+Applications which support long-lasting or ongoing activities benefit from this concept.
+Examples include learning applications such as language learning apps and introduction guides to programming.
+Other applications increase the user's engagement, e.g. in the administration of data sets where a lot of manual work is required to improve the quality of the data source.
 
 ### Elements
+
+Typical elements from game design for gamification include scoring schemes (points, levels), awards (achievements, badges, streaks), competition (highscores, leaderboards, challenges).
 
 #### Points
 
@@ -18,6 +26,16 @@ Players gain points for the successful completion of tasks.
 Points can be integrated with more complex systems as a progress indicator or currency.
 For instance, players can use the points as a currency, e.g. to buy virtual items or unlock nodes in skill trees.
 Additionally, level systems, leader boards and high scores rely on points to indicate the progress and performance of the player.
+
+An example for point-based systems can be found on the Q&A platform [Stackoverflow](https://stackoverflow.com/help/whats-reputation) or the social network app [Jodel](https://jodel.com/) where users can gain points based on their contributions to the community.
+These systems contain a voting mechanism where members of a community can award points or deduct them based on the helpfulness of a post.
+Additionally, own actions also affect the points score, e.g. a small amount of points are deducted if a user downvotes a post.
+A difference between Stackoverflow and Jodel lies in the fact that the reputation-points of Stackoverflow are visible to all users to establish a status in the community whereas Jodel's Karma-points are private and serve no further purpose.
+
+Another use of the point system can be observed in the language learning app [Duolingo](https://en.duolingo.com/).
+Learners can gain experience points (XP) for finishing lessons.
+Bonus XP are awarded for successive correct answers within one session.
+XP show the amount of dedication which went into learning a language at once glance.
 
 #### Levels
 
@@ -47,7 +65,7 @@ If the lower-ranked person wins, the two opponents switch places in the ranking.
 Otherwise, the ranking stays as it is and the lower-ranked person may not challenge the same opponent again for some time.
 Highscore tables enable passive competition whereas leaderboards create active competition.
 With highscores, people play on their own and try to beat the current highscore.
-To progress on leaderboards, the participants are acutally playing against one another in challenges or matches.
+To progress on leaderboards, the participants are actually playing against one another in challenges or matches.
 
 #### Achievements
 
@@ -77,10 +95,6 @@ This way, it acts as a tool to provide feedback and motivation to the user.
 It focuses the user's attention on a goal which can be reached after completing all necessary tasks.
 
 #### Quests
-
-## Gamification
-
-Gamification describes the concept of using elements from game design in other applications to motivate the user {%cite DDKN11 %}.
 
 ### Gamification Service
 
