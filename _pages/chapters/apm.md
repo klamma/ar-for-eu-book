@@ -459,3 +459,8 @@ Also provide sufficient API/code documentation and an end-user guide.
 - Please act as a company or a start-up presenting to possible customers.
   Do not present a technology but a product.
   If you have questions concerning the documents and/or the presentation please contact us.
+
+## Instructions for Installing VIAProMa
+
+Instructions for installing VIAProMa can be found [here] (https://github.com/rwth-acis/VIAProMa). 
+
