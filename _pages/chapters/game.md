@@ -41,24 +41,36 @@ XP show the amount of dedication which went into learning a language at once gla
 
 Levels group players based on their success and progress in a game.
 Generic levels are labelled numerically, starting at level 1, and increase with the player's progress.
-However, levels can also be named according to the general story of the game, e.g. "Apprentice" or "Master Magician".
+However, levels can also bear names according to the general story of the game, e.g. "Apprentice" or "Master".
 
-Levels can have different purposes.
-In single player games they can determine the difficulty of the player's computer-controlled opponents.
+Levels act as a form of motivation.
+Each level can be seen as a milestone which the user wants to reach.
+If the user accumulates points, point thresholds can determine the transition points from one level to next higher level.
+Level progression can also be determined based on tasks or other criteria.
+If levels are publicly visible, they can also act as a social rank.
+
+In single player games also act as a metric to adapt the difficulty of the player's computer-controlled opponents.
 For instance, difficult quests only become available once the player has reached a certain level.
 This avoids that an inexperienced user gets frustrated with the game by facing a demanding task early on.
 The difficulty of the game can increase while the player levels up based on the assumption that the user got acquainted to the game's mechanics and controls.
-Multiplayer games can implement a matchmaking logic which avoids that low-level beginners have to play against experienced players on a higher level.
-This is again a mean to minimize frustration and balance the difficulty.
+In a similar way, multiplayer games can implement a matchmaking logic which avoids that low-level beginners have to play against experienced players on a higher level.
 
-Apart from this, levels can also act as a form of motivation.
+[Todoist](https://get.todoist.help/hc/de/articles/206209959-Karma) is an example of a gamified application which uses levels.
+Users earn karma points by completing todo items and meeting productivity goals.
+Points are lost if tasks are overdue.
+Based on the number of points, the app classifies users in one of eight levels, ranging from "Beginner" to "Enlightened".
+
+Another example can be found in the Starbucks app which uses a level-based system to increase customer's brand loyalty.
+Customers can collect stars and if they reach the number of stars for the next level, they get a reward.
+
 
 #### Highscores & Leaderboards
 
 Highscores and leaderboards are used in games to create social competition.
 Players become aware of each other and can compare their own performance to others.
 The highscore describes the best result any player has every achieved.
-More player results are available on highscore tables which show the top results of the best **n** players.
+More player results are available on highscore tables which show the top results of the best *n* players.
+
 In contrast to this, leaderboards are similar to a league system.
 There can be multilple tiers in which participants can challenge each other to matches.
 If the lower-ranked person wins, the two opponents switch places in the ranking.
@@ -66,6 +78,16 @@ Otherwise, the ranking stays as it is and the lower-ranked person may not challe
 Highscore tables enable passive competition whereas leaderboards create active competition.
 With highscores, people play on their own and try to beat the current highscore.
 To progress on leaderboards, the participants are actually playing against one another in challenges or matches.
+
+Duolingo implements a [league system](https://forum.duolingo.com/comment/30433123/Leaderboards-now-on-all-Android-devices) with five different levels.
+All users start in a bottom league, called Bronze League.
+Each league cycle starts on Monday by matching around 50 participants of the same level league.
+During the week, learners accumulate experience points from lessons and other learning activities in the app.
+All users in the same league are sorted based on the amount of experience points and changes are reflected in real-time.
+The app also sends push notifications if a user was overtaken by another competitor.
+On Sunday, the final results are evaluated.
+The top ten learners, are promoted to the next higher league and the last five participants are demoted to a lower league.
+
 
 #### Achievements
 
@@ -108,10 +130,6 @@ The badges are added to the user's inventory and can be displayed to others, e.g
 Users who view the badge can verify that it is valid due to a certification and credential system.
 The badges consist of an image which is stored as a PNG-file.
 In addition to this, meta data can be added to ship more information with the badge.
-
-### Examples
-
-#### Duolingo
 
 ### AR Examples
 
