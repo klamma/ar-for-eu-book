@@ -56,7 +56,7 @@ The difficulty of the game can increase while the player levels up based on the 
 In a similar way, multiplayer games can implement a matchmaking logic which avoids that low-level beginners have to play against experienced players on a higher level.
 
 [Todoist](https://get.todoist.help/hc/de/articles/206209959-Karma) is an example of a gamified application which uses levels.
-Users earn karma points by completing todo items and meeting productivity goals.
+Users earn karma points by completing to-do items and meeting productivity goals.
 Points are lost if tasks are overdue.
 Based on the number of points, the app classifies users in one of eight levels, ranging from "Beginner" to "Enlightened".
 
@@ -72,7 +72,7 @@ The highscore describes the best result any player has every achieved.
 More player results are available on highscore tables which show the top results of the best *n* players.
 
 In contrast to this, leaderboards are similar to a league system.
-There can be multilple tiers in which participants can challenge each other to matches.
+There can be multiple tiers in which participants can challenge each other to matches.
 If the lower-ranked person wins, the two opponents switch places in the ranking.
 Otherwise, the ranking stays as it is and the lower-ranked person may not challenge the same opponent again for some time.
 Highscore tables enable passive competition whereas leaderboards create active competition.
@@ -105,7 +105,7 @@ They are digital property which means that these digital objects are associated 
 Badges certify a success to its owner.
 They can be seen as a materialized version of an abstract goal, e.g. to learn a new skill.
 
-There is also a social component to badges since they can be exhibited and are associtated to their owner.
+There is also a social component to badges since they can be exhibited and are associated to their owner.
 A collection of badges can show others the skill set and achieved goals.
 
 #### Progress Bars

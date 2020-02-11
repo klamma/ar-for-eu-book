@@ -42,7 +42,7 @@ We like to thank the many contributors of this open educational book about augme
 ## Reading Suggestions
 
 If you want to start with a tutorial on the Mixed Reality toolkit from Microsoft you may start with 
-[Configuring Windows 10 for Unity and the MRDK](/ar-for-eu-book/chapter/holotoolkit/) and/or [Setting up the MRDK](/ar-for-eu-book/chapter/arsdk/)
-and then go to [Unity with the MRDK](/ar-for-eu-book/chapter/engines/).
+[Configuring Windows 10 for Unity and the MRTK](/ar-for-eu-book/chapter/holotoolkit/) and/or [Setting up the MRTK](/ar-for-eu-book/chapter/arsdk/)
+and then go to [Unity with the MRTK](/ar-for-eu-book/chapter/engines/).
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

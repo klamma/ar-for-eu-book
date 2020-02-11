@@ -146,7 +146,7 @@ This action adds a `CompoundButtonMesh` component and the `CompoundButton`compon
 In the `CompoundButtonMesh`, a target transform and a renderer need to be set.
 Next to these properties, a dropdown menu can be found which says "(None)" at the moment.
 By clicking on it, a selection of the transform and renderers on the GameObject or on any of its children is presented and can be selected.
-This means that the visibile mesh can be separate from the object which slides the button back and forth.
+This means that the visible mesh can be separate from the object which slides the button back and forth.
 For instance, a cube can be used as a background and text can be placed on the surface of the cube to label the button.
 In order to move the cube and the text, they are organized as children of an empty GameObject.
 If this empty object is moved back and forth to simulate a button press, the cube and the text will move by the same amount, too.
@@ -169,7 +169,7 @@ The ```CompoundButtonText``` can also be used to unify the text appearance on a 
 In the inspector, a profile can be selected in the part of the inspector which has a purple background.
 The profile specifies the font style and size, as well as its color.
 By reusing the profile on all buttons in the application, they will all be set up with the same text style.
-However, one can also overwrite single properties of the profile with button-specifc values.
+However, one can also overwrite single properties of the profile with button-specific values.
 To do so, the checkmarks next to "Overwrite Font Style", "Overwrite Anchor", Overwrite Size" can be set.
 
 **Compound Button Icon**
@@ -182,7 +182,7 @@ The component requires an icon profile.
 This profile contains a collection of textures.
 By default, the profile is set up with slots for special purpose textures, e.g. for navigation or actions.
 Further down, one can also define custom icons.
-Apart from the textures, the profile also provides furhter settings in the "DEFAULTS" section.
+Apart from the textures, the profile also provides further settings in the "DEFAULTS" section.
 Here, one can define a standard icon which is used if the selected icon cannot be found.
 In this section, the icon's material can be selected.
 The script will apply it to the referenced mesh renderer.

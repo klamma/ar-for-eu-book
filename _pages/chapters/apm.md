@@ -178,7 +178,7 @@ The three columns have different colours, which can be chosen from the menu.
  - E.g. Google's Java style guide
    - [https://google-styleguide.googlecode.com/svn/trunk/javaguide.html]
    
-### Corde Review
+### Code Review
 
 - Improve communication in teams
 - Goal: team members understand each other's code
@@ -251,7 +251,7 @@ For market analysis, it is important to come up with numbers.
 - How many potential buyers are there?
 - How many potential customers will be interested in my product?
 A market analysis can also include an analysis of the competitors. 
-- Who are the companies offering a similiar product or a service? 
+- Who are the companies offering a similar product or a service? 
 - What do they charge for their product?
 - What are their product features?
 
