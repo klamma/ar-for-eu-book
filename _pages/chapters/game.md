@@ -88,7 +88,6 @@ The app also sends push notifications if a user was overtaken by another competi
 On Sunday, the final results are evaluated.
 The top ten learners, are promoted to the next higher league and the last five participants are demoted to a lower league.
 
-
 #### Achievements
 
 Achievements are virtual trophies.
@@ -104,9 +103,17 @@ Similar to achievements, games can also issue badges to the player.
 They are digital property which means that these digital objects are associated with an owner.
 Badges certify a success to its owner.
 They can be seen as a materialized version of an abstract goal, e.g. to learn a new skill.
+Badge systems can be designed in a way that the user is able to see which badges are avaiable and how they can be earned.
+Another option is to show available badges but to not tell the user how they are earned.
+Instead, the user has to figure this out, e.g. from the title or description of the badge.
+Furthermore, all badges which have not yet been earned can be hidden.
+This can increase the user's interest since it is not clear in advance when a badge will be awarded.
+If the system issues unexpected badges, e.g. for submitting the correct solution to an assignment well before the deadline, this can cause the user to explore the application in order to find further badges.
 
 There is also a social component to badges since they can be exhibited and are associated to their owner.
-A collection of badges can show others the skill set and achieved goals.
+A collection of badges can show others the acquired skill set and achieved goals.
+
+
 
 #### Progress Bars
 
@@ -121,7 +128,7 @@ It focuses the user's attention on a goal which can be reached after completing 
 Another way to engage users in a game or gamified application is to use quests.
 Quests pose challenges and objectives to the user and are usually associated with a reward.
 Rewards such as achievements, badges, points or levels are unlocked once the quest is complete.
-To give a deeper meaning to quests, they can be coupled with a story {% cite Howa08b}.
+To give a deeper meaning to quests, they can be coupled with a story {% cite Howa08b %}.
 The user has to fulfill a series of smaller quests to progress in the story.
 A series of quests can be designed linearly so that one quest only becomes available after the preceeding quest has been solved.
 However, it is also possible to design multiple parallel storylines with their own quests, e.g. a main story and some smaller side stories.
