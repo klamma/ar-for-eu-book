@@ -6,6 +6,8 @@ categories: chapter
 visualizations:
 ---
 
+{% include autoRelativePath.html %}
+
 ## Gamification
 
 Gamification describes the concept of using elements from game design in other applications to motivate the user {%cite DDKN11 %}.
@@ -113,7 +115,7 @@ If the system issues unexpected badges, e.g. for submitting the correct solution
 There is also a social component to badges since they can be exhibited and are associated to their owner.
 A collection of badges can show others the acquired skill set and achieved goals.
 
-
+{% include scaledImage.html url="/assets/figures/game/badge.svg" base=pathToRoot description="An example badge image" width="100px" %}
 
 #### Progress Bars
 
