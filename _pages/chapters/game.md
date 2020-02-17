@@ -152,9 +152,22 @@ In addition to this, meta data can be added to ship more information with the ba
 
 ### AR Examples
 
+There are also examples of gamified AR applications.
+
 #### Pokemon Go
 
 #### GaMR
+
+The Gamification Framework for Mixed Reality Training (GaMR) provides a learning environment for studying 3D models.
+One use-case are anatomy courses where students need to understand three-dimensional anatomical structures and recall the correct names of parts.
+To support this activity, lecturers can set up 3D models in the framework.
+Once a model is uploaded, can be accessed by the frontend on the Microsoft HoloLens or HTC Vive.
+The users of the framework are divided into the two roles of lecturers and students.
+They are both able to view the model in this immersive environment.
+In addition to this, they can both place annotations on the model.
+An annotation consists of a marker which is placed on the surface of the 3D model and user-defined text.
+The text is shown in a window next to the marker if the annotation is selected.
+Lecturers are also able to set up multiple quizzes for each 3D model.
 
 ## Serious Games
 
