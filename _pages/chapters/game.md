@@ -105,6 +105,7 @@ Similar to achievements, games can also issue badges to the player.
 They are digital property which means that these digital objects are associated with an owner.
 Badges certify a success to its owner.
 They can be seen as a materialized version of an abstract goal, e.g. to learn a new skill.
+Badges can act as a motivational mean, a pedagogical tool or a digital certificate {% cite APBu14 %}.
 Badge systems can be designed in a way that the user is able to see which badges are avaiable and how they can be earned.
 Another option is to show available badges but to not tell the user how they are earned.
 Instead, the user has to figure this out, e.g. from the title or description of the badge.
@@ -113,9 +114,14 @@ This can increase the user's interest since it is not clear in advance when a ba
 If the system issues unexpected badges, e.g. for submitting the correct solution to an assignment well before the deadline, this can cause the user to explore the application in order to find further badges.
 
 There is also a social component to badges since they can be exhibited and are associated to their owner.
-A collection of badges can show others the acquired skill set and achieved goals.
+A collection of badges can show others the acquired skill set and achieved goals similar to a certificate {% cite APBu14 %}.
 
 {% include scaledImage.html url="/assets/figures/game/badge.svg" base=pathToRoot description="An example badge image" width="100px" %}
+
+Examples of badges can be found on Stackoverflow.
+It issues a [series of badges](https://stackoverflow.com/help/badges) to reward certain behaviour, e.g. asking good questions which are liked by many people or answering many questions.
+In this context, the badges are used as a motivational mean but also as a social certification tool.
+Since the badges are exhibited on the profile page and appear together with asked questions, other users can immediately identify very active and helpful community members.
 
 #### Progress Bars
 
@@ -141,12 +147,14 @@ Once a decision is made, the other options become unavailable and the user can f
 
 ### Open Badges
 
-The Open Badges project is a gamified certification system by the Mozilla Foundation.
+The Open Badges project is a gamified certification system {% cite APBu14 %}.
 It allows website developers to issue badges to its visitors for performing certain tasks.
 The system is designed in a way that the badges are standardized so that they can be collected on different sites and from different institutions.
 Badges are e.g. used by schools, universities or in online MOOCS to certify the attendance to courses or the acquisition of a certain skill.
+In addition to this, badges can be associated with each other and can be stacked, even if they were issued by other institutions.
+This way, the progress on courses can be divided into milestones which are realized as stackable badges.
 The badges are added to the user's inventory and can be displayed to others, e.g. in a CV.
-Users who view the badge can verify that it is valid due to a certification and credential system.
+The difference to other digital badges is that users who view the badge can verify that it is valid due to a certification and credential system.
 The badges consist of an image which is stored as a PNG-file.
 In addition to this, meta data can be added to ship more information with the badge.
 
