@@ -53,12 +53,48 @@ In turn, A-Frame uses three.js to provide an HTML-based description language for
 
 ## WebGL
 
-[WebGL] (https://get.webgl.org/) is a cross-platform, royalty-free API used to create 3D graphics in a Web browser.
+[WebGL](https://get.webgl.org/) is a cross-platform, royalty-free API used to create 3D graphics in a Web browser.
 
 ## three.js
 
-[three.js] (https://threejs.org/) is a popular JavaScript framework for displaying 3D content on the web.
+[three.js](https://threejs.org/) is a popular JavaScript framework for displaying 3D content on the web.
 
 ## A-Frame
 
-[A-Frame] (https://aframe.io/) is a web framework for building virtual reality experiences.
+[A-Frame](https://aframe.io/) is a web framework for building virtual and augmented reality experiences.
+
+**Example of an A-Frame**:
+
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script>
+    AFRAME.registerComponent('hide-in-ar-mode', {
+        // Set this object invisible while in AR mode.
+        init: function() {
+            this.el.sceneEl.addEventListener('enter-vr', (ev) => {
+                this.wasVisible = this.el.getAttribute('visible');
+                if (this.el.sceneEl.is('ar-mode')) {
+                    this.el.setAttribute('visible', false);
+                }
+            });
+            this.el.sceneEl.addEventListener('exit-vr', (ev) => {
+                if (this.wasVisible) this.el.setAttribute('visible', true);
+            });
+        }
+    });
+</script>
+<a-scene style="width: 500px; height: 500px" embedded>
+    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+    <a-camera position="0 1.2 0"></a-camera>
+    <a-sky color="#ECECEC" hide-in-ar-mode></a-sky>
+</a-scene>
+
+The WebXR demo can be viewed on desktop browsers, as well as mobile browsers.
+If a VR device is connected to the PC, it automatically activates once this page is loaded and the view is changed if the user clicks on the VR button.
+To return to the view in the browser, press escape.
+If no VR device is present, the VR button instead toggles a fullscreen view of the 3D scene.
+On smartphones, the VR button also works and switches to a stereoscopic view which can be used e.g. with Google Cardboard.
+On newer smartphones which have ARCore or ARKit installed and with Chrome Browser version 79 or higher, an AR button will appear next to the VR button.
+If the user clicks on it, the phone's camera will activate and the virtual objects are integrated into the camera stream.
