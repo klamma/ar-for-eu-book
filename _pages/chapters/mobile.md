@@ -16,9 +16,9 @@ To choose a method for mobile AR, the requirements, usage scenarios, target audi
 
 ### Image Targets
 
-### Lenses
+### Lenses & AR Filters
 
-Social media applications like Snapchat and Instagram provide AR-like digital effects which can be applied to images, videos and the real-time camera preview.
+Social media applications like [Snapchat](https://support.snapchat.com/en-US/article/face-world-lenses) and [Instagram]() provide AR-like digital effects which can be applied to images, videos and the real-time camera preview.
 These kinds of effects are especially taylored towards "selfies" since they rely on computer vision techniques like facial detection.
 Facial landmarks like the eyes our mouth are detected in real-time in the camera feed.
 With this information, the position and orientation of the face can be determined.
@@ -30,6 +30,8 @@ Another class of effects are  distortions of the original camera image.
 These distortions e.g. allow to increase the size of the eyes to achieve a cartoon effect.
 Advanced versions of the filters can also be controlled by facial expressions.
 In these cases, blinking or opening the mouth can trigger a transition to a different filter or can trigger an animation.
+
+AR filters can for instance be created with [ARCore](https://developers.google.com/ar/develop/java/augmented-faces), [ARKit](https://developer.apple.com/documentation/arkit/tracking_and_visualizing_faces) or [Spark AR Studio](https://sparkar.facebook.com/ar-studio/).
 
 ### Scene Tracking
 
