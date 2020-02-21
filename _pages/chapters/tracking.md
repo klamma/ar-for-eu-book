@@ -29,7 +29,7 @@ One possibility is to use visible or invisible light for tracking objects.
 
 With opto-electronical tracking, markers are placed on the target.
 For detecting the markers, at least two (IR) cameras are placed around the subject.
-Computer vision software can isolate the markers on the seen images and track their position on the 2D image.
+Computer vision software can isolate the markers on the seen images and track their position on the 2D image {% cite Guer05 %}.
 Based on the known static position of the cameras, the 3D position of the marker can be reconstructed.
 This is done by an algorithm which shoots virtual rays into the scene.
 The rays start at the position of the camera and pass through the detected 2D point in the image.
@@ -39,7 +39,7 @@ In practice, the midpoint of this gap is calculated and the final position of th
 
 Opto-electronical tracking can be found in an active and a passive setup.
 Their main difference is the origin of the light which is detected by the camera.
-Passive opto-electronical tracking uses markers with a special surface which is highly reflective for infrared light.
+Passive opto-electronical tracking uses markers with a special surface which is highly reflective for infrared light {% cite Guer05 %}.
 Infrared lamps placed in the surrounding point towards the target and illuminate the markers.
 The reflection of the IR light will reach the cameras and this way, the markers become visible to the cameras.
 In contrast to this, the markers in active opto-electronical tracking emit light, e.g. by using small infrared LEDs.
@@ -52,7 +52,7 @@ With passive tracking, it suffices to use plastic balls with a special surface p
 This way, a passive tracking setup is non-intrusive.
 In contrast to this, with active tracking the marker suit can be uncomfortable to wear and it can restrict movements due to the cables and battery.
 
-Generally, the high accuracy and a low latency of opto-electronical tracking systems are beneficial.
+The high accuracy and a low latency of opto-electronical tracking systems are beneficial.
 However, occlusion can create a problem.
 Since the technology is light-based, markers can only be tracked if they are visible to at least two cameras at once.
 Challenges arise from the fact that one marker alone can only convey positional data but not the orientation of the target.
@@ -63,13 +63,20 @@ Actors are equipped with markers and perform movements on a stage which is surro
 
 ### Structured Light
 
-The technique of structured light tracking is used by the Microsoft Kinect and the Microsoft HoloLens.
+The technique of structured light tracking is for instance used by the Microsoft Kinect.
 This technique requires a light source and a camera.
 Both are typically operating in the infrared-range of light.
-The light is occluded in parts so that it emits a characteristic pattern, e.g. stripes or a random point pattern.
-In a calibration step, the camera views this pattern on a flat surface and it is stored in the application.
-If the tracker now looks at arbitrarily shaped surfaces, the pattern is warped according to the shape.
-From this disturbance, depth information can be calculated and so 3D coordinates can be determined for all points in the camera image.
+The light is occluded in parts so that it emits a characteristic pattern, e.g. stripes or a random point pattern {% cite ScSz03 %}.
+In a calibration procedure, the camera's characteristics are determined regarding its mapping of a 3D point to a pixel in 2D {% cite Geng11 %}.
+This is necessary since cameras can distort images.
+As an example, wide-angle cameras show straight lines as curves.
+Additionally, a calibration of the projector's brightness and emission characteristics is necessary.
+In the latter calibration step, the already calibrated camera views the projected pattern on a flat surface.
+The position and rotation of the surface is known and by comparing the original pattern to the detected, undistorted pattern, one can calculate distortions which are introduced by the projector.
+
+After that the tracking device can be used to determine the shape of surfaces.
+This can be done by determining how the projected pattern is warped by the shape of the surface.
+From this disturbance, depth information can be calculated and so 3D coordinates can be determined for all points in the camera image {% cite Geng11 %}.
 In combination with shape recognition software, persons can be tracked.
 The information can be used to overlay a virtual skeleton over a pose.
 Thus, the technique can be used for motion capture.
