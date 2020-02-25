@@ -88,7 +88,7 @@ The book offers a comprehensive and introductory perspective on the topic Augmen
 
 * AR SDKs
 * Configuring Windows for Development with Hololens (in progress)
-* Unity / Unreal Engines (in progress)
+* Unity / Unreal Engine (in progress)
 * 3D Modeling & Rendering (in progress)
 * Spatial Audio
 * Interactive Graphics and Sound Design

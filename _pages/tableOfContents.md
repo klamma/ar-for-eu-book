@@ -31,7 +31,7 @@ permalink: /toc/
 
 - [AR SDKs](/ar-for-eu-book/chapter/arsdk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/holotoolkit/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- [Unity / Unreal Engines](/ar-for-eu-book/chapter/engines/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [Unity / Unreal Engine](/ar-for-eu-book/chapter/engines/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [3D Modeling & Rendering](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Spatial Audio](/ar-for-eu-book/chapter/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Interactive Graphics and Sound Design](/ar-for-eu-book/chapter/intdesign/) {% include badge.html base=pathToRoot badgeName="todo" %}

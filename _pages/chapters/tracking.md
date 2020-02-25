@@ -6,6 +6,8 @@ categories: chapter
 visualizations:
 ---
 
+{% include autoRelativePath.html %}
+
 # Tracking Technologies
 
 Tracking technologies are required in order to provide the position and rotation of a real object to the computer system.
@@ -83,6 +85,8 @@ Thus, the technique can be used for motion capture.
 Additionally, it is also used for 3D scanning, e.g. with the Microsoft HoloLens to create a 3D model of the environment.
 An advantage for 3D scanning is that the technique can be combined with a standard camera which captures visible light.
 This way, color information can be captured and applied to a scanned model as a texture.
+
+{% include image.html url="/assets/figures/tracking/StructuredLight.png" base=pathToRoot description="Structured light which is projected down from above reveals the shape of the half-sphere" %}
 
 ### RGB Cameras
 
