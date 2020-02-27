@@ -446,6 +446,17 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 
 #### Exercise: Texture Baking in Blender
 
+**Baking Lighting Information**
+
+1. Create an interesting scene in Blender with some basic objects.
+   To add objects to the scene, press `Shift + A` and add meshes such as a cube, sphere or monkey.
+   Create a ground by adding a plane.
+   To arrange objects, press the `G` key and then move the mouse.
+   The movement operation can be confirmed by left-clicking and canceled by right-clicking.
+2. Select the sphere and monkey objects by left clicking on them (you can also select multiple objects by holding down `Shift` while left clicking).
+   After that perform a right-click and select *Shade Smooth* which gets rid of their facetted look.
+   With the monkey selected, press `Ctrl + 2` to add a subdivision surface modified of level 2 to the monkey.
+
 ## Computer-Aided Design (CAD)
 
 ### CAD Modeling Tools
