@@ -429,6 +429,21 @@ To achieve this, you will texture paint the sides of a cube so that they show th
 
 ### Texture Baking
 
+Textures can also be baked by 3D programs.
+In this process, information are calculated and stored in a texture.
+This technique can be used to improve the performance of a real-time applications if the lighting situation never changes.
+The 3D program can pre-calculate the lighting situation once and write the results for each object into textures.
+After that, the textures are applied to the 3D objects.
+The scene does not require any light sources anymore since all information about shadows and surface brightnesses are already included in the textures on the objects.
+Since the baking algorithm can use a raytracing renderer, the baked results can be more realistic than the real-time version.
+For instance, indirect lighting by light which was reflected by other surfaces can be calculated in an accurate manner.
+
+Texture baking is also used to create normal maps.
+In this workflow, a 3D artist creates a high-resolution model, e.g. by sculpting it.
+After that, it is retopologized to a low-resolution model which is suitable for real-time rendering.
+In the reptopogy step, a lot of fine details are lost.
+They can be recovered by baking the normals of the high-resolution mesh onto the low-resolution mesh.
+
 #### Exercise: Texture Baking in Blender
 
 ## Computer-Aided Design (CAD)
