@@ -456,6 +456,21 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 2. Select the sphere and monkey objects by left clicking on them (you can also select multiple objects by holding down `Shift` while left clicking).
    After that perform a right-click and select *Shade Smooth* which gets rid of their facetted look.
    With the monkey selected, press `Ctrl + 2` to add a subdivision surface modified of level 2 to the monkey.
+   ![Scene Setup]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/1SceneSetup.png)
+3. Switch the render engine from Eevee to Cycles in the toolbar.
+   Eevee does not produce accurate results since it is optimized for real-time performance with simplifications in the shading process.
+   Cycles is an unbiased raytracing engine which produces physically accurate results with regard to reflections and indirect light bounces.
+   ![Switch Engine]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/SwitchEngine.png)
+4. The lighting should also be adapted so that we get interesting illuminations and shadows.
+   Add an area light and place it so that the monkey and sphere cast shadows onto the cube object.
+   You can also place a point lamp on the opposite side of the objects.
+   An interesting effect can be achieved by tinting the color of the lights so that they are not completely white anymore.
+   A live-preview of the lighting situation can be seen by pressing `Z` and selecting *Rendered*.
+   In this preview mode, all viewport operations such as moving the view, moving objects or changing the light color and intensity are still possible.
+5. Add materials to the objects and give them some distinct colors.
+   ![Render Preview]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/2RenderedPreview.png)
+6. This concludes the scene setup.
+   We can now proceed to the baking preparations.
 
 ## Computer-Aided Design (CAD)
 
