@@ -436,7 +436,10 @@ The 3D program can pre-calculate the lighting situation once and write the resul
 After that, the textures are applied to the 3D objects.
 The scene does not require any light sources anymore since all information about shadows and surface brightnesses are already included in the textures on the objects.
 Since the baking algorithm can use a raytracing renderer, the baked results can be more realistic than the real-time version.
-For instance, indirect lighting by light which was reflected by other surfaces can be calculated in an accurate manner.
+Real-time render engines only use approximations of light effects, e.g. to calculate shading and shadows.
+In comparison to this, raytracing algorithms simulate individual rays of lights with their reflections and refractions to obtain realistic lighting information.
+For instance, indirect lighting by light which was reflected by other surfaces can be calculated in an accurate manner with a raytracing engine.
+Another example are caustics which are produced by transparent objects, e.g. lenses which focus light on one point.
 
 Texture baking is also used to create normal maps.
 In this workflow, a 3D artist creates a high-resolution model, e.g. by sculpting it.
