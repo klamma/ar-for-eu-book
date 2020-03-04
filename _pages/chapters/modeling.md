@@ -472,8 +472,44 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
    In this preview mode, all viewport operations such as moving the view, moving objects or changing the light color and intensity are still possible.
 5. Add materials to the objects and give them some distinct colors.
    ![Render Preview]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/2RenderedPreview.png)
-6. This concludes the scene setup.
-   We can now proceed to the baking preparations.
+6. As the final step of the scene setup, make sure that all 3D objects in the scene are UV unwrapped.
+   In Blender 2.8 the primitive objects should be unwrapped automatically.
+   Select an object and go to the *UV Editing* tab and check if geometry appears on the left in the UV editor.
+   To switch between objects, exit the edit mode by hitting `Tab` and select the next object.
+   After that, enter the edit mode again by pressing `Tab` again.
+7. We can now proceed to the baking preparations.
+   Each object needs a texture to which the baked data can be written.
+   In this case, we will use separate textures but it is also possible to combine multilple objects in one texture if their UV-layouts are non-overlapping.
+   Go to the *UV Editing* tab again.
+   In the UV editor on the left, select the menu entry *Image > New* to create a new texture.
+   Give it a descriptive name, e.g. *cube_bake* and select a high resolution, e.g. 1024px x 1024px or 2024px x 2024px.
+   The color and type do not matter since we will overwrite the texture anyway.
+8. Repeat the previous step for each object in the scene which should be baked.
+   A created texture is not connected to any object so you can create all textures with one object selected.
+   There is no need to select the object to which the texture should be applied first.
+   Remember to add a texture for the ground plane since this will likely be the most interesting bake.
+9. The next step is to connect each of the textures with the target object.
+   This is done in the shader editor.
+   Go to the *Shading* tab.
+   Select the object which should be connected to a texture so that its material nodes are revealed in the bottom panel.
+   With the mouse hovering over this material node panel, press `Shift + A` to show the menu for new nodes.
+   Select *Texture > Image Texture* to add an image texture node.
+10. Do *not* connect the image texture node to anything, otherwise there will be recursive issues in the baking process where Blender tries to evaluate the texture for the material and writes on it at the same time.
+    Instead, go to the small dropdown on the Image Texture node next to the *"+ New"* button and select the texture that you just created for the object.
+	Repeat this step for every object.
+	![Material Setup]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/MaterialSetup.png)
+11. Click on the tab with the camera icon in the inspector on the right to open the render settings.
+    We need to set the quality settings for the bake to avoid a grainy bake.
+	Exand the first section which is called "Sampling".
+	It determines how many rays the render engine casts into the scene.
+	This value also applies to baking processes.
+	In general, higher values mean that the result will be less grainy since the brightness values of more rays can be averaged.
+	The downside is that the additional rays need to be calculated which increases bake times.
+12.	We are now ready to bake.
+    Expand the third-to-last section in the inspector.
+	It is called "Bake".
+	Make sure that the bake type is set to *Combined* and that everything is checked underneath *Influence*.
+	Click the button *"Bake"*.
 
 ## Computer-Aided Design (CAD)
 
