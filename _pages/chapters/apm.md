@@ -212,7 +212,7 @@ There is even more than that.
 If you ever wondered why you have Facebook app updates multiple times a day, here is the answer.
 
 ### Continuous Delivery and Continuous Deployment
-
+**Continuous practices**, i.e., continuous integration, delivery, and deployment, are the software development industry practices that enable organizations to frequently and reliably release new features and products {% cite SAZh17 %}.
 Continuous Delivery is about removing stress at the *last mile*.
 
 - Continuous Integration is just the first steps
@@ -462,5 +462,5 @@ Also provide sufficient API/code documentation and an end-user guide.
 
 ## Instructions for Installing VIAProMa
 
-Instructions for installing VIAProMa can be found [here] (https://github.com/rwth-acis/VIAProMa). 
+Instructions for installing VIAProMa can be found [here](https://github.com/rwth-acis/VIAProMa). 
 
