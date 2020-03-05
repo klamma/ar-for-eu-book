@@ -471,7 +471,12 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
    A live-preview of the lighting situation can be seen by pressing `Z` and selecting *Rendered*.
    In this preview mode, all viewport operations such as moving the view, moving objects or changing the light color and intensity are still possible.
 5. Add materials to the objects and give them some distinct colors.
-   ![Render Preview]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/2RenderedPreview.png)
+   The materials can be set in the inspector on the right on the small tab with the red and black ball icon (not the globe icon).
+   Add a new material slot and change the color in the field which is labeld *Base Color*.
+   You can also give an object a glass material to create intricate caustics on the floor.
+   To change the material type to glass, select the dropdown menu which is labeled *Surface* and is currently set to *Principled BSDF*.
+   Then select the *Glass BSDF* option.
+   ![Render Preview]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/RenderedPreview.png)
 6. As the final step of the scene setup, make sure that all 3D objects in the scene are UV unwrapped.
    In Blender 2.8 the primitive objects should be unwrapped automatically.
    Select an object and go to the *UV Editing* tab and check if geometry appears on the left in the UV editor.
@@ -505,11 +510,23 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 	This value also applies to baking processes.
 	In general, higher values mean that the result will be less grainy since the brightness values of more rays can be averaged.
 	The downside is that the additional rays need to be calculated which increases bake times.
+	For the given example, a value of 1024 works well.
 12.	We are now ready to bake.
+    Select the object which should be baked.
+	The baking process will write on the image texture which is selected in the node setup.
+	Hence, make sure that the image node with the created texture is actually selected.
     Expand the third-to-last section in the inspector.
 	It is called "Bake".
 	Make sure that the bake type is set to *Combined* and that everything is checked underneath *Influence*.
 	Click the button *"Bake"*.
+	The baking process will take a bit of time.
+	The progress can be seen at the bottom of the panels in a small progress bar.
+	Once the baking process has finished, the result can be inspected in the Image Editor.
+	![Baking Result]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/plane_bake.png)
+13. It is important to know that despite the fact that the texture is visible in the Image Editor, it has not yet been saved.
+    If you close the Blender file now, the texture will be lost.
+	Hence, go to the top menu of the Image Editor and select *"Image > Save As..."* to save the image.
+14. Repeat the baking steps for all objects that you prepared for the baking process.
 
 ## Computer-Aided Design (CAD)
 
