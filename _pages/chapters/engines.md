@@ -8,7 +8,6 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     // script for exchanging version-specific content.
     $(document).ready(function () {
@@ -154,7 +153,6 @@ Next to the pause button, there is also a button which continues the application
 This can be used in order to closely examine code which alters properties every frame.
 
 In addition to Unity's visual debugging tools, one can also perform traditional code-debugging using Visual Studio.
-
 
 ## Importing and Placing 3D Models
 
@@ -705,15 +703,6 @@ EditMode tests are part of the runtime environment of Unity's editor as opposed 
 Therefore, inside of the "Tests" folder, one needs to create a folder which is called "Editor".
 The precise naming is important because folders named "Editor" tell Unity that their content should be executed in the editor.
 Inside of the "Editor" folder, one can create a test script by right-clicking and selecting "Create > Testing > C# Test Script".
-
-Tests are public methods in this script.
-
-
-### Designing a Software Architecture with Tests in Mind
-
-### Using NSubstitute
-
-
 
 # Unreal Engine
 

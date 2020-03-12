@@ -10,7 +10,6 @@ visualizations:
 
 # AR SDKs
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     // script for exchanging version-specific content.
     $(document).ready(function () {
