@@ -38,6 +38,7 @@ permalink: /toc/
 - [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/spatialMapping/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Performance Profiling](/ar-for-eu-book//chapter/performance/) {% include badge.html base=pathToRoot badgeName="outline" %}
 
 ### Computer Vision
 
