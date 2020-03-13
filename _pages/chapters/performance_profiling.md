@@ -8,7 +8,20 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-- general info about performance profiling
+Monitoring and optimising the performance of an AR application is important to ensure a pleasant user experience.
+Performance profiling of AR applications is not only concerned with the responsiveness of the app.
+Instead, developers need to look at further measures like the application's framerate.
+The framerate is a number which counts how many images the real-time graphics application can render per second.
+Maintaining stable, high framerates is a necessary requirement for a pleasant usage experience.
+In AR and VR applications, low framerates can lead to physical discomfort and dizzyiness in the form of cybersickness.
+
+AR applications are mainly deployed to portable devices like the Microsoft HoloLens and smart phones.
+Hence, performance profiling also regards the optimisation of the application's power consumption to avoid that the device's battery is drained.
+Additionally, developers should monitor the memory footprint of the application.
+With real-time graphics applications, an the memory consumption can quickly rise if the developer uses a lot of high-resolution assets like textures or 3D models.
+
+There are various different tools which allow developers to monitor and analyze the performance of an application.
+They are used to identify bottlenecks and narrow down the reason for a restricted performance.
 
 # Unity Performance Profiler
 
