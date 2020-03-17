@@ -33,6 +33,18 @@ Unity has its own built-in profiler.
 It provides detailed information about the caused CPU load and memory consumption.
 Additionally, more details are available about the CPU and memory consumption of the rendering pipeline, the physics simulation and the audio sources in the scene.
 
+The Unity profiler can be found in the Unity editor under "*Window > Analysis > Profiler*" or by pressing `Ctrl + 7`.
+In the top bar there is a button "Record" which needs to be set to active so that the profiler actually tracks the performance data.
+With the window open, press the play button in the Unity editor to start the application.
+The profiler window will start filling with statistics while the application runs.
+The profiler window only visualizes the data of the last 300 frames.
+This number can be increased in the preferences of Unity.
+Hence, one should pause or stop the application's execution once interesting data have been generated.
+In the top bar of the profiler, there is also an option to save the recorded data in a binary format.
+This way, they can be inspected again at a later point by loading the generated log file into the profiler again.
+
+{% include image.html url="/assets/figures/performance_profiling/UnityProfiler.png" base=pathToRoot description="Unity's profiler window with sample data" %}
+
 - how to find it
 - information that it provides
 - usage with HoloLens
