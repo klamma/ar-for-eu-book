@@ -8,6 +8,8 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
+# Performance Metrics
+
 Monitoring and optimising the performance of an AR application is important to ensure a pleasant user experience.
 Performance profiling of AR applications is not only concerned with the responsiveness of the app.
 Instead, developers need to look at further measures like the application's framerate.
@@ -20,31 +22,37 @@ Hence, performance profiling also regards the optimisation of the application's 
 Additionally, developers should monitor the memory footprint of the application.
 With real-time graphics applications, an the memory consumption can quickly rise if the developer uses a lot of high-resolution assets like textures or 3D models.
 
+# Performance Profiling Tools
+
 There are various different tools which allow developers to monitor and analyze the performance of an application.
 They are used to identify bottlenecks and narrow down the reason for a restricted performance.
 
-# Unity Performance Profiler
+## Unity Performance Profiler
+
+Unity has its own built-in profiler.
+It provides detailed information about the caused CPU load and memory consumption.
+Additionally, more details are available about the CPU and memory consumption of the rendering pipeline, the physics simulation and the audio sources in the scene.
 
 - how to find it
 - information that it provides
 - usage with HoloLens
 
-# Mixed Reality Toolkit Profiler Window
+## Mixed Reality Toolkit Profiler Window
 
 - how to enable and disable it
 - information that it provides
 
-# Visual Studio Profiler
+## Visual Studio Profiler
 
 - how to access it
 - information that it provides
 
-# HoloLens Device Portal
+## HoloLens Device Portal
 
 - how to access it
 - information that it provides
 
-# Performance Optimisation
+## Performance Optimisation
 
 - performance guidelines: frames per second to make the user feel comfortable
 - the problem with threading in Unity
