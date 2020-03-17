@@ -45,9 +45,26 @@ This way, they can be inspected again at a later point by loading the generated 
 
 {% include image.html url="/assets/figures/performance_profiling/UnityProfiler.png" base=pathToRoot description="Unity's profiler window with sample data" %}
 
-- how to find it
-- information that it provides
-- usage with HoloLens
+Further information about the profiler can be found in [Unity's documentation about the profiler window](https://docs.unity3d.com/Manual/ProfilerWindow.html).
+
+By default, Unity evaluates the performance of the application while it is running on the development PC.
+Since it most likely does not have the same hardware specifications as the target device, e.g. the HoloLens, this will not give an accurate impression of the performance of the deployed application.
+However, it is already helpful to profile on the development PC to analyse which components are computationally expensive.
+
+### Profiling on the Device Using Unity's Profiler
+
+Unity's profiler is also able to record statistics of a deployed application while it is running on the target device.
+A prerequisite for remote profiling is that the application is marked as a *Development Build*.
+This option *Development Build* can be checked in the build window under "*File > Build Settings...*".
+
+For the Microsoft HoloLens, the UWP app also requires internet capabilities.
+It can be set in the player preferences which can be opened in the inspector by clicking the button "Player settings..." in the build window.
+In the tab for Universal Windows Platform settings which displays a Windows logo, the capabilities can be set in the section *Publishing Settings*.
+Check *InternetClientServer* to allow the application to access network connections and to answer requests by the profiler.
+
+In the top bar of the profiler, there is a dropdown menu which currently says *Editor*.
+If you select it, there is a second option *Enter IP address*.
+Here, you can enter the IP address of the device on which the application is running.
 
 ## Mixed Reality Toolkit Profiler Window
 
