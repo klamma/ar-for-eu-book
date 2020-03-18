@@ -23,7 +23,7 @@ we drag and drop “SpeechInputHandler” and “SpeechIn-putSource” from the 
 Activate ‘Is Global Listener’ in the Speech Input Handler.
 
 We then create a new keyword in the Speech Input Source first (click ‘+’), adding the keyword ‘explore’.
-Subsequently, we can select ‘explore’ in the Speech Input Handler and add the func-tion call the keyword shall trigger (drag & drop ObjectCollection, select Popu-lateSpace.ExploreBrain). 
+Subsequently, we can select ‘explore’ in the Speech Input Handler and add the func-tion call the keyword shall trigger (drag & drop ObjectCollection, select Popu-lateSpace.ExploreBrain).
 
 ![New keyword]({{pathToRoot}}/assets/figures/speech/speech-2.png)
  

@@ -64,7 +64,7 @@ One can also use Boolean operations in order to create complex 3D shapes from mu
 Boolean operations are heavily used in CAD where they are defined on volumes.
 The volumes are combined using operations known from Boolean algebra, e.g. OR, AND or XOR.
 
-Intuitively, the for every point in space and every base volume, a truth value is determined.
+Intuitively, the for every point in space and every base volume, a truth value is determined {% cite Fole10 %}.
 It states if the point is part of the volume.
 By combining the truth values for this point using a Boolean operator, one can determine if the point is part of the resulting volume.
 For instance, the union operation combines the points of the base volumes using the OR-operator.
@@ -106,7 +106,7 @@ Sometimes, it is also used in a creative way to prototype the shapes of an objec
 
 ### Photogrammetry
 
-It is also possible to use structure-from-motion photogrammetry to create 3D models {% cite WBGH12 %}.
+It is also possible to use structure-from-motion photogrammetry to create 3D models {% cite WBG*12 %}.
 Photogrammetry is also a 3D scanning technique but it only requires a standard camera.
 With this camera, a series of photos is taken from various different angles and positions.
 Alternatively, it is also common to use an array of cameras which are all triggered at the same time to take a photo.
@@ -153,7 +153,7 @@ Creating organic objects by hand this way is tricky.
 
 ### Box Modeling
 
-Box modelling describes a method in which faces of a polygon cube are extruded and manipulated to create a complex model. 
+Box modelling describes a method in which faces of a polygon cube are extruded and manipulated to create a complex model.
 The process generally utilises a simple iterative method where extruded faces are moved, scaled and rotated to represent an object.
 The name box modelling refers to the use of a cube as a starting point and often has a very angular result.
 Final stages of the project may work with smoothing functions to provide a more organic look, however during development it is optimal to retain a low polygon count.
@@ -218,7 +218,9 @@ Stretching occurs if the shape of a face is distorted in the UV-space.
 Especially curved surfaces like a sphere are difficult to UV-unwrapping without stretched textures.
 
 {% include image.html url="/assets/figures/modeling/UVCubeMap1.png" base=pathToRoot description="A UV map which projects a cube to a texture." %}
-{% include image.html url="/assets/figures/modeling/UVCubeMap2.png" base=pathToRoot description="Another UV map which also projects the cube to a texture. In the UV map, the faces do not have the same shape as in 3D. This leads to a stretched texture on the cube." %}
+{% include image.html url="/assets/figures/modeling/UVCubeMap2.png" base=pathToRoot description="Another UV map which also projects the cube to a texture.
+In the UV map, the faces do not have the same shape as in 3D.
+This leads to a stretched texture on the cube." %}
 
 To minimize the stretched textures, edges of the mesh can be marked as seams.
 This means that the faces which are not connected in the texture space.
@@ -427,7 +429,104 @@ To achieve this, you will texture paint the sides of a cube so that they show th
 
 ### Texture Baking
 
+Textures can also be baked by 3D programs.
+In this process, information are calculated and stored in a texture.
+This technique can be used to improve the performance of a real-time applications if the lighting situation never changes.
+The 3D program can pre-calculate the lighting situation once and write the results for each object into textures.
+After that, the textures are applied to the 3D objects.
+The scene does not require any light sources anymore since all information about shadows and surface brightnesses are already included in the textures on the objects.
+Since the baking algorithm can use a raytracing renderer, the baked results can be more realistic than the real-time version.
+Real-time render engines only use approximations of light effects, e.g. to calculate shading and shadows.
+In comparison to this, raytracing algorithms simulate individual rays of lights with their reflections and refractions to obtain realistic lighting information.
+For instance, indirect lighting by light which was reflected by other surfaces can be calculated in an accurate manner with a raytracing engine.
+Another example are caustics which are produced by transparent objects, e.g. lenses which focus light on one point.
+
+Texture baking is also used to create normal maps.
+In this workflow, a 3D artist creates a high-resolution model, e.g. by sculpting it.
+After that, it is retopologized to a low-resolution model which is suitable for real-time rendering.
+In the reptopogy step, a lot of fine details are lost.
+They can be recovered by baking the normals of the high-resolution mesh onto the low-resolution mesh.
+
 #### Exercise: Texture Baking in Blender
+
+**Baking Lighting Information**
+
+1. Create an interesting scene in Blender with some basic objects.
+   To add objects to the scene, press `Shift + A` and add meshes such as a cube, sphere or monkey.
+   Create a ground by adding a plane.
+   To arrange objects, press the `G` key and then move the mouse.
+   The movement operation can be confirmed by left-clicking and canceled by right-clicking.
+2. Select the sphere and monkey objects by left clicking on them (you can also select multiple objects by holding down `Shift` while left clicking).
+   After that perform a right-click and select *Shade Smooth* which gets rid of their facetted look.
+   With the monkey selected, press `Ctrl + 2` to add a subdivision surface modified of level 2 to the monkey.
+   ![Scene Setup]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/1SceneSetup.png)
+3. Switch the render engine from Eevee to Cycles in the toolbar.
+   Eevee does not produce accurate results since it is optimized for real-time performance with simplifications in the shading process.
+   Cycles is an unbiased raytracing engine which produces physically accurate results with regard to reflections and indirect light bounces.
+   ![Switch Engine]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/SwitchEngine.png)
+4. The lighting should also be adapted so that we get interesting illuminations and shadows.
+   Add an area light and place it so that the monkey and sphere cast shadows onto the cube object.
+   You can also place a point lamp on the opposite side of the objects.
+   An interesting effect can be achieved by tinting the color of the lights so that they are not completely white anymore.
+   A live-preview of the lighting situation can be seen by pressing `Z` and selecting *Rendered*.
+   In this preview mode, all viewport operations such as moving the view, moving objects or changing the light color and intensity are still possible.
+5. Add materials to the objects and give them some distinct colors.
+   The materials can be set in the inspector on the right on the small tab with the red and black ball icon (not the globe icon).
+   Add a new material slot and change the color in the field which is labeld *Base Color*.
+   You can also give an object a glass material to create intricate caustics on the floor.
+   To change the material type to glass, select the dropdown menu which is labeled *Surface* and is currently set to *Principled BSDF*.
+   Then select the *Glass BSDF* option.
+   ![Render Preview]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/RenderedPreview.png)
+6. As the final step of the scene setup, make sure that all 3D objects in the scene are UV unwrapped.
+   In Blender 2.8 the primitive objects should be unwrapped automatically.
+   Select an object and go to the *UV Editing* tab and check if geometry appears on the left in the UV editor.
+   To switch between objects, exit the edit mode by hitting `Tab` and select the next object.
+   After that, enter the edit mode again by pressing `Tab` again.
+7. We can now proceed to the baking preparations.
+   Each object needs a texture to which the baked data can be written.
+   In this case, we will use separate textures but it is also possible to combine multilple objects in one texture if their UV-layouts are non-overlapping.
+   Go to the *UV Editing* tab again.
+   In the UV editor on the left, select the menu entry *Image > New* to create a new texture.
+   Give it a descriptive name, e.g. *cube_bake* and select a high resolution, e.g. 1024px x 1024px or 2024px x 2024px.
+   The color and type do not matter since we will overwrite the texture anyway.
+8. Repeat the previous step for each object in the scene which should be baked.
+   A created texture is not connected to any object so you can create all textures with one object selected.
+   There is no need to select the object to which the texture should be applied first.
+   Remember to add a texture for the ground plane since this will likely be the most interesting bake.
+9. The next step is to connect each of the textures with the target object.
+   This is done in the shader editor.
+   Go to the *Shading* tab.
+   Select the object which should be connected to a texture so that its material nodes are revealed in the bottom panel.
+   With the mouse hovering over this material node panel, press `Shift + A` to show the menu for new nodes.
+   Select *Texture > Image Texture* to add an image texture node.
+10. Do *not* connect the image texture node to anything, otherwise there will be recursive issues in the baking process where Blender tries to evaluate the texture for the material and writes on it at the same time.
+    Instead, go to the small dropdown on the Image Texture node next to the *"+ New"* button and select the texture that you just created for the object.
+	Repeat this step for every object.
+	![Material Setup]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/MaterialSetup.png)
+11. Click on the tab with the camera icon in the inspector on the right to open the render settings.
+    We need to set the quality settings for the bake to avoid a grainy bake.
+	Exand the first section which is called "Sampling".
+	It determines how many rays the render engine casts into the scene.
+	This value also applies to baking processes.
+	In general, higher values mean that the result will be less grainy since the brightness values of more rays can be averaged.
+	The downside is that the additional rays need to be calculated which increases bake times.
+	For the given example, a value of 1024 works well.
+12.	We are now ready to bake.
+    Select the object which should be baked.
+	The baking process will write on the image texture which is selected in the node setup.
+	Hence, make sure that the image node with the created texture is actually selected.
+    Expand the third-to-last section in the inspector.
+	It is called "Bake".
+	Make sure that the bake type is set to *Combined* and that everything is checked underneath *Influence*.
+	Click the button *"Bake"*.
+	The baking process will take a bit of time.
+	The progress can be seen at the bottom of the panels in a small progress bar.
+	Once the baking process has finished, the result can be inspected in the Image Editor.
+	![Baking Result]({{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/plane_bake.png)
+13. It is important to know that despite the fact that the texture is visible in the Image Editor, it has not yet been saved.
+    If you close the Blender file now, the texture will be lost.
+	Hence, go to the top menu of the Image Editor and select *"Image > Save As..."* to save the image.
+14. Repeat the baking steps for all objects that you prepared for the baking process.
 
 ## Computer-Aided Design (CAD)
 
