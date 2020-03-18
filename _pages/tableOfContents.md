@@ -40,7 +40,7 @@ permalink: /toc/
 - [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="outline" %}
 - [Dialogue Understanding](/ar-for-eu-book/chapter/dialogueUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
-- [Performance Profiling](/ar-for-eu-book//chapter/performance/) {% include badge.html base=pathToRoot badgeName="outline" %}
+- [Performance Profiling](/ar-for-eu-book//chapter/performance/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### Computer Vision
 
@@ -66,7 +66,7 @@ permalink: /toc/
 - [Mobile AR](/ar-for-eu-book/chapter/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Hardware Accelerated Computing](/ar-for-eu-book/chapter/hac/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Internet of Things, Robots and Wearables](/ar-for-eu-book/chapter/iot/) {% include badge.html base=pathToRoot badgeName="todo" %}
-- [Wearable Interaction] (/ar-for-eu-book/chapter/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Wearable Interaction](/ar-for-eu-book/chapter/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Hardware and Optical Design](/ar-for-eu-book/chapter/hardware/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [2D/3D Printing](/ar-for-eu-book/chapter/printing/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
