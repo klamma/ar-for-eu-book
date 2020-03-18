@@ -65,6 +65,7 @@ permalink: /toc/
 - [Mobile AR](/ar-for-eu-book/chapter/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Hardware Accelerated Computing](/ar-for-eu-book/chapter/hac/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Internet of Things, Robots and Wearables](/ar-for-eu-book/chapter/iot/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Wearable Interaction] (/ar-for-eu-book/chapter/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Hardware and Optical Design](/ar-for-eu-book/chapter/hardware/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [2D/3D Printing](/ar-for-eu-book/chapter/printing/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
