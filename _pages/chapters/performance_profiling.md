@@ -110,13 +110,49 @@ Hence, you should check if the shaders slow down the rendering process.
 Every material in the scene is based on a shader.
 The shader of the material can be changed in its material settings in the inspector using a dropdown at the top:
 
-![Shader Selection in the Shader]({{pathToRoot}}/assets/figures/performance_profiling/MaterialShader.png)
+![Shader Selection in the Material]({{pathToRoot}}/assets/figures/performance_profiling/MaterialShader.png)
 
 By default, materials use the Standard shader.
 This shader uses physically-based shading and offers many options but it is not optimsed for mobile devices.
 For HoloLens development, it is advisable to restrict the used shaders to the ones which are provided by the Mixed Reality Toolkit.
 For mobile platforms, Unity already ships with a series of lightweight shaders.
 They can be found in the category "*Mobile*".
+
+**Reduce the amount of polygons on meshes**:
+
+**Reduce the size of textures**:
+
+**Use shaders which combine multiple textures into one**
+A PNG texture consists of four channels:
+Three channels define colours by mixing fractions of red, green and blue.
+The fourth channel stores alpha values, e.g. for transparency.
+For textures which define the surface colour and transparency of an object, these channels are actually used.
+However, opaque objects do not need the alpha channel because there is no transparency.
+Hence, it can be used for something else, e.g. to define the roughness of the surface.
+The roughness of the surface is a singular value between zero and one and so it can be encoded by one texture channel.
+Similarly, PBR materials can define a value that states which parts of the surface are metallic.
+This value can also be encoded in a single texture channel.
+
+In general, whenever a surface property is expressed by one floating point value for each point of the surface, it only requires one texture channel.
+If there are four different properties, they can be compressed into the four channels of a texture instead of using four separate textures where three channels are useless.
+In particular, monochromatic textures (the value is only written to one channel) and greyscale textures (the same value is written to all channels) can be simplified this way.
+However, this is only possible if the shader supports this compression.
+The shader must know what information are stored in each channel.
+
+In Unity, some of the shaders support and even require such texture compression.
+For instance, the shader "Mixed Reality Toolkit/Standard" which is provided with the Mixed Reality Toolkit uses a "Channel Map" which can be activated by checking the corresponding option.
+It stores metallic values in the red channel, ambient occlusion (which simulates shadows in creases) in the green channel, the emission intensity in the blue channel and the surface smoothness in the alpha channel.
+
+![Channel Map in MRTK Standard Shader]({{pathToRoot}}/assets/figures/performance_profiling/MRTKChannelMap.png)
+
+The Mixed Reality Toolkit also provides a tool which compresses multiple textures into the channels of one texture.
+It can be found under "*Mixed Reality Toolkit > Utilities > Texture Combiner*".
+Here, one can place textures in the slots for each channel.
+The "Input Channel" dropdown menus define which channel of the given texture should be written to the new texture.
+If you do not have a texture for one of the properties, the tool can also write a constant value to the new texture's channel by dragging the slider.
+Although the descriptions guide the creation of channel maps for the Mixed Reality Toolkit's standard shader, one can also use this tool for other shaders which expect other channel combinations.
+
+![MRTK Texture Combiner Tool]({{pathToRoot}}/assets/figures/performance_profiling/MRTKTextureCombiner.png)
 
 - performance guidelines: frames per second to make the user feel comfortable
 - the problem with threading in Unity
