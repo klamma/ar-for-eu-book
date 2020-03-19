@@ -120,7 +120,22 @@ They can be found in the category "*Mobile*".
 
 **Reduce the amount of polygons on meshes**:
 
-**Reduce the size of textures**:
+**Optimise the size of textures**:
+Textures should be quadratic and their size should be a power of two, e.g. 256 pixels x 256 pixels, 512 x 512, 1024 x 1024 or 2048, 2048.
+Textures which do not comply to this rule are stored in an uncompressed format which increases their memory usage and loading times.
+
+Another factor which can be optimized is the resolution of the texture.
+Only objects with intricate details in the texture and which are intended to be in the close focus of the user should have a righ resolution, e.g. 2048 by 2048 pixels or even 4096 by 4096 pixels.
+Other textures can be downgraded to lower resolutions.
+One good practise in this context is to still save textures at a high resolution in the project and then limit their resolution in their texture settings.
+This way, Unity automatically downscales them in the built project and uses the lower resolution in the final application.
+Since the original high-resolution version is still available in the project, it is possible to increase the resolution again at a later point if needed.
+To do this, select the texture in the assets browser.
+This will open the texture's properties in the inspector on the right.
+There is a separate panel where the texture's *Max Size* can be set.
+These settings can also be altered for all platforms independently by clicking the small icons at the top of the panel.
+
+![Max Size in Texture Settings]({{pathToRoot}}/assets/figures/performance_profiling/TextureSettings.png)
 
 **Use shaders which combine multiple textures into one**
 A PNG texture consists of four channels:
@@ -153,6 +168,9 @@ If you do not have a texture for one of the properties, the tool can also write 
 Although the descriptions guide the creation of channel maps for the Mixed Reality Toolkit's standard shader, one can also use this tool for other shaders which expect other channel combinations.
 
 ![MRTK Texture Combiner Tool]({{pathToRoot}}/assets/figures/performance_profiling/MRTKTextureCombiner.png)
+
+This optimisation reduces the initial loading times of the scene because less textures need to be read.
+Additionally, this means that less textures need to be kept in memory.
 
 - performance guidelines: frames per second to make the user feel comfortable
 - the problem with threading in Unity
