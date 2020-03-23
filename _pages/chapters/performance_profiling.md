@@ -244,24 +244,85 @@ It is not always necessary to represent the exact shape of the object but instea
 For instance, virtual characters can be approximated by one big capsule.
 If a mesh collider has to be used, it can be beneficial to create a second mesh with a lower resolution and use it as the mesh collider.
 
-- performance guidelines: frames per second to make the user feel comfortable
-- the problem with threading in Unity
-- hints how performance can be saved
-- in programming:
-   - do not do blocking operations on the main loop, use Coroutines instead
-   - avoid Update(): check if the procedure really needs to run every frame
-   - remove empty Start() and Update() calls
-   - avoid Camera.main
-   - avoid repeated queries to find GameObjects or MonoBehaviours (e.g. GetComponent)
-   - do not use SendMessage()
-   - avoid Instantiate(), instead use object pooling
-   - avoid LINQ
-   - do not use boxing
-- in scene setup:
-   - texture quality
-   - reduce the vertex count of meshes
-   - avoid mesh colliders
+- in scene setup:   
    - use single pass instanced rendering but check that the used shaders support it (e.g. the standard TextMeshPro shader does not)
    - avoid post-processing effects
 
 ### Script Optimisation
+
+**Use co-routines or threads for long-lasting or blocking operations**:
+Anything logic of a script (except for threaded code) is performed on the main thread.
+This main thread is also used by the renderer which draws new frames to the user's screen.
+Therefore, any operations which take a longer time and are blocking, e.g. I/O operations will freeze the application until they are completed.
+The user will immediately notice this since no new frames will be rendered until the operation has finished.
+
+The simplest solution to this are co-routines.
+They use a concurrency approach to divide bigger operations into many small ones.
+In-between the computation of these individual small elements, the operation releases the control of the main thread again.
+This gives the renderer and other application components the chance to process the next frame in-between the small chunks of the large operation.
+
+- threads cannot call Unity API
+- Unity Job System
+
+**Avoid `Update()`**:
+The `Update()` method is executed every frame.
+By moving logic from the `Update()` method to other solutions, the processing time of every frame can be improved.
+As an example, a script should be implemented which realises a virtual light switch.
+There is a virtual button which a script `ToggleButton`.
+If the user presses the button, a property `IsOn` is toggled.
+In the example we assume that the input system calls the method `OnUserClick()` if user input for the GameObject is detected.
+The task is to write a script which can visualize this value with a virtual light.
+If `toggleButton.IsOn == true`, the virtual light should be on.
+The naive way to implement this is the following:
+
+```[C#]
+// this script is placed on the button
+public class ToggleButton : MonoBehaviour
+{
+    public bool IsOn {get; private set;}
+
+    void OnUserInput()
+    {
+        IsOn = !IsOn;
+    }
+}
+
+
+// this script is placed on the light
+public class LightSwitch : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // get the light component on this GameObject
+        Light light = GetComponent<Light>();
+        // synchronise the state of the light with the button's IsOn property
+        light.enabled = (GameObject.Find("MyButton").GetComponent<ToggleButton>()).IsOn
+    }
+}
+```
+
+This script is not optimal in multiple aspects.
+Another optimisation of this script is addressed in the next paragraph.
+However, this logic does not need to be implemented by using Update().
+Instead, events can be used which are only fired if the value changes.
+They also have a bit of overhead but since we do not expect that the user is toggling the light, it reduces the amount of code that is executed every frame.
+
+**Remove empty callback methods, e.g. `Start()` and `Update()`**:
+
+
+- do not do blocking operations on the main loop, use Coroutines instead
+- avoid Update(): check if the procedure really needs to run every frame
+- remove empty Start() and Update() calls
+- avoid Camera.main
+- avoid repeated queries to find GameObjects or MonoBehaviours (e.g. GetComponent)
+- do not use SendMessage()
+- avoid Instantiate(), instead use object pooling
+- avoid LINQ
+- do not use boxing
