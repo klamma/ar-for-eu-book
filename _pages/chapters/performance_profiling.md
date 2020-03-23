@@ -153,10 +153,21 @@ Since vertices internally can only have one texture position and one normal, thi
 Both versions of the vertex have the same 3D position but they differ in the texture coordinates or normal vectors.
 
 **Reduce the number of objects, use static batching for non-moving objects**:
+For each object in the scene, Unity calls the graphics API to perform a draw call.
+This has some overhead to it, so a goal is to keep the number of draw calls as low as possible.
+Unity already does some optimisations by *batching* objects.
+This combines their meshes into one big mesh which can be processed in one call.
+Static batching only works with non-moving GameObjects, e.g. virtual furniture in a scene. 
+To mark such objects as suitable for static batching, there is a checkbox *Static* in the top right of the inspector.
 
-
-**Reduce the number of materials, reuse materials**:
-
+**Reduce the number of different materials, re-use materials**:
+GameObjects can only be combined by batching if they have the same material.
+Additionally, a GameObject where parts of the mesh have different materials, produce one draw call for each material.
+Therefore, it is advisable to only use one material per object and to re-use materials.
+It might be intuitive for the setup in the inspector since it also reduces the amount of work to set up materials.
+However, it also applies to scripting.
+If multiple objects should be coloured blue by a script, there is no need to create a new material for each of them and set its colour.
+Instead, the script can create one blue material and assign it to all required objects.
 
 **Optimise the size of textures**:
 Textures should be quadratic and their size should be a power of two, e.g. 256 pixels x 256 pixels, 512 x 512, 1024 x 1024 or 2048, 2048.
