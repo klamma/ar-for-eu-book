@@ -186,7 +186,7 @@ These settings can also be altered for all platforms independently by clicking t
 
 ![Max Size in Texture Settings]({{pathToRoot}}/assets/figures/performance_profiling/TextureSettings.png)
 
-**Use shaders which combine multiple textures into one**
+**Use shaders which combine multiple textures into one**:
 A PNG texture consists of four channels:
 Three channels define colours by mixing fractions of red, green and blue.
 The fourth channel stores alpha values, e.g. for transparency.
@@ -221,6 +221,29 @@ Although the descriptions guide the creation of channel maps for the Mixed Reali
 This optimisation reduces the initial loading times of the scene because less textures need to be read.
 Additionally, this means that less textures need to be kept in memory.
 
+**Use primitive colliders, avoid mesh colliders**:
+To work with physics calculations, an object needs colliders.
+Colliders are used to find out if an object intersects with another object.
+This is not only useful for physics simulations like a sphere falling to the ground but also necessary for raycasts.
+Raycasts are needed in a couple of situations, e.g. for user interactions to find out if the user points at an UI element.
+There are different collider shapes available.
+Each shape has its own performance cost for collision detection.
+The quickest collision detection is possible with sphere colliders.
+To determine if two spheres intersect, the vector between the midpoints of the spheres needs to be calculated.
+If the length of the vector is smaller than half the radius of the first sphere plus half the radius of the second sphere, the spheres intersect.
+For *Box Colliders*, the collision detection is more complex since it involves projections and overlapping tests on multiple axes.
+Considerable more computation time needs to be spent on *Mesh Colliders* where *Convex* is checked.
+The highest performance hit produce *Mesh Colliders* with the *Convex* option unchecked.
+In this case, each triangle of the mesh needs to be checked for intersections individually.
+This means that mesh colliders take longer to evaluate the more triangles the mesh has.
+
+Hence, the recommendation is to avoid mesh colliders.
+Instead, it can be sufficient to approximate a 3D object by a set of primitive colliders, e.g. by shapes, capsules or boxes.
+The number of colliders should also be kept as low as possible.
+It is not always necessary to represent the exact shape of the object but instead a hull around it can be sufficient.
+For instance, virtual characters can be approximated by one big capsule.
+If a mesh collider has to be used, it can be beneficial to create a second mesh with a lower resolution and use it as the mesh collider.
+
 - performance guidelines: frames per second to make the user feel comfortable
 - the problem with threading in Unity
 - hints how performance can be saved
@@ -237,7 +260,6 @@ Additionally, this means that less textures need to be kept in memory.
 - in scene setup:
    - texture quality
    - reduce the vertex count of meshes
-   - check audio sources
    - avoid mesh colliders
    - use single pass instanced rendering but check that the used shaders support it (e.g. the standard TextMeshPro shader does not)
    - avoid post-processing effects
