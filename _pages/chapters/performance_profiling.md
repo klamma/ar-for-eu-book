@@ -100,7 +100,11 @@ For HoloLens applications, the Mixed Reality Toolkit provides an optimisation wi
 It can be found under "*Mixed Reality Toolkit > Utilities > Optimize Window*".
 For the best usage experience, all listed recommondations should be accepted and applied.
 
-Apart from this, the following criteria can be considered for optimisation:
+Apart from this, the following criteria can be considered for optimisation.
+To decide which of these recommendations need to be followed, the application should be profiled first.
+This way, the bottlenecks can be identified.
+For instance, there is no need to reduce the complexity of a mesh if there is script in the scene which does a long calculation each frame.
+In this case, the bottleneck is in the application's logic and not the rendering process.
 
 **Avoid computationally intensive shaders**:
 Shaders are programs which calculate how the surface of an object should be displayed, e.g. how it is shaded.
@@ -119,6 +123,40 @@ For mobile platforms, Unity already ships with a series of lightweight shaders.
 They can be found in the category "*Mobile*".
 
 **Reduce the amount of polygons on meshes**:
+Meshes consist of vertices which are connected by edges.
+The areas which are framed by edges are faces.
+Togehter, they define the surface of the object.
+In the rendering pipeline, the vertices are first processed by a geometry shader which can manipulate the mesh.
+After that, every polgyon is rasterized.
+The result of the rasterization are a number of fragments which are candidates for a pixel.
+The fragments are processed by a pixel shader.
+Only after that, a depth test is performed to discard the fragments which are occluded by meshes in front of them.
+This means that every polygon which is potentially visible inside the camera's view bounds is rendered, even if it is occluded.
+The more vertices and polyons an object has, the more work the geometry- and pixel-shaders need to perform.
+
+A large mesh can become a bottleneck for the GPU which has to perform the rendering pipeline.
+However, the mesh can also affect the CPU, e.g. if it has to calculate deformations of the meshes, e.g. character animations.
+It is necessary to find a balance between a low-resolution mesh which processes fast and a high-resolution mesh which can define smoother curvatures.
+The number of polygons can be reduced by removing faces which will never be visible.
+As an example, take the 3D model of a camera. If consists of a cuboid and a cylinder.
+The cylinder has caps on both sides.
+However, the cap which touches the cuboid can be removed since it will never be visible nor relevant for the model
+On this paticular model, this simple change removes 32 triangles and one vertex.
+
+It is also important to know that hard edges and UV seams increase the number of vertices.
+A vertex is not only represented by its 3D position in space.
+It also has a 2D position which defines where it is situated on a texture.
+Additionally, it has a normal vector which points outwards and which is perpendicular to the surface's curvature.
+With UV seams, the vertex has two positions on the texture.
+With hard eges, the vertex has two different normal vectors.
+Since vertices internally can only have one texture position and one normal, this means that the vertex is duplicated.
+Both versions of the vertex have the same 3D position but they differ in the texture coordinates or normal vectors.
+
+**Reduce the number of objects, use static batching for non-moving objects**:
+
+
+**Reduce the number of materials, reuse materials**:
+
 
 **Optimise the size of textures**:
 Textures should be quadratic and their size should be a power of two, e.g. 256 pixels x 256 pixels, 512 x 512, 1024 x 1024 or 2048, 2048.
