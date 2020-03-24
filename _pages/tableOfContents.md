@@ -32,7 +32,6 @@ permalink: /toc/
 - [AR SDKs](/ar-for-eu-book/chapter/arsdk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/holotoolkit/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Unity / Unreal Engine](/ar-for-eu-book/chapter/engines/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-- [3D Modeling & Rendering](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Spatial Audio](/ar-for-eu-book/chapter/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Interactive Graphics and Sound Design](/ar-for-eu-book/chapter/intdesign/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/spatialMapping/) {% include badge.html base=pathToRoot badgeName="complete" %}
@@ -41,6 +40,10 @@ permalink: /toc/
 - [Dialogue Understanding](/ar-for-eu-book/chapter/dialogueUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Performance Profiling](/ar-for-eu-book//chapter/performance/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+
+### Computer Graphics
+- [3D Modeling & Rendering](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [3D Scanning & Animation](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### Computer Vision
 
