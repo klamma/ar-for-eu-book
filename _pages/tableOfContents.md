@@ -27,7 +27,7 @@ permalink: /toc/
 - [Interaction Technologies](/ar-for-eu-book/chapter/interaction/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Hardware Abstraction Layer](/ar-for-eu-book/chapter/hal/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
-### AR Development Skills
+### AR Development
 
 - [AR SDKs](/ar-for-eu-book/chapter/arsdk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/holotoolkit/) {% include badge.html base=pathToRoot badgeName="complete" %}
