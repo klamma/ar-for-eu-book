@@ -45,17 +45,18 @@ In this tutorial, we will build an animated model of a character that can be use
 
 In this tutorial, we use the first version of the Structure hardware “Sensor” that is built for iPad. The newer version “Core” is multiplatform. The workflow for 3D scanning with structure sensor is the following:
 
-**Step 1.1:** Download [ItSeez3D](https://itseez3d.com/) in your iPad, Sign in/Log in to itSeez3D & [Sketchfab](https://sketchfab.com/).
+{% include label.html text="Step 1.1" %}
+Download [ItSeez3D](https://itseez3d.com/) in your iPad, Sign in/Log in to itSeez3D & [Sketchfab](https://sketchfab.com/).
 
-**Step 1.2:** Open ItSeez3D and choose the type of scan you would like to perform (choose a human for this tutorial).
+{% include label.html text="Step 1.2" %} Open ItSeez3D and choose the type of scan you would like to perform (choose a human for this tutorial).
 
-**Step 1.3:** Scan the person quickly from top to bottom.
+{% include label.html text="Step 1.3" %} Scan the person quickly from top to bottom.
 
-**Step 1.4:** Open Sketchfab > your account > My settings > Password & API > copy API token.
+{% include label.html text="Step 1.4" %} Open Sketchfab > your account > My settings > Password & API > copy API token.
 
-**Step 1.5:** Open itSeez3D > click your scan > export > past API token.
+{% include label.html text="Step 1.5" %} Open itSeez3D > click your scan > export > past API token.
 
-**Step 1.6:** Now you should be able to check your scans in the Sketchfab cloud platform and download it (for example as an OBJ file). 
+{% include label.html text="Step 1.6" %} Now you should be able to check your scans in the Sketchfab cloud platform and download it (for example as an OBJ file). 
 
 
 ![3D Scanning with Structure Sensor]({{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig00.jpg)
