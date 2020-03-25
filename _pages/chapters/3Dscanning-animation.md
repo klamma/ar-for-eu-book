@@ -8,9 +8,6 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-_by Xinyu Huang and Fridolin Wild, Performance Augmentation Lab, Oxford Brookes University, UK_
-_Edited by Dr Mikhail Fominykh, Molde University College, Norway_
-
 ## Contents
 - [Part 1. 3D scanning](#part-1-3D-scanning)
 - [Part 2. Converting a 3D scan into a low-polygonal 3D model with R3DS Wrap](#part-2-wrap)
@@ -64,7 +61,7 @@ In this tutorial, we use the first version of the Structure hardware â€œSensorâ€
 ![3D Scanning with Structure Sensor]({{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig00.jpg)
 
 
-# Part 2. Converting the 3D scan and converting to a low-polygonal 3D model with R3DS Wrap {#part-2-wrap}
+# Part 2. Converting the 3D scan into a low-polygonal 3D model with R3DS Wrap {#part-2-wrap}
 
 The 3D model of a human actor that we obtained by 3D scanning is complex and contains a high number of polygons. Therefore, it needs to be further processed before it can be used in real-time interactions in an Augmented Reality application.
 

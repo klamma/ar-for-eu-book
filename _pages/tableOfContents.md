@@ -43,7 +43,7 @@ permalink: /toc/
 
 ### Computer Graphics
 - [3D Modeling & Rendering](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-- [3D Scanning & Animation](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [3D Scanning & Animation](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### Computer Vision
 

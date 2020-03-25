@@ -330,6 +330,22 @@ pre {
     list-style: upper-roman inside; }
 
 /**
+ * Syntax step style
+ */
+
+.step {
+    position: relative;
+    right: 760px;
+    float: right;
+    color: #fff;
+    background-color: #f63d55;
+    padding: 4px 20px;
+    margin-top: -2px;    
+    border-radius: 25px;
+}
+
+
+/**
  * Syntax highlighting styles
  */
 .highlight {

@@ -12,3 +12,4 @@ We would like to thank the following authors of the chapters.
 * Ralf Klamma
 * Christopher Kommetter
 * Fridolin Wild
+* Mikhail Fominykh
