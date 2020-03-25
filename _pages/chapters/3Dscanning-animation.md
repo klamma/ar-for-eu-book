@@ -35,7 +35,7 @@ visualizations:
 - [Unity 3D](https://unity.com/)
 
 
-# Part 1. 3D Scanning {#part-1-3D-scanning}
+## Part 1. 3D Scanning {#part-1-3D-scanning}
 
 3D scanning is the process of analyzing a real-world object or environment to collect data on its shape and color to construct a 3D model. More detail is described in [Huang, Wild, Twycross (2019)](https://www.researchgate.net/profile/Fridolin_Wild/publication/337985851_A_Process_for_the_Semi-Automated_Generation_of_Life-Sized_Interactive_3D_Character_Models_for_Holographic_Projection/links/5df8fa914585159aa484d1d8/A-Process-for-the-Semi-Automated-Generation-of-Life-Sized-Interactive-3D-Character-Models-for-Holographic-Projection.pdf).  
 
@@ -61,7 +61,7 @@ In this tutorial, we use the first version of the Structure hardware â€œSensorâ€
 ![3D Scanning with Structure Sensor]({{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig00.jpg)
 
 
-# Part 2. Converting the 3D scan into a low-polygonal 3D model with R3DS Wrap {#part-2-wrap}
+## Part 2. Converting the 3D scan into a low-polygonal 3D model with R3DS Wrap {#part-2-wrap}
 
 The 3D model of a human actor that we obtained by 3D scanning is complex and contains a high number of polygons. Therefore, it needs to be further processed before it can be used in real-time interactions in an Augmented Reality application.
 
@@ -158,7 +158,7 @@ Points with the same number should be placed in approximately the same areas of 
 **Step 2.26:** Check if the resultant 3D model is good enough to be used further in the application. If some parts of the 3D model have issues, the model can be manually corrected or the problematic part of the model can be replaced with the corresponding part of the Basemesh model. This can be done in any 3D editing software, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview). 
 
 
-# Part 3. Polishing the model in Maya {#part-3-maya}
+## Part 3. Polishing the model in Maya {#part-3-maya}
 
 We continue working with the new 3D model in 3D editing software [Autodesk Maya](https://www.autodesk.com/products/maya/overview).
 
@@ -217,7 +217,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 If the texture still has issues, it might need polishing in a 2D image editor.
 
 
-# Part 4. Polishing the texture in Photoshop {#part-4-photoshop}
+## Part 4. Polishing the texture in Photoshop {#part-4-photoshop}
 
 The texture might also need some polishing, and correcting the UV map alone (as we did in Step 3.14) is not always enough.
 
@@ -228,7 +228,7 @@ In Photoshop, we use the Stamp tool to clone parts of the texture to the problem
 ![Photoshop texture editing]({{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Photoshop_01.png)
 
 
-# Part 5. Character animation with Mixamo {#part-5-mixamo}
+## Part 5. Character animation with Mixamo {#part-5-mixamo}
 
 Mixamo offers multiple free animations and characters.
 
@@ -257,7 +257,7 @@ Mixamo offers multiple free animations and characters.
 ![Mixamo download]({{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_04.png)
 
 
-# Part 6.  Importing a character into Unity 3D and animating it {#part-6-unity}
+## Part 6.  Importing a character into Unity 3D and animating it {#part-6-unity}
 
 In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to import and prepare the animation to be used in an Augmented Reality application.
 

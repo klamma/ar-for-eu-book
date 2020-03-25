@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Spatial Mapping, Gaze, and Gestures (complete)
+title: Spatial Mapping, Gaze, and Gestures
 permalink: /chapter/spatialMapping/
 categories: chapter
 visualizations:
@@ -8,7 +8,13 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-### by Dr Fridolin Wild, Performance Augmentation Lab, Oxford Brookes University
+_by Dr Fridolin Wild, Performance Augmentation Lab, Oxford Brookes University_
+
+## Contents
+- [Part 1. Spatial Mapping - Prefabs and Configuration](#part-1-spatial-mapping-prefabs-config)
+- [Part 2. Spatial Mapping - UI for room scans](#part-2-spatial-mapping-ui-room-scan)
+- [Part 3. Placement with the gaze pointer and air tap](#part-3-placement)
+- [Part 4. Hover highlighting and tap interaction](#part-4-hover)
 
 The capability to map and understand the spatiality of the physical environment surrounding us of the new Smart Augmented Reality Glasses like the Microsoft Hololens or the Magic Leap is a game changer.
 For the first time, this enables pervasive experiences with an optical quality that causes our perception to sometimes struggle to distinguish what is real and what not.
@@ -21,7 +27,8 @@ spatial mapping (aka 'room scanning'), gaze navigation, and 'click' activation u
 The tutorial closes with configuration information on how to set up Unity3D, Visual Studio, and all the needed packages, modules, and SDKs.
 In theory, this tutorial in itself should enable you to get started from scratch and take you far enough to build your first 'hello world' app - with the world being your own personal reality you created :).
 
-### Spatial Mapping - Prefabs and Configuration
+
+## Part 1. Spatial Mapping - Prefabs and Configuration {#part-1-spatial-mapping-prefabs-config}
 
 Clean up the game object Hierarchy and delete the camera and the directional light.
 We will replace these with the correct ones.
@@ -62,7 +69,8 @@ Just make sure to drag and drop the InteractiveMeshCursor from the Hierarchy ont
 
 ![3 - inputmanager]({{pathToRoot}}/assets/figures/mapgazegesture/3 - inputmanager.png)
 
-### Spatial Mapping - UI for room scans
+
+## Part 2. Spatial Mapping - UI for room scans {#part-2-spatial-mapping-ui-room-scan}
 
 Next, we start building up our own user interface.
 Unity uses a Canvas game object to hold the elements of the user interface together.
@@ -180,7 +188,8 @@ Then we can select SpaceScannerManager > StartScanning as the method to call whe
 
 We apply the according method calls for StopScanning and StartApp analogously to the other two buttons.
 
-### Placement with the gaze pointer and air tap
+
+## Part 3. Placement with the gaze pointer and air tap {#part-3-placement}
 
 The error message we see in the console is telling us that the call to the singleton Popu-lateSpace is not (yet) working.
 No surprise, we haven't added it yet.
@@ -217,7 +226,8 @@ public void InstallObjects() {
 
 This will, once the scanning finished and StartApp() was triggered, execute the InstallObjects() method in the PopulateSpace singleton - there then instantiating a copy of the brain prefab into the scene and triggering its OnSelect method for convenient placement in the environment (on horizontal surfaces only!).
 
-### Hover highlighting and tap interaction
+
+## Part 4. Hover highlighting and tap interaction {#part-4-hover}
 
 The Placeable behaviour allows to repeatedly pick up the object with an air tap and drop it off at any location desired.
 While this is great for populating the exhibition space, it also prevents us from interacting with the object placed.
