@@ -256,13 +256,25 @@ This main thread is also used by the renderer which draws new frames to the user
 Therefore, any operations which take a longer time and are blocking, e.g. I/O operations will freeze the application until they are completed.
 The user will immediately notice this since no new frames will be rendered until the operation has finished.
 
-The simplest solution to this are co-routines.
+The simplest solution to this are *coroutines*.
 They use a concurrency approach to divide bigger operations into many small ones.
 In-between the computation of these individual small elements, the operation releases the control of the main thread again.
 This gives the renderer and other application components the chance to process the next frame in-between the small chunks of the large operation.
 
-- threads cannot call Unity API
-- Unity Job System
+There is also the option to use native *C# threads* to create a background thread where compute-intensive operations can be executed.
+With this approach it is important to note that Unity's API is not thread-safe and may only be accessed by the main thread.
+This means that no calls to methods provided by Unity or Unity objects can be implemented.
+
+Starting with Unity 2018, there a job system was added to execute multithreaded code.
+The job system is also used by Unity itself to handle background tasks.
+It creates a thread pool with one thread for each processor core.
+This optimises the performance because there is no overhead for creating and finishing threads.
+Additionally, each processor core works its own thread which means that the cores perform less context switches.
+Like normal threads, Unity jobs still have the problem that Unity's API is not thread-safe and cannot be accessed.
+However, Unity introduced unmanaged, native container classes which are thread-safe.
+An example for this is the `NativeArray`.
+Developers can create jobs and schedule them.
+After that, they are picked up and executed by one of the available threads.
 
 **Avoid `Update()`**:
 The `Update()` method is executed every frame.
