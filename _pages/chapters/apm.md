@@ -47,7 +47,8 @@ Therefore, the process is divided into small design steps with frequent customer
 The focus is on delivering working software frequently.
 Because of the small, incremental process steps and the agility of the process, developers are better motivated and in consequence produce better software.
 Projects with agile methods have a higher probability of success.
-Also empirically proven, recent report say that of over 94% of companies today develop software with agile methods.
+Also empirically proven, a recent report says that over 94% of companies today develop software with agile methods.
+
 
 - Emphasizes incremental updates
 - Small design steps by frequent interactions with customers
@@ -131,10 +132,9 @@ They give an easy overview on the progress reached in the sprint.
 Task boards can be physical boards in an office,
 when all developers are in the same place or a virtual board, which is typical for distributed development like in open source software
 development.
-Some developer team do both physical and virtual boards, e.g. physical ones for local sprints and virtual ones for 
+Some developer teams do both physical and virtual boards, e.g. physical ones for local sprints and virtual ones for 
 the global process.
-In any case, task boards consists out of columns where tasks are usually shift from left to right
-to visualize the grade of completion from ToDo to Done.
+task boards consist of columns where tasks usually shift from left to right to visualize the grade of completion from ToDo to Done.
 Typical columns for a sprint are: 
 
 - Product Backlog
