@@ -251,11 +251,10 @@ Due to this shift, the user can see the virtual content in 3D with depth percept
 However, this also means that the render engine needs to create two images each frame instad of one.
 Without any optimisations, many portions of the render pipeline need to be done twice.
 For instance, the number of draw calls, which have a high overhead, doubles.
-An optimisation technique is Single Pass Stereo Rendering.
+An optimisation technique is Single Pass Stereo Rendering ([Unity Blog, 2017](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)).
 Instead of rendering two separate images, it uses an image texture with a doubled width where both images are created side by side.
-The advantage is that the work which is done in the rendering pipeline, e.g. the results of the culling process, only needs to be done once.
-
-A further optimisation is Single Pass Instanced Rendering which can be used for the Hololens.
+The advantage is that the work which is done in the rendering pipeline, e.g. the results of the culling process, only needs to be done once ([Unity Documentation](https://docs.unity3d.com/Manual/SinglePassStereoRendering.html)).
+A further optimisation is Single Pass Instanced Rendering which can be used for the Hololens ([Unity Documentation](https://docs.unity3d.com/Manual/SinglePassInstancing.html), [Unity Documentation for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html)).
 The optimisation window of the Mixed Reality Toolkit automatically applies this technique.
 
 It is important to know that both optimisation techniques require compatible shaders that need to support the chosen rendering method.
