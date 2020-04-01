@@ -276,6 +276,7 @@ An example for this is the `NativeArray`.
 Developers can create jobs and schedule them.
 After that, they are picked up and executed by one of the available threads.
 
+
 **Avoid `Update()`**:
 The `Update()` method is executed every frame.
 By moving logic from the `Update()` method to other solutions, the processing time of every frame can be improved.
@@ -327,14 +328,51 @@ Instead, events can be used which are only fired if the value changes.
 They also have a bit of overhead but since we do not expect that the user is toggling the light, it reduces the amount of code that is executed every frame.
 
 **Remove empty callback methods, e.g. `Start()` and `Update()`**:
+If you create a new script in Unity, it creates a class that inherits from `MonoBehaviour` and with two empty methods `Start` and `Update`.
+While this is convenient, the methods should be removed if they are not used.
+Unity will call these methods if they exist and has to perform a context switch to change between internal code and the C# script.
+The overhead gets considerable if it has to be done multiple times every frame as it is the case with multiple empty `Update methods on different GameObjects.
 
+**Cache the result of queries for other GameObjects or MonoBehaviours**:
+Other GameObjects can be found by `GameObject.Find("objName")`.
+This call searches the entire scene for a GameObject with the given name, so this call will be slow if there are many objects in the scene.
+The performance hit is especially big if this is method is executed every frame.
+For such cases, it is more efficient to use `GameObject.Find` just once in the `Start` method and to cache the result in a private variable.
+Another solution is to establish the reference directly in the editor by exposing a public variable or adding the `[SerializeField]` attribute to a private value.
+This way, the variable is shown in the inspector in Unity's editor and the GameObject can be referenced by dragging and dropping it into the field of the variable.
+This is also more stable regarding changes.
+If the GameObject is renamed, the drag-and-drop reference is maintained.
+In contrast to this, all `GameObject.Find` calls in the code need to be updated manually to the new name of the GameObject.
 
-- do not do blocking operations on the main loop, use Coroutines instead
-- avoid Update(): check if the procedure really needs to run every frame
-- remove empty Start() and Update() calls
-- avoid Camera.main
-- avoid repeated queries to find GameObjects or MonoBehaviours (e.g. GetComponent)
-- do not use SendMessage()
-- avoid Instantiate(), instead use object pooling
-- avoid LINQ
-- do not use boxing
+Similar recommendations exist for other calls which fetch references, e.g. `GetComponent()` or `GetGameObjectsWithTag()`.
+They are expensive operations and it is better to cache their result in the script instead of executing them repeatedly.
+
+**Do not use Camera.main**:
+A pitfall regarding the previous recommendation to minimise the use of reference-fetching methods is `Camera.main`.
+At a glance, this seems to be a useful public variable where the main camera of the scene was cached.
+However, calling `Camera.main` triggers a `FindGameObjectsWithTag()` every time.
+It searches a GameObject with the tag `MainCamera` and does not cache the result.
+Hence, `Camera.main` should be regarded as a reference-fetching method.
+It should be used sparingly by calling it once in the initialisation of the script and then caching the result.
+
+**Use object pooling to minimise the usage of the garbage collector**:
+Unlike more-low level programming languages like C++ where developers need to allocate and release memory manually for their objects, C# has a garbage collector which automates the memory management.
+If a new object is created, usually with the `new` keyword, memory is allocated.
+In regular intervals or if there is no memory left, the garbage collector interrupts the execution of the program.
+It analyses which objects are not used anymore and frees the memory that was occupied by these objects.
+While this takes away the development effort of manually managing memory, it comes at a performance trade-off.
+The gargabe collector has a large overhead and can lead to visible stuttering in the 3D application if a lot of objects need to be cleaned up.
+Hence, it is advisable to avoid creating new objects and reusing them instead.
+As an example, a list `List<string> myList = new List<string>()` can be emptied with `myList.Clear()` instead of calling the constructor `myList = new List<string>()` again.
+Both calls end up with an empty list but the version with the constructor creates a new object, allocates new memory and the garbage collector will clean up the memory occupied by the old list.
+
+`Instantiate()` and `Destroy()` create and remove GameObjects and components.
+These operations are expensive because they allocate and deallocate memory and need to register and deregister the new components, callback methods, etc.
+Destroyed GameObjects are cleaned up by the garbage collector.
+Instead of `Instantiate()` and `Destroy()`, a technique called object pooling can be implemented.
+The number of necessary GameObjects are created once in the beginning and they are added to a collection of unused GameObjects.
+Instead of calling `Instantiate()` in the code again, the code now requests a GameObject from the pool.
+Once the object is not used anymore, it is not destroyed but returned to the pool.
+
+Object pooling cannot only be used for GameObjects but for any object.
+As an example, it is an important technique when meshes are created via code.
