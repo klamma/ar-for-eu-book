@@ -244,9 +244,25 @@ It is not always necessary to represent the exact shape of the object but instea
 For instance, virtual characters can be approximated by one big capsule.
 If a mesh collider has to be used, it can be beneficial to create a second mesh with a lower resolution and use it as the mesh collider.
 
-- in scene setup:   
-   - use single pass instanced rendering but check that the used shaders support it (e.g. the standard TextMeshPro shader does not)
-   - avoid post-processing effects
+**Use Single Pass Stereo Rendering on Head-Mounted Displays and Single Pass Instanced Rendering for Windows Mixed Reality**:
+Head-mounted displays have one screen for each eye.
+The two screens show two slightly different images with a shifted perspective.
+Due to this shift, the user can see the virtual content in 3D with depth perception.
+However, this also means that the render engine needs to create two images each frame instad of one.
+Without any optimisations, many portions of the render pipeline need to be done twice.
+For instance, the number of draw calls, which have a high overhead, doubles.
+An optimisation technique is Single Pass Stereo Rendering.
+Instead of rendering two separate images, it uses an image texture with a doubled width where both images are created side by side.
+The advantage is that the work which is done in the rendering pipeline, e.g. the results of the culling process, only needs to be done once.
+
+A further optimisation is Single Pass Instanced Rendering which can be used for the Hololens.
+The optimisation window of the Mixed Reality Toolkit automatically applies this technique.
+
+It is important to know that both optimisation techniques require compatible shaders that need to support the chosen rendering method.
+The shaders of the Mixed Reality Toolkit work with Single Pass Stereo Instanced Rendering.
+However, the default shader of the TextMeshPro on Unity 2018 does not work.
+The text is only rendered on one eye and is invisible for the other eye.
+To solve this, the TextMeshPro object needs to use a text shader which is provided by the Mixed Reality Toolkit.
 
 ### Script Optimisation
 
