@@ -2,20 +2,20 @@
 name: deploy
 # trigger on pushes to master
 on:
-	push:
-		branches:
-			- master
+    push:
+        branches:
+            - master
 
 jobs:
-	build:
-		name: deploy
-		runs-on: ubuntu-18.04
-		steps:
-			# first check out the repository
-			# this uses a pre-defined action by GitHub
-			- uses: actions/checkout@v1
-			# build the site using our own action
-			- uses: ./.github/actions/build-dist-site
-			  env:
-				# add the token so that we can push to GitHub
-				GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    build:
+        name: deploy
+        runs-on: ubuntu-18.04
+        steps:
+            # first check out the repository
+            # this uses a pre-defined action by GitHub
+            - uses: actions/checkout@v1
+            # build the site using our own action
+            - uses: ./.github/actions/build-dist-site
+              env:
+                # add the token so that we can push to GitHub
+                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

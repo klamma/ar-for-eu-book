@@ -2,5 +2,5 @@ name: 'Deploy'
 description: 'Setup Ruby and build book'
 author: 'Benedikt Hensen'
 runs:
-	using: 'docker'
-	image: 'Dockerfile'
+    using: 'docker'
+    image: 'Dockerfile'
