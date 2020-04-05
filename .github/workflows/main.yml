@@ -1,5 +1,5 @@
 # Workflow for deploying the book
-name: Jeykll Build & Deploy
+name: Jekyll Build & Deploy
 # trigger on pushes to master
 on:
     push:

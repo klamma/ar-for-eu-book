@@ -1,8 +1,10 @@
-# ar-for-eu-book
+# AR for EU Book
+
+![Jekyll Build & Deploy](https://github.com/BenediktHensen/ar-for-eu-book/workflows/Jekyll%20Build%20&%20Deploy/badge.svg)
 
 Welcome to the editing environment for the AR-FOR-EU Book.
 
-The latest version should be available at [http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/](http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/).
+The latest version is available at [http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/](http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/).
 
 # HowTo Run Locally
 
