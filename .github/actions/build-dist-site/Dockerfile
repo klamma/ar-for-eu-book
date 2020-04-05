@@ -20,7 +20,7 @@ RUN apt-get update && \
     && bundle config --global silence_root_warning 1
 
 # entrypoint to the scripts
-COPY entrypoint.sh
+COPY entrypoint.sh /
 
 # define entrypoint
 ENTRYPOINT ["sh", "/entrypoint.sh"]
