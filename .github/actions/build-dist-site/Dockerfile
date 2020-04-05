@@ -13,7 +13,7 @@ RUN apt-get update && \
         curl \
         libffi6 \
         make \
-        shehllcheck \
+        shellcheck \
         libffi6 \
         git-all \
     && gem install bundler:2.0.2 \
