@@ -1,21 +1,15 @@
-# Workflow for deploying the book
-name: deploy
-# trigger on pushes to master
-on:
-    push:
-        branches:
-            - master
+name: Jekyll Deploy
 
-jobs:
-    build:
-        name: deploy
-        runs-on: ubuntu-18.04
-        steps:
-            # first check out the repository
-            # this uses a pre-defined action by GitHub
-            - uses: actions/checkout@v1
-            # build the site using our own action
-            - uses: ./.github/actions/build-dist-site
-              env:
-                # add the token so that we can push to GitHub
-                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+on: [push]
+
+jobs: 
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build & Deploy to GitHub Pages
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+        uses: BryanSchuetz/jekyll-deploy-gh-pages@master
