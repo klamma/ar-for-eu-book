@@ -35,4 +35,4 @@ public/
 .idea
 
 # to prevent accidents
-_config.yml
+#_config.yml

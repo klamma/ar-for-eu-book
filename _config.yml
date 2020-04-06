@@ -1,0 +1,18 @@
+# Site settings
+title: The Open Augmented Reality Teaching Book
+email: klamma@dbis.rwth-aachen.de
+description: The Open Augmented Reality Teaching Book
+baseurl: "/ar-for-eu-book" # the subpath of your site, e.g. /blog
+url: "https://benedikthensen.github.io"
+twitter_username: AR_FOR_EU
+
+# Build settings
+markdown: kramdown
+exclude: ["README.md"]
+include:
+  - _pages/chapters
+  - _pages
+sass:
+    sass_dir: _sass
+    style: compressed
+
