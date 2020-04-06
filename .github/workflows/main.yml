@@ -13,7 +13,7 @@ jobs:
         steps:
             # first check out the repository
             # this uses a pre-defined action by GitHub
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v1
             # build the site using our own action
             - uses: ./.github/actions/build-dist-site
               env:
