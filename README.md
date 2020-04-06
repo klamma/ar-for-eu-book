@@ -1,6 +1,6 @@
 # AR for EU Book
 
-![Jekyll Build & Deploy](https://github.com/BenediktHensen/ar-for-eu-book/workflows/Jekyll%20Build%20&%20Deploy/badge.svg)
+![Jekyll Build & Deploy](https://github.com/klamma/ar-for-eu-book/workflows/Jekyll%20Build%20&%20Deploy/badge.svg)
 
 Welcome to the editing environment for the AR-FOR-EU Book.
 
