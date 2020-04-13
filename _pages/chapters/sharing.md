@@ -95,6 +95,32 @@ The last part presents an alternative way for sending data over the network usin
 
 #### Setting up the Project
 
+1. Create a new Unity project with the name "SharedDraughts" which uses the default *3D* template.
+   In this exercise, we are using Unity 2018.3 because it is the current long-term support version that is compatible with the Mixed Reality Toolkit.
+   If you are using the Unity Hub, you can select which Unity version should create the project by clicking on the down arrow on the *New* button.
+
+   ![Create Project]({{pathToRoot}}/assets/figures/sharing/sharingExercise/CreateProject.png)
+   ![Project Name Menu]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ProjectName.png)
+2. Download the Mixed Reality Toolkit.
+   Go to the [releases](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) of the Mixed Realtiy Toolkit on GitHub and scroll to the latest version which is not marked as a pre-release.
+   We are using the release *Microsoft Mixed Reality Toolkit v2.3.0*.
+   In the Assets section of the release, download the Unity-package which has *Foundation* in its name as this is the base package.
+   In our case, it is called * Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage*.
+
+   [![Download Mixed Reality Toolkit]({{pathToRoot}}/assets/figures/sharing/sharingExercise/DownloadMRTK.png)](https://github.com/microsoft/MixedRealityToolkit-Unity/releases)
+3. Import the Mixed Reality Toolkit.
+   To do this, perform a right-click in Unity's Asset Browser and select *Import Package > Custom Package* from the context menu.
+
+   ![Import Custom Package]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ImportCustomPackage.png)
+   After that select the Unity-package that you just downloaded in the opened file explorer and click *Open*.
+   Unity will prepare the Unity-package for the import.
+   Next, a dialog will be shown which allows you select which content should be imported.
+   Click *All* to make sure that everythin is selected and then press *Import*.
+
+   ![Import Package Selection Menu]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ImportPackage.png)
+   Once the import has finished, you will find the new folders of the Mixed Reality Toolkit in your assets.
+4. 
+
 #### Synchronising Data with Serialisers
 
 #### Synchronising Data with Remote Procedure Calls
