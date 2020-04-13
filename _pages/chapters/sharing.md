@@ -87,13 +87,15 @@ We will not implement the rules of the game in this exercise.
 Instead, the app provides the shared pieces and relies on players to move them according to the rules.
 If you want, you can implement rules, e.g. move restrictions once you completed the exercise.
 
-This exercise is split into three sections.
-The first part will show the setup of a shared environmnent for remote players.
+This exercise is split into five sections.
+The first part will demonstrate how the Unity project is created and how the necessary libraries can be imported.
+After that, the base logic of the draughts game is created.
+The third part demonstrates the setup of a shared environmnent for remote players.
 It will demonstrate how to set up a room system where content is only shared between users in one room and where multiple rooms can exist in parallel.
-In the second part, we will look at a basic way of implementing the shared logic using serialisers.
+In the fourth part, we will look at a basic way of implementing the shared logic using serialisers.
 The last part presents an alternative way for sending data over the network using Remote Procedure Calls (RPCs).
 
-#### Setting up the Project
+#### 1 - Setting up the Project
 
 1. Create a new Unity project with the name "SharedDraughts" which uses the default *3D* template.
    In this exercise, we are using Unity 2018.3 because it is the current long-term support version that is compatible with the Mixed Reality Toolkit.
@@ -112,18 +114,71 @@ The last part presents an alternative way for sending data over the network usin
    To do this, perform a right-click in Unity's Asset Browser and select *Import Package > Custom Package* from the context menu.
 
    ![Import Custom Package]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ImportCustomPackage.png)
+
    After that select the Unity-package that you just downloaded in the opened file explorer and click *Open*.
    Unity will prepare the Unity-package for the import.
    Next, a dialog will be shown which allows you select which content should be imported.
    Click *All* to make sure that everythin is selected and then press *Import*.
 
    ![Import Package Selection Menu]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ImportPackage.png)
+
    Once the import has finished, you will find the new folders of the Mixed Reality Toolkit in your assets.
-4. 
+4. After the import, a configuration window will automatically open.
+   It states that the Mixed Reality Toolkit would like to apply some settings to prepare the Unity project for Mixed Reality development.
+   Make sure that every recommendation in the list is checked and then click *Apply*.
 
-#### Synchronising Data with Serialisers
+   ![MRTK Configure Project Settings]({{pathToRoot}}/assets/figures/sharing/sharingExercise/MRTKConfiguration.png)
 
-#### Synchronising Data with Remote Procedure Calls
+5. The next step is to prepare the import of the Photon library.
+   Each application that uses Photon needs an AppId which is coupled with an account.
+   Go to [Photon's homepage](https://www.photonengine.com/pun) and create an account by clicking *Sign in* in the top right and then selecting *Don't have an account? Create one...*.
+6. After the registration you are on a dashboard where you can administer your Photon applications.
+   Click on the button *CREATE A NEW APP*.
+   
+   ![Create New Photon App]({{pathToRoot}}/assets/figures/sharing/sharingExercise/CreatePhotonApp.png)
+   
+7. On the next screen, you will be asked to enter the information about the new application.
+   Set the type to Photon PUN since we will work with Photon's PUN library.
+   Additionally, give the app a descriptive name, e.g. *SharedDraughts*.
+   You can also add a description if you want so that it becomes easier to identify the app later.
+   When you are done, click the *CREATE* button.
+
+   ![Photon App Settings]({{pathToRoot}}/assets/figures/sharing/sharingExercise/PhotonAppSettings.png)
+
+8. You will now be directed back to the Photon dashboard where a new panel has appeared with the name of your application.
+   Here, you can get the AppID of the application and look at its usage statistics.
+
+   ![Photon Dashboard]({{pathToRoot}}/assets/figures/sharing/sharingExercise/PhotonDashboard.png)
+
+9. Next, we are going to import the Photon library so that we can create a networed application.
+   Go to *Window > Asset Store* or press `Ctrl + 9` to open the asset store window in Unity.
+   Make sure that you are signed in with a Unity account so that you can download resources from the asset store.
+   If you are not signed in, there is a *Sign in* button at the top right of the asset store panel.
+   Search for *Pun 2 - FREE* and select it.
+   Click on the blue *Add to My Assets* button.
+   Once this is done, the button's caption will change to *Import* and you can click the button again to import the asset.
+   Just like the Unity-package of the Mixed Reality Toolkit, Unity now displays a dialogue window where you can select which resources you want to import.
+   Select everything and click the *Import* button in the dialogue.
+10. Once the import has finished, PUN will automatically open a pop-up window where you can enter the AppID that we generated previously.
+    To do so, go back to the browser and copy your full AppID that we generated.
+    The dashboard only shows a cut-off preview of the AppID.
+    Click on the shown preview and the full ID will be shown and is automatically highlighted so that you can copy it.
+    Enter the ID in the text field of the opened window in Unity.
+
+    ![PUN Setup]({{pathToRoot}}/assets/figures/sharing/sharingExercise/PUNSetup.png)
+
+    If you have accidentally closed the window or pressed *Skip*, you go to *Window > Photon Unity Networking > Highlight Server Settings*.
+    In the inspector, you can enter the AppID in the *Settings* section under *AppID Realtime*
+
+    ![PUN Server Settings]({{pathToRoot}}/assets/figures/sharing/sharingExercise/PUNServerSettings.png)
+
+#### 2 - Creating the Draughts Game Pieces
+
+#### 3 - Setting up the Shared Environment
+
+#### 4 - Synchronising Data with Serialisers
+
+#### 5 - Synchronising Data with Remote Procedure Calls
 
 Section two presents an alternative way of synchronizing the play stones.
 Both
