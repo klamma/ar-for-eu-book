@@ -60,34 +60,55 @@ Developers need to be aware of them and know how they are produced.
   But R has already moved the object to position 11 and now has to move it back to 8 in the next time interval.
   To the user which views the object on R this seems like a rubber-band effect since the object overshoots the target position before being pulled back to the point where it came to a halt.
 
-## Unity Networking Libraries
+### Unity Networking Libraries
 
-### Photon
-
-- General Introduction
-- Presentation of Sharing Possibilities
-
-### Mirror
+#### Photon
 
 - General Introduction
 - Presentation of Sharing Possibilities
 
-## Exercise: Creating a Shared Application in Photon
+#### Mirror
 
-## Example Application: VIAProMa
+- General Introduction
+- Presentation of Sharing Possibilities
+
+### Example Application: VIAProMa
 
 - Reference of agile project management (there is the entire)
 - Highlight of 
 - Owner manager
 - When to use RPCs
 
-## World Anchors
+### Exercise: Creating a Shared Application in Photon
+
+In this exercise, we will create the game [Draughts](https://en.wikipedia.org/wiki/Draughts) (also known as Checkers).
+This sample app will provide a way for two remote users to move playing stones on a board so that both participants can see each other's moves.
+We will not implement the rules of the game in this exercise.
+Instead, the app provides the shared pieces and relies on players to move them according to the rules.
+If you want, you can implement rules, e.g. move restrictions once you completed the exercise.
+
+This exercise is split into three sections.
+The first part will show the setup of a shared environmnent for remote players.
+It will demonstrate how to set up a room system where content is only shared between users in one room and where multiple rooms can exist in parallel.
+In the second part, we will look at a basic way of implementing the shared logic using serialisers.
+The last part presents an alternative way for sending data over the network using Remote Procedure Calls (RPCs).
+
+#### Setting up the Project
+
+#### Synchronising Data with Serialisers
+
+#### Synchronising Data with Remote Procedure Calls
+
+Section two presents an alternative way of synchronizing the play stones.
+Both
+
+### World Anchors
 
 - Concept of Spatial Anchors
 
-### Azure Spatial Anchors
+#### Azure Spatial Anchors
 
-### ARCore World Anchors
+#### ARCore World Anchors
 
 ## Cross-Platform Support
 
