@@ -172,7 +172,48 @@ The last part presents an alternative way for sending data over the network usin
 
     ![PUN Server Settings]({{pathToRoot}}/assets/figures/sharing/sharingExercise/PUNServerSettings.png)
 
-#### 2 - Creating the Draughts Game Pieces
+#### 2 - Creating the Draughts Game Elements
+
+We have finished the project setup and can now start with setting up the pieces of the Draughts game.
+
+1. First, we need to create the scene.
+   To keep things organized, go to the *Scenes* folder in the assets browser, perform a right-click and choose *Create > Scene*.
+   Name the scene "MainScene".
+   
+   ![Create Unity Scene]({{pathToRoot}}/assets/figures/sharing/sharingExercise/CreateScene.png)
+
+   Perform a double click on the new scene to open it in the 3D view.
+   You can confirm that the scene was opened by looking at the title bar of the Unity window.
+   It includes the name of the open scene.
+
+2. In the top menu select *Mixed Reality Toolkit > Add to Scene and Configure*
+
+   ![Add to Scene and Configure]({{pathToRoot}}/assets/figures/sharing/sharingExercise/MRTKAddConfigure.png)
+
+   This adds a *MixedRealityToolkit* GameObject and a *MixedRealityPlayspace* GameObject to the scene's hierarchy.
+
+3. Add a cube to the scene by choosing *GameObject > 3D Object > Cube* from the top menu.
+   It will act as the playing field.
+   Rename it in the inspector to *Playing Field*.
+   There, you can also move the cube to the position (0, 0, 2) so that it is two meter in front of the user at the application start.
+   Scale it to the measurements (0.8, 0.02, 0.8) so that it is a flat playing field.
+
+   ![Playing Field]({{pathToRoot}}/assets/figures/sharing/sharingExercise/PlayingField.png)
+   
+4. We will now import the checkerboard texture for the playing field.
+   To keep your project organised, create a new folder with the name *Textures* in the assets folder.
+   You can do this by performing a right-click in Unity's asset browser and choosing *Create > Folder*.
+   Download the given checkerboard texture by right-clicking on [this link]({{pathToRoot}}/assets/figures/sharing/sharingExercise/CheckerboardTexture.png) and choosing *Save target as...*.
+   Place the texture in the new texture folder.
+   Simply navigate in the file browser dialog to the place where you saved your Unity project.
+   It contains the asset folder and within it the textures folder.
+   If you return to Unity, the texture will show up in the asset browser.
+
+5. With the texture imported, we can create an new material, apply it to the playing field and set the checkerboard texture.
+   Go to the assets folder in Unity and create a folder *Materials* (right-click, *Create > Folder*).
+   With the folder opened in Unity's asset browser, right-click and select *Create > Material* to create a new material.
+   Enter the name *Checkerboard* and confirm with enter.
+   
 
 #### 3 - Setting up the Shared Environment
 
