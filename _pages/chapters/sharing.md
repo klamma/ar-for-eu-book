@@ -238,10 +238,49 @@ We have finished the project setup and can now start with setting up the pieces 
    
    ![Change Tiling Factor]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ChangeTilingFactor.png)
 
-9. We now have a playing field but we still need the game pieces.
-   They can be created with cylinders.
-   In the top menu, select *GameObject > 3D Object > Cylinder*.
-   Scale the cylinder to (0.08, 0.01, 0.08) so that it fits onto one field of the playing field.
+9. We now have a board but we still need the game pieces.
+   There are two kind of game pieces in Draughts: A man and a king.
+    A king is represented by two stacked pieces.
+    To support both kind of game elements in the application, we will create one general purpose GameObject where two cylinders are stacked on top of each other.
+    If we want to represent a man, we disable the cylinder on the top; for kings the upper cylinder will be enabled.
+    We need a parent GameObject which will hold both cylinders.
+    Add an empty GameObject in the top menu using *GameObject > Create Empty*.
+    Name the GameObject *GamePiece* in the inspector.
+
+10. Create a cylinder (*GameObject > 3D Object > Cylinder*).
+    Scale the cylinder to (0.08, 0.01, 0.08) so that it fits onto one field of the board.
+    Make the cylinder a child of the *GamePiece*.
+    This can be done by dragging and dropping the entry of the cylinder onto the entry of the *GamePiece* in the hierarchy view.
+    Move the cylinder to the position (0, 0.01, 0) so that the origin of the *GamePiece* object is at the bottom of the cylinder.
+
+11. By default, the cylinder has a capsule collider which approximates its shape well with the exception of the caps at the top which are rounded.
+    However, the capsule collider cannot approximate the flat shape of the piece.
+    Therefore, remove the capsule collider in the inspector.
+    This is possible by clicking on the small cogwheel right of the component name and by selecting *Remove Component* from the opened context menu.
+
+    ![Remove Capusle Collider]({{pathToRoot}}/assets/figures/sharing/sharingExercise/RemoveCollider.png)
+
+    After that, add a box collider by clicking the *Add Component* button at the bottom.
+    In the open menu search for *Box Collider* and choose the *Box Collider* component.
+    The added box collider automatically fits around the cylinder.
+
+    ![Add Box Collider]({{pathToRoot}}/assets/figures/sharing/sharingExercise/AddBoxCollider.png)
+
+12. Duplicate the cylinder using the keyboard shortcut `Ctrl + D` and move the new copy to the position (0, 0.033, 0) so that it sits on top of the other cylinder with a little gap between the two pieces.
+
+13. Create a new material in the *Materials* folder and name it *GamePiece*.
+    Change its shader to the *Mixed Reality Toolkit > Standard* shader.
+    Apply the material to both cylinder objects by dragging and dropping it onto them.
+
+14. Create a Prefab from the stacked pieces.
+    To do this, create a new folder in the assets folder called *Prefabs*.
+    With the assets browser open, drag and drop the *GamePiece* object from the hierarchy into the assets browser.
+    This should create a new file called *GamePiece* with a thumbnail that looks like the game piece that we just created.
+
+    ![Create Game Piece Prefab]({{pathToRoot}}/assets/figures/sharing/sharingExercise/GamePiecePrefab.png)
+
+15. The prefab is saved on the hard drive and you can delete the *GamePiece* GameObject in the scene.
+    We will later create a script that instantiates the prefab in the scene to set up the starting formation of play pieces.
 
 #### 3 - Setting up the Shared Environment
 
