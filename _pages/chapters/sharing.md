@@ -209,11 +209,39 @@ We have finished the project setup and can now start with setting up the pieces 
    It contains the asset folder and within it the textures folder.
    If you return to Unity, the texture will show up in the asset browser.
 
-5. With the texture imported, we can create an new material, apply it to the playing field and set the checkerboard texture.
+5. Next, we create a new material.
    Go to the assets folder in Unity and create a folder *Materials* (right-click, *Create > Folder*).
    With the folder opened in Unity's asset browser, right-click and select *Create > Material* to create a new material.
    Enter the name *Checkerboard* and confirm with enter.
+
+   ![Create Material]({{pathToRoot}}/assets/figures/sharing/sharingExercise/CreateMaterial.png)
+
+6. Select the material in the asset browser so that it can be configured in the inspector.
+   First, we will change the material's shader to the optimised shader of the Mixed Reality Toolkit.
+   Click on the *Shader* dropdown at the top of the inspector and change it to *Mixed Reality Toolkit > Standard*.
+   Next, we will assign the texture to the material.
+   There is an *Albedo* property underneath *Main Maps*.
+   Click on the icon with the small circle with a dot in the middle left of the *Albedo* text to choose a texture.
+   A dialog with all textures in the project opens.
+   Search for *Checkerboard* (the name of the texture) and select it.
+   After that you can close the dialog window again.
+
+   ![Assign Texture]({{pathToRoot}}/assets/figures/sharing/sharingExercise/AssignTexture.png)
+
+7. Apply the material to the playing field object by dragging and dropping it from the asset browser onto the GameObject.
+
+   ![Assign Material]({{pathToRoot}}/assets/figures/sharing/sharingExercise/AssignMaterial.png)
+
+8. Draughts is played on a chess board which has 8 by 8 fields.
+   At the moment we only have a 2 by 2 board.
+   We can change this by increasing the texture's tiling factor in the material's settings to 4 for X and Y.
    
+   ![Change Tiling Factor]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ChangeTilingFactor.png)
+
+9. We now have a playing field but we still need the game pieces.
+   They can be created with cylinders.
+   In the top menu, select *GameObject > 3D Object > Cylinder*.
+   Scale the cylinder to (0.08, 0.01, 0.08) so that it fits onto one field of the playing field.
 
 #### 3 - Setting up the Shared Environment
 
