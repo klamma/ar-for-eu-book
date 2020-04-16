@@ -284,12 +284,25 @@ We have finished the project setup and can now start with setting up the pieces 
 
 #### 3 - Setting up the Shared Environment
 
+- create launcher script
+- Connection logic
+- OnConnectToMaster
+- OnJoinRandomFailed
+- OnJoinedRoom
+- MaxPlayersPerRoom = 2
+- Connect Button in StartScene
+- Set Player name
+- Transition to MainScene
+- Set up game pieces
+- Fix Auto-Rejoin
+
 #### 4 - Synchronising Data with Serialisers
+
+- Position serializer for playing stones
 
 #### 5 - Synchronising Data with Remote Procedure Calls
 
-Section two presents an alternative way of synchronizing the play stones.
-Both
+- upgrade to king
 
 ### World Anchors
 
