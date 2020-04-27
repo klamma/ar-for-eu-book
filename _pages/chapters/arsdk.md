@@ -53,7 +53,8 @@ There is a [general version](https://github.com/microsoft/MixedRealityToolkit) o
 The team that develops the Mixed Reality Toolkit regularly publishes releases which can be found on the [GitHub releases page](https://github.com/microsoft/MixedRealityToolkit-Unity/releases).
 For Unity, the project is bundled into unitypackage-files.
 
-<span class="mrtkVersionSpecific mrtk2017" markdown="1">
+<div class="mrtkVersionSpecific mrtk2017" markdown="1">
+
 The Mixed Reality Toolkit 2017 release contains of the package "HoloToolkit-Unity-2017.4.3.0-Refresh".
 This package is sufficient to create mixed reality applications in Unity.
 Further packages are optional and should only be added when needed.
@@ -62,15 +63,6 @@ There are two more packages in the release which contain "Examples" and "Preview
 The examples package contains a series of folders, scenes and prefabs which demonstrate the different features of the Mixed Reality Toolkit.
 Experimental features such as the sharing functionality are delivered in the preview-package.
 When importing the examples package, it might also be necessary to import the preview-package so that error about missing namespaces are fixed.
-</span>
-<span class="mrtkVersionSpecific mrtkvNext" markdown="1">
-The core functionality is contained in the foundation package ("Microsoft.MixedReality.Toolkit.Unity.Foundation.x.x.x.unitypackage").
-This package is sufficient to create mixed reality applications in Unity.
-Further packages are optional and should only be added when needed.
-A series of further packages is available.
-For instance, there is a package with the word "Examples" in its name.
-It contains a series of folders, scenes and prefabs which demonstrate the different features of the Mixed Reality Toolkit.
-</span>
 
 Once the packages have been saved on disk, they can be imported into Unity with the following steps.
 1. Open the Unity project and right-click on the area of the assets browser.
@@ -79,6 +71,46 @@ Once the packages have been saved on disk, they can be imported into Unity with 
 Select the .unitypackage-file und click "Open".
 4. An import window will open which shows the elements which are bundled in the package.
 Select all of them and click on the "Import" button.
+
+</div>
+
+<div class="mrtkVersionSpecific mrtkvNext" markdown="1">
+
+The core functionality is contained in the foundation package ("Microsoft.MixedReality.Toolkit.Unity.Foundation.x.x.x.unitypackage").
+This package is sufficient to create mixed reality applications in Unity.
+Further packages are optional and should only be added when needed.
+A series of further packages is available.
+For instance, there is a package with the word "Examples" in its name.
+It contains a series of folders, scenes and prefabs which demonstrate the different features of the Mixed Reality Toolkit.
+
+
+1. Download the Mixed Reality Toolkit.
+   Go to the [releases](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) of the Mixed Realtiy Toolkit on GitHub and scroll to the latest version which is not marked as a pre-release.
+   We are using the release *Microsoft Mixed Reality Toolkit v2.3.0*.
+   In the Assets section of the release, download the Unity-package which has *Foundation* in its name as this is the base package.
+   In our case, it is called * Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage*.
+
+   [![Download Mixed Reality Toolkit]({{pathToRoot}}/assets/figures/sharing/sharingExercise/DownloadMRTK.png)](https://github.com/microsoft/MixedRealityToolkit-Unity/releases)
+2. Import the Mixed Reality Toolkit.
+   To do this, perform a right-click in Unity's Asset Browser and select *Import Package > Custom Package* from the context menu.
+
+   ![Import Custom Package]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ImportCustomPackage.png)
+
+   After that select the Unity-package that you just downloaded in the opened file explorer and click *Open*.
+   Unity will prepare the Unity-package for the import.
+   Next, a dialog will be shown which allows you select which content should be imported.
+   Click *All* to make sure that everythin is selected and then press *Import*.
+
+   ![Import Package Selection Menu]({{pathToRoot}}/assets/figures/sharing/sharingExercise/ImportPackage.png)
+
+   Once the import has finished, you will find the new folders of the Mixed Reality Toolkit in your assets.
+3. After the import, a configuration window will automatically open.
+   It states that the Mixed Reality Toolkit would like to apply some settings to prepare the Unity project for Mixed Reality development.
+   Make sure that every recommendation in the list is checked and then click *Apply*.
+
+   ![MRTK Configure Project Settings]({{pathToRoot}}/assets/figures/sharing/sharingExercise/MRTKConfiguration.png)
+
+</div>
 
 ### Updating an Existing Mixed Reality Toolkit Setup in a Unity Project
 
