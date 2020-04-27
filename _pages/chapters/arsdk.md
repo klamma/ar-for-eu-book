@@ -110,6 +110,12 @@ It contains a series of folders, scenes and prefabs which demonstrate the differ
 
    ![MRTK Configure Project Settings]({{pathToRoot}}/assets/figures/sharing/sharingExercise/MRTKConfiguration.png)
 
+4. In the top menu select *Mixed Reality Toolkit > Add to Scene and Configure*
+
+   ![Add to Scene and Configure]({{pathToRoot}}/assets/figures/sharing/sharingExercise/MRTKAddConfigure.png)
+
+   This adds a *MixedRealityToolkit* GameObject and a *MixedRealityPlayspace* GameObject to the scene's hierarchy.
+
 </div>
 
 ### Updating an Existing Mixed Reality Toolkit Setup in a Unity Project
