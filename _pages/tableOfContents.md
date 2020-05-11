@@ -39,7 +39,7 @@ permalink: /toc/
 - [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="outline" %}
 - [Dialogue Understanding](/ar-for-eu-book/chapter/dialogueUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
-- [Collaboration & Sharing](/ar-for-eu-book/chapter/sharing/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [Collaboration & Sharing](/ar-for-eu-book/chapter/sharing/) {% include badge.html base=pathToRoot badgeName="completed" %}
 - [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### Computer Graphics

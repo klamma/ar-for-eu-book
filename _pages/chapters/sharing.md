@@ -10,12 +10,26 @@ visualizations:
 
 ## Collaboration in a Shared Virtual Environment
 
+### Contents
+
+1. [Common Challenges of Networking](#Challenges)
+2. [Networking Libraries](#NetworkingLibraries)
+3. [Exercise: Creating a Shared Application in Photon](#ExercisePhoton)
+   1. [Setting up the project](#ProjectSetup)
+   2. [Creating the Draughts Game Elements](#GameElements)
+   3. [Setting up the Shared Environment](#SharedEnvironment)
+   4. [Implementing the Game Pieces Setup](#GamePiecesSetup)
+   5. [Synchronizing Data with Observables](#Observables)
+   6. [Synchronizing Data with Remote Procedure Calls](#RPCs)
+   7. [Some Ideas on How to Proceed](#furtherIdeas)
+4. [Example Application with a Shared Environment: VIAProMa](#VIAProMa)
+
 Synchronous collaboration in Mixed Reality is possible in a shared virtual environment.
 This means that the shown 3D objects are synchronized between the participants and changes are broadcast in real-time.
 As an example, if one participant picks up an object and moves it around, the other members of the shared environment should be able to perceive the motion of the object accurately and with a low latency.
 There are a few considerations that need to be made in order to successfully realize such a system.
 
-### Common Challenges of Networking
+### Common Challenges of Networking {#Challenges}
 
 A series of common challenges can occur in the implementation of a shared environment.
 
@@ -74,7 +88,7 @@ Developers need to be aware of them and know how they are produced.
   But R has already moved the object to position 11 and now has to move it back to 8 in the next time interval.
   To the user which views the object on R this seems like a rubber-band effect since the object overshoots the target position before being pulled back to the point where it came to a halt.
 
-### Unity Networking Libraries
+### Unity Networking Libraries {#NetworkingLibraries}
 
 Unity had its own network library called UNET, however it is now deprecated.
 Therefore, developers need to look at other networking solutions.
@@ -86,7 +100,7 @@ It is a commercial product suite by Exit Games which provides a free plan for up
 The sharing functionality can be realized using the Photon PUN2 library.
 Moreover, Photon provides further libraries for collaboration, e.g. to realize a text chat or a voice chat.
 
-### Exercise: Creating a Shared Application in Photon
+### Exercise: Creating a Shared Application in Photon {#ExercisePhoton}
 
 In this exercise, we will create the game [Draughts](https://en.wikipedia.org/wiki/Draughts) (also known as Checkers).
 This sample app will provide a way for two remote users to move playing stones on a board so that both participants can see each other's moves.
@@ -102,7 +116,7 @@ It will demonstrate how to set up a room system where content is only shared bet
 In the fourth part, we will look at a basic way of implementing the shared logic using serializers.
 The last part presents an alternative way for sending data over the network using Remote Procedure Calls (RPCs).
 
-#### 1 - Setting up the Project
+#### 1 - Setting up the Project {#ProjectSetup}
 
 1. Create a new Unity project with the name "SharedDraughts" which uses the default *3D* template.
    In this exercise, we are using Unity 2018.4 because it is the current long-term support version that is compatible with the Mixed Reality Toolkit.
@@ -182,7 +196,7 @@ The last part presents an alternative way for sending data over the network usin
 
     ![PUN Server Settings]({{pathToRoot}}/assets/figures/sharing/sharingExercise/PUNServerSettings.png)
 
-#### 2 - Creating the Draughts Game Elements
+#### 2 - Creating the Draughts Game Elements {#GameElements}
 
 We have finished the project setup and can now start with setting up the pieces of the Draughts game.
 
@@ -296,7 +310,7 @@ We have finished the project setup and can now start with setting up the pieces 
 15. The prefab is saved on the hard drive and you can delete the *GamePiece* GameObject in the scene.
     Select it and press the delete key on the keyboard.
 
-#### 3 - Setting up the Shared Environment
+#### 3 - Setting up the Shared Environment {#SharedEnvironment}
 
 The application will work with two scenes.
 The player will start in a start scene which is for connecting to the shared environment.
@@ -413,7 +427,7 @@ Once a connection has been established, the player switches to the main scene wh
    You should now be able to start the application in the StartScene.
    In the console, you can keep track of the connection process and after a couple of seconds, the scene should switch to MainScene where the board is set up.
 
-#### 4 - Implementing the Game Pieces Setup
+#### 4 - Implementing the Game Pieces Setup {#GamePiecesSetup}
 
 Right now, players can enter a room and will find an empty board.
 In the next few steps, we will change this so that the application automatically initializes the play pieces and assigns them a colour.
@@ -688,7 +702,7 @@ In the next few steps, we will change this so that the application automatically
     If it is not owned by the local player, we deactivate the two scripts which provide user interaction.
     This way, a playing stone can only be moved or upgraded by the player who owns it.
 
-#### 5 - Synchronizing Data with Observables
+#### 5 - Synchronizing Data with Observables {#Observables}
 
 At this point, the players can find a random room, enter the room and are presented with a playing field where their own side is correctly set up with playing pieces.
 The playing pieces can be moved and they can be upgraded to kings.
@@ -752,7 +766,7 @@ The second alternative will demonstrate how to synchronize these data using a cu
    The Photon View will repetitively call the serialization methods and observe the serialized values.
    Drag-and-drop either the pre-defined *Photon Transform View* or the own implemented observable into this list.
 
-#### 6 - Synchronizing Data with Remote Procedure Calls
+#### 6 - Synchronizing Data with Remote Procedure Calls {#RPCs}
 
 At this point, we can move the play stones around on the board and we can see if the opponent moves his or her playing stones.
 However, one last sharing feature is missing:
@@ -842,7 +856,7 @@ You should now have a board game where remote players are matched up at random.
 Once they are in a room, they can move their own play stones on a board and can upgrade their pieces.
 Any of these changes can be seen by the other player.
 
-#### Some Ideas on How to Proceed
+#### Some Ideas on How to Proceed {#furtherIdeas}
 
 The example project can be extended by a number of advanced steps.
 They are not covered in this tutorial since they require a lot more implementation work 
@@ -860,7 +874,7 @@ They are not covered in this tutorial since they require a lot more implementati
 - **Avatars**: The same way that we synchronized the playing stones, we can also synchronize the position and rotation of the head-mounted display.
   If we connect this information with some avatar representation, we can visualize remote users in the shared environment.
 
-### Example Application for Sharing: VIAProMa
+### Example Application for Sharing: VIAProMa {#VIAProMa}
 
 [VIAProMa](https://github.com/rwth-acis/VIAProMa) is an open-source framework for collaborative visual analytics in the field of project management.
 It provides a shared virtual environment where remote participants can collaborate using the Microsoft HoloLens, HTC Vive, as well as Android smartphones and tablets.
@@ -876,3 +890,5 @@ It realizes a Mixed Reality text chat with the corresponding UI and utilizes Pho
 VIAProMa is able to visualize remote participants as customizable avatars.
 The avatar's position and head rotation is synchronized with the position of the device.
 The customization of the avatar is realized using custom user properties.
+
+Since the code for VIAProMa is available on GitHub under an open-source license, you can inspect and adapt this project and its implementation to create your own shared applications.
