@@ -60,6 +60,7 @@ A series of common challenges can occur in the implementation of a shared enviro
   A more advanced solution is to also broadcast the velocity vector of the object.
   With the direction and speed that the object is currently moving, the receiving client can anticipate the next position by extrapolating the object's position along this trajectory.
   When the next package arrives, the position is corrected.
+- **Consistency-throughput**: Latency is the natural enemy of sharing states across devices, preventing keeping states consistent, if the frequency of change and the number of changing nodes becomes too large. Communication delays from frequent state changes further impede the state change updates of the other nodes. "Latency hiding", i.e., precomputing predicted states and sending them right in time for just-in-time, is a way around this, if combined with "self-healing" to take account of "suprise-injected events" {% cite Peitso20 %}.
 
 With poor connection, networked applications can show a series of common effects.
 Developers need to be aware of them and know how they are produced.
