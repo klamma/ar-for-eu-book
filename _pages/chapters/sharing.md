@@ -109,6 +109,8 @@ We will not implement the rules of the game in this exercise.
 Instead, the app provides the shared pieces and relies on players to move them according to the rules.
 If you want, you can implement rules, e.g. move restrictions once you completed the exercise.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4u5WCXNZ56I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 This exercise is split into five sections.
 The first part will demonstrate how the Unity project is created and how the necessary libraries can be imported.
 After that, the base logic of the draughts game is created.
@@ -229,7 +231,7 @@ We have finished the project setup and can now start with setting up the pieces 
 4. We will now import the checkerboard texture for the playing field.
    To keep your project organized, create a new folder with the name *Textures* in the root assets folder.
    You can do this by performing a right-click in Unity's asset browser and choosing *Create > Folder*.
-   Download the given checkerboard texture by right-clicking on [this link]({{pathToRoot}}/assets/figures/sharing/sharingExercise/CheckerboardTexture.png) and choosing *Save target as...*.
+   Download the given checkerboard texture by right-clicking on [this link]({{pathToRoot}}/assets/supplementary_material/sharing/CheckerboardTexture.png) and choosing *Save target as...*.
    Place the texture in the new folder.
    Simply navigate in the file browser dialog to the place where you saved your Unity project.
    It contains the asset folder and within it the textures folder.
@@ -421,6 +423,9 @@ Once a connection has been established, the player switches to the main scene wh
    In the list, StartScene should now have a 0 next to it on the right and MainScene a 1.
    The number is the scene index which can be used to address the scene.
 
+   > Make sure that you always start the application with the *StartScene* opened so that the connection procedure is executed.
+   > If you start in the *MainScene*, the client will stay disconnected which leads to error messages as the application tries to synchronize data but cannot reach the server.
+
 7. Go back to the `RoomLauncher` script.
    In the `OnJoinedRoom()` method, add the line `SceneManger.LoadScene(1);`.
    This only works if you add the directive `using UnityEngine.SceneManagement` at the top.
@@ -486,17 +491,17 @@ In the next few steps, we will change this so that the application automatically
            // place the playing pieces
            Vector3 leftBottomStartPosition = new Vector3(playerDirection * -0.5f, 0.5f, playerDirection * -0.5f);
    
-           for (int row = 0; row < 2; row++)
+           for (int row = 0; row < 3; row++)
            {
-               for (int column = 0; column < 8; column++)
+               for (int column = row % 2; column < 8; column+=2)
                {
-                   // create a networked instance of the game piece
+                   // create a networked insteance of the gamepiece
                    // set the position and rotation to default values since we will first parent the object to the board
                    // and then change the position relative to the board
                    GameObject gamePiece = PhotonNetwork.Instantiate("GamePiece", Vector3.zero, Quaternion.identity, 0);
                    // parent the piece to the board
                    gamePiece.transform.parent = transform;
-   
+            
                    Vector3 localPiecePosition = new Vector3(
                        playerDirection * (cellSize * column + cellSize / 2f),
                        0,
