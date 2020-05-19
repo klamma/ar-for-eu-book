@@ -109,6 +109,8 @@ We will not implement the rules of the game in this exercise.
 Instead, the app provides the shared pieces and relies on players to move them according to the rules.
 If you want, you can implement rules, e.g. move restrictions once you completed the exercise.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4u5WCXNZ56I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 This exercise is split into five sections.
 The first part will demonstrate how the Unity project is created and how the necessary libraries can be imported.
 After that, the base logic of the draughts game is created.
