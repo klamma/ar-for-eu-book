@@ -10,7 +10,7 @@ permalink: /toc/
 
 ## Foundational Chapters
 
-- [History of AR](/ar-for-eu-book/chapter/historyar/) {% include badge.html base=pathToRoot badgeName="outline" %}
+- [History of AR](/ar-for-eu-book/chapter/historyar/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Future of AR](/ar-for-eu-book/chapter/futurear/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Perceptual Foundations of AR](/ar-for-eu-book/chapter/perceptionar/) {% include badge.html base=pathToRoot badgeName="outline" %}
 - [Sensors and Signal Processing](/ar-for-eu-book/chapter/sensors/) {% include badge.html base=pathToRoot badgeName="todo" %}
