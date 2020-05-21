@@ -161,7 +161,7 @@ development kit (SDK) for mobile devices.
 Augmented reality equipment with a self-contained Window 10 computer
 and depth mapping, a breakthrough in smart glasses technology. 
 
-![Hololens (2015)]({{pathToRoot}}/assets/figures/history/2015b.png)
+![Hololens (2015)]({{pathToRoot}}/assets/figures/history/2015b.jpg)
 
 **In 2016**, the Magic Leap One is unveiled, a competitor to the Hololens. 
 
