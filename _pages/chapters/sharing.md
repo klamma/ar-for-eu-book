@@ -300,7 +300,10 @@ We have finished the project setup and can now start with setting up the pieces 
     Change its shader to the *Mixed Reality Toolkit > Standard* shader.
     Apply the material to both cylinder objects by dragging and dropping it onto them.
 
-14. Create a Prefab from the stacked pieces.
+14. Add a *PhotonView* component to the *GamePiece* GameObject.
+    This component will later make sure that playing piece can be synchronized.
+
+15. Create a Prefab from the stacked pieces.
     To do this, create a new folder in the assets folder called *Prefabs*.
     We want to create instances of the prefab later using the sharing library.
     Therefore, we need another folder inside of the *Prefab* folder which must be called *Resources*.
@@ -310,7 +313,7 @@ We have finished the project setup and can now start with setting up the pieces 
 
     ![Create Game Piece Prefab]({{pathToRoot}}/assets/figures/sharing/sharingExercise/GamePiecePrefab.png)
 
-15. The prefab is saved on the hard drive and you can delete the *GamePiece* GameObject in the scene.
+16. The prefab is saved on the hard drive and you can delete the *GamePiece* GameObject in the scene.
     Select it and press the delete key on the keyboard.
 
 #### 3 - Setting up the Shared Environment {#SharedEnvironment}
@@ -660,6 +663,7 @@ In the next few steps, we will change this so that the application automatically
     We do not actually need to synchronize the colour itself because we can simply reconstruct it from data that we already get.
     If a networked object is created in a scene, the player who created the object automatically becomes its owner.
     The owner can be read from the *PhotonView* component.
+    So, make sure that there is a *PhotonView* component on the *GamePiece* prefab.
     Create a new script `PieceInitializer` and attach it to the *GamePiece* prefab.
 11. Paste the following code into the `PieceInitializer` script:
 
