@@ -10,7 +10,7 @@ visualizations:
 
 # Performance Metrics
 
-Monitoring and optimising the performance of an AR application is important to ensure a pleasant user experience.
+Monitoring and optimizing the performance of an AR application is important to ensure a pleasant user experience.
 Performance profiling of AR applications is not only concerned with the responsiveness of the app.
 Instead, developers need to look at further measures like the application's framerate.
 The framerate is a number which counts how many images the real-time graphics application can render per second.
@@ -18,7 +18,7 @@ Maintaining stable, high framerates is a necessary requirement for a pleasant us
 In AR and VR applications, low framerates can lead to physical discomfort and dizzyiness in the form of cybersickness.
 
 AR applications are mainly deployed to portable devices like the Microsoft HoloLens and smart phones.
-Hence, performance profiling also regards the optimisation of the application's power consumption to avoid that the device's battery is drained.
+Hence, performance profiling also regards the optimization of the application's power consumption to avoid that the device's battery is drained.
 Additionally, developers should monitor the memory footprint of the application.
 With real-time graphics applications, an the memory consumption can quickly rise if the developer uses a lot of high-resolution assets like textures or 3D models.
 
@@ -86,21 +86,21 @@ Here, you can enter the IP address of the device on which the application is run
 - how to access it
 - information that it provides
 
-## Performance Optimisation
+## Performance Optimization
 
-Detailed optimisation of an application starts with identifying the bottlenecks of the application.
+Detailed optimization of an application starts with identifying the bottlenecks of the application.
 After that, a change is conceptualised and realised.
-Finally, the altered version is analysed again to make sure that the optimisation did actually improve the performance.
+Finally, the altered version is analysed again to make sure that the optimization did actually improve the performance.
 This high-level process is repeated until the application has an acceptable performance.
-Apart from this general workflow, there are some general hints how a Unity application can be optimised:
+Apart from this general workflow, there are some general hints how a Unity application can be optimized:
 
-### Scene Optimisation
+### Scene Optimization
 
-For HoloLens applications, the Mixed Reality Toolkit provides an optimisation window which automatically optimises the application for AR.
+For HoloLens applications, the Mixed Reality Toolkit provides an optimization window which automatically optimizes the application for AR.
 It can be found under "*Mixed Reality Toolkit > Utilities > Optimize Window*".
 For the best usage experience, all listed recommondations should be accepted and applied.
 
-Apart from this, the following criteria can be considered for optimisation.
+Apart from this, the following criteria can be considered for optimization.
 To decide which of these recommendations need to be followed, the application should be profiled first.
 This way, the bottlenecks can be identified.
 For instance, there is no need to reduce the complexity of a mesh if there is script in the scene which does a long calculation each frame.
@@ -155,7 +155,7 @@ Both versions of the vertex have the same 3D position but they differ in the tex
 **Reduce the number of objects, use static batching for non-moving objects**:
 For each object in the scene, Unity calls the graphics API to perform a draw call.
 This has some overhead to it, so a goal is to keep the number of draw calls as low as possible.
-Unity already does some optimisations by *batching* objects.
+Unity already does some optimizations by *batching* objects.
 This combines their meshes into one big mesh which can be processed in one call.
 Static batching only works with non-moving GameObjects, e.g. virtual furniture in a scene. 
 To mark such objects as suitable for static batching, there is a checkbox *Static* in the top right of the inspector.
@@ -169,7 +169,7 @@ However, it also applies to scripting.
 If multiple objects should be coloured blue by a script, there is no need to create a new material for each of them and set its colour.
 Instead, the script can create one blue material and assign it to all required objects.
 
-**Optimise the size of textures**:
+**Optimize the size of textures**:
 Textures should be quadratic and their size should be a power of two, e.g. 256 pixels x 256 pixels, 512 x 512, 1024 x 1024 or 2048, 2048.
 Textures which do not comply to this rule are stored in an uncompressed format which increases their memory usage and loading times.
 
@@ -218,7 +218,7 @@ Although the descriptions guide the creation of channel maps for the Mixed Reali
 
 ![MRTK Texture Combiner Tool]({{pathToRoot}}/assets/figures/performance_profiling/MRTKTextureCombiner.png)
 
-This optimisation reduces the initial loading times of the scene because less textures need to be read.
+This optimization reduces the initial loading times of the scene because less textures need to be read.
 Additionally, this means that less textures need to be kept in memory.
 
 **Use primitive colliders, avoid mesh colliders**:
@@ -249,21 +249,21 @@ Head-mounted displays have one screen for each eye.
 The two screens show two slightly different images with a shifted perspective.
 Due to this shift, the user can see the virtual content in 3D with depth perception.
 However, this also means that the render engine needs to create two images each frame instad of one.
-Without any optimisations, many portions of the render pipeline need to be done twice.
+Without any optimizations, many portions of the render pipeline need to be done twice.
 For instance, the number of draw calls, which have a high overhead, doubles.
-An optimisation technique is Single Pass Stereo Rendering ([Unity Blog, 2017](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)).
+An optimization technique is Single Pass Stereo Rendering ([Unity Blog, 2017](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)).
 Instead of rendering two separate images, it uses an image texture with a doubled width where both images are created side by side.
 The advantage is that the work which is done in the rendering pipeline, e.g. the results of the culling process, only needs to be done once ([Unity Documentation](https://docs.unity3d.com/Manual/SinglePassStereoRendering.html)).
-A further optimisation is Single Pass Instanced Rendering which can be used for the Hololens ([Unity Documentation](https://docs.unity3d.com/Manual/SinglePassInstancing.html), [Unity Documentation for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html)).
-The optimisation window of the Mixed Reality Toolkit automatically applies this technique.
+A further optimization is Single Pass Instanced Rendering which can be used for the Hololens ([Unity Documentation](https://docs.unity3d.com/Manual/SinglePassInstancing.html), [Unity Documentation for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html)).
+The optimization window of the Mixed Reality Toolkit automatically applies this technique.
 
-It is important to know that both optimisation techniques require compatible shaders that need to support the chosen rendering method.
+It is important to know that both optimization techniques require compatible shaders that need to support the chosen rendering method.
 The shaders of the Mixed Reality Toolkit work with Single Pass Stereo Instanced Rendering.
 However, the default shader of the TextMeshPro on Unity 2018 does not work.
 The text is only rendered on one eye and is invisible for the other eye.
 To solve this, the TextMeshPro object needs to use a text shader which is provided by the Mixed Reality Toolkit.
 
-### Script Optimisation
+### Script Optimization
 
 **Use co-routines or threads for long-lasting or blocking operations**:
 Anything logic of a script (except for threaded code) is performed on the main thread.
@@ -283,7 +283,7 @@ This means that no calls to methods provided by Unity or Unity objects can be im
 Starting with Unity 2018, there a job system was added to execute multithreaded code.
 The job system is also used by Unity itself to handle background tasks.
 It creates a thread pool with one thread for each processor core.
-This optimises the performance because there is no overhead for creating and finishing threads.
+This optimizes the performance because there is no overhead for creating and finishing threads.
 Additionally, each processor core works its own thread which means that the cores perform less context switches.
 Like normal threads, Unity jobs still have the problem that Unity's API is not thread-safe and cannot be accessed.
 However, Unity introduced unmanaged, native container classes which are thread-safe.
@@ -337,7 +337,7 @@ public class LightSwitch : MonoBehaviour
 ```
 
 This script is not optimal in multiple aspects.
-Another optimisation of this script is addressed in the next paragraph.
+Another optimization of this script is addressed in the next paragraph.
 However, this logic does not need to be implemented by using Update().
 Instead, events can be used which are only fired if the value changes.
 They also have a bit of overhead but since we do not expect that the user is toggling the light, it reduces the amount of code that is executed every frame.
@@ -369,6 +369,8 @@ However, calling `Camera.main` triggers a `FindGameObjectsWithTag()` every time.
 It searches a GameObject with the tag `MainCamera` and does not cache the result.
 Hence, `Camera.main` should be regarded as a reference-fetching method.
 It should be used sparingly by calling it once in the initialisation of the script and then caching the result.
+
+## Memory Optimizations
 
 **Use object pooling to minimise the usage of the garbage collector**:
 Unlike more-low level programming languages like C++ where developers need to allocate and release memory manually for their objects, C# has a garbage collector which automates the memory management.
