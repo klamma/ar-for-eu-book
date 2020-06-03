@@ -73,9 +73,51 @@ Here, you can enter the IP address of the device on which the application is run
 
 ## Mixed Reality Toolkit Profiler Window
 
-- how to enable and disable it
-- information that it provides
+If you include the MRTK in the scene using "Mixed Reality Toolkit > Add to Scene and Configure", the Visual Profiler Window is enabled by default.
+In Play Mode and in the deployed application, it appears as a small floating window at the bottom of the user's field of view.
+At the top, it shows the application's current framerate.
+The number in the brackets shows the time that the CPU took to process a single frame.
+Below that, there is a line with green and red rectangles.
+A rectangle is coloured green if the framerate is above the advised value for the deployed platform and otherwise it turns red.
+The rectangles scroll through from right to left and so they show a view how stable the framerate is over time.
+The framerate threshold which changes the colour of a rectangle is automatically adjusted to the recommendation of each target device.
+For instance, on the HoloLens the rectangles turn green if the framerate is above 60fps while on Android devices a framerate of 30fps suffices to get green rectangles.
+Underneath the line with rectangles, the memory consumption is displayed.
+"Used" show the current memory consumption, "Peak" the maximum amount memory that the application has used since the start and "Limit" shows the amount of memory that is available on the device.
+At the bottom of the window, a bar visualizes the memory usage with the same colours as the labels above.
 
+{% include image.html url="/assets/figures/performance_profiling/MRTKDiagnosisWindow.png" base=pathToRoot description="MRTK's Visual Profiler Window" %}
+
+Similar to the Unity profiler, it is important to consider on which device the performance is monitored.
+In the Play Mode of Unity's editor, the application is executed on the development PC and therefore the performance depends on its hardware.
+To see the real performance on the HoloLens, the application has to be deployed to the device.
+
+The Visual Profiler Window provides an unintrusive way of performance profiling.
+Testers can interact with the application on the device and can see the performance data all the time.
+However, for the final application that is shipped to clients, the Diagnostics System and the Visual Profiler should be turned off.
+This is shown in the following steps:
+
+1. Select the *MixedRealityToolkit* GameObject from the hierarchy.
+   ![Select MRTK]({{pathToRoot}}/assets/figures/performance_profiling/disable_diagnostics/SelectMRTK.png)
+2. In the inspector, click the "Copy & Customize" button of the *Mixed Reality Toolkit* component.
+   ![Copy & Customize]({{pathToRoot}}/assets/figures/performance_profiling/disable_diagnostics/CopyCustomize.png)
+3. The buttom opens a window.
+   Give the new profile a descriptive name, e.g. "ReleaseMRTKProfile" because this will be the profile for releasing the software.
+   You can leave all other options at default.
+   Click the "Clone" button to confirm the settings and create a copy of the original profile.
+4. The profile is created in a "CustomProfiles" folder and is automatically applied to the *MixedRealityToolkit* GameObject in the scene.
+   With the profile selected, go to the Diagnostics section in the inspector.
+   Clone the sub-profile by clicking the "Clone" button.
+   ![Clone Diagnostics]({{pathToRoot}}/assets/figures/performance_profiling/disable_diagnostics/CloneDiagnostics.png)
+5. In the opened window, change the name, e.g. to "ReleaseDiagnosticsProfile" and leave everything else at their default settings.
+   Confirm the settings by clicking "Clone".
+   The MRTK creates a copy of the diagnostics profile settings and links the copy with the currently active MRTK instance.
+   You can now edit the diagnostics settings.
+6. For the final release, we do not need the diagnostics system since it should only be used during development.
+   So, uncheck "Enable Diagnostics System".
+   If you now start the application, the visual profiler window will not appear and the diagnostics services will not be executed.
+   ![Disable Diagnostics]({{pathToRoot}}/assets/figures/performance_profiling/disable_diagnostics/DisableDiagnostics.png)
+   
 ## Visual Studio Profiler
 
 - how to access it
