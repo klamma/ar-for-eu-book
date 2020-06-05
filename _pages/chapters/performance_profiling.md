@@ -8,7 +8,19 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-# Performance Metrics
+## Contents
+
+1. [Performance Metrics](#Metrics)
+2. [Performance Profiling Tools](#ProfilingTools)
+   1. [Unity Performance Profiler](#UnityProfiler)
+      1. [Profiling a Deployed Application on a Device Using Unity's Profiler](#UnityProfilerDeployed)
+   2. [Mixed Reality Toolkit Diagnostic System & Visual Profiler](#MRTKProfiler)
+   3. [HoloLens Device Portal](#HoloLensDevicePortal)
+3. [Performance Optimization](#PerformanceOptimization)
+   1. [Scene Optimization](#SceneOptimization)
+   2. [Script Optimization](#ScriptOptimization)
+
+## Performance Metrics {#Metrics}
 
 Monitoring and optimizing the performance of an AR application is important to ensure a pleasant user experience.
 Performance profiling of AR applications is not only concerned with the responsiveness of the app.
@@ -22,12 +34,12 @@ Hence, performance profiling also regards the optimization of the application's 
 Additionally, developers should monitor the memory footprint of the application.
 With real-time graphics applications, an the memory consumption can quickly rise if the developer uses a lot of high-resolution assets like textures or 3D models.
 
-# Performance Profiling Tools
+## Performance Profiling Tools {#ProfilingTools}
 
 There are various different tools which allow developers to monitor and analyze the performance of an application.
 They are used to identify bottlenecks and narrow down the reason for a restricted performance.
 
-## Unity Performance Profiler
+### Unity Performance Profiler {#UnityProfiler}
 
 Unity has its own built-in profiler.
 It provides detailed information about the caused CPU load and memory consumption.
@@ -52,7 +64,7 @@ By default, Unity evaluates the performance of the application while it is runni
 Since it most likely does not have the same hardware specifications as the target device, e.g. the HoloLens, this will not give an accurate impression of the performance of the deployed application.
 However, it is already helpful to profile on the development PC to analyse which components are computationally expensive.
 
-### Profiling a Deployed Application on a Device Using Unity's Profiler
+#### Profiling a Deployed Application on a Device Using Unity's Profiler {#UnityProfilerDeployed}
 
 Unity's profiler is also able to record statistics of a deployed application while it is running on the target device.
 A prerequisite for remote profiling is that the application is marked as a *Development Build*.
@@ -71,7 +83,7 @@ If you checked "*Autoconnect Profiler*", the running application is available in
 Otherwise, there is a second option *Enter IP address*.
 Here, you can enter the IP address of the device on which the application is running.
 
-## Mixed Reality Toolkit Profiler Window
+### Mixed Reality Toolkit Diagnostic System & Visual Profiler {#MRTKProfiler}
 
 If you include the MRTK in the scene using "Mixed Reality Toolkit > Add to Scene and Configure", the Visual Profiler Window is enabled by default.
 In Play Mode and in the deployed application, it appears as a small floating window at the bottom of the user's field of view.
@@ -117,18 +129,15 @@ This is shown in the following steps:
    So, uncheck "Enable Diagnostics System".
    If you now start the application, the visual profiler window will not appear and the diagnostics services will not be executed.
    ![Disable Diagnostics]({{pathToRoot}}/assets/figures/performance_profiling/disable_diagnostics/DisableDiagnostics.png)
-   
-## Visual Studio Profiler
+
+Further information about MRTKs's [Diagnostic System](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Diagnostics/DiagnosticsSystemGettingStarted.html) and [Visual Profiler](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Diagnostics/UsingVisualProfiler.html) can be found in the documentation of the MRTK.
+
+### HoloLens Device Portal {#HoloLensDevicePortal}
 
 - how to access it
 - information that it provides
 
-## HoloLens Device Portal
-
-- how to access it
-- information that it provides
-
-## Performance Optimization
+## Performance Optimization {#PerformanceOptimization}
 
 Detailed optimization of an application starts with identifying the bottlenecks of the application.
 After that, a change is conceptualised and realised.
@@ -136,7 +145,7 @@ Finally, the altered version is analysed again to make sure that the optimizatio
 This high-level process is repeated until the application has an acceptable performance.
 Apart from this general workflow, there are some general hints how a Unity application can be optimized:
 
-### Scene Optimization
+### Scene Optimization {#SceneOptimization}
 
 For HoloLens applications, the Mixed Reality Toolkit provides an optimization window which automatically optimizes the application for AR.
 It can be found under "*Mixed Reality Toolkit > Utilities > Optimize Window*".
@@ -305,7 +314,7 @@ However, the default shader of the TextMeshPro on Unity 2018 does not work.
 The text is only rendered on one eye and is invisible for the other eye.
 To solve this, the TextMeshPro object needs to use a text shader which is provided by the Mixed Reality Toolkit.
 
-### Script Optimization
+### Script Optimization {#ScriptOptimization}
 
 **Use co-routines or threads for long-lasting or blocking operations**:
 Anything logic of a script (except for threaded code) is performed on the main thread.
@@ -405,16 +414,16 @@ Similar recommendations exist for other calls which fetch references, e.g. `GetC
 They are expensive operations and it is better to cache their result in the script instead of executing them repeatedly.
 
 **Do not use Camera.main**:
-A pitfall regarding the previous recommendation to minimise the use of reference-fetching methods is `Camera.main`.
+A pitfall regarding the previous recommendation to minimize the use of reference-fetching methods is `Camera.main`.
 At a glance, this seems to be a useful public variable where the main camera of the scene was cached.
 However, calling `Camera.main` triggers a `FindGameObjectsWithTag()` every time.
 It searches a GameObject with the tag `MainCamera` and does not cache the result.
 Hence, `Camera.main` should be regarded as a reference-fetching method.
 It should be used sparingly by calling it once in the initialisation of the script and then caching the result.
 
-## Memory Optimizations
+### Memory Optimizations
 
-**Use object pooling to minimise the usage of the garbage collector**:
+**Use object pooling to minimize the usage of the garbage collector**:
 Unlike more-low level programming languages like C++ where developers need to allocate and release memory manually for their objects, C# has a garbage collector which automates the memory management.
 If a new object is created, usually with the `new` keyword, memory is allocated.
 In regular intervals or if there is no memory left, the garbage collector interrupts the execution of the program.
