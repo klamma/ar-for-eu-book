@@ -136,7 +136,7 @@ It focuses the user's attention on a goal which can be reached after completing 
 Another way to engage users in a game or gamified application is to use quests.
 Quests pose challenges and objectives to the user and are usually associated with a reward.
 Rewards such as achievements, badges, points or levels are unlocked once the quest is complete.
-To give a deeper meaning to quests, they can be coupled with a story {% cite Howa08b %}.
+To give a deeper meaning to quests, they can be coupled with a story {% cite Howa08 %}.
 The user has to fulfill a series of smaller quests to progress in the story.
 A series of quests can be designed linearly so that one quest only becomes available after the preceeding quest has been solved.
 However, it is also possible to design multiple parallel storylines with their own quests, e.g. a main story and some smaller side stories.
