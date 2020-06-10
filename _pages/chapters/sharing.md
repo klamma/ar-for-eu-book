@@ -35,11 +35,11 @@ A series of common challenges can occur in the implementation of a shared enviro
 
 - **Network traffic**: To synchronize data between participants, messages have to be exchanged over the network.
   With a rising number of participants, the number of messages also rises which increases the network load and the load on any central servers.
-  To reduce the network traffic, developers should aim to minimize the number of sent information.
+  To reduce the network traffic, developers should aim to minimize the number of sent information ([Photon Optimization](https://doc.photonengine.com/en-us/pun/current/gameplay/optimization)).
   For instance, some information can be reconstructed locally from other shared data.
   We will see an example of this with the colouring of game pieces in the tutorial of this chapter.
 - **Unreliable connection**: Packages are not guaranteed to reach their receiver if a client has a poor internet connection.
-  Moreover, the order in which packages are sent does not have to correspond to the order in which packages arrive at the receiver.
+  Moreover, the order in which packages are sent does not have to correspond to the order in which packages arrive at the receiver {% cite ClCl10 %}.
   The networking library has to account for this.
 - **Session & User management**: In an office building not all people want to communicate with every other person at the same time.
   The building is separated into floors and offices so that meetings only contain a limited amount of participants.
@@ -96,7 +96,7 @@ Therefore, developers need to look at other networking solutions.
 
 #### Photon
 
-Photon is one alternative to realize collaborative applications in Unity.
+[Photon](https://www.photonengine.com/pun) is one alternative to realize collaborative applications in Unity.
 It is a commercial product suite by Exit Games which provides a free plan for up to 20 concurrent users and up to 500 messages per second.
 The sharing functionality can be realized using the Photon PUN2 library.
 Moreover, Photon provides further libraries for collaboration, e.g. to realize a text chat or a voice chat.
