@@ -22,7 +22,8 @@ visualizations:
    5. [Synchronizing Data with Observables](#Observables)
    6. [Synchronizing Data with Remote Procedure Calls](#RPCs)
    7. [Some Ideas on How to Proceed](#furtherIdeas)
-4. [Example Application with a Shared Environment: VIAProMa](#VIAProMa)
+4. [Testing on one PC](#Testing)
+5. [Example Application with a Shared Environment: VIAProMa](#VIAProMa)
 
 Synchronous collaboration in Mixed Reality is possible in a shared virtual environment.
 This means that the shown 3D objects are synchronized between the participants and changes are broadcast in real-time.
@@ -883,6 +884,43 @@ They are not covered in this tutorial since they require a lot more implementati
   In code, the ownership can be transferred, e.g. if a player starts moving the stone.
 - **Avatars**: The same way that we synchronized the playing stones, we can also synchronize the position and rotation of the head-mounted display.
   If we connect this information with some avatar representation, we can visualize remote users in the shared environment.
+
+### Testing on one PC
+
+Of course, collaborative applications can be tested on two PCs or devices by running the application on each device.
+However, the shared application can also be tested directly on one development PC.
+We need to overcome the problem that a Unity project can only be opened by one editor instance at a time.
+It is possible to open multiple Unity instances but they cannot open the same project simultaneously.
+To solve this, we can duplicate the entire project's folder to a different location on disk.
+After that, you can open the duplicated folder in Unity as a separate project.
+In the Unity Hub this can be done by selecting "Add" and by navigating to the duplicated folder.
+You should now have two instances of Unity with the original project and a copy of it.
+The two editors can be placed next to each other on the screen or on separate screens.
+If both editors are in Play Mode, one can see the shared application states side-by-side.
+With this approach, you need to make sure that you do not confuse the two project copies.
+Any changes that you make in one editor need to be duplicated to the copied project manually.
+
+There are several options to duplicate the project and to copy changes between the two versions.
+You can manually copy the files from one instance to the other.
+Copying an entire Unity project can take quite long as it contains many small cache files.
+You can shorten the copy-time by only copying selected files.
+Intially, you only need to copy the folders *Assets*, *Packages* and *ProjectSettings*.
+All other folders, e.g. *Library* or *obj* can be reconstructed by Unity.
+
+Alternatively, you can set up a Git repository for the project.
+Use a [.gitignore-file for Unity](https://github.com/github/gitignore/blob/master/Unity.gitignore) so that only necessary files are stored.
+Set up a remote repository, e.g. on GitHub or Gitlab.
+After that, commit the current status and push it to the remote repository.
+Clone the remote repository into another folder to obtain the copy.
+Once you make changes to ony of the two copies, commit them and push the changes to the remote repository.
+In the other project instance, you can pull the changes.
+This appraoch using Git has the advantage that you can synchronize the two project instances by a few Git commands.
+Since Git only uploads and downloads the changes, this process is quicker than the approach where files are manually copied.
+
+If you are using this setup, it is generally advisable to keep the two project instances separated.
+You should always edit the same project.
+The other project should just be a read-only copy that is for testing.
+If you view the projects side-by-side, you should always assign the same side for the development project so that you do not accidentally edit both copies.
 
 ### Example Application for Sharing: VIAProMa {#VIAProMa}
 
