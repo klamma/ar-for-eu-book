@@ -134,8 +134,13 @@ Further information about MRTKs's [Diagnostic System](https://microsoft.github.i
 
 ### HoloLens Device Portal {#HoloLensDevicePortal}
 
-- how to access it
-- information that it provides
+The Microsoft HoloLens provides an administrator interface called Device Portal.
+It allows developers to install and deinstall apps, it provides crash dump files and provides access to a preview live stream with a composited video of the HoloLens' camera and the shown 3D content.
+Among others, the Device Portal also provides a system performance page where the framerate and memory consumption can be monitored in real-time.
+The Device Portal can be helpful in user evaluations since it allows researches to observe the user's view and it provides measurements of the application's performance.
+
+By default, the Device Portal is disabled.
+It can be activated in the settings menu on the HoloLens in the developer settings.
 
 ## Performance Optimization {#PerformanceOptimization}
 
