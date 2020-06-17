@@ -134,13 +134,53 @@ Further information about MRTKs's [Diagnostic System](https://microsoft.github.i
 
 ### HoloLens Device Portal {#HoloLensDevicePortal}
 
-The Microsoft HoloLens provides an administrator interface called Device Portal.
+
+#### Introduction
+
+The Microsoft HoloLens provides an administrator interface called Device Portal which can be accessed from Web browsers on any device.
 It allows developers to install and deinstall apps, it provides crash dump files and provides access to a preview live stream with a composited video of the HoloLens' camera and the shown 3D content.
 Among others, the Device Portal also provides a system performance page where the framerate and memory consumption can be monitored in real-time.
 The Device Portal can be helpful in user evaluations since it allows researches to observe the user's view and it provides measurements of the application's performance.
+Since it is a local Web page, it can be accessed "in the field" on mobile devices.
+
+#### Enabling the Device Portal
 
 By default, the Device Portal is disabled.
-It can be activated in the settings menu on the HoloLens in the developer settings.
+It can be activated in the developer settings on the HoloLens.
+
+#### Accessing the Device Portal
+
+To access the Device Portal, both the device that accesses the Device Portal and the HoloLens have to be connected to the same WiFi.
+It is important that the WiFi's configuration has to allow connected devices to communicate with each other.
+Once both devices are connected to the same suitable network, one can enter the IP address of the HoloLens in the Web browser of the accessing device.
+The IP address can be obtained on the HoloLens by opening the network settings and by clicking the small blue link "Advanced Settings".
+The opened information window contains an entry for the IP address.
+
+> Especially, WiFi networks of universities such as eduroam are often configured in a way that connected computers cannot access each other and are therefore unsuitable.
+> If you plan to do a mobile demo where the Device Portal is used to live stream the user's view, it is advisable to bring a mobile WiFi access point.
+> If you also need to access the internet, make sure that the router can be connected to the institution's LAN ports.
+> An alternative is to use a smartphone to create a local WiFi network.
+> In this case you could establish an optional internet connection using the mobile internet access in your network provider's contract.
+
+Another option is to connect the HoloLens to a computer using the USB changing cable.
+In this configuration, the Device Portal is also accessible under the address `http://127.0.0.1:10080`.
+
+#### Login Screen
+
+Once you entered the IP address, a login screen appears.
+If you access the Device Portal for the first time, you have to set a username and password.
+After that, every time you navigate to the Device Portal, you have to enter the username and password.
+Do not worry if you forgot the credentials.
+You can navigate to `https://IP-Address/devicesecurity.htm` where IP-Adress is the IP address of your HoloLens.
+On the shown page, you can enter a new username and password.
+
+> In some cases, the browser can show a warning that the certificate is not trusted.
+> The HoloLens generates its own certificate for the secure SSL connection.
+> In this case, navigate to `https://IP-Address/devicesecurity.htm` where IP-Address is the IP address of your HoloLens.
+> Click on the menu entries System > Preferences.
+> In the section Device Security, you can download the certificate.
+> After that, install the certificate to your PC so that it is treated as a trusted certificate.
+
 
 ## Performance Optimization {#PerformanceOptimization}
 
