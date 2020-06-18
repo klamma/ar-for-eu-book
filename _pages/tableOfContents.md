@@ -36,11 +36,11 @@ permalink: /toc/
 - [Interactive Graphics and Sound Design](/ar-for-eu-book/chapter/intdesign/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/spatialMapping/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Spatial Understanding](/ar-for-eu-book/chapter/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
-- [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="outline" %}
-- [Dialogue Understanding](/ar-for-eu-book/chapter/dialogue-understanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
+- [Dialogue Understanding](/ar-for-eu-book/chapter/dialogue-understanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Collaboration & Sharing](/ar-for-eu-book/chapter/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### Computer Graphics
 - [3D Modeling & Rendering](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
