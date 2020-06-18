@@ -13,10 +13,10 @@ visualizations:
 1. [Performance Metrics](#Metrics)
 2. [Performance Profiling Tools](#ProfilingTools)
    1. [Unity Performance Profiler](#UnityProfiler)
-      1. [Working with Unity's Performance Profiler](#WorkingUnityProfiler)
+      1. [Working With Unity's Performance Profiler](#WorkingUnityProfiler)
       2. [Profiling a Deployed Application on a Device Using Unity's Profiler](#UnityProfilerDeployed)
    2. [Mixed Reality Toolkit Diagnostic System & Visual Profiler](#MRTKProfiler)
-      1. [Working with the Visual Profiler](#WorkingVisualProfiler)
+      1. [Working With the Visual Profiler](#WorkingVisualProfiler)
       2. [Disabling the Diagnostics System in the Final Application](#DisableMRTKDiagnostics)
    3. [HoloLens Device Portal](#HoloLensDevicePortal)
       1. [Working With the Device Portal](#WorkingDevicePortal)
@@ -51,7 +51,7 @@ Unity has its own built-in profiler.
 It provides detailed information about the caused CPU load and memory consumption.
 Additionally, more details are available about the CPU and memory consumption of the rendering pipeline, the physics simulation and the audio sources in the scene.
 
-#### Working with Unity's Performance Profiler {#WorkingUnityProfiler}
+#### Working With Unity's Performance Profiler {#WorkingUnityProfiler}
 
 The Unity profiler can be found in the Unity editor under "*Window > Analysis > Profiler*" or by pressing `Ctrl + 7`.
 In the top bar there is a button "Record" which needs to be set to active so that the profiler actually tracks the performance data.
@@ -95,7 +95,7 @@ Here, you can enter the IP address of the device on which the application is run
 The Mixed Reality Toolkit provides its own profiler which is part of the developed app.
 It is enabled by default and can be noticed as a floating window at the bottom of the field of view.
 
-#### Working with the Visual Profiler {#WorkingVisualProfiler}
+#### Working With the Visual Profiler {#WorkingVisualProfiler}
 
 If you include the MRTK in the scene using "Mixed Reality Toolkit > Add to Scene and Configure", the Visual Profiler Window is enabled by default.
 In Play Mode and in the deployed application, it appears as a small floating window at the bottom of the user's field of view.
