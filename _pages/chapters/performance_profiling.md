@@ -13,9 +13,15 @@ visualizations:
 1. [Performance Metrics](#Metrics)
 2. [Performance Profiling Tools](#ProfilingTools)
    1. [Unity Performance Profiler](#UnityProfiler)
-      1. [Profiling a Deployed Application on a Device Using Unity's Profiler](#UnityProfilerDeployed)
+      1. [Working with Unity's Performance Profiler](#WorkingUnityProfiler)
+      2. [Profiling a Deployed Application on a Device Using Unity's Profiler](#UnityProfilerDeployed)
    2. [Mixed Reality Toolkit Diagnostic System & Visual Profiler](#MRTKProfiler)
+      1. [Working with the Visual Profiler](#WorkingVisualProfiler)
+      2. [Disabling the Diagnostics System in the Final Application](#DisableMRTKDiagnostics)
    3. [HoloLens Device Portal](#HoloLensDevicePortal)
+      1. [Working With the Device Portal](#WorkingDevicePortal)
+      2. [Enabling & Accessing the Device Portal](#EnablingDevicePortal)
+      3. [Login Screen](#DevicePortalLogin)
 3. [Performance Optimization](#PerformanceOptimization)
    1. [Scene Optimization](#SceneOptimization)
    2. [Script Optimization](#ScriptOptimization)
@@ -45,6 +51,8 @@ Unity has its own built-in profiler.
 It provides detailed information about the caused CPU load and memory consumption.
 Additionally, more details are available about the CPU and memory consumption of the rendering pipeline, the physics simulation and the audio sources in the scene.
 
+#### Working with Unity's Performance Profiler {#WorkingUnityProfiler}
+
 The Unity profiler can be found in the Unity editor under "*Window > Analysis > Profiler*" or by pressing `Ctrl + 7`.
 In the top bar there is a button "Record" which needs to be set to active so that the profiler actually tracks the performance data.
 With the window open, press the play button in the Unity editor to start the application.
@@ -56,7 +64,6 @@ In the top bar of the profiler, there is also an option to save the recorded dat
 This way, they can be inspected again at a later point by loading the generated log file into the profiler again.
 
 {% include image.html url="/assets/figures/performance_profiling/UnityProfiler.png" base=pathToRoot description="Unity's profiler window with sample data" %}
-
 
 Further information about the profiler can be found in [Unity's documentation about the profiler window](https://docs.unity3d.com/Manual/ProfilerWindow.html).
 
@@ -85,6 +92,11 @@ Here, you can enter the IP address of the device on which the application is run
 
 ### Mixed Reality Toolkit Diagnostic System & Visual Profiler {#MRTKProfiler}
 
+The Mixed Reality Toolkit provides its own profiler which is part of the developed app.
+It is enabled by default and can be noticed as a floating window at the bottom of the field of view.
+
+#### Working with the Visual Profiler {#WorkingVisualProfiler}
+
 If you include the MRTK in the scene using "Mixed Reality Toolkit > Add to Scene and Configure", the Visual Profiler Window is enabled by default.
 In Play Mode and in the deployed application, it appears as a small floating window at the bottom of the user's field of view.
 At the top, it shows the application's current framerate.
@@ -103,6 +115,8 @@ At the bottom of the window, a bar visualizes the memory usage with the same col
 Similar to the Unity profiler, it is important to consider on which device the performance is monitored.
 In the Play Mode of Unity's editor, the application is executed on the development PC and therefore the performance depends on its hardware.
 To see the real performance on the HoloLens, the application has to be deployed to the device.
+
+#### Disabling the Diagnostics System in the Final Application {#DisableMRTKDiagnostics}
 
 The Visual Profiler Window provides an unintrusive way of performance profiling.
 Testers can interact with the application on the device and can see the performance data all the time.
@@ -136,7 +150,7 @@ Further information about MRTKs's [Diagnostic System](https://microsoft.github.i
 
 The performance of a deployed application on the Microsoft HoloLens can also be monitored by its Device Portal.
 
-#### Introduction
+#### Working With the Device Portal {#WorkingDevicePortal}
 
 The Microsoft HoloLens provides an administrator interface called Device Portal which can be accessed from Web browsers on any device.
 It allows developers to install and deinstall apps, it provides crash dump files and provides access to a preview live stream with a composited video of the HoloLens' camera and the shown 3D content {% cite Newn17 %}.
@@ -144,12 +158,10 @@ Among others, the Device Portal also provides a system performance page where th
 The Device Portal can be helpful in user evaluations since it allows researches to observe the user's view and it provides measurements of the application's performance.
 Since it is a local Web page, it can be accessed "in the field" on mobile devices.
 
-#### Enabling the Device Portal
+#### Enabling & Accessing the Device Portal {#EnablingDevicePortal}
 
-By default, the Device Portal is disabled.
+By default, the Device Portal of a HoloLens is disabled.
 It can be activated in the developer settings on the HoloLens.
-
-#### Accessing the Device Portal
 
 To access the Device Portal, both the device that accesses the Device Portal and the HoloLens have to be connected to the same WiFi {% cite Newn17 %}.
 It is important that the WiFi's configuration has to allow connected devices to communicate with each other.
@@ -166,7 +178,7 @@ The opened information window contains an entry for the IP address.
 Another option is to connect the HoloLens to a computer using the USB changing cable.
 In this configuration, the Device Portal is also accessible under the address `http://127.0.0.1:10080`.
 
-#### Login Screen
+#### Login Screen {#DevicePortalLogin}
 
 Once you entered the IP address, a login screen appears.
 If you access the Device Portal for the first time, you have to set a username and password.
