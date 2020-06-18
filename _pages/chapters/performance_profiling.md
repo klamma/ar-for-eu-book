@@ -134,11 +134,12 @@ Further information about MRTKs's [Diagnostic System](https://microsoft.github.i
 
 ### HoloLens Device Portal {#HoloLensDevicePortal}
 
+The performance of a deployed application on the Microsoft HoloLens can also be monitored by its Device Portal.
 
 #### Introduction
 
 The Microsoft HoloLens provides an administrator interface called Device Portal which can be accessed from Web browsers on any device.
-It allows developers to install and deinstall apps, it provides crash dump files and provides access to a preview live stream with a composited video of the HoloLens' camera and the shown 3D content.
+It allows developers to install and deinstall apps, it provides crash dump files and provides access to a preview live stream with a composited video of the HoloLens' camera and the shown 3D content {% cite Newn17 %}.
 Among others, the Device Portal also provides a system performance page where the framerate and memory consumption can be monitored in real-time.
 The Device Portal can be helpful in user evaluations since it allows researches to observe the user's view and it provides measurements of the application's performance.
 Since it is a local Web page, it can be accessed "in the field" on mobile devices.
@@ -150,7 +151,7 @@ It can be activated in the developer settings on the HoloLens.
 
 #### Accessing the Device Portal
 
-To access the Device Portal, both the device that accesses the Device Portal and the HoloLens have to be connected to the same WiFi.
+To access the Device Portal, both the device that accesses the Device Portal and the HoloLens have to be connected to the same WiFi {% cite Newn17 %}.
 It is important that the WiFi's configuration has to allow connected devices to communicate with each other.
 Once both devices are connected to the same suitable network, one can enter the IP address of the HoloLens in the Web browser of the accessing device.
 The IP address can be obtained on the HoloLens by opening the network settings and by clicking the small blue link "Advanced Settings".
