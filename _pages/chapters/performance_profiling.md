@@ -33,12 +33,12 @@ Performance profiling of AR applications is not only concerned with the responsi
 Instead, developers need to look at further measures like the application's framerate.
 The framerate is a number which counts how many images the real-time graphics application can render per second.
 Maintaining stable, high framerates is a necessary requirement for a pleasant usage experience.
-In AR and VR applications, low framerates can lead to physical discomfort and dizzyiness in the form of cybersickness.
+In AR and VR applications, low framerates can lead to physical discomfort and dizziness in the form of cybersickness.
 
 AR applications are mainly deployed to portable devices like the Microsoft HoloLens and smart phones.
 Hence, performance profiling also regards the optimization of the application's power consumption to avoid that the device's battery is drained.
 Additionally, developers should monitor the memory footprint of the application.
-With real-time graphics applications, an the memory consumption can quickly rise if the developer uses a lot of high-resolution assets like textures or 3D models.
+With real-time graphics applications, the memory consumption can quickly rise if the developer uses a lot of high-resolution assets like textures or 3D models.
 
 ## Performance Profiling Tools {#ProfilingTools}
 
@@ -127,7 +127,7 @@ This is shown in the following steps:
    ![Select MRTK]({{pathToRoot}}/assets/figures/performance_profiling/disable_diagnostics/SelectMRTK.png)
 2. In the inspector, click the "Copy & Customize" button of the *Mixed Reality Toolkit* component.
    ![Copy & Customize]({{pathToRoot}}/assets/figures/performance_profiling/disable_diagnostics/CopyCustomize.png)
-3. The buttom opens a window.
+3. The button opens a window.
    Give the new profile a descriptive name, e.g. "ReleaseMRTKProfile" because this will be the profile for releasing the software.
    You can leave all other options at default.
    Click the "Clone" button to confirm the settings and create a copy of the original profile.
@@ -153,9 +153,9 @@ The performance of a deployed application on the Microsoft HoloLens can also be 
 #### Working With the Device Portal {#WorkingDevicePortal}
 
 The Microsoft HoloLens provides an administrator interface called Device Portal which can be accessed from Web browsers on any device.
-It allows developers to install and deinstall apps, it provides crash dump files and provides access to a preview live stream with a composited video of the HoloLens' camera and the shown 3D content {% cite Newn17 %}.
+It allows developers to install and uninstall apps, it provides crash dump files and provides access to a preview live stream with a composited video of the HoloLens' camera and the shown 3D content {% cite Newn17 %}.
 Among others, the Device Portal also provides a system performance page where the framerate and memory consumption can be monitored in real-time.
-The Device Portal can be helpful in user evaluations since it allows researches to observe the user's view and it provides measurements of the application's performance.
+The Device Portal can be helpful in user evaluations since it allows researchers to observe the user's view and it provides measurements of the application's performance.
 Since it is a local Web page, it can be accessed "in the field" on mobile devices.
 
 #### Enabling & Accessing the Device Portal {#EnablingDevicePortal}
@@ -163,16 +163,16 @@ Since it is a local Web page, it can be accessed "in the field" on mobile device
 By default, the Device Portal of a HoloLens is disabled.
 It can be activated in the developer settings on the HoloLens.
 
-To access the Device Portal, both the device that accesses the Device Portal and the HoloLens have to be connected to the same WiFi {% cite Newn17 %}.
-It is important that the WiFi's configuration has to allow connected devices to communicate with each other.
+To access the Device Portal, both the device that accesses the Device Portal and the HoloLens have to be connected to the same Wi-Fi {% cite Newn17 %}.
+It is important that the Wi-Fi's configuration has to allow connected devices to communicate with each other.
 Once both devices are connected to the same suitable network, one can enter the IP address of the HoloLens in the Web browser of the accessing device.
 The IP address can be obtained on the HoloLens by opening the network settings and by clicking the small blue link "Advanced Settings".
 The opened information window contains an entry for the IP address.
 
-> Especially, WiFi networks of universities such as eduroam are often configured in a way that connected computers cannot access each other and are therefore unsuitable.
+> Especially, Wi-Fi networks of universities such as eduroam are often configured in a way that connected computers cannot access each other and are therefore unsuitable.
 > If you plan to do a mobile demo where the Device Portal is used to live stream the user's view, it is advisable to bring a mobile WiFi access point.
 > If you also need to access the internet, make sure that the router can be connected to the institution's LAN ports.
-> An alternative is to use a smartphone to create a local WiFi network.
+> An alternative is to use a smartphone to create a local Wi-Fi network.
 > In this case you could establish an optional internet connection using the mobile internet access in your network provider's contract.
 
 Another option is to connect the HoloLens to a computer using the USB changing cable.
@@ -184,7 +184,7 @@ Once you entered the IP address, a login screen appears.
 If you access the Device Portal for the first time, you have to set a username and password.
 After that, every time you navigate to the Device Portal, you have to enter the username and password.
 Do not worry if you forgot the credentials.
-You can navigate to `https://IP-Address/devicesecurity.htm` where IP-Adress is the IP address of your HoloLens.
+You can navigate to `https://IP-Address/devicesecurity.htm` where IP-Address is the IP address of your HoloLens.
 On the shown page, you can enter a new username and password.
 
 > In some cases, the browser can show a warning that the certificate is not trusted.
@@ -207,7 +207,7 @@ Apart from this general workflow, there are some general hints how a Unity appli
 
 For HoloLens applications, the Mixed Reality Toolkit provides an optimization window which automatically optimizes the application for AR.
 It can be found under "*Mixed Reality Toolkit > Utilities > Optimize Window*".
-For the best usage experience, all listed recommondations should be accepted and applied.
+For the best usage experience, all listed recommendations should be accepted and applied.
 
 Apart from this, the following criteria can be considered for optimization.
 To decide which of these recommendations need to be followed, the application should be profiled first.
@@ -226,7 +226,7 @@ The shader of the material can be changed in its material settings in the inspec
 ![Shader Selection in the Material]({{pathToRoot}}/assets/figures/performance_profiling/MaterialShader.png)
 
 By default, materials use the Standard shader.
-This shader uses physically-based shading and offers many options but it is not optimsed for mobile devices.
+This shader uses physically-based shading and offers many options but it is not optimized for mobile devices.
 For HoloLens development, it is advisable to restrict the used shaders to the ones which are provided by the Mixed Reality Toolkit.
 For mobile platforms, Unity already ships with a series of lightweight shaders.
 They can be found in the category "*Mobile*".
@@ -234,14 +234,14 @@ They can be found in the category "*Mobile*".
 **Reduce the amount of polygons on meshes**:
 Meshes consist of vertices which are connected by edges.
 The areas which are framed by edges are faces.
-Togehter, they define the surface of the object.
+Together, they define the surface of the object.
 In the rendering pipeline, the vertices are first processed by a geometry shader which can manipulate the mesh.
-After that, every polgyon is rasterized.
-The result of the rasterization are a number of fragments which are candidates for a pixel.
+After that, every polygon is rasterized.
+The rasterization step produces a number of fragments which are candidates for a pixel.
 The fragments are processed by a pixel shader.
 Only after that, a depth test is performed to discard the fragments which are occluded by meshes in front of them.
 This means that every polygon which is potentially visible inside the camera's view bounds is rendered, even if it is occluded.
-The more vertices and polyons an object has, the more work the geometry- and pixel-shaders need to perform.
+The more vertices and polygons an object has, the more work the geometry- and pixel-shaders need to perform.
 
 A large mesh can become a bottleneck for the GPU which has to perform the rendering pipeline.
 However, the mesh can also affect the CPU, e.g. if it has to calculate deformations of the meshes, e.g. character animations.
@@ -250,14 +250,14 @@ The number of polygons can be reduced by removing faces which will never be visi
 As an example, take the 3D model of a camera. If consists of a cuboid and a cylinder.
 The cylinder has caps on both sides.
 However, the cap which touches the cuboid can be removed since it will never be visible nor relevant for the model
-On this paticular model, this simple change removes 32 triangles and one vertex.
+On this particular model, this simple change removes 32 triangles and one vertex.
 
 It is also important to know that hard edges and UV seams increase the number of vertices.
 A vertex is not only represented by its 3D position in space.
 It also has a 2D position which defines where it is situated on a texture.
 Additionally, it has a normal vector which points outwards and which is perpendicular to the surface's curvature.
 With UV seams, the vertex has two positions on the texture.
-With hard eges, the vertex has two different normal vectors.
+With hard edges, the vertex has two different normal vectors.
 Since vertices internally can only have one texture position and one normal, this means that the vertex is duplicated.
 Both versions of the vertex have the same 3D position but they differ in the texture coordinates or normal vectors.
 
@@ -280,13 +280,13 @@ Instead, the script can create one blue material and assign it to all required o
 
 **Optimize the size of textures**:
 Textures should be quadratic and their size should be a power of two, e.g. 256 pixels x 256 pixels, 512 x 512, 1024 x 1024 or 2048, 2048.
-Textures which do not comply to this rule are stored in an uncompressed format which increases their memory usage and loading times.
+Textures which do not comply with this rule are stored in an uncompressed format which increases their memory usage and loading times.
 
 Another factor which can be optimized is the resolution of the texture.
-Only objects with intricate details in the texture and which are intended to be in the close focus of the user should have a righ resolution, e.g. 2048 by 2048 pixels or even 4096 by 4096 pixels.
+Only objects with intricate details in the texture and which are intended to be in the close focus of the user should have a right resolution, e.g. 2048 by 2048 pixels or even 4096 by 4096 pixels.
 Other textures can be downgraded to lower resolutions.
 One good practise in this context is to still save textures at a high resolution in the project and then limit their resolution in their texture settings.
-This way, Unity automatically downscales them in the built project and uses the lower resolution in the final application.
+This way, Unity automatically scales them down in the built project and uses the lower resolution in the final application.
 Since the original high-resolution version is still available in the project, it is possible to increase the resolution again at a later point if needed.
 To do this, select the texture in the assets browser.
 This will open the texture's properties in the inspector on the right.
@@ -310,7 +310,7 @@ In general, whenever a surface property is expressed by one floating point value
 If there are four different properties, they can be compressed into the four channels of a texture instead of using four separate textures where three channels are useless.
 In particular, monochromatic textures (the value is only written to one channel) and greyscale textures (the same value is written to all channels) can be simplified this way.
 However, this is only possible if the shader supports this compression.
-The shader must know what information are stored in each channel.
+The shader must know what information is stored in each channel.
 
 In Unity, some of the shaders support and even require such texture compression.
 For instance, the shader "Mixed Reality Toolkit/Standard" which is provided with the Mixed Reality Toolkit uses a "Channel Map" which can be activated by checking the corresponding option.
@@ -327,8 +327,8 @@ Although the descriptions guide the creation of channel maps for the Mixed Reali
 
 ![MRTK Texture Combiner Tool]({{pathToRoot}}/assets/figures/performance_profiling/MRTKTextureCombiner.png)
 
-This optimization reduces the initial loading times of the scene because less textures need to be read.
-Additionally, this means that less textures need to be kept in memory.
+This optimization reduces the initial loading times of the scene because fewer textures need to be read.
+Additionally, this means that fewer textures need to be kept in memory.
 
 **Use primitive colliders, avoid mesh colliders**:
 To work with physics calculations, an object needs colliders.
@@ -357,13 +357,13 @@ If a mesh collider has to be used, it can be beneficial to create a second mesh 
 Head-mounted displays have one screen for each eye.
 The two screens show two slightly different images with a shifted perspective.
 Due to this shift, the user can see the virtual content in 3D with depth perception.
-However, this also means that the render engine needs to create two images each frame instad of one.
+However, this also means that the render engine needs to create two images each frame instead of one.
 Without any optimizations, many portions of the render pipeline need to be done twice.
 For instance, the number of draw calls, which have a high overhead, doubles.
 An optimization technique is Single Pass Stereo Rendering ([Unity Blog, 2017](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)).
 Instead of rendering two separate images, it uses an image texture with a doubled width where both images are created side by side.
 The advantage is that the work which is done in the rendering pipeline, e.g. the results of the culling process, only needs to be done once ([Unity Documentation](https://docs.unity3d.com/Manual/SinglePassStereoRendering.html)).
-A further optimization is Single Pass Instanced Rendering which can be used for the Hololens ([Unity Documentation](https://docs.unity3d.com/Manual/SinglePassInstancing.html), [Unity Documentation for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html)).
+A further optimization is Single Pass Instanced Rendering which can be used for the HoloLens ([Unity Documentation](https://docs.unity3d.com/Manual/SinglePassInstancing.html), [Unity Documentation for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html)).
 The optimization window of the Mixed Reality Toolkit automatically applies this technique.
 
 It is important to know that both optimization techniques require compatible shaders that need to support the chosen rendering method.
@@ -487,7 +487,7 @@ If a new object is created, usually with the `new` keyword, memory is allocated.
 In regular intervals or if there is no memory left, the garbage collector interrupts the execution of the program.
 It analyses which objects are not used anymore and frees the memory that was occupied by these objects.
 While this takes away the development effort of manually managing memory, it comes at a performance trade-off.
-The gargabe collector has a large overhead and can lead to visible stuttering in the 3D application if a lot of objects need to be cleaned up.
+The garbage collector has a large overhead and can lead to visible stuttering in the 3D application if a lot of objects need to be cleaned up.
 Hence, it is advisable to avoid creating new objects and reusing them instead.
 As an example, a list `List<string> myList = new List<string>()` can be emptied with `myList.Clear()` instead of calling the constructor `myList = new List<string>()` again.
 Both calls end up with an empty list but the version with the constructor creates a new object, allocates new memory and the garbage collector will clean up the memory occupied by the old list.
@@ -496,7 +496,7 @@ Both calls end up with an empty list but the version with the constructor create
 These operations are expensive because they allocate and deallocate memory and need to register and deregister the new components, callback methods, etc.
 Destroyed GameObjects are cleaned up by the garbage collector.
 Instead of `Instantiate()` and `Destroy()`, a technique called object pooling can be implemented.
-The number of necessary GameObjects are created once in the beginning and they are added to a collection of unused GameObjects.
+All necessary GameObjects are created once in the beginning and they are added to a collection of unused GameObjects.
 Instead of calling `Instantiate()` in the code again, the code now requests a GameObject from the pool.
 Once the object is not used anymore, it is not destroyed but returned to the pool.
 
