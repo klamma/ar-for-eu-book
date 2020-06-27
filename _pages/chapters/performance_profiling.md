@@ -29,13 +29,14 @@ visualizations:
 ## Performance Metrics {#Metrics}
 
 Monitoring and optimizing the performance of an AR application is important to ensure a pleasant user experience.
+Apart from the subjective experience of the application, a poorly optimized application can also have an impact on the user's task performance {% cite WaBa94 %}, {% cite JaTe14 %}.
 Performance profiling of AR applications is not only concerned with the responsiveness of the app.
 Instead, developers need to look at further measures like the application's framerate.
 The framerate is a number which counts how many images the real-time graphics application can render per second.
 Maintaining stable, high framerates is a necessary requirement for a pleasant usage experience.
 In AR and VR applications, low framerates can lead to physical discomfort and dizziness in the form of cybersickness.
 
-AR applications are mainly deployed to portable devices like the Microsoft HoloLens and smart phones.
+AR applications are usually deployed to portable devices like the Microsoft HoloLens and smart phones.
 Hence, performance profiling also regards the optimization of the application's power consumption to avoid that the device's battery is drained.
 Additionally, developers should monitor the memory footprint of the application.
 With real-time graphics applications, the memory consumption can quickly rise if the developer uses a lot of high-resolution assets like textures or 3D models.
@@ -199,7 +200,7 @@ On the shown page, you can enter a new username and password.
 
 Detailed optimization of an application starts with identifying the bottlenecks of the application.
 After that, a change is conceptualised and realised.
-Finally, the altered version is analysed again to make sure that the optimization did actually improve the performance.
+Finally, the altered version is analyzed again to make sure that the optimization did actually improve the performance.
 This high-level process is repeated until the application has an acceptable performance.
 Apart from this general workflow, there are some general hints how a Unity application can be optimized:
 
