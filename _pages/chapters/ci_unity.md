@@ -12,7 +12,7 @@ visualizations:
 
 ## Unit Tests in Unity
 
-Unity provides a module called "Test Runner".
+Unity provides a module called "Unity Test Framework".
 Until Unity 2018, the test runner is shipped with the Unity editor.
 From Unity 2019 onwards, it is a separate package which can be imported using Unity's package manager.
 The test runner is based on a early version of NUnit which is a unit testing framework for C#.
@@ -43,6 +43,20 @@ Hence, a good practise is to use edit mode tests whenever possible, i.e. if no M
 
 As a prerequisite for creating tests, an assembly definition file has to be created in the folder where the tests are placed.
 If a project has both play mode tests and edit mode tests, separate assembly definition files are required.
+
+Assembly definition files separate the project's scripts into different libraries.
+If you do not use assembly definition files, all scripts are compiled into one big *Assembly-CSharp.dll* in the build process.
+This dll-file is referenced by the Unity engine so that the custom code can be executed in the final application.
+However, if an assembly definition files is created in a folder, all scripts in the folder and all sub-folders are compiled to its own dll-file.
+This is useful to manage dependencies between scripts.
+For instance, scripts which are managed under other assembly definition files, can only be accessed if they are added to the list of *Assembly Definition References*.
+Moreover, is can be defined for which platform the scripts should be included.
+
+In the case of the editor scripts, the assembly definition files should be set up in a way that under *Platforms* only *Editor* is checked.
+In addition to this, all test assembly definition files must check *Test Assemblies* in the *Unity References* section.
+This way, the NUnit framework becomes accessible.
+
+{% include image.html url="/assets/figures/ci_unity/AssemblyDefinitionTest.png" base=pathToRoot description="Settings for the EditMode tests" %}
 
 ### Creating a Test Class
 
