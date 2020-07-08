@@ -44,6 +44,10 @@ Hence, a good practise is to use edit mode tests whenever possible, i.e. if no M
 As a prerequisite for creating tests, an assembly definition file has to be created in the folder where the tests are placed.
 If a project has both play mode tests and edit mode tests, separate assembly definition files are required.
 
+> Note: The test runner window provides initialization options which can directly generate the folders and necessary assembly definition files.
+> The following section is for information purposes so that you understand what these initialization options do and how to set them up manually.
+> For the automatic setup of the test folders, take a look at the exercise at the end of this chapter.
+
 Assembly definition files separate the project's scripts into different libraries.
 If you do not use assembly definition files, all scripts are compiled into one big *Assembly-CSharp.dll* in the build process.
 This dll-file is referenced by the Unity engine so that the custom code can be executed in the final application.
@@ -63,7 +67,6 @@ This way, the NUnit framework becomes accessible.
 ### Execution Duration of Tests
 
 Both edit mode and play mode tests can be executed within one frame or can run for multiple frames.
-
 
 # Continuous Integration
 
