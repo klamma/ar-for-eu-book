@@ -41,6 +41,7 @@ permalink: /toc/
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Collaboration & Sharing](/ar-for-eu-book/chapter/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="complete" %}
+- [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/ci_unity/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### Computer Graphics
 - [3D Modeling & Rendering](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="inProgress" %}

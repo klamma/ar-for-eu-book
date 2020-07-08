@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Unit Tests & Continuous Integration for a Unity application
+title: Continuous Integration & Unit Tests
 permalink: /chapter/ci_unity/
 categories: chapter
 visualizations:
