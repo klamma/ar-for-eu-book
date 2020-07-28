@@ -201,6 +201,25 @@ The three columns have different colours, which can be chosen from the menu.
 - Allows branching and merging
   - Branching: Duplication of code so that modifications can happen in parallel
   - Merging: When bringing together two branches
+
+Source control tools like Git have the option to create different branches.
+Branches are a way of managing different states of the project in parallel.
+When a new branch is created, the project's content, e.g. the code, is duplicated internally.
+Subsequent committed changes are only applied to the currently active branch.
+Branches can be merged into each other.
+This combines the changes which have been applied on both branches.
+The merge operation can be performed automatically and only requires manual intervention if there are merge conflicts.
+Merge conflicts arise if the same content in a file was edited on both branches.
+
+Software projects can structure branches using different git-workflows.
+A popular example is the git-flow workflow {%cite Drie10 %}.
+It consists of a master-branch, a develop-Branch, feature branches, release branches and hotfix-branches.
+
+{% include image.html url="/assets/figures/apm/gitFlowWorkflow.svg" base=pathToRoot description="master, develop and features branches in the git-flow workflow" %}
+
+For Web apps which do not require explicit version releases, a GitHub flow is suitable.
+Feature are developed on different branches.
+If a feature has been finished, a merge request is created, it is reviewed and dicusssed and finally, the branch is merged into the master branch.
   
 ### Continuous Integration
 
