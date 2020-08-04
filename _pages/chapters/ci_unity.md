@@ -64,9 +64,85 @@ This way, the NUnit framework becomes accessible.
 
 ### Creating a Test Class
 
+Once you have created a test folder and the assembly definition file, testing classes can be added to the folder.
+To do this, right-click in the assets browser and select "Create > Testing > C# Test Script".
+This creates a plain C# class in which unit tests are defined.
+The created file is based on a template that already imports NUnit and that contains some example tests.
+
 ### Execution Duration of Tests
 
 Both edit mode and play mode tests can be executed within one frame or can run for multiple frames.
+They are declared differently with regard to the attribute of the test method and the return value:
+
+#### Tests That Run in One Frame
+
+Tests of methods that run in one frame, e.g. straightforward calculations, are declared using the attribute `[Test]`.
+Moreover, they have to be `void`-methods.
+
+#### Tests That Run Multiple Frames
+
+By declaring a test method with the attribute `[UnityTest]` and with the return type `IEnumerator`, tests can run for multiple frames.
+Essentially, the test method works like a co-routine.
+The given code is executed in the same frame until the instruction `yield return null` is reached.
+It will skip to the next frame.
+
+### Structure of Tests
+
+Unit tests follow the structure "Arrange-Act-Assert".
+In the arrange phase, the object that should be tested is created and its dependencies are set up.
+In this phase, pre-conditions are established, e.g. input parameters for the method to test and a well-defined application state is created.
+After that, the act phase executes the code that should be tested.
+Finally, in the assert phase, the results of the code execution are validated and compared to an expected values and states.
+For instance, the return value of the tested method is compared to the result that should have been returned.
+The checks also include inspecting side effects that a method can have.
+
+### Assert
+
+In the assert phase, there is a toolset available in C#, NUnit and Unity which can be used to inspect and check the application state after the code execution.
+
+#### Checking Values
+
+To compare values to an expected constant, the `Assert` class can be used.
+It is part of the NUnit framework.
+The `Assert` class provides many different static methods that can be used to check values.
+For instance, `Assert.IsTrue(someCondition)` checks if an boolean expresssion evaluates to true.
+Similarly, `Assert.IsFalse(someCondition)` checks that an condition is false.
+If the assert statement is correct, the code will resume.
+However, if an assertion fails, e.g. `Assert.AreEqual(2, 3)`,  an exception is thrown, meaning that the rest of this particular test method is not executed.
+This causes the test to fail.
+
+#### Expecting Exceptions
+
+Tests can also fail if the code that is tested throws an exception.
+However, in some cases, a test should provoke such exceptions.
+As an example, imagine that we are testing a calculator class.
+There is a class `Divide(int a, int b)` that calculates the result of a divided by b.
+The specification states that the class should throw an `InvalidOperationException` if the method divides by 0.
+Hence, we write a unit test that calls `Divide(1,0)`.
+So, in this case, the exception is actually the intended behaviour.
+However, if this test is written this way, it will fail because of the exception.
+Instead, we can wrap code into `Assert.Throws` which means that we are expecting a specific type of excpetion.
+Actually, the test now has to throw the exception and will fail otherwise.
+The test now looks as follows:
+
+```[C#]
+Assert.Throws<InvalidOperationException>(
+(TestDelegate)delegate
+                {
+                    Calculator.Divide(1,0);
+                });
+```
+
+#### LogAssert
+
+In Unity, scripts can write to the debug console using `Debug.Log("")`.
+If an error is logged during the test execution using `Debug.LogError("")` this also causes the test to fail.
+Therefore, Unity provides a class `LogAssert`.
+It can be used to declare that certain console outputs are expected using `LogAssert.Expect(type, message)`.
+This statement that a log is expected has to be placed *before* the actual `Debug.Log` statement.
+The first parameter defines the type of log output, e.g. an info text, a warning or an error message.
+The second parameter is the expected message.
+Instead of specifying the exact message, it is also possible to provide a regular expression using System.Regex.
 
 # Continuous Integration
 
