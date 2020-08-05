@@ -17,7 +17,7 @@ However, C++ is not an essential prerequisite for the Unreal Engine as it also p
 Another option is to develop AR experiences for the Web.
 In this case, you should study Web technologies and the scripting language *JavaScript*.
 
-## SOLID Principles of Code
+## SOLID Principles of Code {#SOLID}
 
 The SOLID principles of code describe a set of five rules and guidelines which should improve the quality of written code {% cite Mart03 %}.
 Designed as a general guide, the rules also apply to Unity scripts.

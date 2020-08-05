@@ -144,6 +144,31 @@ The first parameter defines the type of log output, e.g. an info text, a warning
 The second parameter is the expected message.
 Instead of specifying the exact message, it is also possible to provide a regular expression using System.Regex.
 
+### Software Architecture with Unit Tests in Mind
+
+Writing unit tests can become difficult if the architecture consists of tightly coupled components where dependencies are not exposed.
+When creating the system architecture, there are different techniques that will simplify the creation of unit tests.
+For instance, follow the [SOLID principles of code](../prog#SOLID).
+If code is structured according to these rules, the result are loosely coupled modules with well-defined dependencies.
+This way, invididual features and functionality can be separated well into their own unit tests and dependencies can be replaced using a mocking framework.
+
+One dependence which can create difficulties in testing are MonoBehaviours.
+They have to run in a scene on a GameObject, so tests for MonoBehaviours will need to set up and tear down the corresponding scene architecture.
+However, the structure of such scripts can be changed so that the unit tests do not require MonoBehaviours.
+This is possible using the humble object pattern:
+It separates a complex class that would be hard to test on its own into two classes.
+One of them contains the dependencies that were difficult to test.
+The second class consists of the core logic which should be tested.
+By separating the dependencies, we are left with a class that only contains easy to test code which resembles the component's behaviour.
+In the application, the two classes work together to still provide the same functionality as the complex single class did.
+However, in the unit tests, the second class that is easy to test can be checked to validate that the core logic is working correctly.
+In the case of Unity, the humble object pattern would result in one class that is a MonoBehaviour and a plain C# class.
+The MonoBehaviour creates an instance of the C# class by calling its constructor in the Start method.
+Once it receives the typical MonoBehaviour callbacks, e.g. for `Update()`, the MonoBehaviour calls the corresponsing methods of the C# class instance.
+The C# class implements the actual functionality.
+This way, in units tests, one can create an object instance of the C# class by calling its constructor and perform the tests on it.
+There is no need to create a GameObject, attach a MonoBehaviour or to manage the scene.
+
 # Continuous Integration
 
 ## GitHub Actions
