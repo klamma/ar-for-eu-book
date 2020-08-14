@@ -171,6 +171,13 @@ There is no need to create a GameObject, attach a MonoBehaviour or to manage the
 
 # Continuous Integration
 
+Continuous integration allows projects to run checks and builds in an automated manner.
+Such a CI routine is executed when new changes are commited to the repository.
+This makes sure that possible errors in the program code can be spotted immediately when they are caused.
+Moreover, it assues that quality standards are met, e.g. when reviewing merge requests or for releases.
+This can be done by defining a range of tasks that e.g. run unit tests, compile the code, generate documentation, calculate code quality metrics and deploy results to devices.
+CI is applied to a source-controlled repository, e.g. on GitHub or Gitlab since this ensures that all developers work on the same code basis.
+
 ## GitHub Actions
 
 ## Gitlab CI
