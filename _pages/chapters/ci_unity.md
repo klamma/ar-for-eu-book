@@ -15,7 +15,7 @@ visualizations:
 Unity provides a module called "Unity Test Framework".
 Until Unity 2018, the test runner is shipped with the Unity editor.
 From Unity 2019 onwards, it is a separate package which can be imported using Unity's package manager.
-The test runner is based on a early version of NUnit which is a unit testing framework for C#.
+The test runner is based on an early version of NUnit which is a unit testing framework for C#.
 
 ### Test Runner Window
 
@@ -31,13 +31,13 @@ Hence, test files for editor tests need to be placed in a folder called "Editor"
 The folder can be placed anywhere in the project, e.g. under "Assets/Tests/Editor".
 However, the two test types do not create a strict division between tests for the application logic and tests for editor tools.
 If application logic should be tested which does not involve any callback methods, the test can also be created as an edit mode test.
-The advantage of edit mode tests is that take less time to execute because play mode tests have to launch the separate runtime environment.
+The advantage of edit mode tests is that they take less time to execute because play mode tests have to launch the separate runtime environment.
 Moreover, the tools and methods of the Unity editor are also available.
 This means that it is possible to access any file in the Assets folder using usual file readers from `System.IO`.
 In contrast to this, play mode tests exist in the runtime environment and can even be compiled into a separate application which launches and runs the tests.
 Therefore, play mode tests can only access assets by the usual means known from Unity app development, e.g. by using `Resources.Load()` to find files which have been placed in a "Resources" folder.
 
-Hence, a good practise is to use edit mode tests whenever possible, i.e. if no MonoBehaviour callback methods are required.
+Hence, a good practice is to use edit mode tests whenever possible, i.e. if no MonoBehaviour callback methods are required.
 
 ### Assembly Definition Files
 
@@ -149,8 +149,8 @@ Instead of specifying the exact message, it is also possible to provide a regula
 Writing unit tests can become difficult if the architecture consists of tightly coupled components where dependencies are not exposed.
 When creating the system architecture, there are different techniques that will simplify the creation of unit tests.
 For instance, follow the [SOLID principles of code](../prog#SOLID).
-If code is structured according to these rules, the result are loosely coupled modules with well-defined dependencies.
-This way, invididual features and functionality can be separated well into their own unit tests and dependencies can be replaced using a mocking framework.
+If code is structured according to these rules, the result contains loosely coupled modules with well-defined dependencies.
+This way, individual features and functionality can be separated well into their own unit tests and dependencies can be replaced using a mocking framework.
 
 One dependence which can create difficulties in testing are MonoBehaviours.
 They have to run in a scene on a GameObject, so tests for MonoBehaviours will need to set up and tear down the corresponding scene architecture.
@@ -164,19 +164,19 @@ In the application, the two classes work together to still provide the same func
 However, in the unit tests, the second class that is easy to test can be checked to validate that the core logic is working correctly.
 In the case of Unity, the humble object pattern would result in one class that is a MonoBehaviour and a plain C# class.
 The MonoBehaviour creates an instance of the C# class by calling its constructor in the Start method.
-Once it receives the typical MonoBehaviour callbacks, e.g. for `Update()`, the MonoBehaviour calls the corresponsing methods of the C# class instance.
+Once it receives the typical MonoBehaviour callbacks, e.g. for `Update()`, the MonoBehaviour calls the corresponding methods of the C# class instance.
 The C# class implements the actual functionality.
-This way, in units tests, one can create an object instance of the C# class by calling its constructor and perform the tests on it.
+This way, in unit tests, one can create an object instance of the C# class by calling its constructor and perform the tests on it.
 There is no need to create a GameObject, attach a MonoBehaviour or to manage the scene.
 
 ### Mocking Frameworks
 
-A software architecture with loosely coupled modules contains classes with clearly defined dependencies and interfaces to other classes.
+In a software architecture with loosely coupled modules, dependencies and interfaces to other classes are well-defined.
 These dependencies can interfere with the unit test since the result of a function can depend on the status of such dependency objects.
-If there is an error in the dependency, the test for the function relys on the dependency fails which makes it harder to locate the error.
+If there is an error in the dependency, the test for the function relies on the dependency fails which makes it harder to locate the error.
 For this reason, unit tests should only test the code of the inspected function and all dependencies should be mocked.
 A mock object is an object which behaves in the same way as the original object but it does not actually perform complex computations in the background.
-Mocking dependencies does not only guard against errors in the implementation of the dependency class but it also allows to simulate different states of external resources, such as the Web or IO operations.
+Mocking dependencies does not only guard against errors in the implementation of the dependency class but it also allows simulating different states of external resources, such as the Web or IO operations.
 As an example, there is a class with a function that categorizes the popularity of a Web page by checking its daily visitor count.
 To do this, the function receives the URI of a the target Web page as an input argument and sends a Web request to the analytics server to query for the statistics of this URI.
 As an answer, it gets the number of visitors for the given day.
@@ -188,7 +188,7 @@ Hence, the Web request should be mocked so that it returns a simulated answer.
 The mock Web request object does not actually send a query to the Web but always returns a pre-defined answer that can be set up by the developer.
 This way, it is possible to systematically check how the function behaves based on different answers.
 For instance, in one unit test, the mock Web request could simulate a disconnected state where the query cannot be answered by the server.
-Other unit test cases include simulated answers with where the developer passes different visitor counts to check if the function correctly cathegorizes them.
+Other unit test cases include simulated answers with where the developer passes different visitor counts to check if the function correctly categorizes them.
 
 For C#, there are different mocking frameworks available such as NSubstitute, moq or FakeItEasy.
 
@@ -196,9 +196,9 @@ For C#, there are different mocking frameworks available such as NSubstitute, mo
 # Continuous Integration
 
 Continuous integration allows projects to run checks and builds in an automated manner.
-Such a CI routine is executed when new changes are commited to the repository.
+Such a CI routine is executed when new changes are committed to the repository.
 This makes sure that possible errors in the program code can be spotted immediately when they are caused.
-Moreover, it assues that quality standards are met, e.g. when reviewing merge requests or for releases.
+Moreover, it assumes that quality standards are met, e.g. when reviewing merge requests or for releases.
 This can be done by defining a range of tasks that e.g. run unit tests, compile the code, generate documentation, calculate code quality metrics and deploy results to devices.
 CI is applied to a source-controlled repository, e.g. on GitHub or Gitlab since this ensures that all developers work on the same code basis.
 
