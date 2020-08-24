@@ -169,6 +169,30 @@ The C# class implements the actual functionality.
 This way, in units tests, one can create an object instance of the C# class by calling its constructor and perform the tests on it.
 There is no need to create a GameObject, attach a MonoBehaviour or to manage the scene.
 
+### Mocking Frameworks
+
+A software architecture with loosely coupled modules contains classes with clearly defined dependencies and interfaces to other classes.
+These dependencies can interfere with the unit test since the result of a function can depend on the status of such dependency objects.
+If there is an error in the dependency, the test for the function relys on the dependency fails which makes it harder to locate the error.
+For this reason, unit tests should only test the code of the inspected function and all dependencies should be mocked.
+A mock object is an object which behaves in the same way as the original object but it does not actually perform complex computations in the background.
+Mocking dependencies does not only guard against errors in the implementation of the dependency class but it also allows to simulate different states of external resources, such as the Web or IO operations.
+As an example, there is a class with a function that categorizes the popularity of a Web page by checking its daily visitor count.
+To do this, the function receives the URI of a the target Web page as an input argument and sends a Web request to the analytics server to query for the statistics of this URI.
+As an answer, it gets the number of visitors for the given day.
+Based on some given thresholds, the visit number is classified into a number of categories which can then be used by an application's UI to visualize the popularity of the Web page in a colour scheme.
+In this example, the Web request is a dependency of the function that determines the popularity.
+The result of the function does not only depend on its input argument (the URI) but also any external state (the result of the Web request).
+The unit test which checks this function should not perform Web requests and it cannot control the values which will be returned.
+Hence, the Web request should be mocked so that it returns a simulated answer.
+The mock Web request object does not actually send a query to the Web but always returns a pre-defined answer that can be set up by the developer.
+This way, it is possible to systematically check how the function behaves based on different answers.
+For instance, in one unit test, the mock Web request could simulate a disconnected state where the query cannot be answered by the server.
+Other unit test cases include simulated answers with where the developer passes different visitor counts to check if the function correctly cathegorizes them.
+
+For C#, there are different mocking frameworks available such as NSubstitute, moq or FakeItEasy.
+
+
 # Continuous Integration
 
 Continuous integration allows projects to run checks and builds in an automated manner.
