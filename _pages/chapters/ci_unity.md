@@ -204,4 +204,23 @@ CI is applied to a source-controlled repository, e.g. on GitHub or Gitlab since 
 
 ## GitHub Actions
 
+[GitHub Actions](https://github.com/features/actions) is an automation feature for GitHub repositories.
+It gives developers the option to define workflows by combining a series actions.
+Such actions can be self-created or shared actions by the community can be re-used.
+The ability to import existing actions speeds up the creation of the workflows since they are preconfigured and only require some input parameters to run.
+As an example, there is a series of actions available for [Unity-specifc tasks](https://github.com/webbertakken/unity-actions).
+
+A repository can have multiple workflows.
+Their execution can be triggered by certain events, e.g. at a regular time, by pushing to a specific branch or by posting a pull request.
+Each workflow consists of jobs which are executed in parallel but can also wait for each other if necessary.
+A job executes a series of steps.
+These steps are the actions which can be self-defined or imported from the community marketplace.
+
+Open-source repositories on GitHub can use this featuer for free whereas users of private repositories can sign in for a usage plan.
+Each of the plans ranging from free to enterprise include an initial amount of minutes that the tasks are allowed to run on GitHub's servers.
+For each minute that exeeds the limit, additional fees have to be paid.
+Tasks can run on GitHub's Linux, Windows or macOS runners.
+Each of them have different fees and they contribute at weights to the initial limit ([GitHub Actions Pricing](https://docs.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions)).
+Unity actions can run on Linux machines which are the cheapest option.
+
 ## Gitlab CI
