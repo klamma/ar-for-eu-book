@@ -216,11 +216,77 @@ Each workflow consists of jobs which are executed in parallel but can also wait 
 A job executes a series of steps.
 These steps are the actions which can be self-defined or imported from the community marketplace.
 
-Open-source repositories on GitHub can use this featuer for free whereas users of private repositories can sign in for a usage plan.
+Open-source repositories on GitHub can use this feature for free whereas users of private repositories can sign in for a usage plan.
 Each of the plans ranging from free to enterprise include an initial amount of minutes that the tasks are allowed to run on GitHub's servers.
 For each minute that exeeds the limit, additional fees have to be paid.
 Tasks can run on GitHub's Linux, Windows or macOS runners.
 Each of them have different fees and they contribute at weights to the initial limit ([GitHub Actions Pricing](https://docs.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions)).
 Unity actions can run on Linux machines which are the cheapest option.
+
+### Tutorial: CI with GitHub Actions for Unity Repositories
+
+This tutorial will demonstrate how to set up the GitHub Actions for Unity repositories.
+After finishing this tutorial, the GitHub repository will automatically perform checks of the unit tests and build the project.
+It will do this by setting up a Docker container with a Unity installation, pulling the changes and building them in the Docker container.
+
+The tutorial is structured as follows:
+
+First, we will create the necessary workflow files one by one.
+This involves a license activation step, unit testing and the final build.
+Before we can build the Unity application on the server, we need to create activation credentials for Unity.
+Each installation of Unity requires its own license that has to be activated before using Unity.
+When installing Unity on your PC, this is a small step where you have to log in with your Unity ID but for a Docker container this process is more involved.
+Licenses are bound to one PC, so it does not work to transfer existing licenses between machines.
+The solution is to set up a workflow that causes the Unity instance in the Docker container to generate a license request.
+This license request can be returned as a artifact that we can download.
+After that, we will manually activate the license which can be done on any PC.
+Finally, we will receive the valid license which can then be added to the list of secret environment variables in the GitHub repository.
+
+After the activation, we create the workflow for the unit tests and after that, we will tackle the automatic build of the application's install files.
+
+#### Creating a Workflow File
+
+As a pre-requisite, you requrie an GitHub account and a repository on GitHub with a Unity project.
+Either choose an existing project or create a new empty project and upload it to GitHub.
+
+1. In the root folder of your repository, create a folder "*.github*".
+   The folder name must start with the dot.
+   GitHub looks for this folder, e.g. to find the workflow configuration or actions.
+2. In the ".github"-folder, create a folder "workflows".
+   Inside of this folder, we will define the workflows for the project.
+   A project can contain multiple workflows.
+3. First, we need to set up the aforementioned activation workflow.
+   Create an empty yaml file, e.g. with the name "activation.yml".
+   Open the file in a text editor or IDE to define the workflow.
+4. Detailed information about the available options can be found in [GitHub's documentation](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow).
+   Workflows are defined in the YAML format.
+   It is a data serialization format that is indentation sensitive.
+   You should pay attention to the indentation of each line and use a consistent amount of spaces.
+   To create the activation workflow, copy the following piece of YAML:
+
+{% raw %}
+   ```
+   name: Acquire activation file
+   on: [push]
+   jobs:
+     activation:
+       name: Request manual activation file
+       runs-on: ubuntu-latest
+       steps:
+       # Request manual activation file
+       - name: Request manual activation file
+         id: getManualLicenseFile
+         uses: webbertakken/unity-request-manual-activation-file@v1.1
+         with:
+           unityVersion: 2018.4.15f1
+       # Upload artifact (Unity_v20XX.X.XXXX.alf)
+       - name: Expose as artifact
+         uses: actions/upload-artifact@v1
+         with:
+           name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+           path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+   ```
+{% endraw %}
+   
 
 ## Gitlab CI
