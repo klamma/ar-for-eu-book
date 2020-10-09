@@ -9,10 +9,10 @@ visualizations:
 
 # AR Agile Project Management
 
-This chapter gives an overview on agile project management, in particular the agile management of software development for augmented or mixed reality environments. 
+This chapter gives an overview on agile project management, in particular the agile management of software development for augmented or mixed reality environments.
 Often, AR developers are not used to agile project management, agile software development methods or the DevOps Tool Chain.
-Moreover, AR developers are not used to working in larger teams. 
-If you have to conduct a larger development project and want to use agile methods, this chapter is the right starting point. 
+Moreover, AR developers are not used to working in larger teams.
+If you have to conduct a larger development project and want to use agile methods, this chapter is the right starting point.
 All needed concepts for agile project management are introduced.
 To support agile project management in augmented reality, we have set up an experimental mixed reality environment called [VIAProMa](https://github.com/rwth-acis/VIAProMa) (Virtual Immersive Analytics for Project Management).
 
@@ -236,6 +236,7 @@ There is even more than that.
 If you ever wondered why you have Facebook app updates multiple times a day, here is the answer.
 
 ### Continuous Delivery and Continuous Deployment
+
 **Continuous practices**, i.e., continuous integration, delivery, and deployment, are the software development industry practices that enable organizations to frequently and reliably release new features and products {% cite SAZh17 %}.
 Continuous Delivery is about removing stress at the *last mile*.
 
@@ -272,6 +273,7 @@ and  how to be competitive.
 Markets are places where customers who are willing to buy a product or a service can meet the sellers of those products and services. 
 From the view of the sellers, markets are people who are willing to pay. 
 For market analysis, it is important to come up with numbers.
+
 - How much can I charge for a product?
 - How many potential buyers are there?
 - How many potential customers will be interested in my product?
@@ -283,7 +285,8 @@ A market analysis can also include an analysis of the competitors.
 **Market segmentation** is the strategy of dividing broad market into subsets of consumers who have common needs 
 and characteristics.
 Types of market segmentation are:
-- Behavioural 
+
+- Behavioural
   - Knowledge of the product 
   - Attitude
   - Benefits
@@ -312,6 +315,7 @@ See more on [http://www.uxbooth.com/articles/creating-personas/](http://www.uxbo
 
 Analyse your competitors.
 Ask your (potential) users
+
 - Do they have any concerns about the idea?
 - Why they use your services?
 - Key points to focus on:
@@ -328,6 +332,7 @@ Five P‘s of marketing
 
 
 Without customers, your business does not exist!
+
 - Who are the users?
 - How much they will pay?
 - Are there any competitors?
@@ -401,6 +406,7 @@ More details on the DevOpsUse methodology and its tools is available on [http://
 A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}.
  
 An MVP must have four key elements for achieving product quality
+
 - Functionality 
 - Design
 - Reliability
