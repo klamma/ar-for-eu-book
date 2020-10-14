@@ -74,29 +74,29 @@ permalink: /toc/
 ### AR Application Design
 
 - [Wearable Interaction](/ar-for-eu-book/chapter/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="todo" %}
-- Sound Design {% include badge.html base=pathToRoot badgeName="todo" %}
+<!-- - Sound Design {% include badge.html base=pathToRoot badgeName="todo" %} -->
 - [Gamification](/ar-for-eu-book/chapter/game/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- Serious Games {% include badge.html base=pathToRoot badgeName="inProgress" %}
+<!-- - Serious Games {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
 
 ### Development Tools and Libraries
 
 - Unity
   - [Introduction to Unity](/ar-for-eu-book/chapter/engines/) {% include badge.html base=pathToRoot badgeName="complete" %}
-  - [Overview of AR SDKs for Unity](/ar-for-eu-book/chapter/arsdk/)
+  - [Overview of AR SDKs for Unity](/ar-for-eu-book/chapter/arsdk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
   - [Mixed Reality Toolkit](/ar-for-eu-book/chapter/arsdk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
     - [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/holotoolkit/) {% include badge.html base=pathToRoot badgeName="complete" %}
     - [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/spatialMapping/) {% include badge.html base=pathToRoot badgeName="complete" %}
     - [Spatial Understanding](/ar-for-eu-book/chapter/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
     - [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
-  - Vuforia {% include badge.html base=pathToRoot badgeName="todo" %}
+  <!-- - Vuforia {% include badge.html base=pathToRoot badgeName="todo" %} -->
   - Advanced Unity Techniques
     - [Dialogue Understanding](/ar-for-eu-book/chapter/dialogue-understanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
     - [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="complete" %}
     - [Collaboration & Sharing](/ar-for-eu-book/chapter/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
     - [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/ci_unity/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-- Unreal Engine
+<!-- - Unreal Engine
   - Basics of Unreal Engine {% include badge.html base=pathToRoot badgeName="todo" %}
-  - Hololens Development with Unreal {% include badge.html base=pathToRoot badgeName="todo" %}
+  - Hololens Development with Unreal {% include badge.html base=pathToRoot badgeName="todo" %} -->
 - [A-Frame](/ar-for-eu-book/chapter/web/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### Digital Content Creation
