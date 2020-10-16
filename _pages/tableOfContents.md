@@ -29,12 +29,12 @@ permalink: /toc/
 ### Computer Science Foundations
 
 - Programming Languages for AR Development
-  - [Selecting a Programming Language](/ar-for-eu-book/chapter/prog/) {% include badge.html base=pathToRoot badgeName="complete" %}
+  - [Selecting a Programming Language](/ar-for-eu-book/chapter/computerScience/prog/) {% include badge.html base=pathToRoot badgeName="complete" %}
   - Short introduction to C++ {% include badge.html base=pathToRoot badgeName="todo" %}
   - Short introduction to C# {% include badge.html base=pathToRoot badgeName="inProgress" %}
   - Short introduction to JavaScript {% include badge.html base=pathToRoot badgeName="todo" %}
 - Software Architecture
-  - [SOLID Principles of Code](/ar-for-eu-book/chapter/prog/) {% include badge.html base=pathToRoot badgeName="complete" %}
+  - [SOLID Principles of Code](/ar-for-eu-book/chapter/computerScience/solid/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### Computer Graphics
 
@@ -102,11 +102,11 @@ permalink: /toc/
 ### Digital Content Creation
 
 - 3D Modeling
-  - [Mesh-based 3D Modeling](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- [Texturing](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
-  - [UV Unwrapping](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
-  - [Texture Painting](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
-  - [Texture Baking](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
+  - [Mesh-based 3D Modeling](/ar-for-eu-book/chapter/digitalContent/modeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
+- [Texturing](/ar-for-eu-book/chapter/digitalContent/texturing/) {% include badge.html base=pathToRoot badgeName="complete" %}
+  - [UV Unwrapping](/ar-for-eu-book/chapter/digitalContent/texturing#UV) {% include badge.html base=pathToRoot badgeName="complete" %}
+  - [Texture Painting](/ar-for-eu-book/chapter/digitalContent/texturing#TexturePainting) {% include badge.html base=pathToRoot badgeName="complete" %}
+  - [Texture Baking](/ar-for-eu-book/chapter/digitalContent/texturing#TextureBaking) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [3D Scanning](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Animation](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
