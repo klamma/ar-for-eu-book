@@ -94,9 +94,9 @@ permalink: /toc/
     - [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="complete" %}
     - [Collaboration & Sharing](/ar-for-eu-book/chapter/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
     - [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/ci_unity/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-<!-- - Unreal Engine
-  - Basics of Unreal Engine {% include badge.html base=pathToRoot badgeName="todo" %}
-  - Hololens Development with Unreal {% include badge.html base=pathToRoot badgeName="todo" %} -->
+<!-- - Unreal Engine -->
+<!--  - Basics of Unreal Engine {% include badge.html base=pathToRoot badgeName="todo" %} -->
+<!--  - Hololens Development with Unreal {% include badge.html base=pathToRoot badgeName="todo" %} -->
 - [A-Frame](/ar-for-eu-book/chapter/web/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### Digital Content Creation
@@ -110,7 +110,7 @@ permalink: /toc/
 - [3D Scanning](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Animation](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
-### Advanced Topics
+### Advanced Topics & Outlook
 
 - [Analysis of Existing AR Applications](/ar-for-eu-book/chapter/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [3D Printing](/ar-for-eu-book/chapter/printing/) {% include badge.html base=pathToRoot badgeName="todo" %}
