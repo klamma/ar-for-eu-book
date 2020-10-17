@@ -1,12 +1,10 @@
 ---
 layout: page
 title: Image Processing
-permalink: /chapter/imageproc/
+permalink: /chapter/foundations/cv/imageProcessing/
 categories: chapter
 visualizations:
 ---
-
-# Image Processing
 
 ## Marker-based augmented reality
 

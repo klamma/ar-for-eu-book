@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SOLID Principles of Code
-permalink: /chapter/computerScience/solid/
+permalink: /chapter/foundations/cs/solid/
 categories: chapter
 visualizations:
 ---

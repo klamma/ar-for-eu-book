@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Perceptual Foundations of Augmented Reality  (started)
-permalink: /chapter/design/perceptionar/
+permalink: /chapter/foundations/design/perception/
 categories: chapter
 visualizations:
 ---

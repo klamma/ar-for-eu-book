@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Programming Languages
-permalink: /chapter/computerScience/prog/
+permalink: /chapter/foundations/cs/programming/
 categories: chapter
 visualizations:
 ---
@@ -16,3 +16,9 @@ However, C++ is not an essential prerequisite for the Unreal Engine as it also p
 
 Another option is to develop AR experiences for the Web.
 In this case, you should study Web technologies and the scripting language *JavaScript*.
+
+## Learning C++ {#Cpp}
+
+## Learning C# {#CSharp}
+
+## Learning JavaScript {#JavaScript}

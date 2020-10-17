@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Geometry
-permalink: /chapter/cg/geometry/
+permalink: /chapter/foundations/cg/geometry/
 categories: chapter
 visualizations:
 ---

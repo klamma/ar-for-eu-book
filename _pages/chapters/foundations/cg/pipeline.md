@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Rendering Pipeline
-permalink: /chapter/cg/pipeline/
+permalink: /chapter/foundations/cg/pipeline/
 categories: chapter
 visualizations:
 ---

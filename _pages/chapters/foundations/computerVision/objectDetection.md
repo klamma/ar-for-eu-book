@@ -1,10 +1,8 @@
 ---
 layout: page
 title: Object Detection and Recognition
-permalink: /chapter/odr/
+permalink: /chapter/foundations/cv/objectDetection/
 categories: chapter
 visualizations:
 ---
-
-# Object Detection and Recognition
 

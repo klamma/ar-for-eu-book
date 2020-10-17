@@ -1,9 +1,7 @@
 ---
 layout: page
 title: Spatial Audio
-permalink: /chapter/spatialaudio/
+permalink: /chapter/foundations/cg/spatialaudio/
 categories: chapter
 visualizations:
 ---
-
-# Spatial Audio

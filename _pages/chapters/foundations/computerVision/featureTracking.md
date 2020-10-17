@@ -1,9 +1,7 @@
 ---
 layout: page
 title: Object Tracking
-permalink: /chapter/otracking/
+permalink: /chapter/foundations/cv/featureTracking
 categories: chapter
 visualizations:
 ---
-
-# Object Tracking

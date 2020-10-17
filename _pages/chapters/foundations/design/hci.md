@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Human Computer Interaction and User Centered Design
-permalink: /chapter/design/hci/
+permalink: /chapter/foundations/design/hci/
 categories: chapter
 visualizations:
 ---

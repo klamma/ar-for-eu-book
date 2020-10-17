@@ -1,9 +1,8 @@
 ---
 layout: page
 title: Image Analysis
-permalink: /chapter/imageanalysis/
+permalink: /chapter/foundations/cv/imageanalysis/
 categories: chapter
 visualizations:
 ---
 
-# Image Analysis

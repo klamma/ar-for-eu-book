@@ -1,14 +1,12 @@
 ---
 layout: page
-title: Tracking Technologies (started)
-permalink: /chapter/tracking/
+title: Tracking Technologies
+permalink: /chapter/foundations/hardware/tracking/
 categories: chapter
 visualizations:
 ---
 
 {% include autoRelativePath.html %}
-
-# Tracking Technologies
 
 Tracking technologies are required in order to provide the position and rotation of a real object to the computer system.
 With AR systems, tracking technologies are commonly used in two settings:
