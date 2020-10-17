@@ -36,6 +36,9 @@ This tutorial will familiarize you with 3D scanning and animation. We will work 
 - [Mixamo](https://www.mixamo.com/)
 - [Unity 3D](https://unity.com/)
 
+## Video Tutorial
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/v9JRPFCBu-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Part 1. 3D Scanning {#part-1-3D-scanning}
 
