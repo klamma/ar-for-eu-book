@@ -22,11 +22,15 @@ In this chapter, we give an introduction to the field of Wearable Computing, the
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1XPL93Z7fcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-We start the introduction to wearable computing by describing The roulette predictor - the first wearable computer built by E.O. Thorp in 1961 https://youtu.be/GCtJ683nrBA https://ieeexplore.ieee.org/document/729523
-We continue by describing a similarly important milestone - the invention of the first general-purpose wearable computer by Steve Mann from the MIT Wearable Computing Group 1996 https://ieeexplore.ieee.org/document/566147.
+The invention of the first wearable computer is attributed to Edward Thorpe, who - in the 50ies and 60ies - had started to build a wearable roulette predictor (together with Claude Shannon) as a hobby project
+[Thorpe (1998)](https://ieeexplore.ieee.org/document/729523). The body worn micro computer would be operated with a flick switch in the shoes to time the moment the croupier sets the ball on the roulette table, predicting its landing position, and communicating the prediction with sounds to the earphones. Thorpe claims the computer worked with an expected gain (of 44% under lab conditions), and that's that. 
 
-We then introduce the three classes of modern wearable computers: smart accessories, head-mounted displays, and e-textiles. 
-We explain more about the e-textile (or smart textile), noting the progress that the industry has made towards consumer devices, illustrating by an example of a smart jacket https://youtu.be/yJ-lcdMfziw
+The second important milestone in the history of wearable computing is the invention of the first general-purpose wearable computer by Steve Mann in his MIT Wearable Computing Group [Mann (1996)](https://ieeexplore.ieee.org/document/566147).
+
+As with many technology revolutions, the seminal work is often rather system-focused, and aesthetics, scalable production, or user experience are often neglected so as to focus on overcoming the technical problems. And as with other movements, recent years have remediated that, complementing technical progress with design, business and use cases, and manufacturing lines. 
+
+Modern wearable computers fall into three classes: smart accessories, head-mounted displays, and e-textiles. Smart accessories such as FitBits, JawBones, and Apple Watches are widely known now. Head-mounted displays still less, but smart glasses like the Microsoft Hololens or the Magic Leap (or the less well known 50-100 other manufacturers) are coming. E-textiles, however, are less visible, and the biggest progress is yet to come. While there are many arts projects (such as the wearable keyboard) or industry prototypes (such as the [Levis smart jacket](https://youtu.be/yJ-lcdMfziw)), they are not yet a commodity.
+
 We give a definition of smart textiles by Van Langenhove & Hertleer (2004) https://www.emerald.com/insight/content/doi/10.1108/09556220410520360/full/html and describe the three production types of smart textiles.
 We describe how context awareness is provided by smart textiles illustrating with an example of the Pivot Yoga dress https://pivot.yoga/
 
