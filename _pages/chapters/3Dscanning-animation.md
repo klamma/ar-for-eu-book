@@ -8,6 +8,8 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
+This tutorial will familiarize you with 3D scanning and animation. We will work on constructing a 3D character, including the steps of obtaining a 3D scan of a human, converting it into a low-polygonal 3D model, cleaning the data (both 3D models and textures), and animating it to be ready for an Augmented Reality application.
+
 ## Contents
 - [Part 1. 3D scanning](#part-1-3D-scanning)
 - [Part 2. Converting a 3D scan into a low-polygonal 3D model with R3DS Wrap](#part-2-wrap)
@@ -231,6 +233,8 @@ In Photoshop, we use the Stamp tool to clone parts of the texture to the problem
 ## Part 5. Character animation with Mixamo {#part-5-mixamo}
 
 Mixamo offers multiple free animations and characters.
+
+**_Note:_** _If you want to skip the 3D scanning, converting to a low-polygonal model and polishing parts of the tutorial, you can download an example 3D character model with a polished texture ([download]({{pathToRoot}}/assets/supplementary_material/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning-example-character.zip))._
 
 **Step 5.1:** Open [Mixamo website](https://www.mixamo.com/) in your browser, create an account and login.
 
