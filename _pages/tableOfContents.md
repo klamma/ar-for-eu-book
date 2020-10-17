@@ -77,6 +77,7 @@ permalink: /toc/
 <!-- - Sound Design {% include badge.html base=pathToRoot badgeName="todo" %} -->
 2. [Gamification](/ar-for-eu-book/chapter/game/) {% include badge.html base=pathToRoot badgeName="complete" %}
 <!-- - Serious Games {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
+3. Interaction Design
 
 ### 3.4 Development Tools and Libraries
 
