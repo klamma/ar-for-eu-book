@@ -9,8 +9,6 @@ visualizations:
 
 # Augmented Reality Agile Project Management
 
-{%cite CaMi92 %}
-{%cite Drie10 %}
 
 This chapter gives an overview on agile project management, in particular the agile management of software development for augmented or mixed reality environments.
 Often, AR developers are not used to agile project management, agile software development methods or the DevOps Tool Chain.
@@ -32,9 +30,10 @@ Customers however, find it difficult to state their requirements in an abstract 
 The waterfall model does not cater for possibility of changing requirements.
 The waterfall model was modified after a number of issues identified in practice, but in the end, the agile approach became the dominant one.
 
-## Agile Development Features
+## Agile Development Manifesto
 
 The agile development approach was initiated mainly by developers not satisfied with the strict process management tools applied in the traditional waterfall model, leading to overwork, working on documents instead on code, lacking communication with the customer and lacking communication with co-developers.
+In this spirit, the agile developement approach focusses on avoiding overwork, improve communicaton within the developer team and with the customer as well as on coding.
 
 Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
 
@@ -47,6 +46,11 @@ Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
  **Responding to change** over following a plan
 
 Meanwhile to [agile manifesto](https://agilemanifesto.org/) was signed by thousands of people.
+
+Critics is often coming from engineers working on very large physical engineering projects like space rockets, aircrafts, ships or cars.
+Indeed, software projects, even large ones, are more open to flexibility.
+Since also physical engineering projects have lare software parts in recent years, agility is slowly coming also to those projects.
+Still, culturals difference are challenging team communication in many ways, as we will also see in the case of DevOps, where developers need to communicate with IT operations.
 
 ## Agile Development Features
 
@@ -64,7 +68,7 @@ Also empirically proven, a recent report says that over 94% of companies today d
 - Motivated people produce better results
 - Projects with agile methods have higher probability to end successfully 
 
-## Scrum 
+## Scrum
 
 Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
 
@@ -161,6 +165,7 @@ It has three columns: *Open*, *In Progress*,
 and *Closed*.
 The three columns have different colours, which can be chosen from the menu.
   ![VIAProMa Board]({{pathToRoot}}/assets/figures/apm/viaproma_kanban.png)
+
 ## Definition of Done
 
 - All the quality criteria
@@ -171,20 +176,19 @@ The three columns have different colours, which can be chosen from the menu.
   - Test Coverage
   - Documentation
  
- This is your first user story: *"As a developer, I want to settle the Definition of Done to achieve a better overall quality of our software."*
- 
- 
+This is your first user story: *"As a developer, I want to settle the Definition of Done to achieve a better overall quality of our software."*
+
 ### Code Style Guides
- 
- - Coding standards define ...
-   - Naming conventions
-   - Indentation
-   - Documentation
-   - Encoding
- - Helpful for *Collective Code Ownership* within small teams, indispensable for open source
- - E.g. Google's Java style guide
-   - [https://google-styleguide.googlecode.com/svn/trunk/javaguide.html]
-   
+
+- Coding standards define ...
+  - Naming conventions
+  - Indentation
+  - Documentation
+  - Encoding
+- Helpful for *Collective Code Ownership* within small teams, indispensable for open source
+  - E.g. Google's Java style guide
+  - [https://google-styleguide.googlecode.com/svn/trunk/javaguide.html]
+
 ### Code Review
 
 - Improve communication in teams
@@ -268,7 +272,7 @@ Continuous Delivery is about removing stress at the *last mile*.
   - Talk with the customer
   - Refine the *product backlog* for the next Sprint
  
-# Market Analysis
+## Market Analysis
 
 **Market analysis** is the process of analyzing data to help you understand which products and services are in demand, 
 and  how to be competitive.
@@ -284,12 +288,12 @@ A market analysis can also include an analysis of the competitors.
 - What do they charge for their product?
 - What are their product features?
 
-**Market segmentation** is the strategy of dividing broad market into subsets of consumers who have common needs 
+**Market segmentation** is the strategy of dividing broad market into subsets of consumers who have common needs
 and characteristics.
 Types of market segmentation are:
 
 - Behavioural
-  - Knowledge of the product 
+  - Knowledge of the product
   - Attitude
   - Benefits
 - Psychographic
@@ -323,7 +327,7 @@ Ask your (potential) users
 - Key points to focus on:
   - Quality
   - Price
-  - Advantages & disadvantages 
+  - Advantages & disadvantages
 
 Analyse your competitive advantages and disadvantages.
 Five P‘s of marketing
@@ -343,7 +347,7 @@ Without customers, your business does not exist!
 We advise to start every project with both a market study and a technical feasibility study. 
 Students will learn to focus on products not technologies but learn to assess technical risks of the development process.
 
-# DevOps
+## DevOps
  
 We have a look at the emerging industry DevOps approach. 
 DevOps is a recent software engineering methodology, its success indicated by growing numbers of supporters. 
@@ -403,7 +407,7 @@ More details on the DevOpsUse methodology and its tools is available on [http://
   - End-user participation
 - Strong commitment to participatory design and evaluation activities carried out in communities of practice
 
-# Minimal Viable Product
+## Minimal Viable Product (MVP)
 
 A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}.
  
@@ -416,7 +420,7 @@ An MVP must have four key elements for achieving product quality
 
 It has enough of the four key elements that people are willing to use or to buy it. It should show enough potential for retaining first customers and it should initialize a development cycle with feedback from the customers.
 
-# Wrap-Up
+## Wrap-Up
 
 - You heard about the Agile Manifesto
 - You know that Scrum follows agile principles
@@ -425,9 +429,9 @@ It has enough of the four key elements that people are willing to use or to buy 
 - You already knew about source control systems
 - And finally you probably know what Continuous Integration is good for
 
-# Templates and Examples for your own Mixed Reality Classes
+## Templates and Examples for your own Mixed Reality Classes
 
-## Review Specifications 
+### Review Specifications 
 
 The following specs are for a 12-week course on Mixed Reality with teams of 4-6 people working on a prototype.
 Four reviews are planned for the course, so that every three weeks there can be a review.
