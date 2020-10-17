@@ -67,7 +67,7 @@ It is a chip consisting of  millions of individually controlled micro mirrors, e
 The principle is based on the fact that the retina of the eye itself is the display surface of such displays.
 Light is reflected by the mirrors, which are constantly realigned, and hits the retina.
 Due to their small size and the resulting very high resolution (approx. 2cm diagonal at a resolution of 1920x1080), they are ideal as head-mounted displays {% cite Horn97 %}  {% cite BZL*06 %}.
-Texas Instruments has even produced a chip that can produce a Full HD resolution on only about 6mm diagonal {% cite TIDLP230NP %}.
+Texas Instruments has even produced a chip that can produce a Full HD resolution on only about 6mm diagonal {% cite Texa20 %}.
 
 DLPs have long been used in projectors.
 Compared to LCD projectors they offer a higher contrast and therefore a better black level, because here no panel is illuminated by the light, but DLP has the disadvantage that when you blink your eyes or wander quickly over the projected image, unpleasant rainbow artifacts hit your eyes.

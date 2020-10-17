@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Stage-7" serif:id="Stage 7" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(1,0,0,0.923906,-24.3964,-44.1266)">
+            <path d="M218.672,275.062L292.403,559.593L718.745,559.593" style="fill:none;stroke:rgb(73,160,120);stroke-width:12.15px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,88.0316,273.711)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(3.44413,0,0,3.44413,63.066,177.245)">
+            <text x="59.504px" y="75.613px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">feature2</text>
+        </g>
+    </g>
+    <g id="Stage-3" serif:id="Stage 3" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(1,0,0,1,49.0498,66.4105)">
+            <path d="M146.509,143.594L219.763,275.062L436.039,275.062" style="fill:none;stroke:rgb(0,84,159);stroke-width:11.69px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,88.0316,142.298)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(3.44413,0,0,3.44413,63.066,53.1684)">
+            <text x="59.504px" y="75.613px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">feature1</text>
+        </g>
+    </g>
+    <g id="Stage-2" serif:id="Stage 2" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(0.8729,0,0,1,-5.77513,-65.0571)">
+            <path d="M146.509,143.594L219.763,275.062L966.411,275.062" style="fill:none;stroke:rgb(248,183,46);stroke-width:12.45px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,12.1496,10.8306)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(3.44413,0,0,3.44413,-0.0550828,-78.2991)">
+            <text x="59.504px" y="75.613px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">develop</text>
+        </g>
+    </g>
+    <g id="Stage-9" serif:id="Stage 9" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(1,0,0,0.923906,-24.3964,-44.1266)">
+            <path d="M718.745,559.593L804.1,275.062" style="fill:none;stroke:rgb(73,160,120);stroke-width:12.15px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,597.577,10.8306)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+    </g>
+    <g id="Stage-8" serif:id="Stage 8" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(0.639149,0,0,0.639149,255.882,273.711)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,172.867,273.711)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,434.666,273.711)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,338.897,273.711)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,513.661,273.711)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+    </g>
+    <g id="Stage-6" serif:id="Stage 6" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(0.639149,0,0,0.639149,429.038,10.8306)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,505.189,10.8306)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+    </g>
+    <g id="Stage-5" serif:id="Stage 5" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(1,0,0,1,49.0498,66.4105)">
+            <path d="M436.039,275.062L487.343,143.594" style="fill:none;stroke:rgb(0,84,159);stroke-width:11.69px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,354.267,10.8306)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+    </g>
+    <g id="Stage-4" serif:id="Stage 4" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(0.639149,0,0,0.639149,160.894,142.298)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,233.755,142.298)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,305.478,142.298)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+    </g>
+    <g id="Stage-1" serif:id="Stage 1" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(1,0,0,1,-24.3964,-65.0571)">
+            <path d="M43.901,143.594L966.411,143.594" style="fill:none;stroke:rgb(219,84,97);stroke-width:11.69px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,-60.0134,-120.637)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(3.44413,0,0,3.44413,-189.489,-214.901)">
+            <text x="59.504px" y="75.613px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">master</text>
+        </g>
+        <g transform="matrix(1.27168,0,0,1.27168,32.1535,-12.1537)">
+            <text x="59.504px" y="75.613px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:white;">v1.0</text>
+        </g>
+    </g>
+    <g id="Stage-11" serif:id="Stage 11" transform="matrix(1,0,0,1,21.267,-4.17207)">
+        <g transform="matrix(1,0,0,1,-8.9867,-65.0571)">
+            <path d="M846.792,275.062L917.574,143.594" style="fill:none;stroke:rgb(248,183,46);stroke-width:11.69px;"/>
+        </g>
+        <g transform="matrix(0.639149,0,0,0.639149,726.462,-120.637)">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+        <g transform="matrix(1.27168,0,0,1.27168,818.495,-12.1537)">
+            <text x="59.504px" y="75.613px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:white;">v1.1</text>
+        </g>
+    </g>
+    <g transform="matrix(0.639149,0,0,0.639149,676.946,6.65848)">
+        <g id="Stage-10" serif:id="Stage 10">
+            <circle cx="284.95" cy="311.624" r="30.577" style="fill:rgb(31,144,244);stroke:white;stroke-width:7.07px;"/>
+        </g>
+    </g>
+</svg>

@@ -26,7 +26,7 @@ visualizations:
 
 Step 1.1: Register an account https://cloud.ibm.com/login > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
 
-![Image of Step 1.1](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%201.1.png)
+![Image of Step 1.1]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%201.1.png)
 
 ***Note:\*** *if you already have a Watson Assistant service running in your IBM Cloud account, and you can jump to the next part.*
 
@@ -36,7 +36,7 @@ Step 1.1: Register an account https://cloud.ibm.com/login > create an IBM Cloud 
 
 **Step 2.1.** Click on the Create resource button on the dashboard > Watson Assistant (if you can’t find it, Catalog > AI > Watson Assistant) > Click Create tab, and check the region. 
 
-![Image of Step 2.1](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%202.1.jpg)
+![Image of Step 2.1]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%202.1.jpg)
 
 
 
@@ -79,19 +79,19 @@ Before that, let’s take example. If you call a dessert shop, what a seller wil
 
 **Step 3.1.** Click on “Content Catalog” > “General” can be added to skill (it includes lots of basic contents of conversation, like good morning. But in this tutorial, we are not going to use it)
 
-![Image of Step 3.1](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.1.png)
+![Image of Step 3.1]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.1.png)
 
 
 
 **Step 3.2.** Select “Dialog” > Click on the “Node options” on the Welcome node > Add folder > named Dessert.
 
-![Image of Step 3.2](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.2.png)
+![Image of Step 3.2]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.2.png)
 
 
 
 **Step 3.3.** Click on Intents > Create Intent, called #welcome > Create > user example is Hi/hi, there; Hello/hello, there. 
 
-![Image of Step 3.3](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.3.png)
+![Image of Step 3.3]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.3.png)
 
 
 
@@ -101,13 +101,13 @@ Hello, Welcome to AI dessert shop. How can I help you?
 
 Hello, Welcome to AI dessert shop. What can I do for you? > Response variations are set to random. 
 
-![Image of Step 3.4](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.4.png)
+![Image of Step 3.4]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.4.png)
 
 
 
 **Step 3.5.** Click on “Node options” on the Dessert folder > add node to folder, called Name > Assistant responds: OK, how can I call you? / what’s your name? > Response variations are set to random again. 
 
-![Image of Step 3.5](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.5.png)
+![Image of Step 3.5]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.5.png)
 
 **Step 3.6.** Click on “Intents” > Create Intent > create a #name > add example:
 
@@ -119,13 +119,13 @@ my name is @username.
 
 ***Note:\*** *the first alphabet should be lowercase, if it’s capital, the assistant cannot recognize user’s name.*
 
-![Image of Step 3.6](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.6.png)
+![Image of Step 3.6]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.6.png)
 
 
 
 **Step 3.7.** Create @username on an entity, Click on “Entities” > My entities > Create entities > Entity name is @username > value is name_syntax, type is Patterns, pattern is [A-Z][a-z]+ > Add value.
 
-![Image of Step 3.7](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.7.png)
+![Image of Step 3.7]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.7.png)
 
 
 
@@ -137,9 +137,9 @@ my name is @username.
 
 **Step 3.11.** Click on node options on the Name node > Add child node, called Dessert > create condition: #name, add or, select @username, add or, select @sys-person > there are node options on the right of Assistant responds >  Select “Open context editor” > Variable is username > Value is "<? @sys-number.literal ?>" > Assistant responds: What desserts would you like, $username? 
 
-![Image of Step 3.11(1)](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.11(1).png)
+![Image of Step 3.11(1)]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.11(1).png)
 
-![Image of Step 3.11(2)](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.11(2).png)
+![Image of Step 3.11(2)]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.11(2).png)
 
 **Step 3.12.** On the Dessert node > add the other response type                                 > Text: Do you need a menu? Or I can provide some specials? 
 
@@ -159,13 +159,13 @@ Specials (/specials)
 
 \> Back to Dialog > Create a new child node on the Dessert node, called menu > condition is #menu > Assistant responds: Ok, here is our menu. > Add new response type > Text changes to Option > Title: Which dessert/ menu you like? > List labels are Pudding and Cake, Value is pudding menu and cake menu. 
 
-![Image of Step 3.13(1)](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.13(1).png)
+![Image of Step 3.13(1)]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.13(1).png)
 
-![Image of Step 3.11(2)](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.13(2).png)
+![Image of Step 3.11(2)]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.13(2).png)
 
 **Step 3.14.** Click Intents tab > Create Intent called #alldesserts > list more desserts as possible, including cakes and puddings. 
 
-![Image of Step 3.14](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.14.png)
+![Image of Step 3.14]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.14.png)
 
 **Step 3.15.**  Go back to the Dialog > create a new child node on the menu node, called pudding menu > condition: #menu> Assistant responds: We have chocolate puddings, vanilla puddings, and milk puddings > Add child node on the pudding menu, called pudding finish > condition is #alldesserts > Assistant responds: No problem! > Again, create a new child node on the menu node, called cake menu > you turn, it’s the same way to create conditions!
 
@@ -173,7 +173,7 @@ Specials (/specials)
 
 **Step 3.16.**  It’s the same way to create the rest of two options (an assistant recommends a desserts (specials), and clients make choice).
 
-![Image of Step 3.16](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.16.png)
+![Image of Step 3.16]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.16.png)
 
 **Note:** Don’t make wrong levels. 
 
@@ -185,9 +185,9 @@ Specials (/specials)
 
 **Step 3.19.** Select “pudding finish” node > Wait for reply (on the “The assistant should”) needs to change to Jump on > Select “phone number” node, and click on Respond. 
 
-![Image of Step 3.19(1)](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.19(1).png)
+![Image of Step 3.19(1)]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.19(1).png)
 
-![Image of Step 3.19(2)](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%203.19(2).png)
+![Image of Step 3.19(2)]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.19(2).png)
 
 **Note:** All the end of options node, such as pudding finish node, cake finish node, and specials finish node should be Jump to phone number.
 
@@ -201,7 +201,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 **Step 4.1.** Open Unity > Create a new project, called Dialog understanding Unity > Choose the file location.
 
-![Image of Step 4.1](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%204.1.jpg)
+![Image of Step 4.1]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%204.1.jpg)
 
 
 
@@ -209,13 +209,13 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 **Step 4.3.** File > Building Settings > Select “Universal Windows Platform”> Click Add Open scenes > Target Device >Select “PC” > Build
 
-![Image of Step 4.3](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%204.3.jpg)
+![Image of Step 4.3]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%204.3.jpg)
 
 
 
 **Step 4.4.** Click Edit > Select “Player” > Capabilities > tick the box of Microphone.
 
-![Image of Step 4.4](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%204.4.png)
+![Image of Step 4.4]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%204.4.png)
 
 
 
@@ -227,7 +227,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 **Step 5.2**. Click on WatsonServices on Hierarchy widow, and open the "_scripts" file on Project window. Dialogue Services is the script of DialogueService, and it also links to Watson assistant. Speech Input Service is the script of SpeechInputServices, it links to Speech to Text service, and Speechoutput links to Text to Speech service in IBM Watson, that is applied to create a spoken sound version of the text. Please double click on the three services in Visual studio. 
 
-![Image of Step 5.2](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%205.2.png)
+![Image of Step 5.2]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.2.png)
 
 
 
@@ -245,27 +245,27 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 ·    Washington, DC: https://api.us-east.assistant.watson.cloud.ibm.com
 
-![Image of Step 5.3](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%205.3.png)
+![Image of Step 5.3]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.3.png)
 
 
 
 **Step 5.4.** Go back to Unity > Paste it on your API key to Iam Apikey in the Dialogue Service, and also paste it to the corresponding script. 
 
-![Image of Step 5.4](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%205.4.png)
+![Image of Step 5.4]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.4.png)
 
 
 
 **Step 5.5.** Again, copy the URL > paste it to Service Url, ServiceURL, and ServiceURL (optional) on the script. 
 
-![Image of Step 5.5](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%205.5.png)
+![Image of Step 5.5]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.5.png)
 
 
 
 **Step 5.6.** Launch Watson Assistant > Select the node options on your Watson Assistant > Settings > Click on API Details > copy Assistant ID to Unity and the script.
 
-![Image of Step 5.6(1)](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%205.6(1).png)
+![Image of Step 5.6(1)]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.6(1).png)
 
-![Image of Step 5.6(2)](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%205.6(2).png)
+![Image of Step 5.6(2)]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.6(2).png)
 
 
 
@@ -295,11 +295,11 @@ Service of Speech to Text endpoints by location*
 ​         
 ​         **Step 5.8.** Before playing it, we need to configure your service credentials. Save unity file (Ctrl+S), close Unity > open the location of the Unity file > find ibm_credentials.env, and open it.
 ​         
-​         ![Image of Step 5.8](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%205.8.png)
+​         ![Image of Step 5.8]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.8.png)
 ​         
 ​         **Step 5.9.** Log in IBM Cloud account > select Watson Assistant > Click Service credentials > Click the arrow to view your credential > copy apikey, and past it to ASSISTANT_APIKEY and ASSISTANT_IAM_APIKEY > cope url, and past it to ASSISTANT_URL. Please complete others, and save it.
 ​         
-​         ![Image of Step 5.9](https://raw.githubusercontent.com/Yu713/AR-foundation-tutorials_Pictures/master/dialogue%20understanding/Step%205.9.png)
+​         ![Image of Step 5.9]({{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.9.png)
 ​         
 ​         
 ​         

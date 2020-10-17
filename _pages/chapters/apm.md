@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AR Agile Project Management (in progress)
+title: AR Agile Project Management
 permalink: /chapter/apm/
 categories: chapter
 visualizations:
@@ -9,24 +9,29 @@ visualizations:
 
 # AR Agile Project Management
 
-This chapter gives an overview on agile project management, in particular the agile management of software development for mixed reality environments.
-All needed concepts are introduced.
-To support agile project management in mixed reality, we have set up an experimental mixed reality environment called [VIAProMa](https://github.com/rwth-acis/VIAProMa) (Virtual Immersive Analytics for Project Management).
+This chapter gives an overview on agile project management, in particular the agile management of software development for augmented or mixed reality environments.
+Often, AR developers are not used to agile project management, agile software development methods or the DevOps Tool Chain.
+Moreover, AR developers are not used to working in larger teams.
+If you have to conduct a larger development project and want to use agile methods, this chapter is the right starting point.
+All needed concepts for agile project management are introduced.
+To support agile project management in augmented reality, we have set up an experimental mixed reality environment called [VIAProMa](https://github.com/rwth-acis/VIAProMa) (Virtual Immersive Analytics for Project Management).
 
   ![VIAProMa]({{pathToRoot}}/assets/figures/apm/ViaProMa_logo.png)
 
-VIAProMa is a Collaborative Mixed Reality Visualization Framework for Immersive Analytics.
-In the course of the section, we will use examples and screenshots from the VIAProMa environment.
+VIAProMa is a Collaborative Mixed Reality Visualization Framework for Immersive Analytics. It is developed by a team of developers using agile methods. Therefore, it serves as a demonstrator for this chapter.
+In the course of the chapter, we will use examples and screenshots from the VIAProMa environment.
 
 In the traditional waterfall model of software engineering, the different phases of the software engineering process are followed in a sequential manner, usually without returning to a phase already finished.
 The output of the early phases are usually documents while software is only produced in later phases.
-With the model design errors can be captured before the implementation phase.
+With the model, design errors can be captured before the implementation phase.
 The technical documentation is part of the plan and because of the structured approach, costs can be estimated quite well.
-Customers however find it difficult to state their requirements in an abstract way.
+Customers however, find it difficult to state their requirements in an abstract way.
 The waterfall model does not cater for possibility of changing requirements.
 The waterfall model was modified after a number of issues identified in practice, but in the end, the agile approach became the dominant one.
 
 ## Agile Development Features
+
+The agile development approach was initiated mainly by developers not satisfied with the strict process management tools applied in the traditional waterfall model, leading to overwork, working on documents instead on code, lacking communication with the customer and lacking communication with co-developers.
 
 Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
 
@@ -196,6 +201,25 @@ The three columns have different colours, which can be chosen from the menu.
 - Allows branching and merging
   - Branching: Duplication of code so that modifications can happen in parallel
   - Merging: When bringing together two branches
+
+Source control tools like Git have the option to create different branches.
+Branches are a way of managing different states of the project in parallel.
+When a new branch is created, the project's content, e.g. the code, is duplicated internally.
+Subsequent committed changes are only applied to the currently active branch.
+Branches can be merged into each other.
+This combines the changes which have been applied on both branches.
+The merge operation can be performed automatically and only requires manual intervention if there are merge conflicts.
+Merge conflicts arise if the same content in a file was edited on both branches.
+
+Software projects can structure branches using different git-workflows.
+A popular example is the git-flow workflow {%cite Drie10 %}.
+It consists of a master-branch, a develop-Branch, feature branches, release branches and hotfix-branches.
+
+{% include image.html url="/assets/figures/apm/gitFlowWorkflow.svg" base=pathToRoot description="master, develop and features branches in the git-flow workflow" %}
+
+For Web apps which do not require explicit version releases, a GitHub flow is suitable.
+Feature are developed on different branches.
+If a feature has been finished, a merge request is created, it is reviewed and dicusssed and finally, the branch is merged into the master branch.
   
 ### Continuous Integration
 
@@ -212,6 +236,7 @@ There is even more than that.
 If you ever wondered why you have Facebook app updates multiple times a day, here is the answer.
 
 ### Continuous Delivery and Continuous Deployment
+
 **Continuous practices**, i.e., continuous integration, delivery, and deployment, are the software development industry practices that enable organizations to frequently and reliably release new features and products {% cite SAZh17 %}.
 Continuous Delivery is about removing stress at the *last mile*.
 
@@ -236,9 +261,10 @@ Continuous Delivery is about removing stress at the *last mile*.
 - Break up some of the user stories from the *Product Backlog* to realistic tasks for the *Sprint Backlog*
 - Define/Refine your *Definition of Done*
 - Develop!
-- Finish with the *Sprint Review*
+- The *burndown chart* shows the remaining work in the sprint.
+- Finish with the *sprint review*
   - Talk with the customer
-  - Refine the *Product Backlog* for the next Sprint
+  - Refine the *product backlog* for the next Sprint
  
 # Market Analysis
 
@@ -247,6 +273,7 @@ and  how to be competitive.
 Markets are places where customers who are willing to buy a product or a service can meet the sellers of those products and services. 
 From the view of the sellers, markets are people who are willing to pay. 
 For market analysis, it is important to come up with numbers.
+
 - How much can I charge for a product?
 - How many potential buyers are there?
 - How many potential customers will be interested in my product?
@@ -258,7 +285,8 @@ A market analysis can also include an analysis of the competitors.
 **Market segmentation** is the strategy of dividing broad market into subsets of consumers who have common needs 
 and characteristics.
 Types of market segmentation are:
-- Behavioural 
+
+- Behavioural
   - Knowledge of the product 
   - Attitude
   - Benefits
@@ -287,6 +315,7 @@ See more on [http://www.uxbooth.com/articles/creating-personas/](http://www.uxbo
 
 Analyse your competitors.
 Ask your (potential) users
+
 - Do they have any concerns about the idea?
 - Why they use your services?
 - Key points to focus on:
@@ -303,6 +332,7 @@ Five P‘s of marketing
 
 
 Without customers, your business does not exist!
+
 - Who are the users?
 - How much they will pay?
 - Are there any competitors?
@@ -314,7 +344,17 @@ Students will learn to focus on products not technologies but learn to assess te
 # DevOps
  
 We have a look at the emerging industry DevOps approach. 
-{% cite BWZh15 %} define DevOps as "a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality."
+DevOps is a recent software engineering methodology, its success indicated by growing numbers of supporters. 
+The main idea is to bring developer teams (Dev) and IT operations teams (Ops) closer together for a more efficient process of delivering IT services to end-users, thus striving for quality, including maintenance, from the start.
+
+Bass et al. {% cite BWZh15 %} define DevOps as "a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality." 
+These practices include continuous integration, delivery, and deployment -- the software development industry practices that enable organizations to frequently and reliably release new features and products. 
+Continuous Delivery will help us relieve stress at the last mile. 
+
+The figure shows the essential DevOps steps. 
+DevOps tools thereby support us in the integration of work processes, communication, and collaboration (issue tracking, revision control, continuous integration). 
+
+![Devops (Source: gitlab.com)]({{pathToRoot}}/assets/figures/apm/devops-git.png)
 
 Main question is how to design and develop innovative software artefacts in a large-scale project?
 Observation from industry: A culture of communication between developers and operations
@@ -345,6 +385,14 @@ Open APIs to embed it into apps.
 
 ## DevOpsUse
 
+DevOpsUse is a conceptual extension of the standard DevOps cycle, adding an additional loop for end-user participation regarding innovation, design, and evaluation, paired with immersive analytics support.
+
+We reflect end-user contributions for ‘ideas and needs’, ‘co-design’, ‘feedback from beta-tests’, and better understanding of the user base ‘context’, ‘practical experience’, etc. 
+
+In order to support end-user groups with consumer-friendly web apps for the DevOpsUse methodology, we can draw on a range of tools of the DevOps chain. 
+
+More details on the DevOpsUse methodology and its tools is available on [http://results.learning-layers.eu/](http://results.learning-layers.eu/), with [webcasts](https://goo.gl/6NbU28) for the tools.
+
 ![DevOpsUse]({{pathToRoot}}/assets/figures/apm/DevOpsUse.png)
 
 - Scalable and sustainable methodology for integration
@@ -358,6 +406,7 @@ Open APIs to embed it into apps.
 A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}.
  
 An MVP must have four key elements for achieving product quality
+
 - Functionality 
 - Design
 - Reliability

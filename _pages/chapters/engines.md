@@ -37,11 +37,11 @@ This is the most current version.
 
 
 Developers of AR applications do not have to start from scratch and (re-)implement the complete graphics pipeline and physics simulations.
-Instead, 3D engines like Unity {% cite UnityHome %} or the Unreal Engine {% cite EpicUnreal %} already offer this functionality as a foundation for the development of real-time graphics applications.
+Instead, 3D engines like Unity {% cite Unit20c %} or the Unreal Engine {% cite Epic20 %} already offer this functionality as a foundation for the development of real-time graphics applications.
 
 # Unity
 
-Unity is a real-time graphics engine by Unity Technologies which developers can utilize to create 2D and 3D applications {% cite UnityHome %}.
+Unity is a real-time graphics engine by Unity Technologies which developers can utilize to create 2D and 3D applications {% cite Unit20c %}.
 This means that Unity’s graphics can be adapted to different graphic qualities, performances and visual styles.
 Applications can be deployed on more than 25 platforms, including Android, iOS, Windows Standalone and Universal Windows Platform.
 Unity is available in different pricing levels ranging from a free personal edition to a Pro version with additional support for larger companies.
@@ -102,7 +102,7 @@ Everything in this Assets folder and its subfolders is automatically imported in
 It makes sense to keep the Assets folder organized so that all developers know where resources are stored.
 One recommended way of setting up an Assets folder is to create individual folders for each type of resource, e.g. "Animations", "Models", "Textures", "Scripts", etc.
 
-Some folder names are special since they are treated in a particular way by Unity {% cite UnitySpecialFolders %}.
+Some folder names are special since they are treated in a particular way by Unity {% cite Unit20 %}.
 For instance, a folder called "Plugins" will be searched for C/C++ DLLs which are integrated into Unity.
 Another example is a folder named "Resources".
 Any file which is placed in this folder can be accessed by application scripts using the command ```Resources.Load```.
@@ -158,7 +158,7 @@ In addition to Unity's visual debugging tools, one can also perform traditional 
 
 In order to import a 3D model, its file needs to be placed in Unity's Assets folder.
 After this, it can be created in the 3D scene by dragging and dropping it into the 3D view of the editor.
-Unity supports popular and application independent file formats like .fbx, .dae, .3ds, .dxf, .obj and .skp {%cite UnityFileFormats %}.
+Unity supports popular and application independent file formats like .fbx, .dae, .3ds, .dxf, .obj and .skp {%cite Unit20b %}.
 Additionally, Unity is also capable of reading application-specific files from Autodesk 3ds Max, Autodesk Maya, Blender, Cinema4D, Modo, LightWave and Cheetah3D.
 Both application-independent and application-specific formats enable different workflows for the object import.
 The application-specific format requires less work when the 3D model is modified regularly.

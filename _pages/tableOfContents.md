@@ -6,7 +6,7 @@ permalink: /toc/
 
 {% include autoRelativePath.html %}
 
-- [Preface](/ar-for-eu-book/chapter/preface/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [Preface](/ar-for-eu-book/chapter/preface/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ## Foundational Chapters
 
@@ -22,7 +22,7 @@ permalink: /toc/
 ## Core Chapters
 
 ### Core Technologies
-- [Display Technologies](/ar-for-eu-book/chapter/displaytech/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [Display Technologies](/ar-for-eu-book/chapter/displaytech/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Tracking Technologies](/ar-for-eu-book/chapter/tracking/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [Interaction Technologies](/ar-for-eu-book/chapter/interaction/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Hardware Abstraction Layer](/ar-for-eu-book/chapter/hal/) {% include badge.html base=pathToRoot badgeName="todo" %}
@@ -36,11 +36,12 @@ permalink: /toc/
 - [Interactive Graphics and Sound Design](/ar-for-eu-book/chapter/intdesign/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/spatialMapping/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Spatial Understanding](/ar-for-eu-book/chapter/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
-- [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="outline" %}
-- [Dialogue Understanding](/ar-for-eu-book/chapter/dialogueUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
+- [Dialogue Understanding](/ar-for-eu-book/chapter/dialogue-understanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Collaboration & Sharing](/ar-for-eu-book/chapter/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="complete" %}
+- [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/ci_unity/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### Computer Graphics
 - [3D Modeling & Rendering](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
@@ -63,7 +64,7 @@ permalink: /toc/
 
 ## Advanced Topics
 
-- [AR Agile Project Management](/ar-for-eu-book/chapter/apm/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [AR Agile Project Management](/ar-for-eu-book/chapter/apm/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [AR Game Development, Gamification and Serious Games](/ar-for-eu-book/chapter/game/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 - [AR Applications](/ar-for-eu-book/chapter/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [AR for the Web](/ar-for-eu-book/chapter/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}

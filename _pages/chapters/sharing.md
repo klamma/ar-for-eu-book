@@ -22,7 +22,8 @@ visualizations:
    5. [Synchronizing Data with Observables](#Observables)
    6. [Synchronizing Data with Remote Procedure Calls](#RPCs)
    7. [Some Ideas on How to Proceed](#furtherIdeas)
-4. [Example Application with a Shared Environment: VIAProMa](#VIAProMa)
+4. [Testing on one PC](#Testing)
+5. [Example Application with a Shared Environment: VIAProMa](#VIAProMa)
 
 Synchronous collaboration in Mixed Reality is possible in a shared virtual environment.
 This means that the shown 3D objects are synchronized between the participants and changes are broadcast in real-time.
@@ -35,11 +36,11 @@ A series of common challenges can occur in the implementation of a shared enviro
 
 - **Network traffic**: To synchronize data between participants, messages have to be exchanged over the network.
   With a rising number of participants, the number of messages also rises which increases the network load and the load on any central servers.
-  To reduce the network traffic, developers should aim to minimize the number of sent information.
+  To reduce the network traffic, developers should aim to minimize the number of sent information ([Photon Optimization](https://doc.photonengine.com/en-us/pun/current/gameplay/optimization)).
   For instance, some information can be reconstructed locally from other shared data.
   We will see an example of this with the colouring of game pieces in the tutorial of this chapter.
 - **Unreliable connection**: Packages are not guaranteed to reach their receiver if a client has a poor internet connection.
-  Moreover, the order in which packages are sent does not have to correspond to the order in which packages arrive at the receiver.
+  Moreover, the order in which packages are sent does not have to correspond to the order in which packages arrive at the receiver {% cite ClCl10 %}.
   The networking library has to account for this.
 - **Session & User management**: In an office building not all people want to communicate with every other person at the same time.
   The building is separated into floors and offices so that meetings only contain a limited amount of participants.
@@ -60,7 +61,7 @@ A series of common challenges can occur in the implementation of a shared enviro
   A more advanced solution is to also broadcast the velocity vector of the object.
   With the direction and speed that the object is currently moving, the receiving client can anticipate the next position by extrapolating the object's position along this trajectory.
   When the next package arrives, the position is corrected.
-- **Consistency-throughput**: Latency is the natural enemy of sharing states across devices, preventing keeping states consistent, if the frequency of change and the number of changing nodes becomes too large. Communication delays from frequent state changes further impede the state change updates of the other nodes. "Latency hiding", i.e., precomputing predicted states and sending them right in time for just-in-time, is a way around this, if combined with "self-healing" to take account of "suprise-injected events" {% cite Peitso20 %}.
+- **Consistency-throughput**: Latency is the natural enemy of sharing states across devices, preventing keeping states consistent, if the frequency of change and the number of changing nodes becomes too large. Communication delays from frequent state changes further impede the state change updates of the other nodes. "Latency hiding", i.e., precomputing predicted states and sending them right in time for just-in-time, is a way around this, if combined with "self-healing" to take account of "suprise-injected events" {% cite PeMi20 %}.
 
 With poor connection, networked applications can show a series of common effects.
 Developers need to be aware of them and know how they are produced.
@@ -96,7 +97,7 @@ Therefore, developers need to look at other networking solutions.
 
 #### Photon
 
-Photon is one alternative to realize collaborative applications in Unity.
+[Photon](https://www.photonengine.com/pun) is one alternative to realize collaborative applications in Unity.
 It is a commercial product suite by Exit Games which provides a free plan for up to 20 concurrent users and up to 500 messages per second.
 The sharing functionality can be realized using the Photon PUN2 library.
 Moreover, Photon provides further libraries for collaboration, e.g. to realize a text chat or a voice chat.
@@ -300,7 +301,10 @@ We have finished the project setup and can now start with setting up the pieces 
     Change its shader to the *Mixed Reality Toolkit > Standard* shader.
     Apply the material to both cylinder objects by dragging and dropping it onto them.
 
-14. Create a Prefab from the stacked pieces.
+14. Add a *PhotonView* component to the *GamePiece* GameObject.
+    This component will later make sure that playing piece can be synchronized.
+
+15. Create a Prefab from the stacked pieces.
     To do this, create a new folder in the assets folder called *Prefabs*.
     We want to create instances of the prefab later using the sharing library.
     Therefore, we need another folder inside of the *Prefab* folder which must be called *Resources*.
@@ -310,7 +314,7 @@ We have finished the project setup and can now start with setting up the pieces 
 
     ![Create Game Piece Prefab]({{pathToRoot}}/assets/figures/sharing/sharingExercise/GamePiecePrefab.png)
 
-15. The prefab is saved on the hard drive and you can delete the *GamePiece* GameObject in the scene.
+16. The prefab is saved on the hard drive and you can delete the *GamePiece* GameObject in the scene.
     Select it and press the delete key on the keyboard.
 
 #### 3 - Setting up the Shared Environment {#SharedEnvironment}
@@ -660,6 +664,7 @@ In the next few steps, we will change this so that the application automatically
     We do not actually need to synchronize the colour itself because we can simply reconstruct it from data that we already get.
     If a networked object is created in a scene, the player who created the object automatically becomes its owner.
     The owner can be read from the *PhotonView* component.
+    So, make sure that there is a *PhotonView* component on the *GamePiece* prefab.
     Create a new script `PieceInitializer` and attach it to the *GamePiece* prefab.
 11. Paste the following code into the `PieceInitializer` script:
 
@@ -879,6 +884,43 @@ They are not covered in this tutorial since they require a lot more implementati
   In code, the ownership can be transferred, e.g. if a player starts moving the stone.
 - **Avatars**: The same way that we synchronized the playing stones, we can also synchronize the position and rotation of the head-mounted display.
   If we connect this information with some avatar representation, we can visualize remote users in the shared environment.
+
+### Testing on one PC
+
+Of course, collaborative applications can be tested on two PCs or devices by running the application on each device.
+However, the shared application can also be tested directly on one development PC.
+We need to overcome the problem that a Unity project can only be opened by one editor instance at a time.
+It is possible to open multiple Unity instances but they cannot open the same project simultaneously.
+To solve this, we can duplicate the entire project's folder to a different location on disk.
+After that, you can open the duplicated folder in Unity as a separate project.
+In the Unity Hub this can be done by selecting "Add" and by navigating to the duplicated folder.
+You should now have two instances of Unity with the original project and a copy of it.
+The two editors can be placed next to each other on the screen or on separate screens.
+If both editors are in Play Mode, one can see the shared application states side-by-side.
+With this approach, you need to make sure that you do not confuse the two project copies.
+Any changes that you make in one editor need to be duplicated to the copied project manually.
+
+There are several options to duplicate the project and to copy changes between the two versions.
+You can manually copy the files from one instance to the other.
+Copying an entire Unity project can take quite long as it contains many small cache files.
+You can shorten the copy-time by only copying selected files.
+Intially, you only need to copy the folders *Assets*, *Packages* and *ProjectSettings*.
+All other folders, e.g. *Library* or *obj* can be reconstructed by Unity.
+
+Alternatively, you can set up a Git repository for the project.
+Use a [.gitignore-file for Unity](https://github.com/github/gitignore/blob/master/Unity.gitignore) so that only necessary files are stored.
+Set up a remote repository, e.g. on GitHub or Gitlab.
+After that, commit the current status and push it to the remote repository.
+Clone the remote repository into another folder to obtain the copy.
+Once you make changes to ony of the two copies, commit them and push the changes to the remote repository.
+In the other project instance, you can pull the changes.
+This appraoch using Git has the advantage that you can synchronize the two project instances by a few Git commands.
+Since Git only uploads and downloads the changes, this process is quicker than the approach where files are manually copied.
+
+If you are using this setup, it is generally advisable to keep the two project instances separated.
+You should always edit the same project.
+The other project should just be a read-only copy that is for testing.
+If you view the projects side-by-side, you should always assign the same side for the development project so that you do not accidentally edit both copies.
 
 ### Example Application for Sharing: VIAProMa {#VIAProMa}
 
