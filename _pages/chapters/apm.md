@@ -9,6 +9,9 @@ visualizations:
 
 # Augmented Reality Agile Project Management
 
+{%cite CaMi92 %}
+{%cite Drie10 %}
+
 This chapter gives an overview on agile project management, in particular the agile management of software development for augmented or mixed reality environments.
 Often, AR developers are not used to agile project management, agile software development methods or the DevOps Tool Chain.
 Moreover, AR developers are not used to working in larger teams.
