@@ -13,7 +13,7 @@ visualizations:
 In this chapter, we give an introduction to the field of Wearable Computing, the practice of inventing, designing, building, or using body-worn computational and sensory devices. We describe both early examples of wearable computers and modern smart accessories, head-mounted displays, and e-textiles. We discuss the functions and applications of wearable computers, design principles, and the underlying materials and technologies. We recommend prototyping techniques and platforms and follow by the technologies that can be used for more serious production. We conclude the lecture by introducing two design and evaluation methodologies that can help to improve the user experience of wearable prototypes and products.
 
 ## Contents
-- [Part 1. 3D scanning](#part-1-introduction)
+- [Part 1. Introduction](#part-1-introduction)
 - [Part 2. Rapid Prototyping](#part-2-rapid-prototyping)
 - [Part 3. Production](#part-3-production)
 - [Part 4. Design and Evaluation](#part-4-design-and-evaluation)
