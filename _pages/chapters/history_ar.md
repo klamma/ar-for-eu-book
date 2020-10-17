@@ -8,10 +8,13 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-# History of AR
 
 Different sources trace the history of augmented reality back to the beginning of the 20th century, but it can be said that seminal work was done in the 1960s by Ivan Sutherlands and others.
-The term augmented reality however was coined by Thomas P. Caudellin the 80s according to [^1] (Lee, Kangdon (March 2012). "Augmented Reality in Education and Training" (PDF). Techtrends: Linking Research & Practice to Improve Learning. 56 (2).)
+The term augmented reality however was coined by Thomas P. Caudellin the 80s {%cite CaMi92 %}
+([PDF](https://tweakimg.net/files/upload/329676148-Augmented-Reality-An-Application-of-Heads-Up-Display-Technology-to-Manual-Manufacturing-Processes.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cgLHSXpkJ1o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 # Ancient precursors
 
@@ -163,9 +166,19 @@ and depth mapping, a breakthrough in smart glasses technology.
 
 ![Hololens (2015)]({{pathToRoot}}/assets/figures/history/2015b.jpg)
 
-**In 2016**, the Magic Leap One is unveiled, a competitor to the Hololens. 
+**In 2016**, the Magic Leap One is unveiled, a competitor to the Hololens.
+
+The [Magic Leap One](https://www.magicleap.com/en-us/magic-leap-1) AR glasses were released by Magic Leap on 8 August 2018. The delivery was restricted to the US. The glasses are relatively lightweight, achieved by a separate battery unit connected to the glasses by a wire. An original wireless 6DoF controller is included for comfortable navigation and interaction.
+
+[Lumin OS](https://developer.magicleap.com/en-us/learn/guides/lumin-os-overview) is a custom operating system with a Linux-based kernel designed for spatial computing and Magic Leap One.
+[Lumin SDK](https://developer.magicleap.com/en-us/learn/guides/lumin-sdk-overview) supports Unity.
+[Magic Leap XR Plugin](https://docs.unity3d.com/Manual/com.unity.xr.magicleap.html) provides rendering and spatial mapping support for Magic Leap.
+
+![Magic Leap (2016)]({{pathToRoot}}/assets/figures/history/2016a.jpg "Source https://commons.wikimedia.org/wiki/File:Magic_Leap_No_-_2.jpg") 
 
 **In 2016**, the AWE media platform is released as the first and only web-based immersive VR and AR.
+
+[AWE media website](https://awe.media/)
 
 **In 2017**, Apple's ARKit is launched, the Augmented Reality platform for IOS devices. 
 
