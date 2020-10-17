@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Preface
-permalink: /chapter/preface/
+permalink: /chapter/intro/preface/
 categories: chapter
 visualizations:
 ---

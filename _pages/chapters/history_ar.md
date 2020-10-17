@@ -1,7 +1,7 @@
 ---
 layout: page
 title: History of Augmented Reality
-permalink: /chapter/historyar/
+permalink: /chapter/intro/historyar/
 categories: chapter
 visualizations:
 ---

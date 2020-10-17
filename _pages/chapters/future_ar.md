@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Future of Augmented Reality
-permalink: /chapter/futurear/
+permalink: /chapter/intro/futurear/
 categories: chapter
 visualizations:
 ---

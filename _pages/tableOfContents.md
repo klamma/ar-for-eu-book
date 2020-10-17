@@ -8,19 +8,19 @@ permalink: /toc/
 
 ## Introduction
 
-- [Preface](/ar-for-eu-book/chapter/preface/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- [History of AR](/ar-for-eu-book/chapter/historyar/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- [Future of AR](/ar-for-eu-book/chapter/futurear/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Preface](/ar-for-eu-book/chapter/intro/preface/) {% include badge.html base=pathToRoot badgeName="complete" %}
+- [History of AR](/ar-for-eu-book/chapter/intro/historyar/) {% include badge.html base=pathToRoot badgeName="complete" %}
+- [Future of AR](/ar-for-eu-book/chapter/intro/futurear/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
 ## Foundations
 
 ### Design
 
-- [Perceptual Foundations of AR](/ar-for-eu-book/chapter/perceptionar/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-- [Human Computer Interaction](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Perceptual Foundations of AR](/ar-for-eu-book/chapter/design/perceptionar/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+- [Human Computer Interaction](/ar-for-eu-book/chapter/design/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - User Centered Design
-  - [Evaluation Guide](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
-  - [Systems Usability Scale](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
+  - [Evaluation Guide](/ar-for-eu-book/chapter/design/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
+  - [Systems Usability Scale](/ar-for-eu-book/chapter/design/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
 ### Mathematical Foundations
 
@@ -39,8 +39,8 @@ permalink: /toc/
 ### Computer Graphics
 
 - Introduction to Computer Graphics
-  - [Geometry](/ar-for-eu-book/chapter/modeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
-  - [Rendering Pipeline](/ar-for-eu-book/chapter/cg/) {% include badge.html base=pathToRoot badgeName="outline" %}
+  - [Geometry](/ar-for-eu-book/chapter/cg/geometry/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+  - [Rendering Pipeline](/ar-for-eu-book/chapter/cg/pipeline) {% include badge.html base=pathToRoot badgeName="outline" %}
 - [Spatial Audio](/ar-for-eu-book/chapter/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %}
 
 ### Computer Vision
@@ -113,6 +113,7 @@ permalink: /toc/
 ### Advanced Topics & Outlook
 
 - [Analysis of Existing AR Applications](/ar-for-eu-book/chapter/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Applications of AR](/ar-for-eu-book/chapter/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [3D Printing](/ar-for-eu-book/chapter/printing/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Internet of Things](/ar-for-eu-book/chapter/iot/) {% include badge.html base=pathToRoot badgeName="todo" %}
   - [Sensors and Signal Processing](/ar-for-eu-book/chapter/sensors/) {% include badge.html base=pathToRoot badgeName="todo" %}
