@@ -9,7 +9,6 @@ visualizations:
 
 # Augmented Reality Agile Project Management
 
-
 This chapter gives an overview on agile project management, in particular the agile management of software development for augmented or mixed reality environments.
 Often, AR developers are not used to agile project management, agile software development methods or the DevOps Tool Chain.
 Moreover, AR developers are not used to working in larger teams.
@@ -19,7 +18,8 @@ To support agile project management in augmented reality, we have set up an expe
 
   ![VIAProMa]({{pathToRoot}}/assets/figures/apm/ViaProMa_logo.png)
 
-VIAProMa is a Collaborative Mixed Reality Visualization Framework for Immersive Analytics. It is developed by a team of developers using agile methods. Therefore, it serves as a demonstrator for this chapter.
+VIAProMa is a **Collaborative Mixed Reality Visualization Framework for Immersive Analytics**. It is created by a team of developers using agile methods.
+Therefore, it serves as a demonstrator for this chapter.
 In the course of the chapter, we will use examples and screenshots from the VIAProMa environment.
 
 In the traditional waterfall model of software engineering, the different phases of the software engineering process are followed in a sequential manner, usually without returning to a phase already finished.
@@ -33,7 +33,7 @@ The waterfall model was modified after a number of issues identified in practice
 ## Agile Development Manifesto
 
 The agile development approach was initiated mainly by developers not satisfied with the strict process management tools applied in the traditional waterfall model, leading to overwork, working on documents instead on code, lacking communication with the customer and lacking communication with co-developers.
-In this spirit, the agile developement approach focusses on avoiding overwork, improve communicaton within the developer team and with the customer as well as on coding.
+In this spirit, the agile development approach focusses on avoiding overwork, improve communication within the developer team and with the customer as well as on coding.
 
 Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
 
@@ -47,10 +47,10 @@ Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
 
 Meanwhile to [agile manifesto](https://agilemanifesto.org/) was signed by thousands of people.
 
-Critics is often coming from engineers working on very large physical engineering projects like space rockets, aircrafts, ships or cars.
+Critics is often coming from engineers working on very large physical engineering projects like space rockets, air crafts, ships or cars.
 Indeed, software projects, even large ones, are more open to flexibility.
-Since also physical engineering projects have lare software parts in recent years, agility is slowly coming also to those projects.
-Still, culturals difference are challenging team communication in many ways, as we will also see in the case of DevOps, where developers need to communicate with IT operations.
+Since also physical engineering projects have large software parts in recent years, agility is slowly coming also to those projects.
+Still, cultural difference are challenging team communication in many ways, as we will also see in the case of DevOps, where developers need to communicate with IT operations.
 
 ## Agile Development Features
 
@@ -61,12 +61,11 @@ Because of the small, incremental process steps and the agility of the process, 
 Projects with agile methods have a higher probability of success.
 Also empirically proven, a recent report says that over 94% of companies today develop software with agile methods.
 
-
 - Emphasizes incremental updates
 - Small design steps by frequent interactions with customers
 - Delivers working software frequently
 - Motivated people produce better results
-- Projects with agile methods have higher probability to end successfully 
+- Projects with agile methods have higher probability to end successfully
 
 ## Scrum
 
@@ -112,9 +111,9 @@ Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
   - Self-reflection within team
   - Moderated and organized by Scrum master
 Sprint activities are designed for full time development teams in companies.
-How much of the sprint activities can be done in the context of a lab or a course depends very much on the schedules of the students. 
+How much of the sprint activities can be done in the context of a lab or a course depends very much on the schedules of the students.
 If there is no opportunity to do a 15 minutes meeting in the morning, it may be replaced by an online meeting, for example.
- 
+
 ## Sprint Artifacts
 
 - Product Backlog
@@ -142,12 +141,10 @@ A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
 Task boards are common in agile software development to organize work in sprints.
 They give an easy overview on the progress reached in the sprint.
 Task boards can be physical boards in an office,
-when all developers are in the same place or a virtual board, which is typical for distributed development like in open source software
-development.
-Some developer teams do both physical and virtual boards, e.g. physical ones for local sprints and virtual ones for 
-the global process.
+when all developers are in the same place or a virtual board, which is typical for distributed development like in open source software development.
+Some developer teams do both physical and virtual boards, e.g. physical ones for local sprints and virtual ones for the global process.
 task boards consist of columns where tasks usually shift from left to right to visualize the grade of completion from ToDo to Done.
-Typical columns for a sprint are: 
+Typical columns for a sprint are:
 
 - Product Backlog
   The User Stories
@@ -237,7 +234,7 @@ If a feature has been finished, a merge request is created, it is reviewed and d
   - Jenkins: Open source self-hosted
   - Travis CI: Hosted solution
   
-Integration Hell: Integration problems because of missing early testing.
+**Integration Hell**: Integration problems because of missing early testing.
 There is even more than that.
 If you ever wondered why you have Facebook app updates multiple times a day, here is the answer.
 
@@ -246,7 +243,7 @@ If you ever wondered why you have Facebook app updates multiple times a day, her
 **Continuous practices**, i.e., continuous integration, delivery, and deployment, are the software development industry practices that enable organizations to frequently and reliably release new features and products {% cite SAZh17 %}.
 Continuous Delivery is about removing stress at the *last mile*.
 
-- Continuous Integration is just the first steps
+- Continuous Integration is just the first step
 - Continuous Delivery
   - Software always production ready
   - Releasing automatically at the end of development and test pipeline
@@ -255,15 +252,15 @@ Continuous Delivery is about removing stress at the *last mile*.
   - Post deploy tests to ensure integrity with service landscape
   
 ## Scrum in a Nutshell
- 
+
 ### At the Beginning
- 
+
 - Chose the *Scrum Master* of your team
 - Clarify the role of the *Product Owner* with your customer: **Make them aware of their role!**
 - Talk with your customer and write down *User Stories*
- 
+
 ### Per Sprint
- 
+
 - Break up some of the user stories from the *Product Backlog* to realistic tasks for the *Sprint Backlog*
 - Define/Refine your *Definition of Done*
 - Develop!
@@ -271,20 +268,20 @@ Continuous Delivery is about removing stress at the *last mile*.
 - Finish with the *sprint review*
   - Talk with the customer
   - Refine the *product backlog* for the next Sprint
- 
+
 ## Market Analysis
 
-**Market analysis** is the process of analyzing data to help you understand which products and services are in demand, 
+**Market analysis** is the process of analyzing data to help you understand which products and services are in demand,
 and  how to be competitive.
-Markets are places where customers who are willing to buy a product or a service can meet the sellers of those products and services. 
-From the view of the sellers, markets are people who are willing to pay. 
+Markets are places where customers who are willing to buy a product or a service can meet the sellers of those products and services.
+From the view of the sellers, markets are people who are willing to pay.
 For market analysis, it is important to come up with numbers.
 
 - How much can I charge for a product?
 - How many potential buyers are there?
 - How many potential customers will be interested in my product?
-A market analysis can also include an analysis of the competitors. 
-- Who are the companies offering a similar product or a service? 
+A market analysis can also include an analysis of the competitors.
+- Who are the companies offering a similar product or a service?
 - What do they charge for their product?
 - What are their product features?
 
@@ -311,7 +308,7 @@ How to best segment a market?
 - Choose a segment that is accessible to you
   - University, friends, colleagues
   - Short selling cycle
-  - In B2B – contact direct decision makers 
+  - In B2B – contact direct decision makers
   - Segments with less competitors
 
 Understanding a user helps you to decide what product features to build next.
@@ -336,7 +333,6 @@ Five P‘s of marketing
 | :-----: | :---: | :-------: | :---: | :----: |
 | Do you have features others do not have | Same value but lower price | Unique channels | Unique place to sell the product | Strength of the team |
 
-
 Without customers, your business does not exist!
 
 - Who are the users?
@@ -344,21 +340,21 @@ Without customers, your business does not exist!
 - Are there any competitors?
 - Why your service is better?
 
-We advise to start every project with both a market study and a technical feasibility study. 
+We advise to start every project with both a market study and a technical feasibility study.
 Students will learn to focus on products not technologies but learn to assess technical risks of the development process.
 
 ## DevOps
- 
-We have a look at the emerging industry DevOps approach. 
-DevOps is a recent software engineering methodology, its success indicated by growing numbers of supporters. 
+
+We have a look at the emerging industry DevOps approach.
+DevOps is a recent software engineering methodology, its success indicated by growing numbers of supporters.
 The main idea is to bring developer teams (Dev) and IT operations teams (Ops) closer together for a more efficient process of delivering IT services to end-users, thus striving for quality, including maintenance, from the start.
 
-Bass et al. {% cite BWZh15 %} define DevOps as "a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality." 
-These practices include continuous integration, delivery, and deployment -- the software development industry practices that enable organizations to frequently and reliably release new features and products. 
-Continuous Delivery will help us relieve stress at the last mile. 
+Bass et al. {% cite BWZh15 %} define DevOps as "a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality."
+These practices include continuous integration, delivery, and deployment -- the software development industry practices that enable organizations to frequently and reliably release new features and products.
+Continuous Delivery will help us relieve stress at the last mile.
 
-The figure shows the essential DevOps steps. 
-DevOps tools thereby support us in the integration of work processes, communication, and collaboration (issue tracking, revision control, continuous integration). 
+The figure shows the essential DevOps steps.
+DevOps tools thereby support us in the integration of work processes, communication, and collaboration (issue tracking, revision control, continuous integration).
 
 ![Devops (Source: gitlab.com)]({{pathToRoot}}/assets/figures/apm/devops-git.png)
 
@@ -370,7 +366,7 @@ Observation from industry: A culture of communication between developers and ope
 | New features       | Stability                    |
 | Specific tools     | Managing systems             |
 | Needs to work fast | Need to keep systems running |
- 
+
 ## DevOps Toolchain
 
 A toolchain is a set of tools used for covering all DevOps categories.
@@ -380,7 +376,7 @@ Agile and DevOps serve complementary roles: rapidly producing software artifacts
 
 ## Requirements Engineering
 
-What is a requirement? 
+What is a requirement?
 
 What is requirements engineering?
 
@@ -393,9 +389,9 @@ Open APIs to embed it into apps.
 
 DevOpsUse is a conceptual extension of the standard DevOps cycle, adding an additional loop for end-user participation regarding innovation, design, and evaluation, paired with immersive analytics support.
 
-We reflect end-user contributions for ‘ideas and needs’, ‘co-design’, ‘feedback from beta-tests’, and better understanding of the user base ‘context’, ‘practical experience’, etc. 
+We reflect end-user contributions for ‘ideas and needs’, ‘co-design’, ‘feedback from beta-tests’, and better understanding of the user base ‘context’, ‘practical experience’, etc.
 
-In order to support end-user groups with consumer-friendly web apps for the DevOpsUse methodology, we can draw on a range of tools of the DevOps chain. 
+In order to support end-user groups with consumer-friendly web apps for the DevOpsUse methodology, we can draw on a range of tools of the DevOps chain.
 
 More details on the DevOpsUse methodology and its tools is available on [http://results.learning-layers.eu/](http://results.learning-layers.eu/), with [webcasts](https://goo.gl/6NbU28) for the tools.
 
@@ -410,10 +406,10 @@ More details on the DevOpsUse methodology and its tools is available on [http://
 ## Minimal Viable Product (MVP)
 
 A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}.
- 
+
 An MVP must have four key elements for achieving product quality
 
-- Functionality 
+- Functionality
 - Design
 - Reliability
 - Usability
@@ -427,11 +423,15 @@ It has enough of the four key elements that people are willing to use or to buy 
 - You know what Taskboards are
 - You will look into a Code Style Guidelines
 - You already knew about source control systems
-- And finally you probably know what Continuous Integration is good for
+- You probably know what Continuous Integration is good for
+- You learned about markets
+- You know for what DevOps stands
+- You know some DevOps tools
+- You know what makes a minimal viable product
 
 ## Templates and Examples for your own Mixed Reality Classes
 
-### Review Specifications 
+### Review Specifications
 
 The following specs are for a 12-week course on Mixed Reality with teams of 4-6 people working on a prototype.
 Four reviews are planned for the course, so that every three weeks there can be a review.
@@ -517,5 +517,4 @@ Also provide sufficient API/code documentation and an end-user guide.
 
 ## Instructions for Installing VIAProMa
 
-Instructions for installing VIAProMa can be found [here](https://github.com/rwth-acis/VIAProMa). 
-
+Instructions for installing VIAProMa can be found [here](https://github.com/rwth-acis/VIAProMa).
