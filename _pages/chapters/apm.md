@@ -69,7 +69,9 @@ Also empirically proven, a recent report says that over 94% of companies today d
 
 ## Scrum
 
-Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
+Scrum is one way to implement agile software engineering methods.
+However, it is not identical with agile software development.
+Official documentation can be found in [https://scrumguides.org/](https://scrumguides.org/)
 
 - Scrum accepts that the development process cannot be foreseen
 - Scrum does not reduce complexity but structures it into chunks
@@ -110,6 +112,7 @@ Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
 - Sprint retrospective
   - Self-reflection within team
   - Moderated and organized by Scrum master
+
 Sprint activities are designed for full time development teams in companies.
 How much of the sprint activities can be done in the context of a lab or a course depends very much on the schedules of the students.
 If there is no opportunity to do a 15 minutes meeting in the morning, it may be replaced by an online meeting, for example.
@@ -165,6 +168,8 @@ The three columns have different colours, which can be chosen from the menu.
 
 ## Definition of Done
 
+The **Definition of Done** is often confused with the **Project Backlog**. However, it is a collection of quality criteria applied in that project.
+
 - All the quality criteria
   - Code Style Guides
   - Code Reviews (who, how, ...)
@@ -172,7 +177,7 @@ The three columns have different colours, which can be chosen from the menu.
   - Continuous Integration
   - Test Coverage
   - Documentation
- 
+
 This is your first user story: *"As a developer, I want to settle the Definition of Done to achieve a better overall quality of our software."*
 
 ### Code Style Guides
@@ -194,7 +199,7 @@ This is your first user story: *"As a developer, I want to settle the Definition
 
 ### Source Control
 
-- Central code hosting and revision control system 
+- Central code hosting and revision control system
   - What file changed?
   - Who made changes?
   - When were the changes done?
@@ -205,7 +210,7 @@ This is your first user story: *"As a developer, I want to settle the Definition
   - Branching: Duplication of code so that modifications can happen in parallel
   - Merging: When bringing together two branches
 
-Source control tools like Git have the option to create different branches.
+**Source control** tools like Git have the option to create different branches.
 Branches are a way of managing different states of the project in parallel.
 When a new branch is created, the project's content, e.g. the code, is duplicated internally.
 Subsequent committed changes are only applied to the currently active branch.
@@ -222,7 +227,7 @@ It consists of a master-branch, a develop-Branch, feature branches, release bran
 
 For Web apps which do not require explicit version releases, a GitHub flow is suitable.
 Feature are developed on different branches.
-If a feature has been finished, a merge request is created, it is reviewed and dicusssed and finally, the branch is merged into the master branch.
+If a feature has been finished, a merge request is created, it is reviewed and discussed and finally, the branch is merged into the master branch.
   
 ### Continuous Integration
 
