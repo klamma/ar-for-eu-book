@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Speech Interaction
-permalink: /chapter/speech/
+permalink: /chapter/development/unity/mrtk/speech/
 categories: chapter
 visualizations:
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Configuring Windows for Development with Hololens (complete)
-permalink: /chapter/holotoolkit/
+title: Configuring Windows for Development with Hololens
+permalink: /chapter/development/unity/mrtk/configure/
 categories: chapter
 visualizations:
 ---

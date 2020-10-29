@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Dialogue Understanding
-permalink: /chapter/dialogue-understanding/
+permalink: /chapter/development/unity/dialogue-understanding/
 categories: chapter
 visualizations:
 ---

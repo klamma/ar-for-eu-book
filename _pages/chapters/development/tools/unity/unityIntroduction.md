@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Unity (complete) / Unreal Engine
-permalink: /chapter/engines/
+title: Unity
+permalink: /chapter/development/unity/introduction
 categories: chapter
 visualizations:
 ---

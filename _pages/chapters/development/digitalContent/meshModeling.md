@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3D Modeling
-permalink: /chapter/digitalContent/modeling/
+permalink: /chapter/digitalContent/meshModeling/
 categories: chapter
 visualizations:
 ---

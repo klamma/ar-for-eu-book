@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Spatial Understanding
-permalink: /chapter/spatialUnderstanding/
+permalink: /chapter/development/unity/mrtk/spatialUnderstanding/
 categories: chapter
 visualizations:
 ---

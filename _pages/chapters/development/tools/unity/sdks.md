@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AR SDKs (started)
-permalink: /chapter/arsdk/
+title: AR SDKs
+permalink: /chapter/development/unity/sdks/
 categories: chapter
 visualizations:
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Spatial Mapping, Gaze, and Gestures
-permalink: /chapter/spatialMapping/
+permalink: /chapter/development/unity/mrtk/mapGazeGesture/
 categories: chapter
 visualizations:
 ---

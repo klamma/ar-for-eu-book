@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Performance Profiling
-permalink: /chapter/performance/
+permalink: /chapter/development/unity/performance/
 categories: chapter
 visualizations:
 ---

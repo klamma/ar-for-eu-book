@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 3D Scanning and Animation
-permalink: /chapter/3dscanning-animation/
+title: 3D Scanning and Animation Tutorial
+permalink: /chapter/digitalContent/3dscanningAnimationTutorial/
 categories: chapter
 visualizations:
 ---

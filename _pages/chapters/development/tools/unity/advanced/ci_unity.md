@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Continuous Integration & Unit Tests
-permalink: /chapter/ci_unity/
+permalink: /chapter/development/unity/ci_unity/
 categories: chapter
 visualizations:
 ---

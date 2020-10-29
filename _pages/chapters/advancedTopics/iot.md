@@ -1,13 +1,10 @@
 ---
 layout: page
 title: Internet of Things, Robots and Wearables
-permalink: /chapter/iot/
+permalink: /chapter/advanced/iot/
 categories: chapter
 visualizations:
 ---
-
-# Internet of Things, Robots and Wearables
-
 
 ## Internet of Things
 

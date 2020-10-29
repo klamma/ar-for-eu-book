@@ -1,9 +1,7 @@
 ---
 layout: page
 title: Sensors and Signal Processing
-permalink: /chapter/sensors/
+permalink: /chapter/advanced/sensors/
 categories: chapter
 visualizations:
 ---
-
-# Sensors and Signal Processing

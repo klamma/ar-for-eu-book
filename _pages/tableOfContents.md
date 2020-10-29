@@ -73,7 +73,7 @@ permalink: /toc/
 
 ### 3.3 AR Application Design
 
-1. [Wearable Interaction](/ar-for-eu-book/chapter/development/appDesign/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="todo" %}
+1. [Wearable Interaction](/ar-for-eu-book/chapter/development/appDesign/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="complete" %}
 <!-- - Sound Design {% include badge.html base=pathToRoot badgeName="todo" %} -->
 2. [Gamification](/ar-for-eu-book/chapter/development/appDesign/gamification/) {% include badge.html base=pathToRoot badgeName="complete" %}
 <!-- - Serious Games {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
@@ -81,41 +81,40 @@ permalink: /toc/
 ### 3.4 Development Tools and Libraries
 
 1. Unity
-   1. [Introduction to Unity](/ar-for-eu-book/chapter/engines/) {% include badge.html base=pathToRoot badgeName="complete" %}
-   2. [Overview of AR SDKs for Unity](/ar-for-eu-book/chapter/arsdk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-   3. [Mixed Reality Toolkit](/ar-for-eu-book/chapter/arsdk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-      1. [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/holotoolkit/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      2. [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/spatialMapping/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      3. [Spatial Understanding](/ar-for-eu-book/chapter/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
-      4. [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   1. [Introduction to Unity](/ar-for-eu-book/chapter/development/unity/introduction/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Overview of AR SDKs for Unity](/ar-for-eu-book/chapter/development/unity/sdks/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+   3. [Mixed Reality Toolkit](/ar-for-eu-book/chapter/development/unity/mrtk/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+      1. [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/development/unity/mrtk/configure/) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/development/unity/mrtk/mapGazeGesture/) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [Spatial Understanding](/ar-for-eu-book/chapter/development/unity/mrtk/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
+      4. [Speech Interaction](/ar-for-eu-book/chapter/development/unity/mrtk/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
   <!-- - Vuforia {% include badge.html base=pathToRoot badgeName="todo" %} -->
   4. Advanced Unity Techniques
-      1. [Dialogue Understanding](/ar-for-eu-book/chapter/dialogue-understanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      2. [Performance Profiling](/ar-for-eu-book/chapter/performance/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      3. [Collaboration & Sharing](/ar-for-eu-book/chapter/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      4. [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/ci_unity/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+      1. [Dialogue Understanding](/ar-for-eu-book/chapter/development/unity/dialogue-understanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [Performance Profiling](/ar-for-eu-book/chapter/development/unity/performance/) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [Collaboration & Sharing](/ar-for-eu-book/chapter/development/unity/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
+      4. [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/development/unity/ci_unity/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 <!-- - Unreal Engine -->
 <!--  - Basics of Unreal Engine {% include badge.html base=pathToRoot badgeName="todo" %} -->
 <!--  - Hololens Development with Unreal {% include badge.html base=pathToRoot badgeName="todo" %} -->
-2. [A-Frame](/ar-for-eu-book/chapter/web/) {% include badge.html base=pathToRoot badgeName="complete" %}
+<!-- 2. A-Frame {% include badge.html base=pathToRoot badgeName="complete" %} -->
 
 ### 3.5 Digital Content Creation
 
 1. 3D Modeling
-   1. [Mesh-based 3D Modeling](/ar-for-eu-book/chapter/digitalContent/modeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   1. [Mesh-based 3D Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [Texturing](/ar-for-eu-book/chapter/digitalContent/texturing/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [UV Unwrapping](/ar-for-eu-book/chapter/digitalContent/texturing#UV) {% include badge.html base=pathToRoot badgeName="complete" %}
    2. [Texture Painting](/ar-for-eu-book/chapter/digitalContent/texturing#TexturePainting) {% include badge.html base=pathToRoot badgeName="complete" %}
    3. [Texture Baking](/ar-for-eu-book/chapter/digitalContent/texturing#TextureBaking) {% include badge.html base=pathToRoot badgeName="complete" %}
-3. [3D Scanning](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="complete" %}
-4. [Animation](/ar-for-eu-book/chapter/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="complete" %}
+3. [3D Scanning & Animation Tutorial](/ar-for-eu-book/chapter/digitalContent/3dscanningAnimationTutorial/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ## 4 Advanced Topics & Outlook
 
-1. [Analysis of Existing AR Applications](/ar-for-eu-book/chapter/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
-2. [Applications of AR](/ar-for-eu-book/chapter/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
-3. [3D Printing](/ar-for-eu-book/chapter/printing/) {% include badge.html base=pathToRoot badgeName="todo" %}
-4. [Internet of Things](/ar-for-eu-book/chapter/iot/) {% include badge.html base=pathToRoot badgeName="todo" %}
-   1. [Sensors and Signal Processing](/ar-for-eu-book/chapter/sensors/) {% include badge.html base=pathToRoot badgeName="todo" %}
-   2. [Sensor Fusion](/ar-for-eu-book/chapter/sf/) {% include badge.html base=pathToRoot badgeName="todo" %}
-5. [Careers in AR](/ar-for-eu-book/chapter/careers/) {% include badge.html base=pathToRoot badgeName="todo" %}
+1. [Analysis of Existing AR Applications](/ar-for-eu-book/chapter/advanced/appAnalysis/) {% include badge.html base=pathToRoot badgeName="todo" %}
+2. [Applications of AR](/ar-for-eu-book/chapter/advanced/apps/) {% include badge.html base=pathToRoot badgeName="todo" %}
+3. [3D Printing](/ar-for-eu-book/chapter/advanced/3dprinting/) {% include badge.html base=pathToRoot badgeName="todo" %}
+4. [Internet of Things](/ar-for-eu-book/chapter/advanced/iot/) {% include badge.html base=pathToRoot badgeName="todo" %}
+   1. [Sensors and Signal Processing](/ar-for-eu-book/chapter/advanced/sensors/) {% include badge.html base=pathToRoot badgeName="todo" %}
+   2. [Sensor Fusion](/ar-for-eu-book/chapter/advanced/sensorFusion/) {% include badge.html base=pathToRoot badgeName="todo" %}
+5. [Careers in AR](/ar-for-eu-book/chapter/advanced/careers/) {% include badge.html base=pathToRoot badgeName="todo" %}

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Collaboration & Sharing
-permalink: /chapter/sharing/
+permalink: /chapter/development/unity/sharing/
 categories: chapter
 visualizations:
 ---

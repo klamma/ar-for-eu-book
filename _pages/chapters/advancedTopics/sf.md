@@ -1,9 +1,7 @@
 ---
 layout: page
 title: Sensor Fusion
-permalink: /chapter/sf/
+permalink: /chapter/advanced/sensorFusion/
 categories: chapter
 visualizations:
 ---
-
-# Sensor Fusion
