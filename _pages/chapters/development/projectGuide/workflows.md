@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Workflows and Company Practices (started)
-permalink: /chapter/workflows/
+permalink: /chapter/development/projectGuide/workflows/
 categories: chapter
 visualizations:
 ---

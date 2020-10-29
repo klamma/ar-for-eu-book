@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Wearables for Interaction 
-permalink: /chapter/wearableInteraction/
+permalink: /chapter/development/appDesign/wearableInteraction/
 categories: chapter
 visualizations:
 ---

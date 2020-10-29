@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mobile AR  (started)
-permalink: /chapter/mobile/
+permalink: /chapter/development/platforms/mobile/
 categories: chapter
 visualizations:
 ---

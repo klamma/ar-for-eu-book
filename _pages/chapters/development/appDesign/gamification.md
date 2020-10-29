@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AR Game Development, Gamification and Serious Games
-permalink: /chapter/game/
+title: Gamification
+permalink: /chapter/development/appDesign/gamification/
 categories: chapter
 visualizations:
 ---

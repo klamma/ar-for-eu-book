@@ -62,22 +62,21 @@ permalink: /toc/
 ### 3.1 Platforms
 
 1. [Wearables](/ar-for-eu-book/chapter/development/platforms/wearables/) {% include badge.html base=pathToRoot badgeName="todo" %}
-2. [Mobile AR](/ar-for-eu-book/chapter/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-3. [AR for the Web](/ar-for-eu-book/chapter/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+2. [Mobile AR](/ar-for-eu-book/chapter/development/platforms/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+3. [AR for the Web](/ar-for-eu-book/chapter/development/platforms/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### 3.2 Project Guide
 
-1. [AR Agile Project Management](/ar-for-eu-book/chapter/apm/) {% include badge.html base=pathToRoot badgeName="complete" %}
-2. [Workflows and Company Practices](/ar-for-eu-book/chapter/workflows/) {% include badge.html base=pathToRoot badgeName="outline" %}
-3. [Privacy, Ownership and Intellectual Property](/ar-for-eu-book/chapter/privacy/) {% include badge.html base=pathToRoot badgeName="outline" %}
+1. [AR Agile Project Management](/ar-for-eu-book/chapter/development/projectGuide/apm/) {% include badge.html base=pathToRoot badgeName="complete" %}
+2. [Workflows and Company Practices](/ar-for-eu-book/chapter/development/projectGuide/workflows/) {% include badge.html base=pathToRoot badgeName="outline" %}
+3. [Privacy, Ownership and Intellectual Property](/ar-for-eu-book/chapter/development/projectGuide/privacy/) {% include badge.html base=pathToRoot badgeName="outline" %}
 
 ### 3.3 AR Application Design
 
-1. [Wearable Interaction](/ar-for-eu-book/chapter/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="todo" %}
+1. [Wearable Interaction](/ar-for-eu-book/chapter/development/appDesign/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="todo" %}
 <!-- - Sound Design {% include badge.html base=pathToRoot badgeName="todo" %} -->
-2. [Gamification](/ar-for-eu-book/chapter/game/) {% include badge.html base=pathToRoot badgeName="complete" %}
+2. [Gamification](/ar-for-eu-book/chapter/development/appDesign/gamification/) {% include badge.html base=pathToRoot badgeName="complete" %}
 <!-- - Serious Games {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
-3. Interaction Design
 
 ### 3.4 Development Tools and Libraries
 

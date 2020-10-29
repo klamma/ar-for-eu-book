@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AR Agile Project Management
-permalink: /chapter/apm/
+permalink: /chapter/development/projectGuide/apm/
 categories: chapter
 visualizations:
 ---

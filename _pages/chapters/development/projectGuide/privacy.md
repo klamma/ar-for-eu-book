@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy, Ownership and Intellectual Property
-permalink: /chapter/privacy/
+permalink: /chapter/development/projectGuide/privacy/
 categories: chapter
 visualizations:
 ---

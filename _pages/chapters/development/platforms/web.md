@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AR for the Web (in progress)
-permalink: /chapter/web/
+title: AR for the Web
+permalink: /chapter/development/platforms/web/
 categories: chapter
 visualizations:
 ---
