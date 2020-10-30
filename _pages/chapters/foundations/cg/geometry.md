@@ -6,6 +6,8 @@ categories: chapter
 visualizations:
 ---
 
+{% include autoRelativePath.html %}
+
 ## Meshes
 
 A mesh is an undirected graph which approximates the surface of an object.

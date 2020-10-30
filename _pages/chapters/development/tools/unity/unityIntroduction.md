@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Unity
-permalink: /chapter/development/unity/introduction
+permalink: /chapter/development/unity/introduction/
 categories: chapter
 visualizations:
 ---

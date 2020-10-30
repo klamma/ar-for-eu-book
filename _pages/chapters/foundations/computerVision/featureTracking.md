@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Object Tracking
+title: Feature Tracking
 permalink: /chapter/foundations/cv/featureTracking
 categories: chapter
 visualizations:
