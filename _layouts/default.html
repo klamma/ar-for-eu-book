@@ -1,27 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
 <html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-    <!-- load visualizations (at the end so that the div elements are known here) -->
-    {% for js in page.visualizations %}
-        <script type="text/javascript">
-        {% include {{ js }} %}
-        </script>
-    {% endfor %}
-  </body>
-
+	{%- include head.html -%}
+	<body>
+		{{- content -}}
+		{%- include footer.html -%}
+	</body>
 </html>
