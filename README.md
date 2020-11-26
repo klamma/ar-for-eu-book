@@ -1,139 +1,156 @@
-# Prologue - Jekyll Theme
+# AR for EU Book
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-theme-prologue.svg)](https://badge.fury.io/rb/jekyll-theme-prologue)
+![Jekyll Build & Deploy](https://github.com/klamma/ar-for-eu-book/workflows/Jekyll%20Build%20&%20Deploy/badge.svg)
 
-![Prologue Theme](assets/images/screenshot.png "Prologue Theme Screenshot")
+Welcome to the editing environment for the AR-FOR-EU Book.
 
-This is Prologue, a simple, single page responsive site template from [HTML5 UP](https://html5up.net/prologue), now available as a blog-aware Jekyll theme from [Chris Bobbe](https://chrisbobbe.github.io). It features a clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
+The latest version is available at [http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/](http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/).
 
-**Demo**: https://chrisbobbe.github.io/jekyll-theme-prologue/
+# HowTo Run Locally
 
-# Added Features
+## Prepare Development Environment
 
-* **Blogging and multi-page features you expect from Jekyll**
-* Compatible with GitHub Pages
-* **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
-* Build your homepage with **custom scrolly sections** in the _sections folder
- * Set a **cover photo** for any section (not just the first), with alt text for screen readers and SEO
-* Add your **social profiles** easily in `_config.yml`.
-* Automatic search engine optimization (SEO) **meta tags** based on info you provide in `_config.yml` and frontmatter
-* **Google Analytics** built-in; just put your [Tracking ID](https://support.google.com/analytics/answer/1008080?hl=en) in `_config.yml` as `google_analytics`
-* Custom **404 page** (called 404.html; to activate, move it to your project directory).
+1. Install [Ruby](https://www.ruby-lang.org) on your machine ([Detailed instructions](https://jekyllrb.com/docs/installation/))
 
-# Installation
+2. Clone this repository and open a terminal / command line
 
-There are two ways to get started (choose one):
+   Check that Ruby is successfully installed and can be accessed from the terminal / command line.
+   To do this, run the command "ruby -v".
+   It should return the installed version of Ruby.
 
-1. **Install the [jekyll-theme-prologue gem](https://rubygems.org/gems/jekyll-theme-prologue).** Instructions are in the [Jekyll docs](https://jekyllrb.com/docs/themes/#installing-a-theme). After running `bundle install`, you can find the theme files by running `open $(bundle show jekyll-theme-prologue)`.  A sample working `_config.yml` file ships with the gem; if you want to activate it, move it to your project's root directory. It will do nothing until you move it there, replacing the default `_config.yml` file.
-2. **Fork or clone the [GitHub repository](https://github.com/chrisbobbe/jekyll-theme-prologue).** If you want to use [GitHub Pages](https://pages.github.com/), create a branch named `gh-pages`, and replace `theme: jekyll-theme-prologue` with `remote_theme: chrisbobbe/jekyll-theme-prologue` in the provided `_config.yml` ([GitHub Pages now supports open-source themes on GitHub](https://github.com/blog/2464-use-any-theme-with-github-pages)).
+3. In the terminal/command line, navigate to your main project folder
 
-Next, make sure that `url` and `base_url` are set for your own website in `_config.yml`. For local testing, make them both blank. Add a photo avatar to your project, then set `avatar: path/to/your/avatar.jpg` in _config.yml; for example, `avatar: assets/images/avatar.jpg` (48x48 pixels works best). Poke around the sample `_config.yml` file to see how you can add your social profiles.
+4. Install bundler
 
-# Build your homepage
+    gem install bundler
 
-1. **Your `_config.yml` file must include the following line or your homepage won't work**: `collections: [sections]`. This tells Jekyll to look in the _sections folder (which you will create) for your content and render it all on one page.
+5. Use bundler to pull Jekyll
 
-2. **Create a `_sections` folder** in your project's root directory and start adding content to your homepage. Set a cover photo in any of the sections by adding `cover-photo: path/to/photo.jpg` and `cover-photo-alt: your alt text here` to the section's frontmatter. Sample content is provided in the [GitHub repository](https://github.com/chrisbobbe/jekyll-theme-prologue/tree/master/_sections).
+    bundle install
+    
+    bundle update
 
-All new sections should be added as html or Markdown documents in the `_sections` folder. The following section variables can be set with [frontmatter](https://jekyllrb.com/docs/frontmatter/):
-- `title` (required)
-- `order` (required; orders the sequence of sections on the page. Example: `1`)
-- `cover-photo` (optional; sets a background image for the section. Example: `assets/images/banner.jpg`)
-- `cover-photo-alt` (required if using a cover photo. Describes the photo for screen readers and SEO; e.g. "Dome of Light art installation, Kaohsiung, Taiwan")
-- `icon` (optional; see [Font Awesome](https://fontawesome.com/icons) for icon codes. Example: `fa-github`)
-- `icon-style` (optional; "solid" is default, "regular" for outline style icons, or "brands" for logos)
-- `auto-header` (optional; "use-title" is default, "none" for no header, or custom header text)
-- `hide` (optional; if `true`, the section won't appear)
+## Build & Serve Locally
 
-# Start blogging!
+First, please change the _config.yml "url" parameter to "http://localhost:4000".
 
-Jekyll has great resources to get you started writing blog posts. Check out [this Jekyll Docs page](https://jekyllrb.com/docs/posts/) first. When you've written a post or two, copy the following into a new file in your project directory called `blog.html`, and you'll see a link to your blog from the homepage:
+Please do not commit this change!
+Now build the page locally with
 
-```
----
-layout: blog
-title: My Blog
----
-```
+    bundle exec jekyll serve
 
--- and that's it!
+ Navigate your browser to `http://localhost:4000/ar-for-eu-book/` to check results while you develop.
 
-# Add a page
+# Description
 
-To add a page, just make a new .html or .md file in your project directory. There's an example called `reading-list` [provided](https://github.com/chrisbobbe/jekyll-theme-prologue/blob/master/reading-list.md) with the GitHub repository. Add this frontmatter:
+Teaching how to create and code Augmented Reality (AR) is an emerging topic in Higher Education.
+This should not be confused with the interest of various other subjects to use AR applications and content.
+Only a few top-tier universities world-wide currently offer courses that give instruction of how to code AR.
+Few have related content and none have a full curriculum on AR.
+The goal of this book project is to create the first comprehensive Open Educational Resource (OER) as a foundation for AR curricula in Higher Education.
+Every book about high tech risks being outdated already when going into print, so we are planning for a continuously developed and updated online book, working with an open community of contributors, Open Source style.
 
-```
----
-title: My New Page
-layout: page
----
-```
+The book will be available as Open Educational Resource (OER) under the Creative-Commons-License CC-BY-SA.
+This allows using figures and texts for own presentations as Attribution-ShareAlike 4.0 International.
+The book is planned as a living resource, where chapters can be reworked or added as needed.
 
-You can also set these page variables in the frontmatter, if you want:
-- `subtitle`
-- `order` (orders links in the nav menu, e.g. `1`)
-- `icon` (optional; see [Font Awesome](https://fontawesome.com/icons) for icon codes. Example: `fa-github`)
-- `icon-style` (optional; "solid" is default, "regular" for outline style icons, or "brands" for logos)
-- `hide` (optional; if `true`, a link won't appear in the nav menu. All this does is remove the nav link; your page will still be served to anyone who has the URL.)
+The book production is supported by the ERASMUS+ Strategic Alliances Project for Higher Education called “Augmented Reality in Formal European University Education (AR-FOR-EU).
+The project AR-FOR-EU establishes and deepens a strategic partnership for teaching Augmented Reality in Higher Education at scale on undergraduate and graduate levels.
 
-**This same set of frontmatter variables (including `title`) can also be set in `index.md` and `blog.html`.** You may want to give them titles, or hide the homepage link with `hide: true` if the homepage is the only page.
+# Scope
 
-For advanced SEO, this theme also lets you add `permalink` (see [Jekyll Docs](https://jekyllrb.com/docs/permalinks/#where-to-configure-permalinks)), `robots` (string, e.g. "noindex, nofollow"), and `canonical` (boolean; true is default) to any page or post.
+The book will cover the necessary prerequisites to understand and follow the core concepts of teaching Augmented Reality.
+It will have a section for advanced topics that can be covered in curricula.
+A section of the book will also be dedicated to a collection of good practices in teaching AR coding.
 
-# Contributing
+The book offers a comprehensive and introductory perspective on the topic Augmented Reality.
 
-Please feel free to submit issues and feature requests!
+# Contents
 
-# Credits
+## Foundational Chapters
 
-Thanks to @andrewbanchich for his many Jekyll adaptations of HTML5 UP's elegant themes, which helped and inspired me, and of course many thanks to HTML5 UP.
+* History of AR
+* Future of AR
+* Perceptual Foundations of AR
+* Sensors and Signal Processing
+* Computer Graphics
+* Programming (in progress)
+* Algorithms and Data Structures
+* Linear and Geometric Algebra
 
-Original README from HTML5 UP:
+## Core Chapters
 
-```
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+### Core Technologies
+* Display Technologies (in progress)
+* Tracking Technologies (in progress)
+* Interaction Technologies
+* Hardware Abstraction Layer
 
+### AR Development Skills
 
-This is Prologue, a simple, single page responsive site template. It features a
-clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
+* AR SDKs
+* Configuring Windows for Development with Hololens (in progress)
+* Unity / Unreal Engine (in progress)
+* 3D Modeling & Rendering (in progress)
+* Spatial Audio
+* Interactive Graphics and Sound Design
+* Spatial Mapping, Gaze, and Gestures (in progress)
+* Speech Interaction (in progress)
+* Human Computer Interaction and User Centered Design
 
-Demo content images* are courtesy of the ridiculously talented Felicia Simion. Check out
-more of her amazing work over at deviantART:
+### Computer Vision
 
-http://ineedchemicalx.deviantart.com/
+* Image Analysis
+* Image Processing
+* Object Detection and Recognition
+* 3D Sensing
+* Tracking 
+* Depth Sensing
 
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Felicia's work without her explicit permission!)
+### Artificial Intelligence
 
-Demo banner images* courtesy of Unsplash, a radtastic collection of CC0 (public domain)
-images you can use for pretty much whatever.
+* Data Mining
+* Machine Learning, Deep Learning
+* Sensor Fusion
 
-(* = Not included)
+## Advanced Topics
 
-AJ
-aj@lkn.io | @ajlkn
+* AR Agile Project Management (in progress)
+* AR Game Development, Gamification and Serious Games
+* AR Applications
+* AR for the Web
+* Mobile AR
+* Hardware Accelerated Computing
+* Internet of Things, Robots and Wearables
+* Hardware and Optical Design
+* 2D/3D Printing
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+## Good Practices and Examples
 
+* Maker Communities
+* Workflows and Company Practices
+* Privacy, Ownership and Intellectual Property
+* Applications, Employments and Careers in AR
 
-Credits:
+# Contribution Model and Technical Infrastructure
 
-	Demo Images:
-		Felicia Simion (ineedchemicalx.deviantart.com)
-		Unsplash (unsplash.com)
+The book project follows an agile approach differing from the classic development process typical for printed content.
+Contributors can play several different roles in the production process.
+We are looking for authors, reviewers, agile editors, designers, software developers, visual artists, and testers.
+Agile teams are responsible for the generation of chapters and act as product owners. 
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
+* Reviewers will review chapters and communicate with the author teams. 
+* Team champions drive forward the agile development of chapters. 
+* Designers lay-out the online book and printed versions. 
+* Software developers are responsible for interactive Web graphics, application examples, exercises and other dynamic code. 
+* Visual artists are responsible for appealing visualizations. 
+* Testers will thoroughly try out the final versions of the book.
 
-	Other
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		CSS3 Pie (css3pie.com)
-		background-size polyfill (github.com/louisremi)
-		Respond.js (j.mp/respondjs)
-		jquery.scrolly (@ajlkn)
-		jquery.scrollzer (@ajlkn)
-		Skel (skel.io)
-```
+The book uses Git for version management and a GitHub organization for the creation, hosting, and delivery of the book contents to guarantee agile development.
+We use the GitHub-based issue tracking system for the communication between the community members, such as the the authors and the reviewers.
+Based on this content sharing and version management platform we use the static site generator Jekyll for rendering the content of the Git repository into a Web site.
+With every commit, a new version of the Web site is created automatically.
+Formatting of the content is done using a simple markdown language.
+Programming and lay-out uses JavaScript and CSS.
+
+The project's [wiki](https://github.com/klamma/ar-for-eu-book/wiki) contains further details about the contribution guidelines and the technical environment.
