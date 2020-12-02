@@ -9,8 +9,6 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-# 3D Modeling
-
 There are several techniques of creating a virtual representation of 3D models.
 The surface of an object can be approximated by a graph structure which is called mesh.
 An advantage of meshes is that the creator can decide how complex the geometry of an object may become.
