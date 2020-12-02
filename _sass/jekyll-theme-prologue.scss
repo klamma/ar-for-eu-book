@@ -1,4 +1,4 @@
-@import 'libs/vars';
+﻿@import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
 @charset "UTF-8";
@@ -126,18 +126,18 @@
 		font-style: italic;
 	}
 
-	a {
-		text-decoration: none;
-		color: inherit;
-		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
-		@include vendor('transition', ('color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out'));
-		outline: 0;
+a {
+    text-decoration: none;
+    color: #024065;
+    border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
+    @include vendor('transition', ('color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out'));
+    outline: 0;
 
-		&:hover {
-			color: #ED685A;
-			border-bottom-color: rgba(255, 255, 255, 0);
-		}
-	}
+    &:hover {
+        color: #ED685A;
+        border-bottom-color: rgba(255, 255, 255, 0);
+    }
+}
 
 	sub {
 		position: relative;
