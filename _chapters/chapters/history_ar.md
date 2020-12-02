@@ -7,6 +7,8 @@ categories: chapter
 visualizations:
 ---
 
+{% include autoRelativePath.html %}
+
 Different sources trace the history of augmented reality back to the beginning of the 20th century, but it can be said that seminal work was done in the 1960s by Ivan Sutherlands and others.
 The term augmented reality however was coined by Thomas P. Caudellin the 80s {%cite CaMi92 %}
 ([PDF](https://tweakimg.net/files/upload/329676148-Augmented-Reality-An-Application-of-Heads-Up-Display-Technology-to-Manual-Manufacturing-Processes.pdf)).
