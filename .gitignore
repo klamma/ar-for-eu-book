@@ -1,38 +1,4 @@
-# Node rules:
-## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
-## Dependency directory
-## Commenting this out is preferred by some people, see
-## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
-node_modules
-
-# Book build output
-_book
-test
-
-# eBook build output
-*.epub
-*.mobi
-*.pdf
-
-*.sublime-project
-*.sublime-workspace
-.DS_Store
-.jekyll-metadata
+/_site
+*.gem
 .sass-cache
-_asset_bundler_cache
-_site
-codekit-config.json
-npm-debug.log*
 Gemfile.lock
-_site
-.sass-cache
-.jekyll-metadata
-public/
-*.DS_Store
-*.lock
-.idea
-
-# to prevent accidents
-#_config.yml
