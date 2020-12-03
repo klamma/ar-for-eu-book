@@ -128,8 +128,8 @@
 
 a {
     text-decoration: none;
-    color: #024065;
-    border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
+    color: #0388a6;
+    border-bottom: solid 1px #0388a6;
     @include vendor('transition', ('color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out'));
     outline: 0;
 
