@@ -343,7 +343,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 
 
-**Note:** However, if your URL is very long, it cannot work in Unity. For example, in this picture the URL should be https://api.eu-gb.assistant.watson.cloud.ibm.com
+**Note:** However, if your URL is very long, it cannot work in Unity. For example, in this picture the URL should be <https://api.eu-gb.assistant.watson.cloud.ibm.com>
 
 *Service endpoints by location:*
 
