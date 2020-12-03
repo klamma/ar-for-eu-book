@@ -25,7 +25,7 @@ visualizations:
 
 ### **Part 1. Creating an IBM Cloud account** {#part1}
 
-Step 1.1: Register an account https://cloud.ibm.com/login > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
+Step 1.1: Register an account <https://cloud.ibm.com/login> > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%201.1.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -347,11 +347,11 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 *Service endpoints by location:*
 
-·    London: https://api.eu-gb.assistant.watson.cloud.ibm.com
+·    London: <https://api.eu-gb.assistant.watson.cloud.ibm.com>
 
-·    Frankfurt: https://api.eu-de.assistant.watson.cloud.ibm.com
+·    Frankfurt: <https://api.eu-de.assistant.watson.cloud.ibm.com>
 
-·    Washington, DC: https://api.us-east.assistant.watson.cloud.ibm.com
+·    Washington, DC: <https://api.us-east.assistant.watson.cloud.ibm.com>
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.3.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
