@@ -140,6 +140,6 @@ These mobile devices are mainly powered by rechargeable batteries, which can lea
 The most prominent example of the use of HHD is the APP Pokemon Go, which was a hype in the summer of 2016.
 
 
-[^1] The company SONY developed a stripe mask which is used instead of the hole mask and marketed devices with stripe mask under the name "Trinitron"
+[^1]: The company SONY developed a stripe mask which is used instead of the hole mask and marketed devices with stripe mask under the name "Trinitron"
 
-[^2] Monochromatic color: light with only one wavelength; a single color without other color components
+[^2]: Monochromatic color: light with only one wavelength; a single color without other color components
