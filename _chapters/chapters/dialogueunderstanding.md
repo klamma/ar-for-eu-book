@@ -414,17 +414,17 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 ·    *London:* [*https://api.eu-gb.speech-to-text.watson.cloud.ibm.com*](https://api.eu-gb.speech-to-text.watson.cloud.ibm.com)
 
-​         
-​         
-​         *Service of Text to Speech endpoints by location*
-​         
-​         ·    Washington DC: <https://api.us-east.text-to-speech.watson.cloud.ibm.com>
-​         
-​         ·    Frankfurt: <https://api.eu-de.text-to-speech.watson.cloud.ibm.com>
-​         
-​         ·    London: <https://api.eu-gb.text-to-speech.watson.cloud.ibm.com>
-​         
-​         
+
+
+*Service of Text to Speech endpoints by location*
+
+·    Washington DC: <https://api.us-east.text-to-speech.watson.cloud.ibm.com>
+
+·    Frankfurt: <https://api.eu-de.text-to-speech.watson.cloud.ibm.com>
+
+·    London: <https://api.eu-gb.text-to-speech.watson.cloud.ibm.com>
+
+​
 ​         
 ​         **Step 5.8.** Before playing it, we need to configure your service credentials. Save unity file (Ctrl+S), close Unity > open the location of the Unity file > find ibm_credentials.env, and open it.
 ​         
