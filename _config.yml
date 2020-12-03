@@ -76,4 +76,4 @@ sass:
 
 # Plugin settings
 scholar:
-    relative: "/ar-for-eu-book/references/"
+    relative: "/ar-for-eu-book/bibliography/"
