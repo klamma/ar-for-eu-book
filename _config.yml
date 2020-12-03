@@ -77,3 +77,6 @@ sass:
 # Plugin settings
 scholar:
     relative: "/ar-for-eu-book/bibliography"
+
+plugins:
+    - jekyll-redirect-from
