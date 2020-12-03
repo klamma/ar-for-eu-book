@@ -26,11 +26,11 @@
             <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
           </a></li>
         {%- elsif _page.url -%}
-          <li><a href="{{- _page.url | absolute_url -}}" id="{{- _slug -}}-link">
+          <li><a href="{{- _page.url | relative_url -}}" id="{{- _slug -}}-link">
             <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
           </a></li>
         {%- else -%}
-          <li><a href="{{- '/' | absolute_url -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
+          <li><a href="{{- '/' | relative_url -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
         {%- endif -%}
       {%- endfor -%}
     {%- endunless -%}
