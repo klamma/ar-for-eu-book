@@ -512,5 +512,5 @@ Those routines simply remember the colour in use of the brain segment (they all 
     <figcaption>OnTapped</figcaption>
 </figure>
 
-NOTE: The 3D brain model is from https://free3d.com/3d-model/brain-18357.html and free for personal use.
+NOTE: The 3D brain model is from <https://free3d.com/3d-model/brain-18357.html> and free for personal use.
 The Placeable and GazeGestureManager behaviour scripts are from the Microsoft Holoacademy Spatial Mapping tutorial.
