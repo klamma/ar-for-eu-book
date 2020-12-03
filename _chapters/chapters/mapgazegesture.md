@@ -41,7 +41,7 @@ Once all files are imported, you should see a new folder "HoloToolkit" in your P
 Search in the Project explorer now for "HoloLensCamera" and drag and drop this prefab into the game object Hierarchy.
 
 Now create an empty game object (Create > Create empty) in the game object Hierarchy and rename it to HoloToolkit.
-This is to make sure we keep things nice and tidy and have no difficul-ty finding our game objects and scripts later.
+This is to make sure we keep things nice and tidy and have no difficulty finding our game objects and scripts later.
 
 Now search in the Project explorer for Spatial Mapping, then InputManager, also InteractiveMeshCursor, and SpatialUnderstanding.
 Add all four to the project Hierarchy.
@@ -66,7 +66,7 @@ Make sure that the Physics Layer is 31, and that the Surface Material is set to 
 Deactivate the "Auto Start Observer" - we will build our own user interface (UI) for starting and stopping the scan.
 Do the same with the SpatialUnderstanding: deactivate the option "Auto Begin Scanning".
 
-Short cut: If you just want the SpatialMapping to anchor your game objects, you can leave the "Auto Start Observer" and "Auto Begin Scanning" on and ignore the next section on how to build a UI for scanning rooms.
+Shortcut: If you just want the SpatialMapping to anchor your game objects, you can leave the "Auto Start Observer" and "Auto Begin Scanning" on and ignore the next section on how to build a UI for scanning rooms.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/mapgazegesture/2 - spatialmapping.png" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -152,7 +152,7 @@ Once imported, we add the SpaceScannerManager script (folder "_scripts") and att
 </figure>
 
 The SpaceScannerManager has several configuration settings.
-We add two mesh map materi-als (search for “WireframeBlue” and “Occlusion” and add them accordingly).
+We add two mesh map materials (search for “WireframeBlue” and “Occlusion” and add them accordingly).
 Moreover, we drag and drop the Text game object log onto the Log slot.
 This allows the SpaceScannerManager script to output log messages onto the area we have foreseen for debug output on the menu canvas.
 
@@ -167,15 +167,15 @@ We attach them to the menu canvas as well.
 </figure>
 
 We select for Draw Planes and Destroy Planes the option 'Nothing' each.
-The SurfaceMesh-esToPlanes script is resonsible for identifying plane surfaces from the raw mesh, detecting floor, walls, tables, and the like.
-It is possible to replace the raw mesh with these identified sur-faces, but we don't want that, as it makes the preview flicker during the scanning.
-The Re-moveSurfaceVertices is resonsible for thinning out the mesh, where possible.
+The SurfaceMeshesToPlanes script is responsible for identifying plane surfaces from the raw mesh, detecting floor, walls, tables, and the like.
+It is possible to replace the raw mesh with these identified surfaces, but we don't want that, as it makes the preview flicker during the scanning.
+The Re-moveSurfaceVertices is responsible for thinning out the mesh, where possible.
 
 The SpaceScannerManager script takes care of all this.
-It communicates with the SpatialMap-ping to start and stop the observer responsible for scanning the room mesh, cleaning the mesh once scanned, and checking whether enough surfaces have been scanned (satisfying the min floors and min walls requirements set).
+It communicates with the SpatialMapping to start and stop the observer responsible for scanning the room mesh, cleaning the mesh once scanned, and checking whether enough surfaces have been scanned (satisfying the min floors and min walls requirements set).
 Moreover, it provides three methods for the buttons to control: StartScanning(), StopScanning(), and StartApp().
 
-The way the SpaceScannerManager class works is: StartScanning() activates the spatial map-ping by starting the according Spatial Mapping observer, setting the “scanning” flag to true (thus calling the planes extraction method in Update() in every frame), and registering a callback to MeshToPlanes() for every time the planes extraction concludes:
+The way the SpaceScannerManager class works is: StartScanning() activates the spatial mapping by starting the according Spatial Mapping observer, setting the “scanning” flag to true (thus calling the planes extraction method in Update() in every frame), and registering a callback to MeshToPlanes() for every time the planes extraction concludes:
 
 ```c#
 public void StartScanning()
@@ -247,7 +247,7 @@ We apply the according method calls for StopScanning and StartApp analogously to
 
 ## Part 3. Placement with the gaze pointer and air tap {#part-3-placement}
 
-The error message we see in the console is telling us that the call to the singleton Popu-lateSpace is not (yet) working.
+The error message we see in the console is telling us that the call to the singleton PopulateSpace is not (yet) working.
 No surprise, we haven't added it yet.
 
 We first create a new empty game object and rename it to ObjectCollection.
@@ -319,7 +319,7 @@ The canvas needs to be resized and properly positioned so that the button floats
 </figure>
 
 While we are at it, we also add Mesh Colliders (click ‘Add Component’ and search for it) to each of the brain segments.
-We will need those later so that they can be hit targets in the inter-action.
+We will need those later so that they can be hit targets in the interaction.
 
 The Mesh Colliders will automatically be fitted to the shape of the brain segment.
 
@@ -330,7 +330,7 @@ The Mesh Colliders will automatically be fitted to the shape of the brain segmen
     <figcaption>Mesh colliders</figcaption>
 </figure>
 
-Since the button is on the prefab, we need to add an event listener for the ‘on click’ event, oth-erwise nothing will happen upon air tapping the button.
+Since the button is on the prefab, we need to add an event listener for the ‘on click’ event, otherwise nothing will happen upon air tapping the button.
 We therefore modify the InstallObjects() method of the Object Collection game object.
 We find the button object via its name, and then add the according event listener (linking against the new PopulateSpace.ExploreBrain() method shown below).
 
@@ -378,7 +378,7 @@ currObj.AddComponent<SegmentHighlights>();
 
 Finally, a script to highlight the segments (SegmentHighlights) is added by code.
 Let us look into this highlighter script.
-First, the script installs a listener for the gesture recogniser and regis-ters a callback for whenever the air tap gesture has been detected (linking to method ‘on-Tapped’).
+First, the script installs a listener for the gesture recogniser and registers a callback for whenever the air tap gesture has been detected (linking to method ‘onTapped’).
 
 ```c#
 void Start() {
@@ -435,7 +435,7 @@ FocusedObject = null;
 }
 ```
 
-If it has hit a game object, we can check whether the name is any of the names of the brain segments, and react accordingly by moving the segment into a predefined direction (left half goes back, right half goes forward, stem up, etc.
+If it has hit a game object, we can check whether the name is any of the names of the brain segments, and react accordingly by moving the segment into a predefined direction (left half goes back, right half goes forward, stem up, etc.)
 
 Moreover, we can add a method for handling the highlighting to the Update routine of the class.
 
@@ -480,7 +480,7 @@ HighlightSegment(FocusedObject);
 ```
 
 Again, the HoverHandler uses a ray cast to find out whether something (and what) has been hit by the ray cast from the position and orientation of the head-worn camera.
-If it is a brain seg-ment, and if this has not already been hit previously (in previous frames of the update loop), then the highlight and remove highlight routines will be called.
+If it is a brain segment, and if this has not already been hit previously (in previous frames of the update loop), then the highlight and remove highlight routines will be called.
 
 ```c#
 
@@ -513,4 +513,4 @@ Those routines simply remember the colour in use of the brain segment (they all 
 </figure>
 
 NOTE: The 3D brain model is from https://free3d.com/3d-model/brain-18357.html and free for personal use.
-The Placeable and GazeGestureManager behaviour scripts are from the Mi-crosoft Holoacademy Spatial Mapping tutorial.
+The Placeable and GazeGestureManager behaviour scripts are from the Microsoft Holoacademy Spatial Mapping tutorial.
