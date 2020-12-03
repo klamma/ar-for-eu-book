@@ -4,7 +4,7 @@ LABEL author="Benedikt Hensen"
 LABEL version="1.0.0"
 
 # install dependencies
-ENV BUNDLER_VERSION 2.0.2
+ENV BUNDLER_VERSION 2.1.4
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         bats \
@@ -16,7 +16,7 @@ RUN apt-get update && \
         shellcheck \
         libffi6 \
         git-all \
-    && gem install bundler:2.0.2 \
+    && gem install bundler:2.1.4 \
     && bundle config --global silence_root_warning 1
 
 # entrypoint to the scripts
