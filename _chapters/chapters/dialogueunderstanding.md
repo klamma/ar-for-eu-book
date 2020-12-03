@@ -347,11 +347,11 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 *Service endpoints by location:*
 
-·    London: <https://api.eu-gb.assistant.watson.cloud.ibm.com>
+·    *London:* <https://api.eu-gb.assistant.watson.cloud.ibm.com>
 
-·    Frankfurt: <https://api.eu-de.assistant.watson.cloud.ibm.com>
+·    *Frankfurt:* <https://api.eu-de.assistant.watson.cloud.ibm.com>
 
-·    Washington, DC: <https://api.us-east.assistant.watson.cloud.ibm.com>
+·    *Washington, DC:* <https://api.us-east.assistant.watson.cloud.ibm.com>
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.3.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -418,11 +418,11 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 *Service of Text to Speech endpoints by location*
 
-·    Washington DC: <https://api.us-east.text-to-speech.watson.cloud.ibm.com>
+·    *Washington DC*: <https://api.us-east.text-to-speech.watson.cloud.ibm.com>
 
-·    Frankfurt: <https://api.eu-de.text-to-speech.watson.cloud.ibm.com>
+·    *Frankfurt:* <https://api.eu-de.text-to-speech.watson.cloud.ibm.com>
 
-·    London: <https://api.eu-gb.text-to-speech.watson.cloud.ibm.com>
+·    *London:* <https://api.eu-gb.text-to-speech.watson.cloud.ibm.com>
 
 ​
 ​         
