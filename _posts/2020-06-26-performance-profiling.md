@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "New Chapter on Performance Profiling & Optimization"
+title: Performance Profiling & Optimization
 ---
 
 We have added a new chapter about performance profiling and optimization.
