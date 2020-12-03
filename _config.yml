@@ -73,3 +73,7 @@ include:
 sass:
     sass_dir: _sass
     style: compressed
+
+# Plugin settings
+scholar:
+    relative: "/ar-for-eu-book/bibliography"
