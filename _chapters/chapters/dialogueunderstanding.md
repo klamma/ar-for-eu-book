@@ -406,7 +406,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 
 
-Service of Speech to Text endpoints by location*
+*Service of Speech to Text endpoints by location*
 
 ·    *Washington, DC:* [*https://api.us-east.speech-to-text.watson.cloud.ibm.com*](https://api.us-east.speech-to-text.watson.cloud.ibm.com)
 
