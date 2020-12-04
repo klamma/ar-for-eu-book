@@ -18,14 +18,14 @@ visualizations:
 
 ## Resources
 
-- Download Unity ZIP file, and extract it https://drive.google.com/file/d/1idlhVW_N2PW0uEfk1DbOyXNuxc2n8If1/view?usp=sharing
+- Download Unity ZIP file, and extract it <https://drive.google.com/file/d/1idlhVW_N2PW0uEfk1DbOyXNuxc2n8If1/view?usp=sharing>
 
 ## Software
 - Unity 3D (version 2018.3.14f1)
 
 ### **Part 1. Creating an IBM Cloud account** {#part1}
 
-Step 1.1: Register an account https://cloud.ibm.com/login > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
+Step 1.1: Register an account <https://cloud.ibm.com/login> > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%201.1.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
