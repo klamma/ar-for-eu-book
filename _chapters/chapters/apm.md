@@ -232,13 +232,13 @@ Merge conflicts arise if the same content in a file was edited on both branches.
 
 Software projects can structure branches using different git-workflows.
 A popular example is the git-flow workflow {%cite Drie10 %}.
-It consists of a master-branch, a develop-Branch, feature branches, release branches and hotfix-branches.
+It consists of a main-branch (also called master-branch), a develop-Branch, feature branches, release branches and hotfix-branches.
 
-![master, develop and features]({{pathToRoot}}/assets/figures/apm/gitFlowWorkflow.svg)
+![Gitflow workflow]({{pathToRoot}}/assets/figures/apm/gitFlowWorkflow.svg)
 
 For Web apps which do not require explicit version releases, a GitHub flow is suitable.
 Feature are developed on different branches.
-If a feature has been finished, a merge request is created, it is reviewed and discusssed and finally, the branch is merged into the master branch.
+If a feature has been finished, a merge request is created, it is reviewed and discusssed and finally, the branch is merged into the main branch.
   
 ### Continuous Integration
 
