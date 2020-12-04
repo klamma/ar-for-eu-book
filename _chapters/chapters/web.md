@@ -31,7 +31,7 @@ Moreover, Web browsers can communicate directly with each other without the need
 # WebXR
 
 WebXR (Mixed Reality on the Web) superseded WebVR in 2018.
-The [W3c editor's draft] (https://immersive-web.github.io/webxr/)
+The [W3c editor's draft](https://immersive-web.github.io/webxr/)
 gives details on the WebXR Device API.
 WebXR is an extension of the WebVR API covering augmented reality devices in the JavaScript API.
 The new API has two goals.
