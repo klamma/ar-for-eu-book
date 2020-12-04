@@ -21,9 +21,9 @@ The term augmented reality however was coined by Thomas P. Caudellin the 80s {%c
 **In 1584**, Giambattista della Porta publishes a book entitled 'Magia Naturalis', in which he presents 
 the concept of a room in which you have a glass pane set up in a way that it reflects light bouncing off of 
 objects in a different position, creating the illusion as if these objects were somewhere else 
-than they actually are. This is pretty much earliest description of Augmented Reality we 
+than they actually are. This is pretty much the earliest description of Augmented Reality we 
 have discovered so far, and the principle of reflection off a semi-transparent mirror is
-still popular today for head-mounted displays, albeit slightly miniaturised.
+still popular today for head-mounted displays, albeit slightly miniaturized.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/history/1584.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -35,7 +35,7 @@ still popular today for head-mounted displays, albeit slightly miniaturised.
 
 > Let there be a chamber wherein no other light comes, unless by the door or window where the spectator looks in. Let the whole window or part of it be of glass, as we use to do to keep out the cold. But let one part be polished, that there may be a Looking-glass on bothe sides, whence the spectator must look in. For the rest do nothing. Let pictures be set over against this window, marble statues and suchlike. For what is without will seem to be within, and what is behind the spectator's back, he will think to be in the middle of the house, as far from the glass inward, as they stand from it outwardly, and clearly and certainly, that he will think he sees nothing but truth. But lest the skill should be known, let the part be made so where the ornament is, that the spectator may not see it, as above his head, that a pavement may come between above his head. And if an ingenious man do this, it is impossible that he should suppose that he is deceived.
 
-**In 1862**, John Henry Pepper (1821-1900) and Henry Dircks (1806-1873) create an illusion (projection) technique, called Pepper's ghost,  used in the theater. 
+**In 1862**, John Henry Pepper (1821-1900) and Henry Dircks (1806-1873) create an illusion (projection) technique, called Pepper's ghost,  used in the theatre. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/history/1862.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -45,7 +45,7 @@ still popular today for head-mounted displays, albeit slightly miniaturised.
 </figure>
 
 
-The basic trick here is that there are two rooms built on the stage, one that people can see into, the other one (called blue room) that is hidden. For the illusion, you set up a big glass in the main room at 45 degree angle that is able to reflect the view of the blue room towards the audience in order to project 'floating' ghost objects onto the spatiality of the twin room.
+The basic trick here is that there are two rooms built on the stage, one that people can see into, the other one (called blue room) that is hidden. For the illusion, you set up a big glass in the main room at a 45-degree angle that is able to reflect the view of the blue room towards the audience in order to project 'floating' ghost objects onto the spatiality of the twin room.
 
 Dircks had come up with the idea, but failed to market it. Pepper teamed up with him, modified the lay-out (reducing installation costs), and made it popular.
 
@@ -110,7 +110,7 @@ This way, AR can display on any transparent display.
     <img src="{{pathToRoot}}/assets/figures/history/1960ies.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>NUS airforce helmet displays (1960ies-70ies)</figcaption>
+    <figcaption>NUS Airforce helmet displays (1960ies-70ies)</figcaption>
 </figure>
 
 
@@ -140,7 +140,7 @@ This way, AR can display on any transparent display.
     <img src="{{pathToRoot}}/assets/figures/history/1994.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Motion stabilised display (1994)</figcaption>
+    <figcaption>Motion stabilized display (1994)</figcaption>
 </figure>
 
 **In 1995**, fiducial tracking in video was introduced by Bajura and Neumann.
@@ -153,7 +153,7 @@ This way, AR can display on any transparent display.
 </figure>
 
 **In 1996**, UNC hybrid magnetic-vision trackers are developed, providing 
-an accuract and robust tracking system for AR application.
+an accurate and robust tracking system for AR application.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/history/1996.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -213,7 +213,7 @@ by MIT technology review.
     <figcaption>Wikitude (2008)</figcaption>
 </figure>
 
-**In 2009**, the LAYAR company was founded, allowing to layer magazine 
+**In 2009**, the LAYAR company was founded, allowing layering of magazine 
 covers and other print media with an overlay AR experience on mobile phones. 
 
 <figure>
@@ -396,7 +396,7 @@ own software development kit.
 - Meta2 (2016)
 - Epson Moverio BT-300 (2016)
 - awe.media Platform (2016)
-- Pokemon Go (2016)
+- Pokémon Go (2016)
 - Camera Effects Frame Studio by Facebook (2017)
 - Apple ARKit (2017)
 - Tencent TBS AR (2017)

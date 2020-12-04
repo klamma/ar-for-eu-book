@@ -165,7 +165,7 @@ border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #1546
 
    After that, select the Unity-package that you just downloaded in the opened file explorer and click *Open*.
    Unity will prepare the Unity-package for the import.
-   Next, a dialog will be shown which allows you select which content should be imported.
+   Next, a dialogue will be shown which allows you to select which content should be imported.
    Click *All* to make sure that everything is selected and then press *Import*.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/ImportPackage.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -268,7 +268,6 @@ We have finished the project setup and can now start with setting up the pieces 
 </figure>
 
    Perform a double click on the scene file in the assets browser to open it in the 3D view.
-   Also, make sure that you switch back to the 
    You can confirm that the scene was opened by looking at the title bar of the Unity window.
    It includes the name of the open scene.
 
@@ -299,7 +298,7 @@ We have finished the project setup and can now start with setting up the pieces 
    You can do this by performing a right-click in Unity's asset browser and choosing *Create > Folder*.
    Download the given checkerboard texture by right-clicking on [this link]({{pathToRoot}}/assets/supplementary_material/sharing/CheckerboardTexture.png) and choosing *Save target as...*.
    Place the texture in the new folder.
-   Simply navigate in the file browser dialog to the place where you saved your Unity project.
+   Simply navigate in the file browser dialogue to the place where you saved your Unity project.
    It contains the asset folder and within it the textures folder.
    If you return to Unity, the texture will show up in the asset browser.
 
@@ -320,9 +319,9 @@ We have finished the project setup and can now start with setting up the pieces 
    Next, we will assign the texture to the material.
    There is an *Albedo* property underneath *Main Maps*.
    Click on the icon with the small circle with a dot in the middle left of the *Albedo* text to choose a texture.
-   A dialog with all textures in the project opens.
+   A dialogue with all textures in the project opens.
    Search for *Checkerboard* (the name of the texture) and select it.
-   After that you can close the dialog window again.
+   After that you can close the dialogue window again.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/AssignTexture.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
   border-image-slice: 1;
@@ -348,7 +347,7 @@ We have finished the project setup and can now start with setting up the pieces 
     <figcaption>Change Tiling Factor</figcaption>
 </figure>
 
-9.We now have a board but we still need the game pieces.
+9.We now have a board, but we still need the game pieces.
    There are two kinds of game pieces in Draughts: A man and a king.
    A king is represented by two stacked pieces.
    To support both kinds of game elements in the application, we will create one general purpose GameObject where two cylinders are stacked on top of each other.
@@ -396,7 +395,7 @@ We have finished the project setup and can now start with setting up the pieces 
 15.Create a Prefab from the stacked pieces.
     To do this, create a new folder in the assets folder called *Prefabs*.
     We want to create instances of the prefab later using the sharing library.
-    Therefore, we need another folder inside of the *Prefab* folder which must be called *Resources*.
+    Therefore, we need another folder inside the *Prefab* folder which must be called *Resources*.
     The name of this folder is important since scripts can access the content folders with this name.
     With the folder open in assets browser, drag and drop the *GamePiece* object from the hierarchy into the assets browser.
     This should create a new file called *GamePiece* with a thumbnail that looks like the game piece that we just created.
@@ -418,7 +417,7 @@ Once a connection has been established, the player switches to the main scene wh
 
 1. Create a new scene called *StartScene*.
    We will use this scene to implement the connection logic to connect to the sharing servers.
-   Double click on the scene file to open it in the 3D view.
+   Double-click on the scene file to open it in the 3D view.
    You can now add the Mixed Reality Toolkit to this scene.
    In the top menu select "Mixed Reality Toolkit > Add to Scene and Configure...".
 
@@ -500,7 +499,7 @@ Once a connection has been established, the player switches to the main scene wh
    The connection methods have a positive and a negative callback method.
    For instance, there is a `OnJoinedRoom()` method that notifies us that the client is now in a room.
    However, the `JoinRandomRoom()` method can also fail if no room exists or all rooms are full.
-   In this case, the negative callback `OnJoinRandomFailed` is called and we can create a new room.
+   In this case, the negative callback `OnJoinRandomFailed` is called, and we can create a new room.
    A new room is created using the method `PhotonNetwork.CreateRoom(...)`.
    The first argument is the room's name.
    Since we left this empty, the server will just generate a random name.
@@ -535,7 +534,7 @@ Once a connection has been established, the player switches to the main scene wh
 Right now, players can enter a room and will find an empty board.
 In the next few steps, we will change this so that the application automatically initializes the play pieces and assigns them a colour.
 
-1. Create a script `BoardInitializer` and attach it the the *Playing Field* GameObject.
+1. Create a script `BoardInitializer` and attach it the *Playing Field* GameObject.
    It will initialize the board by placing the own pieces on the playing field.
 2. Copy and paste the following code to the `BoardInitializer` script.
 
@@ -809,10 +808,10 @@ In the next few steps, we will change this so that the application automatically
 #### 5 - Synchronizing Data with Observables {#Observables}
 
 At this point, the players can find a random room, enter the room and are presented with a playing field where their own side is correctly set up with playing pieces.
-The playing pieces can be moved and they can be upgraded to kings.
+The playing pieces can be moved, and they can be upgraded to kings.
 However, the movement and the state of the playing piece are not yet synchronized.
 In this section, we will tackle the movement synchronization in two alternative ways using observable components.
-Photon provides pre-made components which synchronize common properties like the positon, rotation and scale.
+Photon provides pre-made components which synchronize common properties like the position, rotation and scale.
 They can simply be added to a GameObject and work.
 The second alternative will demonstrate how to synchronize these data using a custom observable.
 
@@ -835,7 +834,7 @@ The second alternative will demonstrate how to synchronize these data using a cu
    1. Create a new script *PositionSyncronizer*.
    2. The script should inherit from MonoBehaviour and it should implement the `IPunObservable` interface from the `Photon.Pun` namespace.
    3. Implement the interface's method `OnPhotonSerializeView(Stream stream, PhotonMessageInfo info)`.
-      The method is called regularly and we can write data to the given stream.
+      The method is called regularly, and we can write data to the given stream.
       Thus, the method is responsible for sending and receiving.
       To decide if we need to write to the stream or read from it, the given stream argument provides a property `isWriting`.
       One can write to the stream using the `SendNext(...)` method and objects can be retrieved using the `ReceiveNext()` method.
@@ -978,12 +977,12 @@ They are not covered in this tutorial since they require a lot more implementati
 - **Avatars**: The same way that we synchronized the playing stones, we can also synchronize the position and rotation of the head-mounted display.
   If we connect this information with some avatar representation, we can visualize remote users in the shared environment.
 
-### Testing on one PC {#Testing}
+### Testing on one PC
 
 Of course, collaborative applications can be tested on two PCs or devices by running the application on each device.
 However, the shared application can also be tested directly on one development PC.
 We need to overcome the problem that a Unity project can only be opened by one editor instance at a time.
-It is possible to open multiple Unity instances but they cannot open the same project simultaneously.
+It is possible to open multiple Unity instances, but they cannot open the same project simultaneously.
 To solve this, we can duplicate the entire project's folder to a different location on disk.
 After that, you can open the duplicated folder in Unity as a separate project.
 In the Unity Hub this can be done by selecting "Add" and by navigating to the duplicated folder.
@@ -997,7 +996,7 @@ There are several options to duplicate the project and to copy changes between t
 You can manually copy the files from one instance to the other.
 Copying an entire Unity project can take quite long as it contains many small cache files.
 You can shorten the copy-time by only copying selected files.
-Intially, you only need to copy the folders *Assets*, *Packages* and *ProjectSettings*.
+Initially, you only need to copy the folders *Assets*, *Packages* and *ProjectSettings*.
 All other folders, e.g. *Library* or *obj* can be reconstructed by Unity.
 
 Alternatively, you can set up a Git repository for the project.
@@ -1005,9 +1004,9 @@ Use a [.gitignore-file for Unity](https://github.com/github/gitignore/blob/maste
 Set up a remote repository, e.g. on GitHub or Gitlab.
 After that, commit the current status and push it to the remote repository.
 Clone the remote repository into another folder to obtain the copy.
-Once you make changes to ony of the two copies, commit them and push the changes to the remote repository.
+Once you make changes to only of the two copies, commit them and push the changes to the remote repository.
 In the other project instance, you can pull the changes.
-This appraoch using Git has the advantage that you can synchronize the two project instances by a few Git commands.
+This approach using Git has the advantage that you can synchronize the two project instances by a few Git commands.
 Since Git only uploads and downloads the changes, this process is quicker than the approach where files are manually copied.
 
 If you are using this setup, it is generally advisable to keep the two project instances separated.
@@ -1032,4 +1031,4 @@ VIAProMa is able to visualize remote participants as customizable avatars.
 The avatar's position and head rotation is synchronized with the position of the device.
 The customization of the avatar is realized using custom user properties.
 
-Since the code for VIAProMa is available on GitHub under an open-source license, you can inspect and adapt this project and its implementation to create your own shared applications.
+Since the code for VIAProMa is available on GitHub under an open-source licence, you can inspect and adapt this project and its implementation to create your own shared applications.

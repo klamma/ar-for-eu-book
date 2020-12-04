@@ -12,7 +12,7 @@ visualizations:
 There are several techniques of creating a virtual representation of 3D models.
 The surface of an object can be approximated by a graph structure which is called mesh.
 An advantage of meshes is that the creator can decide how complex the geometry of an object may become.
-Based on this, the performance of the final application can be optimised by reducing the mesh complexity on unimportant objects.
+Based on this, the performance of the final application can be optimized by reducing the mesh complexity on unimportant objects.
 However, a disadvantage is that it is not possible to create perfectly rounded surfaces.
 The smoother a curvature should be, the more refined the mesh needs to be.
 This will affect the application's performance.
@@ -46,12 +46,12 @@ It is also possible to combine these techniques in one workflow.
 
 ### Compositing Primitives
 
-A beginner-friendly way of manual modeling is to approximate objects by a composition of primitive shapes like cubes or spheres.
+A beginner-friendly way of manual modelling is to approximate objects by a composition of primitive shapes like cubes or spheres.
 Such basic shapes are usually included in 3D programs by default and can directly be added to a scene.
 The primitives are moved, rotated, scaled and stretched in order so that they fit the target object as good as possible.
 For instance, a table can be approximated by creating five cubes.
 One of them is compressed along the vertical axis and represents the tabletop.
-The other four cubes are streched into thin and long cuboids and are aligned with the corners of the tabletop.
+The other four cubes are stretched into thin and long cuboids and are aligned with the corners of the tabletop.
 They act as the legs of the table.
 
 <figure>
@@ -64,9 +64,9 @@ They act as the legs of the table.
 This technique only requires transformations, rotations and scaling operations and therefore, objects can be created without much effort.
 Thus, results can be achieved quickly.
 However, the basic shapes can only approximate the object.
-Intricate shapes and especially organic forms cannot be modeled with this technique.
+Intricate shapes and especially organic forms cannot be modelled with this technique.
 Primitives are best used to prototype a scene {% cite Simonds2013Blender %}, e.g. to block out the general shapes of objects and to establish its proportions.
-Additionally, primitives can also be used as a starting point, e.g. for subsequent manual modeling or sculpting processes.
+Additionally, primitives can also be used as a starting point, e.g. for subsequent manual modelling or sculpting processes.
 
 ### Boolean Operations
 
@@ -81,9 +81,9 @@ For instance, the union operation combines the points of the base volumes using 
 Therefore, a point is part of the resulting volume if it is part of any of the starting volumes.
 For the AND-operator, a point is only part of the resulting volume if it is part of all base volumes.
 This corresponds to the intersection of the objects.
-The substraction operation can be achieved by the NOT operator.
+The subtraction operation can be achieved by the NOT operator.
 Here, the result volume consists of all points which are part of the first volume but are not inside the other volumes.
-The substraction is not symmetric, i.e. it yields different results with different volume orders.
+The subtraction is not symmetric, i.e. it yields different results with different volume orders.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/modeling/BooleanOperations.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -101,16 +101,16 @@ The trimmed meshes are combined into one resulting mesh.
 ### Digital Sculpting
 
 Digital sculpting is inspired by real clay sculpting.
-Similar to real sculpting, the 3D artist starts with a base shape and can pull and dent the virtal material to create bumps and creases.
+Similar to real sculpting, the 3D artist starts with a base shape and can pull and dent the virtual material to create bumps and creases.
 Usually, the large shapes are defined first and then progress is made on smaller details.
 These operations are performed in a 3D sculpting program using a mouse or a tracked stylus {% cite Simo13 %}.
-A difference to real sculpting is that is is possible to dynamically add or remove volume at any point which enables the sculptor to extend the object in any way.
-During the process, the sculpted mass is automatically defined by a mesh which is managed and optimised by the sculpting program.
+A difference to real sculpting is that it is possible to dynamically add or remove volume at any point which enables the sculptor to extend the object in any way.
+During the process, the sculpted mass is automatically defined by a mesh which is managed and optimized by the sculpting program.
 
-With digital scupting the 3D artist can focus on forming the shape of the object without worrying about the underlying mesh geometry.
-Like manual modeling, it is possible to create real and imaginative objects.
+With digital sculpting the 3D artist can focus on forming the shape of the object without worrying about the underlying mesh geometry.
+Like manual modelling, it is possible to create real and imaginative objects.
 However, just like real sculpting, training is required in order to achieve results with high quality.
-Digital scuplting is well suited for creating organic shapes, e.g. for designing characters.
+Digital sculpting is well suited for creating organic shapes, e.g. for designing characters.
 Sometimes, it is also used in a creative way to prototype the shapes of an object with hard edges.
 
 ### Sketch-Based Modeling
@@ -139,45 +139,45 @@ Among other areas of application it is used in aerial photography and archaeolog
 
 ### Manual Mesh Creation
 
-The previous methods all work on an object-level where the modeler is only concerned with the shape of the object while the computer constructs the according mesh data.
+The previous methods all work on an object-level where the modeller is only concerned with the shape of the object while the computer constructs the according mesh data.
 However, it is also possible to manually construct the mesh.
 This means that the 3D artist adds and manipulates individual vertices and defines edges and faces in order to build the final mesh.
 One can either start from scratch or adapt existing primitive shapes.
-An example would be the (artistic) modeling process of a car.
-(In the production process, cars are usually modeled with CAD shapes since they can define exact and smooth curvatures.
-However, for real-time applications like games, cars are modeled as mesh-based objects).
+An example would be the (artistic) modelling process of a car.
+(In the production process, cars are usually modelled with CAD shapes since they can define exact and smooth curvatures.
+However, for real-time applications like games, cars are modelled as mesh-based objects).
 In this example, a 3D artist could start with reference images of the real car which are placed on the top view, front view and side view.
 After that, vertices are placed one by one in such a way that they align with all three background images.
 When placing the vertices, they are connected to edges and also form faces.
 Here, the 3D artist needs to make sure that the edges and face strips follow the major forms of the car's body.
 Additionally, the topology of the mesh needs to be managed, e.g. to avoid a mesh that is too dense.
-3D programs offer different features to support the modeling process.
+3D programs offer different features to support the modelling process.
 Especially a series of generative modifiers like live-mirroring for symmetric shapes or automatically subdividing edges to add more vertices accelerate the process and improve the result {% cite Simonds2013Blender %}.
-Creating realistic 3D object using this technique requires training and in-depth knowledge of the supporting features.
-A wide range of tutorials exist online which teach how to create different objects and explain different tricks which can be used to maximize the effectiveness of the modeling program's features.
+Creating realistic 3D objects using this technique requires training and in-depth knowledge of the supporting features.
+A wide range of tutorials exist online which teach how to create different objects and explain different tricks which can be used to maximize the effectiveness of the modelling program's features.
 
 With mesh creation, the creator has full control over the mesh's complexity and topology.
 This is helpful for optimizations, e.g. if the model should be used in real-time rendering.
 Additionally, a clean topology helps in managing the amount of detail which is portrayed in the mesh.
-It it also helpful for animatable objects since the topology can be laid out in a way that it supports the movements.
+It is also helpful for animatable objects since the topology can be laid out in a way that it supports the movements.
 The main disadvantage of this technique is that it is a tedious and slow process.
 Similar to drawing, the quality of the result depends on the artistic skills of the creator.
-Apart from defining the shape of the object, the modeler also has to think about a suitable topology to repesent the shape as a mesh.
-The technique works well for man-made objects since they consist of clear shapes and hard edges which are good reference points in the modeling process.
+Apart from defining the shape of the object, the modeller also has to think about a suitable topology to represent the shape as a mesh.
+The technique works well for man-made objects since they consist of clear shapes and hard edges which are good reference points in the modelling process.
 Creating organic objects by hand this way is tricky.
 
 ### Box Modeling
 
 Box modelling describes a method in which faces of a polygon cube are extruded and manipulated to create a complex model.
-The process generally utilises a simple iterative method where extruded faces are moved, scaled and rotated to represent an object.
+The process generally utilizes a simple iterative method where extruded faces are moved, scaled and rotated to represent an object.
 The name box modelling refers to the use of a cube as a starting point and often has a very angular result.
 Final stages of the project may work with smoothing functions to provide a more organic look, however during development it is optimal to retain a low polygon count.
 
 ### Retopology
 
-The presented modeling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
+The presented modelling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
 The problem with this mesh is that it is irregular and often bears unnecessary complexity {% cite Simonds2013Blender %}.
-For instance, a 3D scanned table consists of many small triangles but its table top could be simplified to one cuboid shape which only consists of two triangles per side.
+For instance, a 3D scanned table consists of many small triangles but its table-top could be simplified to one cuboid shape which only consists of two triangles per side.
 Additionally, it is not possible to animate the high-complexity 3D meshes since any movement results in condensed geometry and stretched surfaces.
 In real-time rendering, the amount of polygons also has an impact on the runtime of the rendering pipeline.
 This means that high-density meshes will take longer to render and therefore the framerate will be lower.
@@ -187,8 +187,8 @@ After that, a new mesh is created on top of this base mesh.
 This can be done manually or by an algorithm.
 The new mesh is typically created using quads and it considers the shape of the object and how it might be animated.
 As a main idea, the quads form strips which should follow the object's main curves and which should align to any hard edges {% cite Simonds2013Blender %}.
-Since the manual creation of such a retopology mesh is tedious and time consuming, there are algorithms which automate this process {% cite PDZR18 %}.
-The result of the retopology is a mesh which describes almost the same shape as the original high-density mesh but it is more lightweight and optimised.
+Since the manual creation of such a retopology mesh is tedious and time-consuming, there are algorithms which automate this process {% cite PDZR18 %}.
+The result of the retopology is a mesh which describes almost the same shape as the original high-density mesh but it is more lightweight and optimized.
 However, the retopology process may lose some details which were captured by the high vertex-density of the original mesh.
 To solve this, the difference between the two meshes can be "baked" into a displacement or normal texture.
 This way, small details can be captured in the texture and are shown by the shader.
@@ -204,8 +204,8 @@ Details on this displacement and normal maps are described in the "Textures" sec
 ### Subdivision Surface Modeling
 
 A technique which is used for creating smooth, organic surfaces is called Subdivision Surface Modeling {% cite DKTr98 %}.
-The modeler constructs a guide mesh.
-After that, an algorithm constructs a smooth version of the modeled shape.
+The modeller constructs a guide mesh.
+After that, an algorithm constructs a smooth version of the modelled shape.
 It achieves this by subdividing the faces of the guide mesh and by calculating the vertex positions of the resulting mesh with regard to the vertex positions of the guide mesh.
 There are different algorithms which differ concerning the position calculation rules.
 Once the algorithm has been applied, the resulting mesh can act as a new guide mesh for the next iteration of the algorithm.
@@ -280,7 +280,7 @@ For this reason, seams are often placed in areas which are less visible to the v
 
 ### Texture Resources
 
-There are various online repositories which offer photo textures for varying purposes and with different qualities, prices and licenses.
+There are various online repositories which offer photo textures for varying purposes and with different qualities, prices and licences.
 A large amount of these online resources offers PBR-compatible textures which means that it does not only provide image textures but also other data like normal maps, metallic maps, roughness/smoothness maps and ambient occlusion maps.
 
 Here is a list of such texture repositories:
@@ -321,16 +321,16 @@ The following table contains a list of tools which can be used for texture paint
 
 #### Exercise: Texture Painting in Blender
 
-The goal of this exercise is to create a dice.
+The goal of this exercise is to create a die.
 To achieve this, you will texture paint the sides of a cube so that they show the according number of eyes.
 
-1.Blender's startup scene already contains a cube which will act as the mesh for the dice.
+1.Blender's startup scene already contains a cube which will act as the mesh for the die.
   If you already deleted the cube or changed the startup file, you can create a new cube by pressing `Shift + A` and selecting *Mesh > Cube*.
   In Blender 2.8, the primitive mesh types are already UV-unwrapped.
   Hence, we do not need to worry about UV-unwrapping.
 
 2.At the top of the window, a series of tabs can be found.
-  They act as pre-defined workspace configurations for common tasks in the 3D modeling programme.
+  They act as pre-defined workspace configurations for common tasks in the 3D modelling programme.
   Select the tab which says "*Texture Paint*".
   In the figure it is highlighted by `a`.
   The workspace changes to a two-split view.
@@ -384,7 +384,7 @@ To achieve this, you will texture paint the sides of a cube so that they show th
   1024 pixels are a good standard value.
   The texture will be initialized with the given colour.
   You can leave it at the default 80% white.
-  One can also state whether or not the texture should have an alpha cannel.
+  One can also state whether or not the texture should have an alpha channel.
   In this example, we do not need it since the dice does not have transparent parts.
   The *Generated Type* dropdown box should be set to *Blank*.
   This will create a texture with a uniform colour.
@@ -400,7 +400,7 @@ To achieve this, you will texture paint the sides of a cube so that they show th
     <figcaption>Texture Menu</figcaption>
 </figure>
 
-5.The cube should now have the white/gray colour which was set in the texture generation menu.
+5.The cube should now have the white/grey colour which was set in the texture generation menu.
   If you hover your mouse over the 3D view, a white circle surrounds the mouse cursor.
   This circle indicates the size of the brush.
   If you click and drag on the surface of the cube, you can draw white strokes.
@@ -440,13 +440,13 @@ To achieve this, you will texture paint the sides of a cube so that they show th
 
 7.Align your camera with the front of the dice.
   You can do this by hovering over the 3D view with the mouse and pressing `NumPad 1`.
-  The brush circle gives a preview of the position and size of an dice eye.
+  The brush circle gives a preview of the position and size of a dice eye.
   You can change the brush size by shortly pressing `F` and moving the mouse.
   To confirm the new brush size, left click.
 
 8.Draw one test eye by positioning the cursor over the cube's surface and left click once.
   This creates a filled black circle.
-  However, we now see that the drawn circle does not yet look like the eye of a dice.
+  However, we now see that the drawn circle does not yet look like the eye of a die.
   It has a smooth falloff which means that the corners of the circle are blurred and fuzzy.
   To change this, expand the *Falloff* section in the inspector.
   It contains a graph with a smooth curve.
@@ -457,8 +457,8 @@ To achieve this, you will texture paint the sides of a cube so that they show th
   You can experiment with some of them and see how the drawing pattern changes accordingly.
   It is also possible to manipulate the curve in the graph directly by its handling points.
   Since we want a circle with a well-defined rim, we can either take preset with the constant value (the last one on the right) or the circular shape (second one on the left).
-  The constant value gives a sharper rim but it also shows stepping artifacts since no blending is performed.
-  The circular shape produces a relatively sharp rim but also blends the pixels at the borders to avoid stepping artifacts.
+  The constant value gives a sharper rim but it also shows stepping artefacts since no blending is performed.
+  The circular shape produces a relatively sharp rim but also blends the pixels at the borders to avoid stepping artefacts.
   <br/>
 <figure>
     <img src="{{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/6Falloff.png" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -493,7 +493,7 @@ To achieve this, you will texture paint the sides of a cube so that they show th
   Select the *dice_colour* texture that you created.
   The editor will now show the image and an overlay of the UV-unwrapped cube.
   Next, go to the top menu of the Image Editor and select *Image > Save as...*.
-  Save the image somewhere on your harddrive, ideally in the same folder as the .blend-file.
+  Save the image somewhere on your hard drive, ideally in the same folder as the .blend-file.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/8SaveImage.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
@@ -504,12 +504,12 @@ To achieve this, you will texture paint the sides of a cube so that they show th
 11.Any changes to the texture need to be saved manually.
   If you alter the texture, go to *Image > Save* or hover the mouse over the Image Editor and hit `Alt + S` to save the currently displayed texture.
 
-**Futher things to try out**
+**Further things to try out**
 
 - You can also paint the eyes in the Image Editor.
   In the top-left corner of the Image Editor, change the dropdown menu which says *View* to *Paint*.
   You now have the same drawing abilities in the 2D texture view.
-  If you paint either in the texture view or on the 3D model, the other view will update in realtime.
+  If you paint either in the texture view or on the 3D model, the other view will update in real time.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/A1Paint.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
@@ -533,10 +533,10 @@ To achieve this, you will texture paint the sides of a cube so that they show th
 
 Textures can also be baked by 3D programs.
 In this process, information are calculated and stored in a texture.
-This technique can be used to improve the performance of a real-time applications if the lighting situation never changes.
+This technique can be used to improve the performance of a real-time application if the lighting situation never changes.
 The 3D program can pre-calculate the lighting situation once and write the results for each object into textures.
 After that, the textures are applied to the 3D objects.
-The scene does not require any light sources anymore since all information about shadows and surface brightnesses are already included in the textures on the objects.
+The scene does not require any light sources any more since all information about shadows and surface brightnesses are already included in the textures on the objects.
 Since the baking algorithm can use a raytracing renderer, the baked results can be more realistic than the real-time version.
 Real-time render engines only use approximations of light effects, e.g. to calculate shading and shadows.
 In comparison to this, raytracing algorithms simulate individual rays of lights with their reflections and refractions to obtain realistic lighting information.
@@ -546,7 +546,7 @@ Another example are caustics which are produced by transparent objects, e.g. len
 Texture baking is also used to create normal maps.
 In this workflow, a 3D artist creates a high-resolution model, e.g. by sculpting it.
 After that, it is retopologized to a low-resolution model which is suitable for real-time rendering.
-In the reptopogy step, a lot of fine details are lost.
+In the retopology step, a lot of fine details are lost.
 They can be recovered by baking the normals of the high-resolution mesh onto the low-resolution mesh.
 
 #### Exercise: Texture Baking in Blender
@@ -557,9 +557,9 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
    To add objects to the scene, press `Shift + A` and add meshes such as a cube, sphere or monkey.
    Create a ground by adding a plane.
    To arrange objects, press the `G` key and then move the mouse.
-   The movement operation can be confirmed by left-clicking and canceled by right-clicking.
+   The movement operation can be confirmed by left-clicking and cancelled by right-clicking.
 
-2.Select the sphere and monkey objects by left clicking on them (you can also select multiple objects by holding down `Shift` while left clicking).
+2.Select the sphere and monkey objects by left-clicking on them (you can also select multiple objects by holding down `Shift` while left-clicking).
    After that perform a right-click and select *Shade Smooth* which gets rid of their facetted look.
    With the monkey selected, press `Ctrl + 2` to add a subdivision surface modified of level 2 to the monkey.
 <figure>
@@ -581,15 +581,15 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 4.The lighting should also be adapted so that we get interesting illuminations and shadows.
    Add an area light and place it so that the monkey and sphere cast shadows onto the cube object.
    You can also place a point lamp on the opposite side of the objects.
-   An interesting effect can be achieved by tinting the color of the lights so that they are not completely white anymore.
+   An interesting effect can be achieved by tinting the colour of the lights so that they are not completely white any more.
    A live-preview of the lighting situation can be seen by pressing `Z` and selecting *Rendered*.
-   In this preview mode, all viewport operations such as moving the view, moving objects or changing the light color and intensity are still possible.
+   In this preview mode, all viewport operations such as moving the view, moving objects or changing the light colour and intensity are still possible.
 
-5.Add materials to the objects and give them some distinct colors.
+5.Add materials to the objects and give them some distinct colours.
    The materials can be set in the inspector on the right on the small tab with the red and black ball icon (not the globe icon).
-   Add a new material slot and change the color in the field which is labeld *Base Color*.
+   Add a new material slot and change the colour in the field which is labelled *Base Color*.
    You can also give an object a glass material to create intricate caustics on the floor.
-   To change the material type to glass, select the dropdown menu which is labeled *Surface* and is currently set to *Principled BSDF*.
+   To change the material type to glass, select the dropdown menu which is labelled *Surface* and is currently set to *Principled BSDF*.
    Then select the *Glass BSDF* option.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/RenderedPreview.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -606,11 +606,11 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 
 7.We can now proceed to the baking preparations.
    Each object needs a texture to which the baked data can be written.
-   In this case, we will use separate textures but it is also possible to combine multilple objects in one texture if their UV-layouts are non-overlapping.
+   In this case, we will use separate textures but it is also possible to combine multiple objects in one texture if their UV-layouts are non-overlapping.
    Go to the *UV Editing* tab again.
    In the UV editor on the left, select the menu entry *Image > New* to create a new texture.
    Give it a descriptive name, e.g. *cube_bake* and select a high resolution, e.g. 1024px x 1024px or 2024px x 2024px.
-   The color and type do not matter since we will overwrite the texture anyway.
+   The colour and type do not matter since we will overwrite the texture anyway.
 
 8.Repeat the previous step for each object in the scene which should be baked.
    A created texture is not connected to any object so you can create all textures with one object selected.
@@ -635,7 +635,7 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 </figure>
 11.Click on the tab with the camera icon in the inspector on the right to open the render settings.
     We need to set the quality settings for the bake to avoid a grainy bake.
-	Exand the first section which is called "Sampling".
+	Expand the first section which is called "Sampling".
 	It determines how many rays the render engine casts into the scene.
 	This value also applies to baking processes.
 	In general, higher values mean that the result will be less grainy since the brightness values of more rays can be averaged.
@@ -670,4 +670,4 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 
 ### CAD Modeling Tools
 
-## Volumetric Representation
+## Volumetric Representatio

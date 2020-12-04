@@ -170,7 +170,7 @@ In general, the open-closed principle can be realized by using inheritance, abst
 
 ### L: Liskov Substitution Principle
 
-The Liskov substitution principle describes that if a class A has a property P then anay child class B of A must also have the property P {% cite Mart03 %}.
+The Liskov substitution principle describes that if a class A has a property P then any child class B of A must also have the property P {% cite Mart03 %}.
 An implication of this is that any class that references an object of type A can also work with instances of type B without knowing about the specific type.
 
 The Liskov substitution principle can be used to verify that an inheritance between two classes is actually well modelled.

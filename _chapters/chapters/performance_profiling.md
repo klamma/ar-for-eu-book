@@ -37,14 +37,14 @@ The framerate is a number which counts how many images the real-time graphics ap
 Maintaining stable, high framerates is a necessary requirement for a pleasant usage experience.
 In AR and VR applications, low framerates can lead to physical discomfort and dizziness in the form of cybersickness.
 
-AR applications are usually deployed to portable devices like the Microsoft HoloLens and smart phones.
+AR applications are usually deployed to portable devices like the Microsoft HoloLens and smartphones.
 Hence, performance profiling also regards the optimization of the application's power consumption to avoid that the device's battery is drained.
 Additionally, developers should monitor the memory footprint of the application.
 With real-time graphics applications, the memory consumption can quickly rise if the developer uses a lot of high-resolution assets like textures or 3D models.
 
 ## Performance Profiling Tools {#ProfilingTools}
 
-There are various different tools which allow developers to monitor and analyze the performance of an application.
+There are various different tools which allow developers to monitor and analyse the performance of an application.
 They are used to identify bottlenecks and narrow down the reason for a restricted performance.
 
 ### Unity Performance Profiler {#UnityProfiler}
@@ -114,7 +114,7 @@ The rectangles scroll through from right to left and so they show a view how sta
 The framerate threshold which changes the colour of a rectangle is automatically adjusted to the recommendation of each target device.
 For instance, on the HoloLens the rectangles turn green if the framerate is above 60fps while on Android devices a framerate of 30fps suffices to get green rectangles.
 Underneath the line with rectangles, the memory consumption is displayed.
-"Used" show the current memory consumption, "Peak" the maximum amount memory that the application has used since the start and "Limit" shows the amount of memory that is available on the device.
+"Used" show the current memory consumption, "Peak" the maximum amount of memory that the application has used since the start and "Limit" shows the amount of memory that is available on the device.
 At the bottom of the window, a bar visualizes the memory usage with the same colours as the labels above.
 
 <figure>
@@ -130,7 +130,7 @@ To see the real performance on the HoloLens, the application has to be deployed 
 
 #### Disabling the Diagnostics System in the Final Application {#DisableMRTKDiagnostics}
 
-The Visual Profiler Window provides an unintrusive way of performance profiling.
+The Visual Profiler Window provides a nonintrusive way of performance profiling.
 Testers can interact with the application on the device and can see the performance data all the time.
 However, for the final application that is shipped to clients, the Diagnostics System and the Visual Profiler should be turned off.
 This is shown in the following steps:
@@ -234,8 +234,8 @@ On the shown page, you can enter a new username and password.
 ## Performance Optimization {#PerformanceOptimization}
 
 Detailed optimization of an application starts with identifying the bottlenecks of the application.
-After that, a change is conceptualised and realised.
-Finally, the altered version is analyzed again to make sure that the optimization did actually improve the performance.
+After that, a change is conceptualized and realized.
+Finally, the altered version is analysed again to make sure that the optimization did actually improve the performance.
 This high-level process is repeated until the application has an acceptable performance.
 Apart from this general workflow, there are some general hints how a Unity application can be optimized:
 
@@ -248,7 +248,7 @@ For the best usage experience, all listed recommendations should be accepted and
 Apart from this, the following criteria can be considered for optimization.
 To decide which of these recommendations need to be followed, the application should be profiled first.
 This way, the bottlenecks can be identified.
-For instance, there is no need to reduce the complexity of a mesh if there is script in the scene which does a long calculation each frame.
+For instance, there is no need to reduce the complexity of a mesh if there is a script in the scene which does a long calculation each frame.
 In this case, the bottleneck is in the application's logic and not the rendering process.
 
 **Avoid computationally intensive shaders**:
@@ -300,7 +300,7 @@ Additionally, it has a normal vector which points outwards and which is perpendi
 With UV seams, the vertex has two positions on the texture.
 With hard edges, the vertex has two different normal vectors.
 Since vertices internally can only have one texture position and one normal, this means that the vertex is duplicated.
-Both versions of the vertex have the same 3D position but they differ in the texture coordinates or normal vectors.
+Both versions of the vertex have the same 3D position, but they differ in the texture coordinates or normal vectors.
 
 **Reduce the number of objects, use static batching for non-moving objects**:
 For each object in the scene, Unity calls the graphics API to perform a draw call.
@@ -460,7 +460,7 @@ After that, they are picked up and executed by one of the available threads.
 **Avoid `Update()`**:
 The `Update()` method is executed every frame.
 By moving logic from the `Update()` method to other solutions, the processing time of every frame can be improved.
-As an example, a script should be implemented which realises a virtual light switch.
+As an example, a script should be implemented which realizes a virtual light switch.
 There is a virtual button which a script `ToggleButton`.
 If the user presses the button, a property `IsOn` is toggled.
 In the example we assume that the input system calls the method `OnUserClick()` if user input for the GameObject is detected.
@@ -533,7 +533,7 @@ At a glance, this seems to be a useful public variable where the main camera of 
 However, calling `Camera.main` triggers a `FindGameObjectsWithTag()` every time.
 It searches a GameObject with the tag `MainCamera` and does not cache the result.
 Hence, `Camera.main` should be regarded as a reference-fetching method.
-It should be used sparingly by calling it once in the initialisation of the script and then caching the result.
+It should be used sparingly by calling it once in the initialization of the script and then caching the result.
 
 ### Memory Optimizations
 
@@ -541,7 +541,7 @@ It should be used sparingly by calling it once in the initialisation of the scri
 Unlike more-low level programming languages like C++ where developers need to allocate and release memory manually for their objects, C# has a garbage collector which automates the memory management.
 If a new object is created, usually with the `new` keyword, memory is allocated.
 In regular intervals or if there is no memory left, the garbage collector interrupts the execution of the program.
-It analyses which objects are not used anymore and frees the memory that was occupied by these objects.
+It analyses which objects are not used any more and frees the memory that was occupied by these objects.
 While this takes away the development effort of manually managing memory, it comes at a performance trade-off.
 The garbage collector has a large overhead and can lead to visible stuttering in the 3D application if a lot of objects need to be cleaned up.
 Hence, it is advisable to avoid creating new objects and reusing them instead.
