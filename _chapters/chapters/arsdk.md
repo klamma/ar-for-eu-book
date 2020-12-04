@@ -5,11 +5,12 @@ hide: true
 permalink: /chapter/arsdk/
 categories: chapter
 visualizations:
+customjs:
+ - http://code.jquery.com/jquery-1.4.2.min.js
+ - http://yourdomain.com/yourscript.js
 ---
-
 {% include autoRelativePath.html %}
-
-# AR SDKs
+{% include MRTK_selection.html %}
 
 <script>
     // script for exchanging version-specific content.
@@ -22,6 +23,8 @@ visualizations:
     })
 });
 </script>
+
+# AR SDKs
 
 ## Mixed Reality Toolkit
 
