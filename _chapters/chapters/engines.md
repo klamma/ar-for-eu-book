@@ -5,9 +5,12 @@ hide: true
 permalink: /chapter/engines/
 categories: chapter
 visualizations:
+customjs:
+ - http://code.jquery.com/jquery-1.4.2.min.js
+ - http://yourdomain.com/yourscript.js
 ---
-
 {% include autoRelativePath.html %}
+{% include MRTK_selection.html %}
 
 <script>
     // script for exchanging version-specific content.
@@ -189,23 +192,23 @@ The creators have to make sure that the two versions match.
 
 Objects in a scene in Unity can be extended or modified by components.
 In the inspector panel, one can select such components and attach them to an object.
-Objects always contain a Transform component.
+Objects always contain a `Transform` component.
 In the inspector, developers can use this component to specify the position, rotation in Euler angles and scale of the object.
 Additionally, developers can add further components, e.g. to enable the physics simulation on an object or add a scripted behaviour to the object.
 
 ## Physics Simulation
 
-The physics simulation is handled by a *Rigidbody* component.
+The physics simulation is handled by a `Rigidbody` component.
 When it is added to a 3D object, the object will be considered in the physics simulation.
 Once the play mode is entered, it will be affected by gravity and starts falling down.
 Another part of the physics simulation is the collision detection.
 An object should have a collider or else it will pass through other objects like the floor and fall down infinitely.
 By default, Unity's primitive objects like the cube or sphere are already equipped with a collider by default.
 For imported 3D models, the colliders need to be set up manually.
-This can be achieved by adding one or more collider components to the object.
+This can be achieved by adding one or more `Collider` components to the object.
 The available colliders also have primitive shapes like cuboids, spheres or capsules.
-There is also a *Mesh Collider* component which directly uses the object's geometry as a collider.
-It is recommended to avoid using a Mesh Collider and instead approximate the object by a composition of primitive collider shapes.
+There is also a `Mesh Collider` component which directly uses the object's geometry as a collider.
+It is recommended to avoid using a `Mesh Collider` and instead approximate the object by a composition of primitive collider shapes.
 This improves performance since the collision detection for primitives can be calculated quicker than for any arbitrary shaped geometry.
 
 ## Programming in Unity
@@ -217,9 +220,9 @@ In order to execute a script’s functionality, it needs to be added to a 3D obj
 First, the target object has to be selected.
 After that, the component can be added in the inspector panel.
 One can either drag the script from the Assets-browser onto the inspector panel or click on "Add Component" and search for the script's name.
-Scripts can only be added in such a way to objects of a scene if they inherit from the MonoBehavior class.
+Scripts can only be added in such a way to objects of a scene if they inherit from the `MonoBehavior` class.
 Once a script is attached to an object, Unity calls special functions in the script if certain events happened.
-For instance, developers can implement an Update() function which is called once for every frame which is rendered.
+For instance, developers can implement an `Update()` function which is called once for every frame which is rendered.
 Similarly, different callback-methods can be implemented which are raised at different points in the application’s or object’s lifecycle, e.g. `Awake()`, `Start()` and `OnDestroy()`.
 Details on available callback methods and the data structures which can manipulate an object’s properties can be found in Unity’s [documentation](https://docs.unity3d.com/Manual/index.html).
 
@@ -230,7 +233,7 @@ For instance, public variables can be used to fine-tune the scripted behaviour.
 If an object should move along one axis over time, one can expose a public variable which determines the speed of the object.
 In this case, the public variable is never assigned to in the script and the script only reads their value, e.g. to calculate the next position from the given speed.
 Since the speed value is shown in the editor on the component, developers can now tweak it so that it fits their expectations.
-Such input fields on the components are created for primitive variable types but also for all GameObjects, Transforms and MonoBehavior scripts.
+Such input fields on the components are created for primitive variable types but also for all `GameObjects`, `Transforms` and `MonoBehavior` scripts.
 For these complex variable types, a box on the component's UI is created which holds the reference.
 One can directly drag an object from the hierarchy view into the given box to establish the reference to the dragged object.
 The box will automatically be filled with the matching type which is attached to the object.
@@ -296,7 +299,7 @@ We will import a 3D model into Unity and write a script which will control the 3
 </figure>
 
 5.With the 3D object selected in the scene, in the inspector panel, the attributes of the 3D model can be changed.
-   Under "Transform", its position, rotation and size can be adapted to fit the scene.
+   Under `Transform`, its position, rotation and size can be adapted to fit the scene.
    Set the position to (0, 0, 0) so that the object is situated in the origin of the coordinate system.
 
 <figure>
@@ -476,7 +479,7 @@ Some minor adjustments are required to prepare the result from the last exercise
    Additionally, XR support is activated which tells Unity that the build application should run on a head-mounted display.
    For a collaborative experience which uses the networking system which is provided by the MixedRealityToolkit, one can enable the sharing settings.
    However, for this demo this won't be necessary.
-   Hit "*Apply*" to finish the process.
+   Hit *Apply* to finish the process.
    
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ApplyMixedRealityProjectSettings.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -498,7 +501,7 @@ Some minor adjustments are required to prepare the result from the last exercise
    If you want to access the 3D scan of the environment, which is continuously created by the HoloLens, please check *Add the Spatial Mapping Prefab*.
    It places an empty GameObject in the scene with a Spatial Mapping Manager attached to it.
    During runtime, this manager will create and update the mesh of the 3D scanned environment in this scene.
-   Hit "*Apply*" in the dialogue box to adapt the currently open scene for Mixed Reality.
+   Hit *Apply* in the dialogue box to adapt the currently open scene for Mixed Reality.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ApplyMixedRealitySceneSettings.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -512,7 +515,7 @@ Some minor adjustments are required to prepare the result from the last exercise
    Some functionality of the Mixed Reality Toolkit, but also from own scripts, e.g. accessing the microphone, the internet or the spatial mapping, require explicit permission by the user.
    In this dialogue, developers can state that they require this permission.
    If users open the app for the first time, they will be asked to agree to these permissions.
-   If you checked the *Spatial Mapping* option in the previous step, you need to check *Spatial Mapping* here, too.
+   If you checked the `Spatial Mapping` option in the previous step, you need to check `Spatial Mapping` here, too.
 
 7.In the top menu, go to "File > Build Settings".
    In the opened dialogue window, make sure that on the left, the platform is set to Universal Windows Platform.
@@ -615,12 +618,12 @@ One can for instance implement the following interfaces:
 
 A gameobject must have a collider so that the input manager can recognize the object as a possible target.
 We can use any convex 3D collider type which is provided by Unity and it is also possible to set up combinations of colliders.
-In this example, we use a box collider.
+In this example, we use a `Box Collider`.
 
 1. Add a box collider to the bunny.
     To do so, select the bunny gameobject and click "Add Component" in the inspector.
     In the search field, start typing "BoxCollider" and select the entry "Box Collider".
-    It adds a box collider-component to the gameobject.
+    It adds a `Box Collider`-component to the gameobject.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_HoloLensInteraction/AddCollider.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
   border-image-slice: 1;
@@ -681,8 +684,8 @@ We will now implement a short script which illustrates how to react to the case 
 
 7.Add the following code to the script:
 
-    ```
-    public class ColorChanger : MonoBehaviour, IFocusable
+```
+   public class ColorChanger : MonoBehaviour, IFocusable
     {
         public Color focusHighlight = Color.blue;
 
@@ -705,9 +708,9 @@ We will now implement a short script which illustrates how to react to the case 
             rend.material.color = origColor;
         }
     }
-    ```
+```
 
-    Every time the user focuses the object, it will be highlighted in a colour.
+Every time the user focuses the object, it will be highlighted in a colour.
 
 8.In Unity, add the script to the bunny as a component.
     If you want, you can also change the focusHighlight colour to something different in the inspector.
@@ -784,6 +787,7 @@ It does not do the usual scene setup work that the PlayMode test does.
 Possible test scenarios include checking the configuration before the application would start.
 
 Inside a test script, two types of tests can be defined by an attribute in front of the method declaration: [Test] and [UnityTest]
+
 Tests marked with [Test] behave like usual methods which are executed line by line.
 [UnityTest] methods behave like coroutines and should have the return type ```IEnumerator```.
 This way, these tests can contain ```yield``` statements which can delay the execution of subsequent commands.

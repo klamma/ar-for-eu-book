@@ -201,7 +201,7 @@ border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #1546
    
 7.On the next screen, you will be asked to enter the information about the new application.
    Set the type to Photon PUN since we will work with Photon's PUN library.
-   Additionally, give the app a descriptive name, e.g. *SharedDraughts*.
+   Additionally, give the app a descriptive name, e.g. "SharedDraughts".
    You can also add a description if you want so that it becomes easier to identify the app later.
    When you are done, click the *CREATE* button.
 <figure>
@@ -222,10 +222,10 @@ border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #1546
 </figure>
 
 9.Next, we are going to import the Photon library in Unity so that we can create a networked application.
-   In Unity, go to *Window > Asset Store* or press `Ctrl + 9` to open the asset store window.
+   In Unity, go to Window > Asset Store or press `Ctrl + 9` to open the asset store window.
    Make sure that you are signed in with a Unity account so that you can download resources from the asset store.
    If you are not signed in, there is a *Sign in* button at the top right of the asset store panel.
-   Search for *Pun 2 - FREE* and select it.
+   Search for "Pun 2 - FREE" and select it.
    Click on the blue *Add to My Assets* button.
    Once this is done, the button's caption will change to *Import* and you can click the button again to import the asset.
    Just like the Unity-package of the Mixed Reality Toolkit, Unity now displays a dialogue window where you can select which resources you want to import.
@@ -244,8 +244,8 @@ border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #1546
     <figcaption>PUN Setup</figcaption>
 </figure>
 
-    If you have accidentally closed the window or pressed *Skip*, you go to *Window > Photon Unity Networking > Highlight Server Settings*.
-    In the inspector, you can enter the AppID in the *Settings* section under *AppID Realtime*
+If you have accidentally closed the window or pressed *Skip*, you go to Window > Photon Unity Networking > Highlight Server Settings.
+In the inspector, you can enter the AppID in the *Settings* section under *AppID Realtime*
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/PUNServerSettings.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
@@ -258,7 +258,7 @@ border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #1546
 We have finished the project setup and can now start with setting up the pieces of the Draughts game.
 
 1. First, we need to create the scene.
-   To keep things organized, go to the *Scenes* folder in the assets browser, perform a right-click and choose *Create > Scene*.
+   To keep things organized, go to the "Scenes" folder in the assets browser, perform a right-click and choose Create > Scene.
    Name the scene "MainScene".
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/CreateScene.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -271,7 +271,7 @@ We have finished the project setup and can now start with setting up the pieces 
    You can confirm that the scene was opened by looking at the title bar of the Unity window.
    It includes the name of the open scene.
 
-2.In the top menu select *Mixed Reality Toolkit > Add to Scene and Configure*
+2.In the top menu select Mixed Reality Toolkit > Add to Scene and Configure
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/MRTKAddConfigure.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
@@ -279,11 +279,11 @@ We have finished the project setup and can now start with setting up the pieces 
     <figcaption>Add to Scene and Configure</figcaption>
 </figure>
 
-   This adds a *MixedRealityToolkit* GameObject and a *MixedRealityPlayspace* GameObject to the scene's hierarchy.
+   This adds a `MixedRealityToolkit` GameObject and a `MixedRealityPlayspace` GameObject to the scene's hierarchy.
 
-3.Add a cube to the scene by choosing *GameObject > 3D Object > Cube* from the top menu.
+3.Add a cube to the scene by choosing GameObject > 3D Object > Cube from the top menu.
    It will act as the playing field.
-   Rename it in the inspector to *Playing Field*.
+   Rename it in the inspector to "Playing Field".
    There, you can also move the cube to the position (0, 0, 2) so that it is two meter in front of the user at the application start.
    Scale it to the measurements (0.8, 0.02, 0.8) so that it is a flat playing field.
 <figure>
@@ -294,8 +294,8 @@ We have finished the project setup and can now start with setting up the pieces 
 </figure>
    
 4.We will now import the checkerboard texture for the playing field.
-   To keep your project organized, create a new folder with the name *Textures* in the root assets folder.
-   You can do this by performing a right-click in Unity's asset browser and choosing *Create > Folder*.
+   To keep your project organized, create a new folder with the name "Textures" in the root assets folder.
+   You can do this by performing a right-click in Unity's asset browser and choosing Create > Folder.
    Download the given checkerboard texture by right-clicking on [this link]({{pathToRoot}}/assets/supplementary_material/sharing/CheckerboardTexture.png) and choosing *Save target as...*.
    Place the texture in the new folder.
    Simply navigate in the file browser dialogue to the place where you saved your Unity project.
@@ -303,9 +303,9 @@ We have finished the project setup and can now start with setting up the pieces 
    If you return to Unity, the texture will show up in the asset browser.
 
 5.Next, we create a new material.
-   Go to the assets folder in Unity and create a folder *Materials* (right-click, *Create > Folder*).
-   With the folder opened in Unity's asset browser, right-click and select *Create > Material* to create a new material.
-   Enter the name *Checkerboard* and confirm with enter.
+   Go to the assets folder in Unity and create a folder "Materials" (right-click, Create > Folder).
+   With the folder opened in Unity's asset browser, right-click and select Create > Material to create a new material.
+   Enter the name "Checkerboard" and confirm with enter.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/CreateMaterial.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
   border-image-slice: 1;
@@ -315,12 +315,12 @@ We have finished the project setup and can now start with setting up the pieces 
 
 6.Select the material in the asset browser so that it can be configured in the inspector.
    First, we will change the material's shader to the optimized shader of the Mixed Reality Toolkit.
-   Click on the *Shader* dropdown at the top of the inspector and change it to *Mixed Reality Toolkit > Standard*.
+   Click on the *Shader* dropdown at the top of the inspector and change it to Mixed Reality Toolkit > Standard.
    Next, we will assign the texture to the material.
-   There is an *Albedo* property underneath *Main Maps*.
-   Click on the icon with the small circle with a dot in the middle left of the *Albedo* text to choose a texture.
+   There is an "*Albedo*" property underneath *Main Maps*.
+   Click on the icon with the small circle with a dot in the middle left of the "*Albedo*" text to choose a texture.
    A dialogue with all textures in the project opens.
-   Search for *Checkerboard* (the name of the texture) and select it.
+   Search for "Checkerboard" (the name of the texture) and select it.
    After that you can close the dialogue window again.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/AssignTexture.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -353,19 +353,19 @@ We have finished the project setup and can now start with setting up the pieces 
    To support both kinds of game elements in the application, we will create one general purpose GameObject where two cylinders are stacked on top of each other.
    If we want to represent a man, we disable the cylinder on the top; for kings the upper cylinder will be enabled.
    We need a parent GameObject which will hold both cylinders.
-   Add an empty GameObject in the top menu using *GameObject > Create Empty*.
-   Name the GameObject *GamePiece* in the inspector.
+   Add an empty GameObject in the top menu using GameObject > Create Empty.
+   Name the GameObject "GamePiece" in the inspector.
 
-10.Create a cylinder (*GameObject > 3D Object > Cylinder*).
+10.Create a cylinder (GameObject > 3D Object > Cylinder).
     Scale the cylinder to (0.08, 0.01, 0.08) so that it fits onto one field of the board.
-    Make the cylinder a child of the *GamePiece*.
-    This can be done by dragging and dropping the entry of the cylinder onto the entry of the *GamePiece* in the hierarchy view.
-    Move the cylinder to the position (0, 0.01, 0) so that the origin of the *GamePiece* object is at the bottom of the cylinder.
+    Make the cylinder a child of the `GamePiece`.
+    This can be done by dragging and dropping the entry of the cylinder onto the entry of the `GamePiece` in the hierarchy view.
+    Move the cylinder to the position (0, 0.01, 0) so that the origin of the `GamePiece` object is at the bottom of the cylinder.
 
 11.By default, the cylinder has a capsule collider which approximates its shape well with the exception of the caps at the top which are rounded.
     However, the capsule collider cannot approximate the flat shape of the piece.
     Therefore, remove the capsule collider in the inspector.
-    This is possible by clicking on the small cogwheel right of the Capsule Collider section and by selecting *Remove Component* from the opened context menu.
+    This is possible by clicking on the small cogwheel right of the `Capsule Collider` section and by selecting *Remove Component* from the opened context menu.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/RemoveCollider.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
@@ -374,7 +374,7 @@ We have finished the project setup and can now start with setting up the pieces 
 </figure>
 
     After that, add a box collider by clicking the *Add Component* button at the bottom.
-    In the open menu search for *Box Collider* and choose the *Box Collider* component.
+    In the open menu search for "Box Collider" and choose the `Box Collider` component.
     The added box collider automatically fits around the cylinder.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/AddBoxCollider.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -385,20 +385,20 @@ We have finished the project setup and can now start with setting up the pieces 
 
 12.Duplicate the cylinder by selecting it and using the keyboard shortcut `Ctrl + D` and move the new copy to the position (0, 0.033, 0) so that it sits on top of the other cylinder with a little gap between the two pieces.
 
-13.Create a new material in the *Materials* folder and name it *GamePiece*.
-    Change its shader to the *Mixed Reality Toolkit > Standard* shader.
+13.Create a new material in the "Materials" folder and name it "GamePiece".
+    Change its shader to the Mixed Reality Toolkit > Standard shader.
     Apply the material to both cylinder objects by dragging and dropping it onto them.
 
-14.Add a *PhotonView* component to the *GamePiece* GameObject.
+14.Add a `PhotonView` component to the `GamePiece` GameObject.
     This component will later make sure that playing piece can be synchronized.
 
 15.Create a Prefab from the stacked pieces.
-    To do this, create a new folder in the assets folder called *Prefabs*.
+    To do this, create a new folder in the assets folder called "Prefabs".
     We want to create instances of the prefab later using the sharing library.
-    Therefore, we need another folder inside the *Prefab* folder which must be called *Resources*.
+    Therefore, we need another folder inside the "Prefab" folder which must be called "Resources".
     The name of this folder is important since scripts can access the content folders with this name.
-    With the folder open in assets browser, drag and drop the *GamePiece* object from the hierarchy into the assets browser.
-    This should create a new file called *GamePiece* with a thumbnail that looks like the game piece that we just created.
+    With the folder open in assets browser, drag and drop the `GamePiece` object from the hierarchy into the assets browser.
+    This should create a new file called "GamePiece" with a thumbnail that looks like the game piece that we just created.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/GamePiecePrefab.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
   border-image-slice: 1;
@@ -406,7 +406,7 @@ We have finished the project setup and can now start with setting up the pieces 
     <figcaption>Create Game Piece Prefab</figcaption>
 </figure>
 
-16.The prefab is saved on the hard drive and you can delete the *GamePiece* GameObject in the scene.
+16.The prefab is saved on the hard drive and you can delete the `GamePiece` GameObject in the scene.
     Select it and press the delete key on the keyboard.
 
 #### 3 - Setting up the Shared Environment {#SharedEnvironment}
@@ -415,18 +415,18 @@ The application will work with two scenes.
 The player will start in a start scene which is for connecting to the shared environment.
 Once a connection has been established, the player switches to the main scene which contains all the objects.
 
-1. Create a new scene called *StartScene*.
+1. Create a new scene called "StartScene".
    We will use this scene to implement the connection logic to connect to the sharing servers.
    Double-click on the scene file to open it in the 3D view.
    You can now add the Mixed Reality Toolkit to this scene.
    In the top menu select "Mixed Reality Toolkit > Add to Scene and Configure...".
 
 2. Open the scene and create a new empty GameObject.
-   Name it *RoomLauncher*.
+   Name it "RoomLauncher".
    This GameObject will hold a script which initiates the connection try to the servers.
 
-3. Create a new script and call it *RoomLauncher*.
-   To create the script, perform a right-click in the assets browser and select "Create > C# Script".
+3. Create a new script and call it "RoomLauncher".
+   To create the script, perform a right-click in the assets browser and select Create > C# Script.
 
 4. Open the script and implement the following piece of code:
    
@@ -506,13 +506,13 @@ Once a connection has been established, the player switches to the main scene wh
    In the second argument, we can pass settings for the room.
    Since Draughts is a two-player game, we allow a maximum of two players to join a room.
 
-5. Add the script as a component to the GameObject *RoomLauncher*.
+5. Add the script as a component to the GameObject `RoomLauncher`.
 
 6. Next, we will set up the scene switching.
    Note that for the sake of simplicity, we will use Unity's API to switch between scenes.
    However,  the MRTK also provides a scene management system which makes sure that the MRTK is consistent across scenes.
    Since we will not change the configuration of the MRTK in this tutorial, it is fine to stick with Unity's API.
-   Go to "File > Build Settings" and open the Build Settings Window.
+   Go to File > Build Settings and open the Build Settings Window.
    While keep the window open, navigate to your scenes folder in the assets browser.
    First, drag-and-drop the StartScene into the list *Scenes in Build* at the top of the Build Window.
    After that, also drag-and-drop the MainScene.
@@ -534,7 +534,7 @@ Once a connection has been established, the player switches to the main scene wh
 Right now, players can enter a room and will find an empty board.
 In the next few steps, we will change this so that the application automatically initializes the play pieces and assigns them a colour.
 
-1. Create a script `BoardInitializer` and attach it the *Playing Field* GameObject.
+1. Create a script `BoardInitializer` and attach it the `Playing Field` GameObject.
    It will initialize the board by placing the own pieces on the playing field.
 2. Copy and paste the following code to the `BoardInitializer` script.
 
@@ -631,18 +631,18 @@ In the next few steps, we will change this so that the application automatically
    Finally, we place the camera on the opposite end of the board if this is the second player.
 
 3. We still need to establish the reference to the public variable *MixedReality Playspace*.
-   Select the *PlayingField* GameObject.
+   Select the `PlayingField` GameObject.
    Next, drag-and-drop the GameObject entry of the *MixedReality Playspace* from the hierarchy into the inspector and onto the *Mixed Realiy Playspace* field.
 5. The next step is to add the interaction so that the user can move the object.
-   Open the *GamePiece* prefab again and add a component *Object Manipulator*.
+   Open the "GamePiece" prefab again and add a component `Object Manipulator`.
    This component is from the Mixed Reality Toolkit and allows users to drag objects through the scene.
 6. The playing pieces should rest on the board.
    However, if we give users free movement options, the stones can also be placed in mid-air.
-   Hence, we can add a constraint to the *Object Manipulator*.
-   In the inspector, the component has a section *Constraints*.
+   Hence, we can add a constraint to the `Object Manipulator`.
+   In the inspector, the component has a section "Constraints".
    Click the dropdown menu below it and select *MoveAxisContraint*.
-   This will add a *Move Axis Constraint* component below the *ObjectManipulator* component in the inspector.
-   In the *Move Axis Constraint*, set the *Constraint on Movement* to *Y Axis*.
+   This will add a `Move Axis Constraint` component below the `ObjectManipulator` component in the inspector.
+   In the `Move Axis Constraint`, set the *Constraint on Movement* to *Y Axis*.
    This disallows up and down movement of the pieces so that they will always stay flat on the playing board.
 7. Now, we can implement the upgrade functionality which toggles between a man, symbolized by one play stone, and a king who consists of two stacked stones.
    We have already set up the prefab with two pieces on top of each other, so all we have to do in the script is to deactivate the top piece.
@@ -702,7 +702,7 @@ In the next few steps, we will change this so that the application automatically
    We still need to give the user a way to switch between the man and king representation.
    To do this, the user will be able to tap on the playing stone and it will toggle between man and king.
    So, implement a new script `ClickRecognizer` which will allow us to recognize taps on the object.
-   Add the script to the *GamePiece* prefab.
+   Add the script to the "GamePiece" prefab.
 9. Implement the following code in the script:
 
    ```[C#]
@@ -755,9 +755,9 @@ In the next few steps, we will change this so that the application automatically
     We need to set the colour of the playing piece based on its owner.
     We do not actually need to synchronize the colour itself because we can simply reconstruct it from data that we already get.
     If a networked object is created in a scene, the player who created the object automatically becomes its owner.
-    The owner can be read from the *PhotonView* component.
-    So, make sure that there is a *PhotonView* component on the *GamePiece* prefab.
-    Create a new script `PieceInitializer` and attach it to the *GamePiece* prefab.
+    The owner can be read from the `PhotonView` component.
+    So, make sure that there is a `PhotonView` component on the "GamePiece" prefab.
+    Create a new script `PieceInitializer` and attach it to the "GamePiece" prefab.
 11. Paste the following code into the `PieceInitializer` script:
 
     ```[C#]
@@ -816,16 +816,16 @@ They can simply be added to a GameObject and work.
 The second alternative will demonstrate how to synchronize these data using a custom observable.
 
 1. In Unity's assets browser, navigate to the prefabs folder and open the GamePiece prefab by double-clicking on it.
-2. The central component which is necessary to synchronize GameObjects with Photon is the *Photon View*.
-   Select the root GameObject of the prefab and in the inspector, add the *Photon View* component.
+2. The central component which is necessary to synchronize GameObjects with Photon is the `Photon View`.
+   Select the root GameObject of the prefab and in the inspector, add the `Photon View` component.
    It acts as an observer which is able to monitor other components on the GameObjects and can broadcast their changes over the network.
-3. This step is divided into two alternative components that can be monitored by the *Photon View*.
+3. This step is divided into two alternative components that can be monitored by the `Photon View`.
    The pre-defined Photon Transform View does not require any programming but only gives the standard options per GameObjects.
    Own observables give more flexibility but require implementation work.
    *After the steps for one of the alternatives, continue with step 4.*
    
    **Alternative 1:** Pre-defined Photon Transform View
-   1. Select the root GameObject and add a component "Photon Transform View" in the inspector.
+   1. Select the root GameObject and add a component `Photon Transform View` in the inspector.
       It can be used to synchronize the position, rotation and scale of a GameObject.
    2. The play stones cannot be rotated or scaled by the player.
       Hence, it is sufficient to only check position and to uncheck rotation and scale.
@@ -880,12 +880,12 @@ We could also synchronize the current status of the play piece using observables
 However, the change from man to king only happens occasionally, so there is no need to create an observable that is serialized multiple times per second.
 Instead, we will use Remote Procedure Calls (RPCs) to broadcast the change.
 
-1. Create a new script `PieceStateSynchronizer` and attach it to the root object of the *PlayPiece* prefab.
+1. Create a new script `PieceStateSynchronizer` and attach it to the root object of the "PlayPiece" prefab.
 2. Like observables, RPCs require a *PhotonView* component.
-   Make sure that there is a *PhotonView* object on the same GameObject.
+   Make sure that there is a `PhotonView` object on the same GameObject.
 3. In the script, change the base class from `MonoBehaviour` to `MonoBehaviourPun`.
    This requires the using-directive `using Photon.Pun`.
-   This way, the script already contains a reference to the *PhotonView* component and we do not need to fetch it ourselves.
+   This way, the script already contains a reference to the `PhotonView` component and we do not need to fetch it ourselves.
 
 4. Create a method `void BroadcastStoneState()`.
    We will call this method if the stone changes between man and king.
@@ -903,9 +903,9 @@ Instead, we will use Remote Procedure Calls (RPCs) to broadcast the change.
    }
    ```
    
-   First, we get a reference to the *PieceStateManager* component, if we have not cached it already.
+   First, we get a reference to the `PieceStateManager` component, if we have not cached it already.
    This way, we can access the current state and can tell if the stone is a man or a king.
-   The last line invokes an RPC with the name *ReceiveStoneState* and sends it to all other connected clients.
+   The last line invokes an RPC with the name "ReceiveStoneState" and sends it to all other connected clients.
    As an argument, it passes in the status of the stone which we defined in the `StoneStateManager`.
 
 6. We now need to create the method `void ReceiveStoneState(...)` which is invoked by the RPC.
@@ -972,7 +972,7 @@ They are not covered in this tutorial since they require a lot more implementati
   You can visualize this list in the application and you can join a specific room by passing its name in the `JoinRoom` method.
 - **Owner Transfer**: At the moment, the stones have a fixed owner, meaning that they can only be moved by that owner.
   In this example this makes sense as you are only allowed to move your own play pieces.
-  However for other examples, the owner can be changed by switching the owner option in the *PhotonView* component from *Fixed* to *Takeover* or *Request*.
+  However for other examples, the owner can be changed by switching the owner option in the `PhotonView` component from *Fixed* to *Takeover* or *Request*.
   In code, the ownership can be transferred, e.g. if a player starts moving the stone.
 - **Avatars**: The same way that we synchronized the playing stones, we can also synchronize the position and rotation of the head-mounted display.
   If we connect this information with some avatar representation, we can visualize remote users in the shared environment.
@@ -996,8 +996,8 @@ There are several options to duplicate the project and to copy changes between t
 You can manually copy the files from one instance to the other.
 Copying an entire Unity project can take quite long as it contains many small cache files.
 You can shorten the copy-time by only copying selected files.
-Initially, you only need to copy the folders *Assets*, *Packages* and *ProjectSettings*.
-All other folders, e.g. *Library* or *obj* can be reconstructed by Unity.
+Initially, you only need to copy the folders "Assets", "Packages" and "ProjectSettings".
+All other folders, e.g. "Library" or "obj" can be reconstructed by Unity.
 
 Alternatively, you can set up a Git repository for the project.
 Use a [.gitignore-file for Unity](https://github.com/github/gitignore/blob/master/Unity.gitignore) so that only necessary files are stored.
