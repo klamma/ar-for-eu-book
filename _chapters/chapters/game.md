@@ -58,7 +58,7 @@ This avoids that an inexperienced user gets frustrated with the game by facing a
 The difficulty of the game can increase while the player levels up based on the assumption that the user got acquainted to the game's mechanics and controls.
 In a similar way, multiplayer games can implement a matchmaking logic which avoids that low-level beginners have to play against experienced players on a higher level.
 
-[Todoist](https://get.todoist.help/hc/de/articles/206209959-Karma) is an example of a gamified application which uses levels.
+[Todoist](https://get.todoist.help/hc/en-us/articles/206209959-Karma) is an example of a gamified application which uses levels.
 Users earn karma points by completing to-do items and meeting productivity goals.
 Points are lost if tasks are overdue.
 Based on the number of points, the app classifies users in one of eight levels, ranging from "Beginner" to "Enlightened".
