@@ -45,7 +45,7 @@ We will work on constructing a 3D character, including the steps of obtaining a 
 ## Part 1. 3D Scanning {#part-1-3D-scanning}
 
 3D scanning is the process of analysing a real-world object or environment to collect data on its shape and colour to construct a 3D model.
-More detail is described in [Huang, Wild, Twycross (2019)](https://www.researchgate.net/profile/Fridolin_Wild/publication/337985851_A_Process_for_the_Semi-Automated_Generation_of_Life-Sized_Interactive_3D_Character_Models_for_Holographic_Projection/links/5df8fa914585159aa484d1d8/A-Process-for-the-Semi-Automated-Generation-of-Life-Sized-Interactive-3D-Character-Models-for-Holographic-Projection.pdf).  
+More detail is described in {% cite HTWi19 %} [(PDF)](https://www.researchgate.net/profile/Fridolin_Wild/publication/337985851_A_Process_for_the_Semi-Automated_Generation_of_Life-Sized_Interactive_3D_Character_Models_for_Holographic_Projection/links/5df8fa914585159aa484d1d8/A-Process-for-the-Semi-Automated-Generation-of-Life-Sized-Interactive-3D-Character-Models-for-Holographic-Projection.pdf).  
 
 In this tutorial, we will build an animated model of a character that can be used in an Augmented Reality application.
 We suggest using a technology that combines depth sensing and colour and requires specific hardware [Structure sensor](https://structure.io/).
