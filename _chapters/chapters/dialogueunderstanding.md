@@ -343,15 +343,15 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 
 
-**Note:** However, if your URL is very long, it cannot work in Unity. For example, in this picture the URL should be https://api.eu-gb.assistant.watson.cloud.ibm.com
+**Note:** However, if your URL is very long, it cannot work in Unity. For example, in this picture the URL should be <https://api.eu-gb.assistant.watson.cloud.ibm.com>
 
 *Service endpoints by location:*
 
-·    London: https://api.eu-gb.assistant.watson.cloud.ibm.com
+·    *London:* <https://api.eu-gb.assistant.watson.cloud.ibm.com>
 
-·    Frankfurt: https://api.eu-de.assistant.watson.cloud.ibm.com
+·    *Frankfurt:* <https://api.eu-de.assistant.watson.cloud.ibm.com>
 
-·    Washington, DC: https://api.us-east.assistant.watson.cloud.ibm.com
+·    *Washington, DC:* <https://api.us-east.assistant.watson.cloud.ibm.com>
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.3.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -406,7 +406,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 
 
-Service of Speech to Text endpoints by location*
+*Service of Speech to Text endpoints by location*
 
 ·    *Washington, DC:* [*https://api.us-east.speech-to-text.watson.cloud.ibm.com*](https://api.us-east.speech-to-text.watson.cloud.ibm.com)
 
@@ -414,18 +414,18 @@ Service of Speech to Text endpoints by location*
 
 ·    *London:* [*https://api.eu-gb.speech-to-text.watson.cloud.ibm.com*](https://api.eu-gb.speech-to-text.watson.cloud.ibm.com)
 
-​         
-​         
-​         *Service of Text to Speech endpoints by location*
-​         
-​         ·    Washington DC: https://api.us-east.text-to-speech.watson.cloud.ibm.com
-​         
-​         ·    Frankfurt: https://api.eu-de.text-to-speech.watson.cloud.ibm.com
-​         
-​         ·    London: https://api.eu-gb.text-to-speech.watson.cloud.ibm.com
-​         
-​         
-​         
+
+
+*Service of Text to Speech endpoints by location*
+
+·    *Washington, DC:* <https://api.us-east.text-to-speech.watson.cloud.ibm.com>
+
+·    *Frankfurt:* <https://api.eu-de.text-to-speech.watson.cloud.ibm.com>
+
+·    *London:* <https://api.eu-gb.text-to-speech.watson.cloud.ibm.com>
+
+​
+
 ​         **Step 5.8.** Before playing it, we need to configure your service credentials. Save unity file (Ctrl+S), close Unity > open the location of the Unity file > find ibm_credentials.env, and open it.
 ​         
 <figure>
