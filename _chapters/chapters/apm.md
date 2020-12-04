@@ -200,7 +200,7 @@ This is your first user story: *"As a developer, I want to settle the Definition
   - Encoding
 - Helpful for *Collective Code Ownership* within small teams, indispensable for open source
   - E.g. Google's Java style guide
-  - [https://google-styleguide.googlecode.com/svn/trunk/javaguide.html]
+  - <https://google-styleguide.googlecode.com/svn/trunk/javaguide.html>
 
 ### Code Review
 

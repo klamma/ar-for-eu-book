@@ -175,7 +175,7 @@ The SpaceScannerManager script takes care of all this.
 It communicates with the SpatialMapping to start and stop the observer responsible for scanning the room mesh, cleaning the mesh once scanned, and checking whether enough surfaces have been scanned (satisfying the min floors and min walls requirements set).
 Moreover, it provides three methods for the buttons to control: StartScanning(), StopScanning(), and StartApp().
 
-The way the SpaceScannerManager class works is: StartScanning() activates the spatial map-ping by starting the according Spatial Mapping observer, setting the “scanning” flag to true (thus calling the planes extraction method in Update() in every frame), and registering a callback to MeshToPlanes() for every time the planes extraction concludes:
+The way the SpaceScannerManager class works is: StartScanning() activates the spatial mapping by starting the according Spatial Mapping observer, setting the “scanning” flag to true (thus calling the planes extraction method in Update() in every frame), and registering a callback to MeshToPlanes() for every time the planes extraction concludes:
 
 ```c#
 public void StartScanning()
@@ -319,7 +319,7 @@ The canvas needs to be resized and properly positioned so that the button floats
 </figure>
 
 While we are at it, we also add Mesh Colliders (click ‘Add Component’ and search for it) to each of the brain segments.
-We will need those later so that they can be hit targets in the inter-action.
+We will need those later so that they can be hit targets in the interaction.
 
 The Mesh Colliders will automatically be fitted to the shape of the brain segment.
 
@@ -330,7 +330,7 @@ The Mesh Colliders will automatically be fitted to the shape of the brain segmen
     <figcaption>Mesh colliders</figcaption>
 </figure>
 
-Since the button is on the prefab, we need to add an event listener for the ‘on click’ event, oth-erwise nothing will happen upon air tapping the button.
+Since the button is on the prefab, we need to add an event listener for the ‘on click’ event, otherwise nothing will happen upon air tapping the button.
 We therefore modify the InstallObjects() method of the Object Collection game object.
 We find the button object via its name, and then add the according event listener (linking against the new PopulateSpace.ExploreBrain() method shown below).
 
@@ -378,7 +378,7 @@ currObj.AddComponent<SegmentHighlights>();
 
 Finally, a script to highlight the segments (SegmentHighlights) is added by code.
 Let us look into this highlighter script.
-First, the script installs a listener for the gesture recogniser and regis-ters a callback for whenever the air tap gesture has been detected (linking to method ‘on-Tapped’).
+First, the script installs a listener for the gesture recogniser and registers a callback for whenever the air tap gesture has been detected (linking to method ‘on-Tapped’).
 
 ```c#
 void Start() {
@@ -435,7 +435,7 @@ FocusedObject = null;
 }
 ```
 
-If it has hit a game object, we can check whether the name is any of the names of the brain segments, and react accordingly by moving the segment into a predefined direction (left half goes back, right half goes forward, stem up, etc.
+If it has hit a game object, we can check whether the name is any of the names of the brain segments, and react accordingly by moving the segment into a predefined direction (left half goes back, right half goes forward, stem up, etc.)
 
 Moreover, we can add a method for handling the highlighting to the Update routine of the class.
 
@@ -480,7 +480,7 @@ HighlightSegment(FocusedObject);
 ```
 
 Again, the HoverHandler uses a ray cast to find out whether something (and what) has been hit by the ray cast from the position and orientation of the head-worn camera.
-If it is a brain seg-ment, and if this has not already been hit previously (in previous frames of the update loop), then the highlight and remove highlight routines will be called.
+If it is a brain segment, and if this has not already been hit previously (in previous frames of the update loop), then the highlight and remove highlight routines will be called.
 
 ```c#
 
@@ -512,5 +512,5 @@ Those routines simply remember the colour in use of the brain segment (they all 
     <figcaption>OnTapped</figcaption>
 </figure>
 
-NOTE: The 3D brain model is from https://free3d.com/3d-model/brain-18357.html and free for personal use.
-The Placeable and GazeGestureManager behaviour scripts are from the Mi-crosoft Holoacademy Spatial Mapping tutorial.
+NOTE: The 3D brain model is from <https://free3d.com/3d-model/brain-18357.html> and free for personal use.
+The Placeable and GazeGestureManager behaviour scripts are from the Microsoft Holoacademy Spatial Mapping tutorial.

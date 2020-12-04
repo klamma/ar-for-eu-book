@@ -977,7 +977,7 @@ They are not covered in this tutorial since they require a lot more implementati
 - **Avatars**: The same way that we synchronized the playing stones, we can also synchronize the position and rotation of the head-mounted display.
   If we connect this information with some avatar representation, we can visualize remote users in the shared environment.
 
-### Testing on one PC
+### Testing on one PC {#Testing}
 
 Of course, collaborative applications can be tested on two PCs or devices by running the application on each device.
 However, the shared application can also be tested directly on one development PC.
