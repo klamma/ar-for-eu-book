@@ -145,7 +145,13 @@ One also needs to be careful with ferromagnetic elements which can influence the
 
 ## Inertial
 
-An Inertial Measurement Unit (IMU) is a sensor that reports - typically (but sometimes only a subset) - acceleration, rotation speed, and orientation from an accelerometer, gyroscope, and (not always) a magnetometer. Applications of IMUs are for motion capture or as input modality in interaction. The IMU in your mobile phone allows your maps application to function when the GPS signal is not available, for example while driving in a tunnel or when inside a building. Most modern delivery devices have built in IMUs (smart glasses, mobile phones, tablet computers) or are used in combination with the delivery system (like with pico projectors). All IMUs inevitably suffer from drift, some of them more, some of them less, typically then using on board or software sensor fusion to reduce its amount. The software interface to the inertial measurement unit provides typically a quaternion for orientation (or Euler angles), and vectors for velocity and acceleration. These can be directly mapped in 3D environments to control objects (as a direct-mapping interaction device) or the viewing camera renderer (for scene exploration, think smart glasses). 
+An Inertial Measurement Unit (IMU) is a sensor that reports - typically (but sometimes only a subset) - acceleration, rotation speed, and orientation from an accelerometer, gyroscope, and (not always) a magnetometer.
+Applications of IMUs are for motion capture or as input modality in interaction.
+The IMU in your mobile phone allows your maps application to function when the GPS signal is not available, for example while driving in a tunnel or when inside a building.
+Most modern delivery devices have built in IMUs (smart glasses, mobile phones, tablet computers) or are used in combination with the delivery system (like with pico projectors).
+All IMUs inevitably suffer from drift, some of them more, some of them less, typically then using on board or software sensor fusion to reduce its amount.
+The software interface to the inertial measurement unit provides typically a quaternion for orientation (or Euler angles), and vectors for velocity and acceleration.
+These can be directly mapped in 3D environments to control objects (as a direct-mapping interaction device) or the viewing camera renderer (for scene exploration, think smart glasses).
 
 
 # Setups

@@ -200,7 +200,7 @@ This is your first user story: *"As a developer, I want to settle the Definition
   - Encoding
 - Helpful for *Collective Code Ownership* within small teams, indispensable for open source
   - E.g. Google's Java style guide
-  - <https://google-styleguide.googlecode.com/svn/trunk/javaguide.html>
+  - <https://google.github.io/styleguide/javaguide.html>
 
 ### Code Review
 
@@ -232,13 +232,13 @@ Merge conflicts arise if the same content in a file was edited on both branches.
 
 Software projects can structure branches using different git-workflows.
 A popular example is the git-flow workflow {%cite Drie10 %}.
-It consists of a master-branch, a develop-Branch, feature branches, release branches and hotfix-branches.
+It consists of a main-branch (also called master-branch), a develop-Branch, feature branches, release branches and hotfix-branches.
 
-![master, develop and features]({{pathToRoot}}/assets/figures/apm/gitFlowWorkflow.svg)
+![Gitflow workflow]({{pathToRoot}}/assets/figures/apm/gitFlowWorkflow.svg)
 
 For Web apps which do not require explicit version releases, a GitHub flow is suitable.
 Feature are developed on different branches.
-If a feature has been finished, a merge request is created, it is reviewed and discusssed and finally, the branch is merged into the master branch.
+If a feature has been finished, a merge request is created, it is reviewed and discusssed and finally, the branch is merged into the main branch.
   
 ### Continuous Integration
 
@@ -416,7 +416,7 @@ We reflect end-user contributions for ‘ideas and needs’, ‘co-design’, �
 
 In order to support end-user groups with consumer-friendly web apps for the DevOpsUse methodology, we can draw on a range of tools of the DevOps chain. 
 
-More details on the DevOpsUse methodology and its tools is available on [http://results.learning-layers.eu/](http://results.learning-layers.eu/), with [webcasts](https://goo.gl/6NbU28) for the tools.
+More details on the DevOpsUse methodology and its tools is available on [http://results.learning-layers.eu/](http://results.learning-layers.eu/), with [webcasts](https://www.youtube.com/watch?v=ShsJl3RbfBw&list=PLFG-haHKJTRddHlbQTnTPl-oOoEaEv5Ia) for the tools.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/apm/DevOpsUse.png" style="align:left; width: 60%; height: 60%; border: 15px solid;

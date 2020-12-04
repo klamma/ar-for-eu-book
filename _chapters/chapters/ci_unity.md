@@ -9,8 +9,6 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-# Unit Tests
-
 ## Unit Tests in Unity
 
 Unity provides a module called "Unity Test Framework".
@@ -199,7 +197,7 @@ Other unit test cases include simulated answers with where the developer passes 
 For C#, there are different mocking frameworks available such as NSubstitute, moq or FakeItEasy.
 
 
-# Continuous Integration
+## Continuous Integration
 
 Continuous integration allows projects to run checks and builds in an automated manner.
 Such a CI routine is executed when new changes are committed to the repository.
@@ -208,7 +206,7 @@ Moreover, it assumes that quality standards are met, e.g. when reviewing merge r
 This can be done by defining a range of tasks that e.g. run unit tests, compile the code, generate documentation, calculate code quality metrics and deploy results to devices.
 CI is applied to a source-controlled repository, e.g. on GitHub or Gitlab since this ensures that all developers work on the same code basis.
 
-## GitHub Actions
+### GitHub Actions
 
 [GitHub Actions](https://github.com/features/actions) is an automation feature for GitHub repositories.
 It gives developers the option to define workflows by combining a series actions.
@@ -229,7 +227,7 @@ Tasks can run on GitHub's Linux, Windows or macOS runners.
 Each of them have different fees and they contribute at weights to the initial limit ([GitHub Actions Pricing](https://docs.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions)).
 Unity actions can run on Linux machines which are the cheapest option.
 
-### Tutorial: CI with GitHub Actions for Unity Repositories
+#### Tutorial: CI with GitHub Actions for Unity Repositories
 
 This tutorial will demonstrate how to set up the GitHub Actions for Unity repositories.
 After finishing this tutorial, the GitHub repository will automatically perform checks of the unit tests and build the project.
@@ -250,7 +248,7 @@ Finally, we will receive the valid licence which can then be added to the list o
 
 After the activation, we create the workflow for the unit tests and after that, we will tackle the automatic build of the application's install files.
 
-#### Creating a Workflow File
+##### Creating a Workflow File
 
 As a prerequisite, you require an GitHub account and a repository on GitHub with a Unity project.
 Either choose an existing project or create a new empty project and upload it to GitHub.
@@ -296,3 +294,5 @@ Either choose an existing project or create a new empty project and upload it to
    
 
 ## Gitlab CI
+
+Gitlab provides a runner 
