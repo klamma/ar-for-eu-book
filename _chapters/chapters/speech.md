@@ -13,7 +13,7 @@ visualizations:
 
 In recent years, speech interaction has become pretty much ubiquitous.
 Many different types of speech applications exist and according commercial and free toolkits are plenty:
-speech output (‘text2speech’), dictation, keyword recognition (“start”), complex keyword recognition with grammar parsing using slots (“turn red”), dialogue understanding with recognised intents (“Maggie, find a train to London that leaves now”), and dialogue management (with story flow) are probably the most important categories.
+speech output (‘text2speech’), dictation, keyword recognition (“start”), complex keyword recognition with grammar parsing using slots (“turn red”), dialogue understanding with recognized intents (“Maggie, find a train to London that leaves now”), and dialogue management (with story flow) are probably the most important categories.
 
 The HoloToolkit and Unity offer support for various of these, but for here we will focus on the most simple approach: keyword recognition.
 While the managers in the HoloToolkit have changed names over time, for the version we are using, two scripts are relevant:
@@ -29,7 +29,7 @@ we drag and drop “SpeechInputHandler” and “SpeechIn-putSource” from the 
 Activate ‘Is Global Listener’ in the Speech Input Handler.
 
 We then create a new keyword in the Speech Input Source first (click ‘+’), adding the keyword ‘explore’.
-Subsequently, we can select ‘explore’ in the Speech Input Handler and add the func-tion call the keyword shall trigger (drag & drop ObjectCollection, select Popu-lateSpace.ExploreBrain).
+Subsequently, we can select ‘explore’ in the Speech Input Handler and add the function call the keyword shall trigger (drag & drop ObjectCollection, select PopulateSpace.ExploreBrain).
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/speech/speech-2.png" style="align:left; width: 40%; height: 40%; border: 15px solid;

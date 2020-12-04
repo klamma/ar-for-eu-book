@@ -43,9 +43,9 @@ This tutorial will familiarize you with 3D scanning and animation. We will work 
 
 ## Part 1. 3D Scanning {#part-1-3D-scanning}
 
-3D scanning is the process of analyzing a real-world object or environment to collect data on its shape and color to construct a 3D model. More detail is described in [Huang, Wild, Twycross (2019)](https://www.researchgate.net/profile/Fridolin_Wild/publication/337985851_A_Process_for_the_Semi-Automated_Generation_of_Life-Sized_Interactive_3D_Character_Models_for_Holographic_Projection/links/5df8fa914585159aa484d1d8/A-Process-for-the-Semi-Automated-Generation-of-Life-Sized-Interactive-3D-Character-Models-for-Holographic-Projection.pdf).  
+3D scanning is the process of analysing a real-world object or environment to collect data on its shape and colour to construct a 3D model. More detail is described in [Huang, Wild, Twycross (2019)](https://www.researchgate.net/profile/Fridolin_Wild/publication/337985851_A_Process_for_the_Semi-Automated_Generation_of_Life-Sized_Interactive_3D_Character_Models_for_Holographic_Projection/links/5df8fa914585159aa484d1d8/A-Process-for-the-Semi-Automated-Generation-of-Life-Sized-Interactive-3D-Character-Models-for-Holographic-Projection.pdf).  
 
-In this tutorial, we will build an animated model of a character that can be used in an Augmented Reality application. We suggest using a technology that combines depth sensing and color and requires specific hardware [Structure sensor](https://structure.io/). However, a 3D model can be made by 3D scanning using other technologies, for example, with more accessible methods of photogrammetry (like with your smartphone and a free version of [3DF Zephyr](https://www.3dflow.net/)).
+In this tutorial, we will build an animated model of a character that can be used in an Augmented Reality application. We suggest using a technology that combines depth sensing and colour and requires specific hardware [Structure sensor](https://structure.io/). However, a 3D model can be made by 3D scanning using other technologies, for example, with more accessible methods of photogrammetry (like with your smartphone and a free version of [3DF Zephyr](https://www.3dflow.net/)).
 
 **_Note:_** _If you want to skip the 3D scanning part of the tutorial, you can download an example 3D scan of a human ([download]({{pathToRoot}}/assets/supplementary_material/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning-example-scan.zip)) that we made with a Structure sensor._
 
@@ -204,7 +204,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 
 **Step 3.1:** Open the 3D model exported from Wrap in Maya.
 
-**Step 3.2:** Combining polygons of the new 3D model. In the Outliner viewport, select all polygon elements and them select Mesh > Combine
+**Step 3.2:** Combining polygons of the new 3D model. In the Outliner viewport, select all polygon elements and then select Mesh > Combine
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_01.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -258,13 +258,13 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 </figure>
 
 
-**Step 3.9:** Applying texture (3/4). In the Attribute editor, the new Lambert material will appear. In the Common Material Attributes, click on the “Check-pattern” button next to the Color. 
+**Step 3.9:** Applying texture (3/4). In the Attribute editor, the new Lambert material will appear. In the Common Material Attributes, click on the “Check-pattern” button next to the Colour. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_06.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Lambert color</figcaption>
+    <figcaption>Maya Lambert colour</figcaption>
 </figure>
 
 
@@ -274,7 +274,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_07.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Add file to Lambert color</figcaption>
+    <figcaption>Maya Add file to Lambert colour</figcaption>
 </figure>
 
 
@@ -404,7 +404,7 @@ Mixamo offers multiple free animations and characters.
 
 In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to import and prepare the animation to be used in an Augmented Reality application.
 
-**Step 6.1:** Account and License. Open the [Unity 3D website](https://unity.com/). Create an account and you can choose a free individual license either Student or Individual. Download and install Unity 3D.
+**Step 6.1:** Account and Licence. Open the [Unity 3D website](https://unity.com/). Create an account and you can choose a free individual licence either Student or Individual. Download and install Unity 3D.
 
 **Step 6.2:** Importing model and animation to Unity 3D (1/3). Open Unity 3D and create a new 3D project.
 
@@ -422,7 +422,7 @@ In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to 
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_02.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d importing fbx</figcaption>
+    <figcaption>Unity 3d importing Fbx</figcaption>
 </figure>
 
 

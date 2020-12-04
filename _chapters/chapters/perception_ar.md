@@ -27,7 +27,7 @@ Definition Sensation: The bottom-up process by which our sense, like vision, hea
 
 #### What is perception?
 
-Perception consists from three main processes called recognition, organizing, and interpreting. Recognition happens basically everyday, we are aware of everything, such as sounds, lights, and colors. Then you are organizing everything that you perceive.  Interpretation refers to the process by which we represent and understand stimuli that affect us.
+Perception consists from three main processes called recognition, organizing, and interpreting. Recognition happens basically every day, we are aware of everything, such as sounds, lights, and colours. Then you are organizing everything that you perceive.  Interpretation refers to the process by which we represent and understand stimuli that affect us.
 
 Recognizing + Organizing+ Interpreting = Sensory Information
 
@@ -115,7 +115,7 @@ States that things which share visual characteristics such as shape, size, colou
     <figcaption>Image of No.8</figcaption>
 </figure>
 
-**Proximity** Elements tend to be perceived as aggregated into group if they are near each other. other.
+**Proximity** Elements tend to be perceived as aggregated into group if they are near each other.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.9%20Proximity.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -210,7 +210,7 @@ ability, but only in relation to the subject of their attention.
 
 #### PROPRIOCEPTION
 
-Proprioception us the perception of the world  with our body, so how perceive and understand things around us.  our perception embodied and active when we see, we are ready touch, and we tend to visualize our path to the object. Our body experienced all directions of  the environment, we understand the space in 3D. For example, when we see something that we need to grab, we will understand it is a shape. 
+Proprioception is the perception of the world  with our body, so how perceive and understand things around us.  our perception embodied and active when we see, we are ready touch, and we tend to visualize our path to the object. Our body experienced all directions of  the environment, we understand the space in 3D. For example, when we see something that we need to grab, we will understand it is a shape. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.17%20Touch.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -223,7 +223,7 @@ Proprioception us the perception of the world  with our body, so how perceive an
 
 ## UI
 
-UX (User experience) and UI (User interface) is different. **UI** can deal with traditional concepts like visual design elements such as colors and typography. **UX** is all below user interface. User experience design is a human-first way of designing products. Don Norman, a cognitive scientist and co-founder of the Nielsen Norman Group Design Consultancy, is credited with coining the term “user experience. 
+UX (User experience) and UI (User interface) is different. **UI** can deal with traditional concepts like visual design elements such as colours and typography. **UX** is all below user interface. User experience design is a human-first way of designing products. Don Norman, a cognitive scientist and co-founder of the Nielsen Norman Group Design Consultancy, is credited with coining the term “user experience. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.18(1)%20UI.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -234,7 +234,7 @@ UX (User experience) and UI (User interface) is different. **UI** can deal with 
 
 
 
-Today UI design is mainly focused on the 2D screens. We are living in 2D world , everyone has a phone, and we use to all references to understand what the camera means, what is this icon.
+Today UI design is mainly focused on the 2D screens. We are living in a 2D world, everyone has a phone, and we use to all references to understand what the camera means, what is this icon.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.18(2)%20UI.JPG" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -243,7 +243,7 @@ Today UI design is mainly focused on the 2D screens. We are living in 2D world ,
     <figcaption>Image of No.18(2)</figcaption>
 </figure>
 
-**However,** AR (Augmented Reality) points to use all the sense to move away from the screen. In the 60s, the person called Douglas Engelbart, he invented the modern mouse, but the aspect of that not invent something that will constantly use, it was about inventing augment human intelligence that could help us to experience our world in more senses. He wrote articiles about augmenting human intelligence in using all senses that we use our bodies, speech to work with technology.
+**However,** AR (Augmented Reality) points to use all the sense to move away from the screen. In the 60s, the person called Douglas Engelbart, he invented the modern mouse, but the aspect of that not invent something that will constantly use, it was about inventing augment human intelligence that could help us to experience our world in more senses. He wrote articles about augmenting human intelligence in using all senses that we use our bodies, speech to work with technology.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.18(3)%20UI.JPG" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -304,7 +304,7 @@ The lateral field of human view is about 140 degrees, but with the peripheral vi
 
 #### Immersion and exploration
 
-•user is the center of the environment 
+•user is the centre of the environment 
 
 •users will want to try their own ideas
 
@@ -373,7 +373,7 @@ Note: when you create UI, you need to know:
 
 
 
-**The shade of the center dot is the same in all the squares**
+**The shade of the centre dot is the same in all the squares**
 
 The shade of the background influences how we perceive it. All squares are uniformly shaded, but each square lighter on its left edge than on its right edge. 
 

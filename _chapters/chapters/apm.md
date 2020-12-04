@@ -28,7 +28,7 @@ To support agile project management in augmented reality, we have set up an expe
 VIAProMa is a Collaborative Mixed Reality Visualization Framework for Immersive Analytics. It is developed by a team of developers using agile methods. Therefore, it serves as a demonstrator for this chapter.
 In the course of the chapter, we will use examples and screenshots from the VIAProMa environment.
 
-In the traditional waterfall model of software engineering, the different phases of the software engineering process are followed in a sequential manner, usually without returning to a phase already finished.
+In the traditional waterfall model of software engineering, the different phases of the software engineering process are followed sequentially, usually without returning to a phase already finished.
 The output of the early phases are usually documents while software is only produced in later phases.
 With the model, design errors can be captured before the implementation phase.
 The technical documentation is part of the plan and because of the structured approach, costs can be estimated quite well.
@@ -39,7 +39,7 @@ The waterfall model was modified after a number of issues identified in practice
 ## Agile Development Manifesto
 
 The agile development approach was initiated mainly by developers not satisfied with the strict process management tools applied in the traditional waterfall model, leading to overwork, working on documents instead on code, lacking communication with the customer and lacking communication with co-developers.
-In this spirit, the agile developement approach focusses on avoiding overwork, improve communicaton within the developer team and with the customer as well as on coding.
+In this spirit, the agile development approach focusses on avoiding overwork, improve communication within the developer team and with the customer as well as on coding.
 
 Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
 
@@ -51,12 +51,12 @@ Kent Beck wrote in the [agile manifesto](https://agilemanifesto.org/):
 
  **Responding to change** over following a plan
 
-Meanwhile to [agile manifesto](https://agilemanifesto.org/) was signed by thousands of people.
+Meanwhile, to [agile manifesto](https://agilemanifesto.org/) was signed by thousands of people.
 
-Critics is often coming from engineers working on very large physical engineering projects like space rockets, aircrafts, ships or cars.
+Critics is often coming from engineers working on very large physical engineering projects like space rockets, aircraft, ships or cars.
 Indeed, software projects, even large ones, are more open to flexibility.
-Since also physical engineering projects have lare software parts in recent years, agility is slowly coming also to those projects.
-Still, culturals difference are challenging team communication in many ways, as we will also see in the case of DevOps, where developers need to communicate with IT operations.
+Since also physical engineering projects have large software parts in recent years, agility is slowly coming also to those projects.
+Still, cultural difference are challenging team communication in many ways, as we will also see in the case of DevOps, where developers need to communicate with IT operations.
 
 ## Agile Development Features
 
@@ -65,7 +65,7 @@ Therefore, the process is divided into small design steps with frequent customer
 The focus is on delivering working software frequently.
 Because of the small, incremental process steps and the agility of the process, developers are better motivated and in consequence produce better software.
 Projects with agile methods have a higher probability of success.
-Also empirically proven, a recent report says that over 94% of companies today develop software with agile methods.
+Also, empirically proven, a recent report says that over 94% of companies today develop software with agile methods.
 
 
 - Emphasizes incremental updates
@@ -152,7 +152,7 @@ when all developers are in the same place or a virtual board, which is typical f
 development.
 Some developer teams do both physical and virtual boards, e.g. physical ones for local sprints and virtual ones for 
 the global process.
-task boards consist of columns where tasks usually shift from left to right to visualize the grade of completion from ToDo to Done.
+Task boards consist of columns where tasks usually shift from left to right to visualize the grade of completion from ToDo to Done.
 Typical columns for a sprint are: 
 
 - Product Backlog
@@ -200,7 +200,7 @@ This is your first user story: *"As a developer, I want to settle the Definition
   - Encoding
 - Helpful for *Collective Code Ownership* within small teams, indispensable for open source
   - E.g. Google's Java style guide
-  - <https://google-styleguide.googlecode.com/svn/trunk/javaguide.html>
+  - [https://google-styleguide.googlecode.com/svn/trunk/javaguide.html]
 
 ### Code Review
 
@@ -238,7 +238,7 @@ It consists of a master-branch, a develop-Branch, feature branches, release bran
 
 For Web apps which do not require explicit version releases, a GitHub flow is suitable.
 Feature are developed on different branches.
-If a feature has been finished, a merge request is created, it is reviewed and dicusssed and finally, the branch is merged into the master branch.
+If a feature has been finished, a merge request is created, it is reviewed and discusssed and finally, the branch is merged into the master branch.
   
 ### Continuous Integration
 
@@ -287,7 +287,7 @@ Continuous Delivery is about removing stress at the *last mile*.
  
 ## Market Analysis
 
-**Market analysis** is the process of analyzing data to help you understand which products and services are in demand, 
+**Market analysis** is the process of analysing data to help you understand which products and services are in demand, 
 and  how to be competitive.
 Markets are places where customers who are willing to buy a product or a service can meet the sellers of those products and services. 
 From the view of the sellers, markets are people who are willing to pay. 
@@ -325,7 +325,7 @@ How to best segment a market?
   - University, friends, colleagues
   - Short selling cycle
   - In B2B – contact direct decision makers 
-  - Segments with less competitors
+  - Segments with fewer competitors
 
 Understanding a user helps you to decide what product features to build next.
 Talk to potential users and find out about their needs.
@@ -395,7 +395,7 @@ Observation from industry: A culture of communication between developers and ope
 A toolchain is a set of tools used for covering all DevOps categories.
 
 Integration, automation, and monitoring scales.
-Agile and DevOps serve complementary roles: rapidly producing software artifacts in an agile way (DevOpsUse).
+Agile and DevOps serve complementary roles: rapidly producing software artefacts in an agile way (DevOpsUse).
 
 ## Requirements Engineering
 
@@ -463,7 +463,7 @@ Four reviews are planned for the course, so that every three weeks there can be 
 The first review is for exercising the agile software development process, for technology and market research as well as for first DevOps activities.
 The second review should report on the first one or two sprints of the team and how they have started the development process.
 The third review should cover more DevOps activities like testing and documenting the prototype.
-The last review is planned as business pitch with a strong focus on selling a product.
+The last review is planned as a business pitch with a strong focus on selling a product.
 
 ### Review 1
 
@@ -498,7 +498,7 @@ The last review is planned as business pitch with a strong focus on selling a pr
   - Project Backlog and Definition of Done
   - Running mock-up and/or system functionality/tests
   - Reflection
-  - Conclusion and further Steps
+  - Conclusion and further steps
 -You may adjust the order and focus depending on your project, of course.
 
 ### Review 3
