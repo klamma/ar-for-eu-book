@@ -111,8 +111,8 @@ In the assert phase, there is a toolset available in C#, NUnit and Unity which c
 To compare values to an expected constant, the `Assert` class can be used.
 It is part of the NUnit framework.
 The `Assert` class provides many different static methods that can be used to check values.
-For instance, `Assert.IsTrue(someCondition)` checks if an boolean expresssion evaluates to true.
-Similarly, `Assert.IsFalse(someCondition)` checks that an condition is false.
+For instance, `Assert.IsTrue(someCondition)` checks if a boolean expresssion evaluates to true.
+Similarly, `Assert.IsFalse(someCondition)` checks that a condition is false.
 If the assert statement is correct, the code will resume.
 However, if an assertion fails, e.g. `Assert.AreEqual(2, 3)`,  an exception is thrown, meaning that the rest of this particular test method is not executed.
 This causes the test to fail.
@@ -127,7 +127,7 @@ The specification states that the class should throw an `InvalidOperationExcepti
 Hence, we write a unit test that calls `Divide(1,0)`.
 So, in this case, the exception is actually the intended behaviour.
 However, if this test is written this way, it will fail because of the exception.
-Instead, we can wrap code into `Assert.Throws` which means that we are expecting a specific type of excpetion.
+Instead, we can wrap code into `Assert.Throws` which means that we are expecting a specific type of exception.
 Actually, the test now has to throw the exception and will fail otherwise.
 The test now looks as follows:
 
@@ -184,7 +184,7 @@ For this reason, unit tests should only test the code of the inspected function 
 A mock object is an object which behaves in the same way as the original object but it does not actually perform complex computations in the background.
 Mocking dependencies does not only guard against errors in the implementation of the dependency class but it also allows simulating different states of external resources, such as the Web or IO operations.
 As an example, there is a class with a function that categorizes the popularity of a Web page by checking its daily visitor count.
-To do this, the function receives the URI of a the target Web page as an input argument and sends a Web request to the analytics server to query for the statistics of this URI.
+To do this, the function receives the URI of the target Web page as an input argument and sends a Web request to the analytics server to query for the statistics of this URI.
 As an answer, it gets the number of visitors for the given day.
 Based on some given thresholds, the visit number is classified into a number of categories which can then be used by an application's UI to visualize the popularity of the Web page in a colour scheme.
 In this example, the Web request is a dependency of the function that determines the popularity.
@@ -214,7 +214,7 @@ CI is applied to a source-controlled repository, e.g. on GitHub or Gitlab since 
 It gives developers the option to define workflows by combining a series actions.
 Such actions can be self-created or shared actions by the community can be re-used.
 The ability to import existing actions speeds up the creation of the workflows since they are preconfigured and only require some input parameters to run.
-As an example, there is a series of actions available for [Unity-specifc tasks](https://github.com/webbertakken/unity-actions).
+As an example, there is a series of actions available for [Unity-specific tasks](https://github.com/webbertakken/unity-actions).
 
 A repository can have multiple workflows.
 Their execution can be triggered by certain events, e.g. at a regular time, by pushing to a specific branch or by posting a pull request.
@@ -224,7 +224,7 @@ These steps are the actions which can be self-defined or imported from the commu
 
 Open-source repositories on GitHub can use this feature for free whereas users of private repositories can sign in for a usage plan.
 Each of the plans ranging from free to enterprise include an initial amount of minutes that the tasks are allowed to run on GitHub's servers.
-For each minute that exeeds the limit, additional fees have to be paid.
+For each minute that exceeds the limit, additional fees have to be paid.
 Tasks can run on GitHub's Linux, Windows or macOS runners.
 Each of them have different fees and they contribute at weights to the initial limit ([GitHub Actions Pricing](https://docs.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions)).
 Unity actions can run on Linux machines which are the cheapest option.
@@ -238,28 +238,28 @@ It will do this by setting up a Docker container with a Unity installation, pull
 The tutorial is structured as follows:
 
 First, we will create the necessary workflow files one by one.
-This involves a license activation step, unit testing and the final build.
+This involves a licence activation step, unit testing and the final build.
 Before we can build the Unity application on the server, we need to create activation credentials for Unity.
-Each installation of Unity requires its own license that has to be activated before using Unity.
+Each installation of Unity requires its own licence that has to be activated before using Unity.
 When installing Unity on your PC, this is a small step where you have to log in with your Unity ID but for a Docker container this process is more involved.
-Licenses are bound to one PC, so it does not work to transfer existing licenses between machines.
-The solution is to set up a workflow that causes the Unity instance in the Docker container to generate a license request.
-This license request can be returned as a artifact that we can download.
-After that, we will manually activate the license which can be done on any PC.
-Finally, we will receive the valid license which can then be added to the list of secret environment variables in the GitHub repository.
+Licences are bound to one PC, so it does not work to transfer existing licences between machines.
+The solution is to set up a workflow that causes the Unity instance in the Docker container to generate a licence request.
+This licence request can be returned as an artefact that we can download.
+After that, we will manually activate the licence which can be done on any PC.
+Finally, we will receive the valid licence which can then be added to the list of secret environment variables in the GitHub repository.
 
 After the activation, we create the workflow for the unit tests and after that, we will tackle the automatic build of the application's install files.
 
 #### Creating a Workflow File
 
-As a pre-requisite, you requrie an GitHub account and a repository on GitHub with a Unity project.
+As a prerequisite, you require an GitHub account and a repository on GitHub with a Unity project.
 Either choose an existing project or create a new empty project and upload it to GitHub.
 
 1. In the root folder of your repository, create a folder "*.github*".
    The folder name must start with the dot.
    GitHub looks for this folder, e.g. to find the workflow configuration or actions.
 2. In the ".github"-folder, create a folder "workflows".
-   Inside of this folder, we will define the workflows for the project.
+   Inside this folder, we will define the workflows for the project.
    A project can contain multiple workflows.
 3. First, we need to set up the aforementioned activation workflow.
    Create an empty yaml file, e.g. with the name "activation.yml".
@@ -281,7 +281,7 @@ Either choose an existing project or create a new empty project and upload it to
        steps:
        # Request manual activation file
        - name: Request manual activation file
-         id: getManualLicenseFile
+         id: getManualLicenceFile
          uses: webbertakken/unity-request-manual-activation-file@v1.1
          with:
            unityVersion: 2018.4.15f1
@@ -289,8 +289,8 @@ Either choose an existing project or create a new empty project and upload it to
        - name: Expose as artifact
          uses: actions/upload-artifact@v1
          with:
-           name: ${{ steps.getManualLicenseFile.outputs.filePath }}
-           path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+           name: ${{ steps.getManualLicenceFile.outputs.filePath }}
+           path: ${{ steps.getManualLicenceFile.outputs.filePath }}
    ```
 {% endraw %}
    

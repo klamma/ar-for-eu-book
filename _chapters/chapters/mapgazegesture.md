@@ -17,7 +17,7 @@ _by Dr Fridolin Wild, Performance Augmentation Lab, Oxford Brookes University_
 - [Part 3. Placement with the gaze pointer and air tap](#part-3-placement)
 - [Part 4. Hover highlighting and tap interaction](#part-4-hover)
 
-The capability to map and understand the spatiality of the physical environment surrounding us of the new Smart Augmented Reality Glasses like the Microsoft Hololens or the Magic Leap is a game changer.
+The capability to map and understand the spatiality of the physical environment surrounding us of the new Smart Augmented Reality Glasses like the Microsoft HoloLens or the Magic Leap is a game changer.
 For the first time, this enables pervasive experiences with an optical quality that causes our perception to sometimes struggle to distinguish what is real and what not.
 
 At the same time, this has triggered a paradigm change in Human Computer Interaction, with gaze pointers and gesture control replacing swipes & taps (and mouse pointing and clicking).
@@ -59,7 +59,7 @@ We have replaced the standard camera with the HololensCamera - as every Unity pr
 
 The other prefabs we added support us in scanning the room (and - potentially - cleaning up the meshes scanned with the Spatial Understanding).
 They help with the gaze and gesture interaction (InputManager).
-And a cursor was selected to visualise where (and what) the gaze cursor (kind of '3D mouse pointer') rests upon in the environment.
+And a cursor was selected to visualize where (and what) the gaze cursor (a kind of '3D mouse pointer') rests upon in the environment.
 
 We select the SpatialMapping game object and look at the Inspector to set the number of Triangles Per Cubic meter to 100 only (this will give us less precise meshes, but they will be much faster).
 Make sure that the Physics Layer is 31, and that the Surface Material is set to Wireframe (there are cool shaders available to pimp this visually).
@@ -99,7 +99,7 @@ So the first thing we do is to create game object UI > Canvas and rename it to "
     <figcaption>4 - ctrl menu - create-canvas</figcaption>
 </figure>
 
-The scale of 1 is rather big for the small display of the Hololens, so we set x/y/z scale to 0.3.
+The scale of 1 is rather big for the small display of the HoloLens, so we set x/y/z scale to 0.3.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - 1 - canvas worldspace.png" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -122,7 +122,7 @@ The buttons are renamed to StartScanningButton, StopScanningButton, StartAppButt
     <figcaption>Control menu</figcaption>
 </figure>
 
-We rearrange the elements in the scene preview by switching to 2D in the Scene and double clicking the SpatialMappingCtrlMenu canvas in the Hierarchy.
+We rearrange the elements in the scene preview by switching to 2D in the Scene and double-clicking the SpatialMappingCtrlMenu canvas in the Hierarchy.
 Arrange them to something like this:
 
 <figure>
@@ -132,7 +132,7 @@ Arrange them to something like this:
     <figcaption>Control menu: scene</figcaption>
 </figure>
 
-The menu canvas needs to face always to the user ('billboard') and follow the user around ('tag-along', so we search for the HoloToolkit Tagalong and Billboard scripts and attach them to the canvas.
+The menu canvas needs to face always to the user ('billboard') and follow the user around ('tag-along'), so we search for the HoloToolkit Tagalong and Billboard scripts and attach them to the canvas.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/mapgazegesture/4 - ctrl menu - canvas - tagalong billboard.png" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -169,7 +169,7 @@ We attach them to the menu canvas as well.
 We select for Draw Planes and Destroy Planes the option 'Nothing' each.
 The SurfaceMeshesToPlanes script is responsible for identifying plane surfaces from the raw mesh, detecting floor, walls, tables, and the like.
 It is possible to replace the raw mesh with these identified surfaces, but we don't want that, as it makes the preview flicker during the scanning.
-The Re-moveSurfaceVertices is responsible for thinning out the mesh, where possible.
+The RemoveSurfaceVertices is responsible for thinning out the mesh, where possible.
 
 The SpaceScannerManager script takes care of all this.
 It communicates with the SpatialMapping to start and stop the observer responsible for scanning the room mesh, cleaning the mesh once scanned, and checking whether enough surfaces have been scanned (satisfying the min floors and min walls requirements set).
@@ -378,7 +378,7 @@ currObj.AddComponent<SegmentHighlights>();
 
 Finally, a script to highlight the segments (SegmentHighlights) is added by code.
 Let us look into this highlighter script.
-First, the script installs a listener for the gesture recogniser and registers a callback for whenever the air tap gesture has been detected (linking to method ‘onTapped’).
+First, the script installs a listener for the gesture recogniser and registers a callback for whenever the air tap gesture has been detected (linking to method ‘on-Tapped’).
 
 ```c#
 void Start() {

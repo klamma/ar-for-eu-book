@@ -25,7 +25,7 @@ visualizations:
 
 ### **Part 1. Creating an IBM Cloud account** {#part1}
 
-Step 1.1: Register an account <https://cloud.ibm.com/login> > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
+Step 1.1: Register an account https://cloud.ibm.com/login > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%201.1.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -83,7 +83,7 @@ Before that, let’s take example. If you call a dessert shop, what a seller wil
 
 **Notes:**
 
-·    *Intents: the purpose of a user’s input. The Watson assistant can select the correct dialog flow by recognizing the intents.*
+·    *Intents: the purpose of a user’s input. The Watson assistant can select the correct dialogue flow by recognizing the intents.*
 
 ·    *Entities: it shows information in the user input that is relevant to the user’s purpose.* 
 
@@ -166,7 +166,7 @@ my name is @username.
 
 
 
-**Step 3.7.** Create @username on an entity, Click on “Entities” > My entities > Create entities > Entity name is @username > value is name_syntax, type is Patterns, pattern is [A-Z][a-z]+ > Add value.
+**Step 3.7.** Create @username on an entity, click on “Entities” > My entities > Create entities > Entity name is @username > value is name_syntax, type is Patterns, pattern is [A-Z][a-z]+ > Add value.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.7.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -328,7 +328,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 **Note:** if there are lots of warnings and errors on the Console, please click Clear button.
 
-**Step 5.2**. Click on WatsonServices on Hierarchy widow, and open the "_scripts" file on Project window. Dialogue Services is the script of DialogueService, and it also links to Watson assistant. Speech Input Service is the script of SpeechInputServices, it links to Speech to Text service, and Speechoutput links to Text to Speech service in IBM Watson, that is applied to create a spoken sound version of the text. Please double click on the three services in Visual studio. 
+**Step 5.2**. Click on WatsonServices on Hierarchy widow, and open the "_scripts" file on Project window. Dialogue Services is the script of DialogueService, and it also links to Watson assistant. Speech Input Service is the script of SpeechInputServices, it links to Speech to Text service, and Speechoutput links to Text to Speech service in IBM Watson, that is applied to create a spoken sound version of the text. Please double-click on the three services in Visual Studio. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.2.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -402,7 +402,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 
 
-**Step 5.7.** It’s the same way to copy API key and URL , and past it to your Unity and the corresponding scripts for Speech to Text & Text to Speech. 
+**Step 5.7.** It’s the same way to copy API key and URL, and past it to your Unity and the corresponding scripts for Speech to Text & Text to Speech. 
 
 
 
@@ -418,14 +418,14 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 *Service of Text to Speech endpoints by location*
 
-·    *Washington, DC*: <https://api.us-east.text-to-speech.watson.cloud.ibm.com>
+·    *Washington, DC:* <https://api.us-east.text-to-speech.watson.cloud.ibm.com>
 
 ·    *Frankfurt:* <https://api.eu-de.text-to-speech.watson.cloud.ibm.com>
 
 ·    *London:* <https://api.eu-gb.text-to-speech.watson.cloud.ibm.com>
 
 ​
-​         
+
 ​         **Step 5.8.** Before playing it, we need to configure your service credentials. Save unity file (Ctrl+S), close Unity > open the location of the Unity file > find ibm_credentials.env, and open it.
 ​         
 <figure>

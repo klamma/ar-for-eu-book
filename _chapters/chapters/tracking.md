@@ -133,25 +133,25 @@ This provides forces on the pen which hinder movements in certain directions.
 ## Electromagnetic
 
 Another way of tracking uses electromagnetism.
-Here, the senors on the tracked object are situated in an alternating electromagnetic field.
+Here, the sensors on the tracked object are situated in an alternating electromagnetic field.
 A sensor consists of different coils, each of them is wound around one of the three axes.
 If the sensor is moved in the field, a current is induced on each of the coils.
 By measuring the strength of the current, the rotation and position of the sensor can be derived.
 
 Unlike light-based tracking, electromagnetic tracking is immune to target occlusion, i.e. the tracker does not need to be in the line of sight of some external sensor.
-However, the large sensors of 1-2cm are a disadvantage of this technique.
+However, the large sensors of 1-2 cm are a disadvantage of this technique.
 Additionally, the trackers require cabling.
 One also needs to be careful with ferromagnetic elements which can influence the magnetic field and can therefore invalidate the tracking results.
 
 ## Inertial
 
-An Inertial Measurement Unit (IMU) is a sensor that reports - typically (but sometimes only a subset) - acceleration, rotation speed, and orientation from an accelerometer, gyroscope, and (not always) a magnetometer. Applications of IMUs are for motion capture or as input modality in interaction. The IMU in your mobile phone allows your maps application to function when the GPS signal is not available, for example while driving in a tunnel or when inside of a building. Most modern delivery devices have built in IMUs (smart glasses, mobile phones, tablet computers) or are used in combination with the delivery system (like with pico projectors). All IMUs inevitably suffer of drift, some of them more, some of them less, typically then using on board or software sensor fusion to reduce its amount. The software interface to the inertial measurement unit provides typically a quaternion for orientation (or Euler angles), and vectors for velocity and acceleration. These can be directly mapped in 3D environments to control objects (as a direct-mapping interaction device) or the viewing camera renderer (for scene exploration, think smart glasses). 
+An Inertial Measurement Unit (IMU) is a sensor that reports - typically (but sometimes only a subset) - acceleration, rotation speed, and orientation from an accelerometer, gyroscope, and (not always) a magnetometer. Applications of IMUs are for motion capture or as input modality in interaction. The IMU in your mobile phone allows your maps application to function when the GPS signal is not available, for example while driving in a tunnel or when inside a building. Most modern delivery devices have built in IMUs (smart glasses, mobile phones, tablet computers) or are used in combination with the delivery system (like with pico projectors). All IMUs inevitably suffer from drift, some of them more, some of them less, typically then using on board or software sensor fusion to reduce its amount. The software interface to the inertial measurement unit provides typically a quaternion for orientation (or Euler angles), and vectors for velocity and acceleration. These can be directly mapped in 3D environments to control objects (as a direct-mapping interaction device) or the viewing camera renderer (for scene exploration, think smart glasses). 
 
 
 # Setups
 
 Tracking systems can be set up in two ways.
-On the one hand, the sensors can be placed in the environment and they track markers on a moving object.
+On the one hand, the sensors can be placed in the environment, and they track markers on a moving object.
 On the other hand, the sensors can be mounted to the moving target while the recognizable features are situated in the environment.
 
 ## Outside-In Tracking
