@@ -31,13 +31,7 @@ It consists of individual vertices which are situated at defined points in 3D.
 The vertices can be connected with an edge between them.
 Vertices and edges form faces which are visible as a surface in a rendered image.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/modeling/Mesh.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Structure of a Mesh</figcaption>
-</figure>
-
+{% include figure.html url='/assets/figures/modeling/Mesh.png' description='Structure of a Mesh' %}
 
 ## Modeling Techniques
 

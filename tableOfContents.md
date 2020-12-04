@@ -37,7 +37,7 @@ order: 3
 - [Spatial Audio](/ar-for-eu-book/chapter/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Interactive Graphics and Sound Design](/ar-for-eu-book/chapter/intdesign/) {% include badge.html base=pathToRoot badgeName="todo" %}
 - [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/spatialMapping/) {% include badge.html base=pathToRoot badgeName="complete" %}
-- [Spatial Understanding](/ar-for-eu-book/chapter/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
+- [Spatial Understanding](/ar-for-eu-book/chapter/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Speech Interaction](/ar-for-eu-book/chapter/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Dialogue Understanding](/ar-for-eu-book/chapter/dialogue-understanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
 - [Human Computer Interaction and User Centered Design](/ar-for-eu-book/chapter/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
