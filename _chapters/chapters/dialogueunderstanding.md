@@ -18,14 +18,14 @@ visualizations:
 
 ## Resources
 
-- Download Unity ZIP file, and extract it https://drive.google.com/file/d/1idlhVW_N2PW0uEfk1DbOyXNuxc2n8If1/view?usp=sharing
+- Download Unity ZIP file, and extract it [https://drive.google.com/file/d/1idlhVW_N2PW0uEfk1DbOyXNuxc2n8If1/view?usp=sharing](https://drive.google.com/file/d/1idlhVW_N2PW0uEfk1DbOyXNuxc2n8If1/view?usp=sharing)
 
 ## Software
 - Unity 3D (version 2018.3.14f1)
 
 ### **Part 1. Creating an IBM Cloud account** {#part1}
 
-Step 1.1: Register an account https://cloud.ibm.com/login > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
+Step 1.1: Register an account [https://cloud.ibm.com/login](https://cloud.ibm.com/login) > create an IBM Cloud account > you’ll be asked to verify your email > complete personal information > login your account and accept the privacy notices. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%201.1.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -41,7 +41,7 @@ Step 1.1: Register an account https://cloud.ibm.com/login > create an IBM Cloud 
 
 ### **Part2.** Creating a Watson Assistant {#part2}
 
-**Step 2.1.** Click on the Create resource button on the dashboard > Watson Assistant (if you can’t find it, Catalog > AI > Watson Assistant) > Click Create tab, and check the region. 
+**Step 2.1.** Click on the Create resource button on the dashboard > Watson Assistant (if you can’t find it, Catalog > AI > Watson Assistant) > Click *Create tab*, and check the region. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%202.1.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -52,9 +52,9 @@ Step 1.1: Register an account https://cloud.ibm.com/login > create an IBM Cloud 
 
 
 
-**Step2.3.** Launch Watson Assistant > Create assistant, called AI training (or something else you like) > Create assistant > Add dialog skill > Select “Create skill” > Dessert > Create dialog skill > click on “Dessert”.
+**Step2.3.** Launch Watson Assistant > Create assistant, called "AI training" (or something else you like) > Create assistant > Add dialog skill > Select *Create skill* > Dessert > Create dialog skill > click on “Dessert”.
 
-**Step 2.4.** Create Speech to Text & Text to Speech: Go back to the Dashboard > Add services > Catalog > Services > Select “AI” > Click on Speech to Text & Text to Speech > Create. (they will be used in Unity)
+**Step 2.4.** Create Speech to Text & Text to Speech: Go back to the Dashboard > Add services > Catalog > Services > Select “AI” > Click on *Speech to Text & Text to Speech* > Create. (they will be used in Unity)
 
 
 ### **Part 3.** Creating a Chatbot {#part3}
@@ -89,7 +89,7 @@ Before that, let’s take example. If you call a dessert shop, what a seller wil
 
 
 
-**Step 3.1.** Click on “Content Catalog” > “General” can be added to skill (it includes lots of basic contents of conversation, like good morning. But in this tutorial, we are not going to use it)
+**Step 3.1.** Click on Content Catalog > General can be added to skill (it includes lots of basic contents of conversation, like good morning. But in this tutorial, we are not going to use it)
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.1.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -100,7 +100,7 @@ Before that, let’s take example. If you call a dessert shop, what a seller wil
 
 
 
-**Step 3.2.** Select “Dialog” > Click on the “Node options” on the Welcome node > Add folder > named Dessert.
+**Step 3.2.** Select Dialog > Click on the Node options on the Welcome node > Add folder > named "Dessert".
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.2.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -111,7 +111,7 @@ Before that, let’s take example. If you call a dessert shop, what a seller wil
 
 
 
-**Step 3.3.** Click on Intents > Create Intent, called #welcome > Create > user example is Hi/hi, there; Hello/hello, there. 
+**Step 3.3.** Click on Intents > Create Intent, called "#welcome" > Create > user example is Hi/hi, there; Hello/hello, there. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.3.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -122,7 +122,7 @@ Before that, let’s take example. If you call a dessert shop, what a seller wil
 
 
 
-**Step 3.4.** Go back to Dialog > Click on Welcome node > Condition (If assistant recognizes) is #welcome > Customize the Welcome node prompt with (Assistant responds): 
+**Step 3.4.** Go back to Dialog > Click on *Welcome* node > Condition (If assistant recognizes) is #welcome > Customize the Welcome node prompt with (Assistant responds): 
 
 Hello, Welcome to AI dessert shop. How can I help you? 
 
@@ -137,7 +137,7 @@ Hello, Welcome to AI dessert shop. What can I do for you? > Response variations 
 
 
 
-**Step 3.5.** Click on “Node options” on the Dessert folder > add node to folder, called Name > Assistant responds: OK, how can I call you? / what’s your name? > Response variations are set to random again. 
+**Step 3.5.** Click on *Node options* on the Dessert folder > add node to folder, called "Name" > Assistant responds: OK, how can I call you? / what’s your name? > Response variations are set to random again. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.5.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -147,7 +147,7 @@ Hello, Welcome to AI dessert shop. What can I do for you? > Response variations 
 </figure>
 
 
-**Step 3.6.** Click on “Intents” > Create Intent > create a #name > add example:
+**Step 3.6.** Click on Intents > Create Intent > create a #name > add example:
 
 I’m @username. 
 
@@ -166,7 +166,7 @@ my name is @username.
 
 
 
-**Step 3.7.** Create @username on an entity, click on “Entities” > My entities > Create entities > Entity name is @username > value is name_syntax, type is Patterns, pattern is [A-Z][a-z]+ > Add value.
+**Step 3.7.** Create @username on an entity, click on Entities > My entities > Create entities > Entity name is @username > value is name_syntax, type is Patterns, pattern is [A-Z][a-z]+ > Add value.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.7.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -177,13 +177,13 @@ my name is @username.
 
 
 
-**Step 3.8**. Back to Entities > Select “System entities” > tick all boxes.
+**Step 3.8**. Back to Entities > Select *System entities* > tick all boxes.
 
 **Step 3.9.** Click Intents tab > Create intent > named #order > user example: hi, I’d like to order cakes.
 
-**Step 3.10.** Click on Dialog > click on the icon of dessert folder > select “Name” node > create condition (If assistant recognizes): #intents > select “#order”.
+**Step 3.10.** Click on Dialog > click on the icon of dessert folder > select "Name" node > create condition (If assistant recognizes): #intents > select "#order".
 
-**Step 3.11.** Click on node options on the Name node > Add child node, called Dessert > create condition: #name, add or, select @username, add or, select @sys-person > there are node options on the right of Assistant responds >  Select “Open context editor” > Variable is username > Value is "<? @sys-number.literal ?>" > Assistant responds: What desserts would you like, $username? 
+**Step 3.11.** Click on node options on the Name node > Add child node, called "Dessert" > create condition: #name, add or, select @username, add or, select @sys-person > there are node options on the right of Assistant responds >  Select “Open context editor” > Variable is username > Value is "<? @sys-number.literal ?>" > Assistant responds: What desserts would you like, $username? 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.11(1).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -203,7 +203,7 @@ my name is @username.
 
 There are three options, 1. I need a menu; 2. The assistant offers recommendations; 3. I know what I’d like to get. 
 
-**Step 3.13.** Make a menu: Create a new intent, called #menu > user examples: 
+**Step 3.13.** Make a menu: Create a new intent, called "#menu" > user examples: 
 
 I need a menu.
 
@@ -215,7 +215,7 @@ Could you give me some recommendations?
 
 Specials (/specials)
 
-\> Back to Dialog > Create a new child node on the Dessert node, called menu > condition is #menu > Assistant responds: Ok, here is our menu. > Add new response type > Text changes to Option > Title: Which dessert/ menu you like? > List labels are Pudding and Cake, Value is pudding menu and cake menu. 
+\> Back to Dialog > Create a new child node on the Dessert node, called "menu" > condition is #menu > Assistant responds: Ok, here is our menu. > Add new response type > Text changes to Option > Title: Which dessert/ menu you like? > List labels are Pudding and Cake, Value is pudding menu and cake menu. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.13(1).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -231,7 +231,7 @@ Specials (/specials)
     <figcaption>Image of Step 3.11(2)</figcaption>
 </figure>
 
-**Step 3.14.** Click Intents tab > Create Intent called #alldesserts > list more desserts as possible, including cakes and puddings. 
+**Step 3.14.** Click Intents tab > Create Intent called "#alldesserts" > list more desserts as possible, including cakes and puddings. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.14.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -240,7 +240,7 @@ Specials (/specials)
     <figcaption>Image of Step 3.14</figcaption>
 </figure>
 
-**Step 3.15.**  Go back to the Dialog > create a new child node on the menu node, called pudding menu > condition: #menu> Assistant responds: We have chocolate puddings, vanilla puddings, and milk puddings > Add child node on the pudding menu, called pudding finish > condition is #alldesserts > Assistant responds: No problem! > Again, create a new child node on the menu node, called cake menu > you turn, it’s the same way to create conditions!
+**Step 3.15.**  Go back to the Dialog > create a new child node on the menu node, called "pudding menu" > condition: #menu> Assistant responds: We have chocolate puddings, vanilla puddings, and milk puddings > Add child node on the pudding menu, called "pudding finish" > condition is #alldesserts > Assistant responds: No problem! > Again, create a new child node on the menu node, called "cake menu" > you turn, it’s the same way to create conditions!
 
 **Note:** It’s also possible that a client wants to know the cake menu after she/he chooses the pudding menu. Therefore, you need to think about how to create nodes and intents.  
 
@@ -255,13 +255,13 @@ Specials (/specials)
 
 **Note:** Don’t make wrong levels. 
 
-**Step 3.17.** Add node below on the Dessert node, called phone number > Assistant responds: What’s your phone number? 
+**Step 3.17.** Add node below on the Dessert node, called "phone number" > Assistant responds: What’s your phone number? 
 
 **Note:** Don’t add any conditions.
 
-**Step 3.18.** Create a new intent called #phonenumber > examples: my phone number is @sys-number; number is @sys-number > click on Dialog > Add a child node on the phone number node, called end > conditions: #phonenumber, add or, select @sys-number > assistant responds: Thanks, we’ll send a message to you. Have a nice day!
+**Step 3.18.** Create a new intent called "#phonenumber" > examples: my phone number is @sys-number; number is @sys-number > click on Dialog > Add a child node on the phone number node, called "end" > conditions: #phonenumber, add or, select @sys-number > assistant responds: Thanks, we’ll send a message to you. Have a nice day!
 
-**Step 3.19.** Select “pudding finish” node > Wait for reply (on the “The assistant should”) needs to change to Jump on > Select “phone number” node, and click on Respond. 
+**Step 3.19.** Select “pudding finish” node > Wait for reply (on the “The assistant should”) needs to change to Jump on > Select “phone number” node, and click on *Respond*. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.19(1).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -287,7 +287,7 @@ Specials (/specials)
 
 This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to interact with a 3D character based on your Chatbox.
 
-**Step 4.1.** Open Unity > Create a new project, called Dialog understanding Unity > Choose the file location.
+**Step 4.1.** Open Unity > Create a new project, called "Dialog understanding Unity" > Choose the file location.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%204.1.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -298,7 +298,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 
 
-**Step 4.2.** Click on File > Save as > Scenes, called Dialog understanding
+**Step 4.2.** Click on File > Save as > Scenes, called "Dialog understanding"
 
 **Step 4.3.** File > Building Settings > Select “Universal Windows Platform”> Click Add Open scenes > Target Device >Select “PC” > Build
 
@@ -311,7 +311,7 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 
 
-**Step 4.4.** Click Edit > Select “Player” > Capabilities > tick the box of Microphone.
+**Step 4.4.** Click Edit > Select *Player* > Capabilities > tick the box of Microphone.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%204.4.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -326,9 +326,9 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 **Step 5.1.** Open the Unity file. 
 
-**Note:** if there are lots of warnings and errors on the Console, please click Clear button.
+**Note:** if there are lots of warnings and errors on the Console, please click *Clear button*.
 
-**Step 5.2**. Click on WatsonServices on Hierarchy widow, and open the "_scripts" file on Project window. Dialogue Services is the script of DialogueService, and it also links to Watson assistant. Speech Input Service is the script of SpeechInputServices, it links to Speech to Text service, and Speechoutput links to Text to Speech service in IBM Watson, that is applied to create a spoken sound version of the text. Please double-click on the three services in Visual Studio. 
+**Step 5.2**. Click on *WatsonServices* on Hierarchy window, and open the "_scripts" file on Project window. Dialogue Services is the script of DialogueService, and it also links to Watson assistant. Speech Input Service is the script of SpeechInputServices, it links to Speech to Text service, and Speechoutput links to Text to Speech service in IBM Watson, that is applied to create a spoken sound version of the text. Please double-click on the three services in Visual Studio. 
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%205.2.png" style="align:left; width: 60%; height: 60%; border: 15px solid;

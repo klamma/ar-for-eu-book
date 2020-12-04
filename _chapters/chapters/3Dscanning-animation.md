@@ -105,7 +105,7 @@ Let's get started!
   
 **Step 2.1:** Open Wrap > Gallery > select “Body” in the Basemeshes section
 
-**Step 2.2:** Observe that in the Node graph editor (in the top right corner of the screen), a new node will appear. In our tutorial, we rename it Basemesh.
+**Step 2.2:** Observe that in the Node graph editor (in the top right corner of the screen), a new node will appear. In our tutorial, we rename it "Basemesh".
 
 **Step 2.3:** Import 3D scan (1/2). In the Node graph editor, press Tab > Geometry > LoadGeom
 
@@ -119,23 +119,23 @@ Let's get started!
 
 **Step 2.4:** Import 3D scan (2/2). In the Node graph editor, click on the new node and then in the parameters below the editor, select the 3D scanned model under “File names”. In the tutorial, we renamed the node “Fridolin”. If you skipped the 3D scanning phase, you can use [this file]({{pathToRoot}}/assets/supplementary_material/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning-example-scan.zip) that was obtained by scanning a person with the Structure sensor.
 
-**Step 2.5:** Match the 3D scan and the Basemesh. Observe the 3D scanned model that appears in the Viewport3D next to the Basemesh model. The two models possibly have different orientations and sizes. If so, in the Node graph editor, click on the LoadGeom node and in the parameters window below the graph, try to change the Scale. Use the controls in the Viewport3D to rotate, scale and if needed move the 3D scanned model so that it matches the position and the size of the Basemesh.
+**Step 2.5:** Match the 3D scan and the Basemesh. Observe the 3D scanned model that appears in the Viewport3D next to the Basemesh model. The two models possibly have different orientations and sizes. If so, in the Node graph editor, click on the *LoadGeom* node and in the parameters window below the graph, try to change the Scale. Use the controls in the Viewport3D to rotate, scale and if needed move the 3D scanned model so that it matches the position and the size of the Basemesh.
 
 **Step 2.6:** Importing texture (1/2). In the Node graph editor, press Tab > Image > LoadImage.
 
 **Step 2.7:** Importing texture (2/2). In the Node graph editor, click on the new node and then in the parameters below the editor, select the texture of the 3D scan under “File Name”.
 
-**Step 2.8:** Applying texture. In the Node graph editor, connect the output of the image node (imported texture) to the input of the geometry node (imported 3D scanned model). The 3D scanned mesh should appear textured in the Viewport3D.
+**Step 2.8:** Applying texture. In the Node graph editor, connect the output of the image node (imported texture) to the input of the *Geometry* node (imported 3D scanned model). The 3D scanned mesh should appear textured in the Viewport3D.
 
-**Step 2.9:** Adding a SelectPolygons node. In the Node graph editor, press Tab > Selection > SelectPolygons.
+**Step 2.9:** Adding a *SelectPolygons* node. In the Node graph editor, press Tab > Selection > SelectPolygons.
 
-**Step 2.10:** Connect the output of the Basemesh to SelectPolygons
+**Step 2.10:** Connect the output of the `Basemesh` to `SelectPolygons`
 
-**Step 2.11:** Add a SelectPoint node. In the Node graph editor, press Tab > Selection > SelectPoints
+**Step 2.11:** Add a *SelectPoint* node. In the Node graph editor, press Tab > Selection > SelectPoints
 
-**Step 2.12:** Connect the output of the Basemesh to the input of the SelectPoints node.
+**Step 2.12:** Connect the output of the `Basemesh` to the input of the `SelectPoints` node.
 
-**Step 2.13:** Connect the output of the geometry node (imported 3D scanned model) to the SelectPoints node.
+**Step 2.13:** Connect the output of the `Geometry` node (imported 3D scanned model) to the `SelectPoints` node.
 
 The Basemesh model should be on the left, and the 3D scanned model should be on the right.
 
@@ -154,10 +154,10 @@ Points with the same number should be placed in approximately the same areas of 
 **Step 2.15:** Model transformation (1/3). In the Node graph editor, press Tab > Alignment > Wrapping.
 
 **Step 2.16:** Model transformation (2/3). In the Node graph editor, connect the outputs of the four nodes to the Wrapping node in the following way:
-- Connect the output of the Basemesh node to the first input of the Wrapping node
-- Connect the output of the Geometry node to the second input of the Wrapping node
-- Connect the output of the SelectPoints node to the third input of the Wrapping node
-- Connect the output of the SelectPolygons node to the fourth input of the Wrapping node
+- Connect the output of the *Basemesh* node to the first input of the *Wrapping* node
+- Connect the output of the *Geometry* node to the second input of the *Wrapping* node
+- Connect the output of the *SelectPoints* node to the third input of the *Wrapping* node
+- Connect the output of the *SelectPolygons* node to the fourth input of the *Wrapping* node
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Wrap_04.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -167,13 +167,13 @@ Points with the same number should be placed in approximately the same areas of 
 </figure>
 
 
-**Step 2.17:** Model transformation (3/3). In the properties of the Wrapping node, click Compute. The computing process will take some time.
+**Step 2.17:** Model transformation (3/3). In the properties of the *Wrapping* node, click *Compute*. The computing process will take some time.
 
 **Step 2.18:** Saving the new low-polygonal model (1/3). In the Node graph editor, press Tab > Geometry > SaveGeom.
 
-**Step 2.19:** Saving the new low-polygonal model (2/3). In the Node graph editor, connect the output of the Wrapping node to the input of the SaveGeom node.
+**Step 2.19:** Saving the new low-polygonal model (2/3). In the Node graph editor, connect the output of the *Wrapping* node to the input of the *SaveGeom* node.
 
-**Step 2.20:** Saving the new low-polygonal model (3/3). In the Node graph editor, when the SaveGeom node is selected, in the Properties > File Name, choose where you want to save the new model and click “Compute current frame”.
+**Step 2.20:** Saving the new low-polygonal model (3/3). In the Node graph editor, when the *SaveGeom* node is selected, in the Properties > File Name, choose where you want to save the new model and click *Compute current frame*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Wrap_05.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -185,15 +185,15 @@ Points with the same number should be placed in approximately the same areas of 
 
 **Step 2.21:** Transferring texture (1/2). In the Node graph editor, press Tab > Image > TransferTexture.
 
-**Step 2.22:**  Transferring texture (2/2). In the Node graph editor, connect the outputs of two nodes to the TransferTexture node in the following way:
-- Connect the output of the Geometry node to the first input of the TransferTexture node
-- Connect the output of the Wrapping node to the second input of the TransferTexture node
+**Step 2.22:**  Transferring texture (2/2). In the Node graph editor, connect the outputs of two nodes to the *TransferTexture* node in the following way:
+- Connect the output of the Geometry node to the first input of the *TransferTexture* node
+- Connect the output of the Wrapping node to the second input of the *TransferTexture* node
 
 **Step 2.23:** Saving the new texture (1/2). In the Node graph editor, press Tab > Image > SaveImage.
 
-**Step 2.24:** Saving the new texture (2/3). In the Node graph editor, connect the output of the TransferTexture node to the input of the SaveImage node.
+**Step 2.24:** Saving the new texture (2/3). In the Node graph editor, connect the output of the *TransferTexture* node to the input of the *SaveImage* node.
 
-**Step 2.25:** Saving the new texture (2/3). In the Node graph editor, when the SaveImage node is selected, in the Properties > File Name, choose where you want to save the new texture and click “Compute current frame”.
+**Step 2.25:** Saving the new texture (2/3). In the Node graph editor, when the *SaveImage* node is selected, in the Properties > File Name, choose where you want to save the new texture and click *Compute current frame*.
 
 **Step 2.26:** Check if the resultant 3D model is good enough to be used further in the application. If some parts of the 3D model have issues, the model can be manually corrected or the problematic part of the model can be replaced with the corresponding part of the Basemesh model. This can be done in any 3D editing software, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview). 
 
@@ -207,7 +207,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 **Step 3.2:** Combining polygons of the new 3D model. In the Outliner viewport, select all polygon elements and then select Mesh > Combine
 
 <figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_01.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
+    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_01.PNG" style="align:left; width: 40%; height: 40%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
     <figcaption>Maya Mesh Combine</figcaption>
@@ -228,7 +228,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 
 **Step 3.5:** Merging vertices of the overlapping polygons (2/3). To select vertices, simply zoom out so that the entire model is visible and use the left mouse button to draw a rectangle around it.
 
-**Step 3.6:** Merging vertices of the overlapping polygons (3/3). To merge the vertices, select Merge from the panel above the 3D viewport. In the options window that pops up, select the Threshold value as small as possible.
+**Step 3.6:** Merging vertices of the overlapping polygons (3/3). To merge the vertices, select *Merge* from the panel above the 3D viewport. In the options window that pops up, select the Threshold value as small as possible.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_03.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -238,7 +238,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 </figure>
 
 
-**Step 3.7:** Applying texture (1/4). Click on the model in the 3D viewport. Hold the Right Mouse Button and select Face. Then hold the Right Mouse Button and select Assign new material.
+**Step 3.7:** Applying texture (1/4). Click on the model in the 3D viewport. Hold the Right Mouse Button and select *Face*. Then hold the Right Mouse Button and select *Assign new material*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_04.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -248,30 +248,30 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 </figure>
 
 
-**Step 3.8:** Applying texture (2/4). In the Assign new material window that appears, choose Lambert (a simple flat material type).
+**Step 3.8:** Applying texture (2/4). In the Assign new material window that appears, choose "*Lambert*" (a simple flat material type).
 
 <figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_05.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
+    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_05.PNG" style="align:left; width: 30%; height: 30%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
     <figcaption>Maya Lambert material</figcaption>
 </figure>
 
 
-**Step 3.9:** Applying texture (3/4). In the Attribute editor, the new Lambert material will appear. In the Common Material Attributes, click on the “Check-pattern” button next to the Colour. 
+**Step 3.9:** Applying texture (3/4). In the Attribute editor, the new "*Lambert*" material will appear. In the Common Material Attributes, click on the *Check-pattern* button next to the Colour. 
 
 <figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_06.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
+    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_06.PNG" style="align:left; width: 30%; height: 30%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
     <figcaption>Maya Lambert colour</figcaption>
 </figure>
 
 
-**Step 3.10:** Applying texture (4/4). In the Create Render Node window that appears, select File and find the texture exported from Wrap.
+**Step 3.10:** Applying texture (4/4). In the Create *Render* Node window that appears, select *File* and find the texture exported from Wrap.
 
 <figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_07.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
+    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_07.PNG" style="align:left; width: 40%; height: 40%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
     <figcaption>Maya Add file to Lambert colour</figcaption>
@@ -288,7 +288,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 </figure>
 
 
-**Step 3.12:** Polishing texture (1/3). Click the model, and while holding the Right Mouse Button, select Object Mode. And then select UV > UV Editor from the main menu.
+**Step 3.12:** Polishing texture (1/3). Click the model, and while holding the Right Mouse Button, select *Object Mode*. And then select *UV > UV Editor* from the main menu.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_09.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -298,7 +298,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 </figure>
 
 
-**Step 3.13:** Polishing texture (2/3). When in the UV Editor, hold the Right Mouse Button and select UV.
+**Step 3.13:** Polishing texture (2/3). When in the UV Editor, hold the Right Mouse Button and select *UV*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_10.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -329,7 +329,7 @@ The texture might also need some polishing, and correcting the UV map alone (as 
 
 In this tutorial, we are using [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) to polish the texture, but any other 2D image editing software can be used.
 
-In Photoshop, we use the Stamp tool to clone parts of the texture to the problematic areas, such as hands and feet.
+In Photoshop, we use the "Stamp tool" to clone parts of the texture to the problematic areas, such as hands and feet.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Photoshop_01.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -347,7 +347,7 @@ Mixamo offers multiple free animations and characters.
 
 **Step 5.1:** Open [Mixamo website](https://www.mixamo.com/) in your browser, create an account and login.
 
-**Step 5.2:** Importing textured model to Mixamo (1/2). Click the Upload Character button.
+**Step 5.2:** Importing textured model to Mixamo (1/2). Click the *Upload Character* button.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig05.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -367,7 +367,7 @@ Mixamo offers multiple free animations and characters.
 </figure>
 
 
-**Step 5.4:** Auto-rigging (1/3). Make sure that the character model is facing you. If it does not, use arrow buttons in the bottom left corner of the screen to rotate it. When finished, click Next.
+**Step 5.4:** Auto-rigging (1/3). Make sure that the character model is facing you. If it does not, use arrow buttons in the bottom left corner of the screen to rotate it. When finished, click *Next*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_02.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -377,7 +377,7 @@ Mixamo offers multiple free animations and characters.
 </figure>
 
 
-**Step 5.5:** Auto-rigging (2/3). Place markers on the model, following the example given on the right part of the screen. When finished click Next.
+**Step 5.5:** Auto-rigging (2/3). Place markers on the model, following the example given on the right part of the screen. When finished click *Next*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_03.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -387,9 +387,9 @@ Mixamo offers multiple free animations and characters.
 </figure>
 
 
-**Step 5.6:** Auto-rigging (3/3). Review your character while a sample animation is playing. If the rigging quality is not satisfactory, go to the previous step and try to place markers differently or uncheck “Use symmetry” or use a different skeleton.
+**Step 5.6:** Auto-rigging (3/3). Review your character while a sample animation is playing. If the rigging quality is not satisfactory, go to the previous step and try to place markers differently or uncheck *Use symmetry* or use a different skeleton.
 
-**Step 5.7:** The rigged character should now appear in the main Mixamo page on the right. Choose an animation from the list on the left and click Download. In the Download settings under Format, select FBX.
+**Step 5.7:** The rigged character should now appear in the main Mixamo page on the right. Choose an animation from the list on the left and click *Download*. In the Download settings under Format, select *FBX*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_04.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -419,7 +419,7 @@ In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to 
 **Step 6.3:** Importing model and animation to Unity 3D (2/3). Before an animation can be used in Unity 3D, it should be imported into the project we have just created. In the main menu, select the Assets > Import package > Custom package or simply drag-and-drop the FBX file that you exported from either Wrap or Maya into the Assets folder in the Project viewport of Unity 3D. The animation file should appear under Assets.
 
 <figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_02.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
+    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_02.PNG" style="align:left; width: 30%; height: 30%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
     <figcaption>Unity 3d importing Fbx</figcaption>
@@ -431,14 +431,14 @@ In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to 
 **Step 6.5:** Creating a material. Click the Right Mouse Button in the same Assets folder and select Create > New material.
 
 <figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_03.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
+    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_03.PNG" style="align:left; width: 40%; height: 40%; border: 15px solid;
   border-image-slice: 1;
   border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
     <figcaption>Unity 3d new material</figcaption>
 </figure>
 
 
-**Step 6.6:** Adding the texture to the material. Click on the new material in the Assets folder and then drag the texture from the assets into the Albedo property in the Inspector.
+**Step 6.6:** Adding the texture to the material. Click on the new material in the Assets folder and then drag the texture from the assets into the "*Albedo*" property in the Inspector.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_04.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -448,7 +448,7 @@ In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to 
 </figure>
 
 
-**Step 6.7:** Select the 3D model in the Assets. In the Inspector, select Rig. In the Animation Type dropdown menu, select Humanoid and then click Apply.
+**Step 6.7:** Select the 3D model in the Assets. In the Inspector, select *Rig*. In the Animation Type dropdown menu, select Humanoid and then click *Apply*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_05.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -458,7 +458,7 @@ In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to 
 </figure>
 
 
-**Step 6.8:** Select the 3D model in the Assets. In the Inspector, select Materials. Drag the material you have created from the Assets onto the property On Demand Remap and then click Apply.
+**Step 6.8:** Select the 3D model in the Assets. In the Inspector, select *Materials*. Drag the material you have created from the Assets onto the property `On Demand Remap` and then click *Apply*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_06.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -480,7 +480,7 @@ In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to 
 
 **Step 6.10:** Import other objects or simply create a flat surface for your character by selecting in the main menu GameObject > 3D object > Cube and modifying the parameters.
 
-**Step 6.11:** Creating an Animator Controller. An animator controller allows you to arrange and maintain one or multiple animations of your character. It is necessary to play character animations in Unity 3D. Click the Right Mouse Button in the Project view and select Create > Animator Controller. A new Animator Controller should appear in the Assets.
+**Step 6.11:** Creating an Animator Controller. An `Animator Controller` allows you to arrange and maintain one or multiple animations of your character. It is necessary to play character animations in Unity 3D. Click the Right Mouse Button in the Project view and select Create > Animator Controller. A new Animator Controller should appear in the Assets.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_08.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -490,7 +490,7 @@ In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to 
 </figure>
 
 
-**Step 6.12:** Double-click the Animator Controller in the Assets to open the Animator window, which contains a visualization of the Animation State Machine that is used to arrange multiple animations of the character.
+**Step 6.12:** Double-click the `Animator Controller` in the Assets to open the Animator window, which contains a visualization of the Animation State Machine that is used to arrange multiple animations of the character.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_09.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -500,7 +500,7 @@ In this part of the tutorial, we will work in [Unity 3D](https://unity.com/) to 
 </figure>
 
 
-**Step 6.13:** Expand the FBX file in the Assets and find the animation under it. Drag the animation from the Assets into the Animator Controller.
+**Step 6.13:** Expand the FBX file in the Assets and find the animation under it. Drag the animation from the Assets into the `Animator Controller`.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_10.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -520,7 +520,7 @@ The animation should appear as an orange rectangle. This means that the animatio
 </figure>
 
 
-**Step 6.14:** Applying the animation to the character model. Select the character model in the Hierarchy and drag the Animator Controller into the Controller property in the Inspector.
+**Step 6.14:** Applying the animation to the character model. Select the character model in the Hierarchy and drag the `Animator Controller` into the `Controller` property in the Inspector.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_12.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -530,4 +530,4 @@ The animation should appear as an orange rectangle. This means that the animatio
 </figure>
 
 
-**Step 6.15:** Click the Play button in Unity to see the character animated in the scene.
+**Step 6.15:** Click the *Play* button in Unity to see the character animated in the scene.

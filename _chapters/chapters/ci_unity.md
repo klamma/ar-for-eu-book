@@ -20,7 +20,7 @@ The test runner is based on an early version of NUnit which is a unit testing fr
 
 ### Test Runner Window
 
-The test runner adds a new window which can be found under *Window > General > Test Runner*.
+The test runner adds a new window which can be found under Window > General > Test Runner.
 It provides a list of available tests which are grouped by their namespace.
 
 ### Play Mode Tests and Edit Mode Tests
@@ -29,7 +29,7 @@ Unity's unit tests are divided into play mode tests and edit mode tests.
 The difference between the two is that play mode tests are executed in the application's runtime environment where the callback methods of MonoBehaviours are executed.
 Editor tests are executed directly in the editor's environment and no callback methods of MonoBehaviours are called.
 Hence, test files for editor tests need to be placed in a folder called "Editor".
-The folder can be placed anywhere in the project, e.g. under "Assets/Tests/Editor".
+The folder can be placed anywhere in the project, e.g. under Assets/Tests/Editor.
 However, the two test types do not create a strict division between tests for the application logic and tests for editor tools.
 If application logic should be tested which does not involve any callback methods, the test can also be created as an edit mode test.
 The advantage of edit mode tests is that they take less time to execute because play mode tests have to launch the separate runtime environment.
@@ -71,7 +71,7 @@ This way, the NUnit framework becomes accessible.
 ### Creating a Test Class
 
 Once you have created a test folder and the assembly definition file, testing classes can be added to the folder.
-To do this, right-click in the assets browser and select "Create > Testing > C# Test Script".
+To do this, right-click in the assets browser and select Create > Testing > C# Test Script.
 This creates a plain C# class in which unit tests are defined.
 The created file is based on a template that already imports NUnit and that contains some example tests.
 

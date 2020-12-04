@@ -36,7 +36,7 @@ This is the long term support version.
 
 This tutorial was written for Unity3D 2017.4.31f1 (15 Aug, 2019).
 Via the UnityHub the modules for Windows Store .NET Scripting Backend and Windows Store IL2CPP Scripting Backend have been added.
-It uses Visual Studio 2017 (15.9.15) and the Windows 10 SKD 10.0.17134, see also release notes at https://github.com/microsoft/MixedRealityToolkit-Unity/releases.
+It uses Visual Studio 2017 (15.9.15) and the Windows 10 SKD 10.0.17134, see also release notes at [https://github.com/microsoft/MixedRealityToolkit-Unity/releases](https://github.com/microsoft/MixedRealityToolkit-Unity/releases).
 
 It is crucial to install the required components for Visual Studio 2017 (.NET support, unity support, and the Windows 10 SDKs).
 
@@ -80,7 +80,7 @@ Make sure that for the column with the Windows icon, the default quality setting
 
 Then navigate to menu Edit > Project Settings > Player.
 There are several important settings that need to be done here.
-First and foremost, under XR settings, VR support has to be ticked and "Windows Mixed Reality" must be added to the list (best clean out the rest).
+First and foremost, under XR settings, VR support has to be ticked and `Windows Mixed Reality` must be added to the list (best clean out the rest).
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/holotoolkit/player settings - xr.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -91,8 +91,8 @@ First and foremost, under XR settings, VR support has to be ticked and "Windows 
 
 Furthermore, select the group "Publishing Settings" and make sure it has a unique package name.
 Additionally, don't forget to add a meaningful Product Name at the very top.
-Depending on what functionality you will be using, several "Capabilities" have to be added here.
-For our tutorial, we will be using "Internet Client", "Microphone", "Objects3D", and "Spatial Perception".
+Depending on what functionality you will be using, several `Capabilities` have to be added here.
+For our tutorial, we will be using `Internet Client`, `Microphone`, `Objects3D`, and `Spatial Perception`.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/holotoolkit/publishing settings.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -101,7 +101,7 @@ For our tutorial, we will be using "Internet Client", "Microphone", "Objects3D",
     <figcaption>Unity Downloads</figcaption>
 </figure>
 
-Most importantly, the "Other" settings must set the Configuration setting for Scripting Backend to "IL2CPP" (as .NET is being phased out).
+Most importantly, the "Other" settings must set the Configuration setting for Scripting Backend to `IL2CPP` (as .NET is being phased out).
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/holotoolkit/player settings - other.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -118,7 +118,7 @@ Vuforia is such an example (and here is a solution for that).
 There are many other pitfalls, as software is still experimental.
 Cryptic error messages in Visual Studio, however, most often indicate version conflicts between not the right version of Unity, missing Unity modules, not the right version of the Windows 10 SDK, not the right version of Visual Studio, missing automatic updates of nuGet packages, missing Unity support for Visual Studio.
 
-Download the 2017.4.3.0 Refresh Holotoolkit unity package from here (no need for the exam-ples and preview or sources) - we will come back to this in the first step - Spatial Mapping - of the tutorial.
+Download the 2017.4.3.0 Refresh Holotoolkit unity package from here (no need for the examples and preview or sources) - we will come back to this in the first step - Spatial Mapping - of the tutorial.
 
 Set up your Unity panels so that they look like this: Scene / Game top left, console bottom left.
 Hierarchy above Project in the middle column, and Inspector on the right.
@@ -135,7 +135,7 @@ And you can open the Mixed Reality Toolkit > Build Window.
 # Testing
 
 The simplest way to test the app is to use holographic remoting.
-For this, the Holographic Remoting Player has to be installed on the HoloLens from the Windows Store.
+For this, the `Holographic Remoting Player` has to be installed on the HoloLens from the Windows Store.
 Once started, the app will display the IP address of the HoloLens.
 If your development machine is on the same network (and the network is reasonably open - like your home network), then Unity can directly connect to this IP address.
 

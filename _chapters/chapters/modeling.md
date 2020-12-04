@@ -72,7 +72,7 @@ Additionally, primitives can also be used as a starting point, e.g. for subseque
 
 One can also use Boolean operations in order to create complex 3D shapes from multiple base meshes.
 Boolean operations are heavily used in CAD where they are defined on volumes.
-The volumes are combined using operations known from Boolean algebra, e.g. OR, AND or XOR.
+The volumes are combined using operations known from Boolean algebra, e.g. *OR*, *AND* or *XOR*.
 
 Intuitively, the for every point in space and every base volume, a truth value is determined {% cite Fole10 %}.
 It states if the point is part of the volume.
@@ -331,7 +331,7 @@ To achieve this, you will texture paint the sides of a cube so that they show th
 
 2.At the top of the window, a series of tabs can be found.
   They act as pre-defined workspace configurations for common tasks in the 3D modelling programme.
-  Select the tab which says "*Texture Paint*".
+  Select the tab which says "Texture Paint".
   In the figure it is highlighted by `a`.
   The workspace changes to a two-split view.
   On the left side, an image editor can be found.
@@ -492,7 +492,7 @@ To achieve this, you will texture paint the sides of a cube so that they show th
   This dropdown menu shows all textures which are referenced in the .blend-file.
   Select the *dice_colour* texture that you created.
   The editor will now show the image and an overlay of the UV-unwrapped cube.
-  Next, go to the top menu of the Image Editor and select *Image > Save as...*.
+  Next, go to the top menu of the Image Editor and select "Image > Save as...".
   Save the image somewhere on your hard drive, ideally in the same folder as the .blend-file.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/modeling/TexturePaintingExercise/8SaveImage.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -502,12 +502,12 @@ To achieve this, you will texture paint the sides of a cube so that they show th
 </figure>
 
 11.Any changes to the texture need to be saved manually.
-  If you alter the texture, go to *Image > Save* or hover the mouse over the Image Editor and hit `Alt + S` to save the currently displayed texture.
+  If you alter the texture, go to Image > Save or hover the mouse over the Image Editor and hit `Alt + S` to save the currently displayed texture.
 
 **Further things to try out**
 
 - You can also paint the eyes in the Image Editor.
-  In the top-left corner of the Image Editor, change the dropdown menu which says *View* to *Paint*.
+  In the top-left corner of the Image Editor, change the dropdown menu which says "View" to "Paint".
   You now have the same drawing abilities in the 2D texture view.
   If you paint either in the texture view or on the 3D model, the other view will update in real time.
 <figure>
@@ -587,9 +587,9 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 
 5.Add materials to the objects and give them some distinct colours.
    The materials can be set in the inspector on the right on the small tab with the red and black ball icon (not the globe icon).
-   Add a new material slot and change the colour in the field which is labelled *Base Color*.
+   Add a new material slot and change the colour in the field which is labelled "Base Color".
    You can also give an object a glass material to create intricate caustics on the floor.
-   To change the material type to glass, select the dropdown menu which is labelled *Surface* and is currently set to *Principled BSDF*.
+   To change the material type to glass, select the dropdown menu which is labelled "Surface" and is currently set to *Principled BSDF*.
    Then select the *Glass BSDF* option.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/modeling/TextureBakingExercise/RenderedPreview.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -608,8 +608,8 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
    Each object needs a texture to which the baked data can be written.
    In this case, we will use separate textures but it is also possible to combine multiple objects in one texture if their UV-layouts are non-overlapping.
    Go to the *UV Editing* tab again.
-   In the UV editor on the left, select the menu entry *Image > New* to create a new texture.
-   Give it a descriptive name, e.g. *cube_bake* and select a high resolution, e.g. 1024px x 1024px or 2024px x 2024px.
+   In the UV editor on the left, select the menu entry Image > New to create a new texture.
+   Give it a descriptive name, e.g. "cube_bake" and select a high resolution, e.g. 1024px x 1024px or 2024px x 2024px.
    The colour and type do not matter since we will overwrite the texture anyway.
 
 8.Repeat the previous step for each object in the scene which should be baked.
@@ -622,7 +622,7 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
    Go to the *Shading* tab.
    Select the object which should be connected to a texture so that its material nodes are revealed in the bottom panel.
    With the mouse hovering over this material node panel, press `Shift + A` to show the menu for new nodes.
-   Select *Texture > Image Texture* to add an image texture node.
+   Select Texture > Image Texture to add an image texture node.
 
 10.Do *not* connect the image texture node to anything, otherwise there will be recursive issues in the baking process where Blender tries to evaluate the texture for the material and writes on it at the same time.
     Instead, go to the small dropdown on the Image Texture node next to the *"+ New"* button and select the texture that you just created for the object.
@@ -662,7 +662,7 @@ They can be recovered by baking the normals of the high-resolution mesh onto the
 
 13.It is important to know that despite the fact that the texture is visible in the Image Editor, it has not yet been saved.
     If you close the Blender file now, the texture will be lost.
-	Hence, go to the top menu of the Image Editor and select *"Image > Save As..."* to save the image.
+	Hence, go to the top menu of the Image Editor and select Image > Save As... to save the image.
 
 14.Repeat the baking steps for all objects that you prepared for the baking process.
 
