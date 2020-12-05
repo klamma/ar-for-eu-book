@@ -69,12 +69,7 @@ The workflow for 3D scanning with structure sensor is the following:
 
 **Step 1.6:** Now you should be able to check your scans in the Sketchfab cloud platform and download it (for example as an OBJ file).
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig00.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>3D Scanning with Structure Sensor</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig00.jpg' description='3D Scanning with Structure Sensor' %}
 
 
 ## Part 2. Converting the 3D scan into a low-polygonal 3D model with R3DS Wrap {#part-2-wrap}
@@ -93,13 +88,7 @@ The main Wrap UI consists of four tabs:
 - Visual editor used for transformation
 - Gallery contains a library of low-polygon models
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig01.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Wrap UI</figcaption>
-</figure>
-
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig01.png' description='Wrap UI' %}
 
 The node graph editor in the top right corner of the screen is used to create and manage scene components that are visualized as nodes in this window.
 The context menu of the Node graph editor can be started by pressing the Tab key.
@@ -109,7 +98,6 @@ Handy controls:
 |**Alt + LMB**| Rotate viewpoint|
 |**Alt + MMB**| Move viewpoint|
 |**Alt + RMB**| Zoom in/out|
-|||  
   
 Let's get started!
   
@@ -122,13 +110,7 @@ In our tutorial, we rename it "Basemesh".
 **Step 2.3:** Import 3D scan (1/2).
 In the Node graph editor, press Tab > Geometry > LoadGeom
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Wrap_03.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Wrap Node graph editor LoadGeom</figcaption>
-</figure>
-
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Wrap_03.PNG' description='Wrap Node graph editor LoadGeom' %}
 
 **Step 2.4:** Import 3D scan (2/2).
 In the Node graph editor, click on the new node and then in the parameters below the editor, select the 3D scanned model under “File names”.
@@ -167,12 +149,7 @@ In the Node graph editor, press Tab > Selection > SelectPoints.
 
 The Basemesh model should be on the left, and the 3D scanned model should be on the right.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig02.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Wrap Selecting points</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig02.png' description='Wrap Selecting points' %}
 
 
 **Step 2.14:**  Wrapping.
@@ -192,12 +169,7 @@ In the Node graph editor, connect the outputs of the four nodes to the Wrapping 
 - Connect the output of the *SelectPoints* node to the third input of the *Wrapping* node
 - Connect the output of the *SelectPolygons* node to the fourth input of the *Wrapping* node
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Wrap_04.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Wrap Node graph editor wrapping</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Wrap_04.PNG' description='Wrap Node graph editor wrapping' %}
 
 
 **Step 2.17:** Model transformation (3/3).
@@ -213,13 +185,7 @@ In the Node graph editor, connect the output of the *Wrapping* node to the input
 **Step 2.20:** Saving the new low-polygonal model (3/3).
 In the Node graph editor, when the *SaveGeom* node is selected, in the Properties > File Name, choose where you want to save the new model and click *Compute current frame*.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Wrap_05.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Wrap Node graph editor saving</figcaption>
-</figure>
-
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Wrap_05.PNG' description='Wrap Node graph editor saving' %}
 
 **Step 2.21:** Transferring texture (1/2).
 In the Node graph editor, press Tab > Image > TransferTexture.
@@ -252,12 +218,7 @@ We continue working with the new 3D model in 3D editing software [Autodesk Maya]
 **Step 3.2:** Combining polygons of the new 3D model.
 In the Outliner viewport, select all polygon elements and then select Mesh > Combine
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_01.PNG" style="align:left; width: 40%; height: 40%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Mesh Combine</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_01.PNG' description='Maya Mesh Combine' %}
 
 
 **Step 3.3:** Deleting history.
@@ -266,12 +227,7 @@ Click on the model and select Edit > Delete all by type > History.
 **Step 3.4:** Merging vertices of the overlapping polygons (1/2).
 To edit vertices, Click on the model, then while holding the Right Mouse Button > Vertices.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_02.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Select Vertex</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_02.PNG' description='Maya Select Vertex' %}
 
 
 **Step 3.5:** Merging vertices of the overlapping polygons (2/3).
@@ -281,12 +237,7 @@ To select vertices, simply zoom out so that the entire model is visible and use 
 To merge the vertices, select *Merge* from the panel above the 3D viewport.
 In the options window that pops up, select the Threshold value as small as possible.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_03.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Merge vertices</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_03.PNG' description='Maya Merge vertices' %}
 
 
 **Step 3.7:** Applying texture (1/4).
@@ -294,79 +245,44 @@ Click on the model in the 3D viewport.
 Hold the Right Mouse Button and select *Face*.
 Then hold the Right Mouse Button and select *Assign new material*.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_04.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Assign new material</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_04.PNG' description='Maya Assign new material' %}
 
 
 **Step 3.8:** Applying texture (2/4).
 In the Assign new material window that appears, choose "*Lambert*" (a simple flat material type).
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_05.PNG" style="align:left; width: 30%; height: 30%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Lambert material</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_05.PNG' description='Maya Lambert material' %}
 
 
 **Step 3.9:** Applying texture (3/4).
 In the Attribute editor, the new "*Lambert*" material will appear.
 In the Common Material Attributes, click on the *Check-pattern* button next to the Colour. 
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_06.PNG" style="align:left; width: 30%; height: 30%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Lambert colour</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_06.PNG' description='Maya Lambert colour' %}
 
 
 **Step 3.10:** Applying texture (4/4).
 In the Create *Render* Node window that appears, select *File* and find the texture exported from Wrap.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_07.PNG" style="align:left; width: 40%; height: 40%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya Add file to Lambert colour</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_07.PNG' description='Maya Add file to Lambert colour' %}
 
 
 **Step 3.11:** Check how the textured model looks by selecting the Textured view.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_08.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya view textured</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_08.PNG' description='Maya view textured' %}
 
 
 **Step 3.12:** Polishing texture (1/3).
 Click the model, and while holding the Right Mouse Button, select *Object Mode*.
 And then select *UV > UV Editor* from the main menu.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_09.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya UV editor</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_09.PNG' description='Maya UV editor' %}
 
 
 **Step 3.13:** Polishing texture (2/3).
 When in the UV Editor, hold the Right Mouse Button and select *UV*.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_10.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya UV editor select UV</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_10.PNG' description='Maya UV editor select UV' %}
 
 
 **Step 3.14:** Polishing texture (3/3).
@@ -374,12 +290,7 @@ When in the UV Editor, zoom in to any problematic area and then select and move 
 In the example below, the stitching edge is problematic because some of the points are located outside of the textured area - on a black background.
 They need to be moved inside.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_11.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Maya UV editor edit vertices</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Maya_11.PNG' description='Maya UV editor edit vertices' %}
 
 
 **Step 3.15:** If the texture of the model is of acceptable quality, the model and the texture can be together exported as an OBJ or FBX file.
@@ -396,12 +307,7 @@ In this tutorial, we are using [Adobe Photoshop](https://www.adobe.com/products/
 
 In Photoshop, we use the "Stamp tool" to clone parts of the texture to the problematic areas, such as hands and feet.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Photoshop_01.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Photoshop texture editing</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Photoshop_01.png' description='Photoshop texture editing' %}
 
 
 ## Part 5. Character animation with Mixamo {#part-5-mixamo}
@@ -415,23 +321,13 @@ Mixamo offers multiple free animations and characters.
 **Step 5.2:** Importing textured model to Mixamo (1/2).
 Click the *Upload Character* button.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig05.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Mixamo website</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Fig05.png' description='Mixamo website' %}
 
 
 **Step 5.3:** Importing textured model to Mixamo (2/2) In the window that appears, select the textured 3D model filed either exported from Wrap or Maya.
 If you skipped parts 1-4, you can use an example 3D character model with a polished texture (download).
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_01.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Mixamo uploading character</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_01.png' description='Mixamo uploading character' %}
 
 
 **Step 5.4:** Auto-rigging (1/3).
@@ -439,24 +335,14 @@ Make sure that the character model is facing you.
 If it does not, use arrow buttons in the bottom left corner of the screen to rotate it.
 When finished, click *Next*.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_02.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Mixamo auto-rigging orientation</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_02.png' description='Mixamo auto-rigging orientation' %}
 
 
 **Step 5.5:** Auto-rigging (2/3).
 Place markers on the model, following the example given on the right part of the screen.
 When finished click *Next*.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_03.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Mixamo auto-rigging placing markers</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_03.png' description='Mixamo auto-rigging placing markers' %}
 
 
 **Step 5.6:** Auto-rigging (3/3).
@@ -467,14 +353,7 @@ If the rigging quality is not satisfactory, go to the previous step and try to p
 Choose an animation from the list on the left and click *Download*.
 In the Download settings under Format, select *FBX*.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_04.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Mixamo download</figcaption>
-</figure>
-
-
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Mixamo_04.png' description='Mixamo download' %}
 
 ## Part 6. Importing a character into Unity 3D and animating it {#part-6-unity}
 
@@ -488,12 +367,7 @@ Download and install Unity 3D.
 **Step 6.2:** Importing model and animation to Unity 3D (1/3).
 Open Unity 3D and create a new 3D project.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_01.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d new project</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_01.PNG' description='Unity 3d new project' %}
 
 
 **Step 6.3:** Importing model and animation to Unity 3D (2/3).
@@ -501,12 +375,7 @@ Before an animation can be used in Unity 3D, it should be imported into the proj
 In the main menu, select the Assets > Import package > Custom package or simply drag-and-drop the FBX file that you exported from either Wrap or Maya into the Assets folder in the Project viewport of Unity 3D.
 The animation file should appear under Assets.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_02.PNG" style="align:left; width: 30%; height: 30%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d importing Fbx</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_02.PNG' description='Unity 3d importing Fbx' %}
 
 
 **Step 6.4:** Importing model and animation to Unity 3D (3/3).
@@ -516,58 +385,32 @@ If this happens, you can simply import the texture also by dragging the texture 
 **Step 6.5:** Creating a material.
 Click the Right Mouse Button in the same Assets folder and select Create > New material.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_03.PNG" style="align:left; width: 40%; height: 40%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d new material</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_03.PNG' description='Unity 3d new material' %}
 
 
 **Step 6.6:** Adding the texture to the material.
 Click on the new material in the Assets folder and then drag the texture from the assets into the "*Albedo*" property in the Inspector.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_04.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d add texture to material</figcaption>
-</figure>
-
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_04.PNG' description='Unity 3d add texture to material' %}
 
 **Step 6.7:** Select the 3D model in the Assets.
 In the Inspector, select *Rig*.
 In the Animation Type dropdown menu, select Humanoid and then click *Apply*.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_05.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d rig humanoid</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_05.PNG' description='Unity 3d rig humanoid' %}
 
 
 **Step 6.8:** Select the 3D model in the Assets.
 In the Inspector, select *Materials*.
 Drag the material you have created from the Assets onto the property `On Demand Remap` and then click *Apply*.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_06.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d add material</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_06.PNG' description='Unity 3d add material' %}
 
 
 **Step 6.9:** Drag the 3D model from the Assets into the Scene.
 The character should appear in the Scene view and in the Hierarchy.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_07.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d add character to scene</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_07.PNG' description='Unity 3d add character to scene' %}
 
 
 **Step 6.10:** Import other objects or simply create a flat surface for your character by selecting in the main menu GameObject > 3D object > Cube and modifying the parameters.
@@ -578,55 +421,29 @@ It is necessary to play character animations in Unity 3D.
 Click the Right Mouse Button in the Project view and select Create > Animator Controller.
 A new Animator Controller should appear in the Assets.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_08.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d create animator controller</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_08.PNG' description='Unity 3d create animator controller' %}
 
 
 **Step 6.12:** Double-click the `Animator Controller` in the Assets to open the Animator window, which contains a visualization of the Animation State Machine that is used to arrange multiple animations of the character.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_09.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d animation state machine</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_09.PNG' description='Unity 3d animation state machine' %}
 
 
 **Step 6.13:** Expand the FBX file in the Assets and find the animation under it.
 Drag the animation from the Assets into the `Animator Controller`.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_10.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d add animation to animator controller</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_10.PNG' description='Unity 3d add animation to animator controller' %}
 
 
 The animation should appear as an orange rectangle.
 This means that the animation will play as soon as the object with this animation appears.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_11.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d animation in the state machine</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_11.PNG' description='Unity 3d animation in the state machine' %}
 
 
 **Step 6.14:** Applying the animation to the character model.
 Select the character model in the Hierarchy and drag the `Animator Controller` into the `Controller` property in the Inspector.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_12.PNG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Unity 3d add animator controller to character</figcaption>
-</figure>
-
+{% include figure.html url='/assets/figures/3dscanning-animation/Code_Reality_AR-Foundations_3D-scanning_Unity3D_12.PNG' description='Unity 3d add animator controller to character' %}
 
 **Step 6.15:** Click the *Play* button in Unity to see the character animated in the scene.
