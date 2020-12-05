@@ -12,7 +12,7 @@ visualizations:
 ## Gamification
 
 Gamification describes the concept of using elements from game design in other applications to motivate the user {%cite DDKN11 %}.
-Its objective is to increase the intristic motivation of a user.
+Its objective is to increase the intrinsic motivation of a user.
 Applications which support long-lasting or ongoing activities benefit from this concept.
 Examples include learning applications such as language learning apps and introduction guides to programming.
 Other applications increase the user's engagement, e.g. in the administration of data sets where a lot of manual work is required to improve the quality of the data source.
@@ -32,13 +32,13 @@ Additionally, level systems, leader boards and high scores rely on points to ind
 
 An example for point-based systems can be found on the Q&A platform [Stackoverflow](https://stackoverflow.com/help/whats-reputation) or the social network app [Jodel](https://jodel.com/) where users can gain points based on their contributions to the community.
 These systems contain a voting mechanism where members of a community can award points or deduct them based on the helpfulness of a post.
-Additionally, own actions also affect the points score, e.g. a small amount of points are deducted if a user downvotes a post.
+Additionally, own actions also affect the points score, e.g. a small amount of points is deducted if a user downvotes a post.
 A difference between Stackoverflow and Jodel lies in the fact that the reputation-points of Stackoverflow are visible to all users to establish a status in the community whereas Jodel's Karma-points are private and serve no further purpose.
 
 Another use of the point system can be observed in the language learning app [Duolingo](https://en.duolingo.com/).
 Learners can gain experience points (XP) for finishing lessons.
 Bonus XP are awarded for successive correct answers within one session.
-XP show the amount of dedication which went into learning a language at once glance.
+XP show the amount of dedication which went into learning a language at one glance.
 
 #### Levels
 
@@ -58,7 +58,7 @@ This avoids that an inexperienced user gets frustrated with the game by facing a
 The difficulty of the game can increase while the player levels up based on the assumption that the user got acquainted to the game's mechanics and controls.
 In a similar way, multiplayer games can implement a matchmaking logic which avoids that low-level beginners have to play against experienced players on a higher level.
 
-[Todoist](https://get.todoist.help/hc/de/articles/206209959-Karma) is an example of a gamified application which uses levels.
+[Todoist](https://get.todoist.help/hc/en-us/articles/206209959-Karma) is an example of a gamified application which uses levels.
 Users earn karma points by completing to-do items and meeting productivity goals.
 Points are lost if tasks are overdue.
 Based on the number of points, the app classifies users in one of eight levels, ranging from "Beginner" to "Enlightened".
@@ -107,7 +107,7 @@ They are digital property which means that these digital objects are associated 
 Badges certify a success to its owner.
 They can be seen as a materialized version of an abstract goal, e.g. to learn a new skill.
 Badges can act as a motivational mean, a pedagogical tool or a digital certificate {% cite APBu14 %}.
-Badge systems can be designed in a way that the user is able to see which badges are avaiable and how they can be earned.
+Badge systems can be designed in a way that the user is able to see which badges are available and how they can be earned.
 Another option is to show available badges but to not tell the user how they are earned.
 Instead, the user has to figure this out, e.g. from the title or description of the badge.
 Furthermore, all badges which have not yet been earned can be hidden.
@@ -138,8 +138,8 @@ Another way to engage users in a game or gamified application is to use quests.
 Quests pose challenges and objectives to the user and are usually associated with a reward.
 Rewards such as achievements, badges, points or levels are unlocked once the quest is complete.
 To give a deeper meaning to quests, they can be coupled with a story {% cite Howa08 %}.
-The user has to fulfill a series of smaller quests to progress in the story.
-A series of quests can be designed linearly so that one quest only becomes available after the preceeding quest has been solved.
+The user has to fulfil a series of smaller quests to progress in the story.
+A series of quests can be designed linearly so that one quest only becomes available after the preceding quest has been solved.
 However, it is also possible to design multiple parallel storylines with their own quests, e.g. a main story and some smaller side stories.
 Additionally, quests can also be organized in a tree-like structure where the user has to decide between different quests.
 Once a decision is made, the other options become unavailable and the user can follow the storyline with the quests of the chosen branch.
@@ -163,14 +163,14 @@ In addition to this, meta data can be added to ship more information with the ba
 
 There are also examples of gamified AR applications.
 
-#### Pokemon Go
+#### Pokémon Go
 
 #### GaMR
 
 The Gamification Framework for Mixed Reality Training (GaMR) provides a learning environment for studying 3D models.
 One use-case are anatomy courses where students need to understand three-dimensional anatomical structures and recall the correct names of parts.
 To support this activity, lecturers can set up 3D models in the framework.
-Once a model is uploaded, can be accessed by the frontend on the Microsoft HoloLens or HTC Vive.
+Once a model is uploaded, it can be accessed by the frontend on the Microsoft HoloLens or HTC Vive.
 The users of the framework are divided into the two roles of lecturers and students.
 They are both able to view the model in this immersive environment.
 In addition to this, they can both place annotations on the model.

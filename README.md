@@ -4,7 +4,7 @@
 
 Welcome to the editing environment for the AR-FOR-EU Book.
 
-The latest version is available at [http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/](http://magritte.informatik.rwth-aachen.de/ar-for-eu-book/).
+The latest version is available at <https://codereality.net/ar-for-eu-book/>.
 
 # HowTo Run Locally
 

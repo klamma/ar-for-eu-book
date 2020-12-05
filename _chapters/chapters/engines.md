@@ -5,9 +5,12 @@ hide: true
 permalink: /chapter/engines/
 categories: chapter
 visualizations:
+customjs:
+ - http://code.jquery.com/jquery-1.4.2.min.js
+ - http://yourdomain.com/yourscript.js
 ---
-
 {% include autoRelativePath.html %}
+{% include MRTK_selection.html %}
 
 <script>
     // script for exchanging version-specific content.
@@ -46,7 +49,7 @@ Unity is a real-time graphics engine by Unity Technologies which developers can 
 This means that Unity’s graphics can be adapted to different graphic qualities, performances and visual styles.
 Applications can be deployed on more than 25 platforms, including Android, iOS, Windows Standalone and Universal Windows Platform.
 Unity is available in different pricing levels ranging from a free personal edition to a Pro version with additional support for larger companies.
-The required license level depends on the annual revenue.
+The required licence level depends on the annual revenue.
 Many of the presented AR SDKs can be added to Unity projects so that their functionality is available directly in the 3D engine.
 
 ## Installation
@@ -68,7 +71,7 @@ Similarly, the installation can be expanded by additional build support componen
 
 ## Unity Versions
 
-Unity's versions are labeled by a year, a major version number and a minor version number which are separated by dots, e.g. 2019.2.10.
+Unity's versions are labelled by a year, a major version number and a minor version number which are separated by dots, e.g. 2019.2.10.
 For each year, Unity provides a long term support (LTS) version which is recommended for longer lasting projects.
 Updates to the long term support version focus on stability and are released regularly.
 
@@ -110,7 +113,7 @@ Any file which is placed in this folder can be accessed by application scripts u
 
 A Unity project consists of different scenes.
 Each scene is a virtual space which can be populated with 3D objects and user interface elements.
-In the application, scenes can be loaded and unloaded individually or they can replace an opened scene.
+In the application, scenes can be loaded and unloaded individually, or they can replace an opened scene.
 Unity's WYSIWYG editor allows developers to graphically set up the 3D scene and arrange the 3D models accordingly.
 
 ## User Interface
@@ -130,14 +133,14 @@ The user interface of Unity's editor consists of different panels.
 The most important panel is the 3D view (B).
 The view direction can be changed by right-clicking and dragging at the same time.
 Similar to games, the viewport can be moved by the WASD keys.
-Additionally, certain preset perspectives like a view from the left side or top side can be selected in a widget in right top corner.
+Additionally, certain preset perspectives like a view from the left side or top side can be selected in a widget in top right corner.
 When clicking on the small cube in the middle of the widget, one can toggle between perspective and orthographic viewports.
 
 The 3D view displays the content of one or more scenes.
 A scene consists of objects which can be ordered in a hierarchical manner.
 This scene hierarchy is displayed in a separate panel.
 Here, each entry corresponds to one object.
-To select an object, one can left click on the entry in the hierarchy or click on its geometry in the 3D view.
+To select an object, one can left-click on the entry in the hierarchy or click on its geometry in the 3D view.
 
 ## Play Mode & Debugging
 
@@ -147,10 +150,10 @@ In this mode, the behaviour of the final application is simulated.
 Unity will switch into a game view where the viewpoint of the camera can be seen.
 If this panel is focused, the application reacts to input.
 During play mode, one can also go back to the scene view.
-This is beneficial in order to examine actions which happen outside of the camera's view.
-Additionally, everything which was possible when setting up the scene, e.g. moving objects around or changing values on components, it still possible.
+This is beneficial in order to examine actions which happen outside the camera's view.
+Additionally, everything which was possible when setting up the scene, e.g. moving objects around or changing values on components, is still possible.
 These changes are immediately picked up and affect the behaviour of the application.
-Therefore, developers can experiment with settings while the application is running and they can immediately see the results of their configurations.
+Therefore, developers can experiment with settings while the application is running, and they can immediately see the results of their configurations.
 However, it is important to know that any changes which were made during play mode are reset when exiting play mode.
 The benefit of this is that one can perform destructive tests which completely alter the scene's structure and still it is possible to go back to a valid state of the scene.
 
@@ -173,7 +176,7 @@ Any saved changes made in the 3D modelling application are immediately propagate
 This enables 3D artists to view the 3D model in parallel in the modelling application and a preview in the developed application.
 However, Unity is only able to import such files if the corresponding application is actually installed.
 When working in a team with assigned roles, this can complicate the development setup because not only the team members working on the 3D models have to install the 3D application but also all other team members, e.g. developers who are focusing on implementing the code and do not modify the 3D files.
-This is especially problematic when working with a 3D modelling program which requires paid licenses for each device.
+This is especially problematic when working with a 3D modelling program which requires paid licences for each device.
 Another drawback concerns the flexibility of the 3D model creation.
 The produced file may only contain the final 3D model.
 Any further auxiliary 3D models or copies must not be included in the same file.
@@ -189,23 +192,23 @@ The creators have to make sure that the two versions match.
 
 Objects in a scene in Unity can be extended or modified by components.
 In the inspector panel, one can select such components and attach them to an object.
-Objects always contain a Transform component.
+Objects always contain a `Transform` component.
 In the inspector, developers can use this component to specify the position, rotation in Euler angles and scale of the object.
-Additionally, developers can add further components, e.g. to enable the physics simulation on an object or add a scripted behavior to the object.
+Additionally, developers can add further components, e.g. to enable the physics simulation on an object or add a scripted behaviour to the object.
 
 ## Physics Simulation
 
-The physics simulation is handled by a *Rigidbody* component.
+The physics simulation is handled by a `Rigidbody` component.
 When it is added to a 3D object, the object will be considered in the physics simulation.
 Once the play mode is entered, it will be affected by gravity and starts falling down.
 Another part of the physics simulation is the collision detection.
 An object should have a collider or else it will pass through other objects like the floor and fall down infinitely.
 By default, Unity's primitive objects like the cube or sphere are already equipped with a collider by default.
 For imported 3D models, the colliders need to be set up manually.
-This can be achieved by adding one or more collider components to the object.
+This can be achieved by adding one or more `Collider` components to the object.
 The available colliders also have primitive shapes like cuboids, spheres or capsules.
-There is also a *Mesh Collider* component which directly uses the object's geometry as a collider.
-It is recommended to avoid using a Mesh Collider and instead approximate the object by a composition of primitive collider shapes.
+There is also a `Mesh Collider` component which directly uses the object's geometry as a collider.
+It is recommended to avoid using a `Mesh Collider` and instead approximate the object by a composition of primitive collider shapes.
 This improves performance since the collision detection for primitives can be calculated quicker than for any arbitrary shaped geometry.
 
 ## Programming in Unity
@@ -217,20 +220,20 @@ In order to execute a script’s functionality, it needs to be added to a 3D obj
 First, the target object has to be selected.
 After that, the component can be added in the inspector panel.
 One can either drag the script from the Assets-browser onto the inspector panel or click on "Add Component" and search for the script's name.
-Scripts can only be added in such a way to objects of a scene if they inherit from the MonoBehavior class.
+Scripts can only be added in such a way to objects of a scene if they inherit from the `MonoBehavior` class.
 Once a script is attached to an object, Unity calls special functions in the script if certain events happened.
-For instance, developers can implement an Update() function which is called once for every frame which is rendered.
+For instance, developers can implement an `Update()` function which is called once for every frame which is rendered.
 Similarly, different callback-methods can be implemented which are raised at different points in the application’s or object’s lifecycle, e.g. `Awake()`, `Start()` and `OnDestroy()`.
 Details on available callback methods and the data structures which can manipulate an object’s properties can be found in Unity’s [documentation](https://docs.unity3d.com/Manual/index.html).
 
 If the script contains public variables, the values of the variables will be displayed in the editor.
 They are shown on the component's panel in the inspector and can also be edited.
 This way, developers can configure initial values directly in Unity's editor on a UI without touching the script again.
-For instance, public variables can be used to fine-tune the scripted behavior.
+For instance, public variables can be used to fine-tune the scripted behaviour.
 If an object should move along one axis over time, one can expose a public variable which determines the speed of the object.
 In this case, the public variable is never assigned to in the script and the script only reads their value, e.g. to calculate the next position from the given speed.
 Since the speed value is shown in the editor on the component, developers can now tweak it so that it fits their expectations.
-Such input fields on the components are created for primitive variable types but also for all GameObjects, Transforms and MonoBehavior scripts.
+Such input fields on the components are created for primitive variable types but also for all `GameObjects`, `Transforms` and `MonoBehavior` scripts.
 For these complex variable types, a box on the component's UI is created which holds the reference.
 One can directly drag an object from the hierarchy view into the given box to establish the reference to the dragged object.
 The box will automatically be filled with the matching type which is attached to the object.
@@ -281,12 +284,12 @@ We will import a 3D model into Unity and write a script which will control the 3
    Here, create a folder called "3D Models" and copy the 3D model there.
    You can use any compatible 3D model format.
    In the example we use the Stanford bunny in the .obj file format.
-   It can be downloaded in the [supplementary material]({{pathToRoot}}/assets/supplementary_material/Unity/Bunny.obj)).
+   It can be downloaded in the [supplementary material]({{pathToRoot}}/assets/supplementary_material/Unity/Bunny.obj).
 
 4.Return to Unity's editor.
    In the Assets browser you will now find the "3D Models" folder and inside of it the 3D model.
    You can create an instance of the 3D model in the scene by dragging and dropping the 3D model file from the assets browser onto the 3D view or the scene hierarchy.
-   In order to quickly move the viewport to the 3D model, double click the object's entry in the hierarchy view.
+   In order to quickly move the viewport to the 3D model, double-click the object's entry in the hierarchy view.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/DragAndDropModel.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -296,7 +299,7 @@ We will import a 3D model into Unity and write a script which will control the 3
 </figure>
 
 5.With the 3D object selected in the scene, in the inspector panel, the attributes of the 3D model can be changed.
-   Under "Transform", its position, rotation and size can be adapted to fit the scene.
+   Under `Transform`, its position, rotation and size can be adapted to fit the scene.
    Set the position to (0, 0, 0) so that the object is situated in the origin of the coordinate system.
 
 <figure>
@@ -306,17 +309,17 @@ We will import a 3D model into Unity and write a script which will control the 3
     <figcaption>Adjust Transform</figcaption>
 </figure>
 
-6.It is also possible to add a material to the bunny which can be used to add color to the object's surface.
+6.It is also possible to add a material to the bunny which can be used to add colour to the object's surface.
    In order to do this, create a new folder called "Materials" in the root directory of the assets browser.
-   Then right click on the assets browser and choose "Create > Material".
+   Then right-click on the assets browser and choose "Create > Material".
    Give the material a descriptive name, e.g. "BunnyMaterial".
 
-7.We will now change the material's color.
+7.We will now change the material's colour.
    Select the material in the assets browser.
    Its properties can now be edited in the inspector panel.
-   By default, the material is setup as a Physically Based Rendering (PBR) material, so its surface color can be changed in the "*Albedo*" option.
-   Click once on the white box next to "*Albedo*" to open a color picker dialog.
-   Select a color and simply close the color dialog again to apply the selected color to the material.
+   By default, the material is set up as a Physically Based Rendering (PBR) material, so its surface colour can be changed in the "*Albedo*" option.
+   Click once on the white box next to "*Albedo*" to open a colour picker dialogue.
+   Select a colour and simply close the colour dialog again to apply the selected colour to the material.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_IntroductionToUnity/MaterialSetup.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -325,8 +328,8 @@ We will import a 3D model into Unity and write a script which will control the 3
     <figcaption>Material Setup</figcaption>
 </figure>
 
-8.In the inspector view, the color on the sphere in the material preview window has been changed accordingly.
-   However, the color does not appear on the 3D model yet.
+8.In the inspector view, the colour on the sphere in the material preview window has been changed accordingly.
+   However, the colour does not appear on the 3D model yet.
    In order to view the material on the model, the material must be applied to it.
    The simplest way to do this is to drag and drop the material file from the assets browser onto the object in the 3D view.
 
@@ -349,7 +352,7 @@ We will import a 3D model into Unity and write a script which will control the 3
    The created script is automatically set up as a C# class which is also called `ObjectMover`.
    It is important that the name of the file always matches up with the name of the class.
    The script is also set up so that it inherits from `MonoBehavior` which means that the script can be attached to game objects and that it can implement special callback functions.
-   Double click on the file in the assets browser in order to edit it in a development environment, e.g. Visual Studio.
+   Double-click on the file in the assets browser in order to edit it in a development environment, e.g. Visual Studio.
 
 11.With `Start` and `Update` two of these callback methods have already been defined in the class.
    We will first modify the update-function to implement the actual movement:
@@ -432,7 +435,7 @@ We will start with the result of the last exercise but the shown procedure also 
 Some minor adjustments are required to prepare the result from the last exercise for AR:
 
 - The project will be set up in a way that the user starts at the position (0, 0, 0).
-  Currently, the bunny object is also at the origin of the coordinate system so that the user will inside of the bunny and will not be able to see it.
+  Currently, the bunny object is also at the origin of the coordinate system so that the user will inside the bunny and will not be able to see it.
   To fix this, move the bunny to the position (0, 0, 2).
   Unity units correspond to meters and so, the bunny will be displayed 2 meters in front of the user if the application is started.
 - Also adjust the scale of the bunny so a smaller size (at the moment it is roughly one meter long).
@@ -450,7 +453,7 @@ Some minor adjustments are required to prepare the result from the last exercise
    Download the file with the ending *.unitypackage* without *Examples* or *Preview* in the name.
    You can save this Unitypackage anywhere on your computer, just remember the file path.
 2. In Unity, perform a right-click on a free space in the assets-browser panel and choose "Import Package > Custom Package...".
-   In the opened dialog, navigate to the path where the downloaded unitypackage was stored and import it.
+   In the opened dialogue, navigate to the path where the downloaded unitypackage was stored and import it.
    
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ImportPackage.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -471,12 +474,12 @@ Some minor adjustments are required to prepare the result from the last exercise
     <figcaption>Apply Project Settings Menu</figcaption>
 </figure>
 
-4.The following dialog gives detailed options about specific project settings.
+4.The following dialogue gives detailed options about specific project settings.
    Among others, the checked points set up the Unity project for UWP development which is required for the HoloLens.
    Additionally, XR support is activated which tells Unity that the build application should run on a head-mounted display.
    For a collaborative experience which uses the networking system which is provided by the MixedRealityToolkit, one can enable the sharing settings.
    However, for this demo this won't be necessary.
-   Hit "*Apply*" to finish the process.
+   Hit *Apply* to finish the process.
    
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ApplyMixedRealityProjectSettings.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -488,7 +491,7 @@ Some minor adjustments are required to prepare the result from the last exercise
 5.Next up, we need to prepare the scene for Mixed Reality.
    This can be achieved with the next menu entry.
    As before, go to the top menu bar entry "Mixed Reality Toolkit" and choose "Configure > Apply Mixed Reality Scene Settings".
-   A similar dialog will open up where you can specify how the scene should be altered.
+   A similar dialogue will open up where you can specify how the scene should be altered.
    For instance, the camera will be exchanged for a prepared version which can react to the user's head movements.
    It is also a good idea to make the script reset the camera's position to the origin.
    This way, when the application starts or the scene is loaded again, the view always starts there and the developer can account for this in the scene design.
@@ -498,7 +501,7 @@ Some minor adjustments are required to prepare the result from the last exercise
    If you want to access the 3D scan of the environment, which is continuously created by the HoloLens, please check *Add the Spatial Mapping Prefab*.
    It places an empty GameObject in the scene with a Spatial Mapping Manager attached to it.
    During runtime, this manager will create and update the mesh of the 3D scanned environment in this scene.
-   Hit "*Apply*" in the dialog box to adapt the currently open scene for Mixed Reality.
+   Hit *Apply* in the dialogue box to adapt the currently open scene for Mixed Reality.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_DeployToHoloLens/ApplyMixedRealitySceneSettings.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -508,14 +511,14 @@ Some minor adjustments are required to prepare the result from the last exercise
 </figure>
 
 6.Again, click on the "Mixed Reality Toolkit" menu entry and this time select "Apply UWP Capability Settings".
-   It opens another dialog window with checkboxes for common permissions.
+   It opens another dialogue window with checkboxes for common permissions.
    Some functionality of the Mixed Reality Toolkit, but also from own scripts, e.g. accessing the microphone, the internet or the spatial mapping, require explicit permission by the user.
-   In this dialog, developers can state that they require this permission.
+   In this dialogue, developers can state that they require this permission.
    If users open the app for the first time, they will be asked to agree to these permissions.
-   If you checked the *Spatial Mapping* option in the previous step, you need to check *Spatial Mapping* here, too.
+   If you checked the `Spatial Mapping` option in the previous step, you need to check `Spatial Mapping` here, too.
 
 7.In the top menu, go to "File > Build Settings".
-   In the opened dialog window, make sure that on the left, the platform is set to Universal Windows Platform.
+   In the opened dialogue window, make sure that on the left, the platform is set to Universal Windows Platform.
    This should already be the case because this is one of the settings which were automatically changed in step 4.
    The active platform is indicated by the Unity logo next to it.
    
@@ -541,7 +544,7 @@ Some minor adjustments are required to prepare the result from the last exercise
    The build will be generated in this folder.
 
 11.Once the build is finished, navigate into the folder that you just created and which now contains the build.
-    You will find a Visual studio solution (with the ending .sln) and the same name as the project.
+    You will find a Visual Studio solution (with the ending .sln) and the same name as the project.
     Please, open it.
 
 12.In the Visual Studio solution, change the configuration to "Release" and the target architecture to "x86".
@@ -615,12 +618,12 @@ One can for instance implement the following interfaces:
 
 A gameobject must have a collider so that the input manager can recognize the object as a possible target.
 We can use any convex 3D collider type which is provided by Unity and it is also possible to set up combinations of colliders.
-In this example, we use a box collider.
+In this example, we use a `Box Collider`.
 
 1. Add a box collider to the bunny.
     To do so, select the bunny gameobject and click "Add Component" in the inspector.
     In the search field, start typing "BoxCollider" and select the entry "Box Collider".
-    It adds a box collider-component to the gameobject.
+    It adds a `Box Collider`-component to the gameobject.
 <figure>
     <img src="{{pathToRoot}}/assets/figures/engines/Exercise_HoloLensInteraction/AddCollider.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
   border-image-slice: 1;
@@ -630,7 +633,7 @@ In this example, we use a box collider.
 
 2.The box collider is also visible in the 3D view as a green box.
     At the moment, it does not fit the bunny.
-    To fix this, the box collider component provides the input fields center and size in the inspector.
+    To fix this, the box collider component provides the input fields centre and size in the inspector.
     They can be used for exact positioning of the box around the mesh.
     However, a tight fit on a complex mesh is quite difficult to achieve by entering numbers alone.
     Therefore, you can also click the "Edit Collider" button.
@@ -681,8 +684,8 @@ We will now implement a short script which illustrates how to react to the case 
 
 7.Add the following code to the script:
 
-    ```
-    public class ColorChanger : MonoBehaviour, IFocusable
+```
+   public class ColorChanger : MonoBehaviour, IFocusable
     {
         public Color focusHighlight = Color.blue;
 
@@ -705,14 +708,14 @@ We will now implement a short script which illustrates how to react to the case 
             rend.material.color = origColor;
         }
     }
-    ```
+```
 
-    Every time the user focuses the object, it will be highlighted in a colour.
+Every time the user focuses the object, it will be highlighted in a colour.
 
 8.In Unity, add the script to the bunny as a component.
     If you want, you can also change the focusHighlight colour to something different in the inspector.
 
-9.If you now execute the application, the bunny will turn to your defined colour evey time that the cursor targets it.
+9.If you now execute the application, the bunny will turn to your defined colour every time that the cursor targets it.
 
 ### Input Click Handling
 
@@ -783,7 +786,8 @@ EditMode tests can check application code which does not require these MonoBehva
 It does not do the usual scene setup work that the PlayMode test does.
 Possible test scenarios include checking the configuration before the application would start.
 
-Inside of a test script, two types of tests can be defined by an attribute in front of the method declaration: [Test] and [UnityTest]
+Inside a test script, two types of tests can be defined by an attribute in front of the method declaration: [Test] and [UnityTest]
+
 Tests marked with [Test] behave like usual methods which are executed line by line.
 [UnityTest] methods behave like coroutines and should have the return type ```IEnumerator```.
 This way, these tests can contain ```yield``` statements which can delay the execution of subsequent commands.
@@ -799,9 +803,9 @@ This definition file influences the compilation of the project and tells Unity u
 In the test runner window, Unity will show a button "Create EditMode Test Assembly Folder".
 Clicking this button will automatically set up a folder called "Tests" and the assembly definition in the folder which is currently opened in the assets view.
 EditMode tests are part of the runtime environment of Unity's editor as opposed to PlayMode tests which work in the actual application runtime environment.
-Therefore, inside of the "Tests" folder, one needs to create a folder which is called "Editor".
+Therefore, inside the "Tests" folder, one needs to create a folder which is called "Editor".
 The precise naming is important because folders named "Editor" tell Unity that their content should be executed in the editor.
-Inside of the "Editor" folder, one can create a test script by right-clicking and selecting "Create > Testing > C# Test Script".
+Inside the "Editor" folder, one can create a test script by right-clicking and selecting "Create > Testing > C# Test Script".
 
 # Unreal Engine
 

@@ -5,11 +5,12 @@ hide: true
 permalink: /chapter/arsdk/
 categories: chapter
 visualizations:
+customjs:
+ - http://code.jquery.com/jquery-1.4.2.min.js
+ - http://yourdomain.com/yourscript.js
 ---
-
 {% include autoRelativePath.html %}
-
-# AR SDKs
+{% include MRTK_selection.html %}
 
 <script>
     // script for exchanging version-specific content.
@@ -22,6 +23,8 @@ visualizations:
     })
 });
 </script>
+
+# AR SDKs
 
 ## Mixed Reality Toolkit
 
@@ -86,7 +89,7 @@ It contains a series of folders, scenes and prefabs which demonstrate the differ
 
 
 1. Download the Mixed Reality Toolkit.
-   Go to the [releases](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) of the Mixed Realtiy Toolkit on GitHub and scroll to the latest version which is not marked as a pre-release.
+   Go to the [releases](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) of the Mixed Reality Toolkit on GitHub and scroll to the latest version which is not marked as a pre-release.
    We are using the release *Microsoft Mixed Reality Toolkit v2.3.0*.
    In the Assets section of the release, download the Unity-package which has *Foundation* in its name as this is the base package.
    In our case, it is called * Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage*.
@@ -112,8 +115,8 @@ It contains a series of folders, scenes and prefabs which demonstrate the differ
 
    After that select the Unity-package that you just downloaded in the opened file explorer and click *Open*.
    Unity will prepare the Unity-package for the import.
-   Next, a dialog will be shown which allows you select which content should be imported.
-   Click *All* to make sure that everythin is selected and then press *Import*.
+   Next, a dialogue will be shown which allows you to select which content should be imported.
+   Click *All* to make sure that everything is selected and then press *Import*.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/sharing/sharingExercise/ImportPackage.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -198,10 +201,10 @@ The following events are available:
 - `OnButtonReleased`: Event raised if the pressed button is released again.
 - `OnButtonClicked`: Event raised if a button is clicked, i.e. pressed and released gain.
 - `OnButtonHeld`: Event raised if a button is pressed and held down for a longer period of time.
-- `OnButtonCanceled`: Event raised if the interaction with the button was cancelled, e.g. if the button was pressed down and then the hand is not in the tracking area anymore.
+- `OnButtonCanceled`: Event raised if the interaction with the button was cancelled, e.g. if the button was pressed down and then the hand is not in the tracking area any more.
 
-Classes can also set the Boolean property `RequireGaze` in order to specify if the interaction with the button should end if it is not in focus anymore.
-With `RequireGaze` set to false, the interaction on a button which is pressed and held down will be canceled if the user does not look at the button anymore.
+Classes can also set the Boolean property `RequireGaze` in order to specify if the interaction with the button should end if it is not in focus any more.
+With `RequireGaze` set to false, the interaction on a button which is pressed and held down will be cancelled if the user does not look at the button any more.
 
 Usually, the `CompoundButton` script is used in combination with one of the other CompoundButton components.
 When adding one of them to the button, the `CompoundButton` will automatically be added, too.
@@ -222,7 +225,7 @@ In order to move the cube and the text, they are organized as children of an emp
 If this empty object is moved back and forth to simulate a button press, the cube and the text will move by the same amount, too.
 
 Underneath the fields for the target transform and the renderer, a button profile can be set up.
-This profile is a saveable configuration which can be reused for different buttons.
+This profile is a savable configuration which can be reused for different buttons.
 The section with the stored values can be expanded by clicking on the "PROFILE" container.
 There is a button labelled "Create Profile" which creates a new profile in the root assets folder of the project.
 Next, the profile needs to be referenced in this section.
@@ -237,7 +240,7 @@ In a big text field, the text which should be displayed can be entered.
 If the reference to the text mesh is correct, typing text in the component's text field will update the display on the button accordingly.
 The ```CompoundButtonText``` can also be used to unify the text appearance on a set of buttons.
 In the inspector, a profile can be selected in the part of the inspector which has a purple background.
-The profile specifies the font style and size, as well as its color.
+The profile specifies the font style and size, as well as its colour.
 By reusing the profile on all buttons in the application, they will all be set up with the same text style.
 However, one can also overwrite single properties of the profile with button-specific values.
 To do so, the checkmarks next to "Overwrite Font Style", "Overwrite Anchor", Overwrite Size" can be set.
@@ -256,10 +259,10 @@ Apart from the textures, the profile also provides further settings in the "DEFA
 Here, one can define a standard icon which is used if the selected icon cannot be found.
 In this section, the icon's material can be selected.
 The script will apply it to the referenced mesh renderer.
-At the bottom of the component, outside of the purple profile area, there is a dropdown menu where one can choose one of the icons by its name.
+At the bottom of the component, outside the purple profile area, there is a dropdown menu where one can choose one of the icons by its name.
 
 The material's shader can be set to the standard shader of the Mixed Reality Toolkit which is not to be confused with Unity's default standard shader.
-In order to support icons with transparency, the material's rendering mode should be set to "TransparentCoutout".
+In order to support icons with transparency, the material's rendering mode should be set to "TransparentCutout".
 
 **Compound Button Sounds**
 
@@ -286,7 +289,7 @@ There is already a prefab included in the Mixed Reality Toolkit which can be use
 It can be found in the assets browser under "HoloToolkit > UX > Prefabs > BoundingBoxes" and is called "BoundingBoxBasic.prefab".
 With the GameObject selected, one can drag and drop the prefab into the field "Bounding Box Prefab" of the component.
 
-The *Bounding Box Rig* component has further options, e.g. one can choose to flatten the boudning box in one direction.
+The *Bounding Box Rig* component has further options, e.g. one can choose to flatten the bounding box in one direction.
 If the flattened axis is set to something else than "Do Not Flatten", the bounding box will be two-dimensional.
 This can be helpful when creating flat menus.
 Underneath this option, three customization settings can be applied.
@@ -294,12 +297,12 @@ They all concern the materials which are applied to the handles of the bounding 
 
 In the section below this, the behaviour of the bounding box can be altered.
 The scale rate describes how drastic the box's size is changed if the user pulls on the scaling handle.
-In other words, if the user moves the scaling gizmo by a fixed distance, high scale rates will change the scale the object more than low rates.
+In other words, if the user moves the scaling gizmo by a fixed distance, high scale rates will change the scale of the object more than low rates.
 One can also specify a max scale for the object.
 
 The component also holds a reference to an "app bar".
 It is a small menu which is shown at the bottom of the object and which can be used to toggle the bounding box.
 When the *Bounding Box Rig* component is added, the reference to the app bar is already set up with a default app bar.
-However, developers can add their own app bars or extend the exiting one by inserting the reference to the altered prefab of the app bar.
+However, developers can add their own app bars or extend the existing one by inserting the reference to the altered prefab of the app bar.
 
 </div>
