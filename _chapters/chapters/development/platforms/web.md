@@ -22,7 +22,7 @@ visualizations:
 ## Introduction {#introduction}
 
 Augmented Reality for the Web demands compatibility with the major browsers.
-To reach this goal, developers needs access to the native device drivers and APIs of the different vendors in JavaScript.
+To reach this goal, developers need access to the native device drivers and APIs of the different vendors in JavaScript.
 
 ## Enabling Technologies {#enabling-technologies}
 
@@ -54,7 +54,7 @@ This gives to users new options to navigate and interact in the virtual environm
 Second, it gives a technical platform to create augmented reality content.
 Moreover, it tackles incompatibilities of the predecessor with different browsers like Safari and Chrome.
 The amount of code needed to create virtual experiences on different devices should be reduced,
-A number of browsers is already supporting WebXR.
+A number of browsers are already supporting WebXR.
 
 [//]: # (QRD*19)
 
