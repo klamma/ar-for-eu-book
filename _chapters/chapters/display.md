@@ -33,6 +33,8 @@ Cathode ray tubes have been used in televisions, computer monitors, arcade machi
 The latter are so-called Vector Displays, which are based on Random Scan System.
 In contrast to the Raster Scan System, which is the basis for televisions and computer screens and uses pixels along scan lines to draw an image, Random Scan Systems, such as Vector Displays, are designed for line drawing applications and use various mathematical functions for drawing {% cite Java20 %}.
 
+{% include figure.html url='/assets/figures/display/VectorDisplay.jpg' description='Vector display' %}
+
 A few years ago even projectors were realized with the help of CRTs to expose large canvases.
 On the other hand there were also tiny Cathode ray tubes, which were used as viewfinders for camcorders.
 These small CRTs are the starting point for the first Head-Mounted Display, developed in 1968 (more on this later).
@@ -117,7 +119,16 @@ Fully immersive virtual reality experiences can be realistically realized using 
 Projectors or multiple LCD screens (CAVE2) form a virtual space by surrounding the walls around the user.
 Users can also wear 3D glasses to facilitate immersion.
 With a CAVE environment, multiple users can interact simultaneously in the same virtual space and share the same experiences {% cite MSB*14 %}.
-  
+
+
+
+{% include figure.html url='/assets/figures/display/aixCAVE.jpg' description='aixCAVE at RWTH Aachen' %}
+<br>
+{% include figure.html url='/assets/figures/display/CAVE2.jpg' description='CAVE2TM at Monash University, Melbourne' %}
+<br>
+
+
+
 #### Head Mounted Displays (HMD)
 
 To achieve a Virtual World experience, Head Mounted Displays using two CRT's (one for each eye) were developed {% cite Suth68 %}.

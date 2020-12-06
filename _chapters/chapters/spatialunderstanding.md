@@ -1,5 +1,5 @@
 ---
-layout: programming_exercise
+layout: tutorial
 title: Spatial Understanding Tutorial
 hide: true
 permalink: /chapter/spatialUnderstanding/
