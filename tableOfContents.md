@@ -31,10 +31,10 @@ order: 3
 ### 2.3 Computer Science Foundations
 
 1. [Programming Languages for AR Development](/ar-for-eu-book/chapter/foundations/computerScience/programming/) {% include badge.html base=pathToRoot badgeName="complete" %}
-   1. [Selecting a Programming Language](/ar-for-eu-book/chapter/foundations/computerScience/programming/) {% include badge.html base=pathToRoot badgeName="complete" %}
-   2. [Learning C++](/ar-for-eu-book/chapter/foundations/computerScience/programming#Cpp) {% include badge.html base=pathToRoot badgeName="todo" %}
-   3. [Learning C#](/ar-for-eu-book/chapter/foundations/computerScience/programming#CSharp) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-   4. [Learning JavaScript](/ar-for-eu-book/chapter/foundations/computerScience/programming#JavaScript) {% include badge.html base=pathToRoot badgeName="todo" %}
+<!--   1. [Selecting a Programming Language](/ar-for-eu-book/chapter/foundations/computerScience/programming/) {% include badge.html base=pathToRoot badgeName="complete" %} -->
+<!--   2. [Learning C++](/ar-for-eu-book/chapter/foundations/computerScience/programming#Cpp) {% include badge.html base=pathToRoot badgeName="todo" %} -->
+<!--   3. [Learning C#](/ar-for-eu-book/chapter/foundations/computerScience/programming#CSharp) {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
+<!--   4. [Learning JavaScript](/ar-for-eu-book/chapter/foundations/computerScience/programming#JavaScript) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 2. Software Architecture
    1. [SOLID Principles of Code](/ar-for-eu-book/chapter/foundations/cs/solid/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
