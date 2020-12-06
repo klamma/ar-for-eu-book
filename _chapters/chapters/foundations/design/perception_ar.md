@@ -1,6 +1,6 @@
 ---
 layout: reading_chapter
-title: Perceptual Foundations of Augmented Reality  (started)
+title: Perceptual Foundations of Augmented Reality
 hide: true
 permalink: /chapter/foundations/design/perception/
 redirect_from: /chapter/perceptionar/
@@ -9,39 +9,25 @@ visualizations:
 ---
 {% include autoRelativePath.html %}
 
-# Perceptual Foundations of Augmented Reality
-
 Definition Perception: The top-down way our brains organize and interpret information and put it into context.
 
 Definition Sensation: The bottom-up process by which our sense, like vision, hearing and touch, receive and relay outside stimuli.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.1%20Definition%20Sensation.JPG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.1</figcaption>
-</figure>
-
+{% include figure.html url='/assets/figures/perception_ar/No.1%20Definition%20Sensation.JPG' description='Defining sensation' %}
 
 
 ## Visual Perception
 
-#### What is perception?
+### What is Perception?
 
 Perception consists from three main processes called recognition, organizing, and interpreting. Recognition happens basically every day, we are aware of everything, such as sounds, lights, and colours. Then you are organizing everything that you perceive.  Interpretation refers to the process by which we represent and understand stimuli that affect us.
 
 Recognizing + Organizing+ Interpreting = Sensory Information
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.2%20perception.JPG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.2</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/perception_ar/No.2%20perception.JPG' description='Parts of perception' %}
 
 
-
-#### What is visual perception?
+### What is Visual Perception?
 
 Visual perception is the end of product of vision.
 
@@ -49,84 +35,41 @@ Visual perception is the end of product of vision.
 Vision is a mode of exploration of the environment drawing on implicit understanding 
 of sensorimotor regularities”  
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.3%20Visual%20perception.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.3</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/perception_ar/No.3%20Visual%20perception.jpg' description='Optical Illusion Highlighting Visual Perception' %}
 
-
-
-#### How vision works?
+### How Vision Works?
 
 The eye passes through the cornea, and go down to the iris. The light reflects and sort of vision is also a chemical reaction. 
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.4%20vision.JPG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.4</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/perception_ar/No.4%20vision.JPG' description='Anatomy of the eye' %}
 
-
-
-#### Preattentive features
+### Preattentive Features
 
 Vision helps us to understand the distinctive features of the environment.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.5%20Preattentive%20features.JPG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.5</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/perception_ar/No.5%20Preattentive%20features.JPG' description='Example for a preattentive feature' %}
 
 ### Gestalt Theory
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.6%20Gestalt%20Theory.JPG" style="align:left; width: 60%; height: 60%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.6</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/perception_ar/No.6%20Gestalt%20Theory.JPG' description='Gestalt theory' %}
 
+*Figure and Ground* explains how we put different elements together to make one scene or a whole image. 
 
-**Figure and Ground** explains how we put different elements together to make one scene or a whole image. 
+{% include figure.html url='/assets/figures/perception_ar/No.7%20Figure%20and%20Ground.jpg' description='Example for Figure and Ground' %}
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.7%20Figure%20and%20Ground.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.7</figcaption>
-</figure>
-
-
-
-**Similarity** States that things which share visual characteristics such as shape, size, colour, texture, value or orientation will be seen as belonging together. 
+*Similarity* states that things which share visual characteristics such as shape, size, colour, texture, value or orientation will be seen as belonging together. 
 
 
 
 States that things which share visual characteristics such as shape, size, colour, texture, value or orientation will be seen as belonging together.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.8%20Similarity.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.8</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/perception_ar/No.8%20Similarity.jpg' description='Example for Similarity' %}
 
-**Proximity** Elements tend to be perceived as aggregated into group if they are near each other.
+*Proximity* Elements tend to be perceived as aggregated into group if they are near each other.
 
-<figure>
-    <img src="{{pathToRoot}}/assets/figures/perception_ar/No.9%20Proximity.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
-  border-image-slice: 1;
-  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
-    <figcaption>Image of No.9</figcaption>
-</figure>
+{% include figure.html url='/assets/figures/perception_ar/No.9%20Proximity.jpg' description='Example for Proximity' %}
 
-
-**Common Fate**: Objects which are facing the same direction or appear to be travelling in the same direction are usually grouped together.
+*Common Fate*: Objects which are facing the same direction or appear to be travelling in the same direction are usually grouped together.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.10%20Common%20Fate.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -135,7 +78,7 @@ States that things which share visual characteristics such as shape, size, colou
     <figcaption>Image of No.10</figcaption>
 </figure>
 
-**Continuity**: in order to fill in missing data we often see things as continuous or whole.
+*Continuity*: In order to fill in missing data we often see things as continuous or whole.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.11%20Continuity.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -144,7 +87,7 @@ States that things which share visual characteristics such as shape, size, colou
     <figcaption>Image of No.11</figcaption>
 </figure>
 
-**Closure**: If we have a large pattern with missing components we tend to fill in the missing parts to create the image we actually see.
+*Closure*: If we have a large pattern with missing components we tend to fill in the missing parts to create the image we actually see.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.12%20Closure.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -155,7 +98,7 @@ States that things which share visual characteristics such as shape, size, colou
 
 
 
-**Area**: When areas are overlapping, the smallest area is seen as the figure and the larger is the ground. When we look at this object we see this as one object on top of another instead of a hole in the larger area.
+*Area*: When areas are overlapping, the smallest area is seen as the figure and the larger is the ground. When we look at this object we see this as one object on top of another instead of a hole in the larger area.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.13%20Area.JPG" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -164,7 +107,7 @@ States that things which share visual characteristics such as shape, size, colou
     <figcaption>Image of No.13</figcaption>
 </figure>
 
-**Symmetry**: We tend to organize complex objects into a whole, we are more likely to group symmetrical objects.
+*Symmetry*: We tend to organize complex objects into a whole, we are more likely to group symmetrical objects.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.14%20Symmetry.jpg" style="align:left; width: 40%; height: 40%; border: 15px solid;
@@ -173,7 +116,7 @@ States that things which share visual characteristics such as shape, size, colou
     <figcaption>Image of No.14</figcaption>
 </figure>
 
-**Vergence-accommodation conflict**: There is a disparity between the physical surface of the screen – accommodation - and the focal point of the simulated world you’re staring at - vergence.
+*Vergence-accommodation conflict*: There is a disparity between the physical surface of the screen – accommodation - and the focal point of the simulated world you’re staring at - vergence.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.15%20Vergence-accommodation%20conflict.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -182,18 +125,15 @@ States that things which share visual characteristics such as shape, size, colou
     <figcaption>Image of No.15</figcaption>
 </figure>
 
-
-
 ## Spatial Audio
 
 Detecting a weak sensory signal like a random clap in daily life isn’t only about the strength of the 
 stimulus. It is also about the psychological state, your alertness and expectations in the moment.
 
-#### **SIGNAL DETECTION THEORY**: a model for predicting how and when a person will detect weak stimuli, partly based on a context.
+### SIGNAL DETECTION THEORY
 
+Signal detection theory is a model for predicting how and when a person will detect weak stimuli, partly based on a context.
 Our hearing is adjusted by our preferences by our personal perceptions that is valuable for us.
-
-
 
 The paranoid parent’s brains are so trained on their baby, it gives their senses a sort of boosted 
 ability, but only in relation to the subject of their attention. 
@@ -209,7 +149,7 @@ ability, but only in relation to the subject of their attention.
 
 ## Touch
 
-#### PROPRIOCEPTION
+### PROPRIOCEPTION
 
 Proprioception is the perception of the world  with our body, so how perceive and understand things around us.  our perception embodied and active when we see, we are ready touch, and we tend to visualize our path to the object. Our body experienced all directions of  the environment, we understand the space in 3D. For example, when we see something that we need to grab, we will understand it is a shape. 
 
@@ -244,7 +184,7 @@ Today UI design is mainly focused on the 2D screens. We are living in a 2D world
     <figcaption>Image of No.18(2)</figcaption>
 </figure>
 
-**However,** AR (Augmented Reality) points to use all the sense to move away from the screen. In the 60s, the person called Douglas Engelbart, he invented the modern mouse, but the aspect of that not invent something that will constantly use, it was about inventing augment human intelligence that could help us to experience our world in more senses. He wrote articles about augmenting human intelligence in using all senses that we use our bodies, speech to work with technology.
+*However,* AR (Augmented Reality) points to use all the sense to move away from the screen. In the 60s, the person called Douglas Engelbart, he invented the modern mouse, but the aspect of that not invent something that will constantly use, it was about inventing augment human intelligence that could help us to experience our world in more senses. He wrote articles about augmenting human intelligence in using all senses that we use our bodies, speech to work with technology.
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.18(3)%20UI.JPG" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -274,7 +214,7 @@ In terms of the spatial holograms and spatial interactions, it shows that object
 
 
 
-#### Affordances
+### Affordances
 
 Affordances are the possible actions. Donald Norman (1988) said "possibilities for action that are readily perceivable by individuals". He invented the storm and created the notion of affordances that means projects represent their functions at 3D world. 
 
@@ -293,7 +233,7 @@ The lateral field of human view is about 140 degrees, but with the peripheral vi
 
 
 
-#### The Hierarchy of Needs in AR
+### The Hierarchy of Needs in AR
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.19(2)%20Affordances.JPG" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -303,27 +243,22 @@ The lateral field of human view is about 140 degrees, but with the peripheral vi
 </figure>
 
 
-#### Immersion and exploration
+### Immersion and exploration
 
-•user is the centre of the environment 
+- user is the centre of the environment 
+- users will want to try their own ideas
+- scale makes a huge impact on presence 
+- small details matter
 
-•users will want to try their own ideas
+### Attention
 
-• scale makes a huge impact on presence 
-
-• small details matter
-
-#### Attention
-
-•users have freedom to look anywhere, so capturing and guiding attention is important
-
-•audio and visual cues help nudge users in the right way
-
-•forced attention – not always a good idea
+- users have freedom to look anywhere, so capturing and guiding attention is important
+- audio and visual cues help nudge users in the right way
+- forced attention – not always a good idea
 
 
 
-#### UI TOOLBOX
+### UI TOOLBOX
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/perception_ar/No.20(1)%20UI%20TOOLBOX.JPG" style="align:left; width: 100%; height: 100%; border: 15px solid;
@@ -346,13 +281,10 @@ We use our gaze (vision) as the way we see things around; we use gaze cursor as 
 
 Note: when you create UI, you need to know:
 
-•Ergonomics
-
-•Safety guidelines for the content
-
-• Clicker, laser pointer
-
-•Other people and their voice commands
+-Ergonomics
+-Safety guidelines for the content
+- Clicker, laser pointer
+-Other people and their voice commands
 
 
 
