@@ -20,9 +20,8 @@ order: 3
 
 1. [Perceptual Foundations of AR](/ar-for-eu-book/chapter/foundations/design/perception/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 2. [Human Computer Interaction](/ar-for-eu-book/chapter/foundations/design/hci/) {% include badge.html base=pathToRoot badgeName="complete" %}
-<!-- 3. User Centered Design -->
-<!--   1. [Evaluation Guide](/ar-for-eu-book/chapter/foundations/design/userCentered/evaluationGuide/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
-<!--   2. [Systems Usability Scale](/ar-for-eu-book/chapter/foundations/design/userCentered/sus/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
+   1. [The Iterative Cycle of Human-Centered Design](/ar-for-eu-book/chapter/foundations/design/hci/#the-iterative-cycle-of-human-centered-design)
+   2. [Prototyping AR Applications](/ar-for-eu-book/chapter/foundations/design/hci/#prototyping-ar-applications)
 
 ### 2.2 Mathematical Foundations
 
@@ -35,8 +34,8 @@ order: 3
 <!--   2. [Learning C++](/ar-for-eu-book/chapter/foundations/computerScience/programming#Cpp) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 <!--   3. [Learning C#](/ar-for-eu-book/chapter/foundations/computerScience/programming#CSharp) {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
 <!--   4. [Learning JavaScript](/ar-for-eu-book/chapter/foundations/computerScience/programming#JavaScript) {% include badge.html base=pathToRoot badgeName="todo" %} -->
-2. Software Architecture
-   1. [SOLID Principles of Code](/ar-for-eu-book/chapter/foundations/cs/solid/) {% include badge.html base=pathToRoot badgeName="complete" %}
+2. [Software Architecture](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/)
+   1. [SOLID Principles of Code](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/#solid-principles-of-code) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### 2.4 Computer Graphics
 
