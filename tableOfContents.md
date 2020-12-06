@@ -19,7 +19,7 @@ order: 3
 ### 2.1 Design
 
 1. [Perceptual Foundations of AR](/ar-for-eu-book/chapter/foundations/design/perception/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-2. [Human Computer Interaction](/ar-for-eu-book/chapter/foundations/design/hci/) {% include badge.html base=pathToRoot badgeName="todo" %}
+2. [Human Computer Interaction](/ar-for-eu-book/chapter/foundations/design/hci/) {% include badge.html base=pathToRoot badgeName="complete" %}
 <!-- 3. User Centered Design -->
 <!--   1. [Evaluation Guide](/ar-for-eu-book/chapter/foundations/design/userCentered/evaluationGuide/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 <!--   2. [Systems Usability Scale](/ar-for-eu-book/chapter/foundations/design/userCentered/sus/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
