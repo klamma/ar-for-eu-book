@@ -17,7 +17,7 @@ The term augmented reality however was coined by Thomas P. Caudellin the 80s {%c
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cgLHSXpkJ1o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-# Ancient precursors
+# Ancient Precursors
 
 **In 1584**, Giambattista della Porta publishes a book entitled 'Magia Naturalis', in which he presents 
 the concept of a room in which you have a glass pane set up in a way that it reflects light bouncing off of 
