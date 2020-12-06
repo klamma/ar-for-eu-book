@@ -113,12 +113,21 @@
         font-size: 1.1em;
     }
 
+
+    h1, h2, h3, h4 {
+        margin-top: 1em;
+    }
+
 	header {
 		margin: 0 0 2em 0;
 
 		> p {
 			margin: 1em 0 0 0;
 		}
+
+        > h1, h2, h3, h4 {
+        margin-top: 0em;
+        }
 	}
 
 	footer {
@@ -194,8 +203,8 @@ a {
 		font-style: italic;
 	}
 
-	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+	p, dl, table {
+		margin-bottom: 1em;
 	}
 
 	dl {
