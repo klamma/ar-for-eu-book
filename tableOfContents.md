@@ -12,7 +12,7 @@ order: 3
 
 1. [Preface](/ar-for-eu-book/chapter/introduction/preface/) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [History of AR](/ar-for-eu-book/chapter/introduction/historyar/) {% include badge.html base=pathToRoot badgeName="complete" %}
-3. [Future of AR](/ar-for-eu-book/chapter/introduction/futurear/) {% include badge.html base=pathToRoot badgeName="todo" %}
+3. [Future of AR](/ar-for-eu-book/chapter/introduction/futurear/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ## 2 Foundations
 
