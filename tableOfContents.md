@@ -51,11 +51,11 @@ order: 3
 
 ### 2.5 Computer Vision
 
-1. [Image Analysis](/ar-for-eu-book/chapter/foundations/cv/imageanalysis/) {% include badge.html base=pathToRoot badgeName="todo" %}
-2. [Object Detection and Recognition](/ar-for-eu-book/chapter/foundations/cv/objectDetection/) {% include badge.html base=pathToRoot badgeName="todo" %}
-3. [Feature Tracking](/ar-for-eu-book/chapter/foundations/cv/featureTracking/) {% include badge.html base=pathToRoot badgeName="todo" %}
-4. [Depth Reconstruction](/ar-for-eu-book/chapter/foundations/cv/depthReconstruction/) {% include badge.html base=pathToRoot badgeName="todo" %}
-5. [Image Processing](/ar-for-eu-book/chapter/foundations/cv/imageProcessing/) {% include badge.html base=pathToRoot badgeName="todo" %}
+1. [Image Analysis](/ar-for-eu-book/chapter/foundations/computerVision/imageanalysis/) {% include badge.html base=pathToRoot badgeName="todo" %}
+2. [Image Processing](/ar-for-eu-book/chapter/foundations/computerVision/imageprocessing/) {% include badge.html base=pathToRoot badgeName="todo" %}
+<!-- 2. [Object Detection and Recognition](/ar-for-eu-book/chapter/foundations/cv/objectDetection/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
+<!-- 3. [Feature Tracking](/ar-for-eu-book/chapter/foundations/cv/featureTracking/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
+<!-- 4. [Depth Reconstruction](/ar-for-eu-book/chapter/foundations/cv/depthReconstruction/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 
 ### 2.6 Hardware Foundations
 
@@ -84,19 +84,20 @@ order: 3
 
 ### 3.4 Development Tools and Libraries
 
-1. Unity
-   1. [Introduction to Unity](/ar-for-eu-book/chapter/development/tools/unity/introduction/) {% include badge.html base=pathToRoot badgeName="complete" %}
-   2. [Overview of AR SDKs for Unity](/ar-for-eu-book/chapter/development/tools/unity/sdks/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-   3. Mixed Reality Toolkit
-      1. [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/development/tools/unity/mrtk/configure/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      2. [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/development/tools/unity/mrtk/mapgazegesture/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      3. [Spatial Understanding](/ar-for-eu-book/chapter/development/tools/unity/mrtk/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      4. [Speech Interaction](/ar-for-eu-book/chapter/development/tools/unity/mrtk/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
-  4. Advanced Unity Techniques
-      1. [Dialogue Understanding](/ar-for-eu-book/chapter/development/tools/unity/advanced/dialogueUnderstanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      2. [Performance Profiling](/ar-for-eu-book/chapter/development/tools/unity/advanced/performanceProfiling/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      3. [Collaboration & Sharing](/ar-for-eu-book/chapter/development/tools/unity/advanced/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      4. [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/development/tools/unity/advanced/ci_unity/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+#### Unity
+
+1. [Introduction to Unity](/ar-for-eu-book/chapter/development/tools/unity/introduction/) {% include badge.html base=pathToRoot badgeName="complete" %}
+2. [Overview of AR SDKs for Unity](/ar-for-eu-book/chapter/development/tools/unity/sdks/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+3. Mixed Reality Toolkit
+   1. [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/development/tools/unity/mrtk/configure/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/development/tools/unity/mrtk/mapgazegesture/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   3. [Spatial Understanding](/ar-for-eu-book/chapter/development/tools/unity/mrtk/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   4. [Speech Interaction](/ar-for-eu-book/chapter/development/tools/unity/mrtk/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
+4. Advanced Unity Techniques
+   1. [Dialogue Understanding](/ar-for-eu-book/chapter/development/tools/unity/advanced/dialogueUnderstanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Performance Profiling](/ar-for-eu-book/chapter/development/tools/unity/advanced/performanceProfiling/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   3. [Collaboration & Sharing](/ar-for-eu-book/chapter/development/tools/unity/advanced/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   4. [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/development/tools/unity/advanced/ci_unity/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### 3.5 Digital Content Creation
 
