@@ -27,7 +27,7 @@ visualizations:
    4. [Adding Reload Behaviour](#adding-reload-behaviour)
    5. [Controls for Running it in Unity and on the Emulator](#controls-for-running-it-in-unity-and-on-the-emulator)
    6. [Testing the Catapult](#testing-the-catapult)
-6. [Final Words](#final-words)
+6.  <a href="#Final Words">Final Words</a>
 
 ## Overview {#overview}
 
@@ -416,13 +416,13 @@ This is the results of competing solvers and, while it could be helped with smoo
 There are several possible combinations, though all rely on a momentum-release timing combination.
 I am sure that, with some experimentation, a smooth but effective set of parameters can be found.
 
-## Final Words {#final-words}
+<h2><img src="{{pathToRoot}}/assets/images/KeyMessage.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;<a name="Final Words" style="text-decoration:none;">Final Words</a> </h2>
 
-You should now have a few working examples of solvers.
+>You should now have a few working examples of solvers.
 Unity developers are increasingly moving to more modular design and the scene/prefab structure is used here to help port these examples into your project without too much work.
 I have avoid searching for gameobjects and used only a tag which is also defined in the prefab, though this could be separated further.
 
-If you have any questions or would like more guidance on anything found here, feel free to drop me a line at:
+>If you have any questions or would like more guidance on anything found here, feel free to drop me a line at:
 [will.guest-2016@brookes.ac.uk](mailto:will.guest-2016@brookes.ac.uk)
 
-Thanks for spending the time to learn about MRTK and solvers! I hope this helps you to build the next generation of immersive experiences.
+>Thanks for spending the time to learn about MRTK and solvers! I hope this helps you to build the next generation of immersive experiences.

@@ -257,12 +257,13 @@ It also contains explanations and examples for the implementation of application
 Unity also provides an [Asset Store](https://assetstore.unity.com/) which contains scripts, 3D models and usage examples which have been created by other developers.
 It contains a mixture of free and paid content which can be downloaded for the own project to save development time.
 
-## Exercise: Importing a 3D Model in Unity and Moving It by Script
+
+<h2><img src="{{pathToRoot}}/assets/images/ProgrammingExercise.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Exercise: Importing a 3D Model in Unity and Moving It by Script</h2>
 
 > If you follow this exercise in order to deploy the project to the Microsoft HoloLens in the next exercise, please use Unity 2017.4.
 
-The goal of this exercise is to get used to Unity's user interface, scripting in Unity and the general project workflow.
-We will import a 3D model into Unity and write a script which will control the 3D model's position.
+>The goal of this exercise is to get used to Unity's user interface, scripting in Unity and the general project workflow.
+>We will import a 3D model into Unity and write a script which will control the 3D model's position.
 
 1. Start Unity.
    You will be greeted by a window showing previously opened projects.
@@ -424,13 +425,12 @@ We will import a 3D model into Unity and write a script which will control the 3
    Select the object and change the speed value on the ObjectMover component.
    The speed of the object in the preview will also adapt.
 
-
-# Exercise: Developing a Unity Project For the Microsoft HoloLens
+<h2><img src="{{pathToRoot}}/assets/images/ProgrammingExercise.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Exercise: Developing a Unity Project For the Microsoft HoloLens</h2>
 
 > At the moment, Unity 2017.4 should be used since this version which is currently supported by the stable release of the MixedRealityToolkit.
 
-The goal of this exercise is to develop an AR project with Unity so that it can run on the Microsoft HoloLens.
-We will start with the result of the last exercise but the shown procedure also applies to any project which is created from scratch.
+>The goal of this exercise is to develop an AR project with Unity so that it can run on the Microsoft HoloLens.
+>We will start with the result of the last exercise but the shown procedure also applies to any project which is created from scratch.
 
 Some minor adjustments are required to prepare the result from the last exercise for AR:
 
@@ -593,15 +593,16 @@ Some minor adjustments are required to prepare the result from the last exercise
     This only stops the execution.
     The application is still installed on the HoloLens and can now be started directly through the start menu on the HoloLens.
 
-## Exercise: Adding Interaction to a HoloLens Application
+<h2><img src="{{pathToRoot}}/assets/images/ProgrammingExercise.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Exercise: Adding Interaction to a HoloLens Application</h2>
+
 
 > This exercise uses the MixedRealityToolkit 2017.4 release.
 > With the release of the MixedRealityToolkit vNext in the near future, the described interfaces and techniques could change and become obsolete.
 
 > The exercise will use the results of the previous exercise.
 
-In the next part of this exercise, we will add interaction to the app.
-We will write scripts which listen for user input in order to change properties of objects in the scene.
+>In the next part of this exercise, we will add interaction to the app.
+>We will write scripts which listen for user input in order to change properties of objects in the scene.
 
 In order to handle (HoloLens-specific) input in a script, it needs to implement the corresponding interface which is provided by the MixedRealityToolkit.
 If the user interacts with an object, the input manager of the MixedRealityToolkit will look for scripts with this interface on the object.

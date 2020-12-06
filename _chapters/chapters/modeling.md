@@ -313,10 +313,9 @@ The following table contains a list of tools which can be used for texture paint
 | Blender | [https://www.blender.org/](https://www.blender.org/) | Free (Open-Source) |
 | Substance Painter | [https://www.substance3d.com/products/substance-painter/](https://www.substance3d.com/products/substance-painter/) | Monthly Subscription ($19.90 - $99.90) |
 
-#### Exercise: Texture Painting in Blender
-
-The goal of this exercise is to create a die.
-To achieve this, you will texture paint the sides of a cube so that they show the according number of eyes.
+<h2><img src="{{pathToRoot}}/assets/images/ProgrammingExercise.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Exercise: Texture Painting in Blender</h2>
+>The goal of this exercise is to create a die.
+>To achieve this, you will texture paint the sides of a cube so that they show the according number of eyes.
 
 1.Blender's startup scene already contains a cube which will act as the mesh for the die.
   If you already deleted the cube or changed the startup file, you can create a new cube by pressing `Shift + A` and selecting *Mesh > Cube*.
@@ -543,9 +542,9 @@ After that, it is retopologized to a low-resolution model which is suitable for 
 In the retopology step, a lot of fine details are lost.
 They can be recovered by baking the normals of the high-resolution mesh onto the low-resolution mesh.
 
-#### Exercise: Texture Baking in Blender
+<h2><img src="{{pathToRoot}}/assets/images/ProgrammingExercise.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Exercise: Texture Baking in Blender</h2>
 
-**Baking Lighting Information**
+>**Baking Lighting Information**
 
 1.Create an interesting scene in Blender with some basic objects.
    To add objects to the scene, press `Shift + A` and add meshes such as a cube, sphere or monkey.
