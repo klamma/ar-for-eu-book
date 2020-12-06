@@ -67,13 +67,12 @@ order: 3
 
 ### 3.1 Platforms
 
-1. [Wearables](/ar-for-eu-book/chapter/development/platforms/wearables/) {% include badge.html base=pathToRoot badgeName="todo" %}
-2. [Mobile AR](/ar-for-eu-book/chapter/development/platforms/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-3. [AR for the Web](/ar-for-eu-book/chapter/development/platforms/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+1. [Mobile AR](/ar-for-eu-book/chapter/development/platforms/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+2. [AR for the Web](/ar-for-eu-book/chapter/development/platforms/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### 3.2 Project Guide
 
-1. [AR Agile Project Management](/ar-for-eu-book/chapter/development/projectGuide/apm/) {% include badge.html base=pathToRoot badgeName="complete" %}
+1. [AR Agile Project Management](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [Workflows and Company Practices](/ar-for-eu-book/chapter/development/projectGuide/workflows/) {% include badge.html base=pathToRoot badgeName="outline" %}
 3. [Privacy, Ownership and Intellectual Property](/ar-for-eu-book/chapter/development/projectGuide/privacy/) {% include badge.html base=pathToRoot badgeName="outline" %}
 
@@ -84,9 +83,9 @@ order: 3
 
 ### 3.4 Development Tools and Libraries
 
-#### Unity
+#### 3.4.1 Unity
 
-1. [Introduction to Unity](/ar-for-eu-book/chapter/development/tools/unity/introduction/) {% include badge.html base=pathToRoot badgeName="complete" %}
+1. [Introduction to Unity](/ar-for-eu-book/chapter/development/tools/unity/unityIntroduction/) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [Overview of AR SDKs for Unity](/ar-for-eu-book/chapter/development/tools/unity/sdks/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 3. Mixed Reality Toolkit
    1. [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/development/tools/unity/mrtk/configure/) {% include badge.html base=pathToRoot badgeName="complete" %}

@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Privacy, Ownership and Intellectual Property
 hide: true
-permalink: /chapter/privacy/
+permalink: /chapter/development/projectGuide/privacy/
 categories: chapter
 visualizations:
 ---
