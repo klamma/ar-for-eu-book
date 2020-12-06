@@ -10,6 +10,23 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
+## Content
+
+1. [Introduction](#introduction)
+2. [Meshes](#meshes)
+3. [Modeling Techniques](#modeling-techniques)
+   1. [Composing Primitives](#composing-primitives)
+   2. [Boolean Operations](#boolean-operations)
+   3. [Digital Sculpting](#digital-sculpting)
+   4. [3D Scanning](#scanning)
+   5. [Photogrammetry](#photogrammetry)
+   6. [Manual Mesh Creation](#manual-mesh-creation)
+   7. [Box Modeling](#box-modeling)
+   8. [Retopology](#retopology)
+   9. [Subdivision Surface Modeling](#subdivision-surface-modeling)
+
+## Introduction {#introduction}
+
 There are several techniques of creating a virtual representation of 3D models.
 The surface of an object can be approximated by a graph structure which is called mesh.
 An advantage of meshes is that the creator can decide how complex the geometry of an object may become.
@@ -25,7 +42,7 @@ This is addressed in the volumetric representation of objects.
 It stores density values in a three-dimensional grid which provides information about the shape of the object as well as its inside.
 Volumetric representations are often used in medicine in order to get a meaningful visualization a patient's body.
 
-## Meshes
+## Meshes {#meshes}
 
 A mesh is an undirected graph which approximates the surface of an object.
 It consists of individual vertices which are situated at defined points in 3D.
@@ -34,12 +51,12 @@ Vertices and edges form faces which are visible as a surface in a rendered image
 
 {% include figure.html url='/assets/figures/modeling/Mesh.png' description='Structure of a Mesh' %}
 
-## Modeling Techniques
+## Modeling Techniques {#modeling-techniques}
 
 Mesh-based 3D models can be created using a number of techniques.
 It is also possible to combine these techniques in one workflow.
 
-### Compositing Primitives
+### Compositing Primitives {#composing-primitives}
 
 A beginner-friendly way of manual modelling is to approximate objects by a composition of primitive shapes like cubes or spheres.
 Such basic shapes are usually included in 3D programs by default and can directly be added to a scene.
@@ -63,7 +80,7 @@ Intricate shapes and especially organic forms cannot be modelled with this techn
 Primitives are best used to prototype a scene {% cite Simonds2013Blender %}, e.g. to block out the general shapes of objects and to establish its proportions.
 Additionally, primitives can also be used as a starting point, e.g. for subsequent manual modelling or sculpting processes.
 
-### Boolean Operations
+### Boolean Operations {#boolean-operations}
 
 One can also use Boolean operations in order to create complex 3D shapes from multiple base meshes.
 Boolean operations are heavily used in CAD where they are defined on volumes.
@@ -93,7 +110,7 @@ The expected result is a mesh which encapsulates the resulting volume.
 To achieve this, special algorithms are used to clip the individual meshes, e.g. the Greiner-Hormann clipping algorithm {% cite GrHo98 %} or the Vatti clipping algorithm {% cite Vatt92 %}.
 The trimmed meshes are combined into one resulting mesh.
 
-### Digital Sculpting
+### Digital Sculpting {#digital-sculpting}
 
 Digital sculpting is inspired by real clay sculpting.
 Similar to real sculpting, the 3D artist starts with a base shape and can pull and dent the virtual material to create bumps and creases.
@@ -108,7 +125,7 @@ However, just like real sculpting, training is required in order to achieve resu
 Digital sculpting is well suited for creating organic shapes, e.g. for designing characters.
 Sometimes, it is also used in a creative way to prototype the shapes of an object with hard edges.
 
-### 3D Scanning
+### 3D Scanning {#scanning}
 
 Another option for creating digital 3D models is 3D scanning.
 In this process, a real object is measured using a 3D scanner.
@@ -119,7 +136,7 @@ The mesh usually needs post-processing, e.g. in the form of [remeshing](#remesh)
 
 The tutorial chapter [3D Scanning and Animation](/ar-for-eu-book/chapter/digitalContent/3dscanning-animation/) provides an example workflow for creating a 3D model with a structure sensor for the iPad.
 
-### Photogrammetry
+### Photogrammetry {#photogrammetry}
 
 It is also possible to use structure-from-motion photogrammetry to create 3D models {% cite WBG*12 %}.
 Photogrammetry is also a 3D scanning technique but it only requires a standard camera.
@@ -137,7 +154,7 @@ Among other areas of application it is used in aerial photography and archaeolog
 3D models from photogrammetry can be created with the commercial software products [Agisoft Metashape](https://www.agisoft.com/), [RealityCapture](https://www.capturingreality.com/), [Autodesk ReCap](https://www.autodesk.com/solutions/photogrammetry-software) and the open-source tool [Meshroom](https://alicevision.github.io/#meshroom).
 
 
-### Manual Mesh Creation
+### Manual Mesh Creation {#manual-mesh-creation}
 
 The previous methods all work on an object-level where the modeller is only concerned with the shape of the object while the computer constructs the according mesh data.
 However, it is also possible to manually construct the mesh.
@@ -166,14 +183,14 @@ Apart from defining the shape of the object, the modeller also has to think abou
 The technique works well for man-made objects since they consist of clear shapes and hard edges which are good reference points in the modelling process.
 Creating organic objects by hand this way is tricky.
 
-### Box Modeling
+### Box Modeling {#box-modeling}
 
 Box modelling describes a method in which faces of a polygon cube are extruded and manipulated to create a complex model.
 The process generally utilizes a simple iterative method where extruded faces are moved, scaled and rotated to represent an object.
 The name box modelling refers to the use of a cube as a starting point and often has a very angular result.
 Final stages of the project may work with smoothing functions to provide a more organic look, however during development it is optimal to retain a low polygon count.
 
-### Retopology
+### Retopology {#retopology}
 
 The presented modelling techniques of digital sculpting, 3D scanning and photogrammetry typically result in a high-density triangle mesh.
 The problem with this mesh is that it is irregular and often bears unnecessary complexity {% cite Simonds2013Blender %}.
@@ -201,7 +218,7 @@ Details on this displacement and normal maps are described in the "Textures" sec
     <figcaption>Apply a: Mesh as a result of a sculpting or 3D scanning process.<br/>b: Cutout of (a) showing the geometry.<br/>c: Manually retopologised mesh using quads.<br/>d: Cutout of (c) showing the geometry. A selection of important face loops is highlighted in green.</figcaption>
 </figure>
 
-### Subdivision Surface Modeling
+### Subdivision Surface Modeling {#subdivision-surface-modeling}
 
 A technique which is used for creating smooth, organic surfaces is called Subdivision Surface Modeling {% cite DKTr98 %}.
 The modeller constructs a guide mesh.

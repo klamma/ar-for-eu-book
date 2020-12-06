@@ -98,6 +98,15 @@ order: 3
 ### 3.5 Digital Content Creation
 
 1. [3D Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   1. [Composing Primitives](/ar-for-eu-book/chapter/digitalContent/meshModeling/#composing-primitives)
+   2. [Boolean Operations](/ar-for-eu-book/chapter/digitalContent/meshModeling/#boolean-operations)
+   3. [Digital Sculpting](/ar-for-eu-book/chapter/digitalContent/meshModeling/#digital-sculpting)
+   4. [3D Scanning](/ar-for-eu-book/chapter/digitalContent/meshModeling/#scanning)
+   5. [Photogrammetry](/ar-for-eu-book/chapter/digitalContent/meshModeling/#photogrammetry)
+   6. [Manual Mesh Creation](/ar-for-eu-book/chapter/digitalContent/meshModeling/#manual-mesh-creation)
+   7. [Box Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/#box-modeling)
+   8. [Retopology](/ar-for-eu-book/chapter/digitalContent/meshModeling/#retopology)
+   9. [Subdivision Surface Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/#subdivision-surface-modeling)
 2. [Texturing 3D Models](/ar-for-eu-book/chapter/digitalContent/texturing/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [UV Unwrapping](/ar-for-eu-book/chapter/digitalContent/texturing/#uv-unwrapping) {% include badge.html base=pathToRoot badgeName="complete" %}
    2. [Texture Resources](/ar-for-eu-book/chapter/digitalContent/texturing/#texture-resources) {% include badge.html base=pathToRoot badgeName="complete" %}
