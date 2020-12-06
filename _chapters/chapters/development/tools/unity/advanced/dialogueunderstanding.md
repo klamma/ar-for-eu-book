@@ -35,12 +35,12 @@ Step 1.1: Register an account <https://cloud.ibm.com/login> > create an IBM Clou
     <figcaption>Image of Step 1.1</figcaption>
 </figure>
 
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>If you already have a Watson Assistant service running in your IBM Cloud account, and you can jump to the next part.
 
-***Note:\*** *if you already have a Watson Assistant service running in your IBM Cloud account, and you can jump to the next part.*
 
 
-
-### **Part2.** Creating a Watson Assistant {#part2}
+### **Part 2.** Creating a Watson Assistant {#part2}
 
 **Step 2.1.** Click on the Create resource button on the dashboard > Watson Assistant (if you can’t find it, Catalog > AI > Watson Assistant) > Click *Create tab*, and check the region. 
 
@@ -82,11 +82,11 @@ Before that, let’s take example. If you call a dessert shop, what a seller wil
 
 *Step 3.1- 3.10 introduces how to create the No.1-4 of the table; Step 3.11- 3.15 shows No.5; No.6-7 is on the Step 3.17-3.19.*
 
-**Notes:**
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
 
-·    *Intents: the purpose of a user’s input. The Watson assistant can select the correct dialogue flow by recognizing the intents.*
+>·    Intents: the purpose of a user’s input. The Watson assistant can select the correct dialogue flow by recognizing the intents.
 
-·    *Entities: it shows information in the user input that is relevant to the user’s purpose.* 
+>·    Entities: it shows information in the user input that is relevant to the user’s purpose.
 
 
 
@@ -156,7 +156,8 @@ call me @username.
 
 my name is @username. 
 
-***Note:\*** *the first alphabet should be lowercase, if it’s capital, the assistant cannot recognize user’s name.*
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>The first alphabet should be lowercase, if it’s capital, the assistant cannot recognize user’s name.*
 
 <figure>
     <img src="{{pathToRoot}}/assets/figures/dialogue_understanding/Step%203.6.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
@@ -243,7 +244,8 @@ Specials (/specials)
 
 **Step 3.15.**  Go back to the Dialog > create a new child node on the menu node, called "pudding menu" > condition: #menu> Assistant responds: We have chocolate puddings, vanilla puddings, and milk puddings > Add child node on the pudding menu, called "pudding finish" > condition is #alldesserts > Assistant responds: No problem! > Again, create a new child node on the menu node, called "cake menu" > you turn, it’s the same way to create conditions!
 
-**Note:** It’s also possible that a client wants to know the cake menu after she/he chooses the pudding menu. Therefore, you need to think about how to create nodes and intents.  
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>It’s also possible that a client wants to know the cake menu after she/he chooses the pudding menu. Therefore, you need to think about how to create nodes and intents.  
 
 **Step 3.16.**  It’s the same way to create the rest of two options (an assistant recommends a desserts (specials), and clients make choice).
 
@@ -254,11 +256,13 @@ Specials (/specials)
     <figcaption>Image of Step 3.16</figcaption>
 </figure>
 
-**Note:** Don’t make wrong levels. 
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>Don’t make wrong levels. 
 
 **Step 3.17.** Add node below on the Dessert node, called "phone number" > Assistant responds: What’s your phone number? 
 
-**Note:** Don’t add any conditions.
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>Don’t add any conditions.
 
 **Step 3.18.** Create a new intent called "#phonenumber" > examples: my phone number is @sys-number; number is @sys-number > click on Dialog > Add a child node on the phone number node, called "end" > conditions: #phonenumber, add or, select @sys-number > assistant responds: Thanks, we’ll send a message to you. Have a nice day!
 
@@ -280,7 +284,8 @@ Specials (/specials)
 
 **Note:** All the end of options node, such as pudding finish node, cake finish node, and specials finish node should be Jump to phone number.
 
-**Step 3.20.** Now you can test your Chatbox. Click on “Try it”.
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>Now you can test your Chatbox. Click on “Try it”.
 
 
 
@@ -327,7 +332,8 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 
 **Step 5.1.** Open the Unity file. 
 
-**Note:** if there are lots of warnings and errors on the Console, please click *Clear button*.
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>If there are lots of warnings and errors on the Console, please click *Clear button*.
 
 **Step 5.2**. Click on *WatsonServices* on Hierarchy window, and open the "_scripts" file on Project window. Dialogue Services is the script of DialogueService, and it also links to Watson assistant. Speech Input Service is the script of SpeechInputServices, it links to Speech to Text service, and Speechoutput links to Text to Speech service in IBM Watson, that is applied to create a spoken sound version of the text. Please double-click on the three services in Visual Studio. 
 
@@ -343,8 +349,8 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 **Step 5.3.** Go to your IBM Cloud Dashboard> Services > Watson Assistant > Click on the copy icon to make note of the API key. The API key applies basic authentication, in here it’s the password. URL is location specific. So make sure your URL matches with your location. 
 
 
-
-**Note:** However, if your URL is very long, it cannot work in Unity. For example, in this picture the URL should be <https://api.eu-gb.assistant.watson.cloud.ibm.com>
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>However, if your URL is very long, it cannot work in Unity. For example, in this picture the URL should be <https://api.eu-gb.assistant.watson.cloud.ibm.com>
 
 *Service endpoints by location:*
 
@@ -451,5 +457,6 @@ This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to inter
 ​         
 ​         **Step 5.10.** Open Unity, and let’s play it. 
 ​         
-​         **Note:** You may find it’s different from that you tried it in IBM Watson. For example, the assistant doesn’t automatically jump to the next sentence that we added response types (i.e. Do you need a menu?). The option we created in the menu node also doesn’t work in Unity. Therefore, you need to create more nodes for options. 
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+>You may find it’s different from that you tried it in IBM Watson. For example, the assistant doesn’t automatically jump to the next sentence that we added response types (i.e. Do you need a menu?). The option we created in the menu node also doesn’t work in Unity. Therefore, you need to create more nodes for options. 
 ​         

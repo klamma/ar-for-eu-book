@@ -44,7 +44,9 @@ Hence, a good practice is to use edit mode tests whenever possible, i.e. if no M
 As a prerequisite for creating tests, an assembly definition file has to be created in the folder where the tests are placed.
 If a project has both play mode tests and edit mode tests, separate assembly definition files are required.
 
-> Note: The test runner window provides initialization options which can directly generate the folders and necessary assembly definition files.
+
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
+> The test runner window provides initialization options which can directly generate the folders and necessary assembly definition files.
 > The following section is for information purposes so that you understand what these initialization options do and how to set them up manually.
 > For the automatic setup of the test folders, take a look at the exercise at the end of this chapter.
 
@@ -234,20 +236,20 @@ This tutorial will demonstrate how to set up the GitHub Actions for Unity reposi
 After finishing this tutorial, the GitHub repository will automatically perform checks of the unit tests and build the project.
 It will do this by setting up a Docker container with a Unity installation, pulling the changes and building them in the Docker container.
 
-The tutorial is structured as follows:
+<h2><img src="{{pathToRoot}}/assets/images/Tutorial.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;The tutorial is structured as follows:</h2>
 
-First, we will create the necessary workflow files one by one.
-This involves a licence activation step, unit testing and the final build.
-Before we can build the Unity application on the server, we need to create activation credentials for Unity.
-Each installation of Unity requires its own licence that has to be activated before using Unity.
-When installing Unity on your PC, this is a small step where you have to log in with your Unity ID but for a Docker container this process is more involved.
-Licences are bound to one PC, so it does not work to transfer existing licences between machines.
-The solution is to set up a workflow that causes the Unity instance in the Docker container to generate a licence request.
-This licence request can be returned as an artefact that we can download.
-After that, we will manually activate the licence which can be done on any PC.
-Finally, we will receive the valid licence which can then be added to the list of secret environment variables in the GitHub repository.
+>First, we will create the necessary workflow files one by one.
+>This involves a licence activation step, unit testing and the final build.
+>Before we can build the Unity application on the server, we need to create activation credentials for Unity.
+>Each installation of Unity requires its own licence that has to be activated before using Unity.
+>When installing Unity on your PC, this is a small step where you have to log in with your Unity ID but for a Docker container this process is more involved.
+>Licences are bound to one PC, so it does not work to transfer existing licences between machines.
+>The solution is to set up a workflow that causes the Unity instance in the Docker container to generate a licence request.
+>This licence request can be returned as an artefact that we can download.
+>After that, we will manually activate the licence which can be done on any PC.
+>Finally, we will receive the valid licence which can then be added to the list of secret environment variables in the GitHub repository.
 
-After the activation, we create the workflow for the unit tests and after that, we will tackle the automatic build of the application's install files.
+>After the activation, we create the workflow for the unit tests and after that, we will tackle the automatic build of the application's install files.
 
 ##### Creating a Workflow File
 

@@ -19,7 +19,7 @@ visualizations:
       2. [Profiling a Deployed Application on a Device Using Unity's Profiler](#UnityProfilerDeployed)
    2. [Mixed Reality Toolkit Diagnostic System & Visual Profiler](#MRTKProfiler)
       1. [Working With the Visual Profiler](#WorkingVisualProfiler)
-      2. [Disabling the Diagnostics System in the Final Application](#DisableMRTKDiagnostics)
+      2. <a href="#Disabling" style="text-decoration:none;">Disabling the Diagnostics System in the Final Application</a>
    3. [HoloLens Device Portal](#HoloLensDevicePortal)
       1. [Working With the Device Portal](#WorkingDevicePortal)
       2. [Enabling & Accessing the Device Portal](#EnablingDevicePortal)
@@ -129,12 +129,12 @@ Similar to the Unity profiler, it is important to consider on which device the p
 In the Play Mode of Unity's editor, the application is executed on the development PC and therefore the performance depends on its hardware.
 To see the real performance on the HoloLens, the application has to be deployed to the device.
 
-#### Disabling the Diagnostics System in the Final Application {#DisableMRTKDiagnostics}
+<h2><img src="{{pathToRoot}}/assets/images/Tutorial.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;<a name="Disabling" style="text-decoration:none;">Disabling the Diagnostics System in the Final Application</a></h2>
 
-The Visual Profiler Window provides a nonintrusive way of performance profiling.
-Testers can interact with the application on the device and can see the performance data all the time.
-However, for the final application that is shipped to clients, the Diagnostics System and the Visual Profiler should be turned off.
-This is shown in the following steps:
+>The Visual Profiler Window provides a nonintrusive way of performance profiling.
+>Testers can interact with the application on the device and can see the performance data all the time.
+>However, for the final application that is shipped to clients, the Diagnostics System and the Visual Profiler should be turned off.
+>This is shown in the following steps:
 
 1.Select the *MixedRealityToolkit* GameObject from the hierarchy.
 <figure>
@@ -206,6 +206,7 @@ Once both devices are connected to the same suitable network, one can enter the 
 The IP address can be obtained on the HoloLens by opening the network settings and by clicking the small blue link "Advanced Settings".
 The opened information window contains an entry for the IP address.
 
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
 > Especially, Wi-Fi networks of universities such as eduroam are often configured in a way that connected computers cannot access each other and are therefore unsuitable.
 > If you plan to do a mobile demo where the Device Portal is used to live stream the user's view, it is advisable to bring a mobile WiFi access point.
 > If you also need to access the internet, make sure that the router can be connected to the institution's LAN ports.
@@ -224,6 +225,7 @@ Do not worry if you forgot the credentials.
 You can navigate to `https://IP-Address/devicesecurity.htm` where IP-Address is the IP address of your HoloLens.
 On the shown page, you can enter a new username and password.
 
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
 > In some cases, the browser can show a warning that the certificate is not trusted.
 > The HoloLens generates its own certificate for the secure SSL connection.
 > In this case, navigate to `https://IP-Address/devicesecurity.htm` where IP-Address is the IP address of your HoloLens.

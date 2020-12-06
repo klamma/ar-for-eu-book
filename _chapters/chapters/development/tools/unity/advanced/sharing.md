@@ -16,7 +16,7 @@ visualizations:
 
 1. [Common Challenges of Networking](#Challenges)
 2. [Networking Libraries](#NetworkingLibraries)
-3. [Exercise: Creating a Shared Application in Photon](#ExercisePhoton)
+3. <a href="#ExercisePhoton" style="text-decoration:none;">Exercise: Creating a Shared Application in Photon</a>
    1. [Setting up the project](#ProjectSetup)
    2. [Creating the Draughts Game Elements](#GameElements)
    3. [Setting up the Shared Environment](#SharedEnvironment)
@@ -104,23 +104,23 @@ It is a commercial product suite by Exit Games which provides a free plan for up
 The sharing functionality can be realized using the Photon PUN2 library.
 Moreover, Photon provides further libraries for collaboration, e.g. to realize a text chat or a voice chat.
 
-### Exercise: Creating a Shared Application in Photon {#ExercisePhoton}
+<h2><img src="{{pathToRoot}}/assets/images/ProgrammingExercise.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;<a name="ExercisePhoton" style="text-decoration:none;">Creating a Shared Application in Photon</a></h2>
 
-In this exercise, we will create the game [Draughts](https://en.wikipedia.org/wiki/Draughts) (also known as Checkers).
-This sample app will provide a way for two remote users to move playing stones on a board so that both participants can see each other's moves.
-We will not implement the rules of the game in this exercise.
-Instead, the app provides the shared pieces and relies on players to move them according to the rules.
-If you want, you can implement rules, e.g. move restrictions once you completed the exercise.
+>In this exercise, we will create the game [Draughts](https://en.wikipedia.org/wiki/Draughts) (also known as Checkers).
+>This sample app will provide a way for two remote users to move playing stones on a board so that both participants can see each other's moves.
+>We will not implement the rules of the game in this exercise.
+>Instead, the app provides the shared pieces and relies on players to move them according to the rules.
+>If you want, you can implement rules, e.g. move restrictions once you completed the exercise.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4u5WCXNZ56I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4u5WCXNZ56I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This exercise is split into five sections.
-The first part will demonstrate how the Unity project is created and how the necessary libraries can be imported.
-After that, the base logic of the draughts game is created.
-The third part demonstrates the setup of a shared environment for remote players.
-It will demonstrate how to set up a room system where content is only shared between users in one room and where multiple rooms can exist in parallel.
-In the fourth part, we will look at a basic way of implementing the shared logic using serializers.
-The last part presents an alternative way for sending data over the network using Remote Procedure Calls (RPCs).
+>This exercise is split into five sections.
+>The first part will demonstrate how the Unity project is created and how the necessary libraries can be imported.
+>After that, the base logic of the draughts game is created.
+>The third part demonstrates the setup of a shared environment for remote players.
+>It will demonstrate how to set up a room system where content is only shared between users in one room and where multiple rooms can exist in parallel.
+>In the fourth part, we will look at a basic way of implementing the shared logic using serializers.
+>The last part presents an alternative way for sending data over the network using Remote Procedure Calls (RPCs).
 
 #### 1 - Setting up the Project {#ProjectSetup}
 
@@ -520,6 +520,7 @@ Once a connection has been established, the player switches to the main scene wh
    In the list, StartScene should now have a 0 next to it on the right and MainScene a 1.
    The number is the scene index which can be used to address the scene.
 
+<h2><img src="{{pathToRoot}}/assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle">&nbsp;&nbsp;Note</h2>
    > Make sure that you always start the application with the *StartScene* opened so that the connection procedure is executed.
    > If you start in the *MainScene*, the client will stay disconnected which leads to error messages as the application tries to synchronize data but cannot reach the server.
 
