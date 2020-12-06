@@ -30,19 +30,24 @@ order: 3
 ### 2.3 Computer Science Foundations
 
 1. [Programming Languages for AR Development](/ar-for-eu-book/chapter/foundations/computerScience/programming/) {% include badge.html base=pathToRoot badgeName="complete" %}
-<!--   1. [Selecting a Programming Language](/ar-for-eu-book/chapter/foundations/computerScience/programming/) {% include badge.html base=pathToRoot badgeName="complete" %} -->
-<!--   2. [Learning C++](/ar-for-eu-book/chapter/foundations/computerScience/programming#Cpp) {% include badge.html base=pathToRoot badgeName="todo" %} -->
-<!--   3. [Learning C#](/ar-for-eu-book/chapter/foundations/computerScience/programming#CSharp) {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
-<!--   4. [Learning JavaScript](/ar-for-eu-book/chapter/foundations/computerScience/programming#JavaScript) {% include badge.html base=pathToRoot badgeName="todo" %} -->
+   1. [Which Programming Language Should I Learn to get Started With AR Development?](/ar-for-eu-book/chapter/foundations/computerScience/programming/#which-programming-language) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [C# Courses](/ar-for-eu-book/chapter/foundations/computerScience/programming/#c-sharp) {% include badge.html base=pathToRoot badgeName="complete" %}
+   3. [C++ Courses](/ar-for-eu-book/chapter/foundations/computerScience/programming/#cpp) {% include badge.html base=pathToRoot badgeName="complete" %}
+   4. [JavaScript Courses](/ar-for-eu-book/chapter/foundations/computerScience/programming/#javascript) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [Software Architecture](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [SOLID Principles of Code](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/#solid-principles-of-code) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### 2.4 Computer Graphics
 
-1. Introduction to Computer Graphics
-   1. [Geometry](/ar-for-eu-book/chapter/foundations/cg/geometry/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
-   2. [Rendering Pipeline](/ar-for-eu-book/chapter/foundations/cg/pipeline) {% include badge.html base=pathToRoot badgeName="outline" %}
-2. [Spatial Audio](/ar-for-eu-book/chapter/foundations/cg/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %}
+1. [Introduction to Computer Graphics](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   1. [Geometry Representation of Objects](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#geometry-representation-of-objects) {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [Polygonal Meshes](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#polygonal-meshes) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [Point Clouds](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#point-clouds) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [Constructive Solid Geometry](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#constructive-solid-geometry) {% include badge.html base=pathToRoot badgeName="complete" %}
+      4. [Volumes](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#volumes) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Rendering Pipeline](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#rendering-pipeline) {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [Mesh Rendering Pipeline](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#mesh-rendering-pipeline) {% include badge.html base=pathToRoot badgeName="complete" %}
+<!-- 2. [Spatial Audio](/ar-for-eu-book/chapter/foundations/cg/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 
 ### 2.5 Computer Vision
 
@@ -75,9 +80,7 @@ order: 3
 ### 3.3 AR Application Design
 
 1. [Wearable Interaction](/ar-for-eu-book/chapter/development/appDesign/wearableInteraction/) {% include badge.html base=pathToRoot badgeName="complete" %}
-<!-- - Sound Design {% include badge.html base=pathToRoot badgeName="todo" %} -->
 2. [Gamification](/ar-for-eu-book/chapter/development/appDesign/gamification/) {% include badge.html base=pathToRoot badgeName="complete" %}
-<!-- - Serious Games {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
 
 ### 3.4 Development Tools and Libraries
 
@@ -98,15 +101,15 @@ order: 3
 ### 3.5 Digital Content Creation
 
 1. [3D Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
-   1. [Composing Primitives](/ar-for-eu-book/chapter/digitalContent/meshModeling/#composing-primitives)
-   2. [Boolean Operations](/ar-for-eu-book/chapter/digitalContent/meshModeling/#boolean-operations)
-   3. [Digital Sculpting](/ar-for-eu-book/chapter/digitalContent/meshModeling/#digital-sculpting)
-   4. [3D Scanning](/ar-for-eu-book/chapter/digitalContent/meshModeling/#scanning)
-   5. [Photogrammetry](/ar-for-eu-book/chapter/digitalContent/meshModeling/#photogrammetry)
-   6. [Manual Mesh Creation](/ar-for-eu-book/chapter/digitalContent/meshModeling/#manual-mesh-creation)
-   7. [Box Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/#box-modeling)
-   8. [Retopology](/ar-for-eu-book/chapter/digitalContent/meshModeling/#retopology)
-   9. [Subdivision Surface Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/#subdivision-surface-modeling)
+   1. [Composing Primitives](/ar-for-eu-book/chapter/digitalContent/meshModeling/#composing-primitives) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Boolean Operations](/ar-for-eu-book/chapter/digitalContent/meshModeling/#boolean-operations) {% include badge.html base=pathToRoot badgeName="complete" %}
+   3. [Digital Sculpting](/ar-for-eu-book/chapter/digitalContent/meshModeling/#digital-sculpting) {% include badge.html base=pathToRoot badgeName="complete" %}
+   4. [3D Scanning](/ar-for-eu-book/chapter/digitalContent/meshModeling/#scanning) {% include badge.html base=pathToRoot badgeName="complete" %}
+   5. [Photogrammetry](/ar-for-eu-book/chapter/digitalContent/meshModeling/#photogrammetry) {% include badge.html base=pathToRoot badgeName="complete" %}
+   6. [Manual Mesh Creation](/ar-for-eu-book/chapter/digitalContent/meshModeling/#manual-mesh-creation) {% include badge.html base=pathToRoot badgeName="complete" %}
+   7. [Box Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/#box-modeling) {% include badge.html base=pathToRoot badgeName="complete" %}
+   8. [Retopology](/ar-for-eu-book/chapter/digitalContent/meshModeling/#retopology) {% include badge.html base=pathToRoot badgeName="complete" %}
+   9. [Subdivision Surface Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/#subdivision-surface-modeling) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [Texturing 3D Models](/ar-for-eu-book/chapter/digitalContent/texturing/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [UV Unwrapping](/ar-for-eu-book/chapter/digitalContent/texturing/#uv-unwrapping) {% include badge.html base=pathToRoot badgeName="complete" %}
    2. [Texture Resources](/ar-for-eu-book/chapter/digitalContent/texturing/#texture-resources) {% include badge.html base=pathToRoot badgeName="complete" %}

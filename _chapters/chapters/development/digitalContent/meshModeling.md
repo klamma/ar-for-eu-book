@@ -13,7 +13,6 @@ visualizations:
 ## Content
 
 1. [Introduction](#introduction)
-2. [Meshes](#meshes)
 3. [Modeling Techniques](#modeling-techniques)
    1. [Composing Primitives](#composing-primitives)
    2. [Boolean Operations](#boolean-operations)
@@ -41,15 +40,6 @@ Both meshes and CAD focus on the outside hull of an object and disregard its int
 This is addressed in the volumetric representation of objects.
 It stores density values in a three-dimensional grid which provides information about the shape of the object as well as its inside.
 Volumetric representations are often used in medicine in order to get a meaningful visualization a patient's body.
-
-## Meshes {#meshes}
-
-A mesh is an undirected graph which approximates the surface of an object.
-It consists of individual vertices which are situated at defined points in 3D.
-The vertices can be connected with an edge between them.
-Vertices and edges form faces which are visible as a surface in a rendered image.
-
-{% include figure.html url='/assets/figures/modeling/Mesh.png' description='Structure of a Mesh' %}
 
 ## Modeling Techniques {#modeling-techniques}
 

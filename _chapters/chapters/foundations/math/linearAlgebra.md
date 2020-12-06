@@ -8,3 +8,4 @@ visualizations:
 ---
 
 # Linear and Geometric Algebra
+
