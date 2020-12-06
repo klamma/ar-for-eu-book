@@ -77,7 +77,16 @@ order: 3
       4. [Head Mounted Displays](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#head-mounted-displays) {% include badge.html base=pathToRoot badgeName="complete" %}
       5. [Handheld Display](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#handheld-display) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [Tracking Technologies](/ar-for-eu-book/chapter/foundations/hardware/tracking/) {% include badge.html base=pathToRoot badgeName="complete" %}
-3. [Interaction Technologies](/ar-for-eu-book/chapter/foundations/hardware/interaction/) {% include badge.html base=pathToRoot badgeName="todo" %}
+   1. [Light-based](/ar-for-eu-book/chapter/foundations/hardware/tracking/#light-based) {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [Opto-Electronical](/ar-for-eu-book/chapter/foundations/hardware/tracking/#opto-electronical) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [Structured Light](/ar-for-eu-book/chapter/foundations/hardware/tracking/#structured-light) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [RGB Cameras](/ar-for-eu-book/chapter/foundations/hardware/tracking/#rgb-cameras) {% include badge.html base=pathToRoot badgeName="complete" %}
+      4. [Time-of-Flight Sensors](/ar-for-eu-book/chapter/foundations/hardware/tracking/#time-of-flight-sensors) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Mechanical](/ar-for-eu-book/chapter/foundations/hardware/tracking/#mechanical) {% include badge.html base=pathToRoot badgeName="complete" %}
+   3. [Electromagnetic](/ar-for-eu-book/chapter/foundations/hardware/tracking/#electromagnetic) {% include badge.html base=pathToRoot badgeName="complete" %}
+   4. [Inertial](/ar-for-eu-book/chapter/foundations/hardware/tracking/#inertial) {% include badge.html base=pathToRoot badgeName="complete" %}
+   5. [Setups](/ar-for-eu-book/chapter/foundations/hardware/tracking/#setups) {% include badge.html base=pathToRoot badgeName="complete" %}
+<!-- 3. [Interaction Technologies](/ar-for-eu-book/chapter/foundations/hardware/interaction/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 
 ## 3 Development of AR Applications
 

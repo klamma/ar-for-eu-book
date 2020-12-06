@@ -1,6 +1,6 @@
 ---
 layout: reading_chapter
-title: Tracking Technologies (started)
+title: Tracking Technologies
 hide: true
 permalink: /chapter/foundations/hardware/tracking/
 redirect_from: /chapter/tracking/
@@ -10,7 +10,20 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-# Tracking Technologies
+## Contents
+
+1. [Introduction](#introduction)
+2. [Light-based](#light-based)
+   1. [Opto-Electronical](#opto-electronical)
+   2. [Structured Light](#structured-light)
+   3. [RGB Cameras](#rgb-cameras)
+   4. [Time-of-Flight Sensors](#time-of-flight-sensors)
+3. [Mechanical](#mechanical)
+4. [Electromagnetic](#electromagnetic)
+5. [Inertial](#inertial)
+6. [Setups](#setups)
+
+## Introduction {#introduction}
 
 Tracking technologies are required in order to provide the position and rotation of a real object to the computer system.
 With AR systems, tracking technologies are commonly used in two settings:
@@ -25,11 +38,11 @@ The described techniques usually apply for more complex object tracking, e.g. of
 Different techniques and technologies are available for tracking.
 Each of them have particular requirements, use-cases as well as advantages and disadvantages.
 
-## Light
+## Light-based {#light-based}
 
 One possibility is to use visible or invisible light for tracking objects.
 
-### Opto-Electronical
+### Opto-Electronical {#opto-electronical}
 
 With opto-electronical tracking, markers are placed on the target.
 For detecting the markers, at least two (IR) cameras are placed around the subject.
@@ -65,7 +78,7 @@ In order to reconstruct the orientation of an object, at least three markers are
 One use-case for opto-electronical tracking is motion-tracking for movies or animations.
 Actors are equipped with markers and perform movements on a stage which is surrounded by cameras.
 
-### Structured Light
+### Structured Light {#structured-light}
 
 The technique of structured light tracking is for instance used by the Microsoft Kinect.
 This technique requires a light source and a camera.
@@ -95,7 +108,7 @@ This way, color information can be captured and applied to a scanned model as a 
     <figcaption>Structured light which is projected down from above reveals the shape of the half-sphere</figcaption>
 </figure>
 
-### RGB Cameras
+### RGB Cameras {#rgb-cameras}
 
 Video tracking uses a standard RGB camera feed as the information source for tracking.
 There are two alternative setups possible.
@@ -105,7 +118,7 @@ Camera-based tracking is used for photogrammetry and marker-based AR.
 In both cases, the tracking application looks for distinct feature points in the image and tries to locate them in each frame.
 If the camera is moved, the depth of these feature points can be determined from the parallax effect between the two frames.
 
-### Time-of-Flight Sensors
+### Time-of-Flight Sensors {#time-of-flight-sensors}
 
 Time-of-Flight Sensors use the speed of light to determine how far an object is away from the sensor.
 Unlike laser scanning sensors which can only scan single points at once, Time-of-Flight sensors are able to provide a depth map for a (low-resolution) image.
@@ -114,9 +127,9 @@ The light is reflected in the environment and captured by an image sensor.
 From the difference in time between the emission and the received reflection, the distance to the reflecting surface can be computed.
 Due to the high speed of light, the measurement logic needs to be very quick, i.e. in the range of picoseconds.
 
-## Ultra Sound
+<!-- ## Ultra Sound -->
 
-## Mechanical
+## Mechanical {#mechanical}
 
 With mechanical tracking setups, movements can be tracked by their effect on a mechanical system.
 Examples for mechanical tracking systems include exoskeletons.
@@ -131,7 +144,7 @@ The robotic arm can register the movements and passes the movement data on the a
 Haptic feedback is achieved by moving the robotic arm.
 This provides forces on the pen which hinder movements in certain directions.
 
-## Electromagnetic
+## Electromagnetic {#electromagnetic}
 
 Another way of tracking uses electromagnetism.
 Here, the sensors on the tracked object are situated in an alternating electromagnetic field.
@@ -144,7 +157,7 @@ However, the large sensors of 1-2 cm are a disadvantage of this technique.
 Additionally, the trackers require cabling.
 One also needs to be careful with ferromagnetic elements which can influence the magnetic field and can therefore invalidate the tracking results.
 
-## Inertial
+## Inertial {#inertial}
 
 An Inertial Measurement Unit (IMU) is a sensor that reports - typically (but sometimes only a subset) - acceleration, rotation speed, and orientation from an accelerometer, gyroscope, and (not always) a magnetometer.
 Applications of IMUs are for motion capture or as input modality in interaction.
@@ -155,12 +168,12 @@ The software interface to the inertial measurement unit provides typically a qua
 These can be directly mapped in 3D environments to control objects (as a direct-mapping interaction device) or the viewing camera renderer (for scene exploration, think smart glasses).
 
 
-# Setups
+## Setups {#setups}
 
 Tracking systems can be set up in two ways.
 On the one hand, the sensors can be placed in the environment, and they track markers on a moving object.
 On the other hand, the sensors can be mounted to the moving target while the recognizable features are situated in the environment.
 
-## Outside-In Tracking
+<!-- ## Outside-In Tracking -->
 
-## Inside-Out Tracking
+<!-- ## Inside-Out Tracking -->
