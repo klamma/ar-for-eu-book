@@ -92,7 +92,11 @@ order: 3
 
 ### 3.1 Platforms
 
-1. [Mobile AR](/ar-for-eu-book/chapter/development/platforms/mobile/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+1. [Mobile AR](/ar-for-eu-book/chapter/development/platforms/mobile/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   1. [Techniques](/ar-for-eu-book/chapter/development/platforms/mobile/#techniques) {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [Image Targets](/ar-for-eu-book/chapter/development/platforms/mobile/#image-targets) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [Lenses & AR Filters](/ar-for-eu-book/chapter/development/platforms/mobile/#lenses-ar-filters) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [Scene Tracking](/ar-for-eu-book/chapter/development/platforms/mobile/#scene-tracking) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [AR for the Web](/ar-for-eu-book/chapter/development/platforms/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 
 ### 3.2 Project Guide
