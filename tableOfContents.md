@@ -22,6 +22,9 @@ order: 3
 2. [Human Computer Interaction](/ar-for-eu-book/chapter/foundations/design/hci/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [The Iterative Cycle of Human-Centered Design](/ar-for-eu-book/chapter/foundations/design/hci/#the-iterative-cycle-of-human-centered-design) {% include badge.html base=pathToRoot badgeName="complete" %}
    2. [Prototyping AR Applications](/ar-for-eu-book/chapter/foundations/design/hci/#prototyping-ar-applications) {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [Low Fidelity Prototypes](/ar-for-eu-book/chapter/foundations/design/hci/#low-fidelity-prototypes) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [Medium Fidelity Prototypes](/ar-for-eu-book/chapter/foundations/design/hci/#medium-fidelity-prototypes) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [High Fidelity Prototypes](/ar-for-eu-book/chapter/foundations/design/hci/#high-fidelity-prototypes) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### 2.2 Mathematical Foundations
 
@@ -60,6 +63,19 @@ order: 3
 ### 2.6 Hardware Foundations
 
 1. [Display Technologies](/ar-for-eu-book/chapter/foundations/hardware/displaytech/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   1. [Imaging Technologies](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#imaging-technologies) {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [CRT](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#crt) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [PDP](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#pdp) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [LCD](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#lcd) {% include badge.html base=pathToRoot badgeName="complete" %}
+      4. [DLP Microdisplays](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#dlp-microdisplays) {% include badge.html base=pathToRoot badgeName="complete" %}
+      5. [OLED](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#oled) {% include badge.html base=pathToRoot badgeName="complete" %}
+      6. [Quantum Dot](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#quantum-dot) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Application Taxonomy](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#application-taxonomy) {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [3D](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#three-d) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [Immersive](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#immersive) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [CAVE](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#cave) {% include badge.html base=pathToRoot badgeName="complete" %}
+      4. [Head Mounted Displays](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#head-mounted-displays) {% include badge.html base=pathToRoot badgeName="complete" %}
+      5. [Handheld Display](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#handheld-display) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [Tracking Technologies](/ar-for-eu-book/chapter/foundations/hardware/tracking/) {% include badge.html base=pathToRoot badgeName="complete" %}
 3. [Interaction Technologies](/ar-for-eu-book/chapter/foundations/hardware/interaction/) {% include badge.html base=pathToRoot badgeName="todo" %}
 

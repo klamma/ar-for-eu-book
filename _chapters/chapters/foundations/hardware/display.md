@@ -1,6 +1,6 @@
 ---
 layout: reading_chapter
-title: Display Technologies (started)
+title: Display Technologies
 hide: true
 permalink: /chapter/foundations/hardware/displaytech/
 redirect_from: /chapter/displaytech/
@@ -10,16 +10,35 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-# Display Technologies 
+## Contents
+
+1. [Introduction](#introduction)
+2. [Imaging Technologies](#imaging-technologies)
+   1. [CRT](#crt)
+   2. [PDP](#pdp)
+   3. [LCD](#lcd)
+   4. [DLP Microdisplays](#dlp-microdisplays)
+   5. [OLED](#oled)
+   6. [Quantum Dot](#quantum-dot)
+3. [Application Taxonomy](#application-taxonomy)
+   1. [3D](#three-d)
+   2. [Immersive](#immersive)
+   3. [CAVE](#cave)
+   4. [Head Mounted Displays](#head-mounted-displays)
+   5. [Handheld Display](#handheld-display)
+
+
+## Introduction {#introduction}
+
 Displays can be classified according to their technology used.
 In the sense of AR, display systems can be divided into immersive systems, where the user is placed in the middle of the scene, and non-immersive devices, which place the user outside the visual scene.
 Video displays can be 2D, such as a computer screen, or stereoscopic, such as 3D {% cite Stan15 %}.
 
-## Imaging technologies
+## Imaging technologies {#imaging-technologies}
 
 Several common 2D display technologies that form the basis for most 2D and 3D displays used in AR applications are presented below.
 
-### CRT
+### CRT {#crt}
 
 Cathode ray tubes (CRT), also called picture tubes, consist of a black vacuum glass bulb.
 When the monitor is switched on, an electron beam is generated at the rear end of the tube.
@@ -34,14 +53,12 @@ Cathode ray tubes have been used in televisions, computer monitors, arcade machi
 The latter are so-called Vector Displays, which are based on Random Scan System.
 In contrast to the Raster Scan System, which is the basis for televisions and computer screens and uses pixels along scan lines to draw an image, Random Scan Systems, such as Vector Displays, are designed for line drawing applications and use various mathematical functions for drawing {% cite Java20 %}.
 
-{% include figure.html url='/assets/figures/display/VectorDisplay.jpg' description='Vector display' %}
-
 A few years ago even projectors were realized with the help of CRTs to expose large canvases.
 On the other hand there were also tiny Cathode ray tubes, which were used as viewfinders for camcorders.
 These small CRTs are the starting point for the first Head-Mounted Display, developed in 1968 (more on this later).
 Today, CRT technology no longer plays a role.
 
-### PDP
+### PDP {#pdp}
 
 Plasma Display Panels (PDP) were first used in laptops as monochrome flat screens.
 This type of displays uses the principle of gas discharge.
@@ -51,7 +68,7 @@ The individual pixels are large, so plasma displays are more likely to be used f
 Plasma displays deliver a very high contrast value, but have the disadvantage that images that remain the same for some time are burned into the display.
 Plasma screens have almost completely disappeared from the market in recent years.
 
-### LCD
+### LCD {#lcd}
 
 A liquid crystal display (LCD) is composed of several layers, including polarization filters.
 By applying a voltage to the liquid crystals, the polarization direction is influenced by light and partially blocked by the filters {% cite Stan15 %}.
@@ -64,7 +81,7 @@ When using LEDs evenly distributed over the entire surface, each of the LEDs can
 LCD is one of the most widely used display technologies and is used for screens of various shapes and sizes, ranging from computer monitors and televisions to mobile devices such as smartphones and tablets.
 Most projectors in use an LC display to generate an image.
 
-### DLP Microdisplays
+### DLP Microdisplays {#dlp-microdisplays}
 
 DLP (Digital Light Processing) was developed by Texas Instruments.
 It is a chip consisting of  millions of individually controlled micro mirrors, each capable of representing a single pixel.
@@ -76,7 +93,7 @@ Texas Instruments has even produced a chip that can produce a Full HD resolution
 DLPs have long been used in projectors.
 Compared to LCD projectors they offer a higher contrast and therefore a better black level, because here no panel is illuminated by the light, but DLP has the disadvantage that when you blink your eyes or wander quickly over the projected image, unpleasant rainbow artefacts hit your eyes.
 
-### OLED
+### OLED {#oled}
 
 OLED is currently the latest display technology on the market.
 Organic light-emitting diodes (OLEDs) use organic electroluminescent molecules to display an image.
@@ -87,7 +104,7 @@ The latest manufacturing methods not only allow a curved mounted design, but als
 With so-called AMOLED displays it is possible to switch off individual pixels completely, which enables deeper blacks and higher contrast.
 These displays are therefore ideal suited for applications close to the eyes, such as VR and AR devices.
 
-### Quantum Dot
+### Quantum Dot {#quantum-dot}
 
 Quantum Dot Displays are built like LC-Displays.
 However, here millions of semiconductor nanocrystals are applied to a film which can produce purely monochromatic[^2] red, green and blue light.
@@ -96,41 +113,32 @@ When the photons of the blue LED hit the semiconductor nanocrystals, they emit l
 Since no white light penetrates here, because only the required colours are generated ad-hoc, Quantum Dot Displays have a higher contrast than LC displays, but still a lower contrast than OLED displays.
 These screens have a similar colour brilliance to OLED screens.
 
-## Application taxonomy
+## Application Taxonomy {#application-taxonomy}
 
 The display technologies presented in the upper section can be used in different ways to implement augmented reality applications.
 Here, possibilities are shown how AR displays can be divided according to their interaction possibilities.
 
-### 3D
+### 3D {#three-d}
 
 3D displays, also called stereoscopic video displays, create the illusion of depth perception by displaying slightly different images on both eyes.
 The most common screens are those that require special glasses.
 These can be divided into active systems using shutter glasses and passive systems based on polarization or colour filters in the glasses {% cite Stan15 %}.
 
-### Immersive
+### Immersive {#immersive}
 
 Immersion describes the effect caused by an artificial environment, which describes how much a user perceives the virtual environment as real.
 If the degree of immersion is particularly high, the term "presence" is also used.
 Immersion can occur not only mentally, but also physically, which is then called physical immersion.
 A high physical immersion occurs when input and output devices are used that address as many of the user's senses as possible in a real way.
  
-#### CAVE 
+#### CAVE {#cave}
   
 Fully immersive virtual reality experiences can be realistically realized using a CAVE environment (Cave Automatic Virtual Environment).
 Projectors or multiple LCD screens (CAVE2) form a virtual space by surrounding the walls around the user.
 Users can also wear 3D glasses to facilitate immersion.
 With a CAVE environment, multiple users can interact simultaneously in the same virtual space and share the same experiences {% cite MSB*14 %}.
 
-
-
-{% include figure.html url='/assets/figures/display/aixCAVE.jpg' description='aixCAVE at RWTH Aachen' %}
-<br>
-{% include figure.html url='/assets/figures/display/CAVE2.jpg' description='CAVE2TM at Monash University, Melbourne' %}
-<br>
-
-
-
-#### Head Mounted Displays (HMD)
+#### Head Mounted Displays (HMD) {#head-mounted-displays}
 
 To achieve a Virtual World experience, Head Mounted Displays using two CRT's (one for each eye) were developed {% cite Suth68 %}.
 These displays are designed to be worn on the head.
@@ -143,7 +151,7 @@ Optical see-through HMDs can extend the environment with augmented reality with 
 Video see-through HMDs, on the other hand, are not transparent.
 A camera records videos and plays them back on the display, overlaid with virtual elements.
 
-### Handheld Display (HHD)
+### Handheld Display (HHD) {#handheld-display}
 
 Handheld displays are displays that are part of a portable device, such as a smartphone.
 This offers the advantage that such devices are also equipped with multiple cameras, GPS, data connection, microphone and great computing power.
