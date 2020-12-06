@@ -1,6 +1,6 @@
 ---
 layout: reading_chapter
-title: AR for the Web (in progress)
+title: AR for the Web
 hide: true
 permalink: /chapter/development/platforms/web/
 redirect_from: /chapter/web/
@@ -8,10 +8,23 @@ categories: chapter
 visualizations:
 ---
 
+## Contents
+
+1. [Introduction](#introduction)
+2. [Enabling Technologies](#enabling-technologies)
+3. [WebVR](#webvr)
+4. [WebXR](#webxr)
+5. [3D Graphics Frameworks on the Web](#three-d-graphics-frameworks-on-the-web)
+   1. [WebGl](#webgl)
+   2. [three.js](#threejs)
+   3. [A-Frame](#a-frame)
+
+## Introduction {#introduction}
+
 Augmented Reality for the Web demands compatibility with the major browsers.
 To reach this goal, developers needs access to the native device drivers and APIs of the different vendors in JavaScript.
 
-## Enabling Technologies
+## Enabling Technologies {#enabling-technologies}
 
 In recent years, the Web has made a major leap in application maturity.
 Almost all desktop applications like office packages, image and video editing have Web versions.
@@ -25,11 +38,11 @@ Moreover, Web browsers can communicate directly with each other without the need
 - [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
 
 
-# WebVR
+## WebVR {#webvr}
 
 [WebVR](https://immersive-web.github.io/webvr/) provided a developer API to different virtual reality devices on the Web and is now superseded by WebXR.
 
-# WebXR
+## WebXR {#webxr}
 
 WebXR (Mixed Reality on the Web) superseded WebVR in 2018.
 The [W3c editor's draft](https://immersive-web.github.io/webxr/)
@@ -46,22 +59,22 @@ A number of browsers is already supporting WebXR.
 [//]: # (QRD*19)
 
 
-# 3D Graphics Frameworks on the Web
+## 3D Graphics Frameworks on the Web {#three-d-graphics-frameworks-on-the-web}
 
 A series of graphics frameworks exist which allow the display of 3D models on Web pages.
 The presented frameworks introduce increasing levels of abstraction.
 Whereas WebGL works with polygon primitives and shaders, three.js abstracts to scenes, objects and materials.
 In turn, A-Frame uses three.js to provide an HTML-based description language for 3D scenes which can be executed as a WebXR experience.
 
-## WebGL
+### WebGL {#webgl}
 
 [WebGL](https://get.webgl.org/) is a cross-platform, royalty-free API used to create 3D graphics in a Web browser.
 
-## three.js
+### three.js {#threejs}
 
 [three.js](https://threejs.org/) is a popular JavaScript framework for displaying 3D content on the web.
 
-## A-Frame
+### A-Frame {#a-frame}
 
 [A-Frame](https://aframe.io/) is a web framework for building virtual and augmented reality experiences.
 

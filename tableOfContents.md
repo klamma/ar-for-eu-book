@@ -97,7 +97,14 @@ order: 3
       1. [Image Targets](/ar-for-eu-book/chapter/development/platforms/mobile/#image-targets) {% include badge.html base=pathToRoot badgeName="complete" %}
       2. [Lenses & AR Filters](/ar-for-eu-book/chapter/development/platforms/mobile/#lenses-ar-filters) {% include badge.html base=pathToRoot badgeName="complete" %}
       3. [Scene Tracking](/ar-for-eu-book/chapter/development/platforms/mobile/#scene-tracking) {% include badge.html base=pathToRoot badgeName="complete" %}
-2. [AR for the Web](/ar-for-eu-book/chapter/development/platforms/web/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
+2. [AR for the Web](/ar-for-eu-book/chapter/development/platforms/web/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   1. [Enabling Technologies](/ar-for-eu-book/chapter/development/platforms/web/#enabling-technologies) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [WebVR](/ar-for-eu-book/chapter/development/platforms/web/#webvr) {% include badge.html base=pathToRoot badgeName="complete" %}
+   3. [WebXR](/ar-for-eu-book/chapter/development/platforms/web/#webxr) {% include badge.html base=pathToRoot badgeName="complete" %}
+   4. [3D Graphics Frameworks on the Web](/ar-for-eu-book/chapter/development/platforms/web/#three-d-graphics-frameworks-on-the-web) {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [WebGl](/ar-for-eu-book/chapter/development/platforms/web/#webgl) {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [three.js](/ar-for-eu-book/chapter/development/platforms/web/#threejs) {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [A-Frame](/ar-for-eu-book/chapter/development/platforms/web/#a-frame) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### 3.2 Project Guide
 
