@@ -20,8 +20,8 @@ order: 3
 
 1. [Perceptual Foundations of AR](/ar-for-eu-book/chapter/foundations/design/perception/) {% include badge.html base=pathToRoot badgeName="inProgress" %}
 2. [Human Computer Interaction](/ar-for-eu-book/chapter/foundations/design/hci/) {% include badge.html base=pathToRoot badgeName="complete" %}
-   1. [The Iterative Cycle of Human-Centered Design](/ar-for-eu-book/chapter/foundations/design/hci/#the-iterative-cycle-of-human-centered-design)
-   2. [Prototyping AR Applications](/ar-for-eu-book/chapter/foundations/design/hci/#prototyping-ar-applications)
+   1. [The Iterative Cycle of Human-Centered Design](/ar-for-eu-book/chapter/foundations/design/hci/#the-iterative-cycle-of-human-centered-design) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Prototyping AR Applications](/ar-for-eu-book/chapter/foundations/design/hci/#prototyping-ar-applications) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### 2.2 Mathematical Foundations
 
@@ -34,7 +34,7 @@ order: 3
 <!--   2. [Learning C++](/ar-for-eu-book/chapter/foundations/computerScience/programming#Cpp) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 <!--   3. [Learning C#](/ar-for-eu-book/chapter/foundations/computerScience/programming#CSharp) {% include badge.html base=pathToRoot badgeName="inProgress" %} -->
 <!--   4. [Learning JavaScript](/ar-for-eu-book/chapter/foundations/computerScience/programming#JavaScript) {% include badge.html base=pathToRoot badgeName="todo" %} -->
-2. [Software Architecture](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/)
+2. [Software Architecture](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [SOLID Principles of Code](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/#solid-principles-of-code) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### 2.4 Computer Graphics
@@ -87,7 +87,7 @@ order: 3
    3. Mixed Reality Toolkit
       1. [Configuring Windows for Development with Hololens](/ar-for-eu-book/chapter/development/tools/unity/mrtk/configure/) {% include badge.html base=pathToRoot badgeName="complete" %}
       2. [Spatial Mapping, Gaze, and Gestures](/ar-for-eu-book/chapter/development/tools/unity/mrtk/mapgazegesture/) {% include badge.html base=pathToRoot badgeName="complete" %}
-      3. [Spatial Understanding](/ar-for-eu-book/chapter/development/tools/unity/mrtk/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="todo" %}
+      3. [Spatial Understanding](/ar-for-eu-book/chapter/development/tools/unity/mrtk/spatialUnderstanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
       4. [Speech Interaction](/ar-for-eu-book/chapter/development/tools/unity/mrtk/speech/) {% include badge.html base=pathToRoot badgeName="complete" %}
   4. Advanced Unity Techniques
       1. [Dialogue Understanding](/ar-for-eu-book/chapter/development/tools/unity/advanced/dialogueUnderstanding/) {% include badge.html base=pathToRoot badgeName="complete" %}
@@ -97,12 +97,12 @@ order: 3
 
 ### 3.5 Digital Content Creation
 
-1. 3D Modeling
-   1. [Mesh-based 3D Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
-2. [Texturing](/ar-for-eu-book/chapter/digitalContent/texturing/) {% include badge.html base=pathToRoot badgeName="complete" %}
-   1. [UV Unwrapping](/ar-for-eu-book/chapter/digitalContent/texturing#UV) {% include badge.html base=pathToRoot badgeName="complete" %}
-   2. [Texture Painting](/ar-for-eu-book/chapter/digitalContent/texturing#TexturePainting) {% include badge.html base=pathToRoot badgeName="complete" %}
-   3. [Texture Baking](/ar-for-eu-book/chapter/digitalContent/texturing#TextureBaking) {% include badge.html base=pathToRoot badgeName="complete" %}
+1. [3D Modeling](/ar-for-eu-book/chapter/digitalContent/meshModeling/) {% include badge.html base=pathToRoot badgeName="complete" %}
+2. [Texturing 3D Models](/ar-for-eu-book/chapter/digitalContent/texturing/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   1. [UV Unwrapping](/ar-for-eu-book/chapter/digitalContent/texturing/#uv-unwrapping) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Texture Resources](/ar-for-eu-book/chapter/digitalContent/texturing/#texture-resources) {% include badge.html base=pathToRoot badgeName="complete" %}
+   3. [Texture Painting](/ar-for-eu-book/chapter/digitalContent/texturing/#texture-painting) {% include badge.html base=pathToRoot badgeName="complete" %}
+   4. [Texture Baking](/ar-for-eu-book/chapter/digitalContent/texturing/#texture-baking) {% include badge.html base=pathToRoot badgeName="complete" %}
 3. [3D Scanning & Animation Tutorial](/ar-for-eu-book/chapter/digitalContent/3dscanning-animation/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ## 4 Advanced Topics & Outlook
