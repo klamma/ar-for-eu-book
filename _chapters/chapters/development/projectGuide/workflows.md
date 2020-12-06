@@ -2,7 +2,7 @@
 layout: tutorial
 title: Workflows and Company Practices (started)
 hide: true
-permalink: /chapter/workflows/
+permalink: /chapter/development/projectGuide/workflows/
 categories: chapter
 visualizations:
 ---

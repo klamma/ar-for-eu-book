@@ -2,7 +2,8 @@
 layout: tutorial
 title: 3D Scanning and Animation
 hide: true
-permalink: /chapter/3dscanning-animation/
+permalink: /chapter/digitalContent/3dscanning-animation/
+redirect_from: /chapter/3dscanning-animation/
 categories: chapter
 visualizations:
 ---

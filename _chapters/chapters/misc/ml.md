@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Machine Learning, Deep Learning
 hide: true
-permalink: /chapter/ml/
+permalink: /chapter/misc/ml/
 categories: chapter
 visualizations:
 ---

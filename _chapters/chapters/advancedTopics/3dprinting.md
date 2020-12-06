@@ -1,10 +1,8 @@
 ---
 layout: reading_chapter
-title: 2D/3D Printing
+title: 3D Printing
 hide: true
-permalink: /chapter/printing/
+permalink: /chapter/advancedTopics/3dprinting/
 categories: chapter
 visualizations:
 ---
-
-# 2D/3D Printing

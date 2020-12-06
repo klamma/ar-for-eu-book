@@ -2,7 +2,8 @@
 layout: tutorial
 title: Spatial Mapping, Gaze, and Gestures
 hide: true
-permalink: /chapter/spatialMapping/
+permalink: /chapter/development/tools/unity/mrtk/mapgazegesture/
+redirect_from: /chapter/spatialMapping/
 categories: chapter
 visualizations:
 ---

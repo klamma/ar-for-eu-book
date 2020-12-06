@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: Mobile AR  (started)
 hide: true
-permalink: /chapter/mobile/
+permalink: /chapter/development/platforms/mobile/
+redirect_from: /chapter/mobile/
 categories: chapter
 visualizations:
 ---

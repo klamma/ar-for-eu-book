@@ -2,7 +2,8 @@
 layout: tutorial
 title: Dialogue Understanding
 hide: true
-permalink: /chapter/dialogue-understanding/
+permalink: /chapter/development/tools/unity/advanced/dialogueUnderstanding/
+redirect_from: /chapter/dialogue-understanding/
 categories: chapter
 visualizations:
 ---

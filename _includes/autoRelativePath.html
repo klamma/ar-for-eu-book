@@ -3,4 +3,9 @@
 {% if    depth <= 2 %}{% assign pathToRoot = '.' %}
 {% elsif depth == 3 %}{% assign pathToRoot = '..' %}
 {% elsif depth == 4 %}{% assign pathToRoot = '../..' %}
-{% elsif depth == 5 %}{% assign pathToRoot = '../../..' %}{% endif %}
+{% elsif depth == 5 %}{% assign pathToRoot = '../../..' %}
+{% elsif depth == 6 %}{% assign pathToRoot = '../../../..' %}
+{% elsif depth == 7 %}{% assign pathToRoot = '../../../../..' %}
+{% elsif depth == 8 %}{% assign pathToRoot = '../../../../../..' %}
+{% elsif depth == 9 %}{% assign pathToRoot = '../../../../../../..' %}
+{% elsif depth == 10 %}{% assign pathToRoot = '../../../../../../../..' %}{% endif %}

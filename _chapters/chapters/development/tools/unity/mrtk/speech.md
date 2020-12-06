@@ -2,7 +2,8 @@
 layout: tutorial
 title: Speech Interaction
 hide: true
-permalink: /chapter/speech/
+permalink: /chapter/development/tools/unity/mrtk/speech/
+redirect_from: /chapter/speech/
 categories: chapter
 visualizations:
 ---

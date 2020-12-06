@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: Tracking Technologies (started)
 hide: true
-permalink: /chapter/tracking/
+permalink: /chapter/foundations/hardware/tracking/
+redirect_from: /chapter/tracking/
 categories: chapter
 visualizations:
 ---

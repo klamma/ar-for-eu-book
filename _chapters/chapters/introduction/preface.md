@@ -2,7 +2,8 @@
 layout: preface
 title: Preface
 hide: true
-permalink: /chapter/preface/
+permalink: /chapter/introduction/preface/
+redirect_from: /chapter/preface/
 ---
 
 

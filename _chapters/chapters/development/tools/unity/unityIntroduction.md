@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: Unity (complete) / Unreal Engine
 hide: true
-permalink: /chapter/engines/
+permalink: /chapter/development/tools/unity/unityIntroduction/
+redirect_from: /chapter/engines/
 categories: chapter
 visualizations:
 customjs:

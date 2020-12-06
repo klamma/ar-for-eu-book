@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Image Processing
 hide: true
-permalink: /chapter/imageproc/
+permalink: /chapter/foundations/computerVision/imageprocessing/
 categories: chapter
 visualizations:
 ---

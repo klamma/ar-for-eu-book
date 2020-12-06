@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: 3D Modeling & Rendering (in progress)
 hide: true
-permalink: /chapter/modeling/
+permalink: /chapter/digitalContent/meshModeling/
+redirect_from: /chapter/modeling/
 categories: chapter
 visualizations:
 ---

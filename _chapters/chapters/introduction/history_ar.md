@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: History of Augmented Reality
 hide: true
-permalink: /chapter/historyar/
+permalink: /chapter/introduction/historyar/
+redirect_from: /chapter/historyar/
 categories: chapter
 visualizations:
 ---

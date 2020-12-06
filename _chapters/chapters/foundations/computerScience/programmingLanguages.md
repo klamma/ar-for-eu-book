@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: Programming
 hide: true
-permalink: /chapter/prog/
+permalink: /chapter/foundations/computerScience/programming/
+redirect_from: /chapter/prog/
 categories: chapter
 visualizations:
 ---

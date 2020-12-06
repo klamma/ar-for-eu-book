@@ -2,7 +2,8 @@
 layout: tutorial
 title: Wearables Communication (need a rename) 
 hide: true
-permalink: /chapter/wearableCommunication/
+permalink: /chapter/misc/wearableCommunication/
+redirect_from: /chapter/wearableCommunication/
 categories: chapter
 visualizations:
 ---

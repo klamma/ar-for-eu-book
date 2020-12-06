@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: Display Technologies (started)
 hide: true
-permalink: /chapter/displaytech/
+permalink: /chapter/foundations/hardware/displaytech/
+redirect_from: /chapter/displaytech/
 categories: chapter
 visualizations:
 ---

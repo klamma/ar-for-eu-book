@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: 3D Sensing
 hide: true
-permalink: /chapter/3dsensing/
+permalink: /chapter/misc/3dsensing/
 categories: chapter
 visualizations:
 ---

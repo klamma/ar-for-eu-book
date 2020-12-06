@@ -79,4 +79,4 @@ scholar:
     relative: "/ar-for-eu-book/bibliography.html"
 
 plugins:
-    - jekyll-redirect-from
+  - jekyll-redirect-from

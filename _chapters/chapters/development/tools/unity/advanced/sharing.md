@@ -2,7 +2,8 @@
 layout: programming_exercise
 title: Collaboration & Sharing
 hide: true
-permalink: /chapter/sharing/
+permalink: /chapter/development/tools/unity/advanced/sharing/
+redirect_from: /chapter/sharing/
 categories: chapter
 visualizations:
 ---

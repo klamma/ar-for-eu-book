@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Interaction Technologies
 hide: true
-permalink: /chapter/interaction/
+permalink: /chapter/foundations/hardware/interaction/
 categories: chapter
 visualizations:
 ---

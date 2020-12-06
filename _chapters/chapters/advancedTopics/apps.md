@@ -2,9 +2,8 @@
 layout: reading_chapter
 title: AR Applications
 hide: true
-permalink: /chapter/apps/
+permalink: /chapter/advancedTopics/apps/
 categories: chapter
 visualizations:
 ---
 
-# AR Applications

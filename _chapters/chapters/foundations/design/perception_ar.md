@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: Perceptual Foundations of Augmented Reality  (started)
 hide: true
-permalink: /chapter/perceptionar/
+permalink: /chapter/foundations/design/perception/
+redirect_from: /chapter/perceptionar/
 categories: chapter
 visualizations:
 ---

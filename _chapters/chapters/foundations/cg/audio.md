@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Spatial Audio
 hide: true
-permalink: /chapter/spatialaudio/
+permalink: /chapter/foundations/spatialaudio/
 categories: chapter
 visualizations:
 ---

@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: AR for the Web (in progress)
 hide: true
-permalink: /chapter/web/
+permalink: /chapter/development/platforms/web/
+redirect_from: /chapter/web/
 categories: chapter
 visualizations:
 ---

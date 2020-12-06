@@ -2,7 +2,8 @@
 layout: tutorial
 title: AR SDKs (started)
 hide: true
-permalink: /chapter/arsdk/
+permalink: /chapter/development/tools/unity/sdks/
+redirect_from: /chapter/arsdk/
 categories: chapter
 visualizations:
 customjs:

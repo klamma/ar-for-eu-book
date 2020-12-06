@@ -2,7 +2,8 @@
 layout: programming_exercise
 title: Wearables for Interaction 
 hide: true
-permalink: /chapter/wearableInteraction/
+permalink: /chapter/development/appDesign/wearableInteraction/
+redirect_from: /chapter/wearableInteraction/
 categories: chapter
 visualizations:
 ---

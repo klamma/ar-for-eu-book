@@ -2,7 +2,8 @@
 layout: programming_exercise
 title: Spatial Understanding Tutorial
 hide: true
-permalink: /chapter/spatialUnderstanding/
+permalink: /chapter/development/tools/unity/mrtk/spatialUnderstanding/
+redirect_from: /chapter/spatialUnderstanding/
 categories: chapter
 visualizations:
 ---

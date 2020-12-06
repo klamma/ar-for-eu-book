@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Image Analysis
 hide: true
-permalink: /chapter/imageanalysis/
+permalink: /chapter/foundations/computerVision/imageanalysis/
 categories: chapter
 visualizations:
 ---

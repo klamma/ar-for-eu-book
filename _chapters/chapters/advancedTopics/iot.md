@@ -1,18 +1,8 @@
 ---
 layout: reading_chapter
-title: Internet of Things, Robots and Wearables
+title: Internet of Things
 hide: true
-permalink: /chapter/iot/
+permalink: /chapter/advancedTopics/iot/
 categories: chapter
 visualizations:
 ---
-
-# Internet of Things, Robots and Wearables
-
-
-## Internet of Things
-
-## Human-Machine Collaboration
-
-## Wearables
-

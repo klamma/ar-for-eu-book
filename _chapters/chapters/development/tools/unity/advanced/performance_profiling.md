@@ -2,7 +2,8 @@
 layout: tutorial
 title: Performance Profiling
 hide: true
-permalink: /chapter/performance/
+permalink: /chapter/development/tools/unity/advanced/performanceProfiling/
+redirect_from: /chapter/performance/
 categories: chapter
 visualizations:
 ---

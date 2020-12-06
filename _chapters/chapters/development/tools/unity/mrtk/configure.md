@@ -2,7 +2,8 @@
 layout: tutorial
 title: Configuring Windows for Development with HoloLens (complete)
 hide: true
-permalink: /chapter/holotoolkit/
+permalink: /chapter/development/tools/unity/mrtk/configure/
+redirect_from: /chapter/holotoolkit/
 categories: chapter
 visualizations:
 ---

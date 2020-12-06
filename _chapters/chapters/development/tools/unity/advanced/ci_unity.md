@@ -2,7 +2,8 @@
 layout: tutorial
 title: Continuous Integration & Unit Tests
 hide: true
-permalink: /chapter/ci_unity/
+permalink: /chapter/development/tools/unity/advanced/ci_unity/
+redirect_from: /chapter/ci_unity/
 categories: chapter
 visualizations:
 ---

@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Computer Graphics
 hide: true
-permalink: /chapter/cg/
+permalink: /chapter/foundations/cg/computerGraphics/
 categories: chapter
 visualizations:
 ---

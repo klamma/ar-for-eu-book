@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Future of Augmented Reality
 hide: true
-permalink: /chapter/futurear/
+permalink: /chapter/introduction/futurear/
 categories: chapter
 visualizations:
 ---

@@ -2,7 +2,7 @@
 layout: reading_chapter
 title: Hardware Accelerated Computing
 hide: true
-permalink: /chapter/hac/
+permalink: /chapter/misc/hac/
 categories: chapter
 visualizations:
 ---

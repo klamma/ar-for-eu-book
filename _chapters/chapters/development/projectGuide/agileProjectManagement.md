@@ -2,7 +2,8 @@
 layout: reading_chapter
 title: AR Agile Project Management
 hide: true
-permalink: /chapter/apm/
+permalink: /chapter/development/projectGuide/agileProjectManagement/
+redirect_from: /chapter/apm/
 categories: chapter
 visualizations:
 ---
