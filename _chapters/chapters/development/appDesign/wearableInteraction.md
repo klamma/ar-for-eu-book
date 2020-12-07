@@ -15,10 +15,10 @@ visualizations:
 In this chapter, we give an introduction to the field of Wearable Computing, the practice of inventing, designing, building, or using body-worn computational and sensory devices. We describe both early examples of wearable computers and modern smart accessories, head-mounted displays, and e-textiles. We discuss the functions and applications of wearable computers, design principles, and the underlying materials and technologies. We recommend prototyping techniques and platforms and follow by the technologies that can be used for more serious production. We conclude the lecture by introducing two design and evaluation methodologies that can help to improve the user experience of wearable prototypes and products.
 
 ## Contents
-- [Part 1. Introduction](#part-1-introduction)
-- [Part 2. Rapid Prototyping](#part-2-rapid-prototyping)
-- [Part 3. Production](#part-3-production)
-- [Part 4. Design and Evaluation](#part-4-design-and-evaluation)
+1. [Introduction](#part-1-introduction)
+2. [Rapid Prototyping](#part-2-rapid-prototyping)
+3. [Production](#part-3-production)
+4. [Design and Evaluation](#part-4-design-and-evaluation)
 
 ## Part 1. Introduction	{#part-1-introduction}
 
@@ -31,7 +31,7 @@ The second important milestone in the history of wearable computing is the inven
 
 As with many technology revolutions, the seminal work is often rather system-focused, and aesthetics, scalable production, or user experience are often neglected so as to focus on overcoming the technical problems. And as with other movements, recent years have remediated that, complementing technical progress with design, business and use cases, and manufacturing lines. 
 
-Modern wearable computers fall into three classes: smart accessories, head-mounted displays, and e-textiles. Smart accessories such as FitBits, JawBones, and Apple Watches are widely known now. Head-mounted displays still less, but smart glasses like the Microsoft Hololens or the Magic Leap (or the less well known 50-100 other manufacturers) are coming. E-textiles, however, are less visible, and the biggest progress is yet to come. While there are many arts projects (such as the wearable keyboard) or industry prototypes (such as the [Levis smart jacket](https://youtu.be/yJ-lcdMfziw)), they are not yet a commodity.
+Modern wearable computers fall into three classes: smart accessories, head-mounted displays, and e-textiles. Smart accessories such as FitBits, JawBones, and Apple Watches are widely known now. Head-mounted displays still less, but smart glasses like the Microsoft HoloLens or the Magic Leap (or the less well known 50-100 other manufacturers) are coming. E-textiles, however, are less visible, and the biggest progress is yet to come. While there are many arts projects (such as the wearable keyboard) or industry prototypes (such as the [Levis smart jacket](https://youtu.be/yJ-lcdMfziw)), they are not yet a commodity.
 
 We give a definition of smart textiles by Van Langenhove & Hertleer (2004) https://www.emerald.com/insight/content/doi/10.1108/09556220410520360/full/html and describe the three production types of smart textiles.
 We describe how context awareness is provided by smart textiles illustrating with an example of the Pivot Yoga dress https://pivot.yoga/
