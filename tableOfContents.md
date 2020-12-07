@@ -18,7 +18,7 @@ order: 3
 
 ### 2.1 Design
 
-1. [Perceptual Foundations of AR](/ar-for-eu-book/chapter/foundations/design/perception/)
+1. [Perceptual Foundations of AR](/ar-for-eu-book/chapter/foundations/design/perception/) {% include badge.html base=pathToRoot badgeName="complete" %}
 2. [Human Computer Interaction](/ar-for-eu-book/chapter/foundations/design/hci/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [The Iterative Cycle of Human-Centered Design](/ar-for-eu-book/chapter/foundations/design/hci/#the-iterative-cycle-of-human-centered-design) {% include badge.html base=pathToRoot badgeName="complete" %}
    2. [Prototyping AR Applications](/ar-for-eu-book/chapter/foundations/design/hci/#prototyping-ar-applications) {% include badge.html base=pathToRoot badgeName="complete" %}
@@ -26,11 +26,11 @@ order: 3
       2. [Medium Fidelity Prototypes](/ar-for-eu-book/chapter/foundations/design/hci/#medium-fidelity-prototypes) {% include badge.html base=pathToRoot badgeName="complete" %}
       3. [High Fidelity Prototypes](/ar-for-eu-book/chapter/foundations/design/hci/#high-fidelity-prototypes) {% include badge.html base=pathToRoot badgeName="complete" %}
 
-### 2.2 Mathematical Foundations
+<!-- ### 2.2 Mathematical Foundations -->
 
-1. [Linear and Geometric Algebra](/ar-for-eu-book/chapter/foundations/math/linearAlgebra/)
+<!-- 1. [Linear and Geometric Algebra](/ar-for-eu-book/chapter/foundations/math/linearAlgebra/) -->
 
-### 2.3 Computer Science Foundations
+### 2.2 Computer Science Foundations
 
 1. [Programming Languages for AR Development](/ar-for-eu-book/chapter/foundations/computerScience/programming/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [Which Programming Language Should I Learn to get Started With AR Development?](/ar-for-eu-book/chapter/foundations/computerScience/programming/#which-programming-language) {% include badge.html base=pathToRoot badgeName="complete" %}
@@ -40,7 +40,7 @@ order: 3
 2. [Software Architecture](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [SOLID Principles of Code](/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/#solid-principles-of-code) {% include badge.html base=pathToRoot badgeName="complete" %}
 
-### 2.4 Computer Graphics
+### 2.3 Computer Graphics
 
 1. [Introduction to Computer Graphics](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [Geometry Representation of Objects](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#geometry-representation-of-objects) {% include badge.html base=pathToRoot badgeName="complete" %}
@@ -52,15 +52,15 @@ order: 3
       1. [Mesh Rendering Pipeline](/ar-for-eu-book/chapter/foundations/cg/computerGraphics/#mesh-rendering-pipeline) {% include badge.html base=pathToRoot badgeName="complete" %}
 <!-- 2. [Spatial Audio](/ar-for-eu-book/chapter/foundations/cg/spatialaudio/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 
-### 2.5 Computer Vision
+<!-- ### 2.5 Computer Vision -->
 
-1. [Image Analysis](/ar-for-eu-book/chapter/foundations/computerVision/imageanalysis/)
-2. [Image Processing](/ar-for-eu-book/chapter/foundations/computerVision/imageprocessing/)
+<!-- 1. [Image Analysis](/ar-for-eu-book/chapter/foundations/computerVision/imageanalysis/) -->
+<!-- 2. [Image Processing](/ar-for-eu-book/chapter/foundations/computerVision/imageprocessing/) -->
 <!-- 2. [Object Detection and Recognition](/ar-for-eu-book/chapter/foundations/cv/objectDetection/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 <!-- 3. [Feature Tracking](/ar-for-eu-book/chapter/foundations/cv/featureTracking/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 <!-- 4. [Depth Reconstruction](/ar-for-eu-book/chapter/foundations/cv/depthReconstruction/) {% include badge.html base=pathToRoot badgeName="todo" %} -->
 
-### 2.6 Hardware Foundations
+### 2.4 Hardware Foundations
 
 1. [Display Technologies](/ar-for-eu-book/chapter/foundations/hardware/displaytech/) {% include badge.html base=pathToRoot badgeName="complete" %}
    1. [Imaging Technologies](/ar-for-eu-book/chapter/foundations/hardware/displaytech/#imaging-technologies) {% include badge.html base=pathToRoot badgeName="complete" %}
