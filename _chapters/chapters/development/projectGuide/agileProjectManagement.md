@@ -10,8 +10,41 @@ visualizations:
 
 {% include autoRelativePath.html %}
 
-## Augmented Reality Agile Project Management
+## Contents
 
+1. [Augmented Reality Agile Project Management](#augmented-reality-agile-project-management)
+2. [Agile Development Manifesto](#agile-development-manifesto)
+3. [Agile Development Features](#agile-development-features)
+4. [Scrum](#scrum)
+   1. [Scrum Roles](#scrum-roles)
+   2. [Sprint Activities](#sprint-activities)
+   3. [Sprint Artifacts](#sprint-artifacts)
+5. [User Stories](#user-stories)
+6. [Task Boards](#task-boards)
+7. [Definition of Done](#definition-of-done)
+8. [Code Style Guides](#code-style-guides)
+9. [Code Review](#code-review)
+10. [Source Control](#source-control)
+11. [Continuous Integration](#continuous-integration)
+12. [Continuous Delivery and Continuous Deployment](#continuous-delivery-and-continuous-deployment)
+13. [Scrum in a Nutshell](#scrum-in-a-nutshell)
+    1. [At the Beginning](#at-the-beginning)
+    2. [Per Sprint](#per-sprint)
+14. [Market Analysis](#market-analysis)
+15. [DevOps](#devops)
+16. [DevOps Toolchain](#devops-toolchain)
+17. [Requirements Engineering](#requirements-engineering)
+18. [DevOpsUse](#devopsuse)
+19. [Wrap-Up](#wrap-up)
+20. [Templates and Examples for your own Mixed Reality Classes](#templates-and-examples)
+    1. [Review Specifications](#review-specifications)
+    2. [Review 1](#review1)
+    3. [Review 2](#review2)
+    4. [Review 3](#review3)
+    5. [Review 4](#review4)
+21. [Instructions for Installing VIAProMa](#instructions-for-installing-viaproma)
+
+## Augmented Reality Agile Project Management {#augmented-reality-agile-project-management}
 
 This chapter gives an overview on agile project management, in particular the agile management of software development for augmented or mixed reality environments.
 Often, AR developers are not used to agile project management, agile software development methods or the DevOps Tool Chain.
@@ -37,7 +70,7 @@ Customers however, find it difficult to state their requirements in an abstract 
 The waterfall model does not cater for possibility of changing requirements.
 The waterfall model was modified after a number of issues identified in practice, but in the end, the agile approach became the dominant one.
 
-## Agile Development Manifesto
+## Agile Development Manifesto {#agile-development-manifesto}
 
 The agile development approach was initiated mainly by developers not satisfied with the strict process management tools applied in the traditional waterfall model, leading to overwork, working on documents instead on code, lacking communication with the customer and lacking communication with co-developers.
 In this spirit, the agile development approach focusses on avoiding overwork, improve communication within the developer team and with the customer as well as on coding.
@@ -57,9 +90,9 @@ Meanwhile, to [agile manifesto](https://agilemanifesto.org/) was signed by thous
 Critics is often coming from engineers working on very large physical engineering projects like space rockets, aircraft, ships or cars.
 Indeed, software projects, even large ones, are more open to flexibility.
 Since also physical engineering projects have large software parts in recent years, agility is slowly coming also to those projects.
-Still, cultural difference are challenging team communication in many ways, as we will also see in the case of DevOps, where developers need to communicate with IT operations.
+Still, cultural differences are challenging team communication in many ways, as we will also see in the case of DevOps, where developers need to communicate with IT operations.
 
-## Agile Development Features
+## Agile Development Features {#agile-development-features}
 
 Agile development emphasizes incremental updates.
 Therefore, the process is divided into small design steps with frequent customer interactions.
@@ -75,7 +108,7 @@ Also, empirically proven, a recent report says that over 94% of companies today 
 - Motivated people produce better results
 - Projects with agile methods have higher probability to end successfully 
 
-## Scrum
+## Scrum {#scrum}
 
 Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
 
@@ -86,7 +119,7 @@ Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
 - Requirements are collected in *backlogs*
 - Development process is organized in *sprints*
 
-## Scrum Roles
+### Scrum Roles {#scrum-roles}
 
 - Product Owner
   - Responsible for features and success of product
@@ -106,7 +139,7 @@ Official documentation in [https://scrumguides.org/](https://scrumguides.org/)
   - Everybody is responsible for all code
   - Everyone may change all parts of the code  
   
-## Sprint Activities
+### Sprint Activities {#sprint-activities}
 
 - Daily Scrum
   - 15 minutes meeting in the morning
@@ -122,7 +155,7 @@ Sprint activities are designed for full time development teams in companies.
 How much of the sprint activities can be done in the context of a lab or a course depends very much on the schedules of the students. 
 If there is no opportunity to do a 15 minutes meeting in the morning, it may be replaced by an online meeting, for example.
  
-## Sprint Artifacts
+### Sprint Artifacts {#sprint-artifacts}
 
 - Product Backlog
   - List of *User Stories*
@@ -133,7 +166,7 @@ If there is no opportunity to do a 15 minutes meeting in the morning, it may be 
   - Defined by developers
   - Doable within a sprint
   
-## User Stories
+## User Stories {#user-stories}
 
 - User stories represent the customer requirements
 - Each user story
@@ -144,7 +177,7 @@ If there is no opportunity to do a 15 minutes meeting in the morning, it may be 
 
 A typical user story structure: "As a ROLE, I want GOAL/DESIRE, so that BENEFIT"
 
-## Task Boards
+## Task Boards {#task-boards}
 
 Task boards are common in agile software development to organize work in sprints.
 They give an easy overview on the progress reached in the sprint.
@@ -180,7 +213,7 @@ The three columns have different colours, which can be chosen from the menu.
 </figure>
 
 
-## Definition of Done
+## Definition of Done {#definition-of-done}
 
 - All the quality criteria
   - Code Style Guides
@@ -192,7 +225,7 @@ The three columns have different colours, which can be chosen from the menu.
  
 This is your first user story: *"As a developer, I want to settle the Definition of Done to achieve a better overall quality of our software."*
 
-### Code Style Guides
+## Code Style Guides {#code-style-guides}
 
 - Coding standards define ...
   - Naming conventions
@@ -203,13 +236,13 @@ This is your first user story: *"As a developer, I want to settle the Definition
   - E.g. Google's Java style guide
   - <https://google.github.io/styleguide/javaguide.html>
 
-### Code Review
+## Code Review {#code-review}
 
 - Improve communication in teams
 - Goal: team members understand each other's code
 - Individual improvements
 
-### Source Control
+## Source Control {#source-control}
 
 - Central code hosting and revision control system 
   - What file changed?
@@ -238,10 +271,10 @@ It consists of a main-branch (also called master-branch), a develop-Branch, feat
 ![Gitflow workflow]({{pathToRoot}}/assets/figures/apm/gitFlowWorkflow.svg)
 
 For Web apps which do not require explicit version releases, a GitHub flow is suitable.
-Feature are developed on different branches.
-If a feature has been finished, a merge request is created, it is reviewed and discusssed and finally, the branch is merged into the main branch.
+Features are developed on different branches.
+If a feature has been finished, a merge request is created, it is reviewed and discussed and finally, the branch is merged into the main branch.
   
-### Continuous Integration
+## Continuous Integration {#continuous-integration}
 
 - How to deliver working software at any time?
 - Running automatic nightly builds
@@ -255,7 +288,7 @@ Integration Hell: Integration problems because of missing early testing.
 There is even more than that.
 If you ever wondered why you have Facebook app updates multiple times a day, here is the answer.
 
-### Continuous Delivery and Continuous Deployment
+## Continuous Delivery and Continuous Deployment {#continuous-delivery-and-continuous-deployment}
 
 **Continuous practices**, i.e., continuous integration, delivery, and deployment, are the software development industry practices that enable organizations to frequently and reliably release new features and products {% cite SAZh17 %}.
 Continuous Delivery is about removing stress at the *last mile*.
@@ -268,15 +301,15 @@ Continuous Delivery is about removing stress at the *last mile*.
   - Deploying released software automatically
   - Post deploy tests to ensure integrity with service landscape
   
-## Scrum in a Nutshell
+## Scrum in a Nutshell {#scrum-in-a-nutshell}
  
-### At the Beginning
+### At the Beginning {#at-the-beginning}
  
 - Chose the *Scrum Master* of your team
 - Clarify the role of the *Product Owner* with your customer: **Make them aware of their role!**
 - Talk with your customer and write down *User Stories*
  
-### Per Sprint
+### Per Sprint {#per-sprint}
  
 - Break up some of the user stories from the *Product Backlog* to realistic tasks for the *Sprint Backlog*
 - Define/Refine your *Definition of Done*
@@ -286,7 +319,7 @@ Continuous Delivery is about removing stress at the *last mile*.
   - Talk with the customer
   - Refine the *product backlog* for the next Sprint
  
-## Market Analysis
+## Market Analysis {#market-analysis}
 
 **Market analysis** is the process of analysing data to help you understand which products and services are in demand, 
 and  how to be competitive.
@@ -361,7 +394,7 @@ Without customers, your business does not exist!
 We advise to start every project with both a market study and a technical feasibility study. 
 Students will learn to focus on products not technologies but learn to assess technical risks of the development process.
 
-## DevOps
+## DevOps {#devops}
  
 We have a look at the emerging industry DevOps approach. 
 DevOps is a recent software engineering methodology, its success indicated by growing numbers of supporters. 
@@ -391,14 +424,14 @@ Observation from industry: A culture of communication between developers and ope
 | Specific tools     | Managing systems             |
 | Needs to work fast | Need to keep systems running |
  
-## DevOps Toolchain
+## DevOps Toolchain {#devops-toolchain}
 
 A toolchain is a set of tools used for covering all DevOps categories.
 
 Integration, automation, and monitoring scales.
 Agile and DevOps serve complementary roles: rapidly producing software artefacts in an agile way (DevOpsUse).
 
-## Requirements Engineering
+## Requirements Engineering {#requirements-engineering}
 
 What is a requirement? 
 
@@ -409,7 +442,7 @@ It is easy to use for end users
 Social features like *likes* and *comments* enable the communication between end users and developers.
 Open APIs to embed it into apps.
 
-## DevOpsUse
+## DevOpsUse {#devopsuse}
 
 DevOpsUse is a conceptual extension of the standard DevOps cycle, adding an additional loop for end-user participation regarding innovation, design, and evaluation, paired with immersive analytics support.
 
@@ -433,7 +466,7 @@ More details on the DevOpsUse methodology and its tools is available on [http://
   - End-user participation
 - Strong commitment to participatory design and evaluation activities carried out in communities of practice
 
-## Minimal Viable Product (MVP)
+## Minimal Viable Product (MVP) {#minimal-viable-product}
 
 A minimal viable product (MVP) is an early prototype of a system for getting feedback from customers {% cite Ries11 %}.
  
@@ -446,7 +479,7 @@ An MVP must have four key elements for achieving product quality
 
 It has enough of the four key elements that people are willing to use or to buy it. It should show enough potential for retaining first customers and it should initialize a development cycle with feedback from the customers.
 
-## Wrap-Up
+## Wrap-Up {#wrap-up}
 
 - You heard about the Agile Manifesto
 - You know that Scrum follows agile principles
@@ -455,9 +488,9 @@ It has enough of the four key elements that people are willing to use or to buy 
 - You already knew about source control systems
 - And finally you probably know what Continuous Integration is good for
 
-## Templates and Examples for your own Mixed Reality Classes
+## Templates and Examples for your own Mixed Reality Classes {#templates-and-examples}
 
-### Review Specifications 
+### Review Specifications {#review-specifications}
 
 The following specs are for a 12-week course on Mixed Reality with teams of 4-6 people working on a prototype.
 Four reviews are planned for the course, so that every three weeks there can be a review.
@@ -466,7 +499,7 @@ The second review should report on the first one or two sprints of the team and 
 The third review should cover more DevOps activities like testing and documenting the prototype.
 The last review is planned as a business pitch with a strong focus on selling a product.
 
-### Review 1
+### Review 1 {#review1}
 
 - **Prioritized Product Backlog**: Compile the initial version of your Product Backlog by ordering the user stories based on their priority (most important on top)
 - **Definition of Done**: List the initial quality criteria for your code and explain shortly
@@ -484,7 +517,7 @@ The last review is planned as a business pitch with a strong focus on selling a 
   - Reflection on team process
   - Conclusion and next steps
 
-### Review 2
+### Review 2 {#review2}
 
 - **Prioritized Project Backlog**: Compile a new version of your Project Backlog for the second release.
 - **Definition of Done**: Update the quality criteria for your code and explain.
@@ -502,7 +535,7 @@ The last review is planned as a business pitch with a strong focus on selling a 
   - Conclusion and further steps
 -You may adjust the order and focus depending on your project, of course.
 
-### Review 3
+### Review 3 {#review3}
 
 - **Run​​ning system demo** (e.g. link, video).
   Please note, that your system already needs to include all must-haves, 
@@ -522,7 +555,7 @@ Also provide sufficient API/code documentation and an end-user guide.
   - Conclusion and further steps
 - You may adjust the order and focus depending on your project, of course.
 
-### Review 4
+### Review 4 {#review4}
 
 - **Running system demo** (e.g. link, video).
 - Running automatic test cases (e.g. link, screenshots).
@@ -541,7 +574,7 @@ Also provide sufficient API/code documentation and an end-user guide.
   Do not present a technology but a product.
   If you have questions concerning the documents and/or the presentation please contact us.
 
-## Instructions for Installing VIAProMa
+## Instructions for Installing VIAProMa {#instructions-for-installing-viaproma}
 
 Instructions for installing VIAProMa can be found [here](https://github.com/rwth-acis/VIAProMa). 
 

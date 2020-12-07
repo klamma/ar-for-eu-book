@@ -109,8 +109,39 @@ order: 3
 ### 3.2 Project Guide
 
 1. [AR Agile Project Management](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/) {% include badge.html base=pathToRoot badgeName="complete" %}
-2. [Workflows and Company Practices](/ar-for-eu-book/chapter/development/projectGuide/workflows/) {% include badge.html base=pathToRoot badgeName="outline" %}
-3. [Privacy, Ownership and Intellectual Property](/ar-for-eu-book/chapter/development/projectGuide/privacy/) {% include badge.html base=pathToRoot badgeName="outline" %}
+   1. [Augmented Reality Agile Project Management](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#augmented-reality-agile-project-management) {% include badge.html base=pathToRoot badgeName="complete" %}
+   2. [Agile Development Manifesto](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#agile-development-manifesto){% include badge.html base=pathToRoot badgeName="complete" %}
+   3. [Agile Development Features](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#agile-development-features)  {% include badge.html base=pathToRoot badgeName="complete" %}
+   4. [Scrum](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#scrum)                                            {% include badge.html base=pathToRoot badgeName="complete" %}
+      1. [Scrum Roles](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#scrum-roles)                             {% include badge.html base=pathToRoot badgeName="complete" %}
+      2. [Sprint Activities](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#sprint-activities)                 {% include badge.html base=pathToRoot badgeName="complete" %}
+      3. [Sprint Artifacts](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#sprint-artifacts)                   {% include badge.html base=pathToRoot badgeName="complete" %}
+   5. [User Stories](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#user-stories)                              {% include badge.html base=pathToRoot badgeName="complete" %}
+   6. [Task Boards](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#task-boards)                                {% include badge.html base=pathToRoot badgeName="complete" %}
+   7. [Definition of Done](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#definition-of-done)                  {% include badge.html base=pathToRoot badgeName="complete" %}
+   8. [Code Style Guides](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#code-style-guides)                    {% include badge.html base=pathToRoot badgeName="complete" %}
+   9. [Code Review](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#code-review)                                {% include badge.html base=pathToRoot badgeName="complete" %}
+   10. [Source Control](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#source-control)                         {% include badge.html base=pathToRoot badgeName="complete" %}
+   11. [Continuous Integration](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#continuous-integration)         {% include badge.html base=pathToRoot badgeName="complete" %}
+   12. [Continuous Delivery and Continuous Deployment](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#continuous-delivery-and-continuous-deployment)                         {% include badge.html base=pathToRoot badgeName="complete" %}
+   13. [Scrum in a Nutshell](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#scrum-in-a-nutshell){% include badge.html base=pathToRoot badgeName="complete" %}
+       1. [At the Beginning](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#at-the-beginning)   {% include badge.html base=pathToRoot badgeName="complete" %}
+       2. [Per Sprint](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#per-sprint)               {% include badge.html base=pathToRoot badgeName="complete" %}
+   14. [Market Analysis](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#market-analysis)        {% include badge.html base=pathToRoot badgeName="complete" %}
+   15. [DevOps](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#devops)                          {% include badge.html base=pathToRoot badgeName="complete" %}
+   16. [DevOps Toolchain](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#devops-toolchain)      {% include badge.html base=pathToRoot badgeName="complete" %}
+   17. [Requirements Engineering](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#requirements-engineering){% include badge.html base=pathToRoot badgeName="complete" %}
+   18. [DevOpsUse](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#devopsuse)                              {% include badge.html base=pathToRoot badgeName="complete" %}
+   19. [Wrap-Up](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#wrap-up)                                  {% include badge.html base=pathToRoot badgeName="complete" %}
+   20. [Templates and Examples for your own Mixed Reality Classes](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#templates-and-examples) {% include badge.html base=pathToRoot badgeName="complete" %}
+       1. [Review Specifications](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#review-specifications) {% include badge.html base=pathToRoot badgeName="complete" %}
+       2. [Review 1](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#review1) {% include badge.html base=pathToRoot badgeName="complete" %}
+       3. [Review 2](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#review2) {% include badge.html base=pathToRoot badgeName="complete" %}
+       4. [Review 3](#review3) {% include badge.html base=pathToRoot badgeName="complete" %}
+       5. [Review 4](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#review4) {% include badge.html base=pathToRoot badgeName="complete" %}
+   21. [Instructions for Installing VIAProMa](/ar-for-eu-book/chapter/development/projectGuide/agileProjectManagement/#instructions-for-installing-viaproma) {% include badge.html base=pathToRoot badgeName="complete" %}
+<!-- 2. [Workflows and Company Practices](/ar-for-eu-book/chapter/development/projectGuide/workflows/) {% include badge.html base=pathToRoot badgeName="outline" %} -->
+<!-- 3. [Privacy, Ownership and Intellectual Property](/ar-for-eu-book/chapter/development/projectGuide/privacy/) {% include badge.html base=pathToRoot badgeName="outline" %} -->
 
 ### 3.3 AR Application Design
 
