@@ -424,6 +424,6 @@ Unity developers are increasingly moving to more modular design and the scene/pr
 I have avoid searching for gameobjects and used only a tag which is also defined in the prefab, though this could be separated further.
 
 >If you have any questions or would like more guidance on anything found here, feel free to drop me a line at:
-[will.guest-2016@brookes.ac.uk](mailto:will.guest-2016@brookes.ac.uk)
+[william.guest@open.ac.uk](mailto:william.guest@open.ac.uk)
 
 >Thanks for spending the time to learn about MRTK and solvers! I hope this helps you to build the next generation of immersive experiences.
