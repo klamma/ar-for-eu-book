@@ -19,7 +19,7 @@ visualizations:
 
 ## Resources
 
-- Download Unity ZIP file, and extract it <https://drive.google.com/file/d/1idlhVW_N2PW0uEfk1DbOyXNuxc2n8If1/view?usp=sharing>
+- Download Unity project <https://github.com/Yu713/IBMDiaTraining>
 
 ## Software
 - Unity 3D (version 2018.3.14f1)
