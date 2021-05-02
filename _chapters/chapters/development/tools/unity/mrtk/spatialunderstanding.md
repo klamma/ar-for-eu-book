@@ -32,6 +32,8 @@ visualizations:
 
 ## Overview {#overview}
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ay6pBinz31I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 In this tutorial I will give you an overview of spatial understanding, demonstrate the use of solvers and show how we can use these to control the way object behave in the playspace.
 There are four scenes, each with a corresponding prefab that provide example applications for orbital, radial view, surface magnetism solvers and, finally, a combination of several solvers to build a catapult.
 
@@ -44,6 +46,8 @@ By the end of the tutorial, you should understand:
 
 In this document, terms marked with italics are keywords that are searchable in unity and online.
 It is helpful to go through the steps.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NM4Phhayb3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Setting the Scene {#setting-the-scene}
 
@@ -159,6 +163,8 @@ I have left the solver's Orientation Type as 'Unmodified'.
 
 {% include figure.html url='/assets/figures/spatial_understanding/OrbitalAnimation.png' description='' %}
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/v38WdWNA_8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Radial View {#radial-view}
 
 If you worked with the HoloToolkit, you will probably be familiar with its tag-along script.
@@ -185,6 +191,8 @@ The distance is fixed at 0.5m, to give better predictability of where the menu w
 Keep in mind that all of these setting depend on the app context as well as stylings and other setting in the prefab - there is no hard and fast rule for working with these, but the guidelines mentioned here will hopefully help to make your menus more useful and intuitive.
 We will come back to this UI later, but first we will cover the other solver types.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ORSgkcydHkk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Surface Magnetism {#surface-magnetism}
 
 For the next demonstration, I've added a Quad gameobject, named it 'painting' and attached an image (sprite) to it.
@@ -198,6 +206,8 @@ The first 7 properties are common to all solver components.
 
 The surface normal offset is useful when considering spatial understanding (SU), as the SU surface tends to sit slightly inside the spatial mapping surface, in order to give it a smoother, less complex geometry.
 Raycast ranges should be considered when dealing with larger playspaces (the finished SU surface) or those that have holes (more on this later).
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Vm-CUSY7sq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## InBetween and Momentum - Building a Catapult {#inbetween-and-momentum}
 
@@ -217,6 +227,8 @@ First, let's think about the information flow that can accomplish this:
 5.	Attach the catapult to the left hand, fire with the right.
 6.	Add interaction events to control pull-back and release.
 7.	Turn off the solver and turn on physics to let it fly.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wR6naCVRj84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Object Modeling {#object-modeling}
 
