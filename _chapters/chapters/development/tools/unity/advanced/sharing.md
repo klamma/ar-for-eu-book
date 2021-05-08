@@ -525,7 +525,7 @@ Once a connection has been established, the player switches to the main scene wh
    > If you start in the *MainScene*, the client will stay disconnected which leads to error messages as the application tries to synchronize data but cannot reach the server.
 
 7. Go back to the `RoomLauncher` script.
-   In the `OnJoinedRoom()` method, add the line `SceneManger.LoadScene(1);`.
+   In the `OnJoinedRoom()` method, add the line `SceneManager.LoadScene(1);`.
    This only works if you add the directive `using UnityEngine.SceneManagement` at the top.
    Once the client has joined a room, the scene will switch.
    You should now be able to start the application in the StartScene.
