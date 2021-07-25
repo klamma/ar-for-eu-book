@@ -809,6 +809,70 @@ Therefore, inside the "Tests" folder, one needs to create a folder which is call
 The precise naming is important because folders named "Editor" tell Unity that their content should be executed in the editor.
 Inside the "Editor" folder, one can create a test script by right-clicking and selecting "Create > Testing > C# Test Script".
 
-# Unreal Engine
+## Using Packages in Unity
 
-# Godot
+There are multiple ways to get access to libraries for Unity.
+
+### Unity Packages
+
+Developers can package their code and assets using Unity packages.
+To create a Unity package, right-click on a folder in the asset browser and choose "Export Package".
+A created Unity package can be imported by right-clicking in the asset browser and selecting "Import > Custom package".
+After extracting the contents of the package, a window opens where you can differentiate which content of the package should be imported.
+If the selection is confirmed, the contents are copied into an own directory in the Asset folder of the project.
+When updating an already imported Unity packages by importing a newer version, it is important to note that the import process can only add new files or overwrite existing ones.
+If the creator of the package deleted a file in-between version, importing the newer package will not remove the package in the own project.
+Therefore, to truly update a Unity package, it is recommended to first delete the imported and extracted original folder of the package in the project and then import the complete updated Unity package.
+
+### Unity Package Manager
+
+The Unity packages are not to be confused with the Unity Package Manager (UPM).
+This dependency manager works similar to systems like npm.
+In your project, there is a *Package/manifest.json* file which contains a list of all packages in the project.
+The package manager resolves these dependencies and makes sure that they are available.
+This means that it will automatically download the specified packages and all packages upon which they depend.
+All packages have explicit versioning which means that Unity can recognize if one package is newer than another one.
+Packages can be added to a project either by directly editing the *manifest.json* file or by clicking on the entry "Window > Package Manager" in the top menu of the Unity editor.
+Three types of packages can be added:
+
+There are packages from a scoped registry which originate from a dedicated server that provides the version-controlled package.
+The package manager can get a list of all available packages on that server and it can e.g. get notifications about available updates.
+Unity provides many of its editor features as such separated packages that are available by default.
+Moreover, users can add their own scoped registries, e.g. using the scoped registry of [OpenUPM](https://openupm.com/).
+It collects and hosts packages that are developed under an open-source license.
+
+The second option is to import the package using its git address.
+Internally, the package manager then clones the project and thereby downloads the package contents.
+
+As a third option, packages can be linked locally.
+For instance, a package can be developed in a separate project and the file path to the package can be added to other projects on the same computer.
+The inclusion acts as a soft link.
+Hence, any changes to the local package are immediately picked up by all projects that import the local package.
+It is also possible to move content between a project and the included local package as if it is a normal part of the asset folder.
+
+### NuGet
+
+External package managers like NuGet which has an integration into Visual Studio are more difficult to use with Unity.
+It is not possible to use NuGet in the generated Visual Studio solution of a Unity project to just import an existing software library.
+The problem is that NuGet stores the information about the imported packages in the solution.
+However, Unity periodically re-generates the solution and thereby overwrites such package inclusions.
+Nevertheless, there is an open-source Unity package that integrates a NuGet interface directly in the Unity editor: https://github.com/GlitchEnzo/NuGetForUnity.
+When downloading packages using this interface, they are kept in the generated solution.
+It downloads the libraries and includes them in the Unity project as imported DLLs.
+Problems may arise if an imported library contains two DLLs that have the exact same name since Unity cannot distinguish them in this case.
+
+### Finding Reusable Modules
+
+There are plenty open-source mixed reality projects available on GitHub.
+Some of them are already created in Unity's package manager format or provide Unity packages in their releases.
+Other projects are complete Unity projects but they also contain valuable content that, depending on the license, can be repurposed.
+The online search engine [XRealise](https://xrealise.dbis.rwth-aachen.de/) periodically crawls open-source Unity projects on GitHub that make use of mixed reality features.
+Through its search mask, developers can quickly find suitable projects.
+XRealise takes into account the project name, the content of the readme file which acts as a landing page for GitHub projects and the names of files in the repository.
+Moreover, it extracts the used Unity version.
+Therefore, users of the engine can filter by specific Unity versions or a range of Unity versions.
+This allows them to find compatible and up-to-date content quickly.
+When ranking the search results, multiple sorting methods are available.
+The default ranking is based on relevance.
+It takes into account how often the entered search terms were found in the project and in which files they occurred.
+Moreover, the popularity of the project, indicated by its stars, also plays a role in the ranking as projects that many people liked and found useful are pushed up in the search results.
