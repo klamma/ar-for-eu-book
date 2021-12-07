@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/" /><!-- Title, description, author --><title>Software Architecture | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Software Architecture | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/foundations/computerScience/softwareArchitecture/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/ReadingChapter.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;Software Architecture</h2></header><h2 id="contents">Contents</h2>
+<ol>
+  <li><a href="#solid-principles-of-code">SOLID Principles of Code</a>
+    <ol>
+      <li><a href="#single-responsibility">S: Single Responsibility</a></li>
+      <li><a href="#open-closed-principle">O: Open-Closed Principle</a></li>
+      <li><a href="#liskov-substitution-principle">L: Liskov Substitution Principle</a></li>
+      <li><a href="#interface-segregation-principle">I: Interface Segregation Principle</a></li>
+      <li><a href="#dependency-inversion-principle">D: Dependency Inversion Principle</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="solid-principles-of-code">SOLID Principles of Code</h2>
+
+<p>The SOLID principles of code describe a set of five rules and guidelines which should improve the quality of written code <a class="citation" href="/ar-for-eu-book/bibliography.html#Mart03">(Martin, 2003)</a>.
+Designed as a general guide, the rules also apply to Unity scripts.
+In this special case they help with structuring the application logic into classes.</p>
+
+<h3 id="single-responsibility">S: Single Responsibility</h3>
+<p>Every class or component should be responsible for only a single part of functionality.
+This way, a script only needs to be adapted if the one feature that it realized needs to be changed <a class="citation" href="/ar-for-eu-book/bibliography.html#Mart03">(Martin, 2003)</a>.
+This approach leads to readable code.
+Instead of a few big classes, which are responsible for many different things, the result is a large amount of small, readable classes with defined tasks.
+Additionally, such small classes, which focus on one subfeature, are reusable if this subfeature is also required in another context in the application.
+Since the classes have a defined responsibility, it is less cumbersome to create behaviour variants since they can be realized by inheritance or by modifying the corresponding class.</p>
+
+<p>As an example, we assume that we need to build a virtual lift.
+It consists of a 3D model of its car and the lift shaft.
+The lift car is equipped with animated doors that can open and close, as well as a series of buttons for each floor.
+Additionally, a set of floors has been created which also have a button to call the lift.
+The Single Responsibility principle is violated if the behaviour for the lift is implemented in one large class, which controls the floor selection, movement and door animation.
+Instead, for each of these features, a separate class should be created.
+For instance, one dedicated class is concerned with moving the lift up and down to the floors.
+Another class controls the doors and makes sure that they only open when the lift is stationary at the floors.
+For handling the input from a button, a different class can be implemented.
+The logic for selecting in which order floors should be served can be implemented in a fourth class.</p>
+
+<h3 id="open-closed-principle">O: Open-Closed Principle</h3>
+<p>The open-closed principles states that classes should be designed in a way that they are open for extension but closed for modification <a class="citation" href="/ar-for-eu-book/bibliography.html#Mart03">(Martin, 2003)</a>.
+This means that the class should be extendable by new details, e.g. a varied behaviour.
+However, such details do not affect the general functionality of the class and therefore it should be possible to include them without modifying the class.
+Especially classes from software libraries need to follow this principle.
+If the library is only available in its compiled form, developers cannot modify it.
+However, new features can still be added to the class’s functionality by inheriting from the library class.</p>
+
+<p>Imagine a test application for courses which asks the user questions and in the end it should process the answers into a final score or grade.
+Since the application should be used in different courses with various grading schemes, variants for the scoring of answers are required.
+For instance, one course rewards points for correct answers but gives zero points for errors.
+In another course, wrong answers deduct points from the total.
+The program contains an assessment class which administers the answers to the quiz questions, checks them and converts them to points for the final score.
+If the different grading schemes are realized in this class using a case distinction, the class has to be edited for each new score calculation.
+This can be seen in the example class <code class="language-plaintext highlighter-rouge">Assessment1</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/// Assessment1 violates the open-closed principle.
+public class Assessment1
+{
+	private Answer[] answers;
+	...
+	public int CalculateFinalScore(int gradingSchemeIndex)
+	{
+		int totalPoints = 0;
+
+		for (int i=0; i &lt; answers.Length;i++)
+		{
+			switch(gradingSchemeIndex)
+			{
+				case 0: // no points for wrong answers
+					if (answers[i].IsCorrect)
+					{
+						totalPoints += answers[i].Points;
+					}
+					else
+					{
+						totalPoints += 0;
+					}
+					break;
+				case 1: // point deductions for wrong answers
+					if (answers[i].IsCorrect)
+					{
+						totalPoints += answers[i].Points;
+					}
+					else
+					{
+						totalPoints -= answers[i].Points;
+					}
+					break;
+				case ... // more calculation methods
+				default:
+					System.out.println("Undefined Grading Scheme.")
+			}
+		}
+
+		return totalPoints;
+	}
+}
+</code></pre></div></div>
+
+<p>To follow the open-closed principle, an interface IPointCalculator is introduced which gives access to a score calculation method.
+Each grading scheme is refactored into an own class which implements this interface.
+Thus, the assessment class can access the interface and does not need to know how the points are calculated in detail.
+New variations can be added by creating new classes and the assessment class does not need to be altered.
+One can switch between the grading schemes by setting the pointCalculator object to an instance of a specific class which implements the interface, e.g. <code class="language-plaintext highlighter-rouge">pointCalculator = new ZeroPointsForWrongAnswer()</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Assessment2
+{
+	private Answer[] answers;
+	private IPointCalculator pointCalculator;
+	...
+
+	public int CalculateFinalScore()
+	{
+		int totalPoints = 0;
+
+		for (int i=0; i &lt; answers.Length;i++)
+		{
+			points += pointCalculator.GetAnswerScore(answers[i]);
+		}
+
+		return totalPoints;
+	}
+}
+
+public interface IPointCalculator
+{
+	int GetAnswerScore(Answer answer);
+}
+
+public class ZeroPointsForWrongAnswer : IPointCalculator
+{
+	public int GetAnswerScore(Answer answer)
+	{
+		if (answer.IsCorrect)
+		{
+			return answer.Points;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+}
+
+public class DeductionsForWrongAnswer : IPointCalculator
+{
+	public int GetAnswerScore(Answer answer)
+	{
+		if (answer.IsCorrect)
+		{
+			return answer.Points;
+		}
+		else
+		{
+			return -answer.Points;
+		}
+	}
+}
+</code></pre></div></div>
+
+<p>In general, the open-closed principle can be realized by using inheritance, abstract classes, interfaces and delegate methods.</p>
+
+<h3 id="liskov-substitution-principle">L: Liskov Substitution Principle</h3>
+
+<p>The Liskov substitution principle describes that if a class A has a property P then any child class B of A must also have the property P <a class="citation" href="/ar-for-eu-book/bibliography.html#Mart03">(Martin, 2003)</a>.
+An implication of this is that any class that references an object of type A can also work with instances of type B without knowing about the specific type.</p>
+
+<p>The Liskov substitution principle can be used to verify that an inheritance between two classes is actually well modelled.
+When designing a programme architecture, developers usually try to find “is a”-relationships which are then modelled using inheritance.
+For instance, assume that we would like to model an application, which simulates the behaviour of cats.
+The application should support and distinguish different breeds of cats, e.g. the Persian cat.
+Since a Persian cat is a cat, one can model this with a superclass <code class="language-plaintext highlighter-rouge">Cat</code> and a child class <code class="language-plaintext highlighter-rouge">PersianCat</code>.
+The superclass holds all properties and logic, which are common with cats, e.g. their age, height, fur or eye colour.
+In addition to this, the application also contains an object <code class="language-plaintext highlighter-rouge">Brush</code> with a function <code class="language-plaintext highlighter-rouge">Groom</code>.
+We want to groom all implemented breeds of cats and so the function takes an object of type <code class="language-plaintext highlighter-rouge">Cat</code> as input and returns a cat with groomed fur.
+Once this implementation is finished, we add new breeds to the application, e.g. European shorthairs and Sphynx cats.
+With the European shorthairs, everything still works fine but with the Sphynx cats, there is an error.
+Sphynx cats are hairless cats which means that the <code class="language-plaintext highlighter-rouge">Groom</code> function does not make sense for these cats.
+However, the <code class="language-plaintext highlighter-rouge">Groom</code> function takes a generic <code class="language-plaintext highlighter-rouge">Cat</code> as input which means that Sphynx cats are allowed as input.
+The bad way to fix this is to create a case distinction in the <code class="language-plaintext highlighter-rouge">Groom</code> function:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public Cat Groom(Cat inputCat)
+{
+	if (inputCat instance of Sphynx)
+	{
+		// do not groom hairless cats
+		return inputCat;
+	}
+	else
+	{
+		// perform grooming procedure
+		...
+	}
+}
+</code></pre></div></div>
+<p>This solution violates the Liskov substitution principle because now the <code class="language-plaintext highlighter-rouge">Groom</code> function cannot just work with any cat type but needs to know which specific subtype the cat object has.
+The violation is caused by incorrect assumptions about cats, e.g. that all of them have fur.
+If further hairless cats like the Ukrainian Levkoy are added to the application, they also require separate case distinctions.
+Instead, a better solution is to refactor the inheritance hierarchy.
+In this case, a <code class="language-plaintext highlighter-rouge">Cat</code> superclass can be created with the child classes <code class="language-plaintext highlighter-rouge">HairlessCat</code> and <code class="language-plaintext highlighter-rouge">CatWithHair</code>.
+The cat breeds are children of one of these two classes.
+This way, the <code class="language-plaintext highlighter-rouge">Groom</code> function can now expect a <code class="language-plaintext highlighter-rouge">CatWithHair</code> object as input.</p>
+
+<h3 id="interface-segregation-principle">I: Interface Segregation Principle</h3>
+
+<p>The interface segregation principle states that interfaces should be granular.
+Hence, a class that implements the interface never has to include additional methods, which are defined in the interface but which are not used <a class="citation" href="/ar-for-eu-book/bibliography.html#Mart03">(Martin, 2003)</a>.
+This means that large interfaces, which are used for different purposes of clients, should be split into smaller interfaces.
+These smaller interfaces should group the methods, which are relevant in a specific context.</p>
+
+<p>An example for a violation of the interface segregation principle is an <code class="language-plaintext highlighter-rouge">IButton</code> interface.
+Classes which implement this interface must contain all methods that make it an interactive button, e.g. <code class="language-plaintext highlighter-rouge">OnFocusEnter()</code>, <code class="language-plaintext highlighter-rouge">OnFocusExit()</code>, <code class="language-plaintext highlighter-rouge">OnClick()</code>.
+The problem of this interface is that it combines the two concepts of reacting to user focus, i.e. pointing at the button with an input device, and the interaction with the button in the form of a click.
+If an interactive element should be created which should rotate on focus but has no other interactive features, the <code class="language-plaintext highlighter-rouge">IButton</code> interface is not suitable.
+It can be implemented by a class that models the behaviour of such an element but this means that the <code class="language-plaintext highlighter-rouge">OnClick()</code> method will be left empty.
+Instead, a better solution is to separate the different properties, which are described by the interface.
+There can be an interface <code class="language-plaintext highlighter-rouge">IFocusable</code>.
+Elements that should react to user focus can implement this interface.
+Additionally, an interface <code class="language-plaintext highlighter-rouge">IInputHandler</code> can be defined for elements that should also react to input events.</p>
+
+<h3 id="dependency-inversion-principle">D: Dependency Inversion Principle</h3>
+
+<p>A common practise is to layer classes and modules in a way that higher-level classes access functionality from lower-level classes.
+An example for this can be seen in the following simplified architecture for I/O operations in a programme, which violates the dependency inversion principle.
+On the lowest level, there is an <code class="language-plaintext highlighter-rouge">IOOperations</code> class which takes byte data and writes them to a file.
+In this process, it handles the operations on the file system such as creating the file, locking it, writing data and unlocking it.
+One level higher, an <code class="language-plaintext highlighter-rouge">Encoding</code> class handles the conversion of the in-memory data to the byte save data.
+It takes some input text, converts it to byte data and adds the corresponding byte headers.
+To write the byte data to the disk, it calls the write function which is implemented in <code class="language-plaintext highlighter-rouge">IOOperations</code> one level lower.
+On the highest level, a <code class="language-plaintext highlighter-rouge">Save</code> module fetches the application’s data which need to be saved.
+If it needs to save text, e.g. which has been entered by the user, it passes the text to the <code class="language-plaintext highlighter-rouge">Encoding</code> class which will turn it into bytes.
+In turn, the <code class="language-plaintext highlighter-rouge">Encoding</code> class will pass the byte data to the <code class="language-plaintext highlighter-rouge">IOOperations</code> class.</p>
+
+<p>This architecture violates the dependency inversion principle because it states that higher modules should not depend on lower modules <a class="citation" href="/ar-for-eu-book/bibliography.html#Mart03">(Martin, 2003)</a>.
+In this case, the <code class="language-plaintext highlighter-rouge">Save</code> module depends on the <code class="language-plaintext highlighter-rouge">Enconding</code> class by calling its methods and <code class="language-plaintext highlighter-rouge">Enconding</code> depends on <code class="language-plaintext highlighter-rouge">IOOperations</code>.
+If the architecture is changed, e.g. it is decided to re-name the write-function in the <code class="language-plaintext highlighter-rouge">IOOperations</code> class, this means that the <code class="language-plaintext highlighter-rouge">Encoding</code> class must also be altered.</p>
+
+<p>A solution is that the high-level class defines an interface.
+The high-level class only works with this abstract description.
+The low-level class now needs to implement this interface.
+Hence, the dependency is inverted.
+The low-level class now depends on the interface definitions, which are defined by the high-level class.
+In the example, the two interfaces <code class="language-plaintext highlighter-rouge">IFileWriter</code> and <code class="language-plaintext highlighter-rouge">IEnconder</code> are added.
+<code class="language-plaintext highlighter-rouge">IFileWriter</code> is used by the <code class="language-plaintext highlighter-rouge">Enconding</code> class to write content to the disk.
+<code class="language-plaintext highlighter-rouge">IOOperations</code> now needs to be an implementation of <code class="language-plaintext highlighter-rouge">IFileWriter</code>.
+Similarly, the interface <code class="language-plaintext highlighter-rouge">IEncoder</code> is used by the <code class="language-plaintext highlighter-rouge">Save</code> module to encode the content.
+The specific implementation of the interface is provided by the <code class="language-plaintext highlighter-rouge">Encoding</code> class.</p>
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>

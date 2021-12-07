@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/foundations/cg/computerGraphics/" /><!-- Title, description, author --><title>Computer Graphics | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Computer Graphics | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/foundations/cg/computerGraphics/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/ReadingChapter.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;Computer Graphics</h2></header>
+<h2 id="contents">Contents</h2>
+
+<ol>
+  <li><a href="#geometry-representation-of-objects">Geometry Representation of Objects</a>
+    <ol>
+      <li><a href="#polygonal-meshes">Polygonal Meshes</a></li>
+      <li><a href="#point-clouds">Point Clouds</a></li>
+      <li><a href="#constructive-solid-geometry">Constructive Solid Geometry</a></li>
+      <li><a href="#volumes">Volumes</a></li>
+    </ol>
+  </li>
+  <li><a href="#rendering-pipeline">Rendering Pipeline</a>
+    <ol>
+      <li><a href="#mesh-rendering-pipeline">Mesh Rendering Pipeline</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="geometry-representation-of-objects">Geometry Representation of Objects</h2>
+
+<p>Objects that we know in everyday life are all three-dimensional.
+In order to define the shape of such objects, a representation is required that can be processed by the computer to show the object on a screen.
+One way to represent an object is using polygonal meshes.
+Other options include point clouds, constructive solid geometry and volumetric representations.</p>
+
+<h3 id="polygonal-meshes">Polygonal Meshes</h3>
+
+<p>A mesh is an undirected graph which approximates the surface of an object.
+It consists of individual vertices which are situated at defined points in 3D.
+The vertices can be connected with an edge between them.
+Vertices and edges form faces, which are visible as a surface in a rendered image.</p>
+
+<figure class="image">
+    <img src="../../../../assets/figures/modeling/Mesh.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="Structure of a Mesh" />
+    <figcaption>Structure of a Mesh</figcaption>
+</figure>
+
+<p>A face is a polygon since it can have any number of vertices.
+For geometry, triangular faces are preferred as they are guaranteed to be convex and all three vertices form are part of the same plane.
+In contrast to this, a quad with four vertices can be concave and the vertices are not guaranteed to be positioned in the same plane.</p>
+
+<p>Quad topology is preferred for manual <a href="/ar-for-eu-book/chapter/digitalContent/meshModeling/">modeling</a> as it is more manageable.
+Modellers can create strips from a series of quads that follow the object’s curvature and can be subdivided further to add more detail.</p>
+
+<h3 id="point-clouds">Point Clouds</h3>
+
+<p>Point clouds consist of isolated points in the 3D space.
+Usually, each point resembles a point on the surface of an object.
+Such a result can e.g. be created by 3D scanners which scan the surface of an object and place singular measure points.
+Since the points do not form a closed surface, they are usually converted to a polygonal mesh in a post-processing step.
+However, there are also methods that directly depict the point cloud render as a closed surface <a class="citation" href="/ar-for-eu-book/bibliography.html#BWKo02">(Botsch et al., 2002)</a>.</p>
+
+<h3 id="constructive-solid-geometry">Constructive Solid Geometry</h3>
+
+<p>In Constructive Solid Geometry (CSG), 3D objects are represented as a composition of primitive geometric shapes like spheres, cubes, etc. <a class="citation" href="/ar-for-eu-book/bibliography.html#Ross87">(Rossignac, 1987)</a>.
+The shapes are combined using Boolean operations.
+Each primitive shape can be described exactly using mathematical formulas.
+This means that for every point in space, one can decide if it part of a shape or not.
+By processing the Boolean operations, objects can be created that have a perfectly smooth curvature.
+This is an advantage compared to polygonal meshes since they can only approximate curvatures using a finite number of vertices.
+For this reason, CSG is preferred, e.g. for creating exact 3D models of cars</p>
+
+<figure>
+    <img src="../../../../assets/figures/modeling/BooleanOperations.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Overview of the Boolean operations in 2D</figcaption>
+</figure>
+
+<h3 id="volumes">Volumes</h3>
+
+<p>3D structures can also be represented as volume data.
+This means that there is a 3D data set that is usually rasterized into a <em>voxel</em> grid.
+Each voxel contains a density value that describes how dense the object is at this position.</p>
+
+<p>The purpose of such representations is usually to visualize the internal structure of the volume that is underneath the surface.
+For instance, volume representations are produces by MRT scans in medicine.
+To create 2D images that can be shown on a screen, it makes sense to use methods that can visualize the internals of an object.
+This is e.g. done by ray casting.</p>
+
+<p>There are also methods such as the marching cubes algorithm which allows the conversion of volumes into polygonal meshes.</p>
+
+<h2 id="rendering-pipeline">Rendering Pipeline</h2>
+
+<p>The term rendering describes the process which transforms a definition of a 3D space into a 2D image which can be shown on the screen.
+There are different rendering pipelines for the aforementioned geometry representations.
+In general, they follow the same principle by starting with the geometry, apply transformations to them and rasterize geometry to show it on the screen, calculate surface information regarding lighting and the object’s colour and compose an image out of this.</p>
+
+<h3 id="mesh-rendering-pipeline">Mesh Rendering Pipeline</h3>
+
+<p>The rendering pipeline for polygonal meshes starts with the 3D geometry that is represented as the mesh.
+To this geometry, 3D transformations are applied to position it in the scene.
+After that, a perspective transformation is applied which transforms the geometry to an orthogonal space based on a view frustum.
+The perspective transformation bakes the perspective foreshortening into the geometry.
+Then, geometry which is outside of the view frustum is clipped so that successive steps are only applied for geometry which actually has the chance to be visible.
+A rasterization step transfers the geometry to fragments, which are possible candidates for pixels on the screen.
+The next two steps determine the shading of the object’s surface.
+They calculate lighting information and apply texture data to the fragments.
+Finally, a visibility test is performed which makes sure that for overlapping geometry only the object in front is rendered.
+The final result is the image.</p>
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/mrtk/spatialUnderstanding/" /><!-- Title, description, author --><title>Spatial Understanding Tutorial | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Spatial Understanding Tutorial | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/mrtk/spatialUnderstanding/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/Tutorial.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;Spatial Understanding Tutorial</h2></header>
+<h1 id="an-mrtk-solver-guide-with-examples">An MRTK Solver Guide, with Examples</h1>
+
+<h2 id="contents">Contents</h2>
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#setting-the-scene">Setting the Scene</a></li>
+  <li><a href="#spatial-understanding">Spatial Understanding</a></li>
+  <li><a href="#mixed-reality-toolkit-solvers">Mixed Reality Toolkit Solvers</a>
+    <ol>
+      <li><a href="#solver-handler">Solver Handler</a></li>
+      <li><a href="#orbital">Orbital</a></li>
+      <li><a href="#radial-view">Radial View</a></li>
+      <li><a href="#surface-magnetism">Surface Magnetism</a></li>
+    </ol>
+  </li>
+  <li><a href="#inbetween-and-momentum">InBetween and Momentum - Building a Catapult</a>
+    <ol>
+      <li><a href="#object-modeling">Object Modeling</a></li>
+      <li><a href="#physics">Physics: Gravity and Momentum</a></li>
+      <li><a href="#interaction">Interaction</a></li>
+      <li><a href="#adding-reload-behaviour">Adding Reload Behaviour</a></li>
+      <li><a href="#controls-for-running-it-in-unity-and-on-the-emulator">Controls for Running it in Unity and on the Emulator</a></li>
+      <li><a href="#testing-the-catapult">Testing the Catapult</a></li>
+    </ol>
+  </li>
+  <li><a href="#Final Words">Final Words</a></li>
+</ol>
+
+<h2 id="overview">Overview</h2>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ay6pBinz31I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>In this tutorial I will give you an overview of spatial understanding, demonstrate the use of solvers and show how we can use these to control the way object behave in the playspace.
+There are four scenes, each with a corresponding prefab that provide example applications for orbital, radial view, surface magnetism solvers and, finally, a combination of several solvers to build a catapult.</p>
+
+<p>By the end of the tutorial, you should understand:</p>
+
+<ul>
+  <li>What are solvers?</li>
+  <li>What types of solvers exist in the MRTK (2.3) API?</li>
+  <li>What are the benefits and constraints of working with each type?</li>
+  <li>How can you implement them in your Unity project?</li>
+</ul>
+
+<p>In this document, terms marked with italics are keywords that are searchable in unity and online.
+It is helpful to go through the steps.</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NM4Phhayb3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="setting-the-scene">Setting the Scene</h2>
+
+<p>Software versions: Unity 2018.4.20, MRTK 2.3.0, Visual Studio 2019</p>
+
+<p>This tutorial assumes that you have an active Unity project, with Mixed Reality Toolkit loaded in to the scene, as described here and configured for the HoloLens 2.
+We will use the emulator, so you don’t need lengthy deployments / device sharing.
+Documentation for the emulator is found here.</p>
+
+<p>The MRTK files are available in the course’s file storage and from Microsoft.
+We will be using just the Foundation package for now, but others are available (Extensions, Tools, Examples).</p>
+
+<p>The first thing to do is set up the Mixed Reality Toolkit system which, after importing the above packages, is most easily done through the toolbar entry Mixed Reality Toolkit &gt; Add to scene and configure, and selecting the option ‘Create New Profiles’ on the newly created ToolkitConfigurator option.
+If you don’t see it in the inspector, it is found under:</p>
+
+<p><em>Assets / MixedRealityToolkit.Generated / CustomProfiles</em></p>
+
+<p>We will use the ‘DefaultMixedReality[…]Profile’ options, on the following:</p>
+
+<ul>
+  <li>Camera system</li>
+  <li>Input system</li>
+  <li>Spatial Awareness system</li>
+</ul>
+
+<p>Once this is done, go to the build settings and make sure that UWP is targeted.
+Select HoloLens as the targeted device.
+If you are building for the HoloLens 2 or the emulator, you can use a 64-bit (x64).
+If it’s a first gen.
+headset, use x86.</p>
+
+<p>The scripting backend can be either IL2CPP or .NET - there are advantages to both, which I won’t cover here, .NET can speed up development but has quirks.
+For better or worse, this tutorial will use .NET.</p>
+
+<p>If you are missing any of the needed capabilities, they should be added automatically.
+If they are not, head to the player settings and include them there (InternetClient, Microphone and SpatialPerception).
+Check in XR settings that virtual reality is supported, Windows Mixed Reality is included:</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/XRSettings.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="XR Settings" />
+    <figcaption>XR Settings</figcaption>
+</figure>
+
+<p>If deploying to a HoloLens, I would also recommend having a USB cable handy if deploying to headset as this will speed things up dramatically.</p>
+
+<h2 id="spatial-understanding">Spatial Understanding</h2>
+
+<p>When we use this term, it generally refers to higher level of abstraction than spatial mapping.
+We are now working with mesh data, rather than collecting it and can think of the environment as set up.
+In terms of an application, this is after the user has moved about to produce a room model.</p>
+
+<p>A commonly used term for the post-scan volume that contains most, if not all, augmentations is the playspace.
+In fact, the bounds of the playspace are not fixed, if we open one side of the mesh and put in another, virtual room we have changed these bounds.
+The solvers described below often refer to a surface mesh, to determine a collision normal direction or surface type.
+The SU mesh is the extensible canvas - it is the framework for building object-world interactions and may also guide the developer when building user-object interactions.</p>
+
+<h2 id="mixed-reality-toolkit-solvers">Mixed Reality Toolkit Solvers</h2>
+
+<p>Solvers are an essential tool when using Spatial Understanding and will form a part of many AR applications that you make.
+A solver is an optimisation algorithm.
+It takes a certain number of inputs and outputs a single solution.
+It does this by making incremental, iterative changes to a set of variables and measuring whether the solution is better or worse than the previous step.
+This makes it a linear and (relatively) heavy computational process so keep in mind that having lots of solvers in a scene might cause delays, though this is not an issue for simple applications.
+More details and documentation can be found at the following pages:</p>
+
+<p><a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html">https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html</a></p>
+
+<p><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch3">https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch3</a></p>
+
+<p>In a Unity project the scripts are found in:</p>
+
+<p><em>Assets &gt; MixedRealityToolkit.SDK &gt; Features &gt; Utilities &gt; Solvers</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Solver (MonoBehaviour)</td>
+      <td>Base class for all other solver components. Only inherited, not used directly. Provides state tracking, smoothing parameters and implementation, automatic solver system integration, and update order.</td>
+    </tr>
+    <tr>
+      <td>SolverHandler (MonoBehaviour)</td>
+      <td>Sets the reference object to track against (ex: the main camera transform, hand ray, etc.), handles gathering of solver components, and executes updating them in the proper order.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Orbital</td>
+      <td>Locks to a specified position and offset from the referenced object.</td>
+    </tr>
+    <tr>
+      <td>ConstantViewSize</td>
+      <td>Scales to maintain a constant size relative to the view of the referenced object.</td>
+    </tr>
+    <tr>
+      <td>RadialView</td>
+      <td>Keeps the object within a view cone cast by the referenced object.</td>
+    </tr>
+    <tr>
+      <td>SurfaceMagnetism</td>
+      <td>Casts rays to surfaces in the world, and align the object to that surface.</td>
+    </tr>
+    <tr>
+      <td>Momentum</td>
+      <td>Applies acceleration/velocity/friction to simulate momentum and springiness for an object being moved by other solvers/components.</td>
+    </tr>
+    <tr>
+      <td>InBetween</td>
+      <td>Keeps an object in between two tracked objects.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Two other solvers exist, HandConstraint and HandConstraintPalmUp - these can be used for making hand-locked menus and will be dealt with in another tutorial.</p>
+
+<p>Now we’re ready to begin creating content.
+We will go through each of the solvers mentioned above and create an object that demonstrates its use.
+For each one, we will look the key public parameters that give it the desired behaviour.</p>
+
+<h3 id="solver-handler">Solver handler</h3>
+
+<p>All object with solver behaviour have this component, which sets up basic parameters and toggles the solver effect.
+For a tracked target type of ‘Head’, it is the gaze cursor (or, more precisely, the gaze raycast) that drives the position and orientation of the object.</p>
+
+<p>The second option, controller ray, uses the raycast from the hand, when it is seen.
+This, together with the third, hand Joint, only work with HoloLens 2 (as first gen.
+devices mark only a position in space, without orientation, for the hand position).
+The last option, Custom Override, allows you to specify the object to track.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/SolverHandler.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="Solver Handler component" />
+    <figcaption>Solver Handler component</figcaption>
+</figure>
+
+<h3 id="orbital">Orbital</h3>
+
+<p>This solver simplifies locating objects relative to one-another, removing the need for parent-child dependence and the use of local transformations in Unity’s update loops.
+It is useful where you want to specify relations between objects that can be maintained or changed at predefined rates.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/Orbital.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="Orbital component" />
+    <figcaption>Orbital component</figcaption>
+</figure>
+
+<p>Most options work to move the solver’s gameobject so that the camera always sees the same view of it (I call that ‘bill boarding’), apart from the unmodified orientation type, which will lock the axis of the object as the camera moves around it.
+Note that with ‘use angle stepping’ turned on, this is no longer the case.</p>
+
+<p>The first example (“satellite”), gives a textured moon that will orbit the player’s hand.
+It uses the Orbital solver to link the moon prefab to the left hand and then an animator to cycle the solver’s additional offset parameters, giving the object movement.
+For good measure, there is also a full rotation in Y (around its centre) in the same time frame.
+I have left the solver’s Orientation Type as ‘Unmodified’.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/OrbitalAnimation.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption></figcaption>
+</figure>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/v38WdWNA_8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h3 id="radial-view">Radial View</h3>
+
+<p>If you worked with the HoloToolkit, you will probably be familiar with its tag-along script.
+Together with the Orbital solver, the radial view solver performs the same functions while being a far more extensible version of it, in that it can work relative to any of the solver handler’s tracked target types.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/RadialView3D.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="Example UI which uses the Radial View solver" />
+    <figcaption>Example UI which uses the Radial View solver</figcaption>
+</figure>
+
+<p>Where you want to control the portion of an object that is inside the user’s viewing area (frustum), the radial view solver is the one for you.
+This is particularly useful for some types of menu or body-locked user-interface (UI).
+The next thing we will do is bring in some interface components - these will be useful later when building and modifying the playspace.
+The sample UI is shown above.
+There are five buttons in this prefab and a text box for debugging, which we will link to our code.</p>
+
+<p>In order to preserve the orientation, this is the child of a new gameobject that will also have the solver components.
+We will add the solver handler (as usual) and then the radial view to the parent object.
+For this particular UI, the following settings provide a fairly non-intrusive, but easily accessible menu system:</p>
+
+<p>Facing world up is chosen to prevent the menu rolling with the head as, in this case, it may produce a less intuitive movement, and hence impair the interaction.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/RadialView.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="Radial View component" />
+    <figcaption>Radial View component</figcaption>
+</figure>
+
+<p>The distance is fixed at 0.5m, to give better predictability of where the menu will be relative to the body and its position is 1m below, to keep it out of the way - it should be there when the user looks down.</p>
+
+<p>Keep in mind that all of these setting depend on the app context as well as stylings and other setting in the prefab - there is no hard and fast rule for working with these, but the guidelines mentioned here will hopefully help to make your menus more useful and intuitive.
+We will come back to this UI later, but first we will cover the other solver types.</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ORSgkcydHkk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h3 id="surface-magnetism">Surface Magnetism</h3>
+
+<p>For the next demonstration, I’ve added a Quad gameobject, named it ‘painting’ and attached an image (sprite) to it.
+On to this gameobject I have added two solver components - Solver Handler and Surface Magnetism.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/SurfaceMagnetism.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="Surface Magnetism component" />
+    <figcaption>Surface Magnetism component</figcaption>
+</figure>
+
+<p>The parameters are quite self-explanatory.
+The lerp (linear interpolation) and slerp (spherical interpolation) control the smoothing of the movement of object, and will depend on its use (e.g. a menu, projectile or ambient effect).
+The first 7 properties are common to all solver components.</p>
+
+<p>The surface normal offset is useful when considering spatial understanding (SU), as the SU surface tends to sit slightly inside the spatial mapping surface, in order to give it a smoother, less complex geometry.
+Raycast ranges should be considered when dealing with larger playspaces (the finished SU surface) or those that have holes (more on this later).</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Vm-CUSY7sq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="inbetween-and-momentum">InBetween and Momentum - Building a Catapult</h2>
+
+<p>The <em>InBetween</em> solver maintains a position between a gameobject’s position and a second reference point.
+As with other solvers, this can relate to the head, hand, hand joint or another custom position.
+<em>Momentum</em> works to give an extra force during smoothing, causing the gameobject to behave as though it has certain physical properties.</p>
+
+<p>To demonstrate these solvers, we will attempt to make a catapult system depending as much as possible on the solver components.
+Coding is required in two areas - the first to get around a limitation of the solver base script and the second to add catapult reloading behaviour, which could possibly be done entirely in Unity, but is more extensible this way.</p>
+
+<p>First, let’s think about the information flow that can accomplish this:</p>
+
+<ol>
+  <li>Make a catapult and ball objects with simple objects, defining the elastic contact points.</li>
+  <li>Define the centre “release” point, in between the contact points.</li>
+  <li>Define a hold “pull-back” point, linked to the hand controller ray.</li>
+  <li>Give the ball momentum and physics.</li>
+  <li>Attach the catapult to the left hand, fire with the right.</li>
+  <li>Add interaction events to control pull-back and release.</li>
+  <li>Turn off the solver and turn on physics to let it fly.</li>
+</ol>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wR6naCVRj84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h3 id="object-modeling">Object Modeling</h3>
+
+<p>The first step is straight-forward, assuming you are happy with the Unity interface.
+Make three capsules, thin them and orient them so that they form a Y shape.
+It is recommended you put these under a parent object to help overall moving and scaling.
+In additional to the visible elements, also add invisible pivot points that act as reference locations at the top ends of the arms of the catapult.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/Catapult.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="The catapult 3D model" />
+    <figcaption>The catapult 3D model</figcaption>
+</figure>
+
+<p>Create another empty gameobject at the same level as the catapult parts that will be the centre point; the target for the initial trajectory of the projectile.
+Add both a solver handler and an ‘InBetween’ component to this object.
+Note that, for a static object this won’t change, but we expect a catapult to be a movable object, so it’s wise to have this as a calculated (dependent) position (see image).</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/InBetween.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="InBetween component" />
+    <figcaption>InBetween component</figcaption>
+</figure>
+
+<p>The solver handler will use the ‘custom override’ target type, referencing one of the two pivot points.
+The other is specified in the InBetween component and the <em>PartwayOffset</em> - the proportion of the distance from one point to the other is set to 0.5, since this will be in the middle.
+Scale is not important for and we have no need for smoothing at this point, so both these options can be turned off.
+The lifetime is also disabled as we want this to be persistent, since this point acts as a fixed node for another solver.</p>
+
+<p>The remaining behaviours relate to the projectile, so we will create a sphere as a child of the centre reference point (as, at least to begin with, the sphere’s position will be dependent on it).
+On to this sphere, add the necessary solver component: handler, inbetween and momentum.
+This time, the handler’s target type is the controller ray, and the inbetween solver use this and the node we just created.
+We want to be able to adjust scale and smoothing, so keep these checked.
+We will use a value of 0.8 for the PartwayOffset, which means that, when the hand is visible, the sphere will be 80% of the distance to it, from the centre release point.
+(Use <code class="language-plaintext highlighter-rouge">shift</code> to bring up the hand in Unity).</p>
+
+<h3 id="physics">Physics: Gravity and Momentum</h3>
+
+<p>You now have the pull-back position for the sphere.
+Let’s add physics and behaviours to the ball.
+The object needs a Rigidbody component with gravity and kinematics turned off.
+You can also freeze the rotation, which may be useful if the object you are launching is not a sphere.</p>
+
+<p>The Momentum solver has all the normal smoothing parameters as well as some that control the resistance, acceleration and springiness.
+I have experimented with these and arrived at the shown The Momentum solver has all the normal smoothing parameters as well as some that control the resistance, acceleration and springiness.
+I have experimented with these and arrived at the shown values though you might find other combinations that produce good results.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/Momentum.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="Momentum component" />
+    <figcaption>Momentum component</figcaption>
+</figure>
+
+<p>The resistances are kept low, as we do not wish to over-damp the trajectory of the ball in flight, though it is helpful to have these parameters available to the <em>Rigidbody’s</em>.</p>
+
+<p>A high acceleration rate simulates the quick acceleration of the ball on release and values much below lead to a pretty short range.
+The springiness relates to the spring force acting against the momentum of the object (a form of smoothing) - 10 is a somewhat arbitrary value here.</p>
+
+<h3 id="interaction">Interaction</h3>
+
+<p>We will first bind the catapult to the left hand (reverse these for lefties) by adding an orbital solver (and handler) to the main catapult gameobject.
+Keep the additional offset zero and orient the frame (child object) so that it is more typical of how it is held.
+For me, that’s a rotation of about (10, 0, -20).
+For the projectile, we bind the solver handler to the right hand and notice that the <em>InBetween</em> component refers to the release position, which will need to be set on reload (more on this later).</p>
+
+<p>In order to throw the ball forwards, we will change (with interaction) the part-way offset from a point near the hand to the centre release point.
+We will then allow the interpolation and momentum value to control the movement, for a period of time, before removing the solver’s influence and turning on gravity.
+These can be done using the <em>PointerHandler</em> script component, which takes mouse pointer (or another controller’s) input events and wraps them in <em>UnityEvents</em>.
+The interaction I have chosen is mouse click (OnPointerDown) and hold to retract the ball and releasing the mouse button (OnPointerUp) to let it fly.</p>
+
+<p>The final settings for the Pointer Handler’s OnPointerDown event are shown.
+The first entry sets the profectile <em>InBetween &gt; Partway Offset</em> to 0.8 (from starting value of 0).
+The second keeps the solver alive.
+The third ensures the solver is enabled and the last ensures gravity is not affecting it.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/OnPointerDown.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="OnPointerDown event setup" />
+    <figcaption>OnPointerDown event setup</figcaption>
+</figure>
+
+<p>It is at this point you will notice that, while the <em>lifetime</em> variable is not available to the UnityEvent.
+The reason for this is that, while the script does contain a serializable field, allowing it to be displayed in the inspector, there is no public variable (‘set’ method) for controlling it externally.
+Additionally, forcing a change to this value at runtime (and allowing the solver to disable itself prevents it from being turned back on.
+This can be fixed, however, with a small addition to the code in the <em>Solver.cs</em> script.
+After the declaration of <em>currentLifetime</em>, in line 92, I added the following:</p>
+
+<pre><code class="language-[C#]">public float Lifetime
+{
+    get =&gt; lifetime;
+    set =&gt; StartCoroutine(SetLifetime(value));
+}
+
+private IEnumerator SetLifetime(float _lifetime)
+{
+    yield return new WaitForSeconds(_lifetime / 2);
+    currentLifetime = _lifetime / 2;
+    lifetime = _lifetime;
+}
+</code></pre>
+
+<p>This starts a parallel thread which waits for the specified duration and then sets the lifetime of the solver.
+We then wait half the duration, mark this as the current lifetime and update the variable ‘lifetime’ which is used each frame.</p>
+
+<p>We can now finish the pointer behaviour component.
+For the OnPointerUp event, we return the PartwayOffset value to zero, beginning the movement to the release point.
+We then give the solver a lifetime of 0.05 seconds, make sure the solver is enabled and gravity is active, since we now want the behaviour to include physics.</p>
+
+<figure class="image">
+    <img src="../../../../../../assets/figures/spatial_understanding/OnPointerUp.png" style="
+            align:left;
+            width: 100%;
+            height: 100%;
+            border: 15px solid;
+            border-image-slice: 1;
+            border-width: 10px;
+            border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="OnPointerUp event setup" />
+    <figcaption>OnPointerUp event setup</figcaption>
+</figure>
+
+<h3 id="adding-reload-behaviour">Adding Reload Behaviour</h3>
+
+<p>We want to be able to reload the catapult, as a single shot is not much of an application.
+For this we will put together a ‘CatapultBehaviour’ class, with functions that, when needed, create new projectiles and load them onto the catapult.</p>
+
+<p>Instantiating a prefabricated projectile is the first step, after which we must reconnect it to object in the scene.
+This means setting gameobject, <em>Rigidbody</em>, <em>SolverHandler</em> and <em>InBetween</em> parameters in a similar pattern to how we updated the PointerHandler in Unity, checking that, on initialisation:</p>
+
+<ul>
+  <li>gravity is off</li>
+  <li>the solver handler is linked to the release point</li>
+  <li>lifetime is zero (stays alive)</li>
+  <li><em>PartwayOffset</em> places it on the catapult</li>
+  <li>the solver is enabled and</li>
+  <li>the InBetween component references the release point</li>
+</ul>
+
+<p>We will keep track of the current projectile, since we only want one at a time, and how long it has been alive (‘projectileBirthTick’).
+Since we do not want to clutter the scene will spent projectiles, I have given each a 5 second lifetime, after which the reload function will destroy the current projectile and make a new one.
+The trigger for reloading is a click interaction with the frame of the catapult.
+After setting the public variables in Unity, this script should produce the desired behaviour:</p>
+
+<pre><code class="language-[C#]">public GameObject ReleasePoint;
+    public float ProjectileLifetime;
+ 
+    private GameObject currentProjectile;
+    private long projectileBirthTick = 0;
+    private long lifeTimeInTicks = 0;
+ 
+    void Start()
+    {
+        lifeTimeInTicks = ((int)(ProjectileLifetime * 100)) * 100000;
+ 
+        currentProjectile = GameObject.FindGameObjectWithTag("Respawn");
+        if (currentProjectile != null)
+        {
+            projectileBirthTick = DateTime.UtcNow.Ticks;
+        }
+        ReloadCatapult();
+    }
+ 
+ 
+    private void CreateProjectile()
+    {
+        currentProjectile = Instantiate(Resources.Load("Prefabs/projectile") as GameObject, ReleasePoint.transform);
+        currentProjectile.GetComponent&lt;Rigidbody&gt;().useGravity = false;
+        projectileBirthTick = DateTime.UtcNow.Ticks;
+ 
+        SolverHandler mySH = currentProjectile.AddComponent&lt;SolverHandler&gt;();
+        mySH.TrackedTargetType = Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.CustomOverride;
+        mySH.TransformOverride = ReleasePoint.transform;
+ 
+        currentProjectile.GetComponent&lt;InBetween&gt;().Lifetime = 0;
+        currentProjectile.GetComponent&lt;InBetween&gt;().PartwayOffset = 0;
+        currentProjectile.GetComponent&lt;InBetween&gt;().enabled = true;
+        currentProjectile.GetComponent&lt;InBetween&gt;().SecondTransformOverride = ReleasePoint.transform;
+    }
+ 
+ 
+    public void ReloadCatapult()
+    {
+        if (currentProjectile == null)
+        {
+            CreateProjectile();
+            
+        }
+        else if (DateTime.UtcNow.Ticks - projectileBirthTick &gt; lifeTimeInTicks)
+        {
+            Destroy(currentProjectile);
+            currentProjectile = null;
+            CreateProjectile();
+        }
+        
+    }
+}
+</code></pre>
+
+<h3 id="controls-for-running-it-in-unity-and-on-the-emulator">Controls for Running it in Unity and on the Emulator</h3>
+
+<p>So far everything should look good when running the Unity scene to test.
+The editor controls are as follows:</p>
+
+<ul>
+  <li>Left shift &gt; left hand visible (double tap the key to keep it permanently on)</li>
+  <li>Left click when left hand visible performs air tap.</li>
+  <li>Space &gt; right hand visible (again, with double tap option)</li>
+  <li>CTRL+ left click air taps on this side</li>
+  <li>Right click and hold turns the camera</li>
+  <li>WASD and arrow keys move you about,</li>
+  <li>Page up and page down control elevation</li>
+  <li>The Alt key will change which hand interacts with a left mouse click.</li>
+</ul>
+
+<p>If you are happy that it works in principle, let’s go to the emulator to finish the check and identify any bugs or unwanted behaviours.
+The controls for the emulator are found here.</p>
+
+<h3 id="testing-the-catapult">Testing the Catapult</h3>
+
+<p>In terms of catapult mechanics, the lifetime value’s effect is dependent on the initial speed.
+When too large it causes the ball to get stuck at the release point or, if too small, does not allow the projectile to build up enough speed to have any range.
+Since successful timing is also a function of the pull-back distance of the projectile, it would be more sensible to calculate this on the fly.</p>
+
+<p>The other glitch worth noting is the oscillation of the projectile at the pull-back point.
+This is the results of competing solvers and, while it could be helped with smoothing values &lt; 0.1, this should be accompanied with changes to the acceleration, resistance and lifetime variables.
+There are several possible combinations, though all rely on a momentum-release timing combination.
+I am sure that, with some experimentation, a smooth but effective set of parameters can be found.</p>
+
+<h2><img src="../../../../../../assets/images/KeyMessage.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;<a name="Final Words" style="text-decoration:none;">Final Words</a> </h2>
+
+<blockquote>
+  <p>You should now have a few working examples of solvers.
+Unity developers are increasingly moving to more modular design and the scene/prefab structure is used here to help port these examples into your project without too much work.
+I have avoid searching for gameobjects and used only a tag which is also defined in the prefab, though this could be separated further.</p>
+</blockquote>
+
+<blockquote>
+  <p>If you have any questions or would like more guidance on anything found here, feel free to drop me a line at:
+<a href="mailto:william.guest@open.ac.uk">william.guest@open.ac.uk</a></p>
+</blockquote>
+
+<blockquote>
+  <p>Thanks for spending the time to learn about MRTK and solvers! I hope this helps you to build the next generation of immersive experiences.</p>
+</blockquote>
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>

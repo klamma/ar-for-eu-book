@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/mrtk/configure/" /><!-- Title, description, author --><title>Configuring Windows for Development with HoloLens (complete) | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Configuring Windows for Development with HoloLens (complete) | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/mrtk/configure/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/Tutorial.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;Configuring Windows for Development with HoloLens (complete)</h2></header>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    // script for exchanging version-specific content.
+    $(document).ready(function () {
+        $('.unityVersionSpecific').hide();
+        $('.unity2017-4').show();
+        $('#versionSelectorUnity').change(function () {
+            $('.unityVersionSpecific').hide();
+            $('.'+$(this).val()).show();
+    })
+});
+</script>
+
+<blockquote>
+  <p>Please select your Unity version:</p>
+</blockquote>
+
+<blockquote>
+  <p><select id="versionSelectorUnity">
+  <option value="unity2017-4">Unity 2017.4</option>
+</select></p>
+</blockquote>
+
+<blockquote>
+  <p class="unityVersionSpecific unity2017-4">You have selected Version 2017.4.
+This is the long term support version.</p>
+</blockquote>
+
+<h1 id="configuration">Configuration</h1>
+
+<p>This tutorial was written for Unity3D 2017.4.31f1 (15 Aug, 2019).
+Via the UnityHub the modules for Windows Store .NET Scripting Backend and Windows Store IL2CPP Scripting Backend have been added.
+It uses Visual Studio 2017 (15.9.15) and the Windows 10 SKD 10.0.17134, see also release notes at <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/releases">https://github.com/microsoft/MixedRealityToolkit-Unity/releases</a>.</p>
+
+<p>It is crucial to install the required components for Visual Studio 2017 (.NET support, unity support, and the Windows 10 SDKs).</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/visualstudio-windows10sdks.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Unity Downloads</figcaption>
+</figure>
+
+<p>Beware: When installing through the UnityHub, the version 2017.4.31f1 is not necessarily offered, but has to be selected from the Unity3D website (click on Download Unity in the dark footer of the homepage, then click on Older Versions in the dark footer, then select 2017 to click on the UnityHub Download for the latest version 2017.4.31f1).</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/unity3dwebsite2017431f1.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Unity Downloads</figcaption>
+</figure>
+
+<p>When you create your new project, select as target platform 2017.4.31f1.
+Once Unity is up and running, delete the camera and lighting from the game object Hierarchy (right-click &gt; delete).
+Then navigate in the menu to File &gt; Build Settings.
+Select “Universal Windows”.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/build settings.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Unity Downloads</figcaption>
+</figure>
+
+<p>Navigate to Edit &gt; Project Settings &gt; Quality.
+Make sure that for the column with the Windows icon, the default quality setting is set to “very low”.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/quality settings.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Unity Downloads</figcaption>
+</figure>
+
+<p>Then navigate to menu Edit &gt; Project Settings &gt; Player.
+There are several important settings that need to be done here.
+First and foremost, under XR settings, VR support has to be ticked and <code class="language-plaintext highlighter-rouge">Windows Mixed Reality</code> must be added to the list (best clean out the rest).</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/player settings - xr.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Unity Downloads</figcaption>
+</figure>
+
+<p>Furthermore, select the group “Publishing Settings” and make sure it has a unique package name.
+Additionally, don’t forget to add a meaningful Product Name at the very top.
+Depending on what functionality you will be using, several <code class="language-plaintext highlighter-rouge">Capabilities</code> have to be added here.
+For our tutorial, we will be using <code class="language-plaintext highlighter-rouge">Internet Client</code>, <code class="language-plaintext highlighter-rouge">Microphone</code>, <code class="language-plaintext highlighter-rouge">Objects3D</code>, and <code class="language-plaintext highlighter-rouge">Spatial Perception</code>.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/publishing settings.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Unity Downloads</figcaption>
+</figure>
+
+<p>Most importantly, the “Other” settings must set the Configuration setting for Scripting Backend to <code class="language-plaintext highlighter-rouge">IL2CPP</code> (as .NET is being phased out).</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/player settings - other.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Unity Downloads</figcaption>
+</figure>
+
+<p>Sometimes, when compiling not via the Unity Mixed Reality Toolkit build window, but directly with Visual Studio 2017, the solution forgets which one is the main one (right click on the non-editor/player solution and set as StartUp Project).
+Moreover, sometimes the Capabilities are forgotten, in which case you have to find the Package.appxmanifest, click on Capabilities, and make sure the right ones are ticked.
+Similarly, remnants of packages no longer used some-times linger around in the configuration files, causing havoc.
+Vuforia is such an example (and here is a solution for that).</p>
+
+<p>There are many other pitfalls, as software is still experimental.
+Cryptic error messages in Visual Studio, however, most often indicate version conflicts between not the right version of Unity, missing Unity modules, not the right version of the Windows 10 SDK, not the right version of Visual Studio, missing automatic updates of nuGet packages, missing Unity support for Visual Studio.</p>
+
+<p>Download the 2017.4.3.0 Refresh Holotoolkit unity package from here (no need for the examples and preview or sources) - we will come back to this in the first step - Spatial Mapping - of the tutorial.</p>
+
+<p>Set up your Unity panels so that they look like this: Scene / Game top left, console bottom left.
+Hierarchy above Project in the middle column, and Inspector on the right.
+You can also open Window &gt; Holographic Emulation and drag it to rest with Scene and Game.
+And you can open the Mixed Reality Toolkit &gt; Build Window.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/panel layout.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Unity Downloads</figcaption>
+</figure>
+
+<h1 id="testing">Testing</h1>
+
+<p>The simplest way to test the app is to use holographic remoting.
+For this, the <code class="language-plaintext highlighter-rouge">Holographic Remoting Player</code> has to be installed on the HoloLens from the Windows Store.
+Once started, the app will display the IP address of the HoloLens.
+If your development machine is on the same network (and the network is reasonably open - like your home network), then Unity can directly connect to this IP address.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/holographic-remoting.jpg" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Holographic remoting demo</figcaption>
+</figure>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/holographic remoting.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Holographic remoting settings</figcaption>
+</figure>
+
+<p>Pressing the big play button, will now launch the app directly on the HoloLens, also providing a preview in the Game panel.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/holographic remoting - demo.jpg" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Preview using Holographic Remoting</figcaption>
+</figure>
+
+<p>NOTE: Holographic remoting does no longer work when using the Vuforia package.
+This is to do with the camera not being released from processing (probably for performance reasons).</p>
+
+<h1 id="building">Building</h1>
+
+<p>Since a few versions back, the HoloToolkit also provides a convenient Build Window, which automates some of the work for you.
+By hand, you’d have to build the app, then open this ex-ported (‘build’) solution with Visual Studio, then build the executable and install it on the glasses.
+The Build Window is still a bit unstable and not always every step works - on this machine, for example, installing from there onto the device does not work and I have to use the web device portal for that.
+Nonetheless, building is a lot more convenient from here, see this:</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/build window.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Build Window</figcaption>
+</figure>
+
+<p>Once the Unity Project is built, the appx bundle can be built, which then can be installed via the device portal.
+(Don’t forget to add the Dependencies\x86\ files the first time around!).</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/device-portal-install.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Installation via Device Portal</figcaption>
+</figure>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/app start.jpg" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Launch App from Windows Start Menu</figcaption>
+</figure>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/app - scanning.jpg" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Running App</figcaption>
+</figure>
+
+<figure>
+    <img src="../../../../../../assets/figures/holotoolkit/app - brains.jpg" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Running App</figcaption>
+</figure>
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>

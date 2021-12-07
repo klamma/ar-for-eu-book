@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/development/platforms/web/" /><!-- Title, description, author --><title>AR for the Web | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="AR for the Web | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/development/platforms/web/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/ReadingChapter.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;AR for the Web</h2></header><h2 id="contents">Contents</h2>
+
+<ol>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#enabling-technologies">Enabling Technologies</a></li>
+  <li><a href="#webvr">WebVR</a></li>
+  <li><a href="#webxr">WebXR</a></li>
+  <li><a href="#three-d-graphics-frameworks-on-the-web">3D Graphics Frameworks on the Web</a>
+    <ol>
+      <li><a href="#webgl">WebGl</a></li>
+      <li><a href="#threejs">three.js</a></li>
+      <li><a href="#a-frame">A-Frame</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Augmented Reality for the Web demands compatibility with the major browsers.
+To reach this goal, developers need access to the native device drivers and APIs of the different vendors in JavaScript.</p>
+
+<h2 id="enabling-technologies">Enabling Technologies</h2>
+
+<p>In recent years, the Web has made a major leap in application maturity.
+Almost all desktop applications like office packages, image and video editing have Web versions.
+This is due to the availability of HTML5 and its many APIs exposing native device APIs to developers by JavaScript.
+Moreover, Web browsers can communicate directly with each other without the need of a server, reducing the latency of many networks depending on applications like collaborative editing, video and voice chats, and computer games.</p>
+
+<ul>
+  <li><a href="https://webrtc.org/">WebRTC</a></li>
+  <li><a href="https://webassembly.org/">Web Assembly</a></li>
+  <li><a href="https://www.w3.org/TR/workers/">Web Workers</a></li>
+  <li><a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a></li>
+  <li><a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Apps</a></li>
+</ul>
+
+<h2 id="webvr">WebVR</h2>
+
+<p><a href="https://immersive-web.github.io/webvr/">WebVR</a> provided a developer API to different virtual reality devices on the Web and is now superseded by WebXR.</p>
+
+<h2 id="webxr">WebXR</h2>
+
+<p>WebXR (Mixed Reality on the Web) superseded WebVR in 2018.
+The <a href="https://immersive-web.github.io/webxr/">W3c editor’s draft</a>
+gives details on the WebXR Device API.
+WebXR is an extension of the WebVR API covering augmented reality devices in the JavaScript API.
+The new API has two goals.
+First, it enhances the possibilities for new input devices like for gesture and speech recognition.
+This gives to users new options to navigate and interact in the virtual environment.
+Second, it gives a technical platform to create augmented reality content.
+Moreover, it tackles incompatibilities of the predecessor with different browsers like Safari and Chrome.
+The amount of code needed to create virtual experiences on different devices should be reduced,
+A number of browsers are already supporting WebXR.</p>
+
+<h2 id="three-d-graphics-frameworks-on-the-web">3D Graphics Frameworks on the Web</h2>
+
+<p>A series of graphics frameworks exist which allow the display of 3D models on Web pages.
+The presented frameworks introduce increasing levels of abstraction.
+Whereas WebGL works with polygon primitives and shaders, three.js abstracts to scenes, objects and materials.
+In turn, A-Frame uses three.js to provide an HTML-based description language for 3D scenes which can be executed as a WebXR experience.</p>
+
+<h3 id="webgl">WebGL</h3>
+
+<p><a href="https://get.webgl.org/">WebGL</a> is a cross-platform, royalty-free API used to create 3D graphics in a Web browser.</p>
+
+<h3 id="threejs">three.js</h3>
+
+<p><a href="https://threejs.org/">three.js</a> is a popular JavaScript framework for displaying 3D content on the web.</p>
+
+<h3 id="a-frame">A-Frame</h3>
+
+<p><a href="https://aframe.io/">A-Frame</a> is a web framework for building virtual and augmented reality experiences.</p>
+
+<p><strong>Example of an A-Frame</strong>:</p>
+
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+<script>
+    AFRAME.registerComponent('hide-in-ar-mode', {
+        // Set this object invisible while in AR mode.
+        init: function() {
+            this.el.sceneEl.addEventListener('enter-vr', (ev) => {
+                this.wasVisible = this.el.getAttribute('visible');
+                if (this.el.sceneEl.is('ar-mode')) {
+                    this.el.setAttribute('visible', false);
+                }
+            });
+            this.el.sceneEl.addEventListener('exit-vr', (ev) => {
+                if (this.wasVisible) this.el.setAttribute('visible', true);
+            });
+        }
+    });
+</script>
+
+<a-scene style="width: 500px; height: 500px" embedded="">
+    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow=""></a-box>
+    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow=""></a-sphere>
+    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow=""></a-cylinder>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow=""></a-plane>
+    <a-camera position="0 1.2 0"></a-camera>
+    <a-sky color="#ECECEC" hide-in-ar-mode=""></a-sky>
+</a-scene>
+
+<p>The WebXR demo can be viewed on desktop browsers, as well as mobile browsers.
+If a VR device is connected to the PC, it automatically activates once this page is loaded and the view is changed if the user clicks on the VR button.
+To return to the view in the browser, press escape.
+If no VR device is present, the VR button instead toggles a full-screen view of the 3D scene.
+On smartphones, the VR button also works and switches to a stereoscopic view which can be used e.g. with Google Cardboard.
+On newer smartphones which have ARCore or ARKit installed and with Chrome Browser version 79 or higher, an AR button will appear next to the VR button.
+If the user clicks on it, the phone’s camera will activate and the virtual objects are integrated into the camera stream.</p>
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>

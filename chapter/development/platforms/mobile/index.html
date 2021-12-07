@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/development/platforms/mobile/" /><!-- Title, description, author --><title>Mobile AR | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mobile AR | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/development/platforms/mobile/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/ReadingChapter.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;Mobile AR</h2></header><h2 id="contents">Contents</h2>
+
+<ol>
+  <li><a href="#techniques">Techniques</a>
+    <ol>
+      <li><a href="#image-targets">Image Targets</a></li>
+      <li><a href="#lenses-ar-filters">Lenses &amp; AR Filters</a></li>
+      <li><a href="#scene-tracking">Scene Tracking</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="techniques">Techniques</h2>
+
+<p>Augmented reality on mobile devices can be realized with a variety of techniques.
+Each of them has their own advantages, disadvantages and suitable use cases.
+To choose a method for mobile AR, the requirements, usage scenarios, target audience and target devices of the AR application should be analysed.</p>
+
+<h3 id="image-targets">Image Targets</h3>
+
+<p>Devices with a camera can look for special image targets.
+They recognize visual patterns of the image and based on the distortion of the pattern, they can calculate the angle at which the camera is looking at the image.
+This way, the virtual camera can be synchronized so that the virtual objects can be rendered in the same perspective.
+The virtual content is then overlaid on top of the camera feed.
+Libraries which enable this kind of behaviour are Vuforia, ARCore and ARKit.</p>
+
+<h3 id="lenses-ar-filters">Lenses &amp; AR Filters</h3>
+
+<p>Social media applications like <a href="https://support.snapchat.com/en-US/article/face-world-lenses">Snapchat</a> and <a href="">Instagram</a> provide AR-like digital effects which can be applied to images, videos and the real-time camera preview.
+These kinds of effects are especially tailored towards “selfies” since they rely on computer vision techniques like facial detection.
+Facial landmarks like the eyes or mouth are detected in real-time in the camera feed.
+With this information, the position and orientation of the face can be determined.
+Digital content can be placed in relation to the face and it is added to the camera preview for the user.
+A range of applied effects can be implemented.
+They include animated screen-space 2D overlays, like snow on the screen.
+Furthermore, 3D models can be attached to the user’s head, e.g. cat ears, jewellery or sunglasses.
+Another class of effects are distortions of the original camera image.
+These distortions e.g. allow increasing the size of the eyes to achieve a cartoon effect.
+Advanced versions of the filters can also be controlled by facial expressions.
+In these cases, blinking or opening the mouth can trigger a transition to a different filter or can trigger an animation.</p>
+
+<p>AR filters can for instance be created with <a href="https://developers.google.com/ar/develop/java/augmented-faces">ARCore</a>, <a href="https://developer.apple.com/documentation/arkit/tracking_and_visualizing_faces">ARKit</a> or <a href="https://sparkar.facebook.com/ar-studio/">Spark AR Studio</a>.</p>
+
+<h3 id="scene-tracking">Scene Tracking</h3>
+
+<p>Libraries like ARCore and ARKit can reconstruct spatial features from the environment based on the phone’s movement.
+This system uses a mixture of sensor information and optical data.
+Based on these data, the device can track the environment and follow the user’s movement without visual markers.</p>
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>

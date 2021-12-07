@@ -1,0 +1,553 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/advanced/dialogueUnderstanding/" /><!-- Title, description, author --><title>Dialogue Understanding | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dialogue Understanding | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/advanced/dialogueUnderstanding/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/Tutorial.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;Dialogue Understanding</h2></header>
+<h2 id="contents">Contents</h2>
+<ul>
+  <li><a href="#part1">Part 1. Creating an IBM Cloud account</a></li>
+  <li><a href="#part2">Part 2. Creating a Watson Assistant</a></li>
+  <li><a href="#part3">Part 3. Creating a Chatbot</a></li>
+  <li><a href="#part4">Part 4. Unity settings</a></li>
+  <li><a href="#part5">Part 5. Using Watson in Unity3D</a></li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li>Download Unity project <a href="https://github.com/Yu713/IBMDiaTraining">https://github.com/Yu713/IBMDiaTraining</a></li>
+</ul>
+
+<h2 id="software">Software</h2>
+<ul>
+  <li>Unity 3D (version 2018.3.14f1)</li>
+</ul>
+
+<h3 id="part1"><strong>Part 1. Creating an IBM Cloud account</strong></h3>
+
+<p>Step 1.1: Register an account <a href="https://cloud.ibm.com/login">https://cloud.ibm.com/login</a> &gt; create an IBM Cloud account &gt; you’ll be asked to verify your email &gt; complete personal information &gt; login your account and accept the privacy notices.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%201.1.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 1.1</figcaption>
+</figure>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>If you already have a Watson Assistant service running in your IBM Cloud account, and you can jump to the next part.</p>
+</blockquote>
+
+<h3 id="part2"><strong>Part 2.</strong> Creating a Watson Assistant</h3>
+
+<p><strong>Step 2.1.</strong> Click on the Create resource button on the dashboard &gt; Watson Assistant (if you can’t find it, Catalog &gt; AI &gt; Watson Assistant) &gt; Click <em>Create tab</em>, and check the region.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%202.1.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 2.1</figcaption>
+</figure>
+
+<p><strong>Step2.3.</strong> Launch Watson Assistant &gt; Create assistant, called “AI training” (or something else you like) &gt; Create assistant &gt; Add dialog skill &gt; Select <em>Create skill</em> &gt; Dessert &gt; Create dialog skill &gt; click on “Dessert”.</p>
+
+<p><strong>Step 2.4.</strong> Create Speech to Text &amp; Text to Speech: Go back to the Dashboard &gt; Add services &gt; Catalog &gt; Services &gt; Select “AI” &gt; Click on <em>Speech to Text &amp; Text to Speech</em> &gt; Create. (they will be used in Unity)</p>
+
+<h3 id="part3"><strong>Part 3.</strong> Creating a Chatbot</h3>
+
+<p>In this tutorial, we will create a simple Chatbot that can be used in your 3D character model in Unity 3D.</p>
+
+<p>Before that, let’s take example. If you call a dessert shop, what a seller will ask you questions? You may say hi, I’d like to order a chocolate cake, and the seller needs to know your name and phone number. So the dialogue will be like that:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>1. Seller</th>
+      <th>Welcome to XXX shop, what can I do for you?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2. User</td>
+      <td>I’d like to order some desserts/cakes</td>
+    </tr>
+    <tr>
+      <td>3. Seller</td>
+      <td>How can I call you?/ What’s your name?</td>
+    </tr>
+    <tr>
+      <td>4. User</td>
+      <td>my name is XXXX</td>
+    </tr>
+    <tr>
+      <td>5. Seller</td>
+      <td>What desserts do you like? do you need a menu? Today, we have  specials.</td>
+    </tr>
+    <tr>
+      <td>A user needs to make a choice.   1. The user directly orders a dessert; 2. He/she needs a menu. 3. The  seller gives some recommendations (specials)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>User</td>
+      <td>I’d like to order XXXXXX</td>
+    </tr>
+    <tr>
+      <td>6. Seller</td>
+      <td>What’s your phone number?</td>
+    </tr>
+    <tr>
+      <td>7.   User</td>
+      <td>It’s 1234567890</td>
+    </tr>
+    <tr>
+      <td>8.  Seller</td>
+      <td>Thanks, we’ll send a message to you.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Step 3.1- 3.10 introduces how to create the No.1-4 of the table; Step 3.11- 3.15 shows No.5; No.6-7 is on the Step 3.17-3.19.</em></p>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+
+<blockquote>
+  <p>·    Intents: the purpose of a user’s input. The Watson assistant can select the correct dialogue flow by recognizing the intents.</p>
+</blockquote>
+
+<blockquote>
+  <p>·    Entities: it shows information in the user input that is relevant to the user’s purpose.</p>
+</blockquote>
+
+<p><strong>Step 3.1.</strong> Click on Content Catalog &gt; General can be added to skill (it includes lots of basic contents of conversation, like good morning. But in this tutorial, we are not going to use it)</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.1.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.1</figcaption>
+</figure>
+
+<p><strong>Step 3.2.</strong> Select Dialog &gt; Click on the Node options on the Welcome node &gt; Add folder &gt; named “Dessert”.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.2.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.2</figcaption>
+</figure>
+
+<p><strong>Step 3.3.</strong> Click on Intents &gt; Create Intent, called “#welcome” &gt; Create &gt; user example is Hi/hi, there; Hello/hello, there.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.3.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.3</figcaption>
+</figure>
+
+<p><strong>Step 3.4.</strong> Go back to Dialog &gt; Click on <em>Welcome</em> node &gt; Condition (If assistant recognizes) is #welcome &gt; Customize the Welcome node prompt with (Assistant responds):</p>
+
+<p>Hello, Welcome to AI dessert shop. How can I help you?</p>
+
+<p>Hello, Welcome to AI dessert shop. What can I do for you? &gt; Response variations are set to random.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.4.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.4</figcaption>
+</figure>
+
+<p><strong>Step 3.5.</strong> Click on <em>Node options</em> on the Dessert folder &gt; add node to folder, called “Name” &gt; Assistant responds: OK, how can I call you? / what’s your name? &gt; Response variations are set to random again.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.5.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.5</figcaption>
+</figure>
+
+<p><strong>Step 3.6.</strong> Click on Intents &gt; Create Intent &gt; create a #name &gt; add example:</p>
+
+<p>I’m @username.</p>
+
+<p>call me @username.</p>
+
+<p>my name is @username.</p>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>The first alphabet should be lowercase, if it’s capital, the assistant cannot recognize user’s name.*</p>
+</blockquote>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.6.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.6</figcaption>
+</figure>
+
+<p><strong>Step 3.7.</strong> Create @username on an entity, click on Entities &gt; My entities &gt; Create entities &gt; Entity name is @username &gt; value is name_syntax, type is Patterns, pattern is [A-Z][a-z]+ &gt; Add value.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.7.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.7</figcaption>
+</figure>
+
+<p><strong>Step 3.8</strong>. Back to Entities &gt; Select <em>System entities</em> &gt; tick all boxes.</p>
+
+<p><strong>Step 3.9.</strong> Click Intents tab &gt; Create intent &gt; named #order &gt; user example: hi, I’d like to order cakes.</p>
+
+<p><strong>Step 3.10.</strong> Click on Dialog &gt; click on the icon of dessert folder &gt; select “Name” node &gt; create condition (If assistant recognizes): #intents &gt; select “#order”.</p>
+
+<p><strong>Step 3.11.</strong> Click on node options on the Name node &gt; Add child node, called “Dessert” &gt; create condition: #name, add or, select @username, add or, select @sys-person &gt; there are node options on the right of Assistant responds &gt;  Select “Open context editor” &gt; Variable is username &gt; Value is “&lt;? @sys-number.literal ?&gt;” &gt; Assistant responds: What desserts would you like, $username?</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.11(1).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.11(1)</figcaption>
+</figure>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.11(2).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.11(2)</figcaption>
+</figure>
+
+<p><strong>Step 3.12.</strong> On the Dessert node &gt; add the other response type                                 &gt; Text: Do you need a menu? Or I can provide some specials?</p>
+
+<p>There are three options, 1. I need a menu; 2. The assistant offers recommendations; 3. I know what I’d like to get.</p>
+
+<p><strong>Step 3.13.</strong> Make a menu: Create a new intent, called “#menu” &gt; user examples:</p>
+
+<p>I need a menu.</p>
+
+<p>Pudding(/pudding) menu</p>
+
+<p>Cake(/cake) menu</p>
+
+<p>Could you give me some recommendations?</p>
+
+<p>Specials (/specials)</p>
+
+<p>&gt; Back to Dialog &gt; Create a new child node on the Dessert node, called “menu” &gt; condition is #menu &gt; Assistant responds: Ok, here is our menu. &gt; Add new response type &gt; Text changes to Option &gt; Title: Which dessert/ menu you like? &gt; List labels are Pudding and Cake, Value is pudding menu and cake menu.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.13(1).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.13(1)</figcaption>
+</figure>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.13(2).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.11(2)</figcaption>
+</figure>
+
+<p><strong>Step 3.14.</strong> Click Intents tab &gt; Create Intent called “#alldesserts” &gt; list more desserts as possible, including cakes and puddings.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.14.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.14</figcaption>
+</figure>
+
+<p><strong>Step 3.15.</strong>  Go back to the Dialog &gt; create a new child node on the menu node, called “pudding menu” &gt; condition: #menu&gt; Assistant responds: We have chocolate puddings, vanilla puddings, and milk puddings &gt; Add child node on the pudding menu, called “pudding finish” &gt; condition is #alldesserts &gt; Assistant responds: No problem! &gt; Again, create a new child node on the menu node, called “cake menu” &gt; you turn, it’s the same way to create conditions!</p>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>It’s also possible that a client wants to know the cake menu after she/he chooses the pudding menu. Therefore, you need to think about how to create nodes and intents.</p>
+</blockquote>
+
+<p><strong>Step 3.16.</strong>  It’s the same way to create the rest of two options (an assistant recommends a desserts (specials), and clients make choice).</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.16.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.16</figcaption>
+</figure>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>Don’t make wrong levels.</p>
+</blockquote>
+
+<p><strong>Step 3.17.</strong> Add node below on the Dessert node, called “phone number” &gt; Assistant responds: What’s your phone number?</p>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>Don’t add any conditions.</p>
+</blockquote>
+
+<p><strong>Step 3.18.</strong> Create a new intent called “#phonenumber” &gt; examples: my phone number is @sys-number; number is @sys-number &gt; click on Dialog &gt; Add a child node on the phone number node, called “end” &gt; conditions: #phonenumber, add or, select @sys-number &gt; assistant responds: Thanks, we’ll send a message to you. Have a nice day!</p>
+
+<p><strong>Step 3.19.</strong> Select “pudding finish” node &gt; Wait for reply (on the “The assistant should”) needs to change to Jump on &gt; Select “phone number” node, and click on <em>Respond</em>.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.19(1).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.19(1)</figcaption>
+</figure>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%203.19(2).png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 3.19(2)</figcaption>
+</figure>
+
+<p><strong>Note:</strong> All the end of options node, such as pudding finish node, cake finish node, and specials finish node should be Jump to phone number.</p>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>Now you can test your Chatbox. Click on “Try it”.</p>
+</blockquote>
+
+<h3 id="part4"><strong>Part 4.</strong> Unity Settings</h3>
+
+<p>This tutorial introduces how to use IBM Watson SDK in Unity 3D in order to interact with a 3D character based on your Chatbox.</p>
+
+<p><strong>Step 4.1.</strong> Open Unity &gt; Create a new project, called “Dialog understanding Unity” &gt; Choose the file location.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%204.1.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 4.1</figcaption>
+</figure>
+
+<p><strong>Step 4.2.</strong> Click on File &gt; Save as &gt; Scenes, called “Dialog understanding”</p>
+
+<p><strong>Step 4.3.</strong> File &gt; Building Settings &gt; Select “Universal Windows Platform”&gt; Click Add Open scenes &gt; Target Device &gt;Select “PC” &gt; Build</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%204.3.jpg" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 4.3</figcaption>
+</figure>
+
+<p><strong>Step 4.4.</strong> Click Edit &gt; Select <em>Player</em> &gt; Capabilities &gt; tick the box of Microphone.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%204.4.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 4.4</figcaption>
+</figure>
+
+<h3 id="part5"><strong>Part 5.</strong> Using Watson in Unity3D</h3>
+
+<p><strong>Step 5.1.</strong> Open the Unity file.</p>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>If there are lots of warnings and errors on the Console, please click <em>Clear button</em>.</p>
+</blockquote>
+
+<p><strong>Step 5.2</strong>. Click on <em>WatsonServices</em> on Hierarchy window, and open the “_scripts” file on Project window. Dialogue Services is the script of DialogueService, and it also links to Watson assistant. Speech Input Service is the script of SpeechInputServices, it links to Speech to Text service, and Speechoutput links to Text to Speech service in IBM Watson, that is applied to create a spoken sound version of the text. Please double-click on the three services in Visual Studio.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%205.2.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 5.2</figcaption>
+</figure>
+
+<p><strong>Step 5.3.</strong> Go to your IBM Cloud Dashboard&gt; Services &gt; Watson Assistant &gt; Click on the copy icon to make note of the API key. The API key applies basic authentication, in here it’s the password. URL is location specific. So make sure your URL matches with your location.</p>
+
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>However, if your URL is very long, it cannot work in Unity. For example, in this picture the URL should be <a href="https://api.eu-gb.assistant.watson.cloud.ibm.com">https://api.eu-gb.assistant.watson.cloud.ibm.com</a></p>
+</blockquote>
+
+<p><em>Service endpoints by location:</em></p>
+
+<p>·    <em>London:</em> <a href="https://api.eu-gb.assistant.watson.cloud.ibm.com">https://api.eu-gb.assistant.watson.cloud.ibm.com</a></p>
+
+<p>·    <em>Frankfurt:</em> <a href="https://api.eu-de.assistant.watson.cloud.ibm.com">https://api.eu-de.assistant.watson.cloud.ibm.com</a></p>
+
+<p>·    <em>Washington, DC:</em> <a href="https://api.us-east.assistant.watson.cloud.ibm.com">https://api.us-east.assistant.watson.cloud.ibm.com</a></p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%205.3.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 5.3</figcaption>
+</figure>
+
+<p><strong>Step 5.4.</strong> Go back to Unity &gt; Paste it on your API key to Iam Apikey in the Dialogue Service, and also paste it to the corresponding script.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%205.4.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 5.4</figcaption>
+</figure>
+
+<p><strong>Step 5.5.</strong> Again, copy the URL &gt; paste it to Service Url, ServiceURL, and ServiceURL (optional) on the script.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%205.5.png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 5.5</figcaption>
+</figure>
+
+<p><strong>Step 5.6.</strong> Launch Watson Assistant &gt; Select the node options on your Watson Assistant &gt; Settings &gt; Click on API Details &gt; copy Assistant ID to Unity and the script.</p>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%205.6(1).png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 5.6(1)</figcaption>
+</figure>
+
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%205.6(2).png" style="align:left; width: 100%; height: 100%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 5.6(2)</figcaption>
+</figure>
+
+<p><strong>Step 5.7.</strong> It’s the same way to copy API key and URL, and past it to your Unity and the corresponding scripts for Speech to Text &amp; Text to Speech.</p>
+
+<p><em>Service of Speech to Text endpoints by location</em></p>
+
+<p>·    <em>Washington, DC:</em> <a href="https://api.us-east.speech-to-text.watson.cloud.ibm.com"><em>https://api.us-east.speech-to-text.watson.cloud.ibm.com</em></a></p>
+
+<p>·    <em>Frankfurt:</em> <a href="https://api.eu-de.speech-to-text.watson.cloud.ibm.com"><em>https://api.eu-de.speech-to-text.watson.cloud.ibm.com</em></a></p>
+
+<p>·    <em>London:</em> <a href="https://api.eu-gb.speech-to-text.watson.cloud.ibm.com"><em>https://api.eu-gb.speech-to-text.watson.cloud.ibm.com</em></a></p>
+
+<p><em>Service of Text to Speech endpoints by location</em></p>
+
+<p>·    <em>Washington, DC:</em> <a href="https://api.us-east.text-to-speech.watson.cloud.ibm.com">https://api.us-east.text-to-speech.watson.cloud.ibm.com</a></p>
+
+<p>·    <em>Frankfurt:</em> <a href="https://api.eu-de.text-to-speech.watson.cloud.ibm.com">https://api.eu-de.text-to-speech.watson.cloud.ibm.com</a></p>
+
+<p>·    <em>London:</em> <a href="https://api.eu-gb.text-to-speech.watson.cloud.ibm.com">https://api.eu-gb.text-to-speech.watson.cloud.ibm.com</a></p>
+
+<p>​</p>
+
+<p>​         <strong>Step 5.8.</strong> Before playing it, we need to configure your service credentials. Save unity file (Ctrl+S), close Unity &gt; open the location of the Unity file &gt; find ibm_credentials.env, and open it.
+​</p>
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%205.8.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 5.8</figcaption>
+</figure>
+
+<p>​       <br />
+​         <strong>Step 5.9.</strong> Log in IBM Cloud account &gt; select Watson Assistant &gt; Click Service credentials &gt; Click the arrow to view your credential &gt; copy apikey, and past it to ASSISTANT_APIKEY and ASSISTANT_IAM_APIKEY &gt; cope url, and past it to ASSISTANT_URL. Please complete others, and save it.
+​</p>
+<figure>
+    <img src="../../../../../../assets/figures/dialogue_understanding/Step%205.9.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Image of Step 5.9</figcaption>
+</figure>
+
+<p>​       <br />
+​       <br />
+​       <br />
+​         <strong>Step 5.10.</strong> Open Unity, and let’s play it. 
+​</p>
+<h2><img src="../../../../../../assets/images/InfoBox.png" style="align:right; width: 5%; height: 5%; vertical-align:middle" />&nbsp;&nbsp;Note</h2>
+<blockquote>
+  <p>You may find it’s different from that you tried it in IBM Watson. For example, the assistant doesn’t automatically jump to the next sentence that we added response types (i.e. Do you need a menu?). The option we created in the menu node also doesn’t work in Unity. Therefore, you need to create more nodes for options. 
+​</p>
+</blockquote>
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>

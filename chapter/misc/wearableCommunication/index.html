@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/misc/wearableCommunication/" /><!-- Title, description, author --><title>Wearables Communication (need a rename) | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Wearables Communication (need a rename) | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/misc/wearableCommunication/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/Tutorial.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;Wearables Communication (need a rename)</h2></header>
+<h1 id="making-things-talk">Making Things Talk</h1>
+
+<p>In this tutorial, we will guide you through the steps to link an Augmented Reality project to microcontroller devices. We will cover the two most common methods of communication WiFI and Bluetooth. And we will demonstrate the full development pipeline from an Arduino sketch to a Unity 3D client that interacts with a HoloLens.</p>
+
+<h2 id="contents">Contents</h2>
+<ul>
+  <li><a href="#part-1-introduction">Part 1. Introduction</a></li>
+  <li><a href="#part-2-microcontroller-sketch">Part 2. Microcontroller Sketch</a></li>
+  <li><a href="#part-wifi-implementation">Part 3. WiFi Implementation</a></li>
+  <li><a href="#part-4-bluetooth-implementation">Part 4. Bluetooth Implementation</a></li>
+</ul>
+
+<h2 id="part-1-introduction">Part 1. Introduction</h2>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bdD6QUtWEbA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>In this part, we provide an overview of the tutorial and start with the selection of the protocol and sensor selection. We introduce the ESP32 microcontroller that is required to work on this tutorial. For this tutorial, you will also need a Motion Controller (for example, MPU9250), four jumper wires for I2C communication, and a Micro USB cable.</p>
+
+<p>We suggest two main areas of consideration that are important to understand the data flow pattern, which should match one of the communication protocols. The first area of consideration is data space (types of data, the amount of data, how long the devices are connected, etc.), while the second consideration is activity space (the environment where the product will work, if the sensors are worn on a body or mounted on tools, and what triggers are used).</p>
+
+<p>We look in detail at the characteristics of WiFi (in particular, at MQTT protocol) and at Bluetooth Low Energy (GATT protocol).</p>
+
+<h2 id="part-2-rapid-prototyping">Part 2. Rapid Prototyping</h2>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uPO-x4DVzgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>In this part, we introduce code resources that we will use in the tutorial.</p>
+
+<ul>
+  <li><a href="https://github.com/willguest/MakingThingsTalk">Making Things Talk repository</a> contains the Arduino sketch and Unity project that we will review later in this tutorial.</li>
+  <li><a href="https://github.com/gpvigano/M2MqttUnity">M2MQTT repository</a>. We will use a modified version to handle the WiFi interface.</li>
+  <li><a href="https://github.com/willguest/GattInformer">GATT informer repository</a> to explore the Bluetooth Low Energy functions.</li>
+</ul>
+
+<p>We also look in more detail at the Sketch code, using Arduino IDE. We explain the key parts of the code that are important to understand and needed to setup communication over WiFi and Bluetooth.</p>
+
+<h2 id="part-3-production">Part 3. Production</h2>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Tt_221xoppM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>In this part, we give instructions on linking an MQTT WiFi client to Unity and display live data from an inertial measurement unit - IMU.</p>
+
+<p>We first introduce and review the components of the <a href="Making Things Talk Unity project">https://github.com/willguest/MakingThingsTalk</a>. We also look at the project settings and build settings to prepare the environment for the tutorial.</p>
+
+<p>We continue by looking at and reviewing the code that runs the MQTT client. In particular, we look at the subscription and publication to the broker, how the processing of messages is coded, and how the data received via WiFi is converted into the local rotation property of a game object in the Unity scene.</p>
+
+<p>We also go one level down and review how the sensor data handler works to provide the rotation data.</p>
+
+<p>We further test the code, after plugging the IMU to the ESP32, and then to the computer. Running the Unity scene should display the data stream and rotate the game object using the live data from the IMU sensor.</p>
+
+<h2 id="part-4-design-and-evaluation">Part 4. Design and Evaluation</h2>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2OnV3qDdGpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>In this part, we give instructions on using the Bluetooth Low Energy protocol to display live data from an inertial measurement unit - IMU - to a game object in a Unity scene.</p>
+
+<p>We start by explaining some of the general limitations for working with Bluetooth in Unity. We continue to work with the <a href="https://github.com/willguest/MakingThingsTalk">Making Things Talk Unity project</a>, reviewing the code that implements a Bluetooth connection. We explain how to find Bluetooth devices, get their names, and display on a UI panel in a Unity scene. We continue by giving instructions on how to connect to Bluetooth Low Energy devices, keep them connected, and receive data from them.</p>
+
+<p>We further test the code, demonstrating a constant stream of data from the IMU.</p>
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>

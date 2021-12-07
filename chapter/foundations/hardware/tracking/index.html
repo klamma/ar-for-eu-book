@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://codereality.net/ar-for-eu-book/chapter/foundations/hardware/tracking/" /><!-- Title, description, author --><title>Tracking Technologies | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Ralf Klamma" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tracking Technologies | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://codereality.net/ar-for-eu-book/assets/images/avatar.png" />
+  <meta property="og:url" content="https://codereality.net/ar-for-eu-book/chapter/foundations/hardware/tracking/" />
+  <meta property="og:site_name" content="The Open Augmented Reality Teaching Book" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/ar-for-eu-book/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/ar-for-eu-book/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/skel.min.js" defer></script>
+  <script src="/ar-for-eu-book/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/ar-for-eu-book/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/ar-for-eu-book/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="https://codereality.net/ar-for-eu-book/" id="home-link">
+    <span class="image avatar48"><img src="/ar-for-eu-book/assets/images/avatar.png" alt="Avatar of Ralf Klamma" /></span>
+    <h1 id="title">The Open Augmented Reality Teaching Book</h1>
+    <p>Create and Code Augmented Reality!</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="/ar-for-eu-book/" id="-link">
+              <span class="icon fa-home">Welcome</span>
+            </a></li><li><a href="/ar-for-eu-book/blog.html" id="-link">
+              <span class="icon fa-pen">Blog Posts</span>
+            </a></li><li><a href="/ar-for-eu-book/toc/" id="-link">
+              <span class="icon fa-book-open">Table of Contents</span>
+            </a></li><li><a href="/ar-for-eu-book/bibliography.html" id="-link">
+              <span class="icon fa-bookmark">Bibliography</span>
+            </a></li><li><a href="/ar-for-eu-book/contributors.html" id="-link">
+              <span class="icon fa-user-edit">Contributors</span>
+            </a></li><li><a href="/ar-for-eu-book/about/" id="-link">
+              <span class="icon fa-info-circle">About the book</span>
+            </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/AR_FOR_EU" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://www.facebook.com/AR.FOR.EU/" class="icon-b fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://github.com/klamma/ar-for-eu-book" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="https://codereality.net/ar-for-eu-book/feed.xml" class="fas fa-rss-square"><span class="label"></span></a></li><li><a href="mailto:klamma@dbis.rwth-aachen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><img src="/ar-for-eu-book/assets/images/ReadingChapter.png" style="align:right; width: 13%; height: 13%; vertical-align:middle">&nbsp;&nbsp;Tracking Technologies</h2></header>
+<h2 id="contents">Contents</h2>
+
+<ol>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#light-based">Light-based</a>
+    <ol>
+      <li><a href="#opto-electronical">Opto-Electronical</a></li>
+      <li><a href="#structured-light">Structured Light</a></li>
+      <li><a href="#rgb-cameras">RGB Cameras</a></li>
+      <li><a href="#time-of-flight-sensors">Time-of-Flight Sensors</a></li>
+    </ol>
+  </li>
+  <li><a href="#mechanical">Mechanical</a></li>
+  <li><a href="#electromagnetic">Electromagnetic</a></li>
+  <li><a href="#inertial">Inertial</a></li>
+  <li><a href="#setups">Setups</a></li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Tracking technologies are required in order to provide the position and rotation of a real object to the computer system.
+With AR systems, tracking technologies are commonly used in two settings:
+If the system consists of a head-mounted display, e.g. the Microsoft HoloLens, tracking is required in order to capture the user’s head movements.
+Advanced systems can also track other body parts like the hands.
+In the second use-case, virtual objects should be attached to a real object.
+In order to realize this, the position and rotation of the object relative to the camera must be determined.
+An example for this is the marker tracking feature of smartphone-based AR, e.g. with Vuforia.
+Marker-based tracking can usually be done with one camera.
+The described techniques usually apply for more complex object tracking, e.g. of an HMD.</p>
+
+<p>Different techniques and technologies are available for tracking.
+Each of them have particular requirements, use-cases as well as advantages and disadvantages.</p>
+
+<h2 id="light-based">Light-based</h2>
+
+<p>One possibility is to use visible or invisible light for tracking objects.</p>
+
+<h3 id="opto-electronical">Opto-Electronical</h3>
+
+<p>With opto-electronical tracking, markers are placed on the target.
+For detecting the markers, at least two (IR) cameras are placed around the subject.
+Computer vision software can isolate the markers on the seen images and track their position on the 2D image <a class="citation" href="/ar-for-eu-book/bibliography.html#Guer05">(Guerra-Filho, 2005)</a>.
+Based on the known static position of the cameras, the 3D position of the marker can be reconstructed.
+This is done by an algorithm which shoots virtual rays into the scene.
+The rays start at the position of the camera and pass through the detected 2D point in the image.
+Ideally, the intersection point of the rays from all cameras determines the 3D position of the marker.
+However, due to setup or tracking inaccuracies, the rays will not exact exactly but pass each other with a small gap in-between.
+In practice, the midpoint of this gap is calculated and the final position of the marker is determined to be the average of the midpoints between all rays.</p>
+
+<p>Opto-electronical tracking can be found in an active and a passive setup.
+Their main difference is the origin of the light which is detected by the camera.
+Passive opto-electronical tracking uses markers with a special surface which is highly reflective for infrared light <a class="citation" href="/ar-for-eu-book/bibliography.html#Guer05">(Guerra-Filho, 2005)</a>.
+Infrared lamps placed in the surrounding point towards the target and illuminate the markers.
+The reflection of the IR light will reach the cameras and this way, the markers become visible to the cameras.
+In contrast to this, the markers in active opto-electronical tracking emit light, e.g. by using small infrared LEDs.
+This means that no external light source is necessary.
+The advantage of active opto-electronical tracking is that individual trackers can be turned on or off separately.
+Leveraging this additional control, an initialization procedure can be developed where the system cannot just detect but also identify the markers.
+For instance, with a full-body tracking, markers on the different on the hands can be distinguished.
+A disadvantage of active opto-electronical tracking is that the markers require an energy source.
+With passive tracking, it suffices to use plastic balls with a special surface paint as markers but with active tracking, cabling needs to be laid out and a battery needs to be mounted on the target.
+This way, a passive tracking setup is non-intrusive.
+In contrast to this, with active tracking the marker suit can be uncomfortable to wear and it can restrict movements due to the cables and battery.</p>
+
+<p>The high accuracy and a low latency of opto-electronical tracking systems are beneficial.
+However, occlusion can create a problem.
+Since the technology is light-based, markers can only be tracked if they are visible to at least two cameras at once.
+Challenges arise from the fact that one marker alone can only convey positional data but not the orientation of the target.
+In order to reconstruct the orientation of an object, at least three markers are required.</p>
+
+<p>One use-case for opto-electronical tracking is motion-tracking for movies or animations.
+Actors are equipped with markers and perform movements on a stage which is surrounded by cameras.</p>
+
+<h3 id="structured-light">Structured Light</h3>
+
+<p>The technique of structured light tracking is for instance used by the Microsoft Kinect.
+This technique requires a light source and a camera.
+Both are typically operating in the infrared-range of light.
+The light is occluded in parts so that it emits a characteristic pattern, e.g. stripes or a random point pattern <a class="citation" href="/ar-for-eu-book/bibliography.html#ScSz03">(Scharstein &amp; Szeliski, 18-20 June 2003)</a>.
+In a calibration procedure, the camera’s characteristics are determined regarding its mapping of a 3D point to a pixel in 2D <a class="citation" href="/ar-for-eu-book/bibliography.html#Geng11">(Geng, 2011)</a>.
+This is necessary since cameras can distort images.
+As an example, wide-angle cameras show straight lines as curves.
+Additionally, a calibration of the projector’s brightness and emission characteristics is necessary.
+In the latter calibration step, the already calibrated camera views the projected pattern on a flat surface.
+The position and rotation of the surface is known and by comparing the original pattern to the detected, undistorted pattern, one can calculate distortions which are introduced by the projector.</p>
+
+<p>After that the tracking device can be used to determine the shape of surfaces.
+This can be done by determining how the projected pattern is warped by the shape of the surface.
+From this disturbance, depth information can be calculated and so 3D coordinates can be determined for all points in the camera image <a class="citation" href="/ar-for-eu-book/bibliography.html#Geng11">(Geng, 2011)</a>.
+In combination with shape recognition software, persons can be tracked.
+The information can be used to overlay a virtual skeleton over a pose.
+Thus, the technique can be used for motion capture.
+Additionally, it is also used for 3D scanning, e.g. with the Microsoft HoloLens to create a 3D model of the environment.
+An advantage for 3D scanning is that the technique can be combined with a standard camera which captures visible light.
+This way, color information can be captured and applied to a scanned model as a texture.</p>
+
+<figure>
+    <img src="../../../../assets/figures/tracking/StructuredLight.png" style="align:left; width: 60%; height: 60%; border: 15px solid;
+  border-image-slice: 1;
+  border-width: 10px; border-image-source: linear-gradient(to left, #0092b6, #154676);" alt="" />
+    <figcaption>Structured light which is projected down from above reveals the shape of the half-sphere</figcaption>
+</figure>
+
+<h3 id="rgb-cameras">RGB Cameras</h3>
+
+<p>Video tracking uses a standard RGB camera feed as the information source for tracking.
+There are two alternative setups possible.
+The camera can be used to track another object or person in the video feed or the changes between frames can be used to determine the position and rotation of the camera in the environment.</p>
+
+<p>Camera-based tracking is used for photogrammetry and marker-based AR.
+In both cases, the tracking application looks for distinct feature points in the image and tries to locate them in each frame.
+If the camera is moved, the depth of these feature points can be determined from the parallax effect between the two frames.</p>
+
+<h3 id="time-of-flight-sensors">Time-of-Flight Sensors</h3>
+
+<p>Time-of-Flight Sensors use the speed of light to determine how far an object is away from the sensor.
+Unlike laser scanning sensors which can only scan single points at once, Time-of-Flight sensors are able to provide a depth map for a (low-resolution) image.
+The sensor consists of a light source which emits a pulse of light, e.g. infrared light.
+The light is reflected in the environment and captured by an image sensor.
+From the difference in time between the emission and the received reflection, the distance to the reflecting surface can be computed.
+Due to the high speed of light, the measurement logic needs to be very quick, i.e. in the range of picoseconds.</p>
+
+<!-- ## Ultra Sound -->
+
+<h2 id="mechanical">Mechanical</h2>
+
+<p>With mechanical tracking setups, movements can be tracked by their effect on a mechanical system.
+Examples for mechanical tracking systems include exoskeletons.
+This tracking technique was also used on the Ultimate Display where the head-mounted display was connected to a series of metal bars.
+By moving the head, the bars would be pushed out of the way or pulled along and could rotate in a mechanical construction.
+This rotation was registered by the system and from the amount of rotation the head movement could be reconstructed.
+In modern systems, mechanical tracking can be found in combination with haptic feedback devices.
+One example is the PHANToM haptic device.
+It provides a pen-like handle to the user which is attached to a robotic arm.
+The user can grab this pen and move it around.
+The robotic arm can register the movements and passes the movement data on the application.
+Haptic feedback is achieved by moving the robotic arm.
+This provides forces on the pen which hinder movements in certain directions.</p>
+
+<h2 id="electromagnetic">Electromagnetic</h2>
+
+<p>Another way of tracking uses electromagnetism.
+Here, the sensors on the tracked object are situated in an alternating electromagnetic field.
+A sensor consists of different coils, each of them is wound around one of the three axes.
+If the sensor is moved in the field, a current is induced on each of the coils.
+By measuring the strength of the current, the rotation and position of the sensor can be derived.</p>
+
+<p>Unlike light-based tracking, electromagnetic tracking is immune to target occlusion, i.e. the tracker does not need to be in the line of sight of some external sensor.
+However, the large sensors of 1-2 cm are a disadvantage of this technique.
+Additionally, the trackers require cabling.
+One also needs to be careful with ferromagnetic elements which can influence the magnetic field and can therefore invalidate the tracking results.</p>
+
+<h2 id="inertial">Inertial</h2>
+
+<p>An Inertial Measurement Unit (IMU) is a sensor that reports - typically (but sometimes only a subset) - acceleration, rotation speed, and orientation from an accelerometer, gyroscope, and (not always) a magnetometer.
+Applications of IMUs are for motion capture or as input modality in interaction.
+The IMU in your mobile phone allows your maps application to function when the GPS signal is not available, for example while driving in a tunnel or when inside a building.
+Most modern delivery devices have built in IMUs (smart glasses, mobile phones, tablet computers) or are used in combination with the delivery system (like with pico projectors).
+All IMUs inevitably suffer from drift, some of them more, some of them less, typically then using on board or software sensor fusion to reduce its amount.
+The software interface to the inertial measurement unit provides typically a quaternion for orientation (or Euler angles), and vectors for velocity and acceleration.
+These can be directly mapped in 3D environments to control objects (as a direct-mapping interaction device) or the viewing camera renderer (for scene exploration, think smart glasses).</p>
+
+<h2 id="setups">Setups</h2>
+
+<p>Tracking systems can be set up in two ways.
+On the one hand, the sensors can be placed in the environment, and they track markers on a moving object.
+On the other hand, the sensors can be mounted to the moving target while the recognizable features are situated in the environment.</p>
+
+<!-- ## Outside-In Tracking -->
+
+<!-- ## Inside-Out Tracking -->
+</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;The Open Augmented Reality Teaching Book. All rights reserved.</li>
+    
+  </ul>
+  
+</div></body>
+</html>
