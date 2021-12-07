@@ -168,6 +168,7 @@ order: 3
    2. [Performance Profiling](/ar-for-eu-book/chapter/development/tools/unity/advanced/performanceProfiling/) {% include badge.html base=pathToRoot badgeName="complete" %}
    3. [Collaboration & Sharing](/ar-for-eu-book/chapter/development/tools/unity/advanced/sharing/) {% include badge.html base=pathToRoot badgeName="complete" %}
    4. [Continuous Integration & Unit Tests](/ar-for-eu-book/chapter/development/tools/unity/advanced/ci_unity/) {% include badge.html base=pathToRoot badgeName="complete" %}
+   5. [Lip Syncing](/ar-for-eu-book/chapter/development/tools/unity/advanced/lipsync/) {% include badge.html base=pathToRoot badgeName="complete" %}
 
 ### 3.5 Digital Content Creation
 
